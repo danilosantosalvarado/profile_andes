@@ -62,7 +62,6 @@ dependencies[] = references
 dependencies[] = user_reference
 dependencies[] = uuid
 dependencies[] = swiperjs
-dependencies[] = google_analytics
 dependencies[] = wysiwyg
 ; Panels
 dependencies[] = panels
