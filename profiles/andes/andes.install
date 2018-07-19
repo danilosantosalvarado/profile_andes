@@ -1,0 +1,18 @@
+<?php
+
+ /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function andes_form_install_configure_form_alter(&$form, $form_state) {
+// Server settings.
+  $form['server_settings']['site_default_country']['#default_value'] = 'CO';
+  $form['server_settings']['date_default_timezone']['#default_value'] = 'America/Bogota';
+}
+
+/**
+ * Implements hook_install().
+ */
+function andes_install() {
+	variable_set('admin_theme', 'adminimal');
+	variable_set('theme_default','andes');
+}

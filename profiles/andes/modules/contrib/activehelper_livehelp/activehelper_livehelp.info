@@ -1,0 +1,4 @@
+name = ActiveHelper Live Chat 
+version = 4.3.0
+description =Live Chat module for drupal. ActiveHelper LiveHelp Live Chat System is perfect for small and medium Drupal sites. 
+core = 7.x
