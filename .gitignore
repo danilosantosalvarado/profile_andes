@@ -10,13 +10,9 @@ sites/*/private
 *.DS_Store
 *.7z
 *.dmg
-*.gz
 *.bz2
 *.iso
 *.jar
 *.rar
-*.tar
 *.zip
-*.tgz
-
 .sass-cache
