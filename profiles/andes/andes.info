@@ -2,7 +2,7 @@ name = Uniandes-Profile
 description = Install profile tbwa
 version = VERSION
 core = 7.x
-;exclusive = "1"
+exclusive = "1"
 ; Core modules
 dependencies[] = block
 dependencies[] = color
@@ -35,7 +35,7 @@ dependencies[] = libraries
 dependencies[] = markup
 dependencies[] = block_class
 dependencies[] = ckeditor
-dependencies[] = color_field
+dependencies[] = colorfield
 dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jquery_update
@@ -48,6 +48,7 @@ dependencies[] = admin_menu
 dependencies[] = features
 dependencies[] = smtp
 dependencies[] = module_filter
+dependencies[] = conditional_fields
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
@@ -62,10 +63,11 @@ dependencies[] = references
 dependencies[] = user_reference
 dependencies[] = uuid
 dependencies[] = swiperjs
-dependencies[] = wysiwyg
 ; Panels
 dependencies[] = panels
 dependencies[] = panels_extra_layouts
+dependencies[] = page_manager
+dependencies[] = panels_ipe
 ; Views
 dependencies[] = views
 dependencies[] = views_ui
@@ -78,7 +80,9 @@ dependencies[] = views_slideshow_simple_pager
 dependencies[] = views_slideshow_cycle
 dependencies[] = views_slideshow_xtra
 dependencies[] = views_slideshow_jcarousel
-; Forms 
+; Custom
+dependencies[] = udla_blocks_alter
+; Chat
 dependencies[] = activehelper_livehelp
 ; Information added by Drupal.org packaging script on 2018-04-25
 version = "7.59"

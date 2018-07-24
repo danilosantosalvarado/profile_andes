@@ -1,0 +1,5 @@
+name = Udla Blocks Alter
+description = "Funcionalidad de customización de backgrounds para los componentes"
+package = TBWA Colombia
+core = 7.x
+dependencies[] = colorfield
