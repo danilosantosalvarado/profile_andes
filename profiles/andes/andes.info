@@ -64,9 +64,9 @@ dependencies[] = user_reference
 dependencies[] = uuid
 dependencies[] = swiperjs
 ; Panels
+dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_extra_layouts
-dependencies[] = page_manager
 dependencies[] = panels_ipe
 dependencies[] = fape
 dependencies[] = panopoly_magic
