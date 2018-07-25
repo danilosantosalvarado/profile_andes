@@ -44,6 +44,9 @@ function andes_install() {
   $filtered_html_format = (object) $filtered_html_format;
   filter_format_save($filtered_html_format);
 
+  // Enable Theme Default.
+  variable_set('theme_default','andes');
+
   $full_html_format = array(
     'format' => 'full_html',
     'name' => 'Full HTML',
@@ -270,6 +273,7 @@ function andes_install() {
   variable_set('user_picture_dimensions', '1024x1024');
   variable_set('user_picture_file_size', '800');
   variable_set('user_picture_style', 'thumbnail');
+
 
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
