@@ -122,36 +122,55 @@ function udla_blocks_alter_init() {
  * Implementation of hook_preprocess_HOOK().
  */
 function udla_blocks_alter_preprocess_block(&$vars) {
-
   $block = $vars['block'];
   if (!empty($block->background_color)) {
-    $classes_array = explode(' ', $block->background_color);
-    foreach ($classes_array as $class) {
-	    $result = db_select('backgrounds_color', 'bc')
-		    ->fields('bc',array('color'))
-		    ->condition('color', $block->background_color,'=')
-		    ->execute()
-	    ->fetchAssoc();
-    	//$vars['attributes_array']['style'] = 'background-color:'.$block->background_color;
-    	if (isset($result['color'])) {
-	      $vars['classes_array'][] = "background-".drupal_clean_css_identifier($result['color'], array());
-
-    	}
+    $result = _block_data_css($block->background_color, 'background');
+    if (!empty($result)) {
+      $vars['classes_array'][] = implode(' ', $result);
     }
   }
   if (!empty($block->color_title)) {
-    $classes_array = explode(' ', $block->color_title);
-    foreach ($classes_array as $class) {
-	    $result = db_select('backgrounds_color', 'bc')
-		    ->fields('bc',array('color'))
-		    ->condition('color', $block->color_title,'=')
-		    ->execute()
-	    ->fetchAssoc();
-    	//$vars['attributes_array']['style'] = 'background-color:'.$block->background_color;
-    	if (isset($result['color'])) {
-	      $vars['classes_array'][] = "text-".drupal_clean_css_identifier($result['color'], array());
-
-    	}
+    $result = _block_data_css($block->color_title, 'title');
+    if (!empty($result)) {
+      $vars['classes_array'][] = implode(' ', $result);
     }
   }
+}
+
+
+function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts){
+  if ($pane->type == 'block') {
+    $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." "."HOLA-AQUI" : "HOLA-AQUI-2";
+    $block = block_load($content->module,$content->delta);
+    if (!empty($block->background_color)) {
+      $result = _block_data_css($block->background_color, 'background');
+      if (!empty($result)) {
+        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
+      }
+    }
+    if (!empty($block->color_title)) {
+      $result = _block_data_css($block->color_title, 'title');
+      if (!empty($result)) {
+        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
+      }
+    }
+
+  }
+
+}
+
+function _block_data_css($value_field, $name_field){
+  $return = array();
+  $classes_array = explode(' ', $value_field);
+  foreach ($classes_array as $class) {
+    $result = db_select('backgrounds_color', 'bc')
+      ->fields('bc',array('color'))
+      ->condition('color', $value_field,'=')
+      ->execute()
+    ->fetchAssoc();
+    if (isset($result['color'])) {
+      $return[] = $name_field."-".drupal_clean_css_identifier($result['color'], array());
+    }
+  }
+  return $return;
 }
