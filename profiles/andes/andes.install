@@ -342,6 +342,25 @@ function andes_install() {
     ->condition('type', 'theme')
     ->condition('name', 'adminimal')
     ->execute();
+
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'bootstrap')
+    ->execute();
+
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'andes')
+    ->execute();    
+
   variable_set('admin_theme', 'adminimal');
   variable_set('node_admin_theme', '1');     
 }
