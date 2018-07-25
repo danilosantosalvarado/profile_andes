@@ -66,6 +66,31 @@ function ct_noticias_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-6ee5c4e8-edfb-4bb6-aac4-52d5aa9cb393';
+  $pane->panel = 'left';
+  $pane->type = 'token';
+  $pane->subtype = 'node:field-items-slider';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'sanitize' => 1,
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '6ee5c4e8-edfb-4bb6-aac4-52d5aa9cb393';
+  $display->content['new-6ee5c4e8-edfb-4bb6-aac4-52d5aa9cb393'] = $pane;
+  $display->panels['left'][0] = 'new-6ee5c4e8-edfb-4bb6-aac4-52d5aa9cb393';
+  $pane = new stdClass();
   $pane->pid = 'new-8f7e2696-4215-4f61-b43e-96caea38da6c';
   $pane->panel = 'middle';
   $pane->type = 'entity_field';

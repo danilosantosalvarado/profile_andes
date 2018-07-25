@@ -118,25 +118,34 @@ function ct_noticias_views_default_views() {
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_class'] = 'test-prueba';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Campo: Field collection item: Image Banner */
+  /* Campo: Field collection item: Tipo de item */
+  $handler->display->display_options['fields']['field_tipo_item']['id'] = 'field_tipo_item';
+  $handler->display->display_options['fields']['field_tipo_item']['table'] = 'field_data_field_tipo_item';
+  $handler->display->display_options['fields']['field_tipo_item']['field'] = 'field_tipo_item';
+  $handler->display->display_options['fields']['field_tipo_item']['relationship'] = 'field_items_slider_value';
+  $handler->display->display_options['fields']['field_tipo_item']['exclude'] = TRUE;
+  /* Campo: Campo: Image Banner */
   $handler->display->display_options['fields']['field_image_banner']['id'] = 'field_image_banner';
   $handler->display->display_options['fields']['field_image_banner']['table'] = 'field_data_field_image_banner';
   $handler->display->display_options['fields']['field_image_banner']['field'] = 'field_image_banner';
   $handler->display->display_options['fields']['field_image_banner']['relationship'] = 'field_items_slider_value';
   $handler->display->display_options['fields']['field_image_banner']['label'] = '';
+  $handler->display->display_options['fields']['field_image_banner']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image_banner']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_banner']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_banner']['settings'] = array(
     'image_style' => '',
     'image_link' => '',
   );
-  /* Campo: Field collection item: Video Banner */
+  /* Campo: Campo: Video Banner */
   $handler->display->display_options['fields']['field_video_banner']['id'] = 'field_video_banner';
   $handler->display->display_options['fields']['field_video_banner']['table'] = 'field_data_field_video_banner';
   $handler->display->display_options['fields']['field_video_banner']['field'] = 'field_video_banner';
   $handler->display->display_options['fields']['field_video_banner']['relationship'] = 'field_items_slider_value';
   $handler->display->display_options['fields']['field_video_banner']['label'] = '';
+  $handler->display->display_options['fields']['field_video_banner']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_video_banner']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_video_banner']['click_sort_column'] = 'input';
   $handler->display->display_options['fields']['field_video_banner']['settings'] = array(
@@ -150,6 +159,18 @@ function ct_noticias_views_default_views() {
     'youtube_autohide' => 0,
     'youtube_iv_load_policy' => 0,
   );
+  /* Campo: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_tipo_item';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'imagen';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_image_banner]';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[field_video_banner]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Sort criterion: Contenido: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -184,6 +205,7 @@ function ct_noticias_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('field collection item from field_items_slider'),
+    t('Tipo de item'),
     t('Todo'),
     t('Banner Nodes'),
   );

@@ -56,6 +56,38 @@ function ct_noticias_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'field_collection_item-field_items_slider-field_tipo_item'.
+  $field_instances['field_collection_item-field_items_slider-field_tipo_item'] = array(
+    'bundle' => 'field_items_slider',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_tipo_item',
+    'label' => 'Tipo de item',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
   // 'field_collection_item-field_items_slider-field_video_banner'.
   $field_instances['field_collection_item-field_items_slider-field_video_banner'] = array(
     'bundle' => 'field_items_slider',
@@ -182,6 +214,7 @@ function ct_noticias_field_default_field_instances() {
   t('Body');
   t('Image Banner');
   t('Items Slider');
+  t('Tipo de item');
   t('Video Banner');
 
   return $field_instances;

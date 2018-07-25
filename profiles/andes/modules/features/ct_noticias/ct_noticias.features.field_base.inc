@@ -79,6 +79,31 @@ function ct_noticias_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
+  // Exported field_base: 'field_tipo_item'.
+  $field_bases['field_tipo_item'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_tipo_item',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'imagen' => 'imagen',
+        'video' => 'video',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_video_banner'.
   $field_bases['field_video_banner'] = array(
     'active' => 1,
