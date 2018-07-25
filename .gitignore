@@ -1,18 +1,50 @@
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
+/sites/default/**/files
+/sites/default/**/private
+/sites/default/settings.php
+/nbproject
 
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+/files/*
+/cache
+/nbproject
 
 # Packages #
 ############
-*.DS_Store
 *.7z
 *.dmg
+*.gz
 *.bz2
 *.iso
 *.jar
 *.rar
+*.tar
 *.zip
-.sass-cache
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+
+
+# OS generated files #
+######################
+.DS_Store*
+.DS_Store
+ehthumbs.db
+Icon
+
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# Gulp and npm #
+##########
+package-lock.json
+node_modules
+
