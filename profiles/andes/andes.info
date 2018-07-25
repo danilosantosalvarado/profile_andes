@@ -49,6 +49,8 @@ dependencies[] = features
 dependencies[] = smtp
 dependencies[] = module_filter
 dependencies[] = conditional_fields
+dependencies[] = bean
+dependencies[] = bean_admin_ui
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
