@@ -68,6 +68,8 @@ dependencies[] = panels
 dependencies[] = panels_extra_layouts
 dependencies[] = page_manager
 dependencies[] = panels_ipe
+dependencies[] = fape
+dependencies[] = panopoly_magic
 ; Views
 dependencies[] = views
 dependencies[] = views_ui
@@ -80,6 +82,8 @@ dependencies[] = views_slideshow_simple_pager
 dependencies[] = views_slideshow_cycle
 dependencies[] = views_slideshow_xtra
 dependencies[] = views_slideshow_jcarousel
+; Features
+dependencies[] = ct_noticias
 ; Custom
 dependencies[] = udla_blocks_alter
 ; Chat
