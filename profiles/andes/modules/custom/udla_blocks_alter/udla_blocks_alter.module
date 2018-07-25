@@ -130,7 +130,7 @@ function udla_blocks_alter_preprocess_block(&$vars) {
     }
   }
   if (!empty($block->color_title)) {
-    $result = _block_data_css($block->color_title, 'title');
+    $result = _block_data_css($block->color_title, 'text');
     if (!empty($result)) {
       $vars['classes_array'][] = implode(' ', $result);
     }
@@ -140,7 +140,6 @@ function udla_blocks_alter_preprocess_block(&$vars) {
 
 function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts){
   if ($pane->type == 'block') {
-    $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." "."HOLA-AQUI" : "HOLA-AQUI-2";
     $block = block_load($content->module,$content->delta);
     if (!empty($block->background_color)) {
       $result = _block_data_css($block->background_color, 'background');
@@ -149,7 +148,7 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
       }
     }
     if (!empty($block->color_title)) {
-      $result = _block_data_css($block->color_title, 'title');
+      $result = _block_data_css($block->color_title, 'text');
       if (!empty($result)) {
         $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
       }
