@@ -40,8 +40,7 @@ options.sass = {
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/chroma-sass/sass',
     options.rootPath.project + 'node_modules/support-for/sass',
-    options.rootPath.project + 'node_modules/typey/stylesheets',
-    options.rootPath.project + 'node_modules/zen-grids/sass'
+    options.rootPath.project + 'node_modules/typey/stylesheets'
   ],
   outputStyle: 'expanded'
 };
@@ -49,34 +48,13 @@ options.sass = {
 // Define which browsers to add vendor prefixes for.
 options.autoprefixer = {
   browsers: [
+    'last 5 versions',
     '> 1%',
-    'ie 9'
+    'Ie 9',
+    'Ie 10'
   ]
 };
 
-// Define the style guide paths and options.
-// options.styleGuide = {
-//   source: [
-//     options.theme.sass,
-//     options.theme.css + 'style-guide/'
-//   ],
-//   destination: options.rootPath.styleGuide,
-
-//   builder: 'builder/twig',
-
-//   // The css and js paths are URLs, like '/misc/jquery.js'.
-//   // The following paths are relative to the generated style guide.
-//   css: [
-//     path.relative(options.rootPath.styleGuide, options.theme.css + 'styles.css'),
-//     path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/chroma-kss-styles.css'),
-//     path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/kss-only.css')
-//   ],
-//   js: [
-//   ],
-
-//   homepage: 'homepage.md',
-//   title: 'Zen 7.x-6.x Style Guide'
-// };
 
 // Define the paths to the JS files to lint.
 options.eslint = {
@@ -101,7 +79,9 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss');
+  kss         = require('kss'),
+  plumber     = require('gulp-plumber'),
+  notify      = require('gulp-notify');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -124,6 +104,17 @@ var sassFiles = [
 
 gulp.task('styles', ['clean:css'], function() {
   return gulp.src(sassFiles)
+    .pipe(plumber({
+      errorHandler: function (error) {
+        notify.onError({
+          title:    "Gulp",
+          subtitle: "Failure!",
+          message:  "Error: <%= error.message %>",
+          sound:    "Beep"
+        }) (error);
+        this.emit('end');
+      }
+    }))
     .pipe($.sourcemaps.init())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
@@ -166,7 +157,7 @@ gulp.task('styles:production', ['clean:css'], function() {
 // #########################
 // Lint Sass and JavaScript.
 // #########################
-gulp.task('lint', ['lint:sass', 'lint:js']);
+gulp.task('lint', ['lint:sass', 'lint:js', 'lint:js-with-fail', 'lint:sass-with-fail']);
 
 // Lint JavaScript.
 gulp.task('lint:js', function() {
@@ -228,22 +219,22 @@ gulp.task('watch:js', ['lint:js'], function() {
   return gulp.watch(options.eslint.files, options.gulpWatchOptions, ['lint:js']);
 });
 
-// ######################
-// Clean all directories.
-// ######################
-gulp.task('clean', ['clean:css', 'clean:styleguide']);
+// // ######################
+// // Clean all directories.
+// // ######################
+// gulp.task('clean', ['clean:css', 'clean:styleguide']);
 
-// Clean style guide files.
-gulp.task('clean:styleguide', function() {
-  // You can use multiple globbing patterns as you would with `gulp.src`
-  return del([
-      options.styleGuide.destination + '*.html',
-      options.styleGuide.destination + 'public',
-      options.theme.css + '**/*.twig'
-    ], {force: true});
-});
+// // Clean style guide files.
+// gulp.task('clean:styleguide', function() {
+//   // You can use multiple globbing patterns as you would with `gulp.src`
+//   return del([
+//       options.styleGuide.destination + '*.html',
+//       options.styleGuide.destination + 'public',
+//       options.theme.css + '**/*.twig'
+//     ], {force: true});
+// });
 
-// Clean CSS files.
+// // Clean CSS files.
 gulp.task('clean:css', function() {
   return del([
       options.theme.css + '**/*.css',

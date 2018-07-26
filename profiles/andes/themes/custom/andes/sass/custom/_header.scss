@@ -1,6 +1,9 @@
-//------------------------------------------------------------------------------
-//Encabezado
-//------------------------------------------------------------------------------
+
+/*
+// ------------------------------------------------------------------------------
+// Encabezado
+// ------------------------------------------------------------------------------
+*/
 .site-header {
   position: relative;
 }
@@ -22,7 +25,7 @@
         display: block;
         text-align: right;
 
-        @include zen-respond-to(xl) {
+        @include respond-to(xl) {
           display: none;
         }
       }
@@ -41,7 +44,7 @@
         position: absolute;
         left: 90px;
         top: 233px;
-        @include zen-respond-to(xl) {
+        @include respond-to(xl) {
           top: 191px;
         }
 
@@ -144,7 +147,7 @@
         cursor: pointer;
         display: none;
 
-        @include zen-respond-to(xl) {
+        @include respond-to(xl) {
           text-align: right;
           display: block;
         }
@@ -152,7 +155,7 @@
 
       .user-register-link {
         text-align: center;
-        @include zen-respond-to(xl) {
+        @include respond-to(xl) {
           margin-top: 100px;
         }
 
@@ -180,7 +183,7 @@
 }
 .header__top {
   padding-bottom: 20px;
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     padding-bottom: 0;
   }
 }
@@ -201,7 +204,7 @@
     display: none;
   }*/
 
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     nav {
       display: block;
       float: right;
@@ -261,7 +264,7 @@
           margin: 0;
           padding: 0 15px;
           float: right;
-          @include zen-respond-to(m) {
+          @include respond-to(m) {
             float: none;
           }
         }
@@ -280,7 +283,7 @@
   //buscador
   .search-form {
     display: none;
-    @include zen-respond-to(m) {
+    @include respond-to(m) {
       display: block;
     }
     .form-item {
@@ -288,7 +291,7 @@
       float: left;
       width: 80%;
 
-      @include zen-respond-to(xl) {
+      @include respond-to(xl) {
         width: 120px;
       }
 
@@ -330,7 +333,7 @@ footer {
     display: block;
     margin-bottom: 30px;
 
-    @include zen-respond-to(xl) {
+    @include respond-to(xl) {
       display: none;
     }
     .social {
@@ -346,7 +349,7 @@ footer {
 .header__social-links {
   //display: none;
 
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     display: block;
   }
   display: block;
@@ -409,7 +412,7 @@ footer {
       margin: 0;
       float: right;
 
-      @include zen-respond-to(m) {
+      @include respond-to(m) {
         float: right;
       }
 
@@ -440,7 +443,7 @@ footer {
   position: absolute;
   bottom: 10px;
   left: 20px;
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     position: inherit;
   }
   .container {
@@ -452,7 +455,7 @@ footer {
 
   margin: 0 0 10px;
 
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     float: left;
     width: 41.11%;
   }
@@ -461,7 +464,7 @@ footer {
     display: block;
     float: left;
     max-width: 120px;
-    @include zen-respond-to(xl) {
+    @include respond-to(xl) {
       float: none;
       max-width: inherit;
     }
@@ -495,7 +498,7 @@ footer {
 .header__secondary-menu {
   //display: none;
 
-  @include zen-respond-to(xl) {
+  @include respond-to(xl) {
     display: block;
 
     ul {
@@ -533,7 +536,7 @@ footer {
 }
 .header__navbar {
   margin-bottom: 20px;
-  @include zen-respond-to(m) {
+  @include respond-to(m) {
     margin-bottom: 0;
   }
 }
@@ -568,10 +571,10 @@ footer {
       margin: 0 auto;
       //padding-left: 7.5px;
       //padding-right: 7.5px;
-      @include zen-respond-to(m) {
+      @include respond-to(m) {
         max-width: 748px;
       }
-      @include zen-respond-to(xl) {
+      @include respond-to(xl) {
         max-width: 960px;
       }
 
@@ -591,7 +594,7 @@ footer {
           @include type-layout(xxs, .8);
           list-style: none;
 
-          @include zen-respond-to(m) {
+          @include respond-to(m) {
             float: left;
             width: 15%;
 
@@ -614,11 +617,11 @@ footer {
             border-right: 0;
             padding: 15px 0;
             font-weight: normal;
-            @include zen-respond-to(m) {
+            @include respond-to(m) {
               color: white;
               min-height: 30px;
             }
-            @include zen-respond-to(xl) {
+            @include respond-to(xl) {
               color: black;
               min-height: 30px;
               padding: 0;
@@ -671,7 +674,7 @@ footer {
         border-bottom: 0;
         padding-top: 10px;
 
-        @include zen-respond-to(m) {
+        @include respond-to(m) {
           padding-top: 25px;
         }
         li {
@@ -682,7 +685,7 @@ footer {
             border-top: 0;
             text-transform: inherit;
             text-align: center;
-            @include zen-respond-to(m) {
+            @include respond-to(m) {
               text-align: left;
             }
             &:hover {
@@ -727,7 +730,7 @@ footer {
   color: color(black);
   text-transform: uppercase;
 
-  @include zen-respond-to(m) {
+  @include respond-to(m) {
     position: relative;
     display: none;
   }
@@ -745,7 +748,7 @@ footer {
     &.active {
       display: block;
 
-      @include zen-respond-to(m) {
+      @include respond-to(m) {
         display: none;
       }
     }
@@ -757,7 +760,7 @@ footer {
     &.active {
       display: block;
 
-      @include zen-respond-to(m) {
+      @include respond-to(m) {
         display: none;
       }
     }
@@ -776,7 +779,7 @@ footer {
   text-indent: 0;
   line-height: 1;
 
-  @include zen-respond-to(m) {
+  @include respond-to(m) {
     display: none;
   }
 
