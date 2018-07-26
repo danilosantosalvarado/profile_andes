@@ -1335,4 +1335,8 @@ footer .header__social-links .social li {
   background: url("../images/icons/directory.png") no-repeat -2px 5px;
 }
 
+body.html.front {
+    background: black;
+}
+
 /*# sourceMappingURL=styles.css.map */
