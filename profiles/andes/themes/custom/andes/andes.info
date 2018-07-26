@@ -22,7 +22,7 @@ regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Config Bootstrap Fluid
+;; Config Bootstrap Settings
 ;;;;;;;;;;;;;;;;;;;;;
 
 settings[bootstrap_fluid_container] = 1
