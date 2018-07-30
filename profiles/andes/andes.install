@@ -362,7 +362,10 @@ function andes_install() {
     ->execute();    
 
   variable_set('admin_theme', 'adminimal');
-  variable_set('node_admin_theme', '1');     
+  variable_set('node_admin_theme', '1');   
+
+  // Enabled  Task Pages Manager 
+  variable_set('page_manager_node_view_disabled', FALSE);  
 }
 
 function andes_profile_details() {
