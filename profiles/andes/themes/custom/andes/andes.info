@@ -1,4 +1,4 @@
-name = Andes
+name = todo
 description = Theme for project Andes Reservations.
 core = 7.x
 base theme = bootstrap

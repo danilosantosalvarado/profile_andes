@@ -6,7 +6,7 @@
 // [read the Chroma documentation](http://johnalbin.github.io/chroma/).
 //
 // Markup: chroma.twig
-//
+// 
 // Weight: -1
 //
 // Style guide: sass.colors
@@ -17,23 +17,26 @@ $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can b
 $chroma: add-colors((
   // Primary
   black:                  #000,
-  grey-dark:              #424242, // #666
-  'grey':                 #cbcbcb,
-  grey-light:             #f0f0f0, // #ccc
-  beige:                  #ece8e4,
-  grey-extra-light:       ('black' lighten 93.33%), // #eee
   white:                  #fff,
+  grey-dark:              #484851, // #666
+  'grey':                 #484851,
+  grey-light:             #f4f1f1, // #ccc
+  grey-extra-light:       ('black' lighten 93.33%), // #eee
   red:                    #ed1c24,
   red-dark:               #93141a,
 
+  // Custom 
+  orange:                  #e55d12,
+
+
   // Secundary
-  coffee:                 #816853,
-  coffee-light:           #ca946a,
-  green:                  #009f2a,
+  // coffee:                 #816853,
+  // coffee-light:           #ca946a,
+  // green:                  #009f2a,
   blue:                   #4585ff,
   yellow:                 #ffea00,
-  fucsia:                 #ff17f0,
-  orange:                 #ffb12e,
+  // fucsia:                 #ff17f0,
+  // orange:                 #ffb12e,
 ));
 
 // Define color names for functional uses.

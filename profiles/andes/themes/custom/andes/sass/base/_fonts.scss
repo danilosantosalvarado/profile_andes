@@ -21,20 +21,79 @@
 // Since we're using Sass, you'll need to declare your font faces here, then you
 // can add them to the font variables in the _init.scss partial.
 
+// @font-face {
+//     font-family: 'roboto_condensedregular';
+//     src: url('../fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+//          url('../fonts/Roboto/robotocondensed-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+$font-crimsontext:  '../fonts/Crimsontext' !default;
+$font-lato:         '../fonts/Lato' !default;
+
 @font-face {
-    font-family: 'roboto_condensedregular';
-    src: url('../fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
-         url('../fonts/Roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-family: 'Crimson_textbold';
+    src: url('#{$font-crimsontext}/crimsontext-bold-webfont.woff2') format('woff2'),
+    url('#{$font-crimsontext}/crimsontext-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson_textregular';
+    src: url('#{$font-crimsontext}/crimsontext-regular-webfont.woff2') format('woff2'),
+    url('#{$font-crimsontext}/crimsontext-regular-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson_textroman';
+    src: url('#{$font-crimsontext}/crimsontext-roman-webfont.woff2') format('woff2'),
+    url('#{$font-crimsontext}/crimsontext-roman-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
-@import url(//fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+@font-face {
+    font-family: 'Lato bold';
+    src: url('#{$font-lato}/lato-bold-webfont.woff2') format('woff2'),
+    url('#{$font-lato}/lato-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
 
-$bodybg: #FFF;
-$headerfont: 'Open Sans', sans-serif;
-$altheaderfont: 'Gentium Basic', serif;
+@font-face {
+    font-family: 'HanaleiFill-Regular';
+    src: url('../fonts/HanaleiFill-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato black';
+    src: url('#{$font-lato}/lato-black.woff2') format('woff2'),
+    url('#{$font-lato}/lato-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato light';
+    src: url('#{$font-lato}/lato-light-webfont.woff2') format('woff2'),
+    url('#{$font-lato}/lato-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato regular';
+    src: url('#{$font-lato}/lato-regular-webfont.woff2') format('woff2'),
+    url('#{$font-lato}/lato-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 // Icons ADC
@@ -52,7 +111,8 @@ $icomoon-font-path: '../fonts/Icons' !default;
   font-style: normal;
 }
 
-[class^='icon-'], [class*=' icon-'] {
+[class^='icon-'],
+[class*='icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icoadc' !important;
   speak: none;
@@ -71,6 +131,7 @@ $icomoon-font-path: '../fonts/Icons' !default;
   content: '\e92c';
   color: rgb(29, 29, 27);
 }
+
 .icon-twitter .path2:before {
   content: '\e92d';
   margin-left: -1em;
@@ -84,154 +145,202 @@ $icomoon-font-path: '../fonts/Icons' !default;
 .icon-foro-2:before {
   content: '\e92e';
 }
+
 .icon-chat:before {
   content: '\e92f';
 }
+
 .icon-biblioteca:before {
   content: '\e930';
 }
+
 .icon-libro:before {
   content: '\e931';
 }
+
 .icon-menu:before {
   content: '\e900';
 }
+
 .icon-punto:before {
   content: '\e901';
 }
+
 .icon-calendario-2:before {
   content: '\e902';
 }
+
 .icon-images:before {
   content: '\e903';
 }
+
 .icon-tool:before {
   content: '\e904';
 }
+
 .icon-docu:before {
   content: '\e905';
 }
+
 .icon-agregar:before {
   content: '\e906';
 }
+
 .icon-editar:before {
   content: '\e907';
 }
+
 .icon-email-2:before {
   content: '\e908';
 }
+
 .icon-calendario:before {
   content: '\e909';
 }
+
 .icon-telefono:before {
   content: '\e90a';
 }
+
 .icon-email:before {
   content: '\e90b';
 }
+
 .icon-ok-doc:before {
   content: '\e90c';
 }
+
 .icon-buscar-doc:before {
   content: '\e90d';
 }
+
 .icon-perfil:before {
   content: '\e90e';
 }
+
 .icon-actualizar:before {
   content: '\e90f';
 }
+
 .icon-carrito:before {
   content: '\e910';
 }
-.icon-Cerrar:before {
+
+.icon-cerrar:before {
   content: '\e911';
 }
+
 .icon-pregunta:before {
   content: '\e912';
 }
+
 .icon-ok:before {
   content: '\e913';
 }
+
 .icon-document:before {
   content: '\e914';
 }
+
 .icon-link:before {
   content: '\e915';
 }
+
 .icon-play:before {
   content: '\e916';
 }
+
 .icon-book:before {
   content: '\e917';
 }
+
 .icon-mensaje:before {
   content: '\e918';
 }
+
 .icon-ayuda:before {
   content: '\e919';
 }
+
 .icon-education:before {
   content: '\e91a';
 }
+
 .icon-herramientas:before {
   content: '\e91b';
 }
+
 .icon-felcha:before {
   content: '\e91c';
 }
+
 .icon-buscar:before {
   content: '\e91d';
 }
+
 .icon-home:before {
   content: '\e91e';
 }
-.icon-Recurso-1:before {
+
+.icon-recurso-1:before {
   content: '\e91f';
 }
+
 .icon-facebook:before {
   content: '\e920';
 }
+
 .icon-ver-más:before {
   content: '\e921';
 }
+
 .icon-ayuda-2:before {
   content: '\e922';
 }
+
 .icon-rss:before {
   content: '\e923';
 }
+
 .icon-instagram-default {
   content: '\e924';
 }
+
 .icon-instagram .path1:before {
   content: '\e924';
   color: rgb(66, 66, 66);
 }
+
 .icon-instagram .path2:before {
   content: '\e925';
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
+
 .icon-instagram .path3:before {
   content: '\e926';
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
+
 .icon-instagram .path4:before {
   content: '\e927';
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
+
 .icon-pinterest:before {
   content: '\e928';
 }
+
 .icon-alerta-mail:before {
   content: '\e929';
 }
+
 .icon-foros:before {
   content: '\e92a';
 }
+
 .icon-chat2:before {
   content: '\e92b';
 }

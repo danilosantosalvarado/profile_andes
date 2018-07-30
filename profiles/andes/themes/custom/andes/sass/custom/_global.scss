@@ -1,9 +1,0 @@
-.form-item {
-  label {
-    &.error {
-      @include type-layout(xxxs, .5);
-      background: transparent;
-      margin-top: 5px;
-    }
-  }
-}

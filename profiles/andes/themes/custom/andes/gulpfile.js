@@ -29,7 +29,7 @@ options.theme = {
 
 // Set the URL used to access the Drupal website under development. This will
 // allow Browser Sync to serve the website and update CSS changes on the fly.
-options.drupalURL = '';
+options.drupalURL = 'http://localhost/Plantilla_base_drupal';
 // options.drupalURL = 'http://localhost';
 
 // Define the node-sass configuration. The includePaths is critical!
@@ -89,7 +89,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['styles:production', 'styleguide', 'lint']);
+gulp.task('build', ['styles:production', 'lint']);
 
 // ##########
 // Build CSS.
@@ -132,32 +132,11 @@ gulp.task('styles:production', ['clean:css'], function() {
     .pipe(gulp.dest(options.theme.css));
 });
 
-// ##################
-// Build style guide.
-// ##################
-// gulp.task('styleguide', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
-//   return kss(options.styleGuide);
-// });
-
-// gulp.task('styleguide:kss-example-chroma', function() {
-//   return gulp.src(options.theme.sass + 'style-guide/kss-example-chroma.scss')
-//     .pipe(sass(options.sass).on('error', sass.logError))
-//     .pipe($.replace(/(\/\*|\*\/)\n/g, ''))
-//     .pipe($.rename('kss-example-chroma.twig'))
-//     .pipe($.size({showFiles: true}))
-//     .pipe(gulp.dest(options.theme.css + 'style-guide'));
-// });
-
-// // Debug the generation of the style guide with the --verbose flag.
-// gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
-//   options.styleGuide.verbose = true;
-//   return kss(options.styleGuide);
-// });
 
 // #########################
 // Lint Sass and JavaScript.
 // #########################
-gulp.task('lint', ['lint:sass', 'lint:js', 'lint:js-with-fail', 'lint:sass-with-fail']);
+gulp.task('lint', ['lint:sass', 'lint:js']);
 
 // Lint JavaScript.
 gulp.task('lint:js', function() {
@@ -170,7 +149,7 @@ gulp.task('lint:js', function() {
 gulp.task('lint:js-with-fail', function() {
   return gulp.src(options.eslint.files)
     .pipe($.eslint())
-    .pipe($.eslint.format())
+    //.pipe($.eslint.format())
     .pipe($.eslint.failOnError());
 });
 
@@ -192,7 +171,7 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
+gulp.task('watch', ['browser-sync','watch:js']); //,'watch:lint-and-styleguide'
 
 gulp.task('browser-sync', ['watch:css'], function() {
   if (!options.drupalURL) {
@@ -211,8 +190,7 @@ gulp.task('watch:css', ['styles'], function() {
 gulp.task('watch:lint-and-styleguide', ['lint:sass'], function() {
   return gulp.watch([
       options.theme.sass + '**/*.scss',
-      options.theme.sass + '**/*.twig'
-    ], options.gulpWatchOptions, ['styleguide', 'lint:sass']);
+    ], options.gulpWatchOptions, ['lint:sass']);
 });
 
 gulp.task('watch:js', ['lint:js'], function() {

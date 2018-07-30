@@ -1,5 +1,6 @@
 # Documentation for the sass-lint Linters is available at:
 # https://github.com/sasstools/sass-lint/tree/master/docs/rules
+# https://stylelint.io/user-guide/rules/
 
 options:
   formatter: stylish
@@ -18,10 +19,15 @@ rules:
       - 'mq'
       - 'respond-to'
       - 'rtl'
-      - 'zen-breakpoint'
-      - 'zen-layout'
-      - 'zen-mq'
-      - 'zen-respond-to'
+      # - 'zen-breakpoint'
+      # - 'zen-layout'
+      # - 'zen-mq'
+      # - 'zen-respond-to'
+      - 'type-layout'
+      - 'padding'
+      - 'margin'
+      - 'margin-bottom'
+      - 'font-size'
 
   # Line Spacing
   one-declaration-per-line: 2

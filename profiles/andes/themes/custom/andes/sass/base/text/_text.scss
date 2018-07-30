@@ -59,18 +59,6 @@ b {
 }
 // sass-lint:enable no-mergeable-selectors
 
-// Cite
-//
-// The `<cite>` element represents a reference to a creative work.
-//
-// Markup: text-cite.twig
-//
-// Style guide: base.text.cite
-
-cite {
-  // Add your styles.
-}
-
 // Code
 //
 // The `<code>` element represents a fragment of computer code. The `<var>`
@@ -94,18 +82,6 @@ var {
   font-size: 1em;
 }
 
-// Deleted text
-//
-// The `<del>` element indicates blocks of text that have been deleted.
-//
-// Markup: text-del.twig
-//
-// Style guide: base.text.del
-
-del {
-  // Add your styles.
-}
-
 // Definition
 //
 // The `<dfn>` element represents the defining instance of a term.
@@ -117,37 +93,6 @@ del {
 dfn {
   // Add the correct font style in Android <4.4.
   font-style: italic;
-}
-
-// Italics
-//
-// The `<em>` element or the `<i>` element is used for emphasizing a snippet of
-// text with italics.
-//
-// Feel free to use `<i>` element in HTML5. `<i>` is meant to convey voice,
-// technical terms, etc.
-//
-// Markup: text-i.twig
-//
-// Weight: -1
-//
-// Style guide: base.text.i
-
-i,
-em {
-  // Add your styles.
-}
-
-// Inserted text
-//
-// The `<ins>` element indicates additions to the document.
-//
-// Markup: text-ins.twig
-//
-// Style guide: base.text.ins
-
-ins {
-  // Add your styles.
 }
 
 // Marked text
@@ -163,31 +108,6 @@ mark {
   // Add the correct background and color in IE <10.
   background-color: color(mark-bg);
   color: color(text);
-}
-
-// Quote
-//
-// The `<q>` element represents an inline quote from another source. Longer
-// quotes should use the `<blockquote>` element.
-//
-// Markup: text-q.twig
-//
-// Style guide: base.text.q
-
-q {
-  // Add your styles.
-}
-
-// Strikethrough text
-//
-// The `<s>` element indicates blocks of text that are no longer relevant.
-//
-// Markup: text-s.twig
-//
-// Style guide: base.text.s
-
-s {
-  // Add your styles.
 }
 
 // Small text
@@ -229,17 +149,4 @@ sub {
 
 sup {
   top: -.5em;
-}
-
-// Underlined text
-//
-// To underline text use the `<u>` element. Not recommended since underlines are
-// used by web browsers to style hyperlinks.
-//
-// Markup: text-u.twig
-//
-// Style guide: base.text.u
-
-u {
-  // Add your styles.
 }

@@ -44,7 +44,8 @@
 // Weight: 1
 //
 // Style guide: components
-
+@import 'components/sliders-homes',
+				'components/componente-noticias';
 
 // Navigation
 //
@@ -65,17 +66,3 @@
 // Weight: 3
 //
 // Style guide: forms
-
-
-
-// Custom
-//
-// Custom styles for blocks ADC
-//
-// Weight: 4
-//
-// Style guide: custom
-@import 'custom/global';
-@import 'custom/header';
-// @import 'custom/content';
-// @import 'custom/footer';
