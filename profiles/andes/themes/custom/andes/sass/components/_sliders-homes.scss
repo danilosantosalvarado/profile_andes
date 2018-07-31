@@ -1,0 +1,284 @@
+/* 
+//------------------------------------------------------------------------------
+// Slider Homes
+//------------------------------------------------------------------------------  
+*/
+
+
+/* ------| Container |----- */
+.container-fluid {
+	padding: 0;
+}
+
+/* ------| Titles |----- */
+.pane-title {
+  font-family: $latoblack;
+  @include font-size(xxxl);
+	color: color('grey');
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include margin-bottom(1.7)
+}
+
+/* ------| Slider Home|----- */
+.view-slider-homes {
+	li.swiper-slide {
+		img {
+			width: 100%;
+			@include respond-to(xl) {
+				max-height: 619px;
+			}
+		}
+		iframe {
+			width: 100%;
+			@include respond-to(xl) {
+				height: 515px;
+				max-height: 515px;
+			}
+		}
+	}
+}
+/* ------| Ubicado Derecha  |----- */
+.view-slider-homes {
+	.slider-homes-left,
+	%slider-homes-left {
+		position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    width: 85%;
+    @include margin(0 auto);
+    @include padding(0 .834);
+  	@include respond-to(m) {
+  		left: 10%;
+  		right: inherit;
+  		width: auto;
+  		max-width: 500px;
+      text-align: left;
+ 		 	@include margin(0);
+    }
+  	//Titulo
+  	.title-slider-homes,
+  	%title-slider-homes {
+  		font-family: $latoregular;
+  		@include font-size(l);
+  		color: color('white');
+			text-transform: uppercase;
+  		text-align: center;
+  		margin: 0;
+  		@include respond-to(m) {
+				@include font-size(xl);
+				text-align: left;
+  		}
+  		&:after {
+  			content: '';
+		    display: block;
+		    height: 1px;
+		    border-top: 1px solid color('white');
+		    position: relative;
+		    top: 10px;
+  		}
+  	}
+  	//Sub titulo 
+  	.body-slider-homes,
+  	%body-slider-homes {
+			font-family: $latoregular;
+			@include font-size(m);
+			color: color('white');
+			text-align: center;
+			@include padding (1.25 0); 
+			@include respond-to(m) {
+      	text-align: left;
+    	}
+  	}
+  	//Buttom
+  	.link-slider-homes {
+  		a {
+  			display: block;
+  			max-width: 300px;
+  			text-align: center;
+  			text-decoration: none;
+  			background: color('white');
+  			color: color('grey');
+  			border: 1px solid color('grey');
+  			@include margin(1.4 auto 0);
+  			@include padding (.42 1.25);
+  			@include respond-to(m) {
+					float: right;
+					@include margin(.21 auto);
+  				//margin: 5px auto;
+  			}
+  			&:hover {
+  				background: color('grey-dark');
+  				color: color('white');
+  			}
+  		}
+  	}
+	}
+}
+
+/* ------| Ubicado Izquierda  |----- */
+.view-slider-homes {
+	.slider-homes-right {
+		@extend %slider-homes-left;
+		@include respond-to(m) {
+  		left: inherit;
+			right: 10%;
+    }
+    .title-slider-homes {
+      @extend %title-slider-homes;
+      @include respond-to(m) {
+      	text-align: right;
+    	} 
+    }
+    .body-slider-homes {
+    	@extend %body-slider-homes;
+    	@include respond-to(m) {
+    		text-align: right;
+    	}
+    }
+	}
+}
+
+/* ------| Ubicado Centro |----- */
+.view-slider-homes {
+	.slider-homes-center {
+		@extend %slider-homes-left;
+		@include respond-to(m) {
+  		left: inherit;
+			right: 30%;
+    }
+    .title-slider-homes {
+      @extend %title-slider-homes;
+      @include respond-to(m) {
+      	text-align: center;
+    	}  
+    }
+    .body-slider-homes {
+    	@extend %body-slider-homes;
+    	@include respond-to(m) {
+    		text-align: center;
+    	}
+    }
+	}
+}
+
+/* ------| Ubicado Abajo |----- */
+.view-slider-homes {
+	.field-content {
+		.slider-homes-bottom {
+			padding: 0 15px;
+			@include margin(.834 0);
+			@include respond-to(m) {
+				width: 750px;
+				@include margin(.834 auto .834);
+			}
+			@include respond-to(xl) {
+				width: 970px;
+			}
+			@include respond-to(xxxl) {
+  			width: 1170px;
+			}
+			.title-slider-homes {
+				width: 100%;
+				float: left;
+				font-family: $latobold;
+				@include font-size(l);
+				@include margin(.417 0);
+				text-transform: uppercase;
+				color: #585863;
+				min-height: 50px;
+				padding-bottom: 10px;
+				@include respond-to(m) {
+					width: 41.66666667%;
+					text-align: right;
+					padding-right: 25px;
+					padding-bottom: 0;
+				}
+			}
+			.body-slider-homes {
+				float: left;
+		    margin: 0;
+		    font-family: $crimson-textregular;
+		    text-align: left;
+		    color: #585863;
+		  	@include font-size(m);
+		  	border-top: 1px solid #ebba00;
+		    padding-top: 15px;
+		    position: relative;
+		    min-height: 50px;
+		    @include respond-to(m) {
+					width: 33.33333333%;
+					border: 0;
+					border-left: 1px solid #ebba00;
+					padding-left: 25px;
+		    }
+			}
+			.link-slider-homes {
+				a {
+					float: right;
+					text-decoration: none;
+					@include margin(.834 .834 0 auto);
+				  max-width: 145px;
+				  border: 1px solid #484851;
+				  color: #484851;
+				  padding: 10px 35px;
+				  &:hover {
+    				background: color('grey-dark');
+    				color: color('white');
+    			}
+				}
+			}
+		}
+	}
+}
+
+/* ------| Paguinador |----- */
+.view-slider-homes {
+	.skin-default {
+		position: relative;
+		//Flechas paguinador
+		.views-slideshow-controls-text {
+    	//Button Izquierda 
+			a[rel='prev'],
+  		%a-slidw-prev {
+				display: none;
+				width: 40px;
+		    height: 40px;
+		    position: absolute;
+		    left: 2%;
+		    top: 40%;
+  			font-size: 0;
+				background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+		    background-size: 40px 40px;
+		    z-index: 1;
+			}
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				@extend %a-slidw-prev;
+		    left: inherit;
+		    right: 2%;
+				background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+		  }
+		}
+	}
+	//Hover flechas paguinador
+	&:hover {
+		.views-slideshow-controls-text {
+			a[rel='prev'],
+			%a-hover {
+				display: block;
+			}
+			a[rel='next'] {
+				@extend %a-hover;
+			}
+		}
+	}
+}
