@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function udla_tb_megamenu_alter_theme($existing, $type, $theme, $path) {
+	$items = array();
+  $items['tb_megamenu_item'] = array(
+    'variables' => array(
+      'menu_name' => NULL,
+      'a_classes' => array(),
+      'item' => NULL,
+      'level' => NULL,
+      'menu_config' => NULL,
+      'block_config' => NULL,
+      'trail' => NULL,
+      'submenu' => NULL,
+      'section' => 'frontend',
+    ),
+    'template' => 'tb-megamenu-item',
+    'path' => $path . '/templates',
+    'preprocess functions' => array(
+      'template_preprocess',
+      'template_preprocess_tb_megamenu_item',
+    ),
+  );
+  return $items;
+}
