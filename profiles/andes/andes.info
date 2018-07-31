@@ -72,6 +72,8 @@ dependencies[] = panels_extra_layouts
 dependencies[] = panels_ipe
 dependencies[] = fape
 dependencies[] = panopoly_magic
+; Export 
+dependencies[] = menu_import
 ; Views
 dependencies[] = views
 dependencies[] = views_ui
