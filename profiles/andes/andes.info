@@ -51,6 +51,7 @@ dependencies[] = module_filter
 dependencies[] = conditional_fields
 dependencies[] = bean
 dependencies[] = bean_admin_ui
+dependencies[] = menuimage
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
@@ -91,6 +92,7 @@ dependencies[] = views_conditional
 dependencies[] = ct_noticias
 ; Custom
 dependencies[] = udla_blocks_alter
+dependencies[] = udla_tb_megamenu_alter
 ; Chat
 dependencies[] = activehelper_livehelp
 ; Information added by Drupal.org packaging script on 2018-04-25

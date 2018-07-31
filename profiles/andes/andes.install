@@ -331,17 +331,18 @@ function andes_install() {
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
   );
-  menu_link_save($item);
 
+  menu_link_save($item);
   // Update the menu router information.
   menu_rebuild();
 
-  //   // Create a Mega Menu.
-  // $mega_menu = array('menu_name' => 'menu-mega-menu');  
-  // menu_link_save($mega_menu);
+  // Create Menu (Mega-Menu) 
+  $menu = array(
+    'menu_name' => 'menu-mega-menu',  
+    'title' => 'Mega Menu', 
+    'description' => 'Main menu (Mega-Menu)');
 
-  // // Update the menu router information.
-  // menu_rebuild();
+  menu_save($menu);
 
   // Enable the admin theme.
   db_update('system')
@@ -368,11 +369,16 @@ function andes_install() {
     ->condition('name', 'andes')
     ->execute();    
 
-  variable_set('admin_theme', 'adminimal');
-  variable_set('node_admin_theme', '1');   
+   variable_set('admin_theme', 'adminimal');
+   variable_set('node_admin_theme', '1');   
 
-  // Enabled  Task Pages Manager 
-  variable_set('page_manager_node_view_disabled', FALSE);  
+   // Enabled  Task Pages Manager 
+   variable_set('page_manager_node_view_disabled', FALSE);  
+
+   // Import Menu ("Mega Menu"). 
+    module_load_include('inc', 'menu_import', 'includes/import');
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu', array());
+    menu_import_save_menu($menu, $options);
 }
 
 function andes_profile_details() {
