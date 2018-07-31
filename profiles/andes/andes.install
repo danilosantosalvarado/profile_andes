@@ -336,6 +336,13 @@ function andes_install() {
   // Update the menu router information.
   menu_rebuild();
 
+  //   // Create a Mega Menu.
+  // $mega_menu = array('menu_name' => 'menu-mega-menu');  
+  // menu_link_save($mega_menu);
+
+  // // Update the menu router information.
+  // menu_rebuild();
+
   // Enable the admin theme.
   db_update('system')
     ->fields(array('status' => 1))

@@ -4,6 +4,7 @@
 /sites/default/settings.php
 /nbproject
 /profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css
+
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
@@ -34,7 +35,6 @@ sites/*/private
 .DS_Store*
 .DS_Store
 ehthumbs.db
-Icon
 
 Thumbs.db
 ._*
