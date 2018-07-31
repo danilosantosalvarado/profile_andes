@@ -81,7 +81,8 @@ var gulp      = require('gulp'),
   sass        = require('gulp-sass'),
   kss         = require('kss'),
   plumber     = require('gulp-plumber'),
-  notify      = require('gulp-notify');
+  notify      = require('gulp-notify'),
+  eslint      = require('gulp-eslint');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -89,7 +90,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['styles:production', 'lint']);
+gulp.task('build', ['watch:css']); //'styles:production', 'lint'
 
 // ##########
 // Build CSS.
@@ -98,8 +99,6 @@ var sassFiles = [
   options.theme.sass + '**/*.scss',
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss'
-  // Chroma markup has its own gulp task.
-  // '!' + options.theme.sass + 'style-guide/kss-example-chroma.scss'
 ];
 
 gulp.task('styles', ['clean:css'], function() {
@@ -126,7 +125,7 @@ gulp.task('styles', ['clean:css'], function() {
 
 gulp.task('styles:production', ['clean:css'], function() {
   return gulp.src(sassFiles)
-    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe(gulp.dest(options.theme.css));
@@ -139,16 +138,21 @@ gulp.task('styles:production', ['clean:css'], function() {
 gulp.task('lint', ['lint:sass', 'lint:js']);
 
 // Lint JavaScript.
+// https://github.com/adametry/gulp-eslint/tree/master/example
 gulp.task('lint:js', function() {
   return gulp.src(options.eslint.files)
-    .pipe($.eslint())
+    .pipe(eslint({
+      configFile: 'config.json'
+    }))
     .pipe($.eslint.format());
 });
 
 // Lint JavaScript and throw an error for a CI to catch.
 gulp.task('lint:js-with-fail', function() {
   return gulp.src(options.eslint.files)
-    .pipe($.eslint())
+    .pipe($.eslint({
+      configFile: 'config.json'
+    }))
     //.pipe($.eslint.format())
     .pipe($.eslint.failOnError());
 });
@@ -197,20 +201,6 @@ gulp.task('watch:js', ['lint:js'], function() {
   return gulp.watch(options.eslint.files, options.gulpWatchOptions, ['lint:js']);
 });
 
-// // ######################
-// // Clean all directories.
-// // ######################
-// gulp.task('clean', ['clean:css', 'clean:styleguide']);
-
-// // Clean style guide files.
-// gulp.task('clean:styleguide', function() {
-//   // You can use multiple globbing patterns as you would with `gulp.src`
-//   return del([
-//       options.styleGuide.destination + '*.html',
-//       options.styleGuide.destination + 'public',
-//       options.theme.css + '**/*.twig'
-//     ], {force: true});
-// });
 
 // // Clean CSS files.
 gulp.task('clean:css', function() {
