@@ -24,6 +24,7 @@ sites/*/private
 *.tar
 *.zip
 *.tgz
+*.sh
 
 # Logs and databases #
 ######################

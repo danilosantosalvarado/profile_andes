@@ -1,0 +1,168 @@
+Inicio {"url":"<front>","weight":"-50"}
+DIVERSIDAD {"url":"<front>","expanded":true,"weight":"-50"}
+-CENTRO DE APOYO A LA DIVERSIDAD Y LA EQUIDAD (CADE) {"url":"<front>","expanded":true,"weight":"0"}
+--Curso Herramientas para la vida universitaria {"url":"<front>","expanded":true,"weight":"-50"}
+--Seguimiento a estudiantes {"url":"<front>","expanded":true,"weight":"-49"}
+--Gestión y participación estudiantil {"url":"<front>","expanded":true,"weight":"-48"}
+---Formación Práctica Social {"url":"<front>","expanded":true,"weight":"-50"}
+---Curso de gestión {"url":"<front>","expanded":true,"weight":"-49"}
+---Círculos de participación {"url":"<front>","expanded":true,"weight":"-48"}
+---ANDAR {"url":"<front>","expanded":true,"weight":"-47"}
+---Sociedad Ser Pilo Paga {"url":"<front>","expanded":true,"weight":"-46"}
+DEPORTES {"url":"<front>","expanded":true,"weight":"-49"}
+-CURSOS {"url":"<front>","expanded":true,"weight":"-50"}
+--Profesores {"url":"<front>","weight":"0"}
+--Reglamento {"url":"<front>","weight":"0"}
+-CLASES ABIERTAS {"url":"<front>","weight":"-49"}
+--Profesores {"url":"<front>","weight":"-49"}
+--Reglamento {"url":"<front>","weight":"-48"}
+-SELECCIONES {"url":"<front>","weight":"-48"}
+--Profesores {"url":"<front>","weight":"-50"}
+--Selección Natación {"url":"<front>","weight":"-49"}
+--Selección Baloncesto Femenino {"url":"<front>","weight":"-48"}
+--Selección Baloncesto Masculino {"url":"<front>","weight":"-47"}
+--Selección Fútbol Femenino {"url":"<front>","weight":"-46"}
+--Selección Rugby Femenino {"url":"<front>","weight":"-45"}
+--Selección Voleibol Femenino {"url":"<front>","weight":"-44"}
+--Selección Voleibol Masculino {"url":"<front>","weight":"-43"}
+--Selección de Squash {"url":"<front>","weight":"-41"}
+--Selección Tenis de Campo {"url":"<front>","weight":"-40"}
+--Selección Tenis de Mesa {"url":"<front>","weight":"-39"}
+--Selección de Karate {"url":"<front>","weight":"-38"}
+--Selección Frisbee Ultimate {"url":"<front>","weight":"-37"}
+--Selección Rugby Masculino {"url":"<front>","weight":"-42"}
+--Selección Ajedrez {"url":"<front>","weight":"-36"}
+--Selección Taekwondo WTF {"url":"<front>","weight":"-35"}
+--Selección Voleibol Arena Masculino {"url":"<front>","weight":"-34"}
+--Selección Voleibol Arena Femenino {"url":"<front>","weight":"-33"}
+--Selección Atletismo {"url":"<front>","weight":"0"}
+-TORNEOS INTERNOS {"url":"<front>","weight":"-47"}
+--Ranking Ajedrez {"url":"<front>","weight":"-50"}
+--Ranking Tenis de Campo {"url":"<front>","weight":"-49"}
+--Ranking Billar {"url":"<front>","weight":"-48"}
+--Ranking Tenis de Mesa {"url":"<front>","weight":"-47"}
+--Ranking Squash {"url":"<front>","weight":"-46"}
+--Reglamento {"url":"<front>","weight":"-45"}
+-RECREACIÓN {"url":"<front>","weight":"-46"}
+--Catálogo {"url":"<front>","weight":"-50"}
+--Ranking Ajedrez {"url":"<front>","weight":"-49"}
+--Ranking Tenis de Campo {"url":"<front>","weight":"-48"}
+--Ranking Billar {"url":"<front>","weight":"-47"}
+--Ranking Tenis de Mesa {"url":"<front>","weight":"-46"}
+--Ranking Squash {"url":"<front>","weight":"-45"}
+--Ranking Golf {"url":"<front>","weight":"-44"}
+--Reglamento {"url":"<front>","weight":"-43"}
+EMPLEABILIDAD - CTP {"url":"<front>","expanded":true,"weight":"-48"}
+-ESTUDIANTES {"url":"<front>","weight":"-50"}
+--Práctica Académica {"url":"<front>","weight":"-50"}
+---Estudiantes aspirantes a práctica {"url":"<front>","weight":"0"}
+----¿Qué es la práctica académica? {"url":"<front>","weight":"-50"}
+----Requisitos para realizar una práctica {"url":"<front>","weight":"-49"}
+----¿Cómo hacer una práctica? {"url":"<front>","weight":"-48"}
+----Ofertas de Práctica académica {"url":"<front>","weight":"-47"}
+----Materias de práctica {"url":"<front>","weight":"-46"}
+----Formas de vinculación {"url":"<front>","weight":"-45"}
+----Artículos y testimonios {"url":"<front>","weight":"-44"}
+----Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-43"}
+----Enlaces externos {"url":"<front>","weight":"-42"}
+---Practicantes {"url":"<front>","weight":"0"}
+----Esquema de seguimiento a practicantes {"url":"<front>","weight":"-50"}
+----Documentos exclusivos para practicantes {"url":"<front>","weight":"-49"}
+--Gerencia de carrera {"url":"<front>","weight":"-48"}
+---Talleres y charlas {"url":"<front>","weight":"-50"}
+---Solución de preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
+---Espacios Personalizados {"url":"<front>","weight":"-47"}
+---Artículos de actualidad {"url":"<front>","weight":"-46"}
+---Guías y formatos {"url":"<front>","weight":"-49"}
+--Oportunidades laborales {"url":"<front>","weight":"-47"}
+---Ofertas laborales {"url":"<front>","weight":"-48"}
+---Estudie trabajando {"url":"<front>","weight":"-49"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-46"}
+---Recomendaciones para participar {"url":"<front>","weight":"-50"}
+---Cronograma {"url":"<front>","weight":"-49"}
+---Artículos relacionados {"url":"<front>","weight":"-48"}
+---Preguntas frecuentes {"url":"<front>","weight":"-47"}
+-EGRESADOS {"url":"<front>","weight":"-49"}
+--Gerencia de carrera {"url":"<front>","weight":"-50"}
+---Talleres y Charlas {"url":"<front>","weight":"-50"}
+---Guías y formatos {"url":"<front>","weight":"-49"}
+---Solución de preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
+---Espacios personalizados {"url":"<front>","weight":"-47"}
+---Artículos de actualidad {"url":"<front>","weight":"-46"}
+--Oportunidades laborales {"url":"<front>","weight":"-49"}
+---Ofertas Laborales {"url":"<front>","weight":"0"}
+----Recomendaciones ofertas transnacionales {"url":"<front>","weight":"0"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-48"}
+---Recomendaciones para participar {"url":"<front>","weight":"-50"}
+---Cronograma {"url":"<front>","weight":"-49"}
+---Artículos relacionados {"url":"<front>","weight":"-48"}
+---Preguntas frecuentes {"url":"<front>","weight":"-47"}
+-EMPRESAS {"url":"<front>","weight":"0"}
+--Practica académica {"url":"<front>","weight":"-49"}
+---Qué es la práctica académica {"url":"<front>","weight":"-50"}
+---Cómo publicar una oferta de práctica {"url":"<front>","weight":"-49"}
+---Formas de vinculación {"url":"<front>","weight":"-48"}
+---Seguimiento practicantes {"url":"<front>","weight":"-47"}
+---Artículos y testimonios {"url":"<front>","weight":"-46"}
+---Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-45"}
+--Oportunidades laborales {"url":"<front>","weight":"-48"}
+---Ofertas laborales {"url":"<front>","weight":"-50"}
+----Recomendación ofertas transnacionales {"url":"<front>","weight":"0"}
+---Estudie trabajando {"url":"<front>","weight":"-49"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-47"}
+---Requisitos para participar en el evento {"url":"<front>","weight":"-50"}
+---Artículos relacionados {"url":"<front>","weight":"-49"}
+---Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
+CULTURA {"url":"<front>","expanded":true,"weight":"-47"}
+-EVENTOS {"url":"<front>","weight":"0"}
+--Conciertos {"url":"<front>","weight":"-50"}
+---Colombia Suena {"url":"<front>","weight":"-50"}
+---Serie de pianistas {"url":"<front>","weight":"-49"}
+---Grupos Institucionales {"url":"<front>","weight":"-48"}
+---Orquestas de la Ciudad {"url":"<front>","weight":"-47"}
+---Encuentro de Estudiantes de Música {"url":"<front>","weight":"-46"}
+---Música Clásica y Antigua {"url":"<front>","weight":"-45"}
+---Música experimental: Sonósferas {"url":"<front>","weight":"-44"}
+---Martes en vivo {"url":"<front>","weight":"-43"}
+---Conciertos Sala de Música Ernesto Martin {"url":"<front>","weight":"-42"}
+--Festivales {"url":"<front>","weight":"-49"}
+---Festival de Músicas del Mundo {"url":"<front>","weight":"-50"}
+---Festival de Jazz {"url":"<front>","weight":"-49"}
+---Festival de Bandas {"url":"<front>","weight":"-48"}
+---Festival Universitario de Danza Contemporánea {"url":"<front>","weight":"-47"}
+--Exposiciones {"url":"<front>","weight":"-48"}
+--Arte y Cultura Audiovisual {"url":"<front>","weight":"-47"}
+--Artes Escénicas {"url":"<front>","weight":"-46"}
+---Teatro {"url":"<front>","weight":"-50"}
+---Lecturas dramáticas {"url":"<front>","weight":"-49"}
+--Cine {"url":"<front>","weight":"-45"}
+---Cine Colombiano {"url":"<front>","weight":"-50"}
+---Cine Independiente {"url":"<front>","weight":"-49"}
+---Bogoshorts bajo la luna {"url":"<front>","weight":"-48"}
+--Cultura Digital {"url":"<front>","weight":"-44"}
+--Revista Skene {"url":"<front>","weight":"-43"}
+APOYO {"url":"<front>","expanded":true,"weight":"-46"}
+-DECALAB {"url":"<front>","weight":"-50"}
+--Guías y formatos {"url":"<front>","weight":"-50"}
+--Seminario {"url":"<front>","weight":"-49"}
+--Investigación {"url":"<front>","weight":"-48"}
+--Biblioteca {"url":"<front>","weight":"-47"}
+-APOYOS INDIVIDUALES {"url":"<front>","weight":"-49"}
+--Apoyo Académico {"url":"<front>","weight":"-49"}
+---Orión (estudiantes en prueba académica) {"url":"<front>","weight":"0"}
+--Apoyo Psicológico {"url":"<front>","weight":"0"}
+--Apoyo en casos disciplinarios {"url":"<front>","weight":"0"}
+--Apoyo Orientación Vocacional {"url":"<front>","weight":"0"}
+-TALLERES {"url":"<front>","weight":"-48"}
+-TALLERES OBLIGATORIOS {"url":"<front>","weight":"-47"}
+--Talleres obligatorios de reingreso académico {"url":"<front>","weight":"-50"}
+--Talleres obligatorios de reingreso Disciplinario {"url":"<front>","weight":"-49"}
+-Tomando el control {"url":"<front>","weight":"-42"}
+-Materias introductorias {"url":"<front>","weight":"-50"}
+-Programas académicos {"url":"<front>","weight":"-49"}
+-Información personalizada {"url":"<front>","weight":"-48"}
+-Preguntas frecuentes {"url":"<front>","weight":"-47"}
+-Reglamento del programa {"url":"<front>","weight":"-46"}
+-Más información {"url":"<front>","weight":"-45"}
+-Envíanos tus datos {"url":"<front>","weight":"-44"}
+-Inscripciones aquí {"url":"<front>","weight":"-43"}
