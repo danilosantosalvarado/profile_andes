@@ -1,16 +1,24 @@
 (function ($) {
-	$(window).resize(function() {
+
+	//add breidpoint news component.
+	$(window).ready(function() {
+    checkSize();
+    $(window).resize(checkSize);
+	});
+	function checkSize(){
 		var docWidth = $(document).width();
 	 	var data = {
-      slidesPerView: ((docWidth >= 1024) ? 4 : ((docWidth > 768 && docWidth <= 1024) ? 3 : ((docWidth > 640 && docWidth <= 768) ? 2 : 1)) ),
-      spaceBetween: 50,
-  	}
-  	if ($('.view-componente-noticias .swiper-container-horizontal').length > 0) {
-  		setTimeout(function(){
-  			var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
-  		},50)
-  	}
-	});
+	    slidesPerView: ((docWidth >= 1024) ? 4 : ((docWidth > 768 && docWidth <= 1024) ? 3 : ((docWidth > 640 && docWidth <= 768) ? 2 : 1)) ),
+	    spaceBetween: 20,
+		}
+		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
+			},50)
+		}
+	}
+
+	//Slider home position, top, ring, botton, left. 
 	$(window).load(function() {
 		var SlideClass = "";
 		$(".view-slider-homes .views-slideshow-controls-text-previous-processed, .view-slider-homes .views-slideshow-controls-text-next-processed").on('click', function(event) {
