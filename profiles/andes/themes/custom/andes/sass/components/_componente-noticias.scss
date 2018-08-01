@@ -1,7 +1,7 @@
-/* 
+/*
 //------------------------------------------------------------------------------
 // Noticias
-//------------------------------------------------------------------------------  
+//------------------------------------------------------------------------------
 */
 
 .view-componente-noticias {
@@ -48,6 +48,7 @@
 		.conten-noticias {
 			display: inline-block;
 			@include padding(1.05 .834); 
+			min-height: 25pc;
 			//Fecha
 			.compo-notias-fecha {
 				font-family: $latoregular;
@@ -104,7 +105,7 @@
 		position: relative;
 		//Conten Flechas
 		.views-slideshow-controls-text {
-    	//Button Izquierda 
+    	//Button Izquierda
     	a[rel='prev'],
     	%a-prev {
 				font-size: 0;
@@ -134,13 +135,13 @@
 	}
 }
 
-//Puntos Slider 
+//Puntos Slider
 .view-componente-noticias {
 	.views-slideshow-simple-pager {
 		text-align: center;
 		.views-slideshow-pager-field-item {
 			padding: 0 5px;
-    	display: inline-block;	
+    	display: inline-block;
 			a,
 			%a-puntos {
 				width: 13px;
@@ -161,7 +162,7 @@
 				}
 			}
 		}
-		
+
 	}
 }
 

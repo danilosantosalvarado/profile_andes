@@ -379,6 +379,36 @@ function andes_install() {
     module_load_include('inc', 'menu_import', 'includes/import');
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu', array());
     menu_import_save_menu($menu, $options);
+
+    // Multilen
+    // Set setting language_negotiation_set // Es - Multilanguage 
+
+    require_once DRUPAL_ROOT . '/includes/language.inc';
+    require_once DRUPAL_ROOT . '/includes/locale.inc';
+
+    $language_set_es = array (
+      'locale-url' => 
+      array (
+        'types' => 
+        array (
+          0 => 'language_content',
+          1 => 'language',
+          2 => 'language_url',
+        ),
+        'callbacks' => 
+        array (
+          'language' => 'locale_language_from_url',
+          'switcher' => 'locale_language_switcher_url',
+          'url_rewrite' => 'locale_language_url_rewrite_url',
+        ),
+        'file' => 'includes/locale.inc',
+        'weight' => '-8',
+        'name' => 'URL',
+        'description' => 'Determine the language from the URL (Path prefix or domain).',
+        'config' => 'admin/config/regional/language/configure/url',
+      ),
+    );
+   language_negotiation_set('language', $language_set_es);
 }
 
 function andes_profile_details() {
