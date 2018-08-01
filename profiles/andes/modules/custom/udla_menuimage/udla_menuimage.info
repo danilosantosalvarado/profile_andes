@@ -1,0 +1,7 @@
+name = udla_menuimage
+description = Provides field on Edit Menu Link form to upload an image.
+package = TBWA Colombia
+core = 7.x
+dependencies[] = menu
+dependencies[] = image
+

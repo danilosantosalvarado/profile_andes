@@ -3,4 +3,4 @@ description = "Funcionalidad de Alteraciones para tb_megamenu"
 package = TBWA Colombia
 core = 7.x
 dependencies[] = tb_megamenu
-dependencies[] = menuimage
+dependencies[] = udla_menuimage

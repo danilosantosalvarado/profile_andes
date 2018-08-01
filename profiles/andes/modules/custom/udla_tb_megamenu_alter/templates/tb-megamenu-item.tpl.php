@@ -1,14 +1,10 @@
 <?php 
   if (isset($item['link']['localized_options']['content']['image'])) {
     $image = file_load($item['link']['localized_options']['content']['image']);
-    $image = image_load($image->uri);
     $content = array(
       'file' => array(
-        '#theme' => 'image_style',
-        '#style_name' => 'large',
-        '#path' => $image->source,
-        '#width' => $image->info['width'],
-        '#height' => $image->info['height'],
+        '#theme' => 'image',
+        '#path' => $image->uri,
         '#prefix' => '<div class="container-menu-image"><div class="image-menu">',
         '#suffix' => '</div><div class="menu-title">'.$item['link']['title'].'</div></div>'
       ),
