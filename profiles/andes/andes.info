@@ -51,7 +51,6 @@ dependencies[] = module_filter
 dependencies[] = conditional_fields
 dependencies[] = bean
 dependencies[] = bean_admin_ui
-dependencies[] = menuimage
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
