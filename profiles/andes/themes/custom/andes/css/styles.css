@@ -1004,32 +1004,81 @@ th {
   background-color: #fff200;
 }
 
-.tb-megamenu-menu-mega-menu .block-black {
+.tb-megamenu-menu-mega-menu .box-black {
   background-color: black;
   height: 400px;
-  width: 300px;
+  width: 295px;
   position: absolute;
-  left: 0;
+  left: -400px;
+  /* Safari */
+  transition: left .5s;
+  z-index: 3;
+}
+
+.tb-megamenu-menu-mega-menu .box-black.active-box {
+  left: 0px;
+  /* Safari */
+  transition: left .5s;
+}
+
+.tb-megamenu-menu-mega-menu .box-black a {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.tb-megamenu-menu-mega-menu li.level-2 *.nav-child {
+  margin-left: 0 !important;
+  opacity: 0;
+  /* Safari */
+  transition: opacity 2s;
+}
+
+.tb-megamenu-menu-mega-menu li.level-2 *.nav-child.active {
+  opacity: 1;
+  display: block;
+  /* Safari */
+  transition: opacity 2s;
+}
+
+.tb-megamenu-menu-mega-menu li.level-2 *.nav-child .box-black {
+  display: none;
+}
+
+.tb-megamenu-menu-mega-menu li.level-2 *.nav-child .tb-megamenu-column.mega-col-nav {
+  top: 87px;
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1 {
   padding: 0px 15px;
-  width: 200px;
+  width: 300px;
   border-left: 1px solid #c8c8ca;
+  background-color: white;
+  /* Safari */
+  transition: background-color 2s;
+}
+
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1.active {
+  background-color: white;
+  /* Safari */
+  transition: background-color 2s;
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1 > li a:first-child {
   padding-top: 0;
 }
 
-.tb-megamenu-menu-mega-menu .tb-megamenu-item::after {
-  display: none;
+.tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1 .tb-megamenu-column > .tb-megamenu-column-inner {
+  height: 400px;
+  overflow: hidden;
+}
+
+.tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2 {
+  opacity: 1;
 }
 
 .tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2 .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
   color: #a9a9a9;
   width: 300px !important;
-  display: none;
 }
 
 .tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2 .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child.efect-block {
@@ -1074,6 +1123,11 @@ th {
       align-content: center;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+
+.tb-megamenu-menu-mega-menu.tb-megamenu .nav > li.open {
+  background-color: #FFFFFF;
+  border: none;
 }
 
 .tb-megamenu-menu-mega-menu.tb-megamenu .nav > li > a {

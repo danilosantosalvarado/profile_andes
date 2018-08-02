@@ -12,28 +12,43 @@
   Drupal.behaviors.menuMain = {
     attach: function (context, settings) {
       var docWidth      = $(document).width(),
+          $level1  =       $('.tb-megamenu-item.level-1'),
           $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a'),
           blockBlack    = '.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child';
 
       $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
-        var offset      = $(this).offset(),
-            menuhover = $(this).find('.nav-child');
+        var offset         = $(this).offset(),
+            menuhover      = $(this).find('.nav-child'),
+          blocknivel2 = $(value).find('li.level-2 .nav-child').offset();
 
-        menuhover.css({
-          'margin-left': '-'+offset.left+'px',
-          'width': docWidth - 10 + 'px',
-        })
+
+        if (menuhover.parent('li').hasClass('level-1')){
+          menuhover.css({
+            'margin-left': '-' + offset.left + 'px',
+            'width': docWidth - 10 + 'px',
+          })
+        }
+        console.log(blocknivel2)
         //
         $itemsNivel2.removeAttr('href');
         //console.log($('.tb-megamenu-item.level-2.dropdown-submenu'));
       });
+      //$level1.find('.tb-megamenu-column-inner').before("<div class='box-black'><a> < kkekekekekek</a></div>")
       $itemsNivel2.on("click", function () {
-        $itemsNivel2.text();
-        $(blockBlack).removeClass('efect-block')
-        $(this).siblings().addClass('efect-block');
-        $('.tb-megamenu-menu-mega-menu .always-show').append("<div class='block-black'>here.....</div>")
-        console.log($itemsNivel2.text());
-        console.log($(this).siblings());
+        //$(blockBlack).removeClass('efect-block');
+        $('.box-black').remove();
+        $level1.find('.tb-megamenu-column-inner').before("<div class='box-black'><a> < "+$(this).text()+"</a></div>")
+        //$(this).siblings().addClass('efect-block');
+        setTimeout(function () {
+          $('.box-black').addClass('active-box');
+        }, 100);
+        $(this).siblings('.nav-child').addClass('active'); /* nivel 2 animacion */
+        $(this).parents('ul.level-1').addClass('active'); /* nivel 1 animacion */
+        $('.box-black').click(function () {
+          $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
+          $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
+          $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
+        });
       });
     }
   };
