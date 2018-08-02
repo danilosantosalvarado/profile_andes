@@ -337,12 +337,30 @@ function andes_install() {
   menu_rebuild();
 
   // Create Menu (Mega-Menu) 
-  $menu = array(
+  $menu_mega = array(
     'menu_name' => 'menu-mega-menu',  
     'title' => 'Mega Menu', 
     'description' => 'Main menu (Mega-Menu)');
 
-  menu_save($menu);
+  menu_save($menu_mega);
+
+  // Create Menu (Top-Soy-Menu) 
+  $menu_top_soy = array(
+    'menu_name' => 'menu-top-soy',  
+    'title' => 'Mega top soy', 
+    'description' => 'Mega top soy (Mega-top-soy)');
+
+  menu_save($menu_top_soy);
+
+  // Create Menu (Menu Principal) 
+  $menu_main = array(
+    'menu_name' => 'main-menu',  
+    'title' => 'Menu principal', 
+    'description' => 'Menu principal(Menu-principal)');
+
+  menu_save($menu_main);
+
+
 
   // Enable the admin theme.
   db_update('system')
@@ -376,11 +394,23 @@ function andes_install() {
    variable_set('page_manager_node_view_disabled', FALSE);  
 
    // Import Menu ("Mega Menu"). 
+    $options = array();
+    
     module_load_include('inc', 'menu_import', 'includes/import');
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu', array());
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
     menu_import_save_menu($menu, $options);
 
-    // Multilen
+   // Import Menu ("Menu Soy"). 
+    module_load_include('inc', 'menu_import', 'includes/import');
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-menu-top-soy-export.txt', 'menu-top-soy',$options);
+    menu_import_save_menu($menu, $options);
+
+   // Import Menu ("Menu Soy"). 
+    module_load_include('inc', 'menu_import', 'includes/import');
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/main-menu-export.txt', 'main-menu',$options);
+    menu_import_save_menu($menu, $options);
+
+    // Multilanguage
     // Set setting language_negotiation_set // Es - Multilanguage 
 
     require_once DRUPAL_ROOT . '/includes/language.inc';

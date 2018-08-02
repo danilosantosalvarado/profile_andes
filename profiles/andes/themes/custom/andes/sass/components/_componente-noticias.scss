@@ -24,19 +24,27 @@
     -webkit-padding-start: 0px;
 	}
 	li.swiper-slide {
-	  // padding: 0 10px;
 	  display: block;
 	  background: color('grey-light');
     list-style: none;
-	  // height: 537px;
+    @include respond-to(xs) {
+			height: 500px;
+		}
+		@include respond-to(xl) {
+			height: 558px;
+		}
+    
+   //  @include respond-to(xxxl) {
+	  //  	height: 500px;
+	  // }
 	}
 	.views-row {
-	  position: relative;
+	  // position: relative;
 	  //Imagenes
 		.compo-notias-img {
 			border-bottom: 4px solid color('orange');
 			img {
-				// width: 100%;
+				width: 100%;
 				// height: max-content;
 				// max-height: 167px;
 				// @include respond-to(xl) {
@@ -47,8 +55,16 @@
 		//Contenedor
 		.conten-noticias {
 			display: inline-block;
-			@include padding(1.05 .834); 
-			min-height: 25pc;
+			@include padding(1.05 .834);
+			// @include respond-to(xs) {
+			// 	min-height: 345px;
+			// }
+			// @include respond-to(s) {
+			// 	min-height: 325px;
+			// }
+			// @include respond-to(m) {
+		 //    	min-height: 300px;
+			// }
 			//Fecha
 			.compo-notias-fecha {
 				font-family: $latoregular;
@@ -79,10 +95,11 @@
 		  //Button
 		  .compo-notias-enlace {
 				a {
-					@include respond-to(xl) {
+					@include respond-to(xs) {
 						position: absolute;
-	    			bottom: 9px;
-	    			right: 10px;
+						bottom: 20px;
+						right: 10px;
+						margin: 0px;
 					}
 					border: 1px solid color('orange');
 					font-family: $latolight;
@@ -101,10 +118,18 @@
 
 //Flechas paginador
 .view-componente-noticias {
+	// display: none;
+	@include respond-to(xl) {
+		display: block;
+	}
 	.skin-default {
 		position: relative;
 		//Conten Flechas
 		.views-slideshow-controls-text {
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
     	//Button Izquierda
     	a[rel='prev'],
     	%a-prev {
@@ -157,8 +182,8 @@
 			&.active {
 				a {
 					@extend %a-puntos;
-					background-color: red;
-					border: 1px solid red;
+					background-color: color('orange');
+					border: 1px solid color('orange');
 				}
 			}
 		}
