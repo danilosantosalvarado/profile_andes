@@ -547,32 +547,36 @@ th {
 }
 
 /* ------| Slider Home|----- */
-.view-slider-homes li.swiper-slide {
+.view-slider-homes ul {
+  z-index: -9;
+}
+
+.view-slider-homes ul li.swiper-slide {
   list-style: none;
 }
 
-.view-slider-homes li.swiper-slide img {
+.view-slider-homes ul li.swiper-slide img {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .view-slider-homes li.swiper-slide img {
+  .view-slider-homes ul li.swiper-slide img {
     max-height: 619px;
   }
 }
 
-.view-slider-homes li.swiper-slide iframe {
+.view-slider-homes ul li.swiper-slide iframe {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .view-slider-homes li.swiper-slide iframe {
+  .view-slider-homes ul li.swiper-slide iframe {
     height: 515px;
     max-height: 515px;
   }
 }
 
-/* ------| Ubicado Derecha  |----- */
+/* ------| Ubicado Leth |----- */
 .view-slider-homes .slider-homes-left, .view-slider-homes .slider-homes-right, .view-slider-homes .slider-homes-center {
   position: absolute;
   top: 25%;
@@ -659,7 +663,7 @@ th {
   color: #fff;
 }
 
-/* ------| Ubicado Izquierda  |----- */
+/* ------| Ubicado Rigth |----- */
 @media (min-width: 768px) {
   .view-slider-homes .slider-homes-right {
     left: inherit;
@@ -814,16 +818,55 @@ th {
   display: block;
 }
 
-.view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom {
-  text-align: center;
+.view-slider-homes .slider-homes-right-control,
+.view-slider-homes .slider-homes-center-control,
+.view-slider-homes .slider-homes-left-control {
+  text-align: right;
 }
 
-.view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item {
+.view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields,
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields,
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields {
+  width: 100%;
+  padding-right: 9%;
+  margin-top: -5%;
+}
+
+.view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields .views-slideshow-pager-field-item,
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields .views-slideshow-pager-field-item,
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields .views-slideshow-pager-field-item {
   padding: 0 5px;
   display: inline-block;
 }
 
-.view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item a, .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a {
+.view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields .views-slideshow-pager-field-item a,
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields .views-slideshow-pager-field-item a,
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields .views-slideshow-pager-field-item a {
+  width: 63px;
+  height: 18px;
+  font-size: 0;
+  display: block;
+  text-decoration: none;
+  border-bottom: 3px solid #484851;
+  padding: 0;
+}
+
+.view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a,
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a,
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a {
+  border-bottom: 3px solid #f4f1f1;
+}
+
+.view-slider-homes .slider-homes-bottom-control {
+  text-align: center;
+}
+
+.view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-fields .views-slideshow-pager-field-item {
+  padding: 0 5px;
+  display: inline-block;
+}
+
+.view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-fields .views-slideshow-pager-field-item a {
   width: 13px;
   height: 13px;
   font-size: 0;
@@ -835,35 +878,9 @@ th {
   padding: 0;
 }
 
-.view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a {
+.view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a {
   background-color: #e55d12;
   border: 1px solid #e55d12;
-}
-
-.view-slider-homes .slider-homes-right-control, .view-slider-homes .slider-homes-center-control, .view-slider-homes .slider-homes-left-control {
-  text-align: center;
-}
-
-.view-slider-homes .slider-homes-right-control .views-slideshow-pager-field-item, .view-slider-homes .slider-homes-center-control .views-slideshow-pager-field-item, .view-slider-homes .slider-homes-left-control .views-slideshow-pager-field-item {
-  padding: 0 5px;
-  display: inline-block;
-}
-
-.view-slider-homes .slider-homes-right-control .views-slideshow-pager-field-item a, .view-slider-homes .slider-homes-right-control .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a, .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .slider-homes-right-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-right-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-center-control .views-slideshow-pager-field-item a, .view-slider-homes .slider-homes-center-control .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a, .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .slider-homes-center-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-center-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-left-control .views-slideshow-pager-field-item a, .view-slider-homes .slider-homes-left-control .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a, .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .slider-homes-left-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-left-control .views-slideshow-pager-field-item.active a {
-  width: 13px;
-  height: 13px;
-  font-size: 0;
-  display: block;
-  text-decoration: none;
-  border: 1px solid grey;
-  border-radius: 10px;
-  background-color: gray;
-  padding: 0;
-}
-
-.view-slider-homes .slider-homes-right-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-center-control .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-left-control .views-slideshow-pager-field-item.active a {
-  background-color: #ed1c24;
-  border: 1px solid #ed1c24;
 }
 
 /*
@@ -1044,7 +1061,17 @@ th {
 }
 
 .view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item a,
-.view-componente-noticias .views-slideshow-simple-pager .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom .views-slideshow-pager-field-item.active a, .view-slider-homes .views-slideshow-controls-bottom.slideshow-controls-bottom
+.view-componente-noticias .views-slideshow-simple-pager .view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-right-control .views-slideshow-pager-fields
+.view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item.active a,
+.view-componente-noticias .views-slideshow-simple-pager
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a,
+.view-slider-homes .slider-homes-center-control .views-slideshow-pager-fields
+.view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item.active a,
+.view-componente-noticias .views-slideshow-simple-pager
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a,
+.view-slider-homes .slider-homes-left-control .views-slideshow-pager-fields
+.view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item.active a,
+.view-componente-noticias .views-slideshow-simple-pager .view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a, .view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-fields
 .view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item.active a, .view-componente-noticias .views-slideshow-simple-pager .views-slideshow-pager-field-item.active a {
   width: 13px;
   height: 13px;
