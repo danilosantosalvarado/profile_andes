@@ -89,6 +89,7 @@ dependencies[] = views_slideshow_jcarousel
 dependencies[] = views_conditional
 ;I18n
 dependencies[] = translation
+dependencies[] = i18n
 ; Features
 dependencies[] = ct_noticias
 ; Custom
