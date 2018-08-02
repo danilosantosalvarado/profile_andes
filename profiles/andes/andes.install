@@ -409,6 +409,9 @@ function andes_install() {
       ),
     );
    language_negotiation_set('language', $language_set_es);
+
+   // Set bundle "noticias" -> Entity Node
+   variable_set('language_content_type_' . 'noticias', 2); 
 }
 
 function andes_profile_details() {
