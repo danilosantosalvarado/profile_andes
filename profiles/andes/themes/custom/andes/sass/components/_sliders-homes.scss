@@ -23,23 +23,27 @@
 
 /* ------| Slider Home|----- */
 .view-slider-homes {
-	li.swiper-slide {
-		img {
-			width: 100%;
-			@include respond-to(xl) {
-				max-height: 619px;
+	ul {
+		z-index: -9;
+		li.swiper-slide {
+			list-style: none;
+			img {
+				width: 100%;
+				@include respond-to(xl) {
+					max-height: 619px;
+				}
 			}
-		}
-		iframe {
-			width: 100%;
-			@include respond-to(xl) {
-				height: 515px;
-				max-height: 515px;
+			iframe {
+				width: 100%;
+				@include respond-to(xl) {
+					height: 515px;
+					max-height: 515px;
+				}
 			}
 		}
 	}
 }
-/* ------| Ubicado Derecha  |----- */
+/* ------| Ubicado Leth |----- */
 .view-slider-homes {
 	.slider-homes-left,
 	%slider-homes-left {
@@ -120,7 +124,7 @@
 	}
 }
 
-/* ------| Ubicado Izquierda  |----- */
+/* ------| Ubicado Rigth |----- */
 .view-slider-homes {
 	.slider-homes-right {
 		@extend %slider-homes-left;
@@ -278,6 +282,74 @@
 			}
 			a[rel='next'] {
 				@extend %a-hover;
+			}
+		}
+	}
+}
+
+//Puntos Slider right, left, center
+.view-slider-homes {
+	.slider-homes-right-control,
+	.slider-homes-center-control, 
+	.slider-homes-left-control {
+		text-align: right;
+		// margin-right: 10%;
+		.views-slideshow-pager-fields	{
+			width: 100%;
+			// position: absolute;
+			// bottom: 10%;
+			padding-right: 9%;
+			margin-top: -5%;
+			.views-slideshow-pager-field-item {
+				padding: 0 5px;
+				display: inline-block;
+				a,
+				%a-sli-puntos {
+					width: 63px;
+					height: 18px;
+					font-size: 0;
+					display: block;
+					text-decoration: none;
+					border-bottom: 3px solid color('grey');
+					padding: 0;
+				}
+				&.active {
+					a {
+						@extend %a-puntos;
+						border-bottom: 3px solid color('grey-light');
+					}
+				}
+			}
+		}
+	}
+}
+
+//Puntos Slider Bottom
+.view-slider-homes {
+	.slider-homes-bottom-control {
+		text-align: center;
+		.views-slideshow-pager-fields	{
+			.views-slideshow-pager-field-item {
+				padding: 0 5px;
+				display: inline-block;
+				a {
+					width: 13px;
+				height: 13px;
+				font-size: 0;
+				display: block;
+				text-decoration: none;
+				border: 1px solid grey;
+				border-radius: 10px;
+				background-color: gray;
+				padding: 0;
+				}
+				&.active {
+					a {
+						@extend %a-puntos;
+						background-color: color('orange');
+						border: 1px solid color('orange');
+					}
+				}
 			}
 		}
 	}
