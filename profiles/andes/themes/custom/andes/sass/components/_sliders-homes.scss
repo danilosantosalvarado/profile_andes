@@ -27,6 +27,18 @@
 		z-index: -9;
 		li.swiper-slide {
 			list-style: none;
+			.slider-homes-img-destock {
+				display: none;
+				@include respond-to(xl) {
+					display: block;
+				}
+			}
+			.slider-homes-img-movil {
+				display: block;
+				@include respond-to(xl) {
+					display: none;
+				}
+			}
 			img {
 				width: 100%;
 				@include respond-to(xl) {
