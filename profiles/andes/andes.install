@@ -410,13 +410,34 @@ function andes_install() {
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/main-menu-export.txt', 'main-menu',$options);
     menu_import_save_menu($menu, $options);
 
+    // Set Enabled Preflix languages en
+    db_update('languages')
+      ->fields(array(
+        'name' => 'English',
+        'native' => 'English',
+        'domain' => '',
+        'prefix' => 'en',
+        'direction' => '0',
+      ))
+      ->condition('language',  'en')
+      ->execute();
+
     // Multilanguage
     // Set setting language_negotiation_set // Es - Multilanguage 
-
     require_once DRUPAL_ROOT . '/includes/language.inc';
     require_once DRUPAL_ROOT . '/includes/locale.inc';
 
-    $language_set_es = array (
+    $negotiation = array (
+      'language-default' => 
+      array (
+        'callbacks' => 
+        array (
+          'language' => 'language_from_default',
+        ),
+        'weight' => '10',
+        'name' => 'Predeterminado',
+        'description' => 'Usar el idioma predeterminado del sitio (Español).',
+      ),
       'locale-url' => 
       array (
         'types' => 
@@ -434,14 +455,26 @@ function andes_install() {
         'file' => 'includes/locale.inc',
         'weight' => '-8',
         'name' => 'URL',
-        'description' => 'Determine the language from the URL (Path prefix or domain).',
+        'description' => 'Determinar el idioma a partir de la URL (prefijo de ruta o dominio).',
         'config' => 'admin/config/regional/language/configure/url',
       ),
     );
-   language_negotiation_set('language', $language_set_es);
+   language_negotiation_set('language', $negotiation);
 
-   // Set bundle "noticias" -> Entity Node
-   variable_set('language_content_type_' . 'noticias', 2); 
+    $providers_weight = array (
+      0 => 
+      array (
+        'locale-url' => '-8',
+        'locale-session' => '-6',
+        'locale-user' => '-4',
+        'locale-browser' => '-2',
+        'language-default' => '10',
+      ),
+    );
+
+  variable_set("locale_language_providers_weight_language", $providers_weight);  
+  //  Set bundle "noticias" -> Entity Node
+  variable_set('language_content_type_' . 'noticias', 4); 
 }
 
 function andes_profile_details() {
