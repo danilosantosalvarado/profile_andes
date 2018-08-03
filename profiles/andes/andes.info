@@ -88,8 +88,10 @@ dependencies[] = views_slideshow_xtra
 dependencies[] = views_slideshow_jcarousel
 dependencies[] = views_conditional
 ;I18n
-dependencies[] = translation
 dependencies[] = i18n
+dependencies[] = i18n_field
+dependencies[] = entity_translation
+dependencies[] = title
 ; Features
 dependencies[] = ct_noticias
 ; Custom
