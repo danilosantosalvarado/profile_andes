@@ -13,37 +13,50 @@
     attach: function (context, settings) {
       var docWidth      = $(document).width(),
           $level1  =       $('.tb-megamenu-item.level-1'),
-          $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a'),
-          blockBlack    = '.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child';
+          $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a');
+      /* ciclo item de mega menu */
 
       $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
         var offset         = $(this).offset(),
-            menuhover      = $(this).find('.nav-child'),
-          blocknivel2 = $(value).find('li.level-2 .nav-child').offset();
-
-
+          menuhover = $(this).find('.container-submenu');
+        console.log($(this).find('.nav-child:first-child'));
+        //console.log($(this).find('.tb-megamenu-item.level-2 .tb-megamenu-column-inner').offset() );
         if (menuhover.parent('li').hasClass('level-1')){
           menuhover.css({
             'margin-left': '-' + offset.left + 'px',
             'width': docWidth - 10 + 'px',
           })
         }
-        console.log(blocknivel2)
-        //
         $itemsNivel2.removeAttr('href');
-        //console.log($('.tb-megamenu-item.level-2.dropdown-submenu'));
+
+        //
       });
-      //$level1.find('.tb-megamenu-column-inner').before("<div class='box-black'><a> < kkekekekekek</a></div>")
+      $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2.dropdown-submenu ").each(function (key, value) {
+        var test = $(this).find('.tb-megamenu-subnav.level-2');
+        //.tb - megamenu - subnav.level - 2
+        console.log(test.children().length);
+       /*  test.css({
+          'margin-top': '-'+ 32*key +'px',
+          'position': 'absolute',
+        }) */
+
+        //console.log(this);
+        //console.log(offset);
+      });
+
+
       $itemsNivel2.on("click", function () {
-        //$(blockBlack).removeClass('efect-block');
+        console.log($(this).parents('.tb-megamenu-column'));
+        //$(this).parents('.tb-megamenu-column-inner').addClass('column-inner-active');
         $('.box-black').remove();
-        $level1.find('.tb-megamenu-column-inner').before("<div class='box-black'><a> < "+$(this).text()+"</a></div>")
-        //$(this).siblings().addClass('efect-block');
+       // $level1.find('.tb-megamenu-column-inner').before("<div class='box-black'><a> < "+$(this).text()+"</a></div>")
+        $(this).parents('.tb-megamenu-column').siblings().before('.tb-megamenu-column-inner').before("<div class='box-black'><a> < " + $(this).text() + "</a></div>");
         setTimeout(function () {
           $('.box-black').addClass('active-box');
         }, 100);
         $(this).siblings('.nav-child').addClass('active'); /* nivel 2 animacion */
         $(this).parents('ul.level-1').addClass('active'); /* nivel 1 animacion */
+        /* remover  */
         $('.box-black').click(function () {
           $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
           $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
@@ -51,6 +64,7 @@
         });
       });
     }
+
   };
 
 	//add breidpoint news component.

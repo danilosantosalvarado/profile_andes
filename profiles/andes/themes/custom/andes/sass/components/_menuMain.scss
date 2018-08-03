@@ -1,3 +1,4 @@
+/* reset del megamenu */
 .tb-megamenu{
   clear: both;
 }
@@ -10,6 +11,9 @@
 .tb-megamenu .nav > .active > a:hover,
 .tb-megamenu .nav > .active > a:focus{
   background-color: transparent;
+}
+.tb-megamenu .dropdown-menu{
+  box-shadow: none;
 }
 .tb-megamenu-menu-menu-top-soy{
   .nav-collapse {
@@ -34,12 +38,35 @@
 .tb-megamenu .mega.dropdown-submenu:hover > .mega-dropdown-menu {
   display: block !important;
 }
+/* menu principal */
+.content-img{
+  margin-left: 0 !important;
+  width: 74% !important;
+  float: right !important;
+  //display: none !important;
+  .menu-title{
+    display: none;
+  }
+
+}
+.container-menu-image{
+  float: right;
+}
 .tb-megamenu-menu-mega-menu{
-  background-color: #fff200;
+  background-color: #ffffff;
+  .dropdown-toggle{
+    &::after{
+      display: none;
+    }
+  }
+  .container-submenu{
+    margin-left: 0px;
+    width: 90%;
+  }
   .box-black {
     background-color: black;
     height: 400px;
-    width: 295px;
+    width: 275px;
     position: absolute;
     left: -400px;
     -webkit-transition: left .5s; /* Safari */
@@ -55,16 +82,25 @@
       color: #FFFFFF;
     }
   }
+  .column-inner-active{
+    margin-left: 250px;
+    background: red;
+    -webkit-transition: left .5s; /* Safari */
+    transition: left .5s;
+  }
   li.level-2 *.nav-child{
-    margin-left: 0 !important;
     opacity: 0;
-    -webkit-transition: opacity 2s; /* Safari */
-    transition: opacity 2s;
+    margin-left: -420px;
+    position: absolute;
+    position: initial;
+    -webkit-transition: opacity .4s; /* Safari */
+    transition: opacity .4s;
     &.active {
       opacity: 1;
       display: block;
-      -webkit-transition: opacity 2s; /* Safari */
-      transition: opacity 2s;
+      margin-left: 220px;
+      -webkit-transition: opacity 1s, margin-left .4s; /* Safari */
+      transition: opacity 1s, margin-left .4s;
     }
     .box-black{
       display: none;
@@ -74,10 +110,12 @@
     }
   }
 
-  ul.tb-megamenu-subnav.level-1 {
+  ul.tb-megamenu-subnav.level-1,
+  ul.tb-megamenu-subnav.level-2 {
     padding: 0px 15px;
-    width: 300px;
+    width: 250px;
     border-left: 1px solid #c8c8ca;
+    margin-left: 30px;
     background-color: rgba(255, 255, 255, 1.0);
     -webkit-transition: background-color 2s; /* Safari */
     transition: background-color 2s;
@@ -96,8 +134,8 @@
     &.level-1{
       .tb-megamenu-column {
         > .tb-megamenu-column-inner {
-          height: 400px;
-          overflow: hidden;
+          //height: 400px;
+          //overflow: hidden;
         }
       }
     }
@@ -106,11 +144,6 @@
       .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child{
         color: #a9a9a9;
         width: 300px !important;
-        &.efect-block{
-          //margin-left: -150px !important;
-          -webkit-transition: margin-left 2s; /* Safari */
-          transition: margin-left 2s;
-        }
       }
     }
   }
