@@ -1313,4 +1313,224 @@ th {
   font-weight: initial;
 }
 
+/*
+//------------------------------------------------------------------------------
+// footer
+//------------------------------------------------------------------------------
+*/
+/* ------| Enlaces Footer |----- */
+.view-footer-top {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .view-footer-top {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-footer-top {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-footer-top {
+    width: 1170px;
+  }
+}
+
+.view-footer-top .view-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+}
+
+.view-footer-top .view-content .views-row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 10px;
+          flex: 1 10px;
+}
+
+.view-footer-top .conten-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.view-footer-top .conten-footer .image-footer-top {
+  width: auto;
+  padding-right: 15px;
+}
+
+.view-footer-top .conten-footer .text-footer-top a {
+  text-decoration: none;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 13.5px;
+  line-height: 1;
+  margin: 0;
+  color: #b2b2b2;
+}
+
+.view-footer-top .conten-footer .text-footer-top p {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  color: #b2b2b2;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 19.8px;
+  margin: 0;
+}
+
+.view-footer-top .conten-footer .text-footer-top .colorfield-color-swatch {
+  width: 50% !important;
+  height: 2px !important;
+  margin-top: 5px;
+}
+
+.view-footer-top .conten-footer .footer-enlace {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  border: 1px solid black;
+}
+
+/* ------| Contactos Footer |----- */
+.bean-bloque-footer-contacto {
+  padding: 15px;
+}
+
+.bean-bloque-footer-contacto .group-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .bean-bloque-footer-contacto .group-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 40px 0;
+  }
+}
+
+.bean-bloque-footer-contacto .group-header .field-name-field-imagen,
+.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .bean-bloque-footer-contacto .group-header .field-name-field-imagen,
+  .bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 0;
+  }
+}
+
+.bean-bloque-footer-contacto .group-header .field-name-field-imagen .field-label,
+.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo .field-label {
+  display: none;
+}
+
+.bean-bloque-footer-contacto .group-header .field-name-field-imagen img,
+.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo img {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.bean-bloque-footer-contacto .group-left {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .bean-bloque-footer-contacto .group-left {
+    width: 50%;
+  }
+}
+
+.bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-label,
+.bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-label {
+  display: none;
+}
+
+.bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-item,
+.bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-item {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 12.5px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bean-bloque-footer-contacto .group-left .field-name-field-zipcode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 12.5px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bean-bloque-footer-contacto .group-right {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .bean-bloque-footer-contacto .group-right {
+    width: 50%;
+  }
+}
+
+.bean-bloque-footer-contacto .group-right .field-name-field-telefono {
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
+    margin: 0;
+  }
+}
+
+.bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-label {
+  display: none;
+}
+
+.bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-item {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 12.5px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
