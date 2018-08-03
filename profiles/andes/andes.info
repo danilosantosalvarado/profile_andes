@@ -93,7 +93,7 @@ dependencies[] = i18n_field
 dependencies[] = entity_translation
 dependencies[] = title
 ; Features
-dependencies[] = ct_noticias
+dependencies[] = noticias_ct
 ; Custom
 dependencies[] = udla_blocks_alter
 dependencies[] = udla_tb_megamenu_alter

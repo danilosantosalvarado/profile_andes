@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ct_noticias.features.field_instance.inc
+ * noticias_ct.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ct_noticias_field_default_field_instances() {
+function noticias_ct_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
@@ -35,6 +35,7 @@ function ct_noticias_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -76,6 +77,7 @@ function ct_noticias_field_default_field_instances() {
     'label' => 'Tipo de item',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -118,6 +120,7 @@ function ct_noticias_field_default_field_instances() {
     'label' => 'Video Banner',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -156,13 +159,15 @@ function ct_noticias_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -198,6 +203,7 @@ function ct_noticias_field_default_field_instances() {
     'label' => 'Items Slider',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -209,12 +215,56 @@ function ct_noticias_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticias-title_field'.
+  $field_instances['node-noticias-title_field'] = array(
+    'bundle' => 'noticias',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Título',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Image Banner');
   t('Items Slider');
   t('Tipo de item');
+  t('Título');
   t('Video Banner');
 
   return $field_instances;

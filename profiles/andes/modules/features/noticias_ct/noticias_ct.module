@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Noticias CT feature.
+ */
+
+include_once 'noticias_ct.features.inc';

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ct_noticias.features.conditional_fields.inc
+ * noticias_ct.features.conditional_fields.inc
  */
 
 /**
  * Implements hook_conditional_fields_default_fields().
  */
-function ct_noticias_conditional_fields_default_fields() {
+function noticias_ct_conditional_fields_default_fields() {
   $items = array();
 
   $items["field_collection_item:field_items_slider:0"] = array(
