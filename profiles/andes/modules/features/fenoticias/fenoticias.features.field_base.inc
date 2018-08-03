@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * noticias_ct.features.field_base.inc
+ * fenoticias.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function noticias_ct_field_default_field_bases() {
+function fenoticias_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'body'.

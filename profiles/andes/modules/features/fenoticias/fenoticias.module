@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the fenoticias feature.
+ */
+
+include_once 'fenoticias.features.inc';

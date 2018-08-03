@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * noticias_ct.features.field_instance.inc
+ * fenoticias.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function noticias_ct_field_default_field_instances() {
+function fenoticias_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:

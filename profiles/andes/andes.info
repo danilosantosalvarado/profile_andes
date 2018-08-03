@@ -65,6 +65,7 @@ dependencies[] = references
 dependencies[] = user_reference
 dependencies[] = uuid
 dependencies[] = swiperjs
+dependencies[] = node_export
 ; Panels
 dependencies[] = page_manager
 dependencies[] = panels
@@ -93,7 +94,7 @@ dependencies[] = i18n_field
 dependencies[] = entity_translation
 dependencies[] = title
 ; Features
-dependencies[] = noticias_ct
+dependencies[] = fenoticias
 ; Custom
 dependencies[] = udla_blocks_alter
 dependencies[] = udla_tb_megamenu_alter

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * noticias_ct.features.inc
+ * fenoticias.features.inc
  */
 
 /**
  * Implements hook_node_info().
  */
-function noticias_ct_node_info() {
+function fenoticias_node_info() {
   $items = array(
     'noticias' => array(
       'name' => t('Noticias'),
