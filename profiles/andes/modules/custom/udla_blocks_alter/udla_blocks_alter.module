@@ -139,22 +139,22 @@ function udla_blocks_alter_preprocess_block(&$vars) {
 
 
 function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts){
-  if ($pane->type == 'block') {
-    $block = block_load($content->module,$content->delta);
-    if (!empty($block->background_color)) {
-      $result = _block_data_css($block->background_color, 'background');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
-      }
-    }
-    if (!empty($block->color_title)) {
-      $result = _block_data_css($block->color_title, 'text');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
-      }
-    }
+  // if ($pane->type == 'block') {
+  //   $block = block_load($content->module,$content->delta);
+  //   if (!empty($block->background_color)) {
+  //     $result = _block_data_css($block->background_color, 'background');
+  //     if (!empty($result)) {
+  //       $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
+  //     }
+  //   }
+  //   if (!empty($block->color_title)) {
+  //     $result = _block_data_css($block->color_title, 'text');
+  //     if (!empty($result)) {
+  //       $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
+  //     }
+  //   }
 
-  }
+  // }
 
 }
 
