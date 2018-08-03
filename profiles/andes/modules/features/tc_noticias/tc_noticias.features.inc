@@ -1,13 +1,22 @@
 <?php
 /**
  * @file
- * fenoticias.features.inc
+ * tc_noticias.features.inc
  */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function tc_noticias_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
 
 /**
  * Implements hook_node_info().
  */
-function fenoticias_node_info() {
+function tc_noticias_node_info() {
   $items = array(
     'noticias' => array(
       'name' => t('Noticias'),
