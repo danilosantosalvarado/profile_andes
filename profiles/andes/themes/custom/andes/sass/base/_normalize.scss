@@ -16,9 +16,9 @@
 @import 'headings/headings';
 @import 'text/text';
 //@import 'grouping/grouping';
- @import 'embedded/embedded';
+@import 'embedded/embedded';
 // @import 'forms/forms';
- @import 'tables/tables';
+@import 'tables/tables';
 
 // Note: we allow the .button component (loaded by forms) to override :link, by
 // loading links first.

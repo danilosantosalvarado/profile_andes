@@ -61,7 +61,7 @@
 	function checkSize(){
 		var docWidth = $(document).width();
 	 	var data = {
-	    slidesPerView: ((docWidth >= 1024) ? 4 : ((docWidth > 768 && docWidth <= 1024) ? 3 : ((docWidth > 640 && docWidth <= 768) ? 2 : 1)) ),
+	    slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 549 && docWidth <= 992) ? 2 : 1)) ),
 	    spaceBetween: 20,
 		}
 		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0) {
