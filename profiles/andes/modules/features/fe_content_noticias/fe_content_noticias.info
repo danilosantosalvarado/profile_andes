@@ -1,0 +1,11 @@
+name = Fe content noticias
+description = Fe content noticias
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = fenoticias
+dependencies[] = node_export_features
+features[features_api][] = api:2
+features[node_export_features][] = cd3bfaee-bd34-4f82-b00a-cc0a06856349
+features_exclude[dependencies][node_export_features] = node_export_features
