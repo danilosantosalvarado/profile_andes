@@ -65,6 +65,9 @@ dependencies[] = references
 dependencies[] = user_reference
 dependencies[] = uuid
 dependencies[] = swiperjs
+dependencies[] = node_export
+dependencies[] = node_export_features
+dependencies[] = node_export_features_ui
 ; Panels
 dependencies[] = page_manager
 dependencies[] = panels
@@ -88,10 +91,13 @@ dependencies[] = views_slideshow_xtra
 dependencies[] = views_slideshow_jcarousel
 dependencies[] = views_conditional
 ;I18n
-dependencies[] = translation
 dependencies[] = i18n
+dependencies[] = i18n_field
+dependencies[] = entity_translation
+dependencies[] = title
 ; Features
-dependencies[] = ct_noticias
+dependencies[] = tc_noticias
+dependencies[] = block_slider_homes
 ; Custom
 dependencies[] = udla_blocks_alter
 dependencies[] = udla_tb_megamenu_alter

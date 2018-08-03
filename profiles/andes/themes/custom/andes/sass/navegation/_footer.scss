@@ -1,0 +1,158 @@
+/*
+//------------------------------------------------------------------------------
+// footer
+//------------------------------------------------------------------------------
+*/
+
+/* ------| Enlaces Footer |----- */
+.view-footer-top {
+	margin: 0 auto;
+	padding: 0 15px;
+	@include respond-to(m) {
+		width: 750px;
+	}
+	@include respond-to(xl) {
+		width: 970px;
+	}
+	@include respond-to(xxxl) {
+		width: 1170px;
+	}
+	//contenedor 
+	.view-content {
+		display: flex;
+		padding: 30px 0;
+		.views-row {
+			flex: 1 10px;
+		}
+	}
+	.conten-footer {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		.image-footer-top {
+			width: auto;
+		  padding-right: 15px;
+		}
+		.text-footer-top {
+			a {
+				text-decoration: none;	
+				font-family: $latolight;
+				font-size: 13.5px;
+				line-height: 1;
+				margin: 0;
+    		color: #b2b2b2;
+			}
+			p {
+				font-family: $latolight;
+				color: #b2b2b2;
+		    font-weight: 700;
+		    line-height: 1;
+		    font-size: 19.8px;
+		    margin: 0;
+			}
+			.colorfield-color-swatch {
+				width: 50% !important;
+				height: 2px !important;
+				margin-top: 5px;
+			}
+		}
+		.footer-enlace {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			font-size: 0;
+			// background: rgba(red, 0.75);
+			border: 1px solid black;
+		}
+	}
+}
+
+
+/* ------| Contactos Footer |----- */
+.bean-bloque-footer-contacto {
+	padding: 15px;
+	//Imagenes
+	.group-header {
+		display: flex;
+		flex-direction: column;
+		@include respond-to(xl) {
+			flex-direction: row;
+			padding: 40px 0;
+		}
+		.field-name-field-imagen,
+		.field-name-field-image-sublogo {
+			flex: 1 1 100%;
+			margin-bottom: 30px;
+			@include respond-to(xl) {
+				flex: 1 1 100%;
+				flex-wrap: nowrap;
+				margin: 0;
+			}
+			.field-label {
+				display: none;
+			}
+			img {
+				margin: 0 auto;
+				width: 150px;
+			}
+		}
+	}
+	//Direccion
+	.group-left {
+		width: 100%;
+		@include respond-to(xl) {
+			width: 50%;
+		}
+		.field-name-field-direccion,
+		.field-name-field-ciudad-pais {
+			.field-label {
+				display: none;
+			}
+			.field-item {
+				font-family: $latolight;
+				color: #fff;
+		    font-size: 12.5px;
+		    line-height: 1;
+		    text-align:  center;
+		    margin-bottom: 10px;
+		  }
+		}
+		.field-name-field-zipcode {
+			display: flex;
+			justify-content: center;
+			font-family: $latolight;
+			color: #fff;
+	    font-size: 12.5px;
+	    line-height: 1;
+	    text-align:  center;
+	    margin-bottom: 10px;
+		}
+	}
+	//Telefonos
+	.group-right {
+		width: 100%;
+		@include respond-to(xl) {
+			width: 50%;
+		}
+		.field-name-field-telefono {
+			margin-top: 20px;
+			@include respond-to(xl) {
+				margin: 0;
+			}
+			.field-label {
+				display: none;
+			}
+			.field-item {
+				font-family: $latolight;
+				color: #fff;
+		    font-size: 12.5px;
+		    line-height: 1;
+		    margin-bottom: 10px;
+		    text-align:  center;
+		  }
+		}
+	}
+}
+

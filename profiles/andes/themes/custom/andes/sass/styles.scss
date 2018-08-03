@@ -46,7 +46,8 @@
 // Style guide: components
 @import 'components/sliders-homes',
 				'components/componente-noticias',
-				'components/menuMain';
+				'components/menuMain',
+				'components/interna_noticias';
 
 // Navigation
 //
@@ -56,6 +57,7 @@
 // Weight: 2
 //
 // Style guide: navigation
+@import 'navegation/footer';
 
 
 
