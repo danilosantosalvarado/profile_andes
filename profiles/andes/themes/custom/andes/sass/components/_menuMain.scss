@@ -15,6 +15,9 @@
 .tb-megamenu .dropdown-menu{
   box-shadow: none;
 }
+.tb-megamenu .row-fluid .span3{
+  width: 20%;
+}
 .tb-megamenu-menu-menu-top-soy{
   .nav-collapse {
     float: right;
@@ -41,16 +44,22 @@
 /* menu principal */
 .content-img{
   margin-left: 0 !important;
-  width: 74% !important;
+  //width: 74% !important;
   float: right !important;
   //display: none !important;
+  -webkit-transition: width .5s; /* Safari */
+  transition: width .5s;
   .menu-title{
     display: none;
   }
-
-}
-.container-menu-image{
-  float: right;
+  &.eve{
+    -webkit-transition: width .5s; /* Safari */
+    transition: width .5s;
+    width: 60% !important;
+  }
+  ul.tb-megamenu-subnav.level-1{
+    border-left: none !important;
+  }
 }
 .tb-megamenu-menu-mega-menu{
   background-color: #ffffff;
@@ -60,15 +69,17 @@
     }
   }
   .container-submenu{
-    margin-left: 0px;
-    width: 90%;
+    height: 350px;
+    overflow: hidden;
   }
   .box-black {
     background-color: black;
     height: 400px;
-    width: 275px;
+    //width: 275px;
+    width: 20%;
     position: absolute;
     left: -400px;
+    top: 0;
     -webkit-transition: left .5s; /* Safari */
     transition: left .5s;
     z-index: 3;
@@ -82,17 +93,19 @@
       color: #FFFFFF;
     }
   }
-  .column-inner-active{
+
+
+/*   .column-inner-active{
     margin-left: 250px;
     background: red;
     -webkit-transition: left .5s; /* Safari */
-    transition: left .5s;
-  }
+  //}
   li.level-2 *.nav-child{
     opacity: 0;
     margin-left: -420px;
     position: absolute;
     position: initial;
+    height: 0;
     -webkit-transition: opacity .4s; /* Safari */
     transition: opacity .4s;
     &.active {
@@ -113,7 +126,7 @@
   ul.tb-megamenu-subnav.level-1,
   ul.tb-megamenu-subnav.level-2 {
     padding: 0px 15px;
-    width: 250px;
+    width: 90%;
     border-left: 1px solid #c8c8ca;
     margin-left: 30px;
     background-color: rgba(255, 255, 255, 1.0);
@@ -140,10 +153,10 @@
       }
     }
     &.level-2 {
-      opacity: 1;
+      //opacity: 1;
       .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child{
-        color: #a9a9a9;
-        width: 300px !important;
+     /*    color: #a9a9a9;
+        width: 300px !important; */
       }
     }
   }
@@ -163,6 +176,7 @@
         color: #484851;
         padding: 10px 0;
         border: none;
+        cursor: pointer;
       }
     }
     .nav > li {

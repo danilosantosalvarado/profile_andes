@@ -1177,6 +1177,10 @@ th {
   box-shadow: none;
 }
 
+.tb-megamenu .row-fluid .span3 {
+  width: 20%;
+}
+
 .tb-megamenu-menu-menu-top-soy .nav-collapse {
   float: right;
   padding: 0 5%;
@@ -1204,20 +1208,31 @@ th {
 /* menu principal */
 .content-img {
   margin-left: 0 !important;
-  width: 74% !important;
   float: right !important;
+  /* Safari */
+  transition: width .5s;
 }
 
 .content-img .menu-title {
   display: none;
 }
 
-.container-menu-image {
-  float: right;
+.content-img.eve {
+  /* Safari */
+  transition: width .5s;
+  width: 60% !important;
+}
+
+.content-img ul.tb-megamenu-subnav.level-1 {
+  border-left: none !important;
 }
 
 .tb-megamenu-menu-mega-menu {
   background-color: #ffffff;
+  /*   .column-inner-active{
+    margin-left: 250px;
+    background: red;
+    -webkit-transition: left .5s; /* Safari */
 }
 
 .tb-megamenu-menu-mega-menu .dropdown-toggle::after {
@@ -1225,16 +1240,17 @@ th {
 }
 
 .tb-megamenu-menu-mega-menu .container-submenu {
-  margin-left: 0px;
-  width: 90%;
+  height: 350px;
+  overflow: hidden;
 }
 
 .tb-megamenu-menu-mega-menu .box-black {
   background-color: black;
   height: 400px;
-  width: 275px;
+  width: 20%;
   position: absolute;
   left: -400px;
+  top: 0;
   /* Safari */
   transition: left .5s;
   z-index: 3;
@@ -1251,18 +1267,12 @@ th {
   color: #FFFFFF;
 }
 
-.tb-megamenu-menu-mega-menu .column-inner-active {
-  margin-left: 250px;
-  background: red;
-  /* Safari */
-  transition: left .5s;
-}
-
 .tb-megamenu-menu-mega-menu li.level-2 *.nav-child {
   opacity: 0;
   margin-left: -420px;
   position: absolute;
   position: initial;
+  height: 0;
   /* Safari */
   transition: opacity .4s;
 }
@@ -1286,7 +1296,7 @@ th {
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1,
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2 {
   padding: 0px 15px;
-  width: 250px;
+  width: 90%;
   border-left: 1px solid #c8c8ca;
   margin-left: 30px;
   background-color: white;
@@ -1306,13 +1316,9 @@ th {
   padding-top: 0;
 }
 
-.tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2 {
-  opacity: 1;
-}
-
 .tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2 .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
-  color: #a9a9a9;
-  width: 300px !important;
+  /*    color: #a9a9a9;
+        width: 300px !important; */
 }
 
 .tb-megamenu-menu-mega-menu .nav-collapse {
@@ -1334,6 +1340,7 @@ th {
   color: #484851;
   padding: 10px 0;
   border: none;
+  cursor: pointer;
 }
 
 .tb-megamenu-menu-mega-menu.tb-megamenu .nav > li {
