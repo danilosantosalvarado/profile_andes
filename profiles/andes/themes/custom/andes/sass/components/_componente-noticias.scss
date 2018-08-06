@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-componente-noticias {
+.view-display-id-noticias_destacadas {
 	margin: 0 auto;
 	padding: 0 15px;
 	@include respond-to(m) {
@@ -117,7 +117,7 @@
 }
 
 //Flechas paginador
-.view-componente-noticias {
+.view-display-id-noticias_destacadas {
 	// display: none;
 	@include respond-to(xl) {
 		display: block;
@@ -161,7 +161,7 @@
 }
 
 //Puntos Slider
-.view-componente-noticias {
+.view-display-id-noticias_destacadas {
 	.views-slideshow-simple-pager {
 		text-align: center;
 		.views-slideshow-pager-field-item {
