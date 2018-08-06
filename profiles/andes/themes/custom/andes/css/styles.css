@@ -1177,6 +1177,12 @@ th {
   box-shadow: none;
 }
 
+/* .tb-megamenu .dropdown-submenu > a::after{
+  display: none;
+}
+.tb-megamenu .dropdown-submenu:hover > a::after{
+  display: none;
+} */
 .tb-megamenu .row-fluid .span3 {
   width: 20%;
 }
