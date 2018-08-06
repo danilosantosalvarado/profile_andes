@@ -8,14 +8,14 @@
 /**
  * Implements hook_install().
  */
-function udla_blocks_alter_install() {
+function udla_blocks_alter_install()
+{
   $schema['block'] = array();
   udla_blocks_alter_schema_alter($schema);
   foreach ($schema['block']['fields'] as $field => $spec) {
     if (db_field_exists('block', $field)) {
       watchdog('system', 'Module install: Attempt to recreate field: "%field", when it already exists.', array('%field' => $field), WATCHDOG_WARNING);
-    }
-    else {
+    } else {
       db_add_field('block', $field, $spec);
     }
   }
@@ -24,7 +24,8 @@ function udla_blocks_alter_install() {
 /**
  * Implements hook_uninstall().
  */
-function udla_blocks_alter_uninstall() {
+function udla_blocks_alter_uninstall()
+{
   $schema['block'] = array();
   udla_blocks_alter_schema_alter($schema);
   foreach ($schema['block']['fields'] as $field => $specs) {
@@ -33,7 +34,7 @@ function udla_blocks_alter_uninstall() {
   if (db_table_exists('backgrounds_color')) {
     drupal_uninstall_schema('backgrounds_color');
   }
-  $realpath = realpath(dirname(__FILE__)).'/css/styles_background.css';
+  $realpath = realpath(dirname(__FILE__)) . '/css/styles_background.css';
 
   if (file_exists($realpath)) {
     unlink($realpath);
@@ -45,19 +46,20 @@ function udla_blocks_alter_uninstall() {
  *
  * Other modules, such as i18n_block also modify the block database table.
  */
-function udla_blocks_alter_schema_alter(&$schema) {
+function udla_blocks_alter_schema_alter(&$schema)
+{
   if (isset($schema['block'])) {
     $schema['block']['fields']['background_color'] = array(
       'type' => 'varchar',
       'length' => 255,
-      'not null' => TRUE,
+      'not null' => true,
       'default' => '',
       'description' => 'String containing the classes for the block.',
     );
     $schema['block']['fields']['color_title'] = array(
       'type' => 'varchar',
       'length' => 255,
-      'not null' => TRUE,
+      'not null' => true,
       'default' => '',
       'description' => 'String containing the classes for the block.',
     );
@@ -67,38 +69,48 @@ function udla_blocks_alter_schema_alter(&$schema) {
 /**
  * Alters the structure of {block_background_color} schema.
  */
-function udla_blocks_alter_update_7100() {
+function udla_blocks_alter_update_7100()
+{
   // Check if the block_background_color table exists to prevent installation profiles
   // from running this update for versions without the block_background_color table.
   if (db_table_exists('block_background_color')) {
     // Update the schema.
     db_drop_primary_key('block_background_color');
 
-    db_change_field('block_background_color', 'module', 'module',
+    db_change_field(
+      'block_background_color',
+      'module',
+      'module',
       array(
         'type' => 'varchar',
         'length' => '64',
-        'not null' => TRUE,
+        'not null' => true,
         'default' => '',
         'description' => 'The module to which the block belongs.',
       )
     );
 
-    db_change_field('block_background_color', 'delta', 'delta',
+    db_change_field(
+      'block_background_color',
+      'delta',
+      'delta',
       array(
         'type' => 'varchar',
         'length' => '32',
-        'not null' => TRUE,
+        'not null' => true,
         'default' => '',
         'description' => "The ID of the module's block.",
       )
     );
 
-    db_change_field('block_background_color', 'background_color', 'background_color',
+    db_change_field(
+      'block_background_color',
+      'background_color',
+      'background_color',
       array(
         'type' => 'varchar',
         'length' => '255',
-        'not null' => TRUE,
+        'not null' => true,
         'default' => '',
         'description' => 'String containing the classes for the block.',
       )
@@ -112,7 +124,8 @@ function udla_blocks_alter_update_7100() {
 /**
  * Fix too long primary key length in {block_background_color}.
  */
-function udla_blocks_alter_update_7101() {
+function udla_blocks_alter_update_7101()
+{
   // Ensure the block_background_color table exists, which is not true for all versions.
   if (db_table_exists('block_background_color')) {
     // Drop current primary key.
@@ -121,14 +134,14 @@ function udla_blocks_alter_update_7101() {
     db_change_field('block_background_color', 'module', 'module', array(
       'type' => 'varchar',
       'length' => 64,
-      'not null' => TRUE,
+      'not null' => true,
       'default' => '',
       'description' => 'The module to which the block belongs.',
     ));
     db_change_field('block_background_color', 'delta', 'delta', array(
       'type' => 'varchar',
       'length' => 32,
-      'not null' => TRUE,
+      'not null' => true,
       'default' => '',
       'description' => "The ID of the module's block.",
     ));
@@ -141,7 +154,8 @@ function udla_blocks_alter_update_7101() {
 /**
  * Migration from block_background_color table to new field background_color in core block table.
  */
-function udla_blocks_alter_update_7103() {
+function udla_blocks_alter_update_7103()
+{
   if (!db_field_exists('block', 'block_background_color')) {
     $schema['block'] = array();
     udla_blocks_alter_schema_alter($schema);
@@ -168,21 +182,22 @@ function udla_blocks_alter_update_7103() {
 /**
  * Implements hook_schema().
  */
-function udla_blocks_alter_schema() {
+function udla_blocks_alter_schema()
+{
   $schema['backgrounds_color'] = array(
     'description' => 'Used for save data from color to background',
     'fields' => array(
       'colorid' => array(
         'description' => 'The primary identifier for a color.',
         'type' => 'serial',
-        'unsigned' => TRUE,
-        'not null' => TRUE
+        'unsigned' => true,
+        'not null' => true
       ),
       'color' => array(
         'description' => 'The color value',
         'type' => 'varchar',
         'length' => 7,
-        'not null' => TRUE,
+        'not null' => true,
         'default' => ''
       ),
     ),
@@ -193,5 +208,3 @@ function udla_blocks_alter_schema() {
   );
   return $schema;
 }
-
-

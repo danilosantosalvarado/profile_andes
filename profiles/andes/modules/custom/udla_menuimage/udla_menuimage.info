@@ -4,4 +4,3 @@ package = TBWA Colombia
 core = 7.x
 dependencies[] = menu
 dependencies[] = image
-
