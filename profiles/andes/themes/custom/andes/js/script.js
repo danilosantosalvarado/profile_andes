@@ -101,6 +101,20 @@
 				SlideClass = slideActivePosition+"-control";
 			}
 		});
+    $(".view-banner-nodes .views-slideshow-controls-text-previous-processed, .view-banner-nodes .views-slideshow-controls-text-next-processed").on('click', function(event) {
+      var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
+      var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
+      var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
+      if (SlideClass == "") {
+        $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+        SlideClass = slideActivePosition+"-control";
+      }
+      else{
+        $(this).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
+        $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+        SlideClass = slideActivePosition+"-control";
+      }
+    });
 	});
 
 }(jQuery));
