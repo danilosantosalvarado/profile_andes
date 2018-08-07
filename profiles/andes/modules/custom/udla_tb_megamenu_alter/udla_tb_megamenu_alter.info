@@ -4,3 +4,4 @@ package = TBWA Colombia
 core = 7.x
 dependencies[] = tb_megamenu
 dependencies[] = udla_menuimage
+dependencies[] = media
