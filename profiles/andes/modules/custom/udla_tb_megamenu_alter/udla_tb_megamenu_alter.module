@@ -3,18 +3,19 @@
 /**
  * Implements hook_theme().
  */
-function udla_tb_megamenu_alter_theme($existing, $type, $theme, $path) {
-	$items = array();
+function udla_tb_megamenu_alter_theme($existing, $type, $theme, $path)
+{
+  $items = array();
   $items['tb_megamenu_item'] = array(
     'variables' => array(
-      'menu_name' => NULL,
+      'menu_name' => null,
       'a_classes' => array(),
-      'item' => NULL,
-      'level' => NULL,
-      'menu_config' => NULL,
-      'block_config' => NULL,
-      'trail' => NULL,
-      'submenu' => NULL,
+      'item' => null,
+      'level' => null,
+      'menu_config' => null,
+      'block_config' => null,
+      'trail' => null,
+      'submenu' => null,
       'section' => 'frontend',
     ),
     'template' => 'tb-megamenu-item',

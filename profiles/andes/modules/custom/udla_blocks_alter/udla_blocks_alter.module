@@ -4,34 +4,35 @@
 /**
  * Implements hook_form_alter().
  */
-function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id) {
-	if (($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form')) {
+function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id)
+{
+  if (($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form')) {
     $block = block_load($form['module']['#value'], $form['delta']['#value']);
     $form['settings']['background_color'] = array(
       '#type' => 'textfield',
       '#title' => t('Background Color'),
-	    '#size' => 7,
-	    '#maxlength' => 7,
+      '#size' => 7,
+      '#maxlength' => 7,
       '#default_value' => isset($block->background_color) ? $block->background_color : '',
-	    '#attributes' => array('class' => array('colorfield-colorpicker')),
-	    '#attached' => array(
-	      'library' => array(array('system', 'farbtastic')),
-	      'js' => array(drupal_get_path('module', 'colorfield') . '/js/colorfield-farbtastic.js'),
-	    ),
-	    '#suffix' => '<div class="colorfield-picker"></div>',
+      '#attributes' => array('class' => array('colorfield-colorpicker')),
+      '#attached' => array(
+        'library' => array(array('system', 'farbtastic')),
+        'js' => array(drupal_get_path('module', 'colorfield') . '/js/colorfield-farbtastic.js'),
+      ),
+      '#suffix' => '<div class="colorfield-picker"></div>',
     );
     $form['settings']['text_color'] = array(
       '#type' => 'textfield',
       '#title' => t('Text Color'),
-	    '#size' => 7,
-	    '#maxlength' => 7,
+      '#size' => 7,
+      '#maxlength' => 7,
       '#default_value' => isset($block->color_title) ? $block->color_title : '',
-	    '#attributes' => array('class' => array('colorfield-colorpicker')),
-	    '#attached' => array(
-	      'library' => array(array('system', 'farbtastic')),
-	      'js' => array(drupal_get_path('module', 'colorfield') . '/js/colorfield-farbtastic.js'),
-	    ),
-	    '#suffix' => '<div class="colorfield-picker"></div>',
+      '#attributes' => array('class' => array('colorfield-colorpicker')),
+      '#attached' => array(
+        'library' => array(array('system', 'farbtastic')),
+        'js' => array(drupal_get_path('module', 'colorfield') . '/js/colorfield-farbtastic.js'),
+      ),
+      '#suffix' => '<div class="colorfield-picker"></div>',
     );
     $form['#submit'][] = 'udla_blocks_alter_form_submit';
 
@@ -42,20 +43,21 @@ function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implementation of hook_bean_form_submit().
  */
-function udla_blocks_alter_form_submit($form, $form_state) {
+function udla_blocks_alter_form_submit($form, $form_state)
+{
   if ($form_state['values']['form_id'] == 'block_admin_configure' || $form_state['values']['form_id'] == 'block_add_block_form') {
     // Only save if value has changed.
     global $base_url;
     if (isset($form_state['values']['background_color']) && $form['settings']['background_color']['#default_value'] != $form_state['values']['background_color'] && user_access('administer blocks')) {
-    	
-	    $result = db_select('backgrounds_color', 'bc')
-		    ->fields('bc',array('color'))
-		    ->condition('color', $form_state['values']['background_color'],'=')
-		    ->execute()
-	    ->fetchAssoc();
-	    if (empty($result)) {
-	    	_color_set_for_data($form_state['values']['background_color']);
-	    }
+
+      $result = db_select('backgrounds_color', 'bc')
+        ->fields('bc', array('color'))
+        ->condition('color', $form_state['values']['background_color'], '=')
+        ->execute()
+        ->fetchAssoc();
+      if (empty($result)) {
+        _color_set_for_data($form_state['values']['background_color']);
+      }
 
       db_update('block')
         ->fields(array('background_color' => $form_state['values']['background_color']))
@@ -64,64 +66,67 @@ function udla_blocks_alter_form_submit($form, $form_state) {
         ->execute();
       // Flush all context module cache to use the updated background_color.
       if (module_exists('context')) {
-        cache_clear_all('context', 'cache', TRUE);
+        cache_clear_all('context', 'cache', true);
       }
       sleep(1);
     }
     if (isset($form_state['values']['text_color']) && $form['settings']['text_color']['#default_value'] != $form_state['values']['text_color'] && user_access('administer blocks')) {
-	    $result = db_select('backgrounds_color', 'bc')
-		    ->fields('bc',array('color'))
-		    ->condition('color', $form_state['values']['text_color'],'=')
-		    ->execute()
-	    ->fetchAssoc();
-	    if (empty($result)) {
-	    	_color_set_for_data($form_state['values']['text_color']);
-	    }
+      $result = db_select('backgrounds_color', 'bc')
+        ->fields('bc', array('color'))
+        ->condition('color', $form_state['values']['text_color'], '=')
+        ->execute()
+        ->fetchAssoc();
+      if (empty($result)) {
+        _color_set_for_data($form_state['values']['text_color']);
+      }
 
       db_update('block')
         ->fields(array('color_title' => $form_state['values']['text_color']))
         ->condition('module', $form_state['values']['module'])
         ->condition('delta', $form_state['values']['delta'])
-      ->execute();
+        ->execute();
       if (module_exists('context')) {
-        cache_clear_all('context', 'cache', TRUE);
+        cache_clear_all('context', 'cache', true);
       }
       sleep(1);
-  	}
+    }
 
 
   }
 }
 
-function _color_set_for_data($value){
-	$realpath = realpath(dirname(__FILE__)).'/css/styles_background.css';
-	if (file_exists($realpath)) {
+function _color_set_for_data($value)
+{
+  $realpath = realpath(dirname(__FILE__)) . '/css/styles_background.css';
+  if (file_exists($realpath)) {
     $fh = fopen($realpath, 'a');
-    fwrite($fh, '.background-'.drupal_clean_css_identifier($value,array()).' { background-color: '.$value.';}'.PHP_EOL);
-    fwrite($fh, '.text-'.drupal_clean_css_identifier($value,array()).' {color: '.$value.';}'.PHP_EOL);
-	} else {
+    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
+    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
+  } else {
     $fh = fopen($realpath, 'wb');
-    fwrite($fh, '.background-'.drupal_clean_css_identifier($value,array()).' { background-color: '.$value.';}'.PHP_EOL);
-    fwrite($fh, '.text-'.drupal_clean_css_identifier($value,array()).' {color: '.$value.';}'.PHP_EOL);
-	}
-	fclose($fh);
-	$colorid = db_insert('backgrounds_color') // Table name no longer needs {}
-		->fields(array(
-		  'color' => $value,
-		))
-	->execute();	
+    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
+    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
+  }
+  fclose($fh);
+  $colorid = db_insert('backgrounds_color') // Table name no longer needs {}
+    ->fields(array(
+      'color' => $value,
+    ))
+    ->execute();
 }
 /**
  * Implements hook_init().
  */
-function udla_blocks_alter_init() {
-  drupal_add_css(drupal_get_path('module', 'udla_blocks_alter').'/css/styles_background.css',array('group' => CSS_SYSTEM, 'every_page' => TRUE));
+function udla_blocks_alter_init()
+{
+  drupal_add_css(drupal_get_path('module', 'udla_blocks_alter') . '/css/styles_background.css', array('group' => CSS_SYSTEM, 'every_page' => true));
 }
 
 /**
  * Implementation of hook_preprocess_HOOK().
  */
-function udla_blocks_alter_preprocess_block(&$vars) {
+function udla_blocks_alter_preprocess_block(&$vars)
+{
   $block = $vars['block'];
   if (!empty($block->background_color)) {
     $result = _block_data_css($block->background_color, 'background');
@@ -138,37 +143,39 @@ function udla_blocks_alter_preprocess_block(&$vars) {
 }
 
 
-function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts){
-  // if ($pane->type == 'block') {
-  //   $block = block_load($content->module,$content->delta);
-  //   if (!empty($block->background_color)) {
-  //     $result = _block_data_css($block->background_color, 'background');
-  //     if (!empty($result)) {
-  //       $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
-  //     }
-  //   }
-  //   if (!empty($block->color_title)) {
-  //     $result = _block_data_css($block->color_title, 'text');
-  //     if (!empty($result)) {
-  //       $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class']." ".implode(' ', $result) : implode(' ', $result);
-  //     }
-  //   }
+function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts)
+{
+  if ($pane->type == 'block') {
+    $block = block_load($content->module, $content->delta);
+    if (!empty($block->background_color)) {
+      $result = _block_data_css($block->background_color, 'background');
+      if (!empty($result)) {
+        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+      }
+    }
+    if (!empty($block->color_title)) {
+      $result = _block_data_css($block->color_title, 'text');
+      if (!empty($result)) {
+        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+      }
+    }
 
-  // }
+  }
 
 }
 
-function _block_data_css($value_field, $name_field){
+function _block_data_css($value_field, $name_field)
+{
   $return = array();
   $classes_array = explode(' ', $value_field);
   foreach ($classes_array as $class) {
     $result = db_select('backgrounds_color', 'bc')
-      ->fields('bc',array('color'))
-      ->condition('color', $value_field,'=')
+      ->fields('bc', array('color'))
+      ->condition('color', $value_field, '=')
       ->execute()
-    ->fetchAssoc();
+      ->fetchAssoc();
     if (isset($result['color'])) {
-      $return[] = $name_field."-".drupal_clean_css_identifier($result['color'], array());
+      $return[] = $name_field . "-" . drupal_clean_css_identifier($result['color'], array());
     }
   }
   return $return;
