@@ -30,28 +30,20 @@
       $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2.dropdown-submenu ").each(function (key, value) {
         var test = $(this).find('.tb-megamenu-subnav.level-2');
         //.tb - megamenu - subnav.level - 2
-       // console.log(test.children().length);
-     /*    test.css({
-          'margin-top': '-'+ 32*key +'px',
+        console.log(test.children().length);
+        test.css({
+          'margin-top': '-'+ 32 * (key +1) +'px',
           'position': 'absolute',
-        }) */
-
+        })
         //console.log(this);
         //console.log(offset);
       });
-
-      console.log($itemsNivel2);
-      //$itemsNivel2.on("click", function () {
       $('.dropdown-toggle').on("click", function () {
-
-        console.log('click  ' + $itemsNivel2)
         $('.box-black').remove();
-        console.log($(this).parents('.tb-megamenu-column'));
         $(this).parents('.tb-megamenu-column').before("<div class='box-black'><a> < " + $(this).text() + "</a></div>");
         setTimeout(function () {
-          $('.box-black').addClass('active-box').siblings('.content-img').addClass('eve');
+          $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
         }, 100);
-
         $(this).siblings('.nav-child').addClass('active'); /* nivel 2 animacion */
         $(this).parents('ul.level-1').addClass('active'); /* nivel 1 animacion */
         /* remover  */

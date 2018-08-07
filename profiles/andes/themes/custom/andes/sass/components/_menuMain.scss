@@ -15,6 +15,7 @@
 .tb-megamenu .dropdown-menu{
   box-shadow: none;
 }
+//iconos
 /* .tb-megamenu .dropdown-submenu > a::after{
   display: none;
 }
@@ -23,6 +24,7 @@
 } */
 .tb-megamenu .row-fluid .span3{
   width: 20%;
+  margin-left: 20px !important;
 }
 .tb-megamenu-menu-menu-top-soy{
   .nav-collapse {
@@ -50,15 +52,13 @@
 /* menu principal */
 .content-img{
   margin-left: 0 !important;
-  //width: 74% !important;
   float: right !important;
-  //display: none !important;
   -webkit-transition: width .5s; /* Safari */
   transition: width .5s;
   .menu-title{
     display: none;
   }
-  &.eve{
+  &.active{
     -webkit-transition: width .5s; /* Safari */
     transition: width .5s;
     width: 60% !important;
@@ -77,11 +77,11 @@
   .container-submenu{
     height: 350px;
     overflow: hidden;
+    //background-color: aqua;
   }
   .box-black {
     background-color: black;
     height: 400px;
-    //width: 275px;
     width: 20%;
     position: absolute;
     left: -400px;
@@ -97,15 +97,12 @@
     a{
       font-size: 12px;
       color: #FFFFFF;
+      word-wrap: break-word;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: inherit;
     }
   }
-
-
-/*   .column-inner-active{
-    margin-left: 250px;
-    background: red;
-    -webkit-transition: left .5s; /* Safari */
-  //}
   li.level-2 *.nav-child{
     opacity: 0;
     margin-left: -420px;
@@ -131,10 +128,10 @@
 
   ul.tb-megamenu-subnav.level-1,
   ul.tb-megamenu-subnav.level-2 {
-    padding: 0px 15px;
+    padding: 0px 20px;
     width: 90%;
+    padding: 10px;
     border-left: 1px solid #c8c8ca;
-    margin-left: 30px;
     background-color: rgba(255, 255, 255, 1.0);
     -webkit-transition: background-color 2s; /* Safari */
     transition: background-color 2s;
@@ -146,23 +143,6 @@
     > li a{
       &:first-child{
         padding-top: 0;
-      }
-    }
-  }
-  .tb-megamenu-item {
-    &.level-1{
-      .tb-megamenu-column {
-        > .tb-megamenu-column-inner {
-          //height: 400px;
-          //overflow: hidden;
-        }
-      }
-    }
-    &.level-2 {
-      //opacity: 1;
-      .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child{
-     /*    color: #a9a9a9;
-        width: 300px !important; */
       }
     }
   }
