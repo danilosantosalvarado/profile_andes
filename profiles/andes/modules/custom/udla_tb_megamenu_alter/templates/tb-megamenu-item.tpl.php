@@ -1,16 +1,23 @@
 <?php
 if (isset($item['link']['localized_options']['content']['image'])) {
   $image = file_load($item['link']['localized_options']['content']['image']);
-  $content = array(
-    'file' => array(
-      '#theme' => 'image',
-      '#path' => $image->uri,
-      '#prefix' => '<div class="container-menu-image"><div class="image-menu">',
-      '#suffix' => '</div><div class="menu-title">' . $item['link']['title'] . '</div></div>'
-    ),
-  );
-  $item['link']['title'] = drupal_render($content);
+  if ($image->type == 'image') {
+    $content = array(
+      'file' => array(
+        '#theme' => 'image',
+        '#path' => $image->uri,
+        '#prefix' => '<div class="container-menu-image"><div class="image-menu">',
+        '#suffix' => '</div><div class="menu-title">'.$item['link']['title'].'</div></div>'
+      ),
+    );  
+    $item['link']['title'] =  drupal_render($content);
+  }
+  else if ($image->type == 'document'){
+    $file = file_load($item['link']['localized_options']['content']['image']);  
+    $item['link']['title'] = l($item['link']['title'], file_create_url($file->uri), array('query' => array('download' => '1')));
+  }
 }
+
 ?>
 <li <?php print $attributes; ?> class="<?php print $classes; ?>">
   <a href="<?php print in_array($item['link']['href'], array('<nolink>')) ? "#" : url($item['link']['href'], $item['link']['options']); ?>" <?php echo drupal_attributes($item['link']['#attributes']); ?>>
