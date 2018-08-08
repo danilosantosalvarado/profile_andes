@@ -78,7 +78,6 @@ function udla_menuimage_form_menu_edit_item_alter(&$form, &$form_state)
  */
 function udla_menuimage_edit_item_submit(&$form, &$form_state)
 {
-  dpm($form_state['values']);
   if (isset($form_state['values']['udla_menuimage']) && isset($form_state['values']['mlid'])) {
     $mlid = $form_state['values']['mlid'];
     if ($mlid && ($result = db_query("
