@@ -1,32 +1,24 @@
-/* 
+/*
 //------------------------------------------------------------------------------
 // Multimedia
-//------------------------------------------------------------------------------  
+//------------------------------------------------------------------------------
 */
 
 /* ------| Multimedia |----- */
 .view-display-id-multimedia_destacada {
 	margin: 0 auto;
 	padding: 0 15px;
-	// @include respond-to(m) {
-	// 	width: 750px;
-	// }
-	// @include respond-to(xl) {
-	// 	width: 970px;
-	// }
-	// @include respond-to(xxxl) {
-	// 	width: 1170px;
-	// }
 	ul {
 		-webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px;
+		-webkit-padding-start: 0px;
+		height: 380px;
 		li.swiper-slide {
 		  background: color('grey-light');
 	    list-style: none;
-	    height: auto !important; 
+	    height: auto !important;
 	    //img
 	    .views-field {
 	    	width: 40%;
@@ -41,7 +33,7 @@
   	    .multimedia-date {
   				font-family: $latoregular;
   				@include font-size(xxs);
-  	    } 
+  	    }
   	    //titulo
   	    .multimedia-titulo {
   	    	font-family: $crimson-textroman;
@@ -50,6 +42,45 @@
 			    margin-bottom: 14px;
   	    }
 	    }
+		}
+	}
+}
+
+
+//Flechas paginador
+.view-display-id-multimedia_destacada {
+	// display: none;
+	@include respond-to(xl) {
+		display: block;
+	}
+	.skin-default {
+		position: relative;
+		//Conten Flechas
+		.views-slideshow-controls-text {
+			display: inline-flex;
+    	//Button Izquierda
+    	a[rel='prev'],
+    	%a-prev {
+				font-size: 0;
+				width: 40px;
+				height: 40px;
+				border: 1px solid #777;
+				background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+		    background-size: 40px 40px;
+				z-index: 1;
+				display: block;
+		  }
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				@extend %a-prev;
+		  	left: inherit;
+		    right: -6%;
+				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+		  }
 		}
 	}
 }
