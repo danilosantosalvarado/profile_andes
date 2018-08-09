@@ -2188,8 +2188,15 @@ th {
 */
 /* ------| Enlaces Footer |----- */
 .view-footer-top {
+  display: none;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media (min-width: 992px) {
+  .view-footer-top {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2314,6 +2321,7 @@ th {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     margin: 0;
+    padding: 0px 2%;
   }
 }
 
@@ -2399,6 +2407,110 @@ th {
   line-height: 1;
   margin-bottom: 10px;
   text-align: center;
+}
+
+/* ------| Contactos Footer |----- */
+#mini-panel-footer {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  #mini-panel-footer {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  #mini-panel-footer {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #mini-panel-footer {
+    width: 1170px;
+  }
+}
+
+.menu.nav {
+  padding: 65px 15px 0;
+}
+
+.menu.nav .open > a,
+.menu.nav .nav .open > a:hover {
+  background-color: transparent;
+}
+
+.menu.nav .first.dropdown,
+.menu.nav .last.dropdown {
+  width: 50%;
+  float: left;
+  padding: 0 15px 10px;
+}
+
+.menu.nav .first.dropdown:before,
+.menu.nav .last.dropdown:before {
+  content: '';
+  position: relative;
+  display: block;
+  top: -18px;
+  height: 1px;
+  width: 50%;
+  border-top: 1px solid #ffef00;
+}
+
+.menu.nav .first.dropdown a.dropdown-toggle,
+.menu.nav .last.dropdown a.dropdown-toggle {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 0px;
+  margin: 20px 0;
+}
+
+.menu.nav .first.dropdown a.dropdown-toggle .caret,
+.menu.nav .last.dropdown a.dropdown-toggle .caret {
+  display: none;
+}
+
+.menu.nav .first.dropdown .dropdown-menu,
+.menu.nav .last.dropdown .dropdown-menu {
+  position: initial;
+  display: block;
+  background-color: transparent;
+  border: initial;
+  border-radius: 0;
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
+  margin: 0;
+  padding: 0;
+}
+
+.menu.nav .first.dropdown .dropdown-menu li,
+.menu.nav .last.dropdown .dropdown-menu li {
+  list-style: none;
+  padding: 5px 0px;
+}
+
+.menu.nav .first.dropdown .dropdown-menu li a,
+.menu.nav .last.dropdown .dropdown-menu li a {
+  display: block;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  color: #818181;
+  text-transform: initial;
+  background-color: transparent;
+  padding: 0;
+}
+
+.menu.nav .first.dropdown .dropdown-menu li a:hover,
+.menu.nav .last.dropdown .dropdown-menu li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
