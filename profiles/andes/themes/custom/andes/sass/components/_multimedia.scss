@@ -1,0 +1,55 @@
+/* 
+//------------------------------------------------------------------------------
+// Multimedia
+//------------------------------------------------------------------------------  
+*/
+
+/* ------| Multimedia |----- */
+.view-display-id-multimedia_destacada {
+	margin: 0 auto;
+	padding: 0 15px;
+	// @include respond-to(m) {
+	// 	width: 750px;
+	// }
+	// @include respond-to(xl) {
+	// 	width: 970px;
+	// }
+	// @include respond-to(xxxl) {
+	// 	width: 1170px;
+	// }
+	ul {
+		-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+		li.swiper-slide {
+		  background: color('grey-light');
+	    list-style: none;
+	    height: auto !important; 
+	    //img
+	    .views-field {
+	    	width: 40%;
+	    	float: left;
+	    	padding-right: 20px;
+	    	img {
+	    		width: 100%;
+	    	}
+	    }
+	    .container-multimedia {
+  	    //date
+  	    .multimedia-date {
+  				font-family: $latoregular;
+  				@include font-size(xxs);
+  	    } 
+  	    //titulo
+  	    .multimedia-titulo {
+  	    	font-family: $crimson-textroman;
+  	    	@include type-layout(l, 1.16);
+  				color: #3d706e;
+			    margin-bottom: 14px;
+  	    }
+	    }
+		}
+	}
+}
