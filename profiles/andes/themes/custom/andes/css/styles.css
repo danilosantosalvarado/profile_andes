@@ -1196,7 +1196,13 @@ th {
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
 .tb-megamenu .nav > li.dropdown.open.active > a:hover {
-  background-color: black;
+  background-color: transparent;
+}
+
+.tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
+.tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
+.tb-megamenu .nav > li.dropdown.open.active > a:hover {
+  background-color: transparent;
 }
 
 @media (min-width: 543px) {
@@ -1462,6 +1468,7 @@ th {
 }
 
 .tb-megamenu-menu-mega-menu .always-show {
+  background: #1a1a1a;
   height: 85%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1481,14 +1488,49 @@ th {
   }
 }
 
+.tb-megamenu-menu-mega-menu .always-show .separador-menu {
+  width: 100%;
+  height: 11px;
+  background-image: url(../img/lines-menu-mobile.png);
+  background-size: 280px 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin: 20px 0 0;
+}
+
 .tb-megamenu-menu-mega-menu .always-show .clone {
-  background: red;
+  padding: 20px 0;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 543px) {
   .tb-megamenu-menu-mega-menu .always-show .clone {
     background: yellow;
+    display: none;
   }
+}
+
+.tb-megamenu-menu-mega-menu .always-show .clone .clone-block {
+  background: #313131;
+  color: #fff;
+  float: left;
+  list-style: none;
+  position: relative;
+  width: 47%;
+  width: 48%;
+  text-align: center;
+  margin: 0 1%;
+}
+
+.tb-megamenu-menu-mega-menu .always-show .clone .clone-block a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Lato,sans-serif;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: .88rem;
 }
 
 .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active {
@@ -1518,7 +1560,7 @@ th {
 
 .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a {
   border: none;
-  color: #696969;
+  color: #696969 !important;
   font-size: 1.08rem;
   text-decoration: none;
   font-family: Lato,sans-serif;

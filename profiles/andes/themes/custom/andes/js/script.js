@@ -58,19 +58,88 @@
         });
       }
       else{
-        var data           = $('#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1 a'),
-            $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
-            $class = 'clone';
-        $contentFather.after("<div class='clone'>....</div>");
 
-        for (var i = 0; i < data.length; i += 1) {
-          console.log(data[i]);
-          if (data[i].title == 'Correo' ){
-            console.log(data[i])
-            console.log(data[i].title);
-            console.log(data[i].href);
-            $('.'+$class).after("<div class='clone-correo'><a href='https://www.outlook.com/uniandes.edu.co'></a>cloen</div>");
-          }
+        const
+          classSelect = 'clone-select',
+          classBlockClone = 'clone-mobile-block',
+          $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
+          className = 'clone';
+
+
+        $contentFather.after("<div class='" + className + "'></div>");
+        $contentFather.after("<div class='separador-menu'></div>");
+
+        /* init */
+
+        generatorData(className, classBlockClone, 'block')
+        generatorData(className, classSelect, 'select')
+
+
+        /* inicia el html insertado */
+        function generatorData(className, typeClone, typeBlock){
+          var data = $('#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1.'+ typeClone +' a');
+          loopsData(data, typeBlock);
+        }
+        /* recorre los objetos */
+        function loopsData(data, typeBlock){
+          let title = '', href = '', text ='';
+
+          var miObjeto = new Object(),
+            objHref = "link",
+            objText = "text";
+
+
+
+          for (var i = 0; i < data.length; i += 1) {
+            title = data[i].title;
+            href = data[i].href;
+            if (typeBlock == 'block'){
+              //console.log(data[i]);
+              cloneBlock(title, href);
+            }
+            if (typeBlock == 'select') {
+         /*      console.log(data[i].text );
+              console.log( data[i].href );
+              console.log(data[i] ); */
+             // let item ='';
+              text = data[i].text;
+              href = data[i].href;
+
+
+              miObjeto.type = "clone";
+              miObjeto["Fecha de creación"] = "Cadena con espacios y acento";
+              miObjeto[objText] = text;
+              miObjeto[objHref] = href;
+
+              /* var obj = {
+                item:[i]={
+                  text: data[i].text,
+                  href: data[i].href,
+                }
+              }; */
+            }
+          }//endFor
+          obj=0;
+          cloneSelect(obj)
+          console.log(miObjeto);
+
+        }
+        /* funcion Clone de bloques */
+        function cloneBlock(title, href){
+          let clone = $('.' + className).append(
+            "<div class='" + className + "-block " + className + "-" + title.toLowerCase() + "'><a href='" + href + "'>" + title + "</a></div>");
+          return clone;
+        }
+        function cloneSelect(obj) {
+          /* let cloneSelect = $('.' + className).append(
+            "<div class='" + className + "-block " + className + "-" + title.toLowerCase() + "'><a href='" + href + "'>" + title + "</a></div>"); */
+     /*      console.log(href );
+          console.log(text); */
+          //let htmloption = '<option value="' + text + '" data-href="'+href+'"></option>';
+          //let htmlSelect = '<select name="" id="">'+htmloption+'</select >';
+          console.log(obj);
+
+          //return cloneSelect;
         }
       }
     }
