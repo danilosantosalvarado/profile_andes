@@ -6,6 +6,9 @@
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
 .tb-megamenu .nav > li.dropdown.open.active > a:hover{
   background-color: black;
+  @include breakpoint($basic) {
+    background-color: transparent;
+  }
 }
 .tb-megamenu .nav > .active > a,
 .tb-megamenu .nav > .active > a:hover,
@@ -210,9 +213,15 @@
 .tb-megamenu .nav-collapse .nav > li.active > a:hover,
 .tb-megamenu .nav-collapse .nav > li.active > a:focus {
   background: black;
+  @include breakpoint($basic) {
+    background: transparent;
+  }
 }
 #block-tb-megamenu-menu-menu-top-soy{
   display: none;
+  @include breakpoint($basic) {
+    display: block;
+  }
 }
 .tb-megamenu-menu-mega-menu{
   .tb-megamenu-button{
@@ -226,20 +235,38 @@
     position: relative;
     width: 100%;
     top: -9px;
+    @include breakpoint($basic) {
+      top: 7px;
+      padding: 0;
+      width: 70%;
+      overflow-x: initial;
+      overflow-y: initial;
+    }
     .clone{
+      background: red;
+      @include breakpoint($basic) {
+        background: yellow;
+      }
       .clone-correo{
-        background: red;
+
       }
     }
     ul.tb-megamenu-nav.level-0{
-
       li.level-1.active{
         float: inherit;
         margin: 0 auto;
         padding: 0 0px;
+        @include breakpoint($basic) {
+          float: left;
+          margin-left: 0;
+        }
         &.active{
           height: 50px;
           width: auto;
+          @include breakpoint($basic) {
+            height: initial;
+            width: 136px;
+          }
         }
         a{
           border: none;
@@ -248,6 +275,10 @@
           text-decoration: none;
           font-family: Lato,sans-serif;
           font-weight: 300;
+          @include breakpoint($basic) {
+            font-size: .83rem;
+            font-weight: initial;
+          }
         }
       }
     }
