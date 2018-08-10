@@ -67,7 +67,9 @@
 
 
         $contentFather.after("<div class='" + className + "'></div>");
+        $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
         $contentFather.after("<div class='separador-menu'></div>");
+
 
         /* init */
 
@@ -82,13 +84,7 @@
         }
         /* recorre los objetos */
         function loopsData(data, typeBlock){
-          let title = '', href = '', text ='';
-
-          var miObjeto = new Object(),
-            objHref = "link",
-            objText = "text";
-
-
+          let title = '', href = '', text = '', dataSelect = [];
 
           for (var i = 0; i < data.length; i += 1) {
             title = data[i].title;
@@ -98,31 +94,12 @@
               cloneBlock(title, href);
             }
             if (typeBlock == 'select') {
-         /*      console.log(data[i].text );
-              console.log( data[i].href );
-              console.log(data[i] ); */
-             // let item ='';
               text = data[i].text;
               href = data[i].href;
-
-
-              miObjeto.type = "clone";
-              miObjeto["Fecha de creación"] = "Cadena con espacios y acento";
-              miObjeto[objText] = text;
-              miObjeto[objHref] = href;
-
-              /* var obj = {
-                item:[i]={
-                  text: data[i].text,
-                  href: data[i].href,
-                }
-              }; */
+              dataSelect[i] = {'text':text,'href':href};
             }
           }//endFor
-          obj=0;
-          cloneSelect(obj)
-          console.log(miObjeto);
-
+          cloneSelect(dataSelect);
         }
         /* funcion Clone de bloques */
         function cloneBlock(title, href){
@@ -130,16 +107,13 @@
             "<div class='" + className + "-block " + className + "-" + title.toLowerCase() + "'><a href='" + href + "'>" + title + "</a></div>");
           return clone;
         }
+        /* clone select */
         function cloneSelect(obj) {
-          /* let cloneSelect = $('.' + className).append(
-            "<div class='" + className + "-block " + className + "-" + title.toLowerCase() + "'><a href='" + href + "'>" + title + "</a></div>"); */
-     /*      console.log(href );
-          console.log(text); */
-          //let htmloption = '<option value="' + text + '" data-href="'+href+'"></option>';
-          //let htmlSelect = '<select name="" id="">'+htmloption+'</select >';
-          console.log(obj);
-
-          //return cloneSelect;
+          for (i = 0; i < obj.length; i++) {
+            let $htmloption = $('#select-clone').append('<option class="' + i + ' "value="' + obj[i].text + '" data-href="' + obj[i].href + '">' + obj[i].text + '</option>');
+            //console.log(htmloption)
+          }
+          //return $htmloption;
         }
       }
     }

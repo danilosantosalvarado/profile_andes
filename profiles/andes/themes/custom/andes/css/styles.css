@@ -1485,6 +1485,7 @@ th {
     width: 70%;
     overflow-x: initial;
     overflow-y: initial;
+    background: transparent;
   }
 }
 
@@ -1497,6 +1498,44 @@ th {
   background-position: center;
   position: relative;
   margin: 20px 0 0;
+}
+
+.tb-megamenu-menu-mega-menu .always-show .menu-soy {
+  width: 100%;
+  position: relative;
+  border: 1px solid #484848;
+  height: 45px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-family: Lato,sans-serif;
+  font-size: .88rem;
+  color: #a8a8a8;
+  padding: 7px 10px;
+}
+
+.tb-megamenu-menu-mega-menu .always-show .menu-soy span {
+  display: block;
+  position: relative;
+  width: 30%;
+  float: left;
+  top: 4px;
+  font-size: 16px;
+}
+
+.tb-megamenu-menu-mega-menu .always-show .menu-soy select {
+  background: url(../img/icon-flecha-abajo.png) right center no-repeat;
+  border: none;
+  color: #626262;
+  display: block;
+  position: relative;
+  width: 70%;
+  float: right;
+  appearance: none;
+  font-size: 15.8333px;
+  padding: 0 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: 0;
 }
 
 .tb-megamenu-menu-mega-menu .always-show .clone {
