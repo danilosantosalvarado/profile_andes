@@ -6,6 +6,10 @@
 
 /* ------| Enlaces Footer |----- */
 .view-footer-top {
+	display: none;
+	@include respond-to(xl) {
+	display: block;
+	}
 	margin: 0 auto;
 	padding: 0 15px;
 	@include respond-to(m) {
@@ -17,7 +21,7 @@
 	@include respond-to(xxxl) {
 		width: 1170px;
 	}
-	//contenedor 
+	//contenedor
 	.view-content {
 		display: flex;
 		padding: 30px 0;
@@ -35,7 +39,7 @@
 		}
 		.text-footer-top {
 			a {
-				text-decoration: none;	
+				text-decoration: none;
 				font-family: $latolight;
 				font-size: 13.5px;
 				line-height: 1;
@@ -89,6 +93,7 @@
 				flex: 1 1 100%;
 				flex-wrap: nowrap;
 				margin: 0;
+				padding: 0px 2%;
 			}
 			.field-label {
 				display: none;
@@ -156,3 +161,82 @@
 	}
 }
 
+/* ------| Contactos Footer |----- */
+// #block-panels-mini-footer {
+// 	background-color: black;
+// }
+#mini-panel-footer {
+	margin: 0 auto;
+	padding: 0 15px;
+	@include respond-to(m) {
+		width: 750px;
+	}
+	@include respond-to(xl) {
+		width: 970px;
+	}
+	@include respond-to(xxxl) {
+		width: 1170px;
+	}
+}
+.menu.nav {
+	padding: 65px 15px 0;
+	.open > a,
+	.nav .open > a:hover {
+		background-color: transparent;
+	}
+	.first.dropdown,
+	.last.dropdown {
+		width: 50%;
+		float: left;
+		padding: 0 15px 10px;
+		&:before {
+			content: '';
+			position: relative;
+			display: block;
+			top: -18px;
+			height: 1px;
+			width: 50%;
+			border-top: 1px solid #ffef00;
+		}
+		a.dropdown-toggle {
+			color: white;
+			cursor: default;
+			text-decoration: none;
+			text-transform: uppercase;
+			background-color: transparent;
+			padding: 0px;
+			margin: 20px 0;
+			.caret {
+				display: none;
+			}
+		}
+		.dropdown-menu {
+			position: initial;
+			display: block;
+			background-color: transparent;
+			border: initial;
+			border-radius: 0;
+			box-shadow: initial;
+			margin: 0;
+    	padding: 0;
+			li {
+				list-style: none;
+				padding: 5px 0px;
+				a {
+					display: block;
+					font-family: $latolight;
+					@include font-size(xs);
+					color: #818181;
+					text-transform: initial;
+					background-color: transparent;
+					padding: 0;
+					&:hover {
+						color: #fff;
+						text-decoration: none;
+						background-color: transparent,
+					}
+				}
+			}
+		}
+	}
+}
