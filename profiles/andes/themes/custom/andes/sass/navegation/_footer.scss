@@ -162,9 +162,9 @@
 }
 
 /* ------| Contactos Footer |----- */
-// #block-panels-mini-footer {
-// 	background-color: black;
-// }
+#block-panels-mini-footer {
+	background-color: black;
+}
 #mini-panel-footer {
 	margin: 0 auto;
 	padding: 0 15px;
@@ -179,16 +179,19 @@
 	}
 }
 .menu.nav {
-	padding: 65px 15px 0;
+	padding-top: 65px;
 	.open > a,
 	.nav .open > a:hover {
 		background-color: transparent;
 	}
 	.first.dropdown,
 	.last.dropdown {
-		width: 50%;
+		width: 100%;
 		float: left;
-		padding: 0 15px 10px;
+		padding-bottom: 10px;
+		@include respond-to(xl) {
+			width: 50%;
+		}
 		&:before {
 			content: '';
 			position: relative;
