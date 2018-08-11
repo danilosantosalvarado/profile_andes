@@ -1935,29 +1935,42 @@ th {
 
 /* ------| Panel |----- */
 /* ------| Contenedor |----- */
-.publicaciones-interna .panel-col-first {
-  width: 40%;
-  margin-right: 4%;
-}
-
-.publicaciones-interna .panel-col-first .field-name-field-imagen {
+.publicaciones-interna .field-name-field-imagen {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .publicaciones-interna .panel-col-first .field-name-field-imagen {
+  .publicaciones-interna .field-name-field-imagen {
     display: block;
+    max-width: 61%;
+    margin: 0 auto;
   }
 }
 
-.publicaciones-interna .panel-col-first .field-name-field-imagen img {
+.publicaciones-interna .field-name-field-imagen img {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .publicaciones-interna .panel-col-first .field-name-field-imagen-mobile {
+  .publicaciones-interna .field-name-field-imagen-mobile {
     display: none;
   }
+}
+
+.publicaciones-interna .field-name-field-precio {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.publicaciones-interna .field-name-field-precio .field-label,
+.publicaciones-interna .field-name-field-precio .field-item {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
 }
 
 .publicaciones-interna .panel-separator {
@@ -1978,6 +1991,10 @@ th {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #000;
+}
+
+.publicaciones-interna .field-name-body {
+  padding: 20px 0;
 }
 
 /*

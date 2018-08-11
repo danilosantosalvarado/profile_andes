@@ -55,22 +55,32 @@
 /* ------| Contenedor |----- */
 .publicaciones-interna {
   //panel left
-  .panel-col-first {
-    width: 40%;
-    margin-right: 4%;
-    .field-name-field-imagen{
-      display: none;
-      @include respond-to(xl) {
-        display: block;
-      }
-      img {
-      width: 100%;
-      }
+  .field-name-field-imagen {
+    display: none;
+    @include respond-to(xl) {
+      display: block;
+      // margin-right: 4%;
+      max-width: 61%;
+      margin: 0 auto;
     }
-    .field-name-field-imagen-mobile {
-      @include respond-to(xl) {
-        display: none;
-      }
+    img {
+    width: 100%;
+    }
+  }
+  .field-name-field-imagen-mobile {
+    @include respond-to(xl) {
+      display: none;
+    }
+  }
+  //Precio
+  .field-name-field-precio {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    .field-label,
+    .field-item {
+      font-family: $latoblack;
+      @include font-size(xl);
     }
   }
   //Space panel
@@ -131,5 +141,9 @@
   // Disponibilidad
   .field-name-field-disponibilidad {
     @extend %field-name;
+  }
+  //Body
+  .field-name-body {
+    padding: 20px 0;
   }
 }
