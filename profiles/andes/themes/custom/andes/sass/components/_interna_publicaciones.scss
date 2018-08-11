@@ -1,0 +1,135 @@
+/*
+//------------------------------------------------------------------------------
+// Interna Publicaciones
+//------------------------------------------------------------------------------
+*/
+
+
+/* ------| Title |----- */
+.publicaciones-interna {
+  .field-name-title-field {
+    font-family: $latobold;
+    @include font-size(l);
+    font-weight: 600;
+    text-align: center;
+    border-bottom: initial;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include respond-to(xs) {
+      @include font-size(xl);
+      padding: 20px 0 40px;
+    }
+    @include respond-to(m) {
+      width: 750px;
+      @include font-size(xxl);
+    }
+    @include respond-to(xl) {
+      width: 970px;
+    }
+    @include respond-to(xxxl) {
+      width: 1170px;
+    }
+  }
+}
+
+/* ------| Container|----- */
+.publicaciones-interna {
+  #block-system-main {
+    margin: 0 auto;
+    padding: 0 15px;
+    @include respond-to(m) {
+      width: 750px;
+    }
+    @include respond-to(xl) {
+      width: 970px;
+    }
+    @include respond-to(xxxl) {
+      width: 1170px;
+    }
+  }
+}
+
+/* ------| Panel |----- */
+
+
+/* ------| Contenedor |----- */
+.publicaciones-interna {
+  //panel left
+  .panel-col-first {
+    width: 40%;
+    margin-right: 4%;
+    .field-name-field-imagen{
+      display: none;
+      @include respond-to(xl) {
+        display: block;
+      }
+      img {
+      width: 100%;
+      }
+    }
+    .field-name-field-imagen-mobile {
+      @include respond-to(xl) {
+        display: none;
+      }
+    }
+  }
+  //Space panel
+  .panel-separator {
+    margin: 0;
+  }
+  //Autor
+  .field-name-field-autor,
+  %field-name {
+    padding: 5px 0;
+    .field-label {
+      font-family: $latoblack;
+      @include font-size(xs);
+      color: color('black');
+    }
+    .field-item {
+      font-family: $crimson-textregular;
+      @include font-size(m);
+      color: color('black');
+    }
+  }
+  //Area tematica
+  .field-name-field-area-tematica {
+    @extend %field-name;
+  }
+  //ISBN
+  .field-name-field-isbn {
+    @extend %field-name;
+  }
+  //Editorial
+  .field-name-field-editorial {
+    @extend %field-name;
+  }
+  //Edicico
+  .field-name-field-edicion {
+    @extend %field-name;
+  }
+  //Fecha de publicación
+  .field-name-field-fecha-publicacion {
+    @extend %field-name;
+  }
+  // Carátula
+  .field-name-field-caratula {
+    @extend %field-name;
+  }
+  // Formato
+  .field-name-field-formato {
+    @extend %field-name;
+  }
+  // Paginas
+  .field-name-field-paginas {
+    @extend %field-name;
+  }
+  // Idioma
+  .field-name-field-idioma {
+    @extend %field-name;
+  }
+  // Disponibilidad
+  .field-name-field-disponibilidad {
+    @extend %field-name;
+  }
+}
