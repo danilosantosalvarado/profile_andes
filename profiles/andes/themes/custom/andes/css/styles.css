@@ -1934,6 +1934,24 @@ th {
 }
 
 /* ------| Panel |----- */
+.panel-col-first,
+.panel-col-last {
+  float: initial !important;
+  width: 100% !important;
+}
+
+@media (min-width: 992px) {
+  .panel-col-first,
+  .panel-col-last {
+    float: left !important;
+    width: 50%  !important;
+  }
+}
+
+.panel-separator {
+  margin: 0;
+}
+
 /* ------| Contenedor |----- */
 .publicaciones-interna .field-name-field-imagen {
   display: none;
@@ -1949,6 +1967,10 @@ th {
 
 .publicaciones-interna .field-name-field-imagen img {
   width: 100%;
+}
+
+.publicaciones-interna .field-name-field-imagen-mobile img {
+  margin: 0 auto;
 }
 
 @media (min-width: 992px) {
@@ -1973,8 +1995,26 @@ th {
   font-size: 1.5rem;
 }
 
-.publicaciones-interna .panel-separator {
-  margin: 0;
+.publicaciones-interna .field-name-field-boton-compra {
+  text-align: center;
+}
+
+.publicaciones-interna .field-name-field-boton-compra .field-item a {
+  display: block;
+  font-size: .85rem;
+  font-family: Latolight,sans-serif;
+  max-width: 149px;
+  padding: 6px 40px;
+  border: 1px solid #484851;
+  text-decoration: none;
+  margin: 0 auto;
+  background: 0 0;
+  z-index: 10;
+}
+
+.publicaciones-interna .field-name-field-boton-compra .field-item a:hover {
+  background: #484851;
+  color: #fff;
 }
 
 .publicaciones-interna .field-name-field-autor, .publicaciones-interna .field-name-field-area-tematica, .publicaciones-interna .field-name-field-isbn, .publicaciones-interna .field-name-field-editorial, .publicaciones-interna .field-name-field-edicion, .publicaciones-interna .field-name-field-fecha-publicacion, .publicaciones-interna .field-name-field-caratula, .publicaciones-interna .field-name-field-formato, .publicaciones-interna .field-name-field-paginas, .publicaciones-interna .field-name-field-idioma, .publicaciones-interna .field-name-field-disponibilidad {
@@ -1995,6 +2035,7 @@ th {
 
 .publicaciones-interna .field-name-body {
   padding: 20px 0;
+  text-align: justify;
 }
 
 /*

@@ -50,8 +50,19 @@
 }
 
 /* ------| Panel |----- */
-
-
+.panel-col-first,
+.panel-col-last {
+  float: initial !important;
+  width: 100% !important;
+  @include respond-to(xl) {
+    float: left !important;
+    width: 50%  !important;
+  }
+}
+ //Space panel
+ .panel-separator {
+  margin: 0;
+}
 /* ------| Contenedor |----- */
 .publicaciones-interna {
   //panel left
@@ -68,6 +79,9 @@
     }
   }
   .field-name-field-imagen-mobile {
+    img {
+      margin: 0 auto;
+    }
     @include respond-to(xl) {
       display: none;
     }
@@ -83,10 +97,29 @@
       @include font-size(xl);
     }
   }
-  //Space panel
-  .panel-separator {
-    margin: 0;
+  //Comprar
+  .field-name-field-boton-compra {
+    text-align: center;
+    .field-item {
+      a {
+        display: block;
+        font-size: .85rem;
+        font-family: Latolight,sans-serif;
+        max-width: 149px;
+        padding: 6px 40px;
+        border: 1px solid #484851;
+        text-decoration: none;
+        margin: 0 auto;
+        background: 0 0;
+        z-index: 10;
+        &:hover {
+          background: #484851;
+          color: #fff;
+        }
+      }
+    }
   }
+
   //Autor
   .field-name-field-autor,
   %field-name {
@@ -145,5 +178,6 @@
   //Body
   .field-name-body {
     padding: 20px 0;
+    text-align: justify;
   }
 }
