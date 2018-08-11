@@ -50,54 +50,30 @@
       img {
         width: 100%;
 			}
-    }
-		//Contenedor
-		.conten-publicaciones{
-			display: inline-block;
-			@include padding(1.05 .834);
-		  //Titulo
-		  .publicaciones-titulo {
-        a {
-          font-family: $crimson-textbold;
-          @include type-layout(l, .96);
-          color: #484851;
-          text-decoration: none;
-          @include margin(.834 0 .834);
-          @include respond-to(xl) {
-            @include font-size(ll);
-            @include margin(.9 0 1.042);
-          }
-        }
-		  }
-		  //Body
-		  .publicaciones-body {
-				font-family: $crimson-textregular;
-				@include type-layout(m, 1.06);
-				@include margin-bottom(.417);
+		}
+		//Titulo
+		.publicaiones-titulo {
+			@include margin(.834 0 .834);
+			a {
+				font-family: $crimson-textbold;
+				@include type-layout(l, .96);
+				color: #484851;
+				text-decoration: none;
+				// @include margin(.834 0 .834);
 				@include respond-to(xl) {
-					@include font-size(o);
-		  	}
-		  }
-		  //Button
-		  .compo-notias-enlace {
-				a {
-					@include respond-to(xs) {
-						position: absolute;
-						bottom: 20px;
-						right: 10px;
-						margin: 0px;
-					}
-					border: 1px solid color('orange');
-					font-family: $latolight;
-					font-size: 15.3px;
-	    		color: #484851;
-	    		text-decoration: none;
-	        padding: 10px 30px;
-	        margin-top: 20px;
-	    		outline: none;
-	    		float: right;
+					@include font-size(ll);
+					@include margin(.9 0 1.042);
 				}
-		  }
+			}
+		}
+		//Body
+		.publicaiones-body {
+			font-family: $crimson-textregular;
+			@include type-layout(m, 1.06);
+			@include margin-bottom(.417);
+			@include respond-to(xl) {
+				@include font-size(o);
+			}
 		}
 	}
 }
@@ -175,6 +151,3 @@
 		}
 	}
 }
-
-
-
