@@ -50,18 +50,22 @@
 }
 
 /* ------| Panel |----- */
-.panel-col-first,
-.panel-col-last {
-  float: initial !important;
-  width: 100% !important;
-  @include respond-to(xl) {
-    float: left !important;
-    width: 50%  !important;
+.publicaciones-interna {
+  .panel-col-first,
+  .panel-col-last {
+    float: initial !important;
+    width: 100% !important;
+    @include respond-to(xl) {
+      float: left !important;
+      width: 50%  !important;
+    }
   }
 }
  //Space panel
- .panel-separator {
-  margin: 0;
+.publicaciones-interna {
+  .panel-separator {
+    margin: 0;
+  }
 }
 /* ------| Contenedor |----- */
 .publicaciones-interna {
