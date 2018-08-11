@@ -1,0 +1,7 @@
+name = Update Contents 
+description = Update witch excel save
+dependencies[] = libraries
+dependencies[] = phpexcel
+package = TBWA
+version = 0
+core = 7.x

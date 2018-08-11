@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function udla_load_events_menu() {
+  $items = array();
+  $items['admin/content/eventos-impor'] = array( //this creates a URL that will call this form at "examples/form-example"
+    'title' => 'Importar Eventos', //page title
+    'description' => 'Importar exel con eventos',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('udla_load_events_form_import'),
+    'access callback' => TRUE,
+    'file' => 'includes/udla_load_events_import.inc',
+  );
+  return $items;
+}
