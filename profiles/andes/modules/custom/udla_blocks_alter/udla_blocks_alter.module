@@ -89,6 +89,7 @@ function udla_blocks_alter_form_submit($form, $form_state)
         cache_clear_all('context', 'cache', true);
       }
       sleep(1);
+      drupal_clear_css_cache();
     }
 
 
