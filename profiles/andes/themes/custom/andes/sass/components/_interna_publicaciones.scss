@@ -1,0 +1,187 @@
+/*
+//------------------------------------------------------------------------------
+// Interna Publicaciones
+//------------------------------------------------------------------------------
+*/
+
+
+/* ------| Title |----- */
+.publicaciones-interna {
+  .field-name-title-field {
+    font-family: $latobold;
+    @include font-size(l);
+    font-weight: 600;
+    text-align: center;
+    border-bottom: initial;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include respond-to(xs) {
+      @include font-size(xl);
+      padding: 20px 0 40px;
+    }
+    @include respond-to(m) {
+      width: 750px;
+      @include font-size(xxl);
+    }
+    @include respond-to(xl) {
+      width: 970px;
+    }
+    @include respond-to(xxxl) {
+      width: 1170px;
+    }
+  }
+}
+
+/* ------| Container|----- */
+.publicaciones-interna {
+  #block-system-main {
+    margin: 0 auto;
+    padding: 0 15px;
+    @include respond-to(m) {
+      width: 750px;
+    }
+    @include respond-to(xl) {
+      width: 970px;
+    }
+    @include respond-to(xxxl) {
+      width: 1170px;
+    }
+  }
+}
+
+/* ------| Panel |----- */
+.publicaciones-interna {
+  .panel-col-first,
+  .panel-col-last {
+    float: initial !important;
+    width: 100% !important;
+    @include respond-to(xl) {
+      float: left !important;
+      width: 50%  !important;
+    }
+  }
+}
+ //Space panel
+.publicaciones-interna {
+  .panel-separator {
+    margin: 0;
+  }
+}
+/* ------| Contenedor |----- */
+.publicaciones-interna {
+  //panel left
+  .field-name-field-imagen {
+    display: none;
+    @include respond-to(xl) {
+      display: block;
+      // margin-right: 4%;
+      max-width: 61%;
+      margin: 0 auto;
+    }
+    img {
+    width: 100%;
+    }
+  }
+  .field-name-field-imagen-mobile {
+    img {
+      margin: 0 auto;
+    }
+    @include respond-to(xl) {
+      display: none;
+    }
+  }
+  //Precio
+  .field-name-field-precio {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    .field-label,
+    .field-item {
+      font-family: $latoblack;
+      @include font-size(xl);
+    }
+  }
+  //Comprar
+  .field-name-field-boton-compra {
+    text-align: center;
+    .field-item {
+      a {
+        display: block;
+        font-size: .85rem;
+        font-family: Latolight,sans-serif;
+        max-width: 149px;
+        padding: 6px 40px;
+        border: 1px solid #484851;
+        text-decoration: none;
+        margin: 0 auto;
+        background: 0 0;
+        z-index: 10;
+        &:hover {
+          background: #484851;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  //Autor
+  .field-name-field-autor,
+  %field-name {
+    padding: 5px 0;
+    .field-label {
+      font-family: $latoblack;
+      @include font-size(xs);
+      color: color('black');
+    }
+    .field-item {
+      font-family: $crimson-textregular;
+      @include font-size(m);
+      color: color('black');
+    }
+  }
+  //Area tematica
+  .field-name-field-area-tematica {
+    @extend %field-name;
+  }
+  //ISBN
+  .field-name-field-isbn {
+    @extend %field-name;
+  }
+  //Editorial
+  .field-name-field-editorial {
+    @extend %field-name;
+  }
+  //Edicico
+  .field-name-field-edicion {
+    @extend %field-name;
+  }
+  //Fecha de publicación
+  .field-name-field-fecha-publicacion {
+    @extend %field-name;
+  }
+  // Carátula
+  .field-name-field-caratula {
+    @extend %field-name;
+  }
+  // Formato
+  .field-name-field-formato {
+    @extend %field-name;
+  }
+  // Paginas
+  .field-name-field-paginas {
+    @extend %field-name;
+  }
+  // Idioma
+  .field-name-field-idioma {
+    @extend %field-name;
+  }
+  // Disponibilidad
+  .field-name-field-disponibilidad {
+    @extend %field-name;
+  }
+  //Body
+  .field-name-body {
+    padding: 20px 0;
+    text-align: justify;
+  }
+}

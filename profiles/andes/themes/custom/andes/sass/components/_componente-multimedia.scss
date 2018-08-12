@@ -1,0 +1,110 @@
+/*
+//------------------------------------------------------------------------------
+// Multimedia
+//------------------------------------------------------------------------------
+*/
+
+/* ------| Multimedia |----- */
+.view-display-id-multimedia_destacada {
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+	border: 1px solid #006135;
+	// &:before {
+	// 	content: '';
+	// 	display: block;
+	// 	width: 95%;
+	// 	height: 100%;
+	// 	border: 1px solid #006135;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 0;
+	// 	margin: 0 auto;
+	// 	z-index: 2;
+	// }
+	ul {
+		-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+		-webkit-padding-start: 0px;
+		height: 380px;
+		li.swiper-slide {
+	    list-style: none;
+	    height: auto !important;
+			//img
+			.views-row {
+				overflow: hidden;
+				.views-field {
+					width: 40%;
+					float: left;
+					padding-right: 20px;
+					img {
+						width: 100%;
+					}
+				}
+				a {
+					text-decoration: none;
+					.container-multimedia {
+						//date
+						.multimedia-date {
+							font-family: $latoregular;
+							@include font-size(xxs);
+							color: color('grey-dark');
+						}
+						//titulo
+						.multimedia-titulo {
+							font-family: $crimson-textroman;
+							@include type-layout(l, 1.16);
+							color: color('green-Primary');
+							margin-bottom: 14px;
+							&:hover {
+								text-decoration-line: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Flechas paginador
+.view-display-id-multimedia_destacada {
+	// display: none;
+	@include respond-to(xl) {
+		display: block;
+	}
+	.skin-default {
+		position: relative;
+		//Conten Flechas
+		.views-slideshow-controls-text {
+			display: inline-flex;
+    	//Button Izquierda
+    	a[rel='prev'] {
+				@extend %a-prev;
+				top: inherit;
+				left: 2%;
+				bottom: -18px;
+				transform: rotate(-90deg);
+				background-color: white;
+				z-index: 2;
+		  }
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				@extend %a-prev;
+		  	left: 12%;
+				top: inherit;
+				bottom: -18px;
+				transform: rotate(-90deg);
+				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+				background-color: white;
+				z-index: 2;
+		  }
+		}
+	}
+}

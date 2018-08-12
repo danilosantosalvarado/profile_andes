@@ -281,6 +281,7 @@
       right: -10000px;
       -webkit-transition: right .4s; /* Safari */
       transition: right .4s;
+
       &.active-mobile{
         position: fixed;
         background-color: #ffffff;
