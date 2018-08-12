@@ -1322,6 +1322,7 @@ th {
 .view-display-id-multimedia_destacada ul li.swiper-slide .view-display-id-default .views-field-field-video-banner {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .view-display-id-multimedia_destacada ul li.swiper-slide .views-row {
