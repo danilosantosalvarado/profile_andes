@@ -31,11 +31,20 @@
 		height: 380px;
 		li.swiper-slide {
 	    list-style: none;
-	    height: auto !important;
+			height: auto !important;
+			padding: 10px 0;
+			//video
+			.view-display-id-default {
+				.views-field-field-video-banner {
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
 			//img
 			.views-row {
 				overflow: hidden;
-				.views-field {
+				.views-field-view {
 					width: 40%;
 					float: left;
 					padding-right: 20px;
