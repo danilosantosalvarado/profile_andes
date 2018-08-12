@@ -1316,19 +1316,25 @@ th {
 .view-display-id-multimedia_destacada ul li.swiper-slide {
   list-style: none;
   height: auto !important;
+  padding: 10px 0;
+}
+
+.view-display-id-multimedia_destacada ul li.swiper-slide .view-display-id-default .views-field-field-video-banner {
+  width: 100%;
+  height: 100%;
 }
 
 .view-display-id-multimedia_destacada ul li.swiper-slide .views-row {
   overflow: hidden;
 }
 
-.view-display-id-multimedia_destacada ul li.swiper-slide .views-row .views-field {
+.view-display-id-multimedia_destacada ul li.swiper-slide .views-row .views-field-view {
   width: 40%;
   float: left;
   padding-right: 20px;
 }
 
-.view-display-id-multimedia_destacada ul li.swiper-slide .views-row .views-field img {
+.view-display-id-multimedia_destacada ul li.swiper-slide .views-row .views-field-view img {
   width: 100%;
 }
 
