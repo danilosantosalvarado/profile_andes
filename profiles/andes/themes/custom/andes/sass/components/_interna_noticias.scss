@@ -181,14 +181,14 @@
 	}
 }
 
-// /* ------| Ubicado Ninguno |----- */
-// .view-banner-nodes {
-// 	.field-content {
-// 		.slider-homes-empty {
-// 			display: none;
-// 		}
-// 	}
-// }
+/* ------| Ubicado Ninguno |----- */
+.view-banner-nodes {
+	.field-content {
+		.slider-homes-empty {
+			display: none;
+		}
+	}
+}
 
 /* ------| Flechas paginador |----- */
 .view-banner-nodes {
@@ -227,15 +227,24 @@
 	.views-slideshow-controls-bottom {
 		margin-top: 30px;
 		.views-slideshow-pager-field-processed {
-			width: 450px;
+			// width: 450px;
+			display: flex;
+			justify-content: center;
+			overflow: scroll;
 			margin: 0 auto;
-			display: block;
-			transform: translate3d(0px, 0px, 0px);
-			.views-slideshow-pager-field-item{
-				float: left;
-				background-attachment: red;
-				margin: 0 5px;
-				width: 140px;
+			&::-webkit-scrollbar {
+				width: 1em;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: darkgrey;
+				outline: 1px solid slategrey;
+			}
+			.views-slideshow-pager-field-item {
+				margin: 0 5px 10px;
+				min-width: 140px;
+				@include respond-to(m) {
+					margin: 0 5px;
+				}
 				//imagen
 				.views-content-field-image-banner,
 				.views-field-field-video-banner {
@@ -244,6 +253,7 @@
 						width: 100%;
 					}
 				}
+				//numero
 				.views-field-counter {
 					display: none;
 				}
@@ -251,102 +261,3 @@
 		}
 	}
 }
-
-
-//Puntos Slider right, left, center en linea
-// .view-banner-nodes {
-// 	.views-slideshow-controls-bottom,
-// 	.slider-homes-right-control,
-// 	.slider-homes-center-control,
-// 	.slider-homes-left-control {
-// 		text-align: center;
-// 		@include respond-to(m) {
-// 			text-align: right;
-// 		}
-// 		.views-slideshow-pager-fields	{
-// 			width: 100%;
-// 			position: absolute;
-// 			bottom: 10%;
-// 			right: 0px;
-// 			z-index: 9;
-// 			// margin-top: -5%;
-// 			@include respond-to(m) {
-// 				padding-right: 9%;
-// 			}
-// 			.views-slideshow-pager-field-item {
-// 				padding: 0 5px;
-// 				display: inline-block;
-// 				.views-content-field-image-banner,.views-field-field-video-banner{
-// 					display: none;
-// 				}
-// 				.views-field-counter{
-// 					a {
-// 						@extend %a-sli-puntos;
-// 					}
-// 					&.active {
-// 						a {
-// 							// @extend %a-puntos;
-// 							border-bottom: 3px solid color('grey-light');
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-
-	// .slider-homes-bottom-control {
-	// 	text-align: center;
-	// 	.views-slideshow-pager-fields	{
-	// 		position: initial;
-	// 		padding: 0px;
-	// 		.views-slideshow-pager-field-item {
-	// 			padding: 0 5px;
-	// 			display: inline-block;
-	// 			.views-field-counter{
-	// 				a {
-	// 					width: 13px;
-	// 					height: 13px;
-	// 					font-size: 0;
-	// 					display: block;
-	// 					text-decoration: none;
-	// 					border: 1px solid grey;
-	// 					border-radius: 10px;
-	// 					background-color: gray;
-	// 					padding: 0;
-	// 				}
-	// 				&.active {
-	// 					a {
-	// 						// @extend %a-puntos;
-	// 						background-color: #ebba00;
-	// 						border: 1px solid #ebba00;
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	// .slider-homes-empty-control {
-	// 	text-align: center;
-	// 	.views-slideshow-pager-fields{
-	// 		width: 100%;
-	// 		position: initial;
-	// 		bottom: 10%;
-	// 		right: 0px;
-	// 		z-index: 9;
-	// 		@include respond-to(m) {
-	// 			padding-right: 9%;
-	// 		}
-	// 		.views-slideshow-pager-field-item {
-	// 			padding: 0 5px;
-	// 			display: inline-block;
-	// 			.views-content-field-image-banner,.views-field-field-video-banner{
-	// 				display: block;
-	// 			}
-	// 			.views-field-counter{
-	// 				display: none;
-	// 			}
-	// 		}
-	// 	}
-	// }
-// }

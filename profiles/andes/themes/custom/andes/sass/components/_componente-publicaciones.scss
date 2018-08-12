@@ -93,19 +93,8 @@
 				display: block;
 			}
     	//Button Izquierda
-    	a[rel='prev'],
-    	%a-prev {
-				font-size: 0;
-				width: 40px;
-				height: 40px;
-				position: absolute;
-		    top: 50%;
-		    left: -6%;
-				z-index: 10;
-				border: 1px solid #777;
-				background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-		    background-size: 40px 40px;
-		    z-index: 1;
+    	a[rel='prev'] {
+				@extend %a-prev;
 		  }
 			//Buttom Pause
 			.views-slideshow-controls-text-pause {
