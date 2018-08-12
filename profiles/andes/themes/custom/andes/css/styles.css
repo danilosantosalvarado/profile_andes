@@ -2667,7 +2667,6 @@ th {
 /* ------| Panel |----- */
 #mini-panel-footer {
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -2700,6 +2699,10 @@ th {
   }
 }
 
+#mini-panel-footer .panel-col-first .inside, #mini-panel-footer .panel-col .inside, #mini-panel-footer .panel-col-last .inside {
+  margin: 0;
+}
+
 @media (min-width: 992px) {
   #mini-panel-footer .panel-col {
     width: 40% !important;
@@ -2727,6 +2730,7 @@ th {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 40px 0 0;
 }
 
 @media (min-width: 992px) {
@@ -2773,7 +2777,7 @@ th {
 
 .bean-bloque-footer-contacto .group-left {
   width: 100%;
-  padding: 15px;
+  padding: 0 35px;
 }
 
 @media (min-width: 768px) {
@@ -2843,15 +2847,17 @@ th {
 }
 
 .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
-  margin-top: 20px;
   background: #232323;
   padding: 10px 40px;
+  margin: 40px 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
     margin: 0;
     padding: 0;
+    background: transparent;
+    padding-top: 20px;
   }
 }
 
@@ -2880,7 +2886,7 @@ th {
   padding-left: 5%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-items {
     display: initial;
     padding: 0;
@@ -2903,8 +2909,19 @@ th {
 }
 
 /* ------| Enlaces  Footer |----- */
+#block-panels-mini-footer {
+  background-color: black;
+}
+
 .menu.nav {
-  padding-top: 65px;
+  padding-left: 35px;
+}
+
+@media (min-width: 768px) {
+  .menu.nav {
+    padding-left: 0px;
+    padding-top: 65px;
+  }
 }
 
 .menu.nav .open > a,
