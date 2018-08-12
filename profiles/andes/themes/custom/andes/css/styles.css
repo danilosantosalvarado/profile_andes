@@ -2664,7 +2664,7 @@ th {
 // footer
 //------------------------------------------------------------------------------
 */
-/* ------| Panel |----- */
+/* ------| Panel container |----- */
 #mini-panel-footer {
   margin: 0 auto;
 }
@@ -2687,6 +2687,7 @@ th {
   }
 }
 
+/* ------| Panel responsive |----- */
 #mini-panel-footer .panel-col-first, #mini-panel-footer .panel-col, #mini-panel-footer .panel-col-last {
   float: initial;
   width: 100%;
@@ -2909,50 +2910,58 @@ th {
 }
 
 /* ------| Enlaces  Footer |----- */
-#block-panels-mini-footer {
-  background-color: black;
-}
-
-.menu.nav {
+.pane-menu-menu-enlaces-de-interes .menu.nav,
+#block-menu-menu-enlaces-de-interes .menu.nav {
   padding-left: 35px;
 }
 
 @media (min-width: 768px) {
-  .menu.nav {
+  .pane-menu-menu-enlaces-de-interes .menu.nav,
+  #block-menu-menu-enlaces-de-interes .menu.nav {
     padding-left: 0px;
     padding-top: 65px;
   }
 }
 
-.menu.nav .open > a,
-.menu.nav .nav .open > a:hover {
+.pane-menu-menu-enlaces-de-interes .menu.nav .open > a,
+.pane-menu-menu-enlaces-de-interes .menu.nav .nav .open > a:hover,
+#block-menu-menu-enlaces-de-interes .menu.nav .open > a,
+#block-menu-menu-enlaces-de-interes .menu.nav .nav .open > a:hover {
   background-color: transparent;
 }
 
-.menu.nav .first.dropdown,
-.menu.nav .last.dropdown {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
   width: 100%;
   float: left;
   padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-  .menu.nav .first.dropdown,
-  .menu.nav .last.dropdown {
+  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown,
+  #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 992px) {
-  .menu.nav .first.dropdown,
-  .menu.nav .last.dropdown {
+  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown,
+  #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  .menu.nav .first.dropdown:before,
-  .menu.nav .last.dropdown:before {
+  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown:before,
+  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown:before,
+  #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown:before,
+  #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown:before {
     content: '';
     position: relative;
     display: block;
@@ -2963,8 +2972,10 @@ th {
   }
 }
 
-.menu.nav .first.dropdown a.dropdown-toggle,
-.menu.nav .last.dropdown a.dropdown-toggle {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle {
   color: white;
   cursor: default;
   text-decoration: none;
@@ -2974,13 +2985,17 @@ th {
   margin: 20px 0;
 }
 
-.menu.nav .first.dropdown a.dropdown-toggle .caret,
-.menu.nav .last.dropdown a.dropdown-toggle .caret {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle .caret,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle .caret {
   display: none;
 }
 
-.menu.nav .first.dropdown .dropdown-menu,
-.menu.nav .last.dropdown .dropdown-menu {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu {
   position: initial;
   display: block;
   background-color: transparent;
@@ -2992,14 +3007,18 @@ th {
   padding: 0;
 }
 
-.menu.nav .first.dropdown .dropdown-menu li,
-.menu.nav .last.dropdown .dropdown-menu li {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li {
   list-style: none;
   padding: 5px 0px;
 }
 
-.menu.nav .first.dropdown .dropdown-menu li a,
-.menu.nav .last.dropdown .dropdown-menu li a {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a {
   display: block;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
@@ -3009,8 +3028,10 @@ th {
   padding: 0;
 }
 
-.menu.nav .first.dropdown .dropdown-menu li a:hover,
-.menu.nav .last.dropdown .dropdown-menu li a:hover {
+.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a:hover,
+.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a:hover,
+#block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a:hover,
+#block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a:hover {
   color: #fff;
   text-decoration: none;
   background-color: transparent;

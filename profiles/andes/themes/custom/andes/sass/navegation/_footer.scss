@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-/* ------| Panel |----- */
+/* ------| Panel container |----- */
 #mini-panel-footer {
 	margin: 0 auto;
 	// padding: 0 35px;
@@ -20,6 +20,7 @@
 	}
 }
 
+/* ------| Panel responsive |----- */
 #mini-panel-footer {
 	.panel-col-first,
 	%panel-col {
@@ -178,77 +179,80 @@
 }
 
 /* ------| Enlaces  Footer |----- */
-#block-panels-mini-footer {
-	background-color: black;
-}
-.menu.nav {
-	padding-left: 35px;
-	@include respond-to(m) {
-		padding-left: 0px;
-		padding-top: 65px;
-	}
-	.open > a,
-	.nav .open > a:hover {
-		background-color: transparent;
-	}
-	.first.dropdown,
-	.last.dropdown {
-		width: 100%;
-		float: left;
-		padding-bottom: 10px;
+// #block-panels-mini-footer {
+// 	background-color: black;
+// }
+.pane-menu-menu-enlaces-de-interes,
+#block-menu-menu-enlaces-de-interes {
+	.menu.nav {
+		padding-left: 35px;
 		@include respond-to(m) {
-			margin-bottom: 20px;
+			padding-left: 0px;
+			padding-top: 65px;
 		}
-		@include respond-to(xl) {
-			width: 50%;
+		.open > a,
+		.nav .open > a:hover {
+			background-color: transparent;
 		}
-		@include respond-to(m) {
-			&:before {
-				content: '';
-				position: relative;
-				display: block;
-				top: -18px;
-				height: 1px;
+		.first.dropdown,
+		.last.dropdown {
+			width: 100%;
+			float: left;
+			padding-bottom: 10px;
+			@include respond-to(m) {
+				margin-bottom: 20px;
+			}
+			@include respond-to(xl) {
 				width: 50%;
-				border-top: 1px solid #ffef00;
 			}
-		}
-		a.dropdown-toggle {
-			color: white;
-			cursor: default;
-			text-decoration: none;
-			text-transform: uppercase;
-			background-color: transparent;
-			padding: 0px;
-			margin: 20px 0;
-			.caret {
-				display: none;
-			}
-		}
-		.dropdown-menu {
-			position: initial;
-			display: block;
-			background-color: transparent;
-			border: initial;
-			border-radius: 0;
-			box-shadow: initial;
-			margin: 0;
-    	padding: 0;
-			li {
-				list-style: none;
-				padding: 5px 0px;
-				a {
+			@include respond-to(m) {
+				&:before {
+					content: '';
+					position: relative;
 					display: block;
-					font-family: $latolight;
-					@include font-size(xs);
-					color: #818181;
-					text-transform: initial;
-					background-color: transparent;
-					padding: 0;
-					&:hover {
-						color: #fff;
-						text-decoration: none;
-						background-color: transparent,
+					top: -18px;
+					height: 1px;
+					width: 50%;
+					border-top: 1px solid #ffef00;
+				}
+			}
+			a.dropdown-toggle {
+				color: white;
+				cursor: default;
+				text-decoration: none;
+				text-transform: uppercase;
+				background-color: transparent;
+				padding: 0px;
+				margin: 20px 0;
+				.caret {
+					display: none;
+				}
+			}
+			.dropdown-menu {
+				position: initial;
+				display: block;
+				background-color: transparent;
+				border: initial;
+				border-radius: 0;
+				box-shadow: initial;
+				margin: 0;
+				padding: 0;
+				li {
+					list-style: none;
+					padding: 5px 0px;
+					a {
+						display: block;
+						font-family: $latolight;
+						@include font-size(xs);
+						color: #818181;
+						text-transform: initial;
+						background-color: transparent;
+						padding: 0;
+						&:hover {
+							color: #fff;
+							text-decoration: none;
+							background-color: transparent,
+						}
 					}
 				}
 			}
