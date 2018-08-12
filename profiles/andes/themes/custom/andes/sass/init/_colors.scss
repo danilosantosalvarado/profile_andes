@@ -17,10 +17,12 @@ $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can b
 $chroma: add-colors((
   // Primary
   black:                  #000,
+  black-secundary:        #585863,
   white:                  #fff,
   grey-dark:              #484851, // #666
   'grey':                 #484851,
   grey-light:             #f4f1f1, // #ccc
+  grey-secundary:         #c6c6c6,
   grey-extra-light:       ('black' lighten 93.33%), // #eee
   red:                    #ed1c24,
   red-dark:               #93141a,
@@ -35,7 +37,7 @@ $chroma: add-colors((
   // green:                  #009f2a,
   blue:                   #4585ff,
   yellow:                 #ffea00,
-  yellowmenu:              #fff200,
+  yellow-defaul:           #ebba00,
   // fucsia:                 #ff17f0,
   // orange:                 #ffb12e,
 ));

@@ -1,0 +1,163 @@
+//Mixin la agregacion de color de los bullet de slider
+@mixin bullet($color-botton, $color-active ) {
+  text-align: center;
+  .views-slideshow-pager-field-item {
+    padding: 0 5px;
+    display: inline-block;
+    a {
+      width: 13px;
+      height: 13px;
+      font-size: 0;
+      display: block;
+      text-decoration: none;
+      border: 1px solid color('#{$color-botton}');
+      border-radius: 10px;
+      background-color: color('#{$color-botton}');
+      padding: 0;
+    }
+    &.active {
+      a {
+        background-color: color('#{$color-active}');
+        border: 1px solid color('#{$color-active}');
+      }
+    }
+  }
+}
+// /* ------| Slider home  |----- */
+//position left
+%slider-homes-lef {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  width: 85%;
+  @include margin(0 auto);
+  @include padding(0 .834);
+  @include respond-to(m) {
+    left: 10%;
+    right: inherit;
+    width: auto;
+    max-width: 500px;
+    text-align: left;
+      @include margin(0);
+  }
+}
+
+//titulo
+%title-slider-home {
+  font-family: $latoregular;
+  @include font-size(l);
+  color: color('white');
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  @include respond-to(m) {
+    @include font-size(xl);
+    text-align: left;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    border-top: 1px solid color('white');
+    position: relative;
+    top: 10px;
+  }
+}
+
+//sud titulo
+%body-slider-home {
+  font-family: $latoregular;
+  @include font-size(m);
+  color: color('white');
+  text-align: center;
+  @include margin (1.25 0);
+  @include respond-to(m) {
+    text-align: left;
+  }
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 66px;
+}
+//Button
+%link-slider-home {
+  a {
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    background: color('white');
+    color: color('grey');
+    border: 1px solid color('grey');
+    @include margin(1.4 auto 0);
+    @include padding (.42 1.25);
+    @include respond-to(m) {
+      float: right;
+      @include margin(.21 auto);
+      //margin: 5px auto;
+    }
+    &:hover {
+      background: color('grey-dark');
+      color: color('white');
+    }
+  }
+}
+
+//flechas slider home
+%a-slidw-prev {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  font-size: 0;
+  background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+//Puntos para slider left, right, center.
+%a-sli-puntos {
+  width: 63px;
+  height: 18px;
+  font-size: 0;
+  display: block;
+  text-decoration: none;
+  border-bottom: 3px solid color('grey');
+  padding: 0;
+}
+
+
+// /* ------| conponentes |----- */
+//flechas componentes carrucel
+%a-prev {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: -6%;
+  z-index: 10;
+  border: 1px solid #777;
+  background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+
+/* ------| Titles |----- */
+.pane-title {
+  font-family: $latoblack;
+  @include font-size(ll);
+	color: color('grey');
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include margin-bottom(1.7);
+  @include respond-to(m) {
+		@include font-size(xxxl);
+  }
+}

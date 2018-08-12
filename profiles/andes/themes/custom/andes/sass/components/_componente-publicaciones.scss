@@ -123,32 +123,13 @@
 }
 
 //Puntos Slider
-.view-id-publicaciones {
+ .view-id-publicaciones {
 	margin: 15px 0 20px;
-	.widget_pager_bottom {
-		text-align: center;
-		.views-slideshow-pager-field-item {
-			padding: 0 5px;
-    	display: inline-block;
-			a,
-			%a-puntos {
-				width: 13px;
-				height: 13px;
-				font-size: 0;
-				display: block;
-				text-decoration: none;
-				border: 1px solid grey;
-				border-radius: 10px;
-				background-color: gray;
-				padding: 0;
-			}
-			&.active {
-				a {
-					@extend %a-puntos;
-					background-color: color('black');
-					border: 1px solid color('black');
-				}
-			}
+	.views-slideshow-pager-field-processed {
+		@include bullet(red, grey);
+		@include respond-to(xl) {
+			display: none;
 		}
 	}
 }
+

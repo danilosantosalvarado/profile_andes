@@ -1,7 +1,7 @@
-/* 
+/*
 //------------------------------------------------------------------------------
 // Slider Homes
-//------------------------------------------------------------------------------  
+//------------------------------------------------------------------------------
 */
 
 
@@ -13,20 +13,6 @@
 	ul {
 		-webkit-padding-start: 0px;
 	}
-}
-
-/* ------| Titles |----- */
-.pane-title {
-  font-family: $latoblack;
-  @include font-size(ll);
-	color: color('grey');
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  @include margin-bottom(1.7)
-  @include respond-to(m) {
-		@include font-size(xxxl);
-  }
 }
 
 /* ------| Slider Home|----- */
@@ -66,83 +52,22 @@
 		}
 	}
 }
+
 /* ------| Ubicado Leth |----- */
 .view-slider-homes {
-	.slider-homes-left,
-	%slider-homes-left {
-		position: absolute;
-    top: 25%;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    text-align: center;
-    width: 85%;
-    @include margin(0 auto);
-    @include padding(0 .834);
-  	@include respond-to(m) {
-  		left: 10%;
-  		right: inherit;
-  		width: auto;
-  		max-width: 500px;
-      text-align: left;
- 		 	@include margin(0);
-    }
+	.slider-homes-left {
+		@extend %slider-homes-lef;
   	//Titulo
-  	.title-slider-homes,
-  	%title-slider-homes {
-  		font-family: $latoregular;
-  		@include font-size(l);
-  		color: color('white');
-			text-transform: uppercase;
-  		text-align: center;
-  		margin: 0;
-  		@include respond-to(m) {
-				@include font-size(xl);
-				text-align: left;
-  		}
-  		&:after {
-  			content: '';
-		    display: block;
-		    height: 1px;
-		    border-top: 1px solid color('white');
-		    position: relative;
-		    top: 10px;
-  		}
+  	.title-slider-homes {
+			@extend %title-slider-home;
   	}
-  	//Sub titulo 
-  	.body-slider-homes,
-  	%body-slider-homes {
-			font-family: $latoregular;
-			@include font-size(m);
-			color: color('white');
-			text-align: center;
-			@include padding (1.25 0); 
-			@include respond-to(m) {
-      	text-align: left;
-    	}
+  	//Sub titulo
+  	.body-slider-homes {
+			@extend %body-slider-home;
   	}
   	//Buttom
   	.link-slider-homes {
-  		a {
-  			display: block;
-  			max-width: 300px;
-  			text-align: center;
-  			text-decoration: none;
-  			background: color('white');
-  			color: color('grey');
-  			border: 1px solid color('grey');
-  			@include margin(1.4 auto 0);
-  			@include padding (.42 1.25);
-  			@include respond-to(m) {
-					float: right;
-					@include margin(.21 auto);
-  				//margin: 5px auto;
-  			}
-  			&:hover {
-  				background: color('grey-dark');
-  				color: color('white');
-  			}
-  		}
+  		@extend %link-slider-home;
   	}
 	}
 }
@@ -150,46 +75,58 @@
 /* ------| Ubicado Rigth |----- */
 .view-slider-homes {
 	.slider-homes-right {
-		@extend %slider-homes-left;
+		@extend %slider-homes-lef;
 		@include respond-to(m) {
   		left: inherit;
 			right: 10%;
-    }
+		}
+		//Titulo
     .title-slider-homes {
-      @extend %title-slider-homes;
+      @extend %title-slider-home;
       @include respond-to(m) {
       	text-align: right;
-    	} 
-    }
+    	}
+		}
+		//Sub titulo
     .body-slider-homes {
-    	@extend %body-slider-homes;
+    	@extend %body-slider-home;
     	@include respond-to(m) {
     		text-align: right;
     	}
-    }
+		}
+		//Buttom
+  	.link-slider-homes {
+  		@extend %link-slider-home;
+  	}
 	}
 }
 
 // /* ------| Ubicado Centro |----- */
 .view-slider-homes {
 	.slider-homes-center {
-		@extend %slider-homes-left;
+		@extend %slider-homes-lef;
 		@include respond-to(m) {
   		left: inherit;
 			right: 30%;
-    }
+		}
+		//titulo
     .title-slider-homes {
-      @extend %title-slider-homes;
+      @extend %title-slider-home;
       @include respond-to(m) {
       	text-align: center;
-    	}  
-    }
+    	}
+		}
+		//sub titulo
     .body-slider-homes {
-    	@extend %body-slider-homes;
+    	@extend %body-slider-home;
     	@include respond-to(m) {
     		text-align: center;
     	}
-    }
+		}
+		//Buttom
+  	.link-slider-homes {
+  		@extend %link-slider-home;
+  	}
 	}
 }
 
@@ -209,6 +146,7 @@
 			@include respond-to(xxxl) {
   			width: 1170px;
 			}
+			//titulo
 			.title-slider-homes {
 				width: 100%;
 				float: left;
@@ -226,6 +164,7 @@
 					padding-bottom: 0;
 				}
 			}
+			//sub titulo
 			.body-slider-homes {
 				float: left;
 		    margin: 0;
@@ -244,6 +183,7 @@
 					padding-left: 25px;
 		    }
 			}
+			//button
 			.link-slider-homes {
 				a {
 					float: right;
@@ -263,25 +203,15 @@
 	}
 }
 
-// /* ------| Paguinador |----- */
+/* ------| Paguinador |----- */
 .view-slider-homes {
 	.skin-default {
 		position: relative;
 		//Flechas paguinador
 		.views-slideshow-controls-text {
-    	//Button Izquierda 
-			a[rel='prev'],
-  		%a-slidw-prev {
-				display: none;
-				width: 40px;
-		    height: 40px;
-		    position: absolute;
-		    left: 2%;
-		    top: 40%;
-  			font-size: 0;
-				background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
-		    background-size: 40px 40px;
-		    z-index: 1;
+    	//Button Izquierda
+			a[rel='prev'] {
+				@extend %a-slidw-prev;
 			}
 			//Buttom Pause
 			.views-slideshow-controls-text-pause {
@@ -299,22 +229,21 @@
 	//Hover flechas paguinador
 	&:hover {
 		.views-slideshow-controls-text {
-			a[rel='prev'],
-			%a-hover {
+			a[rel='prev'] {
 				display: block;
 			}
 			a[rel='next'] {
-				@extend %a-hover;
+				display: block;
 			}
 		}
 	}
 }
 
-// //Puntos Slider right, left, center en linea
+//Puntos Slider right, left, center en linea
 .view-slider-homes {
 	.views-slideshow-controls-bottom,
 	.slider-homes-right-control,
-	.slider-homes-center-control, 
+	.slider-homes-center-control,
 	.slider-homes-left-control {
 		text-align: center;
 		@include respond-to(m) {
@@ -333,19 +262,11 @@
 			.views-slideshow-pager-field-item {
 				padding: 0 5px;
 				display: inline-block;
-				a,
-				%a-sli-puntos {
-					width: 63px;
-					height: 18px;
-					font-size: 0;
-					display: block;
-					text-decoration: none;
-					border-bottom: 3px solid color('grey');
-					padding: 0;
+				a {
+					@extend %a-sli-puntos;
 				}
 				&.active {
 					a {
-						@extend %a-puntos;
 						border-bottom: 3px solid color('grey-light');
 					}
 				}
@@ -354,35 +275,15 @@
 	}
 }
 
-// //Puntos Slider Bottom
+//Puntos botton
 .view-slider-homes {
 	.slider-homes-bottom-control {
-		text-align: center;
-		.views-slideshow-pager-fields	{
+		// text-align: center;
+		margin: 15px 0 20px;
+		.views-slideshow-pager-field-processed {
 			position: initial;
 			padding: 0px;
-			.views-slideshow-pager-field-item {
-				padding: 0 5px;
-				display: inline-block;
-				a {
-					width: 13px;
-				height: 13px;
-				font-size: 0;
-				display: block;
-				text-decoration: none;
-				border: 1px solid grey;
-				border-radius: 10px;
-				background-color: gray;
-				padding: 0;
-				}
-				&.active {
-					a {
-						@extend %a-puntos;
-						background-color: #ebba00;
-						border: 1px solid #ebba00;
-					}
-				}
-			}
+			@include bullet(grey-secundary, yellow-defaul);
 		}
 	}
 }
