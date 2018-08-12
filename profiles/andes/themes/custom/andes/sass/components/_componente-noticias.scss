@@ -22,13 +22,8 @@
 		@include respond-to(xl) {
 			height: 558px;
 		}
-
-   //  @include respond-to(xxxl) {
-	  //  	height: 500px;
-	  // }
 	}
 	.views-row {
-	  // position: relative;
 	  //Imagenes
 		.compo-notias-img {
 			border-bottom: 4px solid color('orange');
@@ -45,15 +40,6 @@
 		.conten-noticias {
 			display: inline-block;
 			@include padding(1.05 .834);
-			// @include respond-to(xs) {
-			// 	min-height: 345px;
-			// }
-			// @include respond-to(s) {
-			// 	min-height: 325px;
-			// }
-			// @include respond-to(m) {
-		 //    	min-height: 300px;
-			// }
 			//Fecha
 			.compo-notias-fecha {
 				font-family: $latoregular;
@@ -107,7 +93,6 @@
 
 //Flechas paginador
 .view-display-id-noticias_destacadas {
-	// display: none;
 	@include respond-to(xl) {
 		display: block;
 	}
