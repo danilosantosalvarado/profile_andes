@@ -12,11 +12,11 @@
   Drupal.behaviors.menuMain = {
     attach: function (context, settings) {
       var docWidth      = $(document).width(),
-          $level1  =       $('.tb-megamenu-item.level-1'),
           $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a');
       /* ciclo item de mega menu */
+
       if (docWidth >1200){
-        console.log("if")
+        $itemsNivel2.removeAttr('href');
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset         = $(this).offset(),
               menuhover = $(this).find('.container-submenu');
@@ -26,7 +26,6 @@
               'width': docWidth - 10 + 'px',
             })
           }
-          $itemsNivel2.removeAttr('href');
           //
         });
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-2.dropdown-submenu ").each(function (key, value) {
@@ -50,14 +49,28 @@
           $(this).parents('ul.level-1').addClass('active'); /* nivel 1 animacion */
           /* remover  */
           $('.box-black').click(function () {
-            $('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
-            $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
-            $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
-            $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
+            removerClasesMenus();
           });
         });
       }
       else{
+        var $level1 = $('.level-0 .tb-megamenu-item.level-1 a.dropdown-toggle');
+          $level1.removeAttr('href')
+          console.log($level1);
+
+        $($level1).click(function () {
+          console.log('click');
+          $('.box-black').remove();
+          $(this).siblings('.dropdown-menu').addClass('active-mobile')
+          $(this).parents('.always-show .tb-megamenu-nav.level-0').before("<div class='box-black'><a> < " + $(this).text() + "</a></div>");
+          setTimeout(function () {
+            $('.box-black').addClass('active-box');
+          }, 100);
+          $('.box-black').click(function () {
+            console.log('box black')
+            removerClasesMenus();
+          });
+        });
 
         const
           classSelect = 'clone-select',
@@ -65,17 +78,13 @@
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
           className = 'clone';
 
-
         $contentFather.after("<div class='" + className + "'></div>");
         $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
         $contentFather.after("<div class='separador-menu'></div>");
 
-
         /* init */
-
         generatorData(className, classBlockClone, 'block')
         generatorData(className, classSelect, 'select')
-
 
         /* inicia el html insertado */
         function generatorData(className, typeClone, typeBlock){
@@ -111,9 +120,16 @@
         function cloneSelect(obj) {
           for (i = 0; i < obj.length; i++) {
             let $htmloption = $('#select-clone').append('<option class="' + i + ' "value="' + obj[i].text + '" data-href="' + obj[i].href + '">' + obj[i].text + '</option>');
-            //console.log(htmloption)
+            return $htmloption;
           }
-          //return $htmloption;
+        }
+        /*  remueve las animaciones*/
+        function removerClasesMenus() {
+          $('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+          $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
+          $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
+          $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
+          $('.container-submenu').removeClass('active-mobile');
         }
       }
     }
