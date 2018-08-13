@@ -156,6 +156,10 @@
 
 	//Slider home position, top, ring, botton, left.
 	$(window).load(function() {
+    if($('.view-banner-nodes').length > 0){
+      console.log("aqui estoy");
+      $('.view-banner-nodes').addClass($('.view-banner-nodes .field-content').children().first().attr("class")+"-container");
+    }
 		var SlideClass = "";
 		$(".view-slider-homes .views-slideshow-controls-text-previous-processed, .view-slider-homes .views-slideshow-controls-text-next-processed").on('click', function(event) {
 			var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
