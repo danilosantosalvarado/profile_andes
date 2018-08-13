@@ -162,18 +162,18 @@
 			var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
 			var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
       var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
-      var SlideClassParent = $('.view-banner-nodes .field-content').children().first('div').attr("class");
+      var SlideClassParent = $('.view-slider-homes .field-content').children().first('div').attr("class");
 
 			if (SlideClass == "") {
         $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-        $('.iew-slider-homes').addClass(SlideClassParent+"-container");
+        $('.view-slider-homes').addClass(SlideClassParent+"-container");
         SlideClass = slideActivePosition+"-control";
         ParentSlideClass =  slideActivePosition+"-container";
 
 			}
 			else{
-        $('.iew-slider-homes').removeClass(ParentSlideClass);
-        $('.iew-slider-homes').addClass(SlideClassParent+"-container");
+        $('.view-slider-homes').removeClass(ParentSlideClass);
+        $('.view-slider-homes').addClass(SlideClassParent+"-container");
 				$(this).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
         $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
         SlideClass = slideActivePosition+"-control";
@@ -184,6 +184,8 @@
       var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
       var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
       var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
+      var SlideClassParent = $('.view-banner-nodes .field-content').children().first('div').attr("class");
+
 			if (SlideClass == "") {
         $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
         $('.view-banner-nodes').addClass(SlideClassParent+"-container");
