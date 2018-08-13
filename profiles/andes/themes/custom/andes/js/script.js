@@ -156,23 +156,28 @@
 
 	//Slider home position, top, ring, botton, left.
 	$(window).load(function() {
-    if($('.view-banner-nodes').length > 0){
-      console.log("aqui estoy");
-      $('.view-banner-nodes').addClass($('.view-banner-nodes .field-content').children().first().attr("class")+"-container");
-    }
 		var SlideClass = "";
+		var ParentSlideClass = "";
 		$(".view-slider-homes .views-slideshow-controls-text-previous-processed, .view-slider-homes .views-slideshow-controls-text-next-processed").on('click', function(event) {
 			var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
 			var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
-			var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
+      var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
+      var SlideClassParent = $('.view-banner-nodes .field-content').children().first('div').attr("class");
+
 			if (SlideClass == "") {
-				$(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-				SlideClass = slideActivePosition+"-control";
+        $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+        $('.view-banner-nodes').addClass(SlideClassParent+"-container");
+        SlideClass = slideActivePosition+"-control";
+        ParentSlideClass =  slideActivePosition+"-container";
+
 			}
 			else{
+        $('.view-banner-nodes').removeClass(ParentSlideClass);
+        $('.view-banner-nodes').addClass(SlideClassParent+"-container");
 				$(this).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
-				$(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-				SlideClass = slideActivePosition+"-control";
+        $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+        SlideClass = slideActivePosition+"-control";
+        ParentSlideClass =  slideActivePosition+"-container";
 			}
 		});
     $(".view-banner-nodes .views-slideshow-controls-text-previous-processed, .view-banner-nodes .views-slideshow-controls-text-next-processed").on('click', function(event) {
