@@ -166,14 +166,14 @@
 
 			if (SlideClass == "") {
         $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-        $('.view-banner-nodes').addClass(SlideClassParent+"-container");
+        $('.iew-slider-homes').addClass(SlideClassParent+"-container");
         SlideClass = slideActivePosition+"-control";
         ParentSlideClass =  slideActivePosition+"-container";
 
 			}
 			else{
-        $('.view-banner-nodes').removeClass(ParentSlideClass);
-        $('.view-banner-nodes').addClass(SlideClassParent+"-container");
+        $('.iew-slider-homes').removeClass(ParentSlideClass);
+        $('.iew-slider-homes').addClass(SlideClassParent+"-container");
 				$(this).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
         $(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
         SlideClass = slideActivePosition+"-control";
