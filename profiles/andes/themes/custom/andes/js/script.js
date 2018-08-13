@@ -138,7 +138,9 @@
       spaceBetween: 20,
       swipeTo: 0,
     }
-
+    // autoplay: {
+    //   delay: 5000,
+    // },
 		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0) {
 			setTimeout(function(){
 				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
@@ -190,7 +192,13 @@ setTimeout(function(){
         ParentSlideClass = slideActivePosition+"-container";
       }
     });
-    //$(".view-slider-homes .views-slideshow-controls-text-previous-processed").click();
+    $(".view-slider-homes .views-slideshow-controls-text-previous-processed, .view-slider-homes .views-slideshow-controls-text-next-processed").mouseover(function(e){
+      clearInterval(SliderHomesInterval);
+    }
+    );
+    var SliderHomesInterval =  setInterval(function(){
+      $(".view-slider-homes .views-slideshow-controls-text-next-processed").click();
+    },2000);
   }
 }, 1000)
 	//Slider home position, top, ring, botton, left.
