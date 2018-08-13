@@ -108,6 +108,13 @@
 
 /* ------| Multimedia Reproduccion |----- */
 .view-display-id-multimedia_destacada_unica {
+	//img
+	.view-id-componente_noticias_item {
+		img {
+			width: 100%;
+			height: 100%,
+		}
+	}
 	//titulo
 	.multimedia-conponente-titulo {
 		margin: 20px 0 10px;
@@ -117,7 +124,6 @@
 			color: color('green-Primary');
 			margin-bottom: 14px;
 			font-weight: 400;
-
 		}
 	}
 	//body

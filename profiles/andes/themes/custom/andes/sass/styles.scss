@@ -34,7 +34,7 @@
 // and are not documented.
 //
 // Style guide: layouts
-
+@import 'Layouts/layout-1';
 
 // Components
 //
@@ -44,14 +44,14 @@
 // Weight: 1
 //
 // Style guide: components
-@import 'components/plaisholder',
-				'components/sliders-homes',
-				'components/componente-noticias',
-				'components/componente-publicaciones',
-				'components/componente-multimedia',
-				'components/interna_noticias',
-				'components/interna_publicaciones',
-				'components/menuMain';
+@import 'Components/plaisholder',
+				'Components/sliders-homes',
+				'Components/componente-noticias',
+				'Components/componente-publicaciones',
+				'Components/componente-multimedia',
+				'Components/interna_noticias',
+				'Components/interna_publicaciones',
+				'Components/menuMain';
 
 // Navigation
 //
@@ -61,8 +61,8 @@
 // Weight: 2
 //
 // Style guide: navigation
-@import 'navegation/enlaces_de_interes',
-				'navegation/footer';
+@import 'Navegation/enlaces_de_interes',
+				'Navegation/footer';
 
 // Forms
 //
