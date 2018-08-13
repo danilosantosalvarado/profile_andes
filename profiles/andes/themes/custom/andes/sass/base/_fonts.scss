@@ -55,6 +55,13 @@ $font-lato:         '../fonts/Lato' !default;
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Crimson_textitalic';
+    src: url('#{$font-crimsontext}/crimsontext-Italic-webfont.woff2') format('woff2'),
+    url('#{$font-crimsontext}/crimsontext-Italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Lato bold';
