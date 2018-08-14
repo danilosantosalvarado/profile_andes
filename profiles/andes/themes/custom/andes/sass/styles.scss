@@ -34,7 +34,8 @@
 // and are not documented.
 //
 // Style guide: layouts
-@import 'Layouts/layout-1';
+@import 'Layouts/layout-1',
+				'Layouts/layout-9';
 
 // Components
 //
@@ -46,6 +47,7 @@
 // Style guide: components
 @import 'Components/plaisholder',
 				'Components/sliders-homes',
+				'Components/componente-three-layout',
 				'Components/componente-noticias',
 				'Components/componente-publicaciones',
 				'Components/componente-multimedia',
