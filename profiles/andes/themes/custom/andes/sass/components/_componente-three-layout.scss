@@ -7,8 +7,8 @@
   display: block;
   overflow: hidden;
   .view-content {
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     @include respond-to(m) {
       width: 750px;
@@ -19,28 +19,11 @@
     @include respond-to(xxxl) {
       width: 1170px;
     }
-    // .views-row {
-    //   flex: 1 1 33.333333%;
-    // }
-    > div:nth-child(n) {
-      float: left;
-      width: 100%;
-      @include respond-to(m) {
-        width: 33.333333%;
-      }
-      &:nth-child(n+4) {
-        margin-left: 16.66665%;
-        //float: initial;
-       // margin: 0 auto;
-      }
-      &:nth-child(n+5) {
-        margin-left: 0%;
-        //float: initial;
-       // margin: 0 auto;
-      }
-      &:nth-child(even) {
-        background-color: color('white');
-      }
+    .views-row {
+      flex: 1 1 33.333333%;
+    }
+    > div:nth-child(even) {
+      background-color: color('white');
     }
     .field-content {
       font-family: $crimson-textregular;
