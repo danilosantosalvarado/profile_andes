@@ -1190,6 +1190,62 @@ th {
 
 /*
 //------------------------------------------------------------------------------
+// Layouts 9
+//------------------------------------------------------------------------------
+*/
+.view-id-componente_layout_11 .views-row {
+  float: left;
+  width: 23%;
+  margin: 10px;
+}
+
+.view-id-componente_layout_11 .views-row .container-image,
+.view-id-componente_layout_11 .views-row .container-image-video {
+  border-bottom: 3px solid #ff8827;
+}
+
+.view-id-componente_layout_11 .views-row .container-title-desc .cuar-titulo {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 0.96;
+  color: #484851;
+  margin: 1.251rem 0 1.251rem;
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_layout_11 .views-row .container-title-desc .cuar-titulo {
+    font-size: 1.4375rem;
+    margin: 1.35rem 0 1.563rem;
+  }
+}
+
+.view-id-componente_layout_11 .views-row .container-title-desc .cuar-body {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.06;
+  margin-bottom: 0.6255rem;
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_layout_11 .views-row .container-title-desc .cuar-body {
+    font-size: 1.125rem;
+  }
+}
+
+.view-id-componente_layout_11 .views-row .cuar-enlace a {
+  border: 1px solid #e55d12;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 15.3px;
+  color: #484851;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: 20px;
+  outline: none;
+  float: right;
+}
+
+/*
+//------------------------------------------------------------------------------
 // Noticias
 //------------------------------------------------------------------------------
 */

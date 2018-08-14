@@ -1,0 +1,58 @@
+/*
+//------------------------------------------------------------------------------
+// Layouts 9
+//------------------------------------------------------------------------------
+*/
+
+.view-id-componente_layout_11 {
+  .views-row {
+    float: left;
+    width: 23%;
+    margin: 10px;
+    //img
+    .container-image,
+    .container-image-video {
+      border-bottom: 3px solid #ff8827;
+    }
+    .container-title-desc {
+      .cuar-titulo {
+        font-family: $crimson-textbold;
+		  	@include type-layout(l, .96);
+		  	color: #484851;
+		  	@include margin(.834 0 .834);
+		  	@include respond-to(xl) {
+					@include font-size(ll);
+					@include margin(.9 0 1.042);
+		  	}
+      }
+      .cuar-body {
+        font-family: $crimson-textregular;
+				@include type-layout(m, 1.06);
+				@include margin-bottom(.417);
+				@include respond-to(xl) {
+					@include font-size(o);
+		  	}
+      }
+    }
+    .cuar-enlace {
+      a {
+        // @include respond-to(xs) {
+        //   position: absolute;
+        //   bottom: 20px;
+        //   right: 10px;
+        //   margin: 0px;
+        // }
+        border: 1px solid color('orange');
+        font-family: $latolight;
+        font-size: 15.3px;
+        color: #484851;
+        text-decoration: none;
+        padding: 10px 30px;
+        margin-top: 20px;
+        outline: none;
+        float: right;
+      }
+    }
+  }
+}
+
