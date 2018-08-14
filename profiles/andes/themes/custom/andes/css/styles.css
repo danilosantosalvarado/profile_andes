@@ -1193,18 +1193,51 @@ th {
 // Layouts 9
 //------------------------------------------------------------------------------
 */
-.view-id-componente_layout_11 .views-row {
-  float: left;
-  width: 23%;
-  margin: 10px;
+.view-id-componente_layout_11 {
+  display: block;
+  background: red;
+  overflow: hidden;
 }
 
-.view-id-componente_layout_11 .views-row .container-image,
-.view-id-componente_layout_11 .views-row .container-image-video {
+.view-id-componente_layout_11 .view-content .views-row {
+  float: left;
+  width: 100%;
+  position: relative;
+  background: #f4f1f1;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_11 .view-content .views-row {
+    width: 47%;
+    height: 530px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_layout_11 .view-content .views-row {
+    width: 31%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-componente_layout_11 .view-content .views-row {
+    width: 23%;
+  }
+}
+
+.view-id-componente_layout_11 .view-content .views-row .container-image,
+.view-id-componente_layout_11 .view-content .views-row .container-image-video {
   border-bottom: 3px solid #ff8827;
 }
 
-.view-id-componente_layout_11 .views-row .container-title-desc .cuar-titulo {
+.view-id-componente_layout_11 .view-content .views-row .container-title-desc {
+  display: inline-block;
+  padding: 1.575rem 1.251rem;
+}
+
+.view-id-componente_layout_11 .view-content .views-row .container-title-desc .cuar-titulo {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   line-height: 0.96;
@@ -1213,13 +1246,13 @@ th {
 }
 
 @media (min-width: 992px) {
-  .view-id-componente_layout_11 .views-row .container-title-desc .cuar-titulo {
-    font-size: 1.4375rem;
+  .view-id-componente_layout_11 .view-content .views-row .container-title-desc .cuar-titulo {
+    font-size: 1.1875rem;
     margin: 1.35rem 0 1.563rem;
   }
 }
 
-.view-id-componente_layout_11 .views-row .container-title-desc .cuar-body {
+.view-id-componente_layout_11 .view-content .views-row .container-title-desc .cuar-body {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.06;
@@ -1227,12 +1260,12 @@ th {
 }
 
 @media (min-width: 992px) {
-  .view-id-componente_layout_11 .views-row .container-title-desc .cuar-body {
+  .view-id-componente_layout_11 .view-content .views-row .container-title-desc .cuar-body {
     font-size: 1.125rem;
   }
 }
 
-.view-id-componente_layout_11 .views-row .cuar-enlace a {
+.view-id-componente_layout_11 .view-content .views-row .cuar-enlace a {
   border: 1px solid #e55d12;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 15.3px;
@@ -1242,6 +1275,20 @@ th {
   margin-top: 20px;
   outline: none;
   float: right;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_11 .view-content .views-row .cuar-enlace a {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    margin: 0px;
+  }
+}
+
+.view-id-componente_layout_11 .view-content .views-row .cuar-enlace a:hover {
+  background-color: #e55d12;
+  color: #ffffff;
 }
 
 /*
