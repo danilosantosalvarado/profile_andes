@@ -148,6 +148,18 @@
 }
 
 
+/* ------| Container globales |----- */
+.container-fluid {
+	padding: 0;
+}
+.inside {
+  margin: 0 !important;
+	ul {
+		-webkit-padding-start: 0px;
+    list-style: none;
+	}
+}
+
 /* ------| Titles |----- */
 .pane-title {
   font-family: $latoblack;

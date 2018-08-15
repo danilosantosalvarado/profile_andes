@@ -1,0 +1,44 @@
+/*
+//------------------------------------------------------------------------------
+// Layouts 1
+//------------------------------------------------------------------------------
+*/
+
+.view-id-banner_nodes {
+  .slider-homes-layout-one-title {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: auto;
+    div:nth-child(1) {
+      font-family: $crimson-textitalic;
+      @include font-size(l);
+      color: color('white');
+      @include respond-to(xl) {
+        @include font-size(xxl);
+      }
+    }
+
+    div:nth-child(2) {
+      font-family: $latoblack;
+      @include font-size(xl);
+      color: color('white');
+      @include respond-to(xl) {
+        @include font-size(xxxl);
+      }
+    }
+    div:nth-child(3) {
+      font-family: $latoregular;
+      @include font-size(l);
+      color: color('white');
+      @include respond-to(xl) {
+        @include font-size(xxxl);
+      }
+    }
+    div:nth-child(4) {
+      font-family: $crimson-textregular;
+      @include font-size(m);
+      color: color('white');
+    }
+  }
+}
