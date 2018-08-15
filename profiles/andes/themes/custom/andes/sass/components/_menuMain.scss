@@ -2,6 +2,9 @@
 .tb-megamenu{
   clear: both;
 }
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  padding: 0;
+}
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
 .tb-megamenu .nav > li.dropdown.open.active > a:hover{
@@ -154,10 +157,10 @@
     height: 100%;
     background: white;
     z-index: 9999999999;
-    top: 69px;
+    top: 0px;
     margin-left: 0;
-    left: 0 !important;
-    padding: 0px 12px;
+    /* left: 0 !important;
+    padding: 0px 12px; */
     &.active-subnivel{
       opacity: 1;
       position: fixed;
@@ -169,12 +172,13 @@
       height: 0;
       -webkit-transition: opacity .4s; /* Safari */
       transition: opacity .4s;
-      position: absolute;
-      top: 0;
+      //position: absolute;
+      //top: 0;
       &.active {
         opacity: 1;
         display: block;
-        margin-left: 220px;
+        //margin-left: 220px;
+        margin-left: 259px;
         -webkit-transition: opacity 1s, margin-left .4s; /* Safari */
         transition: opacity 1s, margin-left .4s;
       }
