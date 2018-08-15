@@ -2906,7 +2906,6 @@ th {
 //------------------------------------------------------------------------------
 */
 .view-id-componente_layout_4 {
-  background: red;
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -2989,7 +2988,7 @@ th {
   color: white;
   width: 210px;
   background: black;
-  padding: 8px 0px;
+  padding: 5px 0px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -2999,6 +2998,8 @@ th {
   transition: .3s;
   text-align: center;
   z-index: 2;
+  font-size: 17px;
+  font-family: Lato,sans-ser;
 }
 
 /*
