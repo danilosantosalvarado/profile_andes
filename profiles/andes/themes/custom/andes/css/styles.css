@@ -602,6 +602,76 @@ th {
 
 /*
 //------------------------------------------------------------------------------
+// Layouts 2
+//------------------------------------------------------------------------------
+*/
+.view-id-componente_layout_2 {
+  width: 100%;
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional {
+  display: block;
+  overflow: hidden;
+  padding: 25px 0;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_2 .views-field-views-conditional .container-image {
+    width: 45%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .container-image img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_2 .views-field-views-conditional .container-image-video {
+    width: 45%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .container-image-video iframe {
+  width: 100%;
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .container-title-desc {
+  padding: 25px 15px;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_2 .views-field-views-conditional .container-title-desc {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 30px;
+  }
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .container-title-desc .dos-titulo {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 0.96;
+  color: #484851;
+  padding-bottom: 1.251rem;
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_layout_2 .views-field-views-conditional .container-title-desc .dos-titulo {
+    font-size: 1.5rem;
+  }
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .container-title-desc .dos-body {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/*
+//------------------------------------------------------------------------------
 // Layouts 9
 //------------------------------------------------------------------------------
 */
@@ -1185,12 +1255,85 @@ th {
 
 /*
 //------------------------------------------------------------------------------
+// Acordion
+//------------------------------------------------------------------------------
+*/
+/* ------| body texto |----- */
+.field-name-body .field-item p {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484851;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* ------| Acordion |----- */
+.view-id-componente_acordeon .view-content div > .views-field.views-field-field-titulo .field-content {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #484851;
+  text-align: center;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.view-id-componente_acordeon .ui-accordion-header.ui-state-default {
+  background: #f5f5f5;
+  border-radius: initial;
+  border-color: #ddd;
+  padding: 15px 25px;
+  margin-top: 5px;
+}
+
+.view-id-componente_acordeon .ui-accordion-header.ui-state-default a .acordion-titulo {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 18px;
+  color: #231F20;
+}
+
+.view-id-componente_acordeon .ui-accordion-header.ui-state-default .ui-accordion-header-icon {
+  position: absolute;
+  right: 35px;
+  left: auto;
+  top: 5%;
+  margin-top: 0px;
+}
+
+.view-id-componente_acordeon .ui-accordion-header.ui-state-default .ui-accordion-header-icon.ui-icon {
+  width: 40px;
+  height: 40px;
+  background: url("../img/Icon/arrow_next.svg") no-repeat;
+  background-size: contain;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+}
+
+.view-id-componente_acordeon .ui-accordion-header.ui-state-active .ui-icon {
+  -ms-transform: rotate(-90deg) !important;
+      transform: rotate(-90deg) !important;
+}
+
+.view-id-componente_acordeon .ui-accordion-content {
+  border-radius: initial;
+  border-color: #ddd;
+  padding: 25px 25px 0px;
+}
+
+.view-id-componente_acordeon .ui-accordion-content p {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484851;
+  margin: 0px;
+}
+
+/*
+//------------------------------------------------------------------------------
 // Layouts 9
 //------------------------------------------------------------------------------
 */
 .view-id-componente_layout_11 {
   display: block;
-  background: red;
   overflow: hidden;
 }
 
@@ -1206,7 +1349,7 @@ th {
   .view-id-componente_layout_11 .view-content .views-row {
     width: 47%;
     height: 530px;
-    margin: 10px;
+    margin: 0.7em;
   }
 }
 
@@ -1223,8 +1366,13 @@ th {
 }
 
 .view-id-componente_layout_11 .view-content .views-row .container-image,
-.view-id-componente_layout_11 .view-content .views-row .container-image-video {
+.view-id-componente_layout_11 .view-content .views-row .container-video {
   border-bottom: 3px solid #ff8827;
+}
+
+.view-id-componente_layout_11 .view-content .views-row .container-image img,
+.view-id-componente_layout_11 .view-content .views-row .container-video img {
+  width: 100%;
 }
 
 .view-id-componente_layout_11 .view-content .views-row .container-title-desc {
@@ -1284,6 +1432,65 @@ th {
 .view-id-componente_layout_11 .view-content .views-row .cuar-enlace a:hover {
   background-color: #e55d12;
   color: #ffffff;
+}
+
+/* ------| Paguinadores |----- */
+.view-id-componente_layout_11 .text-center {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination {
+  background: #fff;
+  border-radius: 0;
+  padding: 10px;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e55d12;
+  z-index: -1;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination li {
+  color: #484851;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: #fff;
+  display: block;
+  float: left;
+  margin: 0 5px;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination li a {
+  color: #484851;
+  border: 1px solid #fff;
+  font-family: Lato,sans-serif;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination li.active {
+  border-color: #e55d12;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination li.active span {
+  background-color: transparent;
+  border-radius: initial;
+  color: #000;
+  border: initial;
+}
+
+.view-id-componente_layout_11 .text-center ul.pagination li.next, .view-id-componente_layout_11 .text-center ul.pagination li.prev, .view-id-componente_layout_11 .text-center ul.pagination li.pager-last, .view-id-componente_layout_11 .text-center ul.pagination li.pager-first {
+  display: none;
 }
 
 /*

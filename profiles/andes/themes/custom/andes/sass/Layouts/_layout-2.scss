@@ -1,0 +1,59 @@
+/*
+//------------------------------------------------------------------------------
+// Layouts 2
+//------------------------------------------------------------------------------
+*/
+.view-id-componente_layout_2 {
+  width: 100%;
+  .views-field-views-conditional {
+    display: block;
+    overflow: hidden;
+    padding: 25px 0;
+    //imagen
+    .container-image {
+      @include respond-to(m) {
+        width: 45%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    //video
+    .container-image-video {
+      @include respond-to(m) {
+        width: 45%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      iframe {
+        width: 100%;
+      }
+    }
+    //conten text
+    .container-title-desc {
+      padding: 25px 15px;
+      @include respond-to(m) {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 30px;
+      }
+      //title
+      .dos-titulo {
+        font-family: $crimson-textbold;
+        @include type-layout(l, .96);
+        color: #484851;
+        @include padding-bottom(.834);
+        @include respond-to(xl) {
+          @include font-size(xl);
+        }
+      }
+      //body
+      .dos-body {
+        font-family: $crimson-textregular;
+        @include font-size(m);
+      }
+    }
+  }
+}
