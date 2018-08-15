@@ -1263,9 +1263,18 @@ th {
 // Acordion
 //------------------------------------------------------------------------------
 */
+/* ------| body texto |----- */
+.field-name-body .field-item p {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484851;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* ------| Acordion |----- */
 .view-id-componente_acordeon .view-content div > .views-field.views-field-field-titulo .field-content {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.1875rem;
   text-transform: uppercase;
   color: #484851;
   text-align: center;
