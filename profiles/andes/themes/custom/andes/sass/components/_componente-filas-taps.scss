@@ -5,24 +5,26 @@
 */
 
 .view-id-componente_acordeon {
-  a {
-    // display: block;
-    color: #bbb;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0;
-    border: 1px solid transparent;
-    border-top: 2px solid transparent;
-    cursor: pointer;
-    padding: 0;
-    padding: 15px;
-    margin: 0;
-    &:hover {
-      color: #555;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-top: 2px solid orange;
-      border-bottom: 1px solid transparent;
+  .quicktabs-tabs {
+    a {
+      // display: block;
+      color: #bbb;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0;
+      border: 1px solid transparent;
+      border-top: 2px solid transparent;
+      cursor: pointer;
+      padding: 0;
+      padding: 15px;
+      margin: 0;
+      &:hover {
+        color: #555;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-top: 2px solid orange;
+        border-bottom: 1px solid transparent;
+      }
     }
   }
 }
