@@ -4,8 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-componente_layout_4 {
-  background: red;
+.view-id-componente_layout_4{
   max-width: 1140px;
   margin: 0 auto;
   .view-content {
@@ -79,7 +78,7 @@
         color: white;
         width: 210px;
         background: black;
-        padding: 8px 0px;
+        padding: 5px 0px;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -89,6 +88,8 @@
         transition: .3s;
         text-align: center;
         z-index: 2;
+        font-size: 17px;
+        font-family: Lato,sans-ser;
       }
     }
   }

@@ -5,222 +5,222 @@
 */
 
 /* ------| Slider Home|----- */
-.view-banner-nodes {
-	ul {
-		li.swiper-slide {
-			list-style: none;
-			.slider-homes-img-destock {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-			}
-			.slider-homes-img-movil {
-				display: block;
-				@include respond-to(xl) {
-					display: none;
-				}
-			}
-			img {
-				width: 100%;
-				height: 551px;
-				@include respond-to(xl) {
-					height: auto;
-					max-height: 619px;
-				}
-			}
-			iframe {
-				width: 100%;
-				height: 290px;
-				@include respond-to(xl) {
-					height: 519px;
-				// 	height: 515px;
-				// 	max-height: 515px;
-				}
-			}
-		}
-	}
-}
+// .view-banner-nodes {
+// 	ul {
+// 		li.swiper-slide {
+// 			list-style: none;
+// 			.slider-homes-img-destock {
+// 				display: none;
+// 				@include respond-to(xl) {
+// 					display: block;
+// 				}
+// 			}
+// 			.slider-homes-img-movil {
+// 				display: block;
+// 				@include respond-to(xl) {
+// 					display: none;
+// 				}
+// 			}
+// 			img {
+// 				width: 100%;
+// 				height: 551px;
+// 				@include respond-to(xl) {
+// 					height: auto;
+// 					max-height: 619px;
+// 				}
+// 			}
+// 			iframe {
+// 				width: 100%;
+// 				height: 290px;
+// 				@include respond-to(xl) {
+// 					height: 519px;
+// 				// 	height: 515px;
+// 				// 	max-height: 515px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 /* ------| Ubicado Leth |----- */
-.view-banner-nodes {
-	.slider-homes-left {
-		@extend %slider-homes-lef;
-  	//Titulo
-  	.title-slider-homes {
-			@extend %title-slider-home;
-  	}
-  	//Sub titulo
-  	.body-slider-homes {
-			@extend %body-slider-home;
-  	}
-  	//Buttom
-  	.link-slider-homes {
-  		@extend %link-slider-home;
-  	}
-	}
-}
+// .view-banner-nodes {
+// 	.slider-homes-left {
+// 		@extend %slider-homes-lef;
+//   	//Titulo
+//   	.title-slider-homes {
+// 			@extend %title-slider-home;
+//   	}
+//   	//Sub titulo
+//   	.body-slider-homes {
+// 			@extend %body-slider-home;
+//   	}
+//   	//Buttom
+//   	.link-slider-homes {
+//   		@extend %link-slider-home;
+//   	}
+// 	}
+// }
 
 /* ------| Ubicado Rigth |----- */
-.view-banner-nodes {
-	.slider-homes-right {
-		@extend %slider-homes-lef;
-		@include respond-to(m) {
-  		left: inherit;
-			right: 10%;
-    }
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: right;
-    	}
-    }
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: right;
-    	}
-    }
-	}
-}
+// .view-banner-nodes {
+// 	.slider-homes-right {
+// 		@extend %slider-homes-lef;
+// 		@include respond-to(m) {
+//   		left: inherit;
+// 			right: 10%;
+//     }
+//     .title-slider-homes {
+//       @extend %title-slider-home;
+//       @include respond-to(m) {
+//       	text-align: right;
+//     	}
+//     }
+//     .body-slider-homes {
+//     	@extend %body-slider-home;
+//     	@include respond-to(m) {
+//     		text-align: right;
+//     	}
+//     }
+// 	}
+// }
 
 /* ------| Ubicado Centro |----- */
-.view-banner-nodes {
-	.slider-homes-center {
-		@extend %slider-homes-lef;
-		@include respond-to(m) {
-  		left: inherit;
-			right: 30%;
-    }
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: center;
-    	}
-    }
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: center;
-    	}
-    }
-	}
-}
+// .view-banner-nodes {
+// 	.slider-homes-center {
+// 		@extend %slider-homes-lef;
+// 		@include respond-to(m) {
+//   		left: inherit;
+// 			right: 30%;
+//     }
+//     .title-slider-homes {
+//       @extend %title-slider-home;
+//       @include respond-to(m) {
+//       	text-align: center;
+//     	}
+//     }
+//     .body-slider-homes {
+//     	@extend %body-slider-home;
+//     	@include respond-to(m) {
+//     		text-align: center;
+//     	}
+//     }
+// 	}
+// }
 
 /* ------| Ubicado Abajo |----- */
-.view-banner-nodes {
-	.field-content {
-		.slider-homes-bottom {
-			padding: 0 15px;
-			@include margin(.834 0);
-			@include respond-to(m) {
-				width: 750px;
-				@include margin(.834 auto .834);
-			}
-			@include respond-to(xl) {
-				width: 970px;
-			}
-			@include respond-to(xxxl) {
-  			width: 1170px;
-			}
-			//titulo
-			.title-slider-homes {
-				width: 100%;
-				float: left;
-				font-family: $latobold;
-				@include font-size(l);
-				@include margin(.417 0);
-				text-transform: uppercase;
-				color: #585863;
-				min-height: 50px;
-				padding-bottom: 10px;
-				@include respond-to(m) {
-					width: 41.66666667%;
-					text-align: right;
-					padding-right: 25px;
-					padding-bottom: 0;
-				}
-			}
-			//sub titulo
-			.body-slider-homes {
-				float: left;
-		    position: relative;
-				font-family: $crimson-textregular;
-				@include font-size(m);
-		    text-align: left;
-				color: color('black-secundary');
-				text-overflow: ellipsis;
-  			overflow: hidden;
-  			max-height: 81px;
-		  	border-top: 1px solid color('yellow-defaul');
-		    padding-top: 15px;
-				margin: 0;
-		    @include respond-to(m) {
-					width: 33.33333333%;
-					border: 0;
-					border-left: 1px solid color('yellow-defaul');
-					padding-left: 25px;
-		    }
-			}
-			//button
-			.link-slider-homes {
-				a {
-					float: right;
-					text-decoration: none;
-					@include margin(.834 .834 0 auto);
-				  max-width: 145px;
-				  border: 1px solid color('grey-dark');
-				  color: color('grey-dark');
-				  padding: 10px 35px;
-				  &:hover {
-    				background: color('grey-dark');
-    				color: color('white');
-    			}
-				}
-			}
-		}
-	}
-}
+// .view-banner-nodes {
+// 	.field-content {
+// 		.slider-homes-bottom {
+// 			padding: 0 15px;
+// 			@include margin(.834 0);
+// 			@include respond-to(m) {
+// 				width: 750px;
+// 				@include margin(.834 auto .834);
+// 			}
+// 			@include respond-to(xl) {
+// 				width: 970px;
+// 			}
+// 			@include respond-to(xxxl) {
+//   			width: 1170px;
+// 			}
+// 			//titulo
+// 			.title-slider-homes {
+// 				width: 100%;
+// 				float: left;
+// 				font-family: $latobold;
+// 				@include font-size(l);
+// 				@include margin(.417 0);
+// 				text-transform: uppercase;
+// 				color: #585863;
+// 				min-height: 50px;
+// 				padding-bottom: 10px;
+// 				@include respond-to(m) {
+// 					width: 41.66666667%;
+// 					text-align: right;
+// 					padding-right: 25px;
+// 					padding-bottom: 0;
+// 				}
+// 			}
+// 			//sub titulo
+// 			.body-slider-homes {
+// 				float: left;
+// 		    position: relative;
+// 				font-family: $crimson-textregular;
+// 				@include font-size(m);
+// 		    text-align: left;
+// 				color: color('black-secundary');
+// 				text-overflow: ellipsis;
+//   			overflow: hidden;
+//   			max-height: 81px;
+// 		  	border-top: 1px solid color('yellow-defaul');
+// 		    padding-top: 15px;
+// 				margin: 0;
+// 		    @include respond-to(m) {
+// 					width: 33.33333333%;
+// 					border: 0;
+// 					border-left: 1px solid color('yellow-defaul');
+// 					padding-left: 25px;
+// 		    }
+// 			}
+// 			//button
+// 			.link-slider-homes {
+// 				a {
+// 					float: right;
+// 					text-decoration: none;
+// 					@include margin(.834 .834 0 auto);
+// 				  max-width: 145px;
+// 				  border: 1px solid color('grey-dark');
+// 				  color: color('grey-dark');
+// 				  padding: 10px 35px;
+// 				  &:hover {
+//     				background: color('grey-dark');
+//     				color: color('white');
+//     			}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 /* ------| Ubicado Ninguno |----- */
-.view-banner-nodes {
-	.field-content {
-		.slider-homes-empty {
-			display: none;
-		}
-	}
-}
+// .view-banner-nodes {
+// 	.field-content {
+// 		.slider-homes-empty {
+// 			display: none;
+// 		}
+// 	}
+// }
 
-/* ------| Flechas paginador |----- */
-.view-banner-nodes {
-	@include respond-to(xl) {
-		display: block;
-	}
-	.skin-default {
-		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-    	//Button Izquierda
-    	a[rel='prev'] {
-				@extend %a-prev;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				@extend %a-prev;
-		  	left: inherit;
-		    right: -6%;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-		  }
-		}
-	}
-}
+// /* ------| Flechas paginador |----- */
+// .view-banner-nodes {
+// 	@include respond-to(xl) {
+// 		display: block;
+// 	}
+// 	.skin-default {
+// 		position: relative;
+// 		//Conten Flechas
+// 		.views-slideshow-controls-text {
+// 			display: none;
+// 			@include respond-to(xl) {
+// 				display: block;
+// 			}
+//     	//Button Izquierda
+//     	a[rel='prev'] {
+// 				@extend %a-prev;
+// 		  }
+// 			//Buttom Pause
+// 			.views-slideshow-controls-text-pause {
+// 				display: none;
+// 			}
+// 			//Button Deracha
+// 			a[rel='next'] {
+// 				@extend %a-prev;
+// 		  	left: inherit;
+// 		    right: -6%;
+// 				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+// 		  }
+// 		}
+// 	}
+// }
 
 /* ------| bullet (puntos) |----- */
 .view-banner-nodes {
