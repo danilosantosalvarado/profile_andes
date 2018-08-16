@@ -7,9 +7,9 @@
 .view-id-componente_layout_4{
   max-width: 1140px;
   margin: 0 auto;
-  .view-content{
+  .view-content {
      width: 100%;
-    .views-row{
+    .views-row {
       position: relative;
       background-repeat: no-repeat;
       background-size: cover;
@@ -21,8 +21,8 @@
       overflow: hidden;
       width: 31.33%;
       transition: .4s;
-      &:hover{
-        &::before{
+      &:hover {
+        &::before {
           content: ' ';
           display: block;
           position: absolute;
@@ -38,12 +38,12 @@
           transition: .4s;
           z-index: 1;
         }
-        a{
+        a {
           opacity: 1;
           transition: .3s;
         }
       }
-      .container-image-video{
+      .container-image-video {
         position: relative;
         transform: scale(1.8);
          &::before{
@@ -61,7 +61,7 @@
           opacity: .6;
         }
       }
-      .container-title-desc{
+      .container-title-desc {
         display: block;
         text-decoration: none;
         color: #fff;
@@ -72,7 +72,7 @@
         text-align: center;
         width: 100%;
       }
-      a{
+      a {
         position: absolute;
         bottom: 41px;
         color: white;
