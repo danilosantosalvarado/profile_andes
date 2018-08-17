@@ -1987,7 +1987,7 @@ th {
 /* ------| Slider Home|----- */
 .view-banner-nodes ul li.swiper-slide {
   width: 100% !important;
-  height: auto;
+  height: 619px;
 }
 
 .view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
@@ -2020,8 +2020,8 @@ th {
   }
 }
 
-.view-banner-nodes ul li.swiper-slide .video iframe {
-  width: 100%;
+.view-banner-nodes ul li.swiper-slide .youtube-container--responsive {
+  padding-bottom: 45.25%;
 }
 
 /* ------| Ubicado Leth |----- */
@@ -3125,8 +3125,12 @@ th {
 }
 
 .view-footer-top .conten-footer .image-footer-top {
-  width: auto;
   padding-right: 15px;
+}
+
+.view-footer-top .conten-footer .image-footer-top img {
+  width: 40px;
+  height: 40px;
 }
 
 .view-footer-top .conten-footer .text-footer-top a {

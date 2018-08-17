@@ -9,7 +9,7 @@
 	ul {
 		li.swiper-slide {
 			width: 100% !important;
-			height: auto;
+			height: 619px;
 			.slider-homes-img-destock {
 				display: none;
 				@include respond-to(xl) {
@@ -30,10 +30,8 @@
 					max-height: 619px;
 				}
 			}
-			.video {
-				iframe {
-					width: 100%;
-				}
+			.youtube-container--responsive {
+				padding-bottom: 45.25%;
 			}
 		}
 	}
