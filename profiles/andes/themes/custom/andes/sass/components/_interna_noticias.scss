@@ -8,7 +8,8 @@
 .view-banner-nodes {
 	ul {
 		li.swiper-slide {
-			list-style: none;
+			width: 100% !important;
+			height: 619px;
 			.slider-homes-img-destock {
 				display: none;
 				@include respond-to(xl) {
@@ -22,21 +23,15 @@
 				}
 			}
 			img {
-				width: 100%;
-				height: 551px;
+				 width: 100%;
+				// height: 551px;
 				@include respond-to(xl) {
-					height: auto;
+					// height: auto;
 					max-height: 619px;
 				}
 			}
-			iframe {
-				width: 100%;
-				height: 290px;
-				@include respond-to(xl) {
-					height: 519px;
-				// 	height: 515px;
-				// 	max-height: 515px;
-				}
+			.youtube-container--responsive {
+				padding-bottom: 45.25%;
 			}
 		}
 	}
@@ -112,6 +107,8 @@
 		.slider-homes-bottom {
 			padding: 0 15px;
 			@include margin(.834 0);
+			overflow: hidden;
+			display: block;
 			@include respond-to(m) {
 				width: 750px;
 				@include margin(.834 auto .834);
@@ -119,9 +116,9 @@
 			@include respond-to(xl) {
 				width: 970px;
 			}
-			@include respond-to(xxxl) {
-  			width: 1170px;
-			}
+			// @include respond-to(xxxl) {
+  		// 	width: 1170px;
+			// }
 			//titulo
 			.title-slider-homes {
 				width: 100%;
@@ -190,38 +187,92 @@
 	}
 }
 
-/* ------| Flechas paginador |----- */
+// /* ------| Flechas paginador |----- */
+// .view-banner-nodes {
+// 	@include respond-to(xl) {
+// 		display: block;
+// 	}
+// 	.skin-default {
+// 		position: relative;
+// 		//Conten Flechas
+// 		.views-slideshow-controls-text {
+// 			display: none;
+// 			@include respond-to(xl) {
+// 				display: block;
+// 			}
+//     	//Button Izquierda
+//     	a[rel='prev'] {
+// 				@extend %a-prev;
+// 		  }
+// 			//Buttom Pause
+// 			.views-slideshow-controls-text-pause {
+// 				display: none;
+// 			}
+// 			//Button Deracha
+// 			a[rel='next'] {
+// 				@extend %a-prev;
+// 		  	left: inherit;
+// 		    right: -6%;
+// 				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+// 		  }
+// 		}
+// 	}
+// }
+/* ------| Paguinador |----- */
 .view-banner-nodes {
-	@include respond-to(xl) {
-		display: block;
-	}
 	.skin-default {
-		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-    	//Button Izquierda
-    	a[rel='prev'] {
-				@extend %a-prev;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				@extend %a-prev;
-		  	left: inherit;
-		    right: -6%;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-		  }
-		}
+    position: relative;
+    .views-slideshow-controls-bottom {
+
+      //Flechas paguinador
+      .views-slideshow-controls-text {
+        //Button Izquierda
+        a[rel='prev'] {
+          display: none;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 2%;
+          top: 40%;
+          font-size: 0;
+          background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+          z-index: 1;
+        }
+        //Buttom Pause
+        .views-slideshow-controls-text-pause {
+          display: none;
+        }
+        //Button Deracha
+        a[rel='next'] {
+          display: none;
+          // @extend %a-slidw-prev;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 40%;
+          left: inherit;
+          right: 2%;
+          font-size: 0;
+          background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+          z-index: 1;
+        }
+      }
+    }
+	}
+
+
+	//Hover flechas paguinador
+	&:hover {
+    .views-slideshow-controls-bottom {
+      .views-slideshow-controls-text {
+        a[rel='prev'],
+        a[rel='next']{
+          display: block;
+        }
+      }
+    }
 	}
 }
-
 /* ------| bullet (puntos) |----- */
 .view-banner-nodes {
 	.views-slideshow-controls-bottom {

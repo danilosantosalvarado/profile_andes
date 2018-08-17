@@ -551,6 +551,7 @@ th {
 // Layouts 1
 //------------------------------------------------------------------------------
 */
+/* ------| Slider centarado |----- */
 .view-id-banner_nodes .slider-homes-layout-one-title {
   position: absolute;
   top: 20%;
@@ -876,7 +877,7 @@ th {
   padding: 0;
 }
 
-.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='prev'], .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='next'], .view-id-publicaciones .skin-default .views-slideshow-controls-text a[rel='prev'], .view-id-publicaciones .skin-default .views-slideshow-controls-text a[rel='next'], .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='prev'], .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='next'], .view-banner-nodes .skin-default .views-slideshow-controls-text a[rel='prev'], .view-banner-nodes .skin-default .views-slideshow-controls-text a[rel='next'] {
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='prev'], .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='next'], .view-id-publicaciones .skin-default .views-slideshow-controls-text a[rel='prev'], .view-id-publicaciones .skin-default .views-slideshow-controls-text a[rel='next'], .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='prev'], .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -1285,11 +1286,8 @@ th {
   margin-top: 5px;
 }
 
-.view-id-componente_acordeon .ui-accordion-header.ui-state-default a .acordion-titulo {
-  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 0.875rem;
-  line-height: 18px;
-  color: #231F20;
+.view-id-componente_acordeon .ui-accordion-header.ui-state-default.ui-state-hover a:hover {
+  color: #007bff;
 }
 
 .view-id-componente_acordeon .ui-accordion-header.ui-state-default .ui-accordion-header-icon {
@@ -1332,7 +1330,7 @@ th {
 // Componente filas taps
 //------------------------------------------------------------------------------
 */
-.view-id-componente_acordeon a {
+.view-id-componente_acordeon .quicktabs-tabs a {
   color: #bbb;
   text-align: center;
   text-decoration: none;
@@ -1345,7 +1343,7 @@ th {
   margin: 0;
 }
 
-.view-id-componente_acordeon a:hover {
+.view-id-componente_acordeon .quicktabs-tabs a:hover {
   color: #555;
   background: #fff;
   border: 1px solid #ddd;
@@ -1840,7 +1838,7 @@ th {
 /* ------| Multimedia |----- */
 .view-display-id-multimedia_destacada {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px;
   position: relative;
   border: 1px solid #006135;
 }
@@ -1857,7 +1855,6 @@ th {
 .view-display-id-multimedia_destacada ul li.swiper-slide {
   list-style: none;
   height: auto !important;
-  padding: 10px 0;
 }
 
 .view-display-id-multimedia_destacada ul li.swiper-slide .view-display-id-default .views-field-field-video-banner {
@@ -1921,7 +1918,7 @@ th {
 .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='prev'] {
   top: inherit;
   left: 2%;
-  bottom: -18px;
+  bottom: -28px;
   -ms-transform: rotate(-90deg);
       transform: rotate(-90deg);
   background-color: white;
@@ -1935,7 +1932,7 @@ th {
 .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-text a[rel='next'] {
   left: 12%;
   top: inherit;
-  bottom: -18px;
+  bottom: -28px;
   -ms-transform: rotate(-90deg);
       transform: rotate(-90deg);
   background: url("../img/Icon/arrow_next.svg") no-repeat center;
@@ -1944,6 +1941,10 @@ th {
 }
 
 /* ------| Multimedia Reproduccion |----- */
+.view-display-id-multimedia_destacada_unica {
+  padding-left: 20px;
+}
+
 .view-display-id-multimedia_destacada_unica .view-id-componente_noticias_item img {
   width: 100%;
   height: 100%;
@@ -1975,7 +1976,8 @@ th {
 */
 /* ------| Slider Home|----- */
 .view-banner-nodes ul li.swiper-slide {
-  list-style: none;
+  width: 100% !important;
+  height: 619px;
 }
 
 .view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
@@ -2000,25 +2002,16 @@ th {
 
 .view-banner-nodes ul li.swiper-slide img {
   width: 100%;
-  height: 551px;
 }
 
 @media (min-width: 992px) {
   .view-banner-nodes ul li.swiper-slide img {
-    height: auto;
     max-height: 619px;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide iframe {
-  width: 100%;
-  height: 290px;
-}
-
-@media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide iframe {
-    height: 519px;
-  }
+.view-banner-nodes ul li.swiper-slide .youtube-container--responsive {
+  padding-bottom: 45.25%;
 }
 
 /* ------| Ubicado Leth |----- */
@@ -2066,6 +2059,8 @@ th {
 .view-banner-nodes .field-content .slider-homes-bottom {
   padding: 0 15px;
   margin: 1.251rem 0;
+  overflow: hidden;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -2078,12 +2073,6 @@ th {
 @media (min-width: 992px) {
   .view-banner-nodes .field-content .slider-homes-bottom {
     width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view-banner-nodes .field-content .slider-homes-bottom {
-    width: 1170px;
   }
 }
 
@@ -2152,35 +2141,43 @@ th {
   display: none;
 }
 
-/* ------| Flechas paginador |----- */
-@media (min-width: 992px) {
-  .view-banner-nodes {
-    display: block;
-  }
-}
-
+/* ------| Paguinador |----- */
 .view-banner-nodes .skin-default {
   position: relative;
 }
 
-.view-banner-nodes .skin-default .views-slideshow-controls-text {
+.view-banner-nodes .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'] {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  font-size: 0;
+  background: url("../img/Icon/arrow-slide-prev.png") no-repeat center;
+  z-index: 1;
+}
+
+.view-banner-nodes .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text .views-slideshow-controls-text-pause {
   display: none;
 }
 
-@media (min-width: 992px) {
-  .view-banner-nodes .skin-default .views-slideshow-controls-text {
-    display: block;
-  }
-}
-
-.view-banner-nodes .skin-default .views-slideshow-controls-text .views-slideshow-controls-text-pause {
+.view-banner-nodes .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='next'] {
   display: none;
-}
-
-.view-banner-nodes .skin-default .views-slideshow-controls-text a[rel='next'] {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 40%;
   left: inherit;
-  right: -6%;
-  background: url("../img/Icon/arrow_next.svg") no-repeat center;
+  right: 2%;
+  font-size: 0;
+  background: url("../img/Icon/arrow-slide-next.png") no-repeat center;
+  z-index: 1;
+}
+
+.view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'],
+.view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='next'] {
+  display: block;
 }
 
 /* ------| bullet (puntos) |----- */
@@ -2509,10 +2506,6 @@ th {
 
 .tb-megamenu .dropdown-submenu > .dropdown-menu {
   left: 270px !important;
-}
-
-.tb-megamenu-menu-mega-menu {
-  background-color: #ffffff;
 }
 
 .tb-megamenu-menu-mega-menu .dropdown-toggle::after {
@@ -3076,8 +3069,12 @@ th {
 }
 
 .view-footer-top .conten-footer .image-footer-top {
-  width: auto;
   padding-right: 15px;
+}
+
+.view-footer-top .conten-footer .image-footer-top img {
+  width: 40px;
+  height: 40px;
 }
 
 .view-footer-top .conten-footer .text-footer-top a {

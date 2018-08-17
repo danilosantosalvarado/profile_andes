@@ -15,6 +15,7 @@
 		}
 	}
 }
+
 /* ------| Acordion |----- */
 .view-id-componente_acordeon {
 	//titulo
@@ -22,7 +23,6 @@
 		> .views-field.views-field-field-titulo {
 			.field-content {
 				font-family: $latoblack;
-
 				text-transform: uppercase;
 				color: #484851;
 				text-align: center;
@@ -39,11 +39,10 @@
 			border-color: #ddd;
 			padding: 15px 25px;
 			margin-top: 5px;
-			a .acordion-titulo {
-				font-family: $latobold;
-				@include font-size(s);
-				line-height: 18px;
-				color: #231F20;
+			&.ui-state-hover {
+				a:hover {
+					color: #007bff;
+				}
 			}
 			.ui-accordion-header-icon {
 				position: absolute;
