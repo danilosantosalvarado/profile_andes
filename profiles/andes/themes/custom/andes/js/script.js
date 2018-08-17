@@ -39,12 +39,12 @@
         //   //console.log(this);
         //   //console.log(offset);
         // });
-        $('.level-1').parents('.tb-megamenu-column-inner').css({
-          //'display': 'flex',
-          //'width': '35%',
-          'background-color': 'red',
-        });
+
         function dropdown(){
+          $('.active-clone .tb-megamenu-subnav a').on('click', function(){
+            console.log($(this));
+            $(this).siblings('.nav-child').addClass('clone-nivel3');
+          });
 
           $('.dropdown-toggle').on("click", function () {
             $('.box-black').remove();

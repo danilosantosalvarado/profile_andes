@@ -2507,6 +2507,10 @@ th {
   border-left: none !important;
 }
 
+.tb-megamenu .dropdown-submenu > .dropdown-menu {
+  left: 270px !important;
+}
+
 .tb-megamenu-menu-mega-menu {
   background-color: #ffffff;
 }
@@ -2608,7 +2612,8 @@ th {
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1,
-.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2 {
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2,
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3 {
   width: 100%;
   padding: 0px;
   border-left: 1px solid #c8c8ca;
@@ -2619,20 +2624,23 @@ th {
 
 @media (min-width: 543px) {
   .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1,
-  .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2 {
+  .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2,
+  .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3 {
     width: 90%;
   }
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1.active,
-.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2.active {
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2.active,
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3.active {
   background-color: white;
   /* Safari */
   transition: background-color 2s;
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1 > li a:first-child,
-.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2 > li a:first-child {
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2 > li a:first-child,
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3 > li a:first-child {
   padding-top: 0;
 }
 
