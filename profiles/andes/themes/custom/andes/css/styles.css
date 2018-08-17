@@ -1982,10 +1982,6 @@ th {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
-.view-banner-nodes ul {
-  max-height: 619px;
-}
-
 .view-banner-nodes ul li.swiper-slide {
   width: 100% !important;
   height: auto;
@@ -2013,6 +2009,12 @@ th {
 
 .view-banner-nodes ul li.swiper-slide img {
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .view-banner-nodes ul li.swiper-slide img {
+    max-height: 619px;
+  }
 }
 
 .view-banner-nodes ul li.swiper-slide .video iframe {
