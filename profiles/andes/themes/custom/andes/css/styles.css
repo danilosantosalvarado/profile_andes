@@ -1982,14 +1982,13 @@ th {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
-.view-banner-nodes .views_slideshow_swiper-processed {
-  border: 2px solid red;
+.view-banner-nodes ul {
+  max-height: 619px;
 }
 
 .view-banner-nodes ul li.swiper-slide {
   width: 100% !important;
   height: auto;
-  border: 2px solid blue;
 }
 
 .view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
