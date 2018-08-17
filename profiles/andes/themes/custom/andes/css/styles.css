@@ -550,6 +550,167 @@ th {
 
 /*
 //------------------------------------------------------------------------------
+// Home eventos
+//------------------------------------------------------------------------------
+*/
+.view-id-eventos {
+  display: block;
+  overflow: hidden;
+}
+
+.view-id-eventos .view-content ul {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+.view-id-eventos .view-content ul .views-row {
+  list-style: none;
+  float: left;
+  width: 100%;
+  position: relative;
+  background: #f4f1f1;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .view-id-eventos .view-content ul .views-row {
+    width: 47%;
+    margin: 0.7em;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-eventos .view-content ul .views-row {
+    width: 31%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-eventos .view-content ul .views-row {
+    width: 23%;
+  }
+}
+
+.view-id-eventos .view-content ul .views-row .views-field img {
+  width: 100%;
+  border-bottom: 3px solid #ff8827;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-container {
+  padding: 1.575rem 1.251rem;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  line-height: 0.96;
+  color: #484851;
+  margin: 1.251rem 0 1.251rem;
+}
+
+@media (min-width: 992px) {
+  .view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
+    font-size: 1.1875rem;
+    margin: 1.35rem 0 1.563rem;
+  }
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha,
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar {
+  margin-bottom: 1.05rem;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span,
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span:nth-child(1),
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span:nth-child(1) {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  margin-right: 5px;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-enlace a {
+  border: 1px solid #e55d12;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 15.3px;
+  color: #484851;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px;
+  outline: none;
+  float: right;
+}
+
+.view-id-eventos .view-content ul .views-row .eventos-enlace a:hover {
+  background-color: #e55d12;
+  color: #ffffff;
+}
+
+/* ------| Paguinadores |----- */
+.view-id-eventos .text-center {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-id-eventos .text-center ul.pagination {
+  background: #fff;
+  border-radius: 0;
+  padding: 10px;
+}
+
+.view-id-eventos .text-center ul.pagination::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e55d12;
+  z-index: -1;
+}
+
+.view-id-eventos .text-center ul.pagination li {
+  color: #484851;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: #fff;
+  display: block;
+  float: left;
+  margin: 0 5px;
+}
+
+.view-id-eventos .text-center ul.pagination li a {
+  color: #484851;
+  border: 1px solid #fff;
+  font-family: Lato,sans-serif;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.view-id-eventos .text-center ul.pagination li.active {
+  border-color: #e55d12;
+}
+
+.view-id-eventos .text-center ul.pagination li.active span {
+  background-color: transparent;
+  border-radius: initial;
+  color: #000;
+  border: initial;
+}
+
+.view-id-eventos .text-center ul.pagination li.next, .view-id-eventos .text-center ul.pagination li.prev, .view-id-eventos .text-center ul.pagination li.pager-last, .view-id-eventos .text-center ul.pagination li.pager-first {
+  display: none;
+}
+
+/*
+//------------------------------------------------------------------------------
 // Layouts 1
 //------------------------------------------------------------------------------
 */
