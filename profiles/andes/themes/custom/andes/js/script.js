@@ -50,7 +50,7 @@
             $(this).siblings('.nav-child').addClass('clone-nivel3');
           });
 
-          $('.dropdown-toggle').on("click", function () {
+          $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
             $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><a> < " + $(this).text() + "</a></div>");
