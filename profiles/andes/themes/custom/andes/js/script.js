@@ -39,11 +39,11 @@
         //   //console.log(this);
         //   //console.log(offset);
         // });
-        $('.level-1').parents('.tb-megamenu-column-inner').css({
-          //'display': 'flex',
-          //'width': '35%',
-          'background-color': 'red',
-        });
+        // $('.level-1').parents('.tb-megamenu-column-inner').css({
+        //   //'display': 'flex',
+        //   //'width': '35%',
+        //   'background-color': 'red',
+        // });
         function dropdown(){
 
           $('.dropdown-toggle').on("click", function () {
