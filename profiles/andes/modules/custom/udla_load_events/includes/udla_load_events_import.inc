@@ -87,3 +87,4 @@ function udla_load_events_form_import_submit($form, &$form_state) {
 		  $wrapper->save();
 	 }
 }
+?>
