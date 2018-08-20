@@ -491,3 +491,39 @@ function andes_profile_details() {
   $details['language'] = "es";
   return $details;
 }
+
+
+
+function andes_install_tasks($install_state) {
+
+  $flag = TRUE;
+  $tasks = array();
+  $tasks['install_mod'] = array(
+    'display_name' => st('Importacion de contenido'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP, 
+    'function' => '_install_mods',
+  );
+
+  return $tasks;
+}
+
+function _install_mods() {
+  $install_state['mods'] = array('noticias' => 1);
+  
+  $batch = array(
+    'title' => t('Importando contenido'),
+  );
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_andes_batch', array($module));
+  }
+  return $batch;
+}
+
+function _install_andes_batch(){
+  $modules = array('udla_load_events');
+  module_enable($modules, TRUE);
+}
