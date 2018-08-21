@@ -34,7 +34,7 @@
       if (docWidth >1200){
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset         = $(this).offset(),
-          menuhover = $(this).find('.container-submenu');
+            menuhover = $(this).find('>.nav-child');
           if (menuhover.parent('li').hasClass('level-1')){
             menuhover.css({
               'margin-left': '-' + offset.left + 'px',
