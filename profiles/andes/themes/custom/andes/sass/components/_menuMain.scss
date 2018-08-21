@@ -1,6 +1,12 @@
 .none{
   display: none !important;
 }
+.yellow{
+  background-color: yellow !important;
+}
+.black{
+  background-color: #1a1a1a;
+}
 
 /* reset del megamenu */
 .tb-megamenu{
@@ -39,6 +45,11 @@
     left: 0 !important;
     margin-left: 0;
   }
+}
+.region-navigation{
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 //iconos
 /* .tb-megamenu .dropdown-submenu > a::after{
@@ -105,7 +116,8 @@
   opacity: 0;
 }
 .tb-megamenu-menu-mega-menu{
-  //background-color: #ffffff;
+  -webkit-transition: background-color 2s; /* Safari */
+  transition: background-color .2s;
   .dropdown-toggle{
     &::after{
       display: none;
@@ -267,7 +279,7 @@
       &.open{
         background-color: #1a1a1a;
         border: none;
-        @include breakpoint($basic) {
+        @include respond-to(xl) {
           background-color: #FFFFFF;
         }
       }
@@ -275,7 +287,7 @@
         color: #484851 !important;
         border-right: none;
         font-family: Lato,sans-serif;
-        padding: 29px 9px;
+        //padding: 29px 9px;
         font-size: .83rem;
         line-height: .9rem;
         text-align: center;
@@ -344,7 +356,7 @@
       }
     }
     @include breakpoint($basic) {
-      top: 7px;
+      top: 0px;
       padding: 0;
       width: 70%;
       overflow-x: initial;
