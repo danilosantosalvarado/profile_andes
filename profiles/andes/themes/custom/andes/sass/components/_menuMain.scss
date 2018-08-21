@@ -9,6 +9,11 @@
 }
 
 /* reset del megamenu */
+.navbar.container,
+.navbar.container-fluid{
+  margin-top: 0;
+  border: none;
+}
 .tb-megamenu{
   clear: both;
 }

@@ -1,18 +1,63 @@
+
+/* color */
+$color:  #46b9c0;
+$gray:   #f4f1f1;
+$white:  #ffffff;
+$black:  #000000;
+/* tabs */
+.quicktabs-wrapper{
+  width: 1170px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  ul.quicktabs-tabs{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    li{
+      &.active{
+        a{
+          background: $color;
+          color: $white;
+          -webkit-transition: background .5s; /* Safari */
+          transition: background .5s;
+        }
+      }
+      a{
+        padding: 15px 50px;
+        margin: 10px 0;
+        list-style: none;
+        position: relative;
+        font-size: 14.2333px;
+        font-weight: 400;
+        color: $black;
+        cursor: pointer;
+        text-align: center;
+        background: transparent;
+        text-decoration: none;
+        -webkit-transition: background .5s; /* Safari */
+        transition: background .5s;
+      }
+    }
+  }
+}
+
+
 .view-componente-especiales{
   >.view-content{
-    padding: 20px 10px;
     >div{
-      padding: 10px;
-      &:hover{
-        background: #f4f1f1;
-      }
+      padding: 10px 0;
+      background: $gray;
+
       @include breakpoint($basic) {
-        width: 17%;
+        width: 23%;
       }
     }
     .views-field-view{
       .field-content{
-        border-bottom: 3px solid #e34d1f;
+        img{
+          border-bottom: 3px solid $color;
+        }
       }
     }
     .views-field-title{
@@ -21,25 +66,34 @@
       text-align: left;
       text-decoration: none;
       margin: 20px 0 25px;
-      padding: 0;
+      padding: 0 15px;
       font-family: 'crimsontext-semibold';
+      a{
+        text-decoration: none;
+      }
     }
     .views-field-body{
       margin-bottom: 20px;
+      padding: 0 15px;
     }
     .views-field-view-node{
+      padding: 0 15px;
+
       a{
         background-color: transparent;
-        border: 1px solid #e34d1f;
-        padding: 10px 20px;
+        border: 1px solid $color;
+        padding: 10px 10px;
         color: #484851;
         text-decoration: none;
         z-index: 1;
         display: block;
         text-align: center;
         font-size: 18px;
+        right: 25px;
+        left: inherit;
+        max-width: 120px;
         &:hover{
-          background: #e34d1f;
+          background: $color;
           color: #fff;
         }
       }

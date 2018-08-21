@@ -17,7 +17,13 @@
 
       /* Scroll menu  */
 
-
+      $level1.hover(function () {
+        if(!this){
+          console.log("hover");
+        }
+      /*   $(this).fadeOut(100);
+        $(this).fadeIn(500); */
+      });
       $(window).scroll(function (event) {
         var scroll = $(window).scrollTop(),
             menu = $('.tb-megamenu-menu-mega-menu');
