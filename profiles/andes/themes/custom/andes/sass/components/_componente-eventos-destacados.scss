@@ -5,8 +5,8 @@
 */
 
 .view-id-componente_eventos {
-  display: block;
-  overflow: hidden;
+  // display: block;
+  // overflow: hidden;
   .view-content {
     ul {
       padding-inline-start: 0px;
@@ -16,20 +16,20 @@
         width: 100%;
         position: relative;
         background: #f4f1f1;
-        margin: 10px 0;
-        //Img
+        margin: 10px 0; //Img
         .views-field {
-          img{
+          img {
             width: 100%;
             border-bottom: 3px solid #ff8827;
           }
-        }
-        //Contenedor
+          .youtube-container--responsive {
+            padding-bottom: 62.25%;
+            border-bottom: 3px solid #ff8827;
+          }
+        } //Contenedor
         .eventos-container {
-          @include padding(1.05 .834);
-          // min-height: 339px;
-        }
-        //Titulo
+          @include padding(1.05 .834); // min-height: 339px;
+        } //Titulo
         .even-desta-titulo {
           padding-left: 25px;
           font-family: $crimson-textbold;
@@ -40,8 +40,7 @@
             @include font-size(l);
             @include margin(.9 0 1.042);
           }
-        }
-        //Fecha and lugar
+        } //Fecha and lugar
         .even-desta-fecha {
           display: flex;
           padding-left: 25px;
@@ -55,8 +54,7 @@
             font-family: $latoregular;
             @include font-size(xs);
           }
-        }
-        //lugar
+        } //lugar
         .even-desta-lugar {
           padding-left: 25px;
           @include margin-bottom(.7);
@@ -70,8 +68,7 @@
             }
           }
         }
-      }
-      //Button
+      } //Button
       .even-desta-enlace {
         a {
           border: 1px solid color('orange');
@@ -95,43 +92,61 @@
 
 //Flechas paginador
 .view-id-componente_eventos {
-	@include respond-to(xl) {
-		display: block;
-	}
-	.skin-default {
-		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-    	//Button Izquierda
-    	a[rel='prev'] {
-				@extend %a-prev;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				@extend %a-prev;
-		  	left: inherit;
-		    right: -6%;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-		  }
-		}
-	}
+  @include respond-to(xl) {
+    display: block;
+  }
+  .skin-default {
+    position: relative;
+    //Conten Flechas
+    .views-slideshow-controls-text {
+      display: none;
+      @include respond-to(xl) {
+        display: block;
+      }
+       //Button Izquierda
+      a[rel='prev'] {
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: -6%;
+        z-index: 1;
+        display: block;
+        border: 1px solid #777;
+        background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+        background-size: 40px 40px;
+      } //Buttom Pause
+      .views-slideshow-controls-text-pause {
+        display: none;
+      } //Button Deracha
+      a[rel='next'] {
+        @extend %a-prev;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: inherit;
+        right: -6%;
+        z-index: 1;
+        display: block;
+        border: 1px solid #777;
+        background: url('../img/Icon/arrow_next.svg') no-repeat center;
+        background-size: 40px 40px;
+      }
+    }
+  }
 }
 
 //Puntos Slider
 .view-id-componente_eventos {
-	margin: 15px 0 20px;
-	.views-slideshow-pager-field-processed {
-		@include bullet(red, grey);
-		@include respond-to(xl) {
-			display: none;
-		}
-	}
+  margin: 15px 0 20px;
+  .views-slideshow-pager-field-processed {
+    @include bullet(red,
+    grey);
+    @include respond-to(xl) {
+      display: none;
+    }
+  }
 }
