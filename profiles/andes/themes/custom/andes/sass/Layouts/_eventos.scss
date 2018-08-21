@@ -1,0 +1,146 @@
+/*
+//------------------------------------------------------------------------------
+// Home eventos
+//------------------------------------------------------------------------------
+*/
+
+.view-id-eventos {
+  display: block;
+  overflow: hidden;
+  .view-content {
+    ul {
+      padding-inline-start: 0px;
+      .views-row {
+        list-style: none;
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #f4f1f1;
+        margin: 10px 0;
+        @include respond-to(m) {
+          width: 47%;
+          // height: 530px;
+          margin: 0.7em;
+        }
+        @include respond-to(xl) {
+          width: 31%;
+        }
+        @include respond-to(xxxl) {
+          width: 23%;
+        }
+        //Img
+        .views-field {
+          img{
+            width: 100%;
+            border-bottom: 3px solid #ff8827;
+          }
+        }
+        //Contenedor
+        .eventos-container {
+          @include padding(1.05 .834);
+          // min-height: 339px;
+          //Titulo
+          .eventos-titulo {
+            font-family: $crimson-textbold;
+            @include type-layout(l, .96);
+            color: #484851;
+            @include margin(.834 0 .834);
+            @include respond-to(xl) {
+              @include font-size(l);
+              @include margin(.9 0 1.042);
+            }
+          }
+          //Fecha and lugar
+          .eventos-fecha,
+          .eventos-lugar {
+            @include margin-bottom(.7);
+            span {
+              font-family: $latoregular;
+              @include font-size(xs);
+              &:nth-child(1) {
+                font-family: $latobold;
+                @include font-size(xs);
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+        //Button
+        .eventos-enlace {
+          a {
+            border: 1px solid color('orange');
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin: 20px;
+            outline: none;
+            float: right;
+            &:hover {
+              background-color: #e55d12;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------| Paguinadores |----- */
+.view-id-eventos {
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    ul.pagination {
+      background: #fff;
+      border-radius: 0;
+      padding: 10px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid #e55d12;
+        z-index: -1;
+      }
+      li {
+        color: #484851;
+        border: 1px solid #fff;
+        border-radius: 0;
+        background-color: #fff;
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid #fff;
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: #fff;
+        }
+        &.active {
+          border-color: #e55d12;
+          span {
+            background-color: transparent;
+            border-radius: initial;
+            color: color('black');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
+          display: none;
+        }
+      }
+    }
+  }
+}
