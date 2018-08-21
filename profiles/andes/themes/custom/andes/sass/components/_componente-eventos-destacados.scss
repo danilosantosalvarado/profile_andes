@@ -1,0 +1,137 @@
+/*
+//------------------------------------------------------------------------------
+// Componente Eventos Destacados
+//------------------------------------------------------------------------------
+*/
+
+.view-id-componente_eventos {
+  display: block;
+  overflow: hidden;
+  .view-content {
+    ul {
+      padding-inline-start: 0px;
+      .views-row {
+        list-style: none;
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #f4f1f1;
+        margin: 10px 0;
+        //Img
+        .views-field {
+          img{
+            width: 100%;
+            border-bottom: 3px solid #ff8827;
+          }
+        }
+        //Contenedor
+        .eventos-container {
+          @include padding(1.05 .834);
+          // min-height: 339px;
+        }
+        //Titulo
+        .even-desta-titulo {
+          padding-left: 25px;
+          font-family: $crimson-textbold;
+          @include type-layout(l, .96);
+          color: #484851;
+          @include margin(.834 0 .834);
+          @include respond-to(xl) {
+            @include font-size(l);
+            @include margin(.9 0 1.042);
+          }
+        }
+        //Fecha and lugar
+        .even-desta-fecha {
+          display: flex;
+          padding-left: 25px;
+          @include margin-bottom(.7);
+          span {
+            font-family: $latobold;
+            @include font-size(xs);
+            margin-right: 5px;
+          }
+          div span {
+            font-family: $latoregular;
+            @include font-size(xs);
+          }
+        }
+        //lugar
+        .even-desta-lugar {
+          padding-left: 25px;
+          @include margin-bottom(.7);
+          span {
+            font-family: $latoregular;
+            @include font-size(xs);
+            &:nth-child(1) {
+              font-family: $latobold;
+              @include font-size(xs);
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      //Button
+      .even-desta-enlace {
+        a {
+          border: 1px solid color('orange');
+          font-family: $latolight;
+          font-size: 15.3px;
+          color: #484851;
+          text-decoration: none;
+          padding: 10px 30px;
+          margin: 20px;
+          outline: none;
+          float: right;
+          &:hover {
+            background-color: #e55d12;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Flechas paginador
+.view-id-componente_eventos {
+	@include respond-to(xl) {
+		display: block;
+	}
+	.skin-default {
+		position: relative;
+		//Conten Flechas
+		.views-slideshow-controls-text {
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
+    	//Button Izquierda
+    	a[rel='prev'] {
+				@extend %a-prev;
+		  }
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				@extend %a-prev;
+		  	left: inherit;
+		    right: -6%;
+				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+		  }
+		}
+	}
+}
+
+//Puntos Slider
+.view-id-componente_eventos {
+	margin: 15px 0 20px;
+	.views-slideshow-pager-field-processed {
+		@include bullet(red, grey);
+		@include respond-to(xl) {
+			display: none;
+		}
+	}
+}
