@@ -1,0 +1,46 @@
+/* Global
+*/
+.views-field-field-enlace-externo{
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    background: url("../img/svg/arrow_miga.svg") no-repeat center;
+    background-size: auto auto;
+    background-size: 100%;
+  }
+}
+
+
+.view-componente-enlaces-item{
+  position: relative;
+  margin-left: 20px;
+  .view-content{
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    .views-row{
+      display: inline-block;
+      position: relative;
+      list-style: none;
+      border: 1px solid #838383;
+      margin: 0;
+      background: #fff;
+      height: 37px;
+      vertical-align: top;
+      padding-top: 8px;
+      padding-left: 10px;
+      a{
+        font-size: .83rem;
+        color: #484851;
+        text-decoration: none;
+        padding: 10px 25px;
+      }
+    }
+  }
+}
+
