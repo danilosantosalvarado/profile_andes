@@ -35,7 +35,6 @@
             border-bottom: 3px solid #ff8827;
           }
         }
-
         //Contenedor
         .eventos-container {
           @include padding(1.05 .834);
@@ -58,8 +57,6 @@
             span {
               font-family: $latoregular;
               @include font-size(xs);
-
-
               &:nth-child(1) {
                 font-family: $latobold;
                 @include font-size(xs);
@@ -71,12 +68,6 @@
         //Button
         .eventos-enlace {
           a {
-            // @include respond-to(m) {
-            //   position: absolute;
-            //   right: 30px;
-            //   bottom: 20px;
-            //   margin: 0px;
-            // }
             border: 1px solid color('orange');
             font-family: $latolight;
             font-size: 15.3px;
