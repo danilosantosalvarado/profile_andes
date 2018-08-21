@@ -1,3 +1,7 @@
+.none{
+  display: none !important;
+}
+
 /* reset del megamenu */
 .tb-megamenu{
   clear: both;
@@ -97,10 +101,8 @@
   }
 }
 .tb-megamenu .dropdown-submenu > .dropdown-menu{
-  //opacity: 0;
-  //margin-right: 20px;
-  //background: red;
-  left: 270px !important;
+  left: 10000% !important;
+  opacity: 0;
 }
 .tb-megamenu-menu-mega-menu{
   //background-color: #ffffff;
@@ -157,8 +159,9 @@
       }
     }
   }
-  .mega-col-nav{
-    //opacity: 0;
+  .clone-nivel-3{
+    display: block;
+    position: relative;
   }
   .nav-child{
     padding-left: 10px;

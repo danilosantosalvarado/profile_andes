@@ -1,0 +1,48 @@
+.view-componente-especiales{
+  >.view-content{
+    padding: 20px 10px;
+    >div{
+      padding: 10px;
+      &:hover{
+        background: #f4f1f1;
+      }
+      @include breakpoint($basic) {
+        width: 17%;
+      }
+    }
+    .views-field-view{
+      .field-content{
+        border-bottom: 3px solid #e34d1f;
+      }
+    }
+    .views-field-title{
+      font-size: 1.25rem;
+      line-height: 1;
+      text-align: left;
+      text-decoration: none;
+      margin: 20px 0 25px;
+      padding: 0;
+      font-family: 'crimsontext-semibold';
+    }
+    .views-field-body{
+      margin-bottom: 20px;
+    }
+    .views-field-view-node{
+      a{
+        background-color: transparent;
+        border: 1px solid #e34d1f;
+        padding: 10px 20px;
+        color: #484851;
+        text-decoration: none;
+        z-index: 1;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        &:hover{
+          background: #e34d1f;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
