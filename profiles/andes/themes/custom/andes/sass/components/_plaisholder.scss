@@ -150,7 +150,10 @@
 
 /* ------| Container globales |----- */
 .container-fluid {
-	padding: 0;
+  padding: 0;
+}
+body > .main-container.container-fluid {
+  margin-top: 61px;
 }
 .inside {
   margin: 0 !important;

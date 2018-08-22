@@ -3,12 +3,7 @@
 // Multimedia
 //------------------------------------------------------------------------------
 */
-.container-fluid {
-  padding: 0;
-  margin-top: 150px;
-}
 
-/* ------| Multimedia |----- */
 .view-display-id-home_noticias_destacadas {
 	margin: 0 auto;
 	padding: 15px;
@@ -71,7 +66,7 @@
 	}
 }
 
-//Flechas paginador
+/* ------| Flechas paginador |----- */
 .view-display-id-home_noticias_destacadas {
 	.skin-default {
 		position: relative;
@@ -292,6 +287,7 @@
             border-radius: initial;
             color: color('white');
             border: initial;
+            z-index: 1;
           }
         }
         &.next,

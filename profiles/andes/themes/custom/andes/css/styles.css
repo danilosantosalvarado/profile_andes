@@ -711,12 +711,6 @@ th {
 // Multimedia
 //------------------------------------------------------------------------------
 */
-.container-fluid {
-  padding: 0;
-  margin-top: 150px;
-}
-
-/* ------| Multimedia |----- */
 .view-display-id-home_noticias_destacadas {
   margin: 0 auto;
   padding: 15px;
@@ -786,6 +780,7 @@ th {
           text-decoration-line: underline;
 }
 
+/* ------| Flechas paginador |----- */
 .view-display-id-home_noticias_destacadas .skin-default {
   position: relative;
 }
@@ -1039,6 +1034,7 @@ th {
   border-radius: initial;
   color: #fff;
   border: initial;
+  z-index: 1;
 }
 
 .view-display-id-home_noticias_recientes .text-center ul.pagination li.next, .view-display-id-home_noticias_recientes .text-center ul.pagination li.prev, .view-display-id-home_noticias_recientes .text-center ul.pagination li.pager-last, .view-display-id-home_noticias_recientes .text-center ul.pagination li.pager-first {
@@ -1393,6 +1389,10 @@ th {
 /* ------| Container globales |----- */
 .container-fluid {
   padding: 0;
+}
+
+body > .main-container.container-fluid {
+  margin-top: 61px;
 }
 
 .inside {
@@ -4017,44 +4017,47 @@ th {
   font-weight: bold;
 }
 
-/* color */
 /* tabs */
-.quicktabs-wrapper {
-  width: 1170px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
 .quicktabs-wrapper ul.quicktabs-tabs {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  padding-bottom: 40px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
-.quicktabs-wrapper ul.quicktabs-tabs li.active a {
-  background: #46b9c0;
-  color: #ffffff;
-  -webkit-transition: background .5s;
-  /* Safari */
-  -o-transition: background .5s;
-  transition: background .5s;
+.quicktabs-wrapper ul.quicktabs-tabs li {
+  margin: 10px 0;
+  display: block;
+  list-style: none;
+}
+
+@media (min-width: 555px) {
+  .quicktabs-wrapper ul.quicktabs-tabs li {
+    display: inline-block;
+    margin: 0px;
+  }
 }
 
 .quicktabs-wrapper ul.quicktabs-tabs li a {
-  padding: 15px 50px;
-  margin: 10px 0;
-  list-style: none;
-  position: relative;
-  font-size: 14.2333px;
-  font-weight: 400;
-  color: #000000;
-  cursor: pointer;
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
   text-align: center;
-  background: transparent;
   text-decoration: none;
   -webkit-transition: background .5s;
-  /* Safari */
+  -o-transition: background .5s;
+  transition: background .5s;
+  background-color: #f0eeee;
+  padding: 15px 50px;
+  display: block;
+  cursor: pointer;
+}
+
+.quicktabs-wrapper ul.quicktabs-tabs li.active a {
+  background-color: #e34d1f;
+  color: #fff;
+  -webkit-transition: background .5s;
   -o-transition: background .5s;
   transition: background .5s;
 }
