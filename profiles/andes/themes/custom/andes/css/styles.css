@@ -2742,6 +2742,62 @@ th {
   text-align: justify;
 }
 
+/* bloques de menu */
+#block-views-logos-header-block-2 {
+  position: absolute;
+  left: 90px;
+  top: 9px;
+}
+
+#block-views-logos-header-block-2 a {
+  padding: 10px 25px;
+  background: #353535;
+  color: #FFFFFF;
+}
+
+#block-views-logos-header-block-2 h2.block-title {
+  display: none;
+}
+
+#block-views-logos-header-block-1 {
+  position: absolute;
+  background: #fff;
+  z-index: 9;
+}
+
+@media (min-width: 666px) {
+  #block-views-logos-header-block-1 {
+    background: red;
+    display: none;
+  }
+}
+
+#block-views-logos-header-block-1 h2.block-title {
+  display: none;
+}
+
+#block-views-logos-header-block {
+  position: absolute;
+  z-index: 9;
+  height: 75px;
+  display: none;
+}
+
+@media (min-width: 666px) {
+  #block-views-logos-header-block {
+    display: block;
+  }
+}
+
+#block-views-logos-header-block h2 {
+  display: none;
+}
+
+#block-views-logos-header-block .view-id-logos_header {
+  width: 175px;
+  display: block;
+}
+
 .none {
   display: none !important;
 }

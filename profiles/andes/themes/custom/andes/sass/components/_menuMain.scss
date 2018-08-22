@@ -1,3 +1,47 @@
+
+$white: #FFFFFF;
+/* bloques de menu */
+#block-views-logos-header-block-2{
+  position: absolute;
+  left: 90px;
+  top: 9px;
+  a{
+    padding: 10px 25px;
+    background: #353535;
+    color: $white;
+  }
+  h2.block-title{
+    display: none;
+  }
+}
+#block-views-logos-header-block-1{
+  position: absolute;
+  background: #fff;
+  z-index: 9;
+  @include respond-to(s){
+    background: red;
+    display: none;
+  }
+  h2.block-title{
+    display: none
+  }
+}
+#block-views-logos-header-block{
+  position: absolute;
+  z-index: 9;
+  height: 75px;
+  display: none;
+  @include respond-to(s){
+    display: block;
+  }
+  h2{
+    display: none
+  }
+  .view-id-logos_header{
+    width: 175px;
+    display: block;
+  }
+}
 .none{
   display: none !important;
 }
