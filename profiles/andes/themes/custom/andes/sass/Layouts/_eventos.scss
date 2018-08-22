@@ -40,7 +40,7 @@
           @include padding(1.05 .834);
           // min-height: 339px;
           //Titulo
-          .views-field-title {
+          .eventos-titulo {
             font-family: $crimson-textbold;
             @include type-layout(l, .96);
             color: #484851;
@@ -51,7 +51,8 @@
             }
           }
           //Fecha and lugar
-          .eventos-fecha {
+          .eventos-fecha,
+          .eventos-lugar {
             @include margin-bottom(.7);
             span {
               font-family: $latoregular;

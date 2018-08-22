@@ -600,7 +600,7 @@ th {
   padding: 1.575rem 1.251rem;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .views-field-title {
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   line-height: 0.96;
@@ -609,22 +609,25 @@ th {
 }
 
 @media (min-width: 992px) {
-  .view-id-eventos .view-content ul .views-row .eventos-container .views-field-title {
+  .view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
     font-size: 1.1875rem;
     margin: 1.35rem 0 1.563rem;
   }
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha {
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha,
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar {
   margin-bottom: 1.05rem;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span {
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span,
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span:nth-child(1) {
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span:nth-child(1),
+.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span:nth-child(1) {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   margin-right: 5px;
