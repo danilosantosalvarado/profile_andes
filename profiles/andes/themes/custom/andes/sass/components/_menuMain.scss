@@ -181,7 +181,7 @@ $white: #FFFFFF;
   &.active{
     -webkit-transition: width .5s; /* Safari */
     transition: width .5s;
-    width: 60% !important;
+    //width: 60% !important;
   }
   ul.tb-megamenu-subnav.level-1{
     border-left: none !important;
