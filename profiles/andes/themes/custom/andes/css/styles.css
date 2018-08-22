@@ -3517,17 +3517,55 @@ th {
 
 /* Global
 */
-.views-field-field-enlace-externo::before {
+.field-internal::before {
   content: '';
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 16px;
   position: absolute;
-  top: 9px;
-  left: 8px;
-  background: url("../img/svg/arrow_miga.svg") no-repeat center;
+  top: 10px;
+  left: 2px;
+  background: url("../img/Icon/flechas.png") no-repeat center;
+  background-position-x: center;
+  background-position-y: center;
   background-size: auto auto;
-  background-size: 100%;
+  background-size: auto auto;
+  background-size: 55px;
+  background-position: 14px;
+}
+
+.field-external::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  background: url("../img/Icon/flechas.png") no-repeat center;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: auto auto;
+  background-size: auto auto;
+  background-size: 55px;
+  background-position: -35px;
+}
+
+.field-download::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  background: url("../img/Icon/flechas.png") no-repeat center;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: auto auto;
+  background-size: auto auto;
+  background-size: 55px;
+  background-position: 12px;
 }
 
 .view-componente-enlaces-item {
