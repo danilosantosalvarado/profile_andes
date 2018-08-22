@@ -3780,10 +3780,24 @@ th {
   background: #b600eb;
 }
 
+@media (min-width: 768px) {
+  .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
   width: 100%;
   padding: 5px;
   border-bottom: 4px solid #b600eb;
+}
+
+@media (min-width: 768px) {
+  .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+    width: 49%;
+    float: left;
+  }
 }
 
 .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-title-field {
