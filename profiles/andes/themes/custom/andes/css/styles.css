@@ -3065,7 +3065,6 @@ th {
   /* Safari */
   -o-transition: width .5s;
   transition: width .5s;
-  width: 60% !important;
 }
 
 .tb-megamenu .row-fluid .content-img ul.tb-megamenu-subnav.level-1 {
@@ -3798,11 +3797,15 @@ th {
 .view-componente-especiales > .view-content > div {
   padding: 10px 0;
   background: #f4f1f1;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
   .view-componente-especiales > .view-content > div {
     width: 23%;
+    width: 23%;
+    float: left;
+    margin-left: 20px;
   }
 }
 

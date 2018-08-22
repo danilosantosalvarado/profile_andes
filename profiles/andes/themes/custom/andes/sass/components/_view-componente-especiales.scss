@@ -48,8 +48,12 @@ $black:  #000000;
     >div{
       padding: 10px 0;
       background: $gray;
+      margin-bottom: 20px;
       @include respond-to(m){
         width: 23%;
+        width: 23%;
+        float: left;
+        margin-left: 20px;
       }
     }
     .views-field-view{
