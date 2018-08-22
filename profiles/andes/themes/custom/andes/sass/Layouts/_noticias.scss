@@ -1,0 +1,228 @@
+/*
+//------------------------------------------------------------------------------
+// Multimedia
+//------------------------------------------------------------------------------
+*/
+.container-fluid {
+  padding: 0;
+  margin-top: 150px;
+}
+
+/* ------| Multimedia |----- */
+.view-display-id-home_noticias_destacadas {
+	margin: 0 auto;
+	padding: 15px;
+	position: relative;
+	border: 1px solid #006135;
+	ul {
+		-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+		-webkit-padding-start: 0px;
+		height: 380px;
+		li.swiper-slide {
+	    list-style: none;
+			height: auto !important;
+			// padding: 10px 0;
+			//video
+			.view-display-id-default {
+				.views-field-field-video-banner {
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
+			//img
+			.views-row {
+				overflow: hidden;
+				.views-field-view {
+					width: 40%;
+					float: left;
+					padding-right: 20px;
+					img {
+						width: 100%;
+					}
+				}
+        //titulo
+        .multimedia-titulo {
+          margin: 0 0 10px;
+          a {
+            font-family: $crimson-textbold;
+            @include type-layout(o, 1.16);
+            color: color('black');
+            &:hover {
+              text-decoration-line: underline;
+            }
+          }
+        }
+        //body
+        .multimedia-body {
+          font-family: $crimson-textregular;
+          @include font-size(s);
+          line-height: 1.2;
+          color: color('black');
+          &:hover {
+            text-decoration-line: underline;
+          }
+        }
+			}
+		}
+	}
+}
+
+//Flechas paginador
+.view-display-id-home_noticias_destacadas {
+	.skin-default {
+		position: relative;
+		//Conten Flechas
+		.views-slideshow-controls-text {
+			display: inline-flex;
+    	//Button Izquierda
+    	a[rel='prev'] {
+				font-size: 0;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: inherit;
+				left: 2%;
+				bottom: -28px;
+        border: 1px solid #777;
+        background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+        background-size: 40px 40px;
+				transform: rotate(-90deg);
+				background-color: white;
+				z-index: 2;
+		  }
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				font-size: 0;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+		  	left: 12%;
+				top: inherit;
+        bottom: -28px;
+        border: 1px solid #777;
+				background: url('../img/Icon/arrow_next.svg') no-repeat center;
+        background-color: white;
+        transform: rotate(-90deg);
+				z-index: 2;
+		  }
+		}
+	}
+}
+
+/* ------| Multimedia Reproduccion |----- */
+.view-display-id-home_noticias_destacada {
+	padding-left: 20px;
+	//img
+	.view-id-componente_noticias_item {
+		img {
+			width: 100%;
+			height: 100%,
+		}
+	}
+	//titulo
+	.multimedia-conponente-titulo {
+		margin: 20px 0 10px;
+		a {
+			font-family: $crimson-textroman;
+			@include type-layout(ll, 1.16);
+			color: color('green-Primary');
+			margin-bottom: 14px;
+			font-weight: 400;
+		}
+	}
+	//body
+	.multimedia-conponente-body {
+		div p {
+			font-family: $crimson-textregular;
+			@include type-layout(o, 1.1);
+		}
+	}
+	//button
+	.multimedia-conponente-enlace {
+		@extend %link-slider-home;
+	}
+}
+
+
+/*
+//------------------------------------------------------------------------------
+// home Noticias
+//------------------------------------------------------------------------------
+*/
+.view-display-id-home_noticias_recientes  {
+  display: block;
+  overflow: hidden;
+  .view-content {
+    ul {
+      padding-inline-start: 0px;
+      .views-row {
+        list-style: none;
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #f4f1f1;
+        margin: 10px 0;
+        @include respond-to(m) {
+          width: 47%;
+          // height: 530px;
+          margin: 0.7em;
+        }
+        @include respond-to(xl) {
+          width: 31%;
+        }
+        @include respond-to(xxxl) {
+          width: 23%;
+        }
+        //Img
+        .views-field {
+          img{
+            width: 100%;
+            border-bottom: 3px solid #ff8827;
+          }
+        }
+        	//Fecha
+			.eventos-fecha {
+        margin: 10px 0px;
+        span {
+          font-family: $latoregular;
+          @include type-layout(xxs, 1.23);
+          // @include margin-bottom(.6);
+          // @include margin-top(.6);
+          padding: 0 15px;
+          color: color('orange');
+        }
+		  }
+		  //Titulo
+		  .views-field-title {
+		  	font-family: $crimson-textbold;
+		  	@include type-layout(l, .96);
+		  	color: #484851;
+        @include margin(.834 0 .834);
+        padding: 0 15px;
+		  	@include respond-to(xl) {
+					@include font-size(ll);
+					@include margin(.9 0 1.042);
+		  	}
+		  }
+		  //Body
+		  .views-field-body{
+				font-family: $crimson-textregular;
+				@include type-layout(m, 1.06);
+        @include margin-bottom(.417);
+        padding: 0 15px;
+				@include respond-to(xl) {
+					@include font-size(o);
+		  	}
+		  }
+      }
+    }
+  }
+}
