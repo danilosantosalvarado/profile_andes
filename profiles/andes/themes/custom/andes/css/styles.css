@@ -761,12 +761,15 @@ th {
 }
 
 .view-display-id-home_noticias_recientes .view-content ul .views-row .eventos-fecha {
-  margin: 10px 0px span;
-  margin-font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  margin-font-size: 0.75rem;
-  margin-line-height: 1.23;
-  margin-padding: 0 15px;
-  margin-color: #e55d12;
+  margin: 10px 0px;
+}
+
+.view-display-id-home_noticias_recientes .view-content ul .views-row .eventos-fecha span {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.23;
+  padding: 0 15px;
+  color: #e55d12;
 }
 
 .view-display-id-home_noticias_recientes .view-content ul .views-row .views-field-title {
