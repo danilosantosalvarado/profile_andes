@@ -1,0 +1,97 @@
+/*
+//------------------------------------------------------------------------------
+//  Home Publicaciones
+//------------------------------------------------------------------------------
+*/
+
+.view-display-id-home_publicaciones {
+	margin: 0 auto;
+	padding: 15px;
+	position: relative;
+	ul {
+		-webkit-padding-start: 0px;
+    li.views-row {
+      list-style: none;
+      float: left;
+      width: 100%;
+      position: relative;
+      margin: 15px 0;
+      padding: 15px;
+      &:hover {
+        background: #f4f1f1;
+      }
+      @include respond-to(m) {
+        width: 50%;
+        max-height: 674.1px;
+      }
+      @include respond-to(xl) {
+        width: 25%;
+        height: 652px;
+      }
+      @include respond-to(xxxl) {
+        width: 20%;
+      }
+      //Img
+      .publicaiones-img-desktop {
+        img{
+          width: 100%;
+          border-bottom: 3px solid #ff8827;
+          @include respond-to(m) {
+            max-height: 448px;
+          }
+        }
+      }
+      //Titulo
+      .publicaiones-titulo{
+        font-family: $crimson-textbold;
+        @include type-layout(l, .96);
+        color: #484851;
+        @include margin(.834 0 .834);
+        @include respond-to(xl) {
+          @include font-size(l);
+          @include margin(.9 0 1.042);
+        }
+      }
+      //body
+      .publicaiones-body{
+        @include margin-bottom(.7);
+        span {
+          font-family: $crimson-textregular;
+          @include font-size(xs);
+          &:nth-child(1) {
+            font-family: $latobold;
+            @include font-size(xs);
+            margin-right: 5px;
+          }
+        }
+      }
+      //Button
+      .publicaciones-enlace {
+        a {
+          font-family: $latoregular;
+          font-size: 15.3px;
+          color: #484851;
+          text-decoration: none;
+          text-align: center;
+          padding: 10px 20px;
+          // margin: 20px;
+          z-index: 1;
+          display: block;
+          border: 1px solid color('orange');
+          @include respond-to(xl) {
+            max-width: 190px;
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            margin: 0px;
+          }
+          &:hover {
+            background-color: #e55d12;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+	}
+}

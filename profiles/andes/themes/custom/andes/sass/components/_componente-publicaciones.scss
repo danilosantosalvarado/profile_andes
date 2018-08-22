@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-publicaciones {
+.view-display-id-block {
 	// margin: 0 auto;
 	// padding: 0 15px;
 	// @include respond-to(m) {
@@ -79,7 +79,7 @@
 }
 
 //Flechas paginador
-.view-id-publicaciones {
+.view-display-id-block {
 	// display: none;
 	@include respond-to(xl) {
 		display: block;
@@ -112,7 +112,7 @@
 }
 
 //Puntos Slider
- .view-id-publicaciones {
+ .view-display-id-block {
 	margin: 15px 0 20px;
 	.views-slideshow-pager-field-processed {
 		@include bullet(red, grey);
