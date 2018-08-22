@@ -3,6 +3,7 @@
 // Layouts 9
 //------------------------------------------------------------------------------
 */
+
 .view-id-layout_9 {
   display: block;
   overflow: hidden;
@@ -19,8 +20,10 @@
     @include respond-to(xxxl) {
       width: 1170px;
     }
-    .views-row {
-      flex: 1 1 33.333333%;
+    @include respond-to(xl) {
+      .views-row {
+        flex: 1 1 33.333333%;
+      }
     }
     > div:nth-child(even) {
       background-color: color('white');

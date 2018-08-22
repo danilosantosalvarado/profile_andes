@@ -1856,10 +1856,12 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-id-layout_9 .view-content .views-row {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333333%;
-          flex: 1 1 33.333333%;
+@media (min-width: 992px) {
+  .view-id-layout_9 .view-content .views-row {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33.333333%;
+            flex: 1 1 33.333333%;
+  }
 }
 
 .view-id-layout_9 .view-content > div:nth-child(even) {
