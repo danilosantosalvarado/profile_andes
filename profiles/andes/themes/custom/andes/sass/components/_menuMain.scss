@@ -94,7 +94,7 @@ $white: #FFFFFF;
   //background-color: black;
   background-color: transparent;
 
-  @include breakpoint($basic) {
+  @include respond-to(m){
     background-color: transparent;
   }
 }
@@ -109,7 +109,7 @@ $white: #FFFFFF;
 .tb-megamenu .row-fluid, .tb-megamenu .mega-dropdown-menu,
 .tb-megamenu .row-fluid [class*="span"]{
   left: initial;
-  @include breakpoint($basic) {
+  @include respond-to(m){
     left: 0 !important;
     margin-left: 0;
   }
@@ -131,7 +131,7 @@ $white: #FFFFFF;
 .tb-megamenu .row-fluid .span3{
   //width: 255px;
   //margin-left: 0px !important;
-  @include breakpoint($basic) {
+  @include respond-to(m){
     //margin-left: 35px !important;
     //margin-left: 350px !important;
   }
@@ -172,7 +172,7 @@ $white: #FFFFFF;
   float: right;
   -webkit-transition: width .5s; /* Safari */
   transition: width .5s;
-  @include breakpoint($basic) {
+  @include respond-to(m){
     display: block;
   }
   .menu-title{
@@ -224,7 +224,7 @@ $white: #FFFFFF;
     transition: right .5s;
     z-index: 9999;
     padding: 20px 30px;
-    @include breakpoint($basic) {
+    @include respond-to(m){
     position: absolute;
       padding: 0;
       height: 400px;
@@ -239,7 +239,7 @@ $white: #FFFFFF;
       right: 0px;
       -webkit-transition: right .5s; /* Safari */
       transition: right .5s;
-      @include breakpoint($basic) {
+      @include respond-to(m){
         left: 0px;
         -webkit-transition: left .5s; /* Safari */
         transition: left .5s;
@@ -292,7 +292,7 @@ $white: #FFFFFF;
       //opacity: 1;
       //position: fixed;
     }
-    @include breakpoint($basic) {
+    @include respond-to(m){
       opacity: 0;
       margin-left: -420px;
       //position: fixed;
@@ -324,7 +324,7 @@ $white: #FFFFFF;
     background-color: rgba(255, 255, 255, 1.0);
     -webkit-transition: background-color 2s; /* Safari */
     transition: background-color 2s;
-    @include breakpoint($basic) {
+    @include respond-to(m){
       width: 90%;
     }
     &.active{
@@ -409,13 +409,13 @@ $white: #FFFFFF;
 .tb-megamenu .nav-collapse .nav > li.active > a:hover,
 .tb-megamenu .nav-collapse .nav > li.active > a:focus {
   background: black;
-  @include breakpoint($basic) {
+  @include respond-to(m){
     background: transparent;
   }
 }
 #block-tb-megamenu-menu-menu-top-soy{
   display: none;
-  @include breakpoint($basic) {
+  @include respond-to(m){
     display: block;
   }
 }
@@ -440,7 +440,7 @@ $white: #FFFFFF;
     .dropdown-menu.container-submenu{
       //right: -10000px;
       //transition: right .4s;
-      @include breakpoint($basic) {
+      @include respond-to(m){
         //right: 0;
         //left: 0;
       }
@@ -459,7 +459,7 @@ $white: #FFFFFF;
         }
       }
     }
-    @include breakpoint($basic) {
+    @include respond-to(m){
       top: 0px;
       padding: 0;
       width: 70%;
@@ -515,7 +515,7 @@ $white: #FFFFFF;
     .clone{
       padding: 20px 20px;
       display: flex;
-      @include breakpoint($basic) {
+      @include respond-to(m){
         background: yellow;
         display: none;
       }
@@ -544,14 +544,14 @@ $white: #FFFFFF;
         float: inherit;
         margin: 0 auto;
         padding: 0 0px;
-        @include breakpoint($basic) {
+        @include respond-to(m){
           float: left;
           margin-left: 0;
         }
         &.active{
           height: 50px;
           width: auto;
-          @include breakpoint($basic) {
+          @include respond-to(m){
             width: 136px;
             height: 77px;
           }
@@ -565,7 +565,7 @@ $white: #FFFFFF;
           font-weight: 300;
           color: #1a1a1a;
 
-          @include breakpoint($basic) {
+          @include respond-to(m){
             font-size: .83rem;
             font-weight: initial;
           }

@@ -2856,7 +2856,7 @@ th {
   background-color: transparent;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
   .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
   .tb-megamenu .nav > li.dropdown.open.active > a:hover {
@@ -2875,7 +2875,7 @@ th {
   left: initial;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu .row-fluid, .tb-megamenu .mega-dropdown-menu,
   .tb-megamenu .row-fluid [class*="span"] {
     left: 0 !important;
@@ -2932,7 +2932,7 @@ th {
   transition: width .5s;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu .row-fluid .content-img {
     display: block;
   }
@@ -2995,7 +2995,7 @@ th {
   padding: 20px 30px;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .box-black {
     position: absolute;
     padding: 0;
@@ -3015,7 +3015,7 @@ th {
   transition: right .5s;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .box-black.active-box {
     left: 0px;
     /* Safari */
@@ -3067,7 +3067,7 @@ th {
     padding: 0px 12px; */
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu li.level-2 *.nav-child {
     opacity: 0;
     margin-left: -420px;
@@ -3089,7 +3089,7 @@ th {
   transition: background-color 2s;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1,
   .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-2,
   .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3 {
@@ -3195,7 +3195,7 @@ th {
   background: black;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu .nav-collapse .nav > li.active > a:hover,
   .tb-megamenu .nav-collapse .nav > li.active > a:focus {
     background: transparent;
@@ -3206,7 +3206,7 @@ th {
   display: none;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   #block-tb-megamenu-menu-menu-top-soy {
     display: block;
   }
@@ -3251,7 +3251,7 @@ th {
   padding: 40px 0 0 41px;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .always-show {
     top: 0px;
     padding: 0;
@@ -3317,7 +3317,7 @@ th {
   display: flex;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .always-show .clone {
     background: yellow;
     display: none;
@@ -3351,7 +3351,7 @@ th {
   padding: 0 0px;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active {
     float: left;
     margin-left: 0;
@@ -3363,7 +3363,7 @@ th {
   width: auto;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active.active {
     width: 136px;
     height: 77px;
@@ -3379,7 +3379,7 @@ th {
   color: #1a1a1a;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a {
     font-size: .83rem;
     font-weight: initial;
