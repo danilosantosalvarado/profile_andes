@@ -760,7 +760,7 @@ th {
   border-bottom: 3px solid #ff8827;
 }
 
-.view-display-id-home_noticias_recientes .view-content ul .views-row .views-field-created {
+.view-display-id-home_noticias_recientes .view-content ul .views-row .views-field-created span {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.75rem;
   line-height: 1.23;

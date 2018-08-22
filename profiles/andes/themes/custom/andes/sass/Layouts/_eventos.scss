@@ -180,11 +180,13 @@
         }
         	//Fecha
 			.views-field-created {
-				font-family: $latoregular;
-				@include type-layout(xxs, 1.23);
-        @include margin-bottom(.6);
-        padding: 0 15px;
-		    color: color('orange');
+        span {
+          font-family: $latoregular;
+          @include type-layout(xxs, 1.23);
+          @include margin-bottom(.6);
+          padding: 0 15px;
+          color: color('orange');
+        }
 		  }
 		  //Titulo
 		  .views-field-title {
