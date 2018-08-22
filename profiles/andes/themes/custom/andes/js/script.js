@@ -15,7 +15,6 @@
           $level1  =       $('.tb-megamenu-item.level-1'),
           $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a');
 
-      /* Scroll menu  */
 
       $level1.hover(function () {
         if(!this){
@@ -24,20 +23,24 @@
       /*   $(this).fadeOut(100);
         $(this).fadeIn(500); */
       });
-      $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop(),
-            menu = $('.tb-megamenu-menu-mega-menu');
-        if(scroll > 100){
-          menu.removeClass('black');
-          menu.addClass('yellow');
-        }
-        else{
-          menu.removeClass('yellow');
-          menu.addClass('black');
-        }
-      });
+
       /* ciclo item de mega menu */
       if (docWidth >1200){
+
+        /* Scroll menu  */
+        $(window).scroll(function (event) {
+          var scroll = $(window).scrollTop(),
+            menu = $('.tb-megamenu-menu-mega-menu');
+          if (scroll > 100) {
+            menu.removeClass('black');
+            menu.addClass('yellow');
+          }
+          else {
+            menu.removeClass('yellow');
+            menu.addClass('black');
+          }
+        });
+        /* ciclo */
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset         = $(this).offset(),
             menuhover = $(this).find('>.nav-child');
@@ -88,13 +91,29 @@
         dropdown()
       }
       else{
-
         const
           classSelect = 'clone-select',
           classBlockClone = 'clone-mobile-block',
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
-          className = 'clone';
+          className = 'clone',
+          itemMobil =  $contentFather.find('.level-1  a');
 
+        itemMobil.on("click",  function () {
+          $('.box-black').remove();
+          let $this = $(this);
+          $this.siblings().addClass('active-mobile');
+          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><a> < " + $this.text() + "</a></div>");
+          console.log($this);
+          $('.box-black').click(function () {
+            console.log($this);
+            //$('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+            //$('.box-black').removeClass('active-box'); /* nivel 2 animacion */
+            $(this).parents('.active-mobile').removeClass('active-mobile'); /* nivel 2 animacion */
+
+          });
+        });
+
+        itemMobil.removeAttr('href');
         $contentFather.after("<div class='" + className + "'></div>");
         $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
         $contentFather.after("<div class='separador-menu'></div>");

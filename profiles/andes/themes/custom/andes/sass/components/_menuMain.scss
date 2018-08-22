@@ -1,10 +1,21 @@
 
 $white: #FFFFFF;
+.tb-megamenu .always-show .mega > .mega-dropdown-menu,
+.tb-megamenu .always-show .dropdown-menu{
+  //display: none !important;
+}
 /* bloques de menu */
 #block-views-logos-header-block-2{
   position: absolute;
   left: 90px;
   top: 9px;
+  display: none;
+  @include respond-to(m){
+    display: block;
+  }
+  .element-invisible{
+    display: none;
+  }
   a{
     padding: 10px 25px;
     background: #353535;
@@ -14,16 +25,24 @@ $white: #FFFFFF;
     display: none;
   }
 }
+
 #block-views-logos-header-block-1{
   position: absolute;
-  background: #fff;
-  z-index: 9;
-  @include respond-to(s){
-    background: red;
+  z-index: 99999;
+  top: 0;
+  display: none;
+  @include respond-to(m){
     display: none;
   }
   h2.block-title{
     display: none
+  }
+  .view-logos-header{
+    display: block;
+    height: auto;
+    width: 123px;
+    width: 120px;
+    margin: 2px 27px;
   }
 }
 #block-views-logos-header-block{
@@ -31,8 +50,8 @@ $white: #FFFFFF;
   z-index: 9;
   height: 75px;
   display: none;
-  @include respond-to(s){
-    display: block;
+  @include respond-to(m){
+    display: none;
   }
   h2{
     display: none
@@ -85,7 +104,7 @@ $white: #FFFFFF;
   background-color: transparent;
 }
 .tb-megamenu .dropdown-menu{
-  box-shadow: none;
+ // box-shadow: none;
 }
 .tb-megamenu .row-fluid, .tb-megamenu .mega-dropdown-menu,
 .tb-megamenu .row-fluid [class*="span"]{
@@ -96,9 +115,11 @@ $white: #FFFFFF;
   }
 }
 .region-navigation{
-  position: fixed;
   width: 100%;
   z-index: 3;
+  @include respond-to(m){
+    position: fixed;
+  }
 }
 //iconos
 /* .tb-megamenu .dropdown-submenu > a::after{
@@ -133,10 +154,16 @@ $white: #FFFFFF;
 .tb-megamenu .nav > .dropdown > .dropdown-toggle .caret{
   display: none;
 }
-///@at-root
+.tb-megamenu-menu-mega-menu.tb-megamenu .nav > li{
+  width: 100%;
+}
+///
 .tb-megamenu .mega.open > .mega-dropdown-menu,
 .tb-megamenu .mega.dropdown-submenu:hover > .mega-dropdown-menu {
-  display: block !important;
+  //display: none !important;
+  @include respond-to(m){
+    //display: block !important;
+  }
 }
 /* menu principal */
 .tb-megamenu .row-fluid .content-img{
@@ -173,22 +200,32 @@ $white: #FFFFFF;
     }
   }
   .level-0 .level-1 >.nav-child{
-    height: 300px;
     overflow: hidden;
     background-color: #ffffff;
+    //display: none !important;
+    height: 0;
+    @include respond-to(m){
+     // display: block !important;
+      -webkit-transition: right .4s; /* Safari */
+      border: none;
+      padding-left: 10px;
+      height: auto;
+      height: 300px;
+
+    }
   }
   .box-black {
     background-color: #1a1a1a;
     height: auto;
     width: 100%;
-    position: absolute;
-    right: -400px;
+    right: 0px;
     top: 0px;
     -webkit-transition: right .5s; /* Safari */
     transition: right .5s;
     z-index: 9999;
     padding: 20px 30px;
     @include breakpoint($basic) {
+    position: absolute;
       padding: 0;
       height: 400px;
       width: 23.076923076923077%;
@@ -211,6 +248,7 @@ $white: #FFFFFF;
     a{
       font-size: 12px;
       color: #FFFFFF !important;
+      border: none !important;
       word-wrap: break-word;
       word-break: break-all;
       word-wrap: break-word;
@@ -223,14 +261,19 @@ $white: #FFFFFF;
   .clone-nivel-3{
     display: block;
     position: relative;
+    border: none;
+    background: transparent;
+    box-shadow: none;
   }
   .nav-child{
-    padding-left: 10px;
     &.active-clone{
       position: relative;
       display: block;
       opacity: 1;
       transition: .4;
+      border: none;
+      background: transparent;
+      box-shadow: none;
     }
   }
   li.level-2 *.nav-child{
@@ -242,6 +285,7 @@ $white: #FFFFFF;
     z-index: 9999999999;
     top: 0px;
     margin-left: 0;
+    height: 0;
     /* left: 0 !important;
     padding: 0px 12px; */
     &.active-subnivel{
@@ -301,7 +345,7 @@ $white: #FFFFFF;
   &.tb-megamenu {
     .mega-nav > li a,
     .dropdown-menu {
-      border: none;
+     // border: none;
       .mega-nav > li a{
         background-color: transparent;
         background: 0 0;
@@ -317,10 +361,10 @@ $white: #FFFFFF;
       list-style: none;
       float: left;
       position: relative;
-      width: 136px;
+      width: 100%;
       padding: 0 5px;
       margin-left: 0;
-      height: 74px;
+      height: 50px;
       display: flex;
       justify-content: center;
       align-content: center;
@@ -332,9 +376,13 @@ $white: #FFFFFF;
           background-color: #FFFFFF;
         }
       }
+      @include respond-to(m) {
+        width: 136px;
+        height: 74px;
+      }
       > a{
         color: #484851 !important;
-        border-right: none;
+        border: none;
         font-family: Lato,sans-serif;
         //padding: 29px 9px;
         font-size: .83rem;
@@ -377,7 +425,7 @@ $white: #FFFFFF;
   }
   .always-show{
     background: #1a1a1a;
-    height: 85%;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 0;
@@ -386,22 +434,29 @@ $white: #FFFFFF;
     top: -9px;
     -webkit-transition: right .4s; /* Safari */
     transition: right .4s;
+    @include respond-to(m){
+      height: 85%;
+    }
     .dropdown-menu.container-submenu{
-      right: -10000px;
-      -webkit-transition: right .4s; /* Safari */
-      transition: right .4s;
+      //right: -10000px;
+      //transition: right .4s;
       @include breakpoint($basic) {
-        right: 0;
-        left: 0;
+        //right: 0;
+        //left: 0;
       }
       &.active-mobile{
         position: fixed;
         background-color: #ffffff;
-        top: 60px;
-        padding: 20px 0;
+        top: 0px;
+        display: block !important;
+        padding: 0;
         right: 0;
         -webkit-transition: right .4s; /* Safari */
         transition: right .4s;
+        height: 100%;
+        .tb-megamenu-column-inner{
+          padding: 40px 0 0 41px;
+        }
       }
     }
     @include breakpoint($basic) {
@@ -497,8 +552,8 @@ $white: #FFFFFF;
           height: 50px;
           width: auto;
           @include breakpoint($basic) {
-            height: initial;
             width: 136px;
+            height: 77px;
           }
         }
         a{
