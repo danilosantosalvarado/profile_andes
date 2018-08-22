@@ -4,8 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-eventos,
-.view-display-id-home_noticias_recientes  {
+.view-id-eventos {
   display: block;
   overflow: hidden;
   .view-content {
@@ -41,7 +40,7 @@
           @include padding(1.05 .834);
           // min-height: 339px;
           //Titulo
-          .eventos-titulo {
+          .views-field-title {
             font-family: $crimson-textbold;
             @include type-layout(l, .96);
             color: #484851;
@@ -52,8 +51,7 @@
             }
           }
           //Fecha and lugar
-          .eventos-fecha,
-          .eventos-lugar {
+          .eventos-fecha {
             @include margin-bottom(.7);
             span {
               font-family: $latoregular;
@@ -90,7 +88,8 @@
 }
 
 /* ------| Paguinadores |----- */
-.view-id-eventos {
+.view-id-eventos,
+.view-display-id-home_noticias_recientes {
   .text-center {
     width: 100%;
     position: relative;
@@ -141,6 +140,78 @@
         &.pager-first {
           display: none;
         }
+      }
+    }
+  }
+}
+
+
+// adasdasd
+.view-display-id-home_noticias_recientes  {
+  display: block;
+  overflow: hidden;
+  .view-content {
+    ul {
+      padding-inline-start: 0px;
+      .views-row {
+        list-style: none;
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #f4f1f1;
+        margin: 10px 0;
+        @include respond-to(m) {
+          width: 47%;
+          // height: 530px;
+          margin: 0.7em;
+        }
+        @include respond-to(xl) {
+          width: 31%;
+        }
+        @include respond-to(xxxl) {
+          width: 23%;
+        }
+        //Img
+        .views-field {
+          img{
+            width: 100%;
+            border-bottom: 3px solid #ff8827;
+          }
+        }
+        	//Fecha
+			.eventos-fecha {
+        margin: 10px 0px
+        span {
+          font-family: $latoregular;
+          @include type-layout(xxs, 1.23);
+          // @include margin-bottom(.6);
+          // @include margin-top(.6);
+          padding: 0 15px;
+          color: color('orange');
+        }
+		  }
+		  //Titulo
+		  .views-field-title {
+		  	font-family: $crimson-textbold;
+		  	@include type-layout(l, .96);
+		  	color: #484851;
+        @include margin(.834 0 .834);
+        padding: 0 15px;
+		  	@include respond-to(xl) {
+					@include font-size(ll);
+					@include margin(.9 0 1.042);
+		  	}
+		  }
+		  //Body
+		  .views-field-body{
+				font-family: $crimson-textregular;
+				@include type-layout(m, 1.06);
+        @include margin-bottom(.417);
+        padding: 0 15px;
+				@include respond-to(xl) {
+					@include font-size(o);
+		  	}
+		  }
       }
     }
   }
