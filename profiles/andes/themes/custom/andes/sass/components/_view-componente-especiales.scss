@@ -48,8 +48,7 @@ $black:  #000000;
     >div{
       padding: 10px 0;
       background: $gray;
-
-      @include breakpoint($basic) {
+      @include respond-to(m){
         width: 23%;
       }
     }

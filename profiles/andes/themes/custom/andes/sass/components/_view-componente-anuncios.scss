@@ -1,5 +1,6 @@
 /* color */
 $color: #b600eb;
+$gray: #484851;
 
 .view-componente-anuncios{
   background: #f0eeee;
@@ -26,6 +27,43 @@ $color: #b600eb;
         &.active{
           a{
             background: $color;
+          }
+        }
+      }
+    }
+  }
+  .swiper-slide{
+    //height: 400px;
+    .views-slideshow-swiper-main-frame-row-item{
+      .views-field-field-image{
+        width: 100%;
+        padding: 5px;
+        border-bottom: 4px solid $color;
+      }
+      .views-field-title-field{
+        color: #484851;
+        font-size: 1.3rem;
+        line-height: 1.1;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 20px 20px 0;
+      }
+      .views-field-field-body{
+        font-size: .9rem;
+        color: $gray;
+        padding: 20px 20px 0;
+      }
+      .views-field-field-enlace-ver-mas{
+        padding: 20px 20px 0;
+        a{
+          float: right;
+          font-size: .8rem;
+          padding: 10px 20px;
+          border: 1px solid $gray;
+          text-decoration: none;
+          &:hover{
+            background: #b600eb;
+            color: #fff;
           }
         }
       }

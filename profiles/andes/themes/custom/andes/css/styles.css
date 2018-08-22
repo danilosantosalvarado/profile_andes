@@ -3637,7 +3637,7 @@ th {
   background: #f4f1f1;
 }
 
-@media (min-width: 543px) {
+@media (min-width: 768px) {
   .view-componente-especiales > .view-content > div {
     width: 23%;
   }
@@ -3724,6 +3724,44 @@ th {
 
 .view-componente-anuncios .views-slideshow-controls-bottom .views_slideshow_pager_field .views-slideshow-pager-field-item.active a {
   background: #b600eb;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 4px solid #b600eb;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-title-field {
+  color: #484851;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 20px 20px 0;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-body {
+  font-size: .9rem;
+  color: #484851;
+  padding: 20px 20px 0;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas {
+  padding: 20px 20px 0;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas a {
+  float: right;
+  font-size: .8rem;
+  padding: 10px 20px;
+  border: 1px solid #484851;
+  text-decoration: none;
+}
+
+.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas a:hover {
+  background: #b600eb;
+  color: #fff;
 }
 
 /*
