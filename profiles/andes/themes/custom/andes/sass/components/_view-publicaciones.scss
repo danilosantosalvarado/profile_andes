@@ -1,0 +1,98 @@
+.view-publicaciones{
+  width: 1170px;
+  margin: 0 auto;
+  .views-row .publicaiones-img-desktop .content{
+    width: 100%;
+  }
+  .views-row .publicaiones-titulo{
+    font-size: 1.3rem;
+    line-height: 1;
+    text-align: left;
+    text-decoration: none;
+    margin: 20px 0 25px;
+    padding: 0;
+    font-family: 'crimsontext-semibold';
+  }
+  .views-row .publicaiones-body{
+    color: #484851;
+    font-family: 'crimson_textregular';
+    font-size: 0.9375rem;
+    line-height: normal;
+    text-align: left;
+  }
+  .views-row .conten-publicaciones{
+    a{
+      max-width: 190px;
+      margin: 0 auto;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #e34d1f;
+      padding: 10px 20px;
+      color: #484851;
+      text-decoration: none;
+      z-index: 1;
+      display: block;
+      text-align: center;
+      &:hover{
+        background: #e34d1f;
+      }
+    }
+  }
+  >.view-content{
+    >div{
+      padding: 10px 0;
+      //background: $gray;
+      margin-bottom: 20px;
+      @include respond-to(m){
+        width: 17%;
+        float: left;
+        margin-left: 20px;
+      }
+    }
+    .views-field-view{
+      .field-content{
+        img{
+          border-bottom: 3px solid $color;
+        }
+      }
+    }
+    .views-field-title{
+      font-size: 1.25rem;
+      line-height: 1;
+      text-align: left;
+      text-decoration: none;
+      margin: 20px 0 25px;
+      padding: 0 15px;
+      font-family: 'crimsontext-semibold';
+      a{
+        text-decoration: none;
+      }
+    }
+    .views-field-body{
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
+    .views-field-view-node{
+      padding: 0 15px;
+
+      a{
+        background-color: transparent;
+        border: 1px solid $color;
+        padding: 10px 10px;
+        color: #484851;
+        text-decoration: none;
+        z-index: 1;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        right: 25px;
+        left: inherit;
+        max-width: 120px;
+        &:hover{
+          background: $color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
