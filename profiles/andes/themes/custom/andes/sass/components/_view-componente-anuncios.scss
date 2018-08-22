@@ -35,10 +35,18 @@ $gray: #484851;
   .swiper-slide{
     //height: 400px;
     .views-slideshow-swiper-main-frame-row-item{
+      @include respond-to(m){
+        width: 70%;
+        margin: 0 auto
+      }
       .views-field-field-image{
         width: 100%;
         padding: 5px;
         border-bottom: 4px solid $color;
+        @include respond-to(m){
+          width: 49%;
+          float: left;
+        }
       }
       .views-field-title-field{
         color: #484851;
