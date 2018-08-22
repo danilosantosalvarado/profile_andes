@@ -184,6 +184,7 @@
           font-family: $latoregular;
           @include type-layout(xxs, 1.23);
           @include margin-bottom(.6);
+          @include margin-top(.6);
           padding: 0 15px;
           color: color('orange');
         }
