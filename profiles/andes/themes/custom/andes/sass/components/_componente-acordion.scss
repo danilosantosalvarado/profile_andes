@@ -3,18 +3,6 @@
 // Acordion
 //------------------------------------------------------------------------------
 */
-/* ------| body texto |----- */
-.field-name-body {
-	.field-item {
-		p {
-			font-family: $crimson-textregular;
-			@include font-size(m);
-			color: #484851;
-			text-align: center;
-			margin-bottom: 16px;
-		}
-	}
-}
 
 /* ------| Acordion |----- */
 .view-id-componente_acordeon {
