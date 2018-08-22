@@ -119,7 +119,11 @@
 
 /* ------| Multimedia Reproduccion |----- */
 .view-display-id-home_noticias_destacada {
-	padding-left: 20px;
+  display: none;
+  padding-left: 20px;
+  @include respond-to(xl) {
+    display: block;
+  }
 	//img
 	.view-id-componente_noticias_item {
 		img {
@@ -130,16 +134,17 @@
 	//titulo
 	.views-field-title {
 		margin: 20px 0 10px;
-		a {
-			font-family: $crimson-textroman;
+		span {
+			font-family: $crimson-textbold;
 			@include type-layout(ll, 1.16);
-			color: color('green-Primary');
 			margin-bottom: 14px;
 			font-weight: 400;
 		}
 	}
 	//body
 	.views-field-body {
+    width: 80%;
+    float: left;
 		div p {
 			font-family: $crimson-textregular;
 			@include type-layout(o, 1.1);
@@ -147,6 +152,8 @@
 	}
 	//button
 	.views-field-view-node {
+    width: 20%;
+    float: left;
 		@extend %link-slider-home;
 	}
 }
@@ -163,7 +170,7 @@
   .view-content {
     ul {
       padding-inline-start: 0px;
-      .views-row {
+      li.views-row {
         list-style: none;
         float: left;
         width: 100%;
@@ -172,11 +179,12 @@
         margin: 10px 0;
         @include respond-to(m) {
           width: 47%;
-          // height: 530px;
+          height: 464px;
           margin: 0.7em;
         }
         @include respond-to(xl) {
           width: 31%;
+          height: 525px;
         }
         @include respond-to(xxxl) {
           width: 23%;
@@ -187,41 +195,111 @@
             width: 100%;
             border-bottom: 3px solid #ff8827;
           }
+          .youtube-container--responsive {
+            padding-bottom: 63.25%;
+            border-bottom: 3px solid #ff8827;
+          }
         }
         	//Fecha
-			.eventos-fecha {
-        margin: 10px 0px;
-        span {
-          font-family: $latoregular;
-          @include type-layout(xxs, 1.23);
-          // @include margin-bottom(.6);
-          // @include margin-top(.6);
-          padding: 0 15px;
-          color: color('orange');
+        .views-field-created {
+          margin: 10px 0px;
+          span {
+            font-family: $latoregular;
+            @include type-layout(xxs, 1.23);
+            padding: 0 15px;
+            color: color('orange');
+          }
         }
-		  }
-		  //Titulo
-		  .views-field-title {
-		  	font-family: $crimson-textbold;
-		  	@include type-layout(l, .96);
-		  	color: #484851;
-        @include margin(.834 0 .834);
-        padding: 0 15px;
-		  	@include respond-to(xl) {
-					@include font-size(ll);
-					@include margin(.9 0 1.042);
-		  	}
-		  }
-		  //Body
-		  .views-field-body{
-				font-family: $crimson-textregular;
-				@include type-layout(m, 1.06);
-        @include margin-bottom(.417);
-        padding: 0 15px;
-				@include respond-to(xl) {
-					@include font-size(o);
-		  	}
-		  }
+        //Titulo
+        .views-field-title {
+          font-family: $crimson-textbold;
+          @include type-layout(l, .96);
+          color: #484851;
+          @include margin(.834 0 .834);
+          padding: 0 15px;
+          @include respond-to(xl) {
+            @include font-size(ll);
+            @include margin(.9 0 1.042);
+          }
+        }
+        //Body
+        .views-field-body {
+          font-family: $crimson-textregular;
+          @include type-layout(m, 1.06);
+          @include margin-bottom(.417);
+          padding: 0 15px;
+          @include respond-to(xl) {
+            @include font-size(o);
+          }
+        }
+        //Button
+        .views-field-view-node {
+          a {
+            @include respond-to(m) {
+              position: absolute;
+              bottom: 20px;
+              right: 10px;
+              margin: 0px;
+            }
+            border: 1px solid color('orange');
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin: 20px;
+            outline: none;
+            float: right;
+            &:hover {
+              background-color: #e55d12;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------| Paguinadores |----- */
+.view-display-id-home_noticias_recientes  {
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    ul.pagination {
+      background: #fff;
+      border-radius: 0;
+      padding: 10px;
+      li {
+        color: #484851;
+        border-radius: 0;
+        background-color: #fff;
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid #e55d12;
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: #fff;
+        }
+        &.active {
+          span {
+            border-color: #e55d12;
+            background-color: #e55d12;
+            border-radius: initial;
+            color: color('white');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
+          display: none;
+        }
       }
     }
   }
