@@ -128,7 +128,7 @@
 		}
 	}
 	//titulo
-	.multimedia-conponente-titulo {
+	.views-field-title {
 		margin: 20px 0 10px;
 		a {
 			font-family: $crimson-textroman;
@@ -139,14 +139,14 @@
 		}
 	}
 	//body
-	.multimedia-conponente-body {
+	.views-field-body {
 		div p {
 			font-family: $crimson-textregular;
 			@include type-layout(o, 1.1);
 		}
 	}
 	//button
-	.multimedia-conponente-enlace {
+	.views-field-view-node {
 		@extend %link-slider-home;
 	}
 }
