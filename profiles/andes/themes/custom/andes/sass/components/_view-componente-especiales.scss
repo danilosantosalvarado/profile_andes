@@ -9,7 +9,6 @@
     padding-inline-start: 0px;
     li {
       margin: 10px 0;
-      // padding: 15px 50px;
       display: block;
       list-style: none;
       @include respond-to(xs) {
@@ -41,21 +40,31 @@
 
 .view-componente-especiales {
   > .view-content {
+    padding: 15px;
     > div {
-      padding: 10px 0;
       background: color('grey-light');
       margin-bottom: 20px;
+      float: left;
+      width: 100%;
       @include respond-to(m) {
+        width: 46%;
+      }
+      @include respond-to(m) {
+        width: 47%;
+        margin: 0.7em;
+      }
+      @include respond-to(xl) {
+        width: 31%;
+      }
+      @include respond-to(xxxl) {
         width: 23%;
-        width: 23%;
-        float: left;
-        margin-left: 20px;
       }
     }
     .views-field-view {
       .field-content {
         img {
           border-bottom: 3px solid color('blue-light');
+          width: 100%;
         }
       }
     }

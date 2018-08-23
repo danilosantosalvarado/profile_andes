@@ -4256,23 +4256,45 @@ body > .main-container.container-fluid {
   transition: background .5s;
 }
 
+.view-componente-especiales > .view-content {
+  padding: 15px;
+}
+
 .view-componente-especiales > .view-content > div {
-  padding: 10px 0;
   background: #f4f1f1;
   margin-bottom: 20px;
+  float: left;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .view-componente-especiales > .view-content > div {
+    width: 46%;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-componente-especiales > .view-content > div {
+    width: 47%;
+    margin: 0.7em;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-componente-especiales > .view-content > div {
+    width: 31%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-componente-especiales > .view-content > div {
     width: 23%;
-    width: 23%;
-    float: left;
-    margin-left: 20px;
   }
 }
 
 .view-componente-especiales > .view-content .views-field-view .field-content img {
   border-bottom: 3px solid #46b9c0;
+  width: 100%;
 }
 
 .view-componente-especiales > .view-content .views-field-title {
