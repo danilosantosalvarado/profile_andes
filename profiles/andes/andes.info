@@ -78,6 +78,7 @@ dependencies[] = panopoly_magic
 ; Export 
 dependencies[] = menu_import
 dependencies[] = phpexcel
+dependencies[] = taxonomy_csv
 ; Views
 dependencies[] = views
 dependencies[] = views_ui
