@@ -1,0 +1,208 @@
+/*
+//------------------------------------------------------------------------------
+// Home Especiales
+//------------------------------------------------------------------------------
+*/
+
+/* ------| Tabs |----- */
+#quicktabs-quicktabs_especiales {
+  ul.quicktabs-tabs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-inline-start: 0px;
+    li {
+      margin: 10px 0;
+      display: block;
+      list-style: none;
+      @include respond-to(xs) {
+        display: inline-block;
+        margin: 0px;
+      }
+      a {
+        font-family: $latobold;
+        @include font-size(s);
+        text-align: center;
+        text-decoration: none;
+        transition: background .5s;
+        background-color: #f0eeee;
+        padding: 15px 50px;
+        display: block;
+        cursor: pointer;
+      }
+      &.active {
+        a {
+          background-color: color('blue-light');
+          color: color('white');
+          transition: background .5s;
+        }
+      }
+    }
+  }
+}
+
+
+// .view-componente-especiales {
+//   > .view-content {
+//     padding: 15px;
+//     > div {
+//       background: color('grey-light');
+//       margin-bottom: 20px;
+//       float: left;
+//       width: 100%;
+//       @include respond-to(m) {
+//         width: 46%;
+//       }
+//       @include respond-to(m) {
+//         width: 47%;
+//         margin: 0.7em;
+//       }
+//       @include respond-to(xl) {
+//         width: 31%;
+//       }
+//       @include respond-to(xxxl) {
+//         width: 23%;
+//       }
+//     }
+//     .views-field-view {
+//       .field-content {
+//         img {
+//           border-bottom: 3px solid color('blue-light');
+//           width: 100%;
+//         }
+//       }
+//     }
+//     .views-field-title {
+//       font-size: 1.25rem;
+//       line-height: 1;
+//       text-align: left;
+//       text-decoration: none;
+//       margin: 20px 0 25px;
+//       padding: 0 15px;
+//       font-family: 'crimsontext-semibold';
+//       a {
+//         text-decoration: none;
+//       }
+//     }
+//     .views-field-body {
+//       margin-bottom: 20px;
+//       padding: 0 15px;
+//     }
+//     .views-field-view-node {
+//       padding: 0 15px;
+
+//       a {
+//         background-color: transparent;
+//         border: 1px solid color('blue-light');
+//         padding: 10px 10px;
+//         color: color('grey');
+//         text-decoration: none;
+//         z-index: 1;
+//         display: block;
+//         text-align: center;
+//         font-size: 18px;
+//         right: 25px;
+//         left: inherit;
+//         max-width: 120px;
+//         &:hover {
+//           background: color('blue-light');
+//           color: color('white');
+//         }
+//       }
+//     }
+//   }
+// }
+/* ------| Eventos |----- */
+.view-componente-especiales{
+  display: block;
+  overflow: hidden;
+  .view-content {
+    ul {
+      padding-inline-start: 0px;
+      li.views-row {
+        list-style: none;
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #f4f1f1;
+        margin: 10px 0;
+        @include respond-to(m) {
+          width: 47%;
+          // height: 530px;
+          margin: 0.7em;
+        }
+        @include respond-to(xl) {
+          width: 31%;
+          height: 557px;
+        }
+        @include respond-to(xxxl) {
+          width: 23%;
+        }
+        //Img
+        .views-field {
+          img{
+            width: 100%;
+            border-bottom: 3px solid color('blue-light');
+          }
+        }
+        //Fecha
+        .views-field-created {
+          margin: 10px 0px;
+          span {
+            font-family: $latoregular;
+            @include type-layout(xxs, 1.23);
+            padding: 0 15px;
+            color: color('blue-light');
+          }
+        }
+        //Titulo
+        .views-field-title {
+          font-family: $crimson-textbold;
+          @include type-layout(l, .96);
+          color: #484851;
+          @include margin(.834 0 .834);
+          padding: 0 15px;
+          @include respond-to(xl) {
+            @include font-size(ll);
+            @include margin(.9 0 1.042);
+          }
+        }
+        //Body
+        .views-field-body {
+          font-family: $crimson-textregular;
+          @include type-layout(m, 1.06);
+          @include margin-bottom(.417);
+          padding: 0 15px;
+          @include respond-to(xl) {
+            @include font-size(o);
+          }
+        }
+        //Button
+        .views-field-view-node {
+          a {
+            @include respond-to(m) {
+              position: absolute;
+              bottom: 20px;
+              right: 10px;
+              margin: 0px;
+            }
+            border: 1px solid color('blue-light');
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin: 20px;
+            outline: none;
+            float: right;
+            &:hover {
+              background-color: color('blue-light');
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
