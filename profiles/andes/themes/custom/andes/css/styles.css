@@ -4816,7 +4816,7 @@ body > .main-container.container-fluid {
 .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle,
 #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle,
 #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle {
-  color: white;
+  color: #fff;
   cursor: default;
   text-decoration: none;
   text-transform: uppercase;
@@ -4875,6 +4875,36 @@ body > .main-container.container-fluid {
   color: #fff;
   text-decoration: none;
   background-color: transparent;
+}
+
+/* ------| Redes Sociales |----- */
+.view-id-footer_redes_sociales {
+  padding-top: 65px;
+  padding-left: 35px;
+}
+
+@media (min-width: 992px) {
+  .view-id-footer_redes_sociales {
+    padding-left: 15px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+}
+
+.view-id-footer_redes_sociales h3 {
+  color: #fff;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.view-id-footer_redes_sociales .views-row {
+  display: block;
+  float: left;
+  padding: 5px 5px 5px 0;
+  width: 30px;
+  height: 30px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 /*# sourceMappingURL=styles.css.map */

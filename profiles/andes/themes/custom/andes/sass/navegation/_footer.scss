@@ -220,7 +220,7 @@
 				}
 			}
 			a.dropdown-toggle {
-				color: white;
+				color: color('white');
 				cursor: default;
 				text-decoration: none;
 				text-transform: uppercase;
@@ -262,3 +262,31 @@
 		}
 	}
 }
+
+/* ------| Redes Sociales |----- */
+.view-id-footer_redes_sociales {
+	padding-top: 65px;
+	padding-left: 35px;
+	// padding-top: 20px;
+		@include respond-to(xl) {
+		// border-left: 1px solid #222222;
+		// width: 23%;
+		padding-left: 15px;
+		box-sizing: content-box;
+	}
+	h3 {
+		color: color('white');
+		@include font-size(s);
+    text-transform: uppercase;
+	}
+	.views-row {
+		display: block;
+    float: left;
+    padding: 5px 5px 5px 0;
+    width: 30px;
+    height: 30px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+	}
+}
+
