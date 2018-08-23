@@ -1,11 +1,92 @@
-/* color */
-$color: #b600eb;
-$gray: #484851;
+/*
+//------------------------------------------------------------------------------
+// Componente Anuncios
+//------------------------------------------------------------------------------
+*/
 
-.view-componente-anuncios{
+.view-componente-anuncios {
   background: #f0eeee;
-  padding: 45px 0 !important;
-  .views-slideshow-controls-bottom{
+  padding: 45px 0;
+  .view-content {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include respond-to(m) {
+        width: 750px;
+    }
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    li {
+      .views-slideshow-swiper-main-frame-row-item {
+        //imagen
+        .views-field-field-image {
+          img {
+            width: 100%;
+          }
+          border: 5px solid #fff;
+          @include respond-to(xl) {
+            float: left;
+            width: 50%;
+          }
+        }
+        //contenido
+        .anuncios-conten {
+          background: #fff;
+          border-top: 4px solid color('fucsia');
+          padding: 20px;
+          overflow: hidden;
+          @include respond-to(xl) {
+            float: left;
+            width: 50%;
+            margin: 20px 0 0;
+          }
+          //titulo
+          .anuncios-titulo {
+            h3 {
+              font-family: $crimson-textbold;
+              @include font-size(ll);
+              color: color('grey-dark');
+              line-height: 1.1;
+              // font-weight: 600;
+              text-decoration: none;
+            }
+          }
+          //body
+          .anuncios-body {
+            p {
+              font-family: $crimson-textregular;
+              @include font-size(m);
+            }
+          }
+          //enlaces
+          .anuncios-enlace {
+            a {
+              font-family: $crimson-textregular;
+              @include font-size(m);
+              color: color('grey-dark');
+              text-align: center;
+              text-decoration: none;
+              padding: 10px 20px;
+              border: 1px solid color('grey-dark');
+              max-width: 300px;
+              display: block;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Puntos Slider
+.view-componente-anuncios {
+  .views-slideshow-controls-bottom {
     text-align: center;
     padding: 0;
     text-align: center;
@@ -14,9 +95,9 @@ $gray: #484851;
       .views-slideshow-pager-field-item{
         display: inline-block;
         padding: 2px 5px;
-        a{
+        a {
           background: transparent;
-          border: 1px solid $color;
+          border: 1px solid color('fucsia');
           border-radius: 10px;
           font-size: 0;
           padding: 0;
@@ -26,52 +107,7 @@ $gray: #484851;
         }
         &.active{
           a{
-            background: $color;
-          }
-        }
-      }
-    }
-  }
-  .swiper-slide{
-    //height: 400px;
-    .views-slideshow-swiper-main-frame-row-item{
-      @include respond-to(m){
-        width: 70%;
-        margin: 0 auto
-      }
-      .views-field-field-image{
-        width: 100%;
-        padding: 5px;
-        border-bottom: 4px solid $color;
-        @include respond-to(m){
-          width: 49%;
-          float: left;
-        }
-      }
-      .views-field-title-field{
-        color: #484851;
-        font-size: 1.3rem;
-        line-height: 1.1;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 20px 20px 0;
-      }
-      .views-field-field-body{
-        font-size: .9rem;
-        color: $gray;
-        padding: 20px 20px 0;
-      }
-      .views-field-field-enlace-ver-mas{
-        padding: 20px 20px 0;
-        a{
-          float: right;
-          font-size: .8rem;
-          padding: 10px 20px;
-          border: 1px solid $gray;
-          text-decoration: none;
-          &:hover{
-            background: #b600eb;
-            color: #fff;
+            background: color('fucsia');
           }
         }
       }

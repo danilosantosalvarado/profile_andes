@@ -4340,10 +4340,95 @@ body > .main-container.container-fluid {
   color: #fff;
 }
 
-/* color */
+/*
+//------------------------------------------------------------------------------
+// Componente Anuncios
+//------------------------------------------------------------------------------
+*/
 .view-componente-anuncios {
   background: #f0eeee;
-  padding: 45px 0 !important;
+  padding: 45px 0;
+}
+
+.view-componente-anuncios .view-content {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .view-componente-anuncios .view-content {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-componente-anuncios .view-content {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-componente-anuncios .view-content {
+    width: 1170px;
+  }
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+  border: 5px solid #fff;
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+    float: left;
+    width: 50%;
+  }
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten {
+  background: #fff;
+  border-top: 4px solid #b600eb;
+  padding: 20px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten {
+    float: left;
+    width: 50%;
+    margin: 20px 0 0;
+  }
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-titulo h3 {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.4375rem;
+  color: #484851;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-body p {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-enlace a {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484851;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #484851;
+  max-width: 300px;
+  display: block;
+  float: right;
 }
 
 .view-componente-anuncios .views-slideshow-controls-bottom {
@@ -4374,58 +4459,6 @@ body > .main-container.container-fluid {
 
 .view-componente-anuncios .views-slideshow-controls-bottom .views_slideshow_pager_field .views-slideshow-pager-field-item.active a {
   background: #b600eb;
-}
-
-@media (min-width: 768px) {
-  .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
-  width: 100%;
-  padding: 5px;
-  border-bottom: 4px solid #b600eb;
-}
-
-@media (min-width: 768px) {
-  .view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
-    width: 49%;
-    float: left;
-  }
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-title-field {
-  color: #484851;
-  font-size: 1.3rem;
-  line-height: 1.1;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 20px 20px 0;
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-body {
-  font-size: .9rem;
-  color: #484851;
-  padding: 20px 20px 0;
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas {
-  padding: 20px 20px 0;
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas a {
-  float: right;
-  font-size: .8rem;
-  padding: 10px 20px;
-  border: 1px solid #484851;
-  text-decoration: none;
-}
-
-.view-componente-anuncios .swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-field-enlace-ver-mas a:hover {
-  background: #b600eb;
-  color: #fff;
 }
 
 /*
