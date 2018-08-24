@@ -56,11 +56,10 @@
         function dropdown(){
           /* Nivel3 */
           $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function(){
-            console.log($(this));
             $('.box-black').parents('.row-fluid').addClass('parent-clone');
             $('.box-black a').text('<' +$(this).text() );
             SubMenuCloneNivel3  = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
-            $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
+            $(this).parents('.parent-clone').find('.active-clone').addClass('none').after(SubMenuCloneNivel3);
           });
           /* Nivel2 */
           $('.level-2 > .dropdown-toggle').on("click", function () {

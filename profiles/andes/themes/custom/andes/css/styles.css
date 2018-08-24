@@ -3699,7 +3699,7 @@ body > .main-container.container-fluid {
   .tb-megamenu .row-fluid .content-img {
     display: block !important;
     position: absolute;
-    width: auto;
+    width: 100%;
     left: 300px;
     /* Safari */
     transition: all .3s ease-in-out;
@@ -3743,12 +3743,12 @@ body > .main-container.container-fluid {
 
 @media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu .level-0 .level-1 > .nav-child {
-    -webkit-transition: right .4s;
-    /* Safari */
     border: none;
     padding-left: 10px;
     height: auto;
-    height: 300px;
+    height: 324px;
+    padding: 0 20px 0 40px;
+    overflow: hidden;
   }
 }
 
