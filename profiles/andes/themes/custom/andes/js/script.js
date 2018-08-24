@@ -13,7 +13,7 @@
     attach: function (context, settings) {
       var docWidth      = $(document).width(),
           $level1  =       $('.tb-megamenu-item.level-1'),
-          $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a');
+          $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
 
 
       $level1.hover(function () {
@@ -72,19 +72,12 @@
               $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
               $('.parent-clone').find('.content-img').addClass('active-sub-nivel');
               $('.active-clone').addClass('efect')
-             // $('.box-black').addClass('active-box').parents('.parent-clone').find('.content-img').addClass('active2');
-            //  $('.box-black').addClass('active-box').parents('.parent-clone').find('.content-img').addClass('active-sub-nivel');
             }, 100);
-
-
-            //var child = $(this).siblings('.nav-child').html();
-           // var item  = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
             /* salir */
             $('.box-black').click(function () {
-             // $('.box-black').addClass('active-box').siblings('.content-img').removeClass('active');
-              $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
-              $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
-              $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
+              $('.box-black').removeClass('active-box');
+              $('.nav-child.active').removeClass('active');
+              $('ul.level-1.active').removeClass('active');
               $('.active-clone').remove();
               $('.clone-nivel-3').remove();
               $('.content-img').removeClass('active-sub-nivel')
@@ -101,7 +94,9 @@
           classBlockClone = 'clone-mobile-block',
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
           className = 'clone',
-          itemMobil =  $contentFather.find('.level-1  a');
+          itemMobil =  $contentFather.find('.level-1 > a.dropdown-toggle');
+          itemMobilNivel = $contentFather.find('.level-2 > a.dropdown-toggle');
+
 
         itemMobil.on("click",  function () {
           $('.box-black').remove();
@@ -118,6 +113,23 @@
           });
         });
 
+        itemMobilNivel.on("click", function () {
+          $('.box-black').remove();
+          let $this = $(this);
+          $this.siblings().addClass('active-mobile');
+          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><a> < " + $this.text() + "</a></div>");
+          console.log($this);
+          $('.box-black').click(function () {
+            console.log($this);
+            //$('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+            //$('.box-black').removeClass('active-box'); /* nivel 2 animacion */
+            $(this).parents('.active-mobile').removeClass('active-mobile'); /* nivel 2 animacion */
+
+          });
+        });
+
+
+        itemMobilNivel.removeAttr('href');
         itemMobil.removeAttr('href');
         $contentFather.after("<div class='" + className + "'></div>");
         $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");

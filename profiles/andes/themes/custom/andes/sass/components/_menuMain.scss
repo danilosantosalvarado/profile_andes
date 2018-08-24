@@ -5,6 +5,10 @@ $white: #FFFFFF;
 .navbar-header{
 
 }
+.tb-megamenu .nav > li > a:focus,
+.tb-megamenu .nav > li > a:hover{
+  background-color: transparent;
+}
 .tb-megamenu .always-show .mega > .mega-dropdown-menu,
 .tb-megamenu .always-show .dropdown-menu{
   //display: none !important;
@@ -112,6 +116,9 @@ $white: #FFFFFF;
 }
 /* clone de bloque */
 .parent-clone{
+  .tb-megamenu-column{
+    width: 37%;
+  }
   div:last-child {
     /* width: 61%;
     float: right;
@@ -216,7 +223,8 @@ $white: #FFFFFF;
     display: block !important;
     position: absolute;
     width: 100%;
-    left: 300px;
+    left: 36%;
+    top: 10px;
     -webkit-transition: all .3s ease-in-out; /* Safari */
     transition: all .3s ease-in-out;
   }
@@ -234,10 +242,6 @@ $white: #FFFFFF;
     border-left: none !important;
   }
 }
-.tb-megamenu .dropdown-submenu > .dropdown-menu{
-  left: 10000% !important;
-  opacity: 0;
-}
 .tb-megamenu-menu-mega-menu{
   -webkit-transition: background-color 2s; /* Safari */
   transition: background-color .2s;
@@ -254,9 +258,10 @@ $white: #FFFFFF;
       border: none;
       padding-left: 10px;
       height: auto;
-      height: 324px;
-      padding: 0 20px 0 40px;
+      height: 314px;
+      //padding: 0 20px 0 40px;
       overflow: hidden;
+      z-index: 99;
     }
   }
   .box-black {
@@ -265,6 +270,7 @@ $white: #FFFFFF;
     width: 100%;
     right: 0px;
     top: 0px;
+
     -webkit-transition: right .5s; /* Safari */
     transition: right .5s;
     padding: 20px 30px;
@@ -273,7 +279,7 @@ $white: #FFFFFF;
     position: absolute;
       padding: 0;
       height: 400px;
-      width: 23.076923076923077%;
+      width: 22%;
       top: 0;
       left: -1000px;
       -webkit-transition: left .5s; /* Safari */
@@ -325,11 +331,16 @@ $white: #FFFFFF;
         margin-left: 0px;
         transition: all .3s ease-in-out;
       }
+      .dropdown-submenu .tb-megamenu-submenu{
+        @include respond-to(m){
+          opacity: 0;
+          height: 0;
+          left: 1000% !important;
+        }
+      }
     }
   }
   li.level-2 *.nav-child{
-    //position: fixed;
-    //opacity: 1;
     opacity: 0;
     height: 100%;
     background: white;
@@ -337,35 +348,27 @@ $white: #FFFFFF;
     top: 0px;
     margin-left: 0;
     height: 0;
-    /* left: 0 !important;
-    padding: 0px 12px; */
-    &.active-subnivel{
-      //opacity: 1;
-      //position: fixed;
-    }
     @include respond-to(m){
       opacity: 0;
       margin-left: -420px;
-      //position: fixed;
-      //height: 0;
-      //-webkit-transition: opacity .4s; /* Safari */
-      //transition: opacity .4s;
-      //position: absolute;
-      //top: 0;
-      &.active {
-        //opacity: 1;
-        //display: block;
-        //margin-left: 220px;
-       /// margin-left: 259px;
-        //-webkit-transition: opacity 1s, margin-left .4s; /* Safari */
-    //transition: opacity 1s, margin-left .4s;
-      }
     }
+    &.active-mobile{
+      opacity: 1;
+      position: fixed;
+      height: 100%;
+    }
+
+
     .tb-megamenu-column.mega-col-nav{
       top: 87px;
     }
   }
-
+  ul.tb-megamenu-subnav.level-1{
+    width: 40%;
+  }
+  ul.tb-megamenu-subnav.level-3 .tb-megamenu-submenu{
+    opacity: 0;
+  }
   ul.tb-megamenu-subnav.level-1,
   ul.tb-megamenu-subnav.level-2,
   ul.tb-megamenu-subnav.level-3 {
@@ -435,7 +438,6 @@ $white: #FFFFFF;
         color: #484851 !important;
         border: none;
         font-family: Lato,sans-serif;
-        //padding: 29px 9px;
         font-size: .83rem;
         line-height: .9rem;
         text-align: center;
@@ -443,6 +445,7 @@ $white: #FFFFFF;
         display: inline-block;
         vertical-align: middle;
         font-weight: initial;
+        background: transparent;
       }
     }
   }
@@ -514,7 +517,9 @@ $white: #FFFFFF;
         transition: right .4s;
         height: 100%;
         .tb-megamenu-column-inner{
-          padding: 40px 0 0 41px;
+          @include respond-to(m){
+            padding: 40px 0 0 41px;
+          }
         }
       }
     }
@@ -627,6 +632,22 @@ $white: #FFFFFF;
           @include respond-to(m){
             font-size: .83rem;
             font-weight: initial;
+            display: table;
+            &::after{
+              display: none;
+            }
+            &::before{
+              //content: '>';
+              display: block;
+              width: 20px;
+              height: 20px;
+            }
+            .caret{
+
+            }
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
       }
