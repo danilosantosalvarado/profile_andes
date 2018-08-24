@@ -222,16 +222,17 @@ $white: #FFFFFF;
   @include respond-to(m){
     display: block !important;
     position: absolute;
-    width: 70%;
-    right: 0;
-    -webkit-transition: width .5s; /* Safari */
-    transition: width .5s;
+    width: auto;
+    left: 300px;
+    -webkit-transition: all .3s ease-in-out; /* Safari */
+    transition: all .3s ease-in-out;
   }
   &.active-sub-nivel{
-    -webkit-transition: width .5s; /* Safari */
-    transition: width .5s;
-    width: 60%;
+    //width: 60%;
     top: 10px;
+    left: 600px;
+    -webkit-transition: all .3s ease-in-out; /* Safari */
+    transition: all .3s ease-in-out;
   }
   .menu-title{
     display: none;
@@ -275,16 +276,15 @@ $white: #FFFFFF;
     top: 0px;
     -webkit-transition: right .5s; /* Safari */
     transition: right .5s;
-    z-index: 9999;
     padding: 20px 30px;
+    z-index: 9;
     @include respond-to(m){
     position: absolute;
       padding: 0;
       height: 400px;
       width: 23.076923076923077%;
       top: 0;
-      left: -400px;
-      z-index: 3;
+      left: -1000px;
       -webkit-transition: left .5s; /* Safari */
       transition: left .5s;
     }
@@ -322,11 +322,18 @@ $white: #FFFFFF;
     &.active-clone{
       position: relative;
       display: block;
-      opacity: 1;
+      opacity: 0;
       transition: .4;
       border: none;
       background: transparent;
       box-shadow: none;
+      margin-left: -400px;
+      transition: all .3s ease-in-out;
+      &.efect{
+        opacity: 1;
+        margin-left: 0px;
+        transition: all .3s ease-in-out;
+      }
     }
   }
   li.level-2 *.nav-child{
