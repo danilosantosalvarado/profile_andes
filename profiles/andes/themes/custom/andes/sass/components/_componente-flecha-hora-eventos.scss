@@ -1,5 +1,47 @@
 /*
 //------------------------------------------------------------------------------
-//componente fecha y hora
+//Componente fecha y hora eventos
 //------------------------------------------------------------------------------
 */
+.view-id-fecha_y_hora_evento {
+  .views-row {
+    float: left;
+    width: 100%;
+    padding: 20px 15px;
+    @include respond-to(m) {
+      padding: 20px 0;
+      max-width: 550px;
+      margin: 0 auto;
+      float: none;
+      overflow: hidden;
+    }
+    .imagen-eento {
+      float: left;
+      width: 50px;
+    }
+    .box-internal {
+      float: left;
+      width: auto;
+      padding-left: 20px;
+      box-sizing: content-box;
+      .lugar-eventos,
+      .fecha-eventos,
+      .hora-eventos {
+        margin-bottom: 1rem;
+        widows: 100%;
+        display: flex;
+        span:nth-child(1){
+          font-family: $latobold;
+          color: color('black');
+          @include font-size(xs);
+        }
+        span:nth-child(2){
+          font-family: $latoregular;
+          color: color('black');
+          @include font-size(xs);
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}

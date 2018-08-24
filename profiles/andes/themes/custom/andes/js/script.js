@@ -173,10 +173,10 @@
 	//add breidpoint news component.
 	$(window).ready(function() {
     if($('.view-banner-nodes').length > 0){
-      var ParentSlideClass = $('.view-banner-nodes .field-content').children('div').first().attr("class");
-      $('.view-banner-nodes').addClass(ParentSlideClass+"-container");
-      var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
-      SlideClass = slideActivePosition+"-control";
+      // var ParentSlideClass = $('.view-banner-nodes .field-content').children('div').first().attr("class");
+      // $('.view-banner-nodes').addClass(ParentSlideClass+"-container");
+      // var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').first().attr('class');
+      // SlideClass = slideActivePosition+"-control";
     }
     checkSize();
     $(window).resize(checkSize);
@@ -195,7 +195,21 @@
 			setTimeout(function(){
 				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
 			},50)
-		}
+    }
+    if ($('.view-id-componente_eventos .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-id-componente_eventos .swiper-container-horizontal').attr('id'), data);
+			},50)
+    }
+    if ($('.view-display-id-componente_publicaciones .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-display-id-componente_publicaciones .swiper-container-horizontal').attr('id'), data);
+			},50)
+    }
+
+    //
+    //view-display-id-componente_publicaciones
+    //view-id-componente_eventos
 	}
 setTimeout(function(){
   if($('.view-banner-nodes').length > 0){

@@ -4,6 +4,47 @@
 //------------------------------------------------------------------------------
 */
 
+/* ------| Tabs |----- */
+.view-id-home_eventos {
+  .quicktabs-wrapper {
+    ul.quicktabs-tabs {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 40px;
+      padding-inline-start: 0px;
+      li {
+        margin: 10px 0;
+        display: block;
+        list-style: none;
+        @include respond-to(xs) {
+          display: inline-block;
+          margin: 0px;
+        }
+        a {
+          font-family: $latobold;
+          @include font-size(s);
+          text-align: center;
+          text-decoration: none;
+          transition: background .5s;
+          background-color: #f0eeee;
+          padding: 15px 50px;
+          display: block;
+          cursor: pointer;
+        }
+        &.active {
+          a {
+            background-color: #e34d1f;
+            color: color('white');
+            transition: background .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------| Eventos |----- */
 .view-id-eventos {
   display: block;
   overflow: hidden;

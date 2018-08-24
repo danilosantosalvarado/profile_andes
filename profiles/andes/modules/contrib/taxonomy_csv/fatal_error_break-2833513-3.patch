@@ -1,0 +1,13 @@
+diff --git a/import/taxonomy_csv.import.line.api.inc b/import/taxonomy_csv.import.line.api.inc
+index e0fe714..d93e5ea 100644
+--- a/import/taxonomy_csv.import.line.api.inc
++++ b/import/taxonomy_csv.import.line.api.inc
+@@ -469,7 +469,7 @@ function taxonomy_csv_line_import_localize($line, $options, $terms_count = 0) {
+   // Import term then store result.
+   $current_result = taxonomy_csv_term_import($term, $options['update_or_ignore']);
+   if (_taxonomy_csv_line_result($result, $current_result, $terms_count)) {
+-    break;
++    return;
+   }
+ 
+   // 2. Create localizations.
