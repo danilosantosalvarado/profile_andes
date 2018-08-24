@@ -62,28 +62,32 @@
             SubMenuCloneNivel3  = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
             $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
           });
-
+          /* Nivel2 */
           $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
             $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><a> < " + $(this).text() + "</a></div>");
-            $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
             setTimeout(function () {
-              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
-              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active-sub-nivel');
+              $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
+              $('.parent-clone').find('.content-img').addClass('active-sub-nivel');
+
+             // $('.box-black').addClass('active-box').parents('.parent-clone').find('.content-img').addClass('active2');
+            //  $('.box-black').addClass('active-box').parents('.parent-clone').find('.content-img').addClass('active-sub-nivel');
             }, 100);
             var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
-
             $(this).parents('.tb-megamenu-column').after(SubMenuClone);
-            var child = $(this).siblings('.nav-child').html();
-            var item  = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
+
+            //var child = $(this).siblings('.nav-child').html();
+           // var item  = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
+            /* salir */
             $('.box-black').click(function () {
-              $('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+             // $('.box-black').addClass('active-box').siblings('.content-img').removeClass('active');
               $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
               $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
               $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
               $('.active-clone').remove();
               $('.clone-nivel-3').remove();
+              $('.content-img').removeClass('active-sub-nivel')
             });
             dropdown();
           });
