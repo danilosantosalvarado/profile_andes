@@ -6,6 +6,23 @@
 
 .view-id-componente_acordeon {
   .quicktabs-tabs {
+    display: flex;
+    overflow-x: scroll;
+    padding: 30px 0;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    /* Cuadro */
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      // background: #f1f1f1;
+    }
+    /* scroll */
+    &::-webkit-scrollbar-thumb {
+      // border-radius: 10px;
+      background: #888;
+    }
     a {
       // display: block;
       color: #bbb;

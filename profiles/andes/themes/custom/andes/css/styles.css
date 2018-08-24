@@ -2326,6 +2326,28 @@ body > .main-container.container-fluid {
 // Componente filas taps
 //------------------------------------------------------------------------------
 */
+.view-id-componente_acordeon .quicktabs-tabs {
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding: 30px 0;
+  /* width */
+  /* Cuadro */
+  /* scroll */
+}
+
+.view-id-componente_acordeon .quicktabs-tabs::-webkit-scrollbar {
+  width: 3px;
+}
+
+.view-id-componente_acordeon .quicktabs-tabs::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.view-id-componente_acordeon .quicktabs-tabs::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 .view-id-componente_acordeon .quicktabs-tabs a {
   color: #bbb;
   text-align: center;
@@ -3249,6 +3271,8 @@ body > .main-container.container-fluid {
 /* ------| bullet (puntos) |----- */
 .view-banner-nodes .views-slideshow-controls-bottom {
   margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed {
@@ -3258,15 +3282,21 @@ body > .main-container.container-fluid {
       justify-content: center;
   overflow: scroll;
   margin: 0 auto;
+  padding: 10px 0;
+  /* width */
+  /* scroll */
 }
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed::-webkit-scrollbar {
   width: 1em;
 }
 
+.view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed::-webkit-scrollbar-corner {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background: #888;
 }
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item {
