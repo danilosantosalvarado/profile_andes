@@ -3291,10 +3291,6 @@ body > .main-container.container-fluid {
   width: 1em;
 }
 
-.view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed::-webkit-scrollbar-corner {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed::-webkit-scrollbar-thumb {
   background: #888;
 }
