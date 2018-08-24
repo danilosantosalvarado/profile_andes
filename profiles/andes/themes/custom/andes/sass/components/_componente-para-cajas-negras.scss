@@ -4,92 +4,104 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-componente_layout_4{
-  max-width: 1140px;
-  margin: 0 auto;
+.view-id-componente_layout_4 {
+  // max-width: 1140px;
   .view-content {
-     width: 100%;
     .views-row {
+      height: 302px;
       position: relative;
-      background-repeat: no-repeat;
-      background-size: cover;
       display: block;
-      float: left;
-      margin: 0 2% 10px 0;
-      //height: auto;
-      height: 370px;
+      margin: 10px 0px;
       overflow: hidden;
-      width: 31.33%;
       transition: .4s;
-      &:hover {
-        &::before {
-          content: ' ';
-          display: block;
-          position: absolute;
-          top: 6%;
-          border: 1px white solid;
-          width: 90%;
-          padding: 20px;
-          height: 289px;
-          margin-left: auto;
-          margin-right: auto;
-          left: 0;
-          right: 0;
-          transition: .4s;
-          z-index: 1;
-        }
-        a {
-          opacity: 1;
-          transition: .3s;
-        }
+      &::before {
+        content: '';
+        background-color: color('black');
+        opacity: .5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
+      }
+      @include respond-to(m) {
+        float: left;
+        margin: 10px 5px;
+        width: 48.6%;
+      }
+      @include respond-to(xl) {
+        width: 32.2%;
       }
       .container-image-video {
-        position: relative;
-        transform: scale(1.8);
-         &::before{
-          content: ' ';
-          display: block;
-          position: absolute;
-          top: 0;
-          background-color: black;
+        img {
           width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-          left: 0;
-          right: 0;
-          height: 267px;
-          opacity: .6;
+          height: -webkit-fill-available;
+          z-index: -1;
         }
       }
       .container-title-desc {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.4rem;
-        padding-top: 20px!important;
         position: absolute;
-        top: 34px;
-        text-align: center;
+        top: 0px;
+        left: 0px;
         width: 100%;
+        height: 100%;
+        border: 1px solid red;
+        .caja-titulo {
+          font-family: $latoblack;
+          @include font-size(l);
+          text-transform: uppercase;
+          color: color('white');
+          text-align: center;
+          margin: 20px 0;
+        }
+        .caja-body {
+          font-family: $crimson-textregular;
+          @include type-layout(l, .96);
+          color: color('white');
+          text-align: center;
+        }
       }
       a {
-        position: absolute;
-        bottom: 41px;
+        width: 150px;
+        font-family: Lato,sans-ser;
+        font-size: 17px;
         color: white;
-        width: 210px;
-        background: black;
         padding: 5px 0px;
         margin-left: auto;
         margin-right: auto;
-        left: 0;
-        right: 0;
         border: 1px white solid;
-        opacity: 0;
-        transition: .3s;
+        background-color: color('black');
         text-align: center;
-        z-index: 2;
-        font-size: 17px;
-        font-family: Lato,sans-ser;
+        text-decoration: none;
+        &:hover {
+          background: #fff;
+          color: color('grey-dark');
+        }
+      }
+      @include respond-to(xl) {
+        &:hover {
+          a {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            transition: .3s;
+            z-index: 2;
+          }
+          &::after {
+            content: '';
+            border: 1px solid #fff;
+            width: 90%;
+            height: 85%;
+            position: absolute;
+            top: 7px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            z-index: 1;
+          }
+        }
       }
     }
   }
