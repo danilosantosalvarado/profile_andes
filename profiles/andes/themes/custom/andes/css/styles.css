@@ -3621,6 +3621,10 @@ body > .main-container.container-fluid {
 }
 
 /* clone de bloque */
+.parent-clone .tb-megamenu-column {
+  width: 37%;
+}
+
 .parent-clone div:last-child {
   /* width: 61%;
     float: right;
@@ -3731,7 +3735,8 @@ body > .main-container.container-fluid {
     display: block !important;
     position: absolute;
     width: 100%;
-    left: 300px;
+    left: 36%;
+    top: 10px;
     /* Safari */
     transition: all .3s ease-in-out;
   }
@@ -3773,7 +3778,6 @@ body > .main-container.container-fluid {
     padding-left: 10px;
     height: auto;
     height: 314px;
-    padding: 0 20px 0 40px;
     overflow: hidden;
     z-index: 99;
   }
@@ -3796,7 +3800,7 @@ body > .main-container.container-fluid {
     position: absolute;
     padding: 0;
     height: 400px;
-    width: 23.076923076923077%;
+    width: 22%;
     top: 0;
     left: -1000px;
     /* Safari */
@@ -3858,6 +3862,14 @@ body > .main-container.container-fluid {
   transition: all .3s ease-in-out;
 }
 
+@media (min-width: 768px) {
+  .tb-megamenu-menu-mega-menu .nav-child.active-clone .dropdown-submenu .tb-megamenu-submenu {
+    opacity: 0;
+    height: 0;
+    left: 1000% !important;
+  }
+}
+
 .tb-megamenu-menu-mega-menu li.level-2 *.nav-child {
   opacity: 0;
   height: 100%;
@@ -3871,7 +3883,6 @@ body > .main-container.container-fluid {
 @media (min-width: 768px) {
   .tb-megamenu-menu-mega-menu li.level-2 *.nav-child {
     opacity: 0;
-    opacity: 0;
     margin-left: -420px;
   }
 }
@@ -3884,6 +3895,14 @@ body > .main-container.container-fluid {
 
 .tb-megamenu-menu-mega-menu li.level-2 *.nav-child .tb-megamenu-column.mega-col-nav {
   top: 87px;
+}
+
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1 {
+  width: 40%;
+}
+
+.tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-3 .tb-megamenu-submenu {
+  opacity: 0;
 }
 
 .tb-megamenu-menu-mega-menu ul.tb-megamenu-subnav.level-1,
@@ -4203,6 +4222,18 @@ body > .main-container.container-fluid {
   .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a {
     font-size: .83rem;
     font-weight: initial;
+    display: table;
+  }
+  .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a::after {
+    display: none;
+  }
+  .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  .tb-megamenu-menu-mega-menu .always-show ul.tb-megamenu-nav.level-0 li.level-1.active a:hover {
+    text-decoration: underline;
   }
 }
 

@@ -116,6 +116,9 @@ $white: #FFFFFF;
 }
 /* clone de bloque */
 .parent-clone{
+  .tb-megamenu-column{
+    width: 37%;
+  }
   div:last-child {
     /* width: 61%;
     float: right;
@@ -220,7 +223,8 @@ $white: #FFFFFF;
     display: block !important;
     position: absolute;
     width: 100%;
-    left: 300px;
+    left: 36%;
+    top: 10px;
     -webkit-transition: all .3s ease-in-out; /* Safari */
     transition: all .3s ease-in-out;
   }
@@ -255,7 +259,7 @@ $white: #FFFFFF;
       padding-left: 10px;
       height: auto;
       height: 314px;
-      padding: 0 20px 0 40px;
+      //padding: 0 20px 0 40px;
       overflow: hidden;
       z-index: 99;
     }
@@ -266,6 +270,7 @@ $white: #FFFFFF;
     width: 100%;
     right: 0px;
     top: 0px;
+
     -webkit-transition: right .5s; /* Safari */
     transition: right .5s;
     padding: 20px 30px;
@@ -274,7 +279,7 @@ $white: #FFFFFF;
     position: absolute;
       padding: 0;
       height: 400px;
-      width: 23.076923076923077%;
+      width: 22%;
       top: 0;
       left: -1000px;
       -webkit-transition: left .5s; /* Safari */
@@ -326,6 +331,13 @@ $white: #FFFFFF;
         margin-left: 0px;
         transition: all .3s ease-in-out;
       }
+      .dropdown-submenu .tb-megamenu-submenu{
+        @include respond-to(m){
+          opacity: 0;
+          height: 0;
+          left: 1000% !important;
+        }
+      }
     }
   }
   li.level-2 *.nav-child{
@@ -337,7 +349,6 @@ $white: #FFFFFF;
     margin-left: 0;
     height: 0;
     @include respond-to(m){
-      opacity: 0;
       opacity: 0;
       margin-left: -420px;
     }
@@ -352,7 +363,12 @@ $white: #FFFFFF;
       top: 87px;
     }
   }
-
+  ul.tb-megamenu-subnav.level-1{
+    width: 40%;
+  }
+  ul.tb-megamenu-subnav.level-3 .tb-megamenu-submenu{
+    opacity: 0;
+  }
   ul.tb-megamenu-subnav.level-1,
   ul.tb-megamenu-subnav.level-2,
   ul.tb-megamenu-subnav.level-3 {
@@ -616,6 +632,22 @@ $white: #FFFFFF;
           @include respond-to(m){
             font-size: .83rem;
             font-weight: initial;
+            display: table;
+            &::after{
+              display: none;
+            }
+            &::before{
+              //content: '>';
+              display: block;
+              width: 20px;
+              height: 20px;
+            }
+            .caret{
+
+            }
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
       }
