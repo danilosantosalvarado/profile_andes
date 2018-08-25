@@ -3298,8 +3298,7 @@ body > .main-container.container-fluid {
 /* ------| bullet (puntos) |----- */
 .view-banner-nodes .views-slideshow-controls-bottom {
   margin-top: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 100%;
 }
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed {
@@ -3309,7 +3308,7 @@ body > .main-container.container-fluid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: scroll;
+  overflow-x: scroll;
   margin: 0 auto;
   padding: 10px 0;
   /* width */
@@ -3326,7 +3325,6 @@ body > .main-container.container-fluid {
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item {
   margin: 0 5px 10px;
-  min-width: 140px;
 }
 
 @media (min-width: 768px) {
@@ -3338,7 +3336,7 @@ body > .main-container.container-fluid {
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item .views-content-field-image-banner img,
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item .views-field-field-video-banner img {
   max-height: 78px;
-  width: 100%;
+  width: 140px;
 }
 
 .view-banner-nodes .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item .views-field-counter {

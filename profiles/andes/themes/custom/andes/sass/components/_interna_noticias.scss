@@ -277,34 +277,32 @@
 .view-banner-nodes {
 	.views-slideshow-controls-bottom {
 		margin-top: 30px;
-		margin-left: 15px;
-		margin-right: 15px;
+		width: 100%;
+		// margin-left: 15px;
+		// margin-right: 15px;
 		.views-slideshow-pager-field-processed {
-			// width: 450px;
 			display: flex;
 			justify-content: center;
-			overflow: scroll;
+			overflow-x: scroll;
 			margin: 0 auto;
 			padding: 10px 0;
 			/* width */
 			&::-webkit-scrollbar {
 				width: 1em;
 			}
-			//  /* Cuadro */
-			//  &::-webkit-scrollbar-track {
-			// 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-			// }
-			// &::-webkit-scrollbar-corner {
-			// 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-			// }
-			/* scroll */
+		//  /* Cuadro */
+		//  &::-webkit-scrollbar-track {
+		// 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		// 		// background: #f1f1f1;
+		// 	}
+		/* scroll */
 			&::-webkit-scrollbar-thumb {
 				// border-radius: 10px;
 				background: #888;
 			}
 			.views-slideshow-pager-field-item {
 				margin: 0 5px 10px;
-				min-width: 140px;
+				// min-width: 140px;
 				@include respond-to(m) {
 					margin: 0 5px;
 				}
@@ -313,7 +311,7 @@
 				.views-field-field-video-banner {
 					img {
 						max-height: 78px;
-						width: 100%;
+						width: 140px;
 					}
 				}
 				//numero
