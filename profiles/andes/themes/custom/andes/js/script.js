@@ -187,7 +187,7 @@
     // autoplay: {
     //   delay: 5000,
     // },
-		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 992 && docWidth <= 1200) ) {
+		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 0 && docWidth <= 1200) ) {
 			setTimeout(function(){
 				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
 			},50)
