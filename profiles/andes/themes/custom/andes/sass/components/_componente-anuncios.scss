@@ -1,0 +1,116 @@
+/*
+//------------------------------------------------------------------------------
+// Componente Anuncios
+//------------------------------------------------------------------------------
+*/
+
+.view-componente-anuncios {
+  background: #f0eeee;
+  padding: 45px 0;
+  .view-content {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @include respond-to(m) {
+        width: 750px;
+    }
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    li {
+      .views-slideshow-swiper-main-frame-row-item {
+        //imagen
+        .views-field-field-image {
+          img {
+            width: 100%;
+          }
+          border: 5px solid #fff;
+          @include respond-to(xl) {
+            float: left;
+            width: 50%;
+          }
+        }
+        //contenido
+        .anuncios-conten {
+          background: #fff;
+          border-top: 4px solid color('fucsia');
+          padding: 20px;
+          overflow: hidden;
+          @include respond-to(xl) {
+            float: left;
+            width: 50%;
+            margin: 20px 0 0;
+          }
+          //titulo
+          .anuncios-titulo {
+            h3 {
+              font-family: $crimson-textbold;
+              @include font-size(ll);
+              color: color('grey-dark');
+              line-height: 1.1;
+              // font-weight: 600;
+              text-decoration: none;
+            }
+          }
+          //body
+          .anuncios-body {
+            p {
+              font-family: $crimson-textregular;
+              @include font-size(m);
+            }
+          }
+          //enlaces
+          .anuncios-enlace {
+            a {
+              font-family: $crimson-textregular;
+              @include font-size(m);
+              color: color('grey-dark');
+              text-align: center;
+              text-decoration: none;
+              padding: 10px 20px;
+              border: 1px solid color('grey-dark');
+              max-width: 300px;
+              display: block;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Puntos Slider
+.view-componente-anuncios {
+  .views-slideshow-controls-bottom {
+    text-align: center;
+    padding: 0;
+    text-align: center;
+    .views_slideshow_pager_field{
+      text-align: center;
+      .views-slideshow-pager-field-item{
+        display: inline-block;
+        padding: 2px 5px;
+        a {
+          background: transparent;
+          border: 1px solid color('fucsia');
+          border-radius: 10px;
+          font-size: 0;
+          padding: 0;
+          width: 13px;
+          height: 13px;
+          display: block;
+        }
+        &.active{
+          a{
+            background: color('fucsia');
+          }
+        }
+      }
+    }
+  }
+}
