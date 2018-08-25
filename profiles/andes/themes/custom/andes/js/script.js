@@ -13,7 +13,7 @@
     attach: function (context, settings) {
       var docWidth      = $(document).width(),
           $level1  =       $('.tb-megamenu-item.level-1'),
-          $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
+          $itemsNivel2  = $('.tb-megamenu-item.level-2.dropdown-submenu a');
 
 
       $level1.hover(function () {
@@ -56,32 +56,34 @@
         function dropdown(){
           /* Nivel3 */
           $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function(){
+            console.log($(this));
             $('.box-black').parents('.row-fluid').addClass('parent-clone');
             $('.box-black a').text('<' +$(this).text() );
             SubMenuCloneNivel3  = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
-            $(this).parents('.parent-clone').find('.active-clone').addClass('none').after(SubMenuCloneNivel3);
+            $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
           });
-          /* Nivel2 */
+
           $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
             $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><a> < " + $(this).text() + "</a></div>");
-            var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
-            $(this).parents('.tb-megamenu-column').after(SubMenuClone);
+            $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
             setTimeout(function () {
-              $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
-              $('.parent-clone').find('.content-img').addClass('active-sub-nivel');
-              $('.active-clone').addClass('efect')
+              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
+              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active-sub-nivel');
             }, 100);
-            /* salir */
+            var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
+
+            $(this).parents('.tb-megamenu-column').after(SubMenuClone);
+            var child = $(this).siblings('.nav-child').html();
+            var item  = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
             $('.box-black').click(function () {
-              $('.box-black').removeClass('active-box');
-              $('.nav-child.active').removeClass('active');
-              $('ul.level-1.active').removeClass('active');
+              $('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+              $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
+              $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
+              $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
               $('.active-clone').remove();
               $('.clone-nivel-3').remove();
-              $('.content-img').removeClass('active-sub-nivel')
-              $('.active-clone').removeClass('efect')
             });
             dropdown();
           });
@@ -94,9 +96,7 @@
           classBlockClone = 'clone-mobile-block',
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
           className = 'clone',
-          itemMobil =  $contentFather.find('.level-1 > a.dropdown-toggle');
-          itemMobilNivel = $contentFather.find('.level-2 > a.dropdown-toggle');
-
+          itemMobil =  $contentFather.find('.level-1  a');
 
         itemMobil.on("click",  function () {
           $('.box-black').remove();
@@ -113,23 +113,6 @@
           });
         });
 
-        itemMobilNivel.on("click", function () {
-          $('.box-black').remove();
-          let $this = $(this);
-          $this.siblings().addClass('active-mobile');
-          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><a> < " + $this.text() + "</a></div>");
-          console.log($this);
-          $('.box-black').click(function () {
-            console.log($this);
-            //$('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
-            //$('.box-black').removeClass('active-box'); /* nivel 2 animacion */
-            $(this).parents('.active-mobile').removeClass('active-mobile'); /* nivel 2 animacion */
-
-          });
-        });
-
-
-        itemMobilNivel.removeAttr('href');
         itemMobil.removeAttr('href');
         $contentFather.after("<div class='" + className + "'></div>");
         $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
@@ -197,14 +180,14 @@
 	function checkSize(){
 		var docWidth = $(document).width();
 	 	var data = {
-	    slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 549 && docWidth <= 992) ? 2 : 1)) ),
+	    slidesPerView: ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 549 && docWidth <= 992) ? 2 : 1)) ),
       spaceBetween: 20,
       swipeTo: 0,
     }
     // autoplay: {
     //   delay: 5000,
     // },
-		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0) {
+		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 0 && docWidth <= 1200) ) {
 			setTimeout(function(){
 				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
 			},50)
