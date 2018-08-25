@@ -1,0 +1,59 @@
+.view-componente-ranking-home {
+  display: block;
+  .view-content{
+    display: block;
+    overflow: hidden;
+    table{
+      margin: 0;
+    }
+    .views-field-field-image-banner {
+      display: none;
+      background-color: white;
+      float: left;
+      @include respond-to(xxl){
+        display: block;
+        width: 50%;
+      }
+      h1{
+        @include font-size(20px);
+        margin-bottom: 25px;
+        padding: 20px;
+      }
+      p{
+        color: color('grey-dark');
+        padding: 20px;
+        //font-family: 'crimson_textregular';
+        @include font-size(15px);
+      }
+    }
+    .views-field-field-image {
+      //margin-top: 20px;
+      float: left;
+      width: 100%;
+      @include respond-to(xxl){
+        width: 50%;
+         margin-top: 20px;
+
+        margin-top: 0;
+      }
+    }
+    /* grill */
+    .wrapper{
+      .block-1,
+      .block-2{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        @include respond-to(m){
+          width: 50%;
+        }
+        @include respond-to(xxl){
+          margin-bottom: 0;
+        }
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

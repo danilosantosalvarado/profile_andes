@@ -1586,6 +1586,83 @@ th {
   }
 }
 
+.view-componente-ranking-home {
+  display: block;
+}
+
+.view-componente-ranking-home .view-content {
+  display: block;
+  overflow: hidden;
+  /* grill */
+}
+
+.view-componente-ranking-home .view-content table {
+  margin: 0;
+}
+
+.view-componente-ranking-home .view-content .views-field-field-image-banner {
+  display: none;
+  background-color: white;
+  float: left;
+}
+
+@media (min-width: 1111px) {
+  .view-componente-ranking-home .view-content .views-field-field-image-banner {
+    display: block;
+    width: 50%;
+  }
+}
+
+.view-componente-ranking-home .view-content .views-field-field-image-banner h1 {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  padding: 20px;
+}
+
+.view-componente-ranking-home .view-content .views-field-field-image-banner p {
+  color: #484851;
+  padding: 20px;
+  font-size: 0.9375rem;
+}
+
+.view-componente-ranking-home .view-content .views-field-field-image {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 1111px) {
+  .view-componente-ranking-home .view-content .views-field-field-image {
+    width: 50%;
+    margin-top: 20px;
+    margin-top: 0;
+  }
+}
+
+.view-componente-ranking-home .view-content .wrapper .block-1,
+.view-componente-ranking-home .view-content .wrapper .block-2 {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .view-componente-ranking-home .view-content .wrapper .block-1,
+  .view-componente-ranking-home .view-content .wrapper .block-2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1111px) {
+  .view-componente-ranking-home .view-content .wrapper .block-1,
+  .view-componente-ranking-home .view-content .wrapper .block-2 {
+    margin-bottom: 0;
+  }
+}
+
+.view-componente-ranking-home .view-content .wrapper img {
+  margin: 0 auto;
+}
+
 .view-slider-homes .slider-homes-left, .view-slider-homes .slider-homes-right, .view-slider-homes .slider-homes-center, .view-banner-nodes .slider-homes-left, .view-banner-nodes .slider-homes-right, .view-banner-nodes .slider-homes-center {
   position: absolute;
   top: 25%;
