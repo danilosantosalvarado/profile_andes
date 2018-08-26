@@ -4953,6 +4953,164 @@ body > .main-container.container-fluid {
   background: #b600eb;
 }
 
+.view-id-equipo_de_trabajo {
+  /* tabs de equipos */
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding: 30px 0;
+  /* width */
+  /* scroll */
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar {
+  width: 3px;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs li a {
+  padding: 5px 4px;
+  font-size: 1.125rem;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs li a:hover {
+  text-decoration: none;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs li.active a {
+  border-bottom: 3px solid #46b9c0;
+}
+
+.view-id-equipo_de_trabajo ul.quicktabs-tabs li.active a:hover {
+  text-decoration: none;
+}
+
+/* clase de la vista */
+.view-contenido-equipo-de-trabajo {
+  padding: 20px 0 0 0;
+  /* paginador */
+}
+
+@media (min-width: 992px) {
+  .view-contenido-equipo-de-trabajo .view-content {
+    margin-top: 30px;
+  }
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row {
+  display: block;
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 190px;
+  height: 190px;
+  position: relative;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  padding: 0;
+  margin-bottom: 20px;
+  /* text */
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  display: table;
+  height: 195px;
+  width: 195px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text {
+  display: table-cell;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text:hover {
+  opacity: 1;
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p {
+  margin: 0;
+  color: #f4f1f1;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(1), .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(3) {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  color: #fff;
+}
+
+.view-contenido-equipo-de-trabajo .text-center {
+  clear: both;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-contenido-equipo-de-trabajo .text-center ul.pagination {
+  background: transparent;
+  border-radius: 0;
+  padding: 10px;
+}
+
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li {
+  color: #484851;
+  border-radius: 0;
+  background-color: #fff;
+  display: block;
+  float: left;
+  margin: 0 5px;
+}
+
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li a {
+  color: #484851;
+  border: 1px solid #e55d12;
+  font-family: Lato,sans-serif;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li.active span {
+  border-color: #e55d12;
+  background-color: #e55d12;
+  border-radius: initial;
+  color: #fff;
+  border: initial;
+  z-index: 1;
+}
+
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li.next, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.prev, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-last, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-first {
+  display: none;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Enlaces de interes
