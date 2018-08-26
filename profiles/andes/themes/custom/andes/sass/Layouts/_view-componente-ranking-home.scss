@@ -1,6 +1,18 @@
 .view-componente-ranking-home {
   display: block;
-  .view-content{
+  margin: 0 auto;
+  padding-top: 20px;
+  @include respond-to(m) {
+    padding-top: 0;
+    width: 750px;
+  }
+  @include respond-to(xl) {
+    width: 100%;
+  }
+  @include respond-to(xxl) {
+    width: 1170px;
+  }
+  .view-content {
     display: block;
     overflow: hidden;
     table{
@@ -10,15 +22,20 @@
       display: none;
       background-color: white;
       float: left;
-      @include respond-to(xxl){
+      @include respond-to(m) {
+        display: block;
+        width: 100%;
+      }
+      @include respond-to(xl) {
         display: block;
         width: 50%;
+        padding: 25px 0;
       }
       h1{
         @include font-size(20px);
         margin-bottom: 25px;
         padding: 20px;
-        @include respond-to(xxl){
+        @include respond-to(m) {
           text-align: center;
           margin-bottom: 0;
           padding: 10px 0;
@@ -30,7 +47,7 @@
         padding: 20px;
         //font-family: 'crimson_textregular';
         @include font-size(15px);
-        @include respond-to(xxl){
+        @include respond-to(m){
           text-align: center;
           padding: 10px 0;
           @include font-size(18px);
@@ -43,16 +60,21 @@
       //margin-top: 20px;
       float: left;
       width: 100%;
-      @include respond-to(xxl){
+      @include respond-to(m) {
+        background-color: white;
+        margin-top: 30px;
+        padding: 30px 0;
+      }
+      @include respond-to(xl) {
+        background-color: transparent;
         width: 50%;
-         margin-top: 20px;
-
+        padding: 25px 0;
         margin-top: 0;
       }
     }
     /* grill */
-    .wrapper{
-      .block-1{
+    .wrapper {
+      .block-1 {
         padding: 0 10px;
       }
       .block-1,
@@ -60,10 +82,11 @@
         width: 100%;
         float: left;
         margin-bottom: 20px;
-        @include respond-to(m){
+        padding: 0 20px;
+        @include respond-to(m) {
           width: 50%;
         }
-        @include respond-to(xxl){
+        @include respond-to(xl) {
           margin-bottom: 0;
         }
       }

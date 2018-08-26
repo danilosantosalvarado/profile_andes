@@ -1588,6 +1588,27 @@ th {
 
 .view-componente-ranking-home {
   display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .view-componente-ranking-home {
+    padding-top: 0;
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-componente-ranking-home {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1111px) {
+  .view-componente-ranking-home {
+    width: 1170px;
+  }
 }
 
 .view-componente-ranking-home .view-content {
@@ -1606,10 +1627,18 @@ th {
   float: left;
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 768px) {
+  .view-componente-ranking-home .view-content .views-field-field-image-banner {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
   .view-componente-ranking-home .view-content .views-field-field-image-banner {
     display: block;
     width: 50%;
+    padding: 25px 0;
   }
 }
 
@@ -1619,7 +1648,7 @@ th {
   padding: 20px;
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 768px) {
   .view-componente-ranking-home .view-content .views-field-field-image-banner h1 {
     text-align: center;
     margin-bottom: 0;
@@ -1634,7 +1663,7 @@ th {
   font-size: 0.9375rem;
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 768px) {
   .view-componente-ranking-home .view-content .views-field-field-image-banner p {
     text-align: center;
     padding: 10px 0;
@@ -1649,10 +1678,19 @@ th {
   width: 100%;
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 768px) {
   .view-componente-ranking-home .view-content .views-field-field-image {
+    background-color: white;
+    margin-top: 30px;
+    padding: 30px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-componente-ranking-home .view-content .views-field-field-image {
+    background-color: transparent;
     width: 50%;
-    margin-top: 20px;
+    padding: 25px 0;
     margin-top: 0;
   }
 }
@@ -1666,6 +1704,7 @@ th {
   width: 100%;
   float: left;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 @media (min-width: 768px) {
@@ -1675,7 +1714,7 @@ th {
   }
 }
 
-@media (min-width: 1111px) {
+@media (min-width: 992px) {
   .view-componente-ranking-home .view-content .wrapper .block-1,
   .view-componente-ranking-home .view-content .wrapper .block-2 {
     margin-bottom: 0;
