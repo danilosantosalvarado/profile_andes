@@ -1619,10 +1619,29 @@ th {
   padding: 20px;
 }
 
+@media (min-width: 1111px) {
+  .view-componente-ranking-home .view-content .views-field-field-image-banner h1 {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px 0;
+    font-size: 2.25rem;
+  }
+}
+
 .view-componente-ranking-home .view-content .views-field-field-image-banner p {
   color: #484851;
   padding: 20px;
   font-size: 0.9375rem;
+}
+
+@media (min-width: 1111px) {
+  .view-componente-ranking-home .view-content .views-field-field-image-banner p {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-family: "Crimson Text", serif;
+  }
 }
 
 .view-componente-ranking-home .view-content .views-field-field-image {
@@ -1636,6 +1655,10 @@ th {
     margin-top: 20px;
     margin-top: 0;
   }
+}
+
+.view-componente-ranking-home .view-content .wrapper .block-1 {
+  padding: 0 10px;
 }
 
 .view-componente-ranking-home .view-content .wrapper .block-1,

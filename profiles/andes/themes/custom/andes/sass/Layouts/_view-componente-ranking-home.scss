@@ -18,12 +18,25 @@
         @include font-size(20px);
         margin-bottom: 25px;
         padding: 20px;
+        @include respond-to(xxl){
+          text-align: center;
+          margin-bottom: 0;
+          padding: 10px 0;
+          @include font-size(36px);
+        }
       }
       p{
         color: color('grey-dark');
         padding: 20px;
         //font-family: 'crimson_textregular';
         @include font-size(15px);
+        @include respond-to(xxl){
+          text-align: center;
+          padding: 10px 0;
+          @include font-size(18px);
+          line-height: 1;
+          font-family: "Crimson Text", serif;
+        }
       }
     }
     .views-field-field-image {
@@ -39,6 +52,9 @@
     }
     /* grill */
     .wrapper{
+      .block-1{
+        padding: 0 10px;
+      }
       .block-1,
       .block-2{
         width: 100%;
