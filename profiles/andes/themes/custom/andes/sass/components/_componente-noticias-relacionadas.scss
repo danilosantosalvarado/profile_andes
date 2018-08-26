@@ -1,10 +1,11 @@
 /*
 //------------------------------------------------------------------------------
-// Componenete Noticias
+// Componenete Relacionadas
 //------------------------------------------------------------------------------
 */
 
-.view-display-id-noticias_destacadas {
+
+.view-display-id-noticias_relacionadas {
 	ul {
 		-webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -90,49 +91,3 @@
 		}
 	}
 }
-
-//Flechas paginador
-.view-display-id-noticias_destacadas {
-	@include respond-to(xl) {
-		display: block;
-	}
-	.skin-default {
-		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-    	//Button Izquierda
-    	a[rel='prev'] {
-				@extend %a-prev;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				@extend %a-prev;
-		  	left: inherit;
-		    right: -6%;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-		  }
-		}
-	}
-}
-
-//Puntos Slider
-.view-display-id-noticias_destacadas {
-	margin: 15px 0 20px;
-	.views-slideshow-pager-field-processed {
-		@include bullet(red, grey);
-		@include respond-to(xl) {
-			display: none;
-		}
-	}
-}
-
-
-
