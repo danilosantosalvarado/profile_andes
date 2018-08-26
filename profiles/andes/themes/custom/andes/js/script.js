@@ -262,7 +262,24 @@ setTimeout(function(){
   }
 }, 1000)
 	//Slider home position, top, ring, botton, left.
-	$(window).load(function() {
+	$(window).ready(function() {
+    $(".tb-megamenu-menu-mega-menu .nav-collapse").append('<div class="buscador-cerrar"><span>Cerrar</span></div>');
+
+    // $(".buscador-abrir").click(function(){
+    //   $("#block-google-cse-google-cse").css("background-color","red");
+    //   $(".buscador-abrir").addClass("buscador-cerrar");
+    //   $(".buscador-abrir").removeClass("buscador-abrir");
+      
+    // });
+  
+    // $(".buscador-cerrar").click(function(){
+    //   $("#block-google-cse-google-cse").css("background-color","yellow");
+    //   $(".buscador-cerrar").addClass("buscador-abrir");
+    //   $(".buscador-cerrar").removeClass("buscador-cerrar");
+      
+    // });
+
+    // $(".tb-megamenu-menu-mega-menu .nav-collapse ul li .level-1").css("background-color","red");
 
 		// $(".view-slider-homes .views-slideshow-controls-text-previous-processed, .view-slider-homes .views-slideshow-controls-text-next-processed").on('click', function(event) {
 		// 	var sibling  = $(this).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
@@ -277,9 +294,34 @@ setTimeout(function(){
 		// 		$(this).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
 		// 		SlideClass = slideActivePosition+"-control";
 		// 	}
-		// });
+    // });
+    
+    
+  });
 
-	});
+  $(document).ready(function(){
+    $(".buscador-abrir").click(function(){
+          
+      if ($("#block-google-cse-google-cse").css("display")=="none") {
+        
+        // $('li.sp-menu-item:nth-child(15)').addClass('divbuscar');
+        // $('#sp-header').addClass('divcolor');
+        $("#block-google-cse-google-cse").css('display','block');
+        console.log("ver");
+        // $('#sp-section-4').css('display','block');
+        // $('#sp-section-4').css('position',' fixed');
+        // $('#sp-section-4').css('margin-top',' 115px');
+        
+      }else{
+        $("#block-google-cse-google-cse").css('display','none');
+        console.log("ocultar");
+        // $('li.sp-menu-item:nth-child(15)').removeClass('divbuscar');
+        // $('#sp-header').removeClass('divcolor');
+        // $('#sp-section-4').css('display','none');
+
+      }
+    });
+  });
 
 }(jQuery));
 
