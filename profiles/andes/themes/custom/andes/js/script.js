@@ -180,7 +180,7 @@
 	function checkSize(){
 		var docWidth = $(document).width();
 	 	var data = {
-	    slidesPerView: ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 549 && docWidth <= 992) ? 2 : 1)) ),
+	    slidesPerView: ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 549 && docWidth <= 992) ? 2 : 1)),
       spaceBetween: 20,
       swipeTo: 0,
     }
