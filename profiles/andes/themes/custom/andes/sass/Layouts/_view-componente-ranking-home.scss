@@ -1,15 +1,15 @@
 .view-componente-ranking-home {
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 30px;
   @include respond-to(m) {
-    padding-top: 0;
     width: 750px;
   }
   @include respond-to(xl) {
     width: 100%;
   }
   @include respond-to(xxl) {
+    padding-top: 0;
     width: 1170px;
   }
   .view-content {

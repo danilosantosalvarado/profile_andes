@@ -1589,12 +1589,11 @@ th {
 .view-componente-ranking-home {
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 @media (min-width: 768px) {
   .view-componente-ranking-home {
-    padding-top: 0;
     width: 750px;
   }
 }
@@ -1607,6 +1606,7 @@ th {
 
 @media (min-width: 1111px) {
   .view-componente-ranking-home {
+    padding-top: 0;
     width: 1170px;
   }
 }
