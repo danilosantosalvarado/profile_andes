@@ -1,7 +1,6 @@
 
 $white: #FFFFFF;
 
-
 .navbar-header{
 
 }
@@ -9,10 +8,10 @@ $white: #FFFFFF;
 .tb-megamenu .nav > li > a:hover{
   background-color: transparent;
 }
-.tb-megamenu .always-show .mega > .mega-dropdown-menu,
-.tb-megamenu .always-show .dropdown-menu{
-  //display: none !important;
+.tb-megamenu .mega-inner{
+  padding: 0;
 }
+
 /* bloques de menu */
 #block-views-logos-header-block{
   position: absolute;
@@ -23,6 +22,13 @@ $white: #FFFFFF;
   margin: 12px 0 0 88px;
   @include respond-to(m){
     display: block;
+  }
+  @include respond-to(xl){
+    position: relative;
+    width: inherit;
+    width: 1170px;
+    margin: 0 auto;
+
   }
   h2{
     display: none
@@ -86,13 +92,6 @@ $white: #FFFFFF;
   }
 }
 #block-views-logos-header-block-2{
-  position: absolute;
-  left: 90px;
-  top: 9px;
-  display: none;
-  @include respond-to(m){
-    display: block;
-  }
   .element-invisible{
     display: none;
   }
@@ -105,6 +104,8 @@ $white: #FFFFFF;
     display: none;
   }
 }
+
+/* ordenar */
 .none{
   display: none !important;
 }
@@ -119,11 +120,6 @@ $white: #FFFFFF;
   .tb-megamenu-column{
     width: 37%;
   }
-  div:last-child {
-    /* width: 61%;
-    float: right;
-    background: red; */
-  }
 }
 
 /* reset del megamenu */
@@ -133,7 +129,7 @@ $white: #FFFFFF;
   border: none;
 }
 .tb-megamenu{
-  clear: both;
+  background-color: transparent
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   padding: 0;
@@ -166,13 +162,6 @@ $white: #FFFFFF;
     position: fixed;
   }
 }
-//iconos
-/* .tb-megamenu .dropdown-submenu > a::after{
-  display: none;
-}
-.tb-megamenu .dropdown-submenu:hover > a::after{
-  display: none;
-} */
 .tb-megamenu .row-fluid .span3{
   //width: 255px;
   //margin-left: 0px !important;
@@ -181,6 +170,8 @@ $white: #FFFFFF;
     //margin-left: 350px !important;
   }
 }
+
+
 .tb-megamenu-menu-menu-top-soy{
   .nav-collapse {
     float: right;
@@ -232,6 +223,7 @@ $white: #FFFFFF;
     border-left: none !important;
   }
 }
+
 .tb-megamenu-menu-mega-menu{
   -webkit-transition: background-color 2s; /* Safari */
   transition: background-color .2s;
@@ -246,11 +238,18 @@ $white: #FFFFFF;
     height: 0;
     @include respond-to(m){
       border: none;
-      padding-left: 10px;
+      padding-left: 0;
       height: auto;
       height: 314px;
       overflow: hidden;
       z-index: 99;
+      //max-width: 1170px;
+      //margin: 0 auto;
+    }
+    .mega-dropdown-inner{
+      max-width: 1170px;
+      margin: 0 auto;
+      background: red;
     }
   }
   .box-black {
@@ -464,12 +463,7 @@ $white: #FFFFFF;
     background: transparent;
   }
 }
-#block-tb-megamenu-menu-menu-top-soy{
-  display: none;
-  @include respond-to(m){
-    display: block;
-  }
-}
+
 .tb-megamenu-menu-mega-menu{
   .tb-megamenu-button{
     display: none;
@@ -643,4 +637,20 @@ $white: #FFFFFF;
       }
     }
   }
+}
+
+.wrapper-mega-menu,
+.wrapper-menu-soy {
+  .container{
+    padding: 0;
+  }
+}
+.wrapper-menu-soy {
+  background-color: black;
+
+
+}
+.wrapper-mega-menu {
+  background-color: #ead134;
+
 }
