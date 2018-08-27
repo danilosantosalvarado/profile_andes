@@ -3902,6 +3902,10 @@ body > .main-container.container-fluid {
   padding: 0;
 }
 
+.barra-buscar {
+  display: none;
+}
+
 /* bloques de menu */
 #block-views-logos-header-block {
   position: absolute;
@@ -3920,7 +3924,7 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   #block-views-logos-header-block {
-    position: relative;
+    position: absolute;
     width: inherit;
     width: 1170px;
     margin: 0 auto;
@@ -4000,6 +4004,10 @@ body > .main-container.container-fluid {
 #block-views-logos-header-block-1 .views-row-2 .content {
   border-left: 1px solid white;
   padding: 0 11px;
+}
+
+#block-views-logos-header-block-2 {
+  position: absolute;
 }
 
 #block-views-logos-header-block-2 .element-invisible {

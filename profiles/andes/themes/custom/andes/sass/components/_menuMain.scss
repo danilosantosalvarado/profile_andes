@@ -11,7 +11,9 @@ $white: #FFFFFF;
 .tb-megamenu .mega-inner{
   padding: 0;
 }
-
+.barra-buscar{
+  display: none;
+}
 /* bloques de menu */
 #block-views-logos-header-block{
   position: absolute;
@@ -24,7 +26,8 @@ $white: #FFFFFF;
     display: block;
   }
   @include respond-to(xl){
-    position: relative;
+    //position: relative;
+    position: absolute;
     width: inherit;
     width: 1170px;
     margin: 0 auto;
@@ -92,6 +95,7 @@ $white: #FFFFFF;
   }
 }
 #block-views-logos-header-block-2{
+  position: absolute;
   .element-invisible{
     display: none;
   }
