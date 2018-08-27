@@ -159,7 +159,48 @@
 // home Noticias
 //------------------------------------------------------------------------------
 */
-.view-display-id-home_noticias_recientes  {
+
+/* ------| quicktabs Tabs |----- */
+#quicktabs-quicktabs_home_noticias {
+  ul.quicktabs-tabs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-inline-start: 0px;
+    li {
+      margin: 10px 0;
+      display: block;
+      list-style: none;
+      @include respond-to(xs) {
+        display: inline-block;
+        margin: 0px;
+      }
+      a {
+        font-family: $latobold;
+        @include font-size(s);
+        text-align: center;
+        text-decoration: none;
+        transition: background .5s;
+        background-color: #f0eeee;
+        padding: 15px 50px;
+        display: block;
+        cursor: pointer;
+      }
+      &.active {
+        a {
+          background-color: color('blue-light');
+          color: color('white');
+          transition: background .5s;
+        }
+      }
+    }
+  }
+}
+
+/* ------| Cards noticias|----- */
+.view-display-id-home_noticias_recientes,
+.view-display-id-home_noticias_vistas  {
   display: block;
   overflow: hidden;
   .view-content {
@@ -257,7 +298,8 @@
 }
 
 /* ------| Paguinadores |----- */
-.view-display-id-home_noticias_recientes  {
+.view-display-id-home_noticias_recientes,
+.view-display-id-home_noticias_vistas  {
   .text-center {
     width: 100%;
     position: relative;
