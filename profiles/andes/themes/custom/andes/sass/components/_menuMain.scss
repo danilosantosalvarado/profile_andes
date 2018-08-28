@@ -650,10 +650,18 @@ $white: #FFFFFF;
 }
 .wrapper-menu-soy {
   background-color: black;
+  display: none;
+  @include respond-to(m){
+    display: block;
+  }
 
 
 }
 .wrapper-mega-menu {
   background-color: #ead134;
 
+}
+
+.not-scroll{
+  overflow-y: hidden;
 }

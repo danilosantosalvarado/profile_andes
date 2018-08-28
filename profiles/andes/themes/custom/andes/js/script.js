@@ -9,7 +9,7 @@
   //  //	var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
   // });
 
-  ;
+
 		var SlideClass = "";
     var ParentSlideClass = "";
 	//add breidpoint news component.

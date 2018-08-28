@@ -4700,10 +4700,21 @@ body > .main-container.container-fluid {
 
 .wrapper-menu-soy {
   background-color: black;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper-menu-soy {
+    display: block;
+  }
 }
 
 .wrapper-mega-menu {
   background-color: #ead134;
+}
+
+.not-scroll {
+  overflow-y: hidden;
 }
 
 /*

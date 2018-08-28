@@ -14,6 +14,18 @@
           $(this).fadeIn(500); */
       });
 
+      /* wrapper para area segura  */
+      jQuery(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
+      jQuery(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
+      jQuery(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
+      jQuery(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
+
+      /*  add buscador */
+      $(".wrapper-mega-menu").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
+
+      $(".barra-buscar").click(function () {
+        $('#block-google-cse-google-cse').toggleClass("buscador-open");
+      });
       /* ciclo item de mega menu */
       if (docWidth > 992) {
         /* Scroll menu  */
@@ -29,18 +41,8 @@
             menu.addClass('black');
           }
         });
-        /* wrapper para area segura  */
-        jQuery(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
-        jQuery(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
-        jQuery(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
-        jQuery(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
+        console.log('read')
 
-        /*  add buscador */
-        $(".wrapper-mega-menu").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
-
-        $(".barra-buscar").click(function () {
-          $('#block-google-cse-google-cse').toggleClass("buscador-open");
-        });
 
         console.log($('.wrapper-mega-menu .container').offset());
         var leftContainer = $('.wrapper-mega-menu .container').offset();
@@ -99,6 +101,7 @@
         dropdown()
       }
       else {
+         /* mobile */
         const
           classSelect = 'clone-select',
           classBlockClone = 'clone-mobile-block',
@@ -106,6 +109,11 @@
           className = 'clone',
           itemMobil = $contentFather.find('.level-1  a');
 
+
+
+        $('.navbar-toggle').on("click", function () {
+          $('body').toggleClass('not-scroll')
+        });
         itemMobil.on("click", function () {
           $('.box-black').remove();
           let $this = $(this);
