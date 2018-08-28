@@ -8,7 +8,6 @@
 //}
 
 .view-display-id-noticias_relacionadas {
-	border: 2px solid blueviolet;
 	@include respond-to(xl) {
 		width: 74%;
 		float: left;
@@ -112,7 +111,10 @@
       color: color('white');
       text-decoration: none;
       text-transform: none;
-      margin: 20px 0;
+			margin: 10px 0;
+			@include respond-to (xl) {
+				margin: 20px 0;
+			}
     }
   }
   .view-content {
@@ -121,8 +123,11 @@
       color: #fff;
       list-style: none;
       li {
-        padding: 10px 0 ;
-        border-bottom: 1px solid #fff;
+				padding: 5px 0;
+				border-bottom: 1px solid #fff;
+				@include respond-to(xl) {
+					padding: 10px 0;
+				}
         a {
           font-family: $crimson-textregular;
           @include font-size(l);
