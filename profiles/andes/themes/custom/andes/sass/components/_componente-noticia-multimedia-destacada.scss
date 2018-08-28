@@ -20,6 +20,7 @@
       }
     }
     .views-slideshow-controls-bottom {
+      display: block;
       @include respond-to(xl){
         width: 50%;
         margin-top: 0;
@@ -29,8 +30,8 @@
         margin-left: 0;
         float: left;
         .views_slideshow_pager_field_item {
-          background-color: red;
           margin: 0 10px;
+          padding: 0;
         }
       }
       .views-slideshow-controls-text {

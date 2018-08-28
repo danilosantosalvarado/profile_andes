@@ -5313,6 +5313,10 @@ body > .main-container.container-fluid {
   }
 }
 
+.view-componente-noticia-multimedia-destacada .view-content .views-slideshow-controls-bottom {
+  display: block;
+}
+
 @media (min-width: 992px) {
   .view-componente-noticia-multimedia-destacada .view-content .views-slideshow-controls-bottom {
     width: 50%;
@@ -5327,8 +5331,8 @@ body > .main-container.container-fluid {
 }
 
 .view-componente-noticia-multimedia-destacada .view-content .views-slideshow-controls-bottom .views-slideshow-pager-fields .views_slideshow_pager_field_item {
-  background-color: red;
   margin: 0 10px;
+  padding: 0;
 }
 
 .view-componente-noticia-multimedia-destacada .view-content .views-slideshow-controls-bottom .views-slideshow-controls-text {
