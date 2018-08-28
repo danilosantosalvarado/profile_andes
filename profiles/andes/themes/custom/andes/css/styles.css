@@ -2303,6 +2303,10 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Acordion |----- */
+.view-id-componente_acordeon {
+  margin-bottom: 30px;
+}
+
 .view-id-componente_acordeon .view-content div > .views-field.views-field-field-titulo .field-content {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   text-transform: uppercase;
