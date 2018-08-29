@@ -3075,11 +3075,11 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-display-id-especiales_destacadas .views-row .compo-notias-img {
+.view-display-id-especiales_destacadas .views-row .view-content {
   border-bottom: 4px solid #e55d12;
 }
 
-.view-display-id-especiales_destacadas .views-row .compo-notias-img img {
+.view-display-id-especiales_destacadas .views-row .view-content img {
   width: 100%;
 }
 
