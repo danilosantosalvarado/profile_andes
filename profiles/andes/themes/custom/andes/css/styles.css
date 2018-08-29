@@ -2212,6 +2212,7 @@ body > .main-container.container-fluid {
 
 .view-slider-homes .slider-homes-bottom-control {
   margin: 15px 0 20px;
+  display: block;
 }
 
 .view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-field-processed {
