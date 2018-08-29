@@ -230,6 +230,9 @@
 
 //Puntos Slider right, left, center en linea
 .view-slider-homes {
+	.views-slideshow-controls-bottom {
+		display: block;
+	}
 	.views-slideshow-controls-bottom,
 	.slider-homes-right-control,
 	.slider-homes-center-control,
@@ -269,7 +272,6 @@
 	.slider-homes-bottom-control {
 		// text-align: center;
 		margin: 15px 0 20px;
-		display: block;
 		.views-slideshow-pager-field-processed {
 			position: initial;
 			padding: 0px;

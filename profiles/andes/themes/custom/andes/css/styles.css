@@ -2159,6 +2159,10 @@ body > .main-container.container-fluid {
   display: block;
 }
 
+.view-slider-homes .views-slideshow-controls-bottom {
+  display: block;
+}
+
 .view-slider-homes .views-slideshow-controls-bottom,
 .view-slider-homes .slider-homes-right-control,
 .view-slider-homes .slider-homes-center-control,
@@ -2212,7 +2216,6 @@ body > .main-container.container-fluid {
 
 .view-slider-homes .slider-homes-bottom-control {
   margin: 15px 0 20px;
-  display: block;
 }
 
 .view-slider-homes .slider-homes-bottom-control .views-slideshow-pager-field-processed {
