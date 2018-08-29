@@ -48,6 +48,11 @@
 				var swiper = new Swiper("#"+jQuery('.view-display-id-componente_publicaciones .swiper-container-horizontal').attr('id'), data);
 			},50)
     }
+    if ($('.view-display-id-especiales_destacadas .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-display-id-especiales_destacadas .swiper-container-horizontal').attr('id'), data);
+			},50)
+    }
 
     //
     //view-display-id-componente_publicaciones
