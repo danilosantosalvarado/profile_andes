@@ -5,84 +5,96 @@
 */
 
 .view-id-componente_eventos {
-  // display: block;
-  // overflow: hidden;
   .view-content {
     ul {
       padding-inline-start: 0px;
-      .views-row {
+      li {
         list-style: none;
-        float: left;
-        width: 100%;
         position: relative;
         background: #f4f1f1;
-        margin: 10px 0; //Img
-        .views-field {
-          img {
+        @include respond-to(xs) {
+          height: 460px;
+        }
+        @include respond-to(xl) {
+          height: 505px;
+        }
+
+        //Img
+        .views-field-view {
+          border-bottom: 3px solid color('orange');
+          img{
             width: 100%;
-            border-bottom: 3px solid #ff8827;
           }
           .youtube-container--responsive {
             padding-bottom: 62.25%;
-            border-bottom: 3px solid #ff8827;
           }
-        } //Contenedor
-        .eventos-container {
-          @include padding(1.05 .834); // min-height: 339px;
-        } //Titulo
-        .even-desta-titulo {
-          padding-left: 25px;
+        }
+
+        //Titulo
+        .views-field-title {
           font-family: $crimson-textbold;
           @include type-layout(l, .96);
           color: #484851;
           @include margin(.834 0 .834);
+          padding: 0 25px;
           @include respond-to(xl) {
-            @include font-size(l);
-            @include margin(.9 0 1.042);
+            @include font-size(ll);
+            @include margin(2.042 0 1.042);
           }
-        } //Fecha and lugar
-        .even-desta-fecha {
-          display: flex;
-          padding-left: 25px;
+        }
+        //Fecha
+        .views-field-field-fecha-eventos {
+          display: inline-flex;
           @include margin-bottom(.7);
+          padding: 0 25px;
           span {
             font-family: $latobold;
             @include font-size(xs);
             margin-right: 5px;
           }
-          div span {
-            font-family: $latoregular;
-            @include font-size(xs);
-          }
-        } //lugar
-        .even-desta-lugar {
-          padding-left: 25px;
-          @include margin-bottom(.7);
-          span {
-            font-family: $latoregular;
-            @include font-size(xs);
-            &:nth-child(1) {
-              font-family: $latobold;
+          .field-content {
+            span {
+              font-family: $latoregular;
               @include font-size(xs);
-              margin-right: 5px;
             }
           }
         }
-      } //Button
-      .even-desta-enlace {
-        a {
-          border: 1px solid color('orange');
-          font-family: $latolight;
-          font-size: 15.3px;
-          color: #484851;
-          text-decoration: none;
-          padding: 10px 30px;
-          margin: 20px;
-          outline: none;
-          float: right;
-          &:hover {
-            background-color: #e55d12;
-            color: #ffffff;
+        //Lugar
+        .views-field-additional {
+          @include margin-bottom(.7);
+          padding: 0 25px;
+          span {
+            font-family: $latobold;
+            @include font-size(xs);
+            margin-right: 5px;
+            &:nth-child(2) {
+              font-family: $latoregular;
+              @include font-size(xs);
+            }
+          }
+        }
+        //Button
+        .views-field-view-node {
+          a {
+            @include respond-to(xs) {
+              position: absolute;
+              bottom: 20px;
+              right: 10px;
+              margin: 0px;
+            }
+            border: 1px solid color('orange');
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin: 20px;
+            outline: none;
+            float: right;
+            &:hover {
+              background-color: color('orange');
+              color: #ffffff;
+            }
           }
         }
       }

@@ -2765,81 +2765,88 @@ body > .main-container.container-fluid {
           padding-inline-start: 0px;
 }
 
-.view-id-componente_eventos .view-content ul .views-row {
+.view-id-componente_eventos .view-content ul li {
   list-style: none;
-  float: left;
-  width: 100%;
   position: relative;
   background: #f4f1f1;
-  margin: 10px 0;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .views-field img {
+@media (min-width: 555px) {
+  .view-id-componente_eventos .view-content ul li {
+    height: 460px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_eventos .view-content ul li {
+    height: 505px;
+  }
+}
+
+.view-id-componente_eventos .view-content ul li .views-field-view {
+  border-bottom: 3px solid #ff8827;
+}
+
+.view-id-componente_eventos .view-content ul li .views-field-view img {
   width: 100%;
-  border-bottom: 3px solid #ff8827;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .views-field .youtube-container--responsive {
+.view-id-componente_eventos .view-content ul li .views-field-view .youtube-container--responsive {
   padding-bottom: 62.25%;
-  border-bottom: 3px solid #ff8827;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .eventos-container {
-  padding: 1.575rem 1.251rem;
-}
-
-.view-id-componente_eventos .view-content ul .views-row .even-desta-titulo {
-  padding-left: 25px;
+.view-id-componente_eventos .view-content ul li .views-field-title {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   line-height: 0.96;
   color: #484851;
   margin: 1.251rem 0 1.251rem;
+  padding: 0 25px;
 }
 
 @media (min-width: 992px) {
-  .view-id-componente_eventos .view-content ul .views-row .even-desta-titulo {
-    font-size: 1.1875rem;
-    margin: 1.35rem 0 1.563rem;
+  .view-id-componente_eventos .view-content ul li .views-field-title {
+    font-size: 1.4375rem;
+    margin: 3.063rem 0 1.563rem;
   }
 }
 
-.view-id-componente_eventos .view-content ul .views-row .even-desta-fecha {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 25px;
+.view-id-componente_eventos .view-content ul li .views-field-field-fecha-eventos {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-bottom: 1.05rem;
+  padding: 0 25px;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .even-desta-fecha span {
+.view-id-componente_eventos .view-content ul li .views-field-field-fecha-eventos span {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   margin-right: 5px;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .even-desta-fecha div span {
+.view-id-componente_eventos .view-content ul li .views-field-field-fecha-eventos .field-content span {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .even-desta-lugar {
-  padding-left: 25px;
+.view-id-componente_eventos .view-content ul li .views-field-additional {
   margin-bottom: 1.05rem;
+  padding: 0 25px;
 }
 
-.view-id-componente_eventos .view-content ul .views-row .even-desta-lugar span {
-  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 0.8125rem;
-}
-
-.view-id-componente_eventos .view-content ul .views-row .even-desta-lugar span:nth-child(1) {
+.view-id-componente_eventos .view-content ul li .views-field-additional span {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   margin-right: 5px;
 }
 
-.view-id-componente_eventos .view-content ul .even-desta-enlace a {
+.view-id-componente_eventos .view-content ul li .views-field-additional span:nth-child(2) {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+}
+
+.view-id-componente_eventos .view-content ul li .views-field-view-node a {
   border: 1px solid #ff8827;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 15.3px;
@@ -2851,8 +2858,17 @@ body > .main-container.container-fluid {
   float: right;
 }
 
-.view-id-componente_eventos .view-content ul .even-desta-enlace a:hover {
-  background-color: #e55d12;
+@media (min-width: 555px) {
+  .view-id-componente_eventos .view-content ul li .views-field-view-node a {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    margin: 0px;
+  }
+}
+
+.view-id-componente_eventos .view-content ul li .views-field-view-node a:hover {
+  background-color: #ff8827;
   color: #ffffff;
 }
 
@@ -5912,7 +5928,11 @@ body > .main-container.container-fluid {
 }
 
 .view-componente-noticia-multimedia-destacada .view-content .view-banner-nodes .views_slideshow_main ul li.swiper-slide {
-  height: auto;
+  height: auto !important;
+}
+
+.view-componente-noticia-multimedia-destacada .view-content .view-banner-nodes .views_slideshow_main ul li.swiper-slide .youtube-container--responsive {
+  padding-bottom: 100%;
 }
 
 @media (min-width: 992px) {
@@ -6029,6 +6049,11 @@ body > .main-container.container-fluid {
   float: right;
   max-width: 180px;
   margin: 10px auto 0;
+}
+
+.view-componente-noticia-multimedia-destacada .views-field-view-1 .link-multimedia-destacado a:hover {
+  background-color: #ff8827;
+  color: #fff;
 }
 
 /*
