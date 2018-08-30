@@ -114,7 +114,8 @@
 //   }
 // }
 /* ------| Eventos |----- */
-.view-componente-especiales{
+.view-display-id-especiales_recientes,
+.view-display-id-especiales_visitas {
   display: block;
   overflow: hidden;
   .view-content {
@@ -140,10 +141,10 @@
           width: 23%;
         }
         //Img
-        .views-field {
+        .views-field-view {
+          border-bottom: 3px solid color('blue-light');
           img{
             width: 100%;
-            border-bottom: 3px solid color('blue-light');
           }
         }
         //Fecha
