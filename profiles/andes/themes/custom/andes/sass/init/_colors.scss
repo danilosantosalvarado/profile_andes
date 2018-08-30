@@ -15,6 +15,7 @@
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
 
 $chroma: add-colors((
+  transparent:            transparent,
   // Primary
   black:                  #000,
   black-secundary:        #585863,

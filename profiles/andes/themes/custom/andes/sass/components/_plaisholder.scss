@@ -1,5 +1,5 @@
 //Mixin la agregacion de color de los bullet de slider
-@mixin bullet($color-botton, $color-active ) {
+@mixin bullet($color-borde, $color-back, $color-active-borde, $color-active-back ) {
   text-align: center;
   .views-slideshow-pager-field-item {
     padding: 0 5px;
@@ -10,15 +10,15 @@
       font-size: 0;
       display: block;
       text-decoration: none;
-      border: 1px solid color('#{$color-botton}');
+      border: 1px solid color('#{$color-borde}');
       border-radius: 10px;
-      background-color: color('#{$color-botton}');
+      background-color: color('#{$color-back}');
       padding: 0;
     }
     &.active {
       a {
-        background-color: color('#{$color-active}');
-        border: 1px solid color('#{$color-active}');
+        background-color: color('#{$color-active-borde}');
+        border: 1px solid color('#{$color-active-back}');
       }
     }
   }
@@ -130,24 +130,6 @@
   padding: 0;
 }
 
-
-// /* ------| conponentes |----- */
-//flechas componentes carrucel
-%a-prev {
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: -6%;
-  z-index: 10;
-  border: 1px solid #777;
-  background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-  background-size: 40px 40px;
-  //z-index: 1;
-}
-
-
 /* ------| Container globales |----- */
 .container-fluid {
   padding: 0;
@@ -163,7 +145,7 @@ body > .main-container.container-fluid {
 	}
 }
 
-/* ------| Titles |----- */
+/* ------| Titles panel |----- */
 .pane-title {
   font-family: $latoblack;
   @include font-size(ll);

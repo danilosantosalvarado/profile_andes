@@ -275,7 +275,7 @@
 		.views-slideshow-pager-field-processed {
 			position: initial;
 			padding: 0px;
-			@include bullet(grey-secundary, yellow-defaul);
+			@include bullet(transparent, grey-secundary, yellow-defaul, yellow-defaul);
 		}
 	}
 }
