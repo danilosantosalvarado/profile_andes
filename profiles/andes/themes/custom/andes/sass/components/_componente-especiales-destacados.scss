@@ -26,7 +26,7 @@
 	.views-row {
 	  //Imagenes
 		.view-content {
-			border-bottom: 4px solid color('orange');
+			border-bottom: 4px solid color('blue-light');
 			img {
 				width: 100%;
 			}
@@ -40,7 +40,7 @@
 				font-family: $latoregular;
 				@include type-layout(xxs, 1.23);
 		    @include margin-bottom(.6);
-		    color: color('orange');
+		    color: color('blue-light');
 		  }
 		  //Titulo
 		  .compo-notias-titulo {
@@ -71,7 +71,7 @@
 						right: 10px;
 						margin: 0px;
 					}
-					border: 1px solid color('orange');
+					border: 1px solid color('blue-light');
 					font-family: $latolight;
 					font-size: 15.3px;
 	    		color: #484851;
