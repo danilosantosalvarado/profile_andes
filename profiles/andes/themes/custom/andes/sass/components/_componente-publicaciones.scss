@@ -67,9 +67,6 @@
 
 //Flechas paginador
 .view-display-id-componente_publicaciones {
-	@include respond-to(xl) {
-		display: block;
-	}
 	.skin-default {
 		position: relative;
 		//Conten Flechas

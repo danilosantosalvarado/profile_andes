@@ -2864,12 +2864,6 @@ body > .main-container.container-fluid {
   color: #ffffff;
 }
 
-@media (min-width: 992px) {
-  .view-id-componente_eventos {
-    display: block;
-  }
-}
-
 .view-id-componente_eventos .skin-default {
   position: relative;
 }
@@ -3474,27 +3468,25 @@ body > .main-container.container-fluid {
   color: #ffffff;
 }
 
-@media (min-width: 992px) {
-  .view-display-id-noticias_destacadas {
-    display: block;
-  }
-}
-
 .view-display-id-noticias_destacadas .skin-default {
   position: relative;
 }
 
-.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text {
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top {
+  display: block;
+}
+
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text {
+  .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
     display: block;
   }
 }
 
-.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='prev'] {
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='prev'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -3505,11 +3497,11 @@ body > .main-container.container-fluid {
   background-size: 40px 40px;
 }
 
-.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text .views-slideshow-controls-text-pause {
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text .views-slideshow-controls-text-pause {
   display: none;
 }
 
-.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='next'] {
+.view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -3816,12 +3808,6 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .view-display-id-componente_publicaciones .swiper-container-horizontal ul li.swiper-slide .publicaiones-body {
     font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .view-display-id-componente_publicaciones {
-    display: block;
   }
 }
 

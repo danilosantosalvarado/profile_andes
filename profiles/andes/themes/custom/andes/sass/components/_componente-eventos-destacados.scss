@@ -106,9 +106,6 @@
 
 //Flechas paginador
 .view-id-componente_eventos {
-  @include respond-to(xl) {
-		display: block;
-	}
 	.skin-default {
 		position: relative;
 		//Conten Flechas
