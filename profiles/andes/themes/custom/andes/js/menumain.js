@@ -76,7 +76,7 @@
           $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
-            $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><p> < " + $(this).text() + "</p></div>");
+            $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
             $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
             setTimeout(function () {
               $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
@@ -118,7 +118,7 @@
           $('.box-black').remove();
           let $this = $(this);
           $this.siblings().addClass('active-mobile');
-          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><p> < " + $this.text() + "</p></div>");
+          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><p>" + $this.text() + "</p></div>");
           console.log($this);
           $('.box-black').click(function () {
             console.log($this);
