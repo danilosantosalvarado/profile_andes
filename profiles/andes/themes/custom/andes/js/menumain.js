@@ -112,11 +112,13 @@
 
 
         $('.navbar-toggle').on("click", function () {
-          $('body').toggleClass('not-scroll')
+          $('body').toggleClass('not-scroll');
+          $('.nav-child').removeClass('active-mobile');
         });
         itemMobil.on("click", function () {
           $('.box-black').remove();
           let $this = $(this);
+          console.log($this);
           $this.siblings().addClass('active-mobile');
           $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><p>" + $this.text() + "</p></div>");
           console.log($this);
