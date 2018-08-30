@@ -637,54 +637,71 @@ th {
   }
 }
 
-.view-id-eventos .view-content ul .views-row .views-field img {
-  width: 100%;
+.view-id-eventos .view-content ul .views-row .views-field-view {
   border-bottom: 3px solid #ff8827;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field .youtube-container--responsive {
+.view-id-eventos .view-content ul .views-row .views-field-view img {
+  width: 100%;
+}
+
+.view-id-eventos .view-content ul .views-row .views-field-view .youtube-container--responsive {
   padding-bottom: 62.25%;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container {
-  padding: 1.575rem 1.251rem;
-}
-
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
+.view-id-eventos .view-content ul .views-row .views-field-title-1 {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   line-height: 0.96;
   color: #484851;
   margin: 1.251rem 0 1.251rem;
+  padding: 0 25px;
 }
 
 @media (min-width: 992px) {
-  .view-id-eventos .view-content ul .views-row .eventos-container .eventos-titulo {
-    font-size: 1.1875rem;
-    margin: 1.35rem 0 1.563rem;
+  .view-id-eventos .view-content ul .views-row .views-field-title-1 {
+    font-size: 1.4375rem;
+    margin: 3.063rem 0 1.563rem;
   }
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha,
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar {
+.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-bottom: 1.05rem;
+  padding: 0 25px;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span,
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span {
-  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 0.8125rem;
-}
-
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-fecha span:nth-child(1),
-.view-id-eventos .view-content ul .views-row .eventos-container .eventos-lugar span:nth-child(1) {
+.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos span {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   margin-right: 5px;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-enlace a {
-  border: 1px solid #ff8827;
+.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos .field-content span {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+}
+
+.view-id-eventos .view-content ul .views-row .views-field-additional {
+  margin-bottom: 1.05rem;
+  padding: 0 25px;
+}
+
+.view-id-eventos .view-content ul .views-row .views-field-additional span {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  margin-right: 5px;
+}
+
+.view-id-eventos .view-content ul .views-row .views-field-additional span:nth-child(2) {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+}
+
+.view-id-eventos .view-content ul .views-row .views-field-view-node a {
+  border: 1px solid #46b9c0;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 15.3px;
   color: #484851;
@@ -695,9 +712,9 @@ th {
   float: right;
 }
 
-.view-id-eventos .view-content ul .views-row .eventos-enlace a:hover {
-  background-color: #ff8827;
-  color: #fff fff;
+.view-id-eventos .view-content ul .views-row .views-field-view-node a:hover {
+  background-color: #46b9c0;
+  color: #ffffff;
 }
 
 /* ------| Paguinadores |----- */
