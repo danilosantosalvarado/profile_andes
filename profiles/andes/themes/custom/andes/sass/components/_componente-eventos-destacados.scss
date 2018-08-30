@@ -108,40 +108,43 @@
 .view-id-componente_eventos {
 	.skin-default {
 		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-    	//Button Izquierda
-    	a[rel='prev'] {
-				font-size: 0;
-				width: 40px;
-				height: 40px;
-				position: absolute;
-				top: 50%;
-				border: 1px solid #777;
-				background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-				background-size: 40px 40px;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
+		.views-slideshow-controls-top {
+			display: block;
+			//Conten Flechas
+			.views-slideshow-controls-text {
 				display: none;
+				@include respond-to(xl) {
+					display: block;
+				}
+				//Button Izquierda
+				a[rel='prev'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
+				//Buttom Pause
+				.views-slideshow-controls-text-pause {
+					display: none;
+				}
+				//Button Deracha
+				a[rel='next'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					left: inherit;
+					right: 0;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_next.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
 			}
-			//Button Deracha
-			a[rel='next'] {
-				font-size: 0;
-				width: 40px;
-				height: 40px;
-				position: absolute;
-				top: 50%;
-				left: inherit;
-		    right: 0;
-				border: 1px solid #777;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-				background-size: 40px 40px;
-		  }
 		}
 	}
 }

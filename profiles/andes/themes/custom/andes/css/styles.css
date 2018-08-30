@@ -2868,17 +2868,21 @@ body > .main-container.container-fluid {
   position: relative;
 }
 
-.view-id-componente_eventos .skin-default .views-slideshow-controls-text {
+.view-id-componente_eventos .skin-default .views-slideshow-controls-top {
+  display: block;
+}
+
+.view-id-componente_eventos .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .view-id-componente_eventos .skin-default .views-slideshow-controls-text {
+  .view-id-componente_eventos .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
     display: block;
   }
 }
 
-.view-id-componente_eventos .skin-default .views-slideshow-controls-text a[rel='prev'] {
+.view-id-componente_eventos .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='prev'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -2889,11 +2893,11 @@ body > .main-container.container-fluid {
   background-size: 40px 40px;
 }
 
-.view-id-componente_eventos .skin-default .views-slideshow-controls-text .views-slideshow-controls-text-pause {
+.view-id-componente_eventos .skin-default .views-slideshow-controls-top .views-slideshow-controls-text .views-slideshow-controls-text-pause {
   display: none;
 }
 
-.view-id-componente_eventos .skin-default .views-slideshow-controls-text a[rel='next'] {
+.view-id-componente_eventos .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -3815,17 +3819,21 @@ body > .main-container.container-fluid {
   position: relative;
 }
 
-.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-text {
+.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top {
+  display: block;
+}
+
+.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-text {
+  .view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
     display: block;
   }
 }
 
-.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-text a[rel='prev'] {
+.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='prev'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -3836,11 +3844,11 @@ body > .main-container.container-fluid {
   background-size: 40px 40px;
 }
 
-.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-text .views-slideshow-controls-text-pause {
+.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top .views-slideshow-controls-text .views-slideshow-controls-text-pause {
   display: none;
 }
 
-.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-text a[rel='next'] {
+.view-display-id-componente_publicaciones .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
   width: 40px;
   height: 40px;
