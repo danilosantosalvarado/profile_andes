@@ -42,77 +42,6 @@
   }
 }
 
-
-// .view-componente-especiales {
-//   > .view-content {
-//     padding: 15px;
-//     > div {
-//       background: color('grey-light');
-//       margin-bottom: 20px;
-//       float: left;
-//       width: 100%;
-//       @include respond-to(m) {
-//         width: 46%;
-//       }
-//       @include respond-to(m) {
-//         width: 47%;
-//         margin: 0.7em;
-//       }
-//       @include respond-to(xl) {
-//         width: 31%;
-//       }
-//       @include respond-to(xxxl) {
-//         width: 23%;
-//       }
-//     }
-//     .views-field-view {
-//       .field-content {
-//         img {
-//           border-bottom: 3px solid color('blue-light');
-//           width: 100%;
-//         }
-//       }
-//     }
-//     .views-field-title {
-//       font-size: 1.25rem;
-//       line-height: 1;
-//       text-align: left;
-//       text-decoration: none;
-//       margin: 20px 0 25px;
-//       padding: 0 15px;
-//       font-family: 'crimsontext-semibold';
-//       a {
-//         text-decoration: none;
-//       }
-//     }
-//     .views-field-body {
-//       margin-bottom: 20px;
-//       padding: 0 15px;
-//     }
-//     .views-field-view-node {
-//       padding: 0 15px;
-
-//       a {
-//         background-color: transparent;
-//         border: 1px solid color('blue-light');
-//         padding: 10px 10px;
-//         color: color('grey');
-//         text-decoration: none;
-//         z-index: 1;
-//         display: block;
-//         text-align: center;
-//         font-size: 18px;
-//         right: 25px;
-//         left: inherit;
-//         max-width: 120px;
-//         &:hover {
-//           background: color('blue-light');
-//           color: color('white');
-//         }
-//       }
-//     }
-//   }
-// }
 /* ------| Eventos |----- */
 .view-display-id-especiales_recientes,
 .view-display-id-especiales_visitas {
@@ -128,14 +57,14 @@
         position: relative;
         background: #f4f1f1;
         margin: 10px 0;
-        @include respond-to(m) {
-          width: 47%;
-          // height: 530px;
-          margin: 0.7em;
+        @include respond-to(xs) {
+          width: 46.2%;
+					margin: 0.7em;
+					height: 500px;
         }
         @include respond-to(xl) {
-          width: 31%;
-          height: 557px;
+          width: 30.6%;
+					height: 567px;
         }
         @include respond-to(xxxl) {
           width: 23%;
@@ -182,7 +111,7 @@
         //Button
         .views-field-view-node {
           a {
-            @include respond-to(m) {
+            @include respond-to(xs) {
               position: absolute;
               bottom: 20px;
               right: 10px;
