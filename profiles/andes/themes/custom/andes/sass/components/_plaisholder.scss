@@ -171,7 +171,7 @@ body > .main-container.container-fluid {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  @include margin-bottom(1.7);
+  // @include margin-bottom(1.7);
   @include respond-to(m) {
 		@include font-size(xxxl);
   }
