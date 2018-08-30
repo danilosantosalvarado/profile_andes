@@ -42,79 +42,9 @@
   }
 }
 
-
-// .view-componente-especiales {
-//   > .view-content {
-//     padding: 15px;
-//     > div {
-//       background: color('grey-light');
-//       margin-bottom: 20px;
-//       float: left;
-//       width: 100%;
-//       @include respond-to(m) {
-//         width: 46%;
-//       }
-//       @include respond-to(m) {
-//         width: 47%;
-//         margin: 0.7em;
-//       }
-//       @include respond-to(xl) {
-//         width: 31%;
-//       }
-//       @include respond-to(xxxl) {
-//         width: 23%;
-//       }
-//     }
-//     .views-field-view {
-//       .field-content {
-//         img {
-//           border-bottom: 3px solid color('blue-light');
-//           width: 100%;
-//         }
-//       }
-//     }
-//     .views-field-title {
-//       font-size: 1.25rem;
-//       line-height: 1;
-//       text-align: left;
-//       text-decoration: none;
-//       margin: 20px 0 25px;
-//       padding: 0 15px;
-//       font-family: 'crimsontext-semibold';
-//       a {
-//         text-decoration: none;
-//       }
-//     }
-//     .views-field-body {
-//       margin-bottom: 20px;
-//       padding: 0 15px;
-//     }
-//     .views-field-view-node {
-//       padding: 0 15px;
-
-//       a {
-//         background-color: transparent;
-//         border: 1px solid color('blue-light');
-//         padding: 10px 10px;
-//         color: color('grey');
-//         text-decoration: none;
-//         z-index: 1;
-//         display: block;
-//         text-align: center;
-//         font-size: 18px;
-//         right: 25px;
-//         left: inherit;
-//         max-width: 120px;
-//         &:hover {
-//           background: color('blue-light');
-//           color: color('white');
-//         }
-//       }
-//     }
-//   }
-// }
 /* ------| Eventos |----- */
-.view-componente-especiales{
+.view-display-id-especiales_recientes,
+.view-display-id-especiales_visitas {
   display: block;
   overflow: hidden;
   .view-content {
@@ -127,23 +57,23 @@
         position: relative;
         background: #f4f1f1;
         margin: 10px 0;
-        @include respond-to(m) {
-          width: 47%;
-          // height: 530px;
-          margin: 0.7em;
+        @include respond-to(xs) {
+          width: 46.2%;
+					margin: 0.7em;
+					height: 500px;
         }
         @include respond-to(xl) {
-          width: 31%;
-          height: 557px;
+          width: 30.6%;
+					height: 567px;
         }
         @include respond-to(xxxl) {
-          width: 23%;
+          width: 23.2%;
         }
         //Img
-        .views-field {
+        .views-field-view {
+          border-bottom: 3px solid color('blue-light');
           img{
             width: 100%;
-            border-bottom: 3px solid color('blue-light');
           }
         }
         //Fecha
@@ -181,7 +111,7 @@
         //Button
         .views-field-view-node {
           a {
-            @include respond-to(m) {
+            @include respond-to(xs) {
               position: absolute;
               bottom: 20px;
               right: 10px;
@@ -201,6 +131,67 @@
               color: #ffffff;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+/* ------| Paguinadores |----- */
+.view-display-id-especiales_recientes,
+.view-display-id-especiales_visitas {
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    ul.pagination {
+      background: color('white');
+      border-radius: 0;
+      padding: 10px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid color('blue-light');
+        z-index: -1;
+      }
+      li {
+        color: #484851;
+        border: 1px solid #fff;
+        border-radius: 0;
+        background-color: #fff;
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid #fff;
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: #fff;
+          .ajax-progress {
+            display: none;
+          }
+        }
+        &.active {
+          border-color: color('blue-light');
+          span {
+            background-color: transparent;
+            border-radius: initial;
+            color: color('black');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
+          display: none;
         }
       }
     }
