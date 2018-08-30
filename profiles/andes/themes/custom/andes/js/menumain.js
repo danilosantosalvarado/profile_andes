@@ -68,7 +68,7 @@
           $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function () {
             console.log($(this));
             $('.box-black').parents('.row-fluid').addClass('parent-clone');
-            $('.box-black a').text('<' + $(this).text());
+            $('.box-black p').text('<' + $(this).text());
             SubMenuCloneNivel3 = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
             $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
           });
@@ -76,7 +76,7 @@
           $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
-            $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><a> < " + $(this).text() + "</a></div>");
+            $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><p> < " + $(this).text() + "</p></div>");
             $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
             setTimeout(function () {
               $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
@@ -118,7 +118,7 @@
           $('.box-black').remove();
           let $this = $(this);
           $this.siblings().addClass('active-mobile');
-          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><a> < " + $this.text() + "</a></div>");
+          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><p> < " + $this.text() + "</p></div>");
           console.log($this);
           $('.box-black').click(function () {
             console.log($this);
