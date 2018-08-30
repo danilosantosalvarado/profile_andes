@@ -1,57 +1,16 @@
 /*
 //------------------------------------------------------------------------------
-// Home eventos
+// Componenete Multimedia Recientes
 //------------------------------------------------------------------------------
 */
 
-/* ------| Tabs |----- */
-.view-id-home_eventos {
-  .quicktabs-wrapper {
-    ul.quicktabs-tabs {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      padding-bottom: 40px;
-      padding-inline-start: 0px;
-      li {
-        margin: 10px 0;
-        display: block;
-        list-style: none;
-        @include respond-to(xs) {
-          display: inline-block;
-          margin: 0px;
-        }
-        a {
-          font-family: $latobold;
-          @include font-size(s);
-          text-align: center;
-          text-decoration: none;
-          transition: background .5s;
-          background-color: #f0eeee;
-          padding: 15px 50px;
-          display: block;
-          cursor: pointer;
-        }
-        &.active {
-          a {
-            background-color: color('orange');
-            color: color('white');
-            transition: background .5s;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* ------| Eventos |----- */
-.view-id-eventos {
+.view-display-id-multimedia_recientes {
   display: block;
   overflow: hidden;
   .view-content {
     ul {
       padding-inline-start: 0px;
-      .views-row {
+      li.views-row {
         list-style: none;
         float: left;
         width: 100%;
@@ -60,12 +19,12 @@
         margin: 10px 0;
         @include respond-to(xs) {
           width: 46.2%;
-          height: 440px;
-          margin: 0.7em;
+					margin: 0.7em;
+					height: 500px;
         }
         @include respond-to(xl) {
           width: 30.6%;
-          height: 505px;
+					height: 567px;
         }
         @include respond-to(xxxl) {
           width: 23.2%;
@@ -80,48 +39,36 @@
             padding-bottom: 62.25%;
           }
         }
-
+        //Fecha
+        .views-field-created {
+          margin: 10px 0px;
+          span {
+            font-family: $latoregular;
+            @include type-layout(xxs, 1.23);
+            padding: 0 15px;
+            color: color('orange');
+          }
+        }
         //Titulo
-        .views-field-title-1 {
+        .views-field-title {
           font-family: $crimson-textbold;
           @include type-layout(l, .96);
           color: #484851;
           @include margin(.834 0 .834);
-          padding: 0 25px;
+          padding: 0 15px;
           @include respond-to(xl) {
             @include font-size(ll);
-            @include margin(2.042 0 1.042);
+            @include margin(.9 0 1.042);
           }
         }
-        //Fecha
-        .views-field-field-fecha-eventos {
-          display: inline-flex;
-          @include margin-bottom(.7);
-          padding: 0 25px;
-          span {
-            font-family: $latobold;
-            @include font-size(xs);
-            margin-right: 5px;
-          }
-          .field-content {
-            span {
-              font-family: $latoregular;
-              @include font-size(xs);
-            }
-          }
-        }
-        //Lugar
-        .views-field-additional {
-          @include margin-bottom(.7);
-          padding: 0 25px;
-          span {
-            font-family: $latobold;
-            @include font-size(xs);
-            margin-right: 5px;
-            &:nth-child(2) {
-              font-family: $latoregular;
-              @include font-size(xs);
-            }
+        //Body
+        .views-field-body {
+          font-family: $crimson-textregular;
+          @include type-layout(m, 1.06);
+          @include margin-bottom(.417);
+          padding: 0 15px;
+          @include respond-to(xl) {
+            @include font-size(o);
           }
         }
         //Button
@@ -144,7 +91,7 @@
             float: right;
             &:hover {
               background-color: color('orange');
-              color: #ffffff;
+              color: color('white')fff;
             }
           }
         }
@@ -154,7 +101,7 @@
 }
 
 /* ------| Paguinadores |----- */
-.view-id-eventos {
+.view-display-id-multimedia_recientes {
   .text-center {
     width: 100%;
     position: relative;
