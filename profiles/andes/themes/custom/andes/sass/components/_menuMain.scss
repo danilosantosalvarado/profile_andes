@@ -21,13 +21,13 @@ $white:#fff;
   .mega-dropdown-menu,
   .row-fluid [class*="span"]{
     left: initial;
-    @include respond-to(m){
+    @include respond-to(xl){
       left: 0 !important;
       margin-left: 0;
     }
     .row-fluid .content-img{
       display: none !important;
-      @include respond-to(m){
+      @include respond-to(xl){
         display: block !important;
         position: absolute;
         width: 100%;
@@ -80,7 +80,7 @@ $white:#fff;
     .nav > li.active > a:hover,
     .nav > li.active > a:focus {
       background: black;
-      @include respond-to(m){
+      @include respond-to(xl){
         background: transparent;
       }
     }
@@ -97,6 +97,7 @@ $white:#fff;
   .navbar-collapse,
   .navbar-form{
     padding: 0;
+    margin: 0;
   }
   .navbar-toggle:hover,
   .navbar-toggle:focus {
@@ -111,7 +112,7 @@ $white:#fff;
 .region-navigation{
   width: 100%;
   z-index: 3;
-  @include respond-to(m){
+  @include respond-to(xl){
     position: fixed;
   }
 }
@@ -127,7 +128,7 @@ $white:#fff;
   display: none;
   width: 242px;
   margin: 12px 0 0 88px;
-  @include respond-to(m){
+  @include respond-to(xl){
     display: block;
   }
   @include respond-to(xl){
@@ -143,7 +144,7 @@ $white:#fff;
   }
   .views-row-1,
   .views-row-2{
-    @include respond-to(m){
+    @include respond-to(xl){
       max-width: 144px;
       margin-bottom: 7px;
       margin-top: 2px;
@@ -167,7 +168,7 @@ $white:#fff;
   top: 0;
   width: 280px;
   left: 13px;
-  @include respond-to(m){
+  @include respond-to(xl){
     position: fixed;
     z-index: 99999;
     top: 50px;
@@ -183,7 +184,7 @@ $white:#fff;
     max-width: 144px;
     margin-bottom: 7px;
     margin-top: 15px;
-    @include respond-to(m){
+    @include respond-to(xl){
       display: inline-block;
       width: 48%;
     }
@@ -221,6 +222,7 @@ $white:#fff;
 .barra-buscar{
   display: none;
 }
+
 /* Estilo de bloques clonados */
 .parent-clone{
   .tb-megamenu-column{
@@ -253,7 +255,7 @@ $white:#fff;
     top: -9px;
     height: auto !important;
     transition: right .4s;
-    @include respond-to(m){
+    @include respond-to(xl){
       height: 85%;
     }
     .dropdown-menu.container-submenu{
@@ -318,13 +320,13 @@ $white:#fff;
           }
         }
         .tb-megamenu-column-inner{
-          @include respond-to(m){
+          @include respond-to(xl){
             padding: 40px 0 0 41px;
           }
         }
       }
     }
-    @include respond-to(m){
+    @include respond-to(xl){
       top: 0px;
       padding: 0;
       width: 70%;
@@ -372,15 +374,13 @@ $white:#fff;
         appearance: none;
         font-size:  15.8333px;
         padding: 0 0;
-        -moz-appearance: none;
-        -webkit-appearance: none;
         outline: 0;
       }
     }
     .clone{
       padding: 20px 20px;
       display: flex;
-      @include respond-to(m){
+      @include respond-to(xl){
         background: yellow;
         display: none;
       }
@@ -409,14 +409,14 @@ $white:#fff;
         float: inherit;
         margin: 0 auto;
         padding: 0 0px;
-        @include respond-to(m){
+        @include respond-to(xl){
           float: left;
           margin-left: 0;
         }
         &.active{
           height: 50px;
           width: auto;
-          @include respond-to(m){
+          @include respond-to(xl){
             width: 136px;
             height: 77px;
           }
@@ -434,7 +434,7 @@ $white:#fff;
           color: color('gray-menu');
           text-align: center;
           background: transparent;
-          @include respond-to(m){
+          @include respond-to(xl){
             font-size: .83rem;
             font-weight: initial;
             display: table;
@@ -496,7 +496,7 @@ $white:#fff;
           background-color: #FFFFFF;
         }
       }
-      @include respond-to(m) {
+      @include respond-to(xl) {
         width: 136px;
         height: 74px;
       }
@@ -530,7 +530,7 @@ $white:#fff;
     //top: 129px;
     top: 0;
     transition: all .3s ease-in-out;
-    @include respond-to(m){
+    @include respond-to(xl){
       border: none;
       padding-left: 0;
       height: auto;
@@ -552,7 +552,7 @@ $white:#fff;
     transition: right .5s;
     padding: 20px 30px;
     z-index: 9;
-    @include respond-to(m){
+    @include respond-to(xl){
       position: absolute;
       padding: 0;
       height: 400px;
@@ -566,7 +566,7 @@ $white:#fff;
       right: 0px;
       -webkit-transition: right .5s; /* Safari */
       transition: right .5s;
-      @include respond-to(m){
+      @include respond-to(xl){
         left: 0px;
         -webkit-transition: left .5s; /* Safari */
         transition: left .5s;
@@ -609,7 +609,7 @@ $white:#fff;
         transition: all .3s ease-in-out;
       }
       .dropdown-submenu .tb-megamenu-submenu{
-        @include respond-to(m){
+        @include respond-to(xl){
           opacity: 0;
           height: 0;
           left: 1000% !important;
@@ -657,7 +657,7 @@ $white:#fff;
       top: 0;
       transition: left .4s;
     }
-    @include respond-to(m){
+    @include respond-to(xl){
       opacity: 0;
       margin-left: -420px;
     }
@@ -684,7 +684,7 @@ $white:#fff;
     border-left: 1px solid #c8c8ca;
     background-color: rgba(255, 255, 255, 1.0);
     transition: background-color 2s;
-    @include respond-to(m){
+    @include respond-to(xl){
       width: 90%;
     }
     &.active{
@@ -707,6 +707,8 @@ $white:#fff;
 /* se crear bloque en mobile */
 .navbar-header{
   background:yellow;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   &::before{
     content: '.....';
     display: block;
@@ -726,7 +728,6 @@ $white:#fff;
 }
 
 /* parte de los wrapper en */
-
 .wrapper-mega-menu,
 .wrapper-menu-soy {
   .container{
@@ -736,7 +737,7 @@ $white:#fff;
 .wrapper-menu-soy {
   background-color: black;
   display: none;
-  @include respond-to(m){
+  @include respond-to(xl){
     display: block;
   }
 }
