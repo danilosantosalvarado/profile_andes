@@ -100,7 +100,7 @@ function _color_set_for_data($value)
 {
   $realpath = realpath(dirname(__FILE__)) . '/css/styles_background.css';
   if (file_exists($realpath)) {
-    $fh = fopen($realpath, 'a+');
+    $fh = fopen($realpath, 'a');
     fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
     fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
   } else {
