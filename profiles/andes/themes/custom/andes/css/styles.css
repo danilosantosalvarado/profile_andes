@@ -4267,11 +4267,6 @@ body > .main-container.container-fluid {
   margin: 0;
 }
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: transparent !important;
-}
-
 .navbar.container,
 .navbar.container-fluid {
   margin-top: 0;
@@ -5010,6 +5005,7 @@ body > .main-container.container-fluid {
   background: yellow;
   margin-left: 0 !important;
   margin-right: 0 !important;
+  width: 100%;
 }
 
 .navbar-header::before {
@@ -5025,6 +5021,16 @@ body > .main-container.container-fluid {
   background: transparent;
   border: 2px solid #696969;
   border-radius: 0;
+}
+
+.navbar-header .navbar-toggle:hover, .navbar-header .navbar-toggle:focus {
+  background-color: transparent !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-header .navbar-toggle {
+    display: block;
+  }
 }
 
 .navbar-header .navbar-toggle .icon-bar {
