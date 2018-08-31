@@ -865,13 +865,20 @@ th {
   position: relative;
 }
 
-.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-text {
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-bottom,
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-top {
+  display: block;
+}
+
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text,
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='prev'] {
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'],
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='prev'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -889,11 +896,13 @@ th {
   z-index: 2;
 }
 
-.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-text .views-slideshow-controls-text-pause {
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text .views-slideshow-controls-text-pause,
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text .views-slideshow-controls-text-pause {
   display: none;
 }
 
-.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-text a[rel='next'] {
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='next'],
+.view-display-id-home_noticias_destacadas .skin-default .views-slideshow-controls-top .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
   width: 40px;
   height: 40px;
@@ -5704,6 +5713,11 @@ body > .main-container.container-fluid {
 
 .view-display-id-multimedia_destacada .skin-default {
   position: relative;
+}
+
+.view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-bottom,
+.view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-top {
+  display: block;
 }
 
 .view-display-id-multimedia_destacada .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text,

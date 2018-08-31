@@ -62,11 +62,11 @@
 
 //Flechas paginador
 .view-display-id-multimedia_destacada {
-
 	.skin-default {
 		position: relative;
 		.views-slideshow-controls-bottom,
 		.views-slideshow-controls-top {
+			display: block;
 			//Conten Flechas
 			.views-slideshow-controls-text {
 				display: inline-flex;

@@ -63,46 +63,50 @@
 /* ------| Flechas paginador |----- */
 .view-display-id-home_noticias_destacadas {
 	.skin-default {
-		position: relative;
-		//Conten Flechas
-		.views-slideshow-controls-text {
-			display: inline-flex;
-    	//Button Izquierda
-    	a[rel='prev'] {
-				font-size: 0;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: inherit;
-				left: 2%;
-				bottom: -28px;
-        border: 1px solid #777;
-        background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-        background-size: 40px 40px;
-				transform: rotate(-90deg);
-				background-color: white;
-				z-index: 2;
-		  }
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				font-size: 0;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-		  	left: 12%;
-				top: inherit;
-        bottom: -28px;
-        border: 1px solid #777;
-				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-        background-color: white;
-        transform: rotate(-90deg);
-				z-index: 2;
-		  }
-		}
+    position: relative;
+    .views-slideshow-controls-bottom,
+		.views-slideshow-controls-top {
+			display: block;
+      //Conten Flechas
+      .views-slideshow-controls-text {
+        display: inline-flex;
+        //Button Izquierda
+        a[rel='prev'] {
+          font-size: 0;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: inherit;
+          left: 2%;
+          bottom: -28px;
+          border: 1px solid #777;
+          background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+          background-size: 40px 40px;
+          transform: rotate(-90deg);
+          background-color: white;
+          z-index: 2;
+        }
+        //Buttom Pause
+        .views-slideshow-controls-text-pause {
+          display: none;
+        }
+        //Button Deracha
+        a[rel='next'] {
+          font-size: 0;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 12%;
+          top: inherit;
+          bottom: -28px;
+          border: 1px solid #777;
+          background: url('../img/Icon/arrow_next.svg') no-repeat center;
+          background-color: white;
+          transform: rotate(-90deg);
+          z-index: 2;
+        }
+      }
+    }
 	}
 }
 
