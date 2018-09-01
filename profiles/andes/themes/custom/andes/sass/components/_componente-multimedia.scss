@@ -4,8 +4,30 @@
 //------------------------------------------------------------------------------
 */
 
+/* ------| Conten mini panel |----- */
+.pane-componente-slider-multimedia {
+	.pane-content {
+		.panel-col-first {
+			width: 100%;
+			@include respond-to(xl) {
+				width: 50%;
+
+			}
+		}
+		.panel-col-last {
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
+		}
+	}
+}
 /* ------| Multimedia |----- */
 .view-display-id-multimedia_destacada {
+	display: none;
+	@include respond-to(xl) {
+		display: block;
+	}
 	margin: 0 auto;
 	padding: 15px;
 	position: relative;
@@ -60,7 +82,7 @@
 	}
 }
 
-//Flechas paginador
+/* ------| Flechas paginador |----- */
 .view-display-id-multimedia_destacada {
 	.skin-default {
 		position: relative;
@@ -109,6 +131,64 @@
 		}
 	}
 }
+/* ------| Multimedia swioe horizontal movil |----- */
+.view-display-id-multimedia_destacada_mobile {
+	@include respond-to(xl) {
+		display: none;
+	}
+	.swiper-container-horizontal {
+		width: 90%;
+		margin: 0 auto;
+		ul {
+			-webkit-padding-start: 0px;
+			li {
+				.views-field-view {
+					img{
+            width: 100%;
+          }
+          .youtube-container--responsive {
+            padding-bottom: 63.25%;
+          }
+				}
+				//Fecha
+				.views-field-created {
+					margin: 15px 0;
+					text-align: center;
+					span {
+						font-family: $latoregular;
+						@include font-size(s);
+						color: color('grey-dark');
+					}
+				}
+				//title
+				.views-field-title {
+					text-align: center;
+					a {
+						font-family: $crimson-textroman;
+						@include type-layout(l, 1.16);
+						color: color('green-Primary');
+						margin-bottom: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ------| Bules swper |----- */
+.view-display-id-multimedia_destacada_mobile {
+	.views-slideshow-controls-bottom,
+	.views-slideshow-controls-top {
+		display: block;
+		.views-slideshow-pager-field-processed {
+			@include bullet(green-Primary, grey-secundary, green-Primary, green-Primary );
+			@include respond-to(xl) {
+				display: none;
+			}
+		}
+	}
+}
+
 
 /* ------| Multimedia Reproduccion |----- */
 .view-display-id-multimedia_destacada_unica {
