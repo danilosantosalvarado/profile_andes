@@ -6,36 +6,43 @@
 
 /* ------| Slider Home|----- */
 .view-slider-homes {
-	ul {
-		li.swiper-slide {
-			list-style: none;
-			.slider-homes-img-destock {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-			}
-			.slider-homes-img-movil {
+	.views_slideshow_swiper-processed {
+		height: 673px;
+		border: 2px solid red;
+		ul {
+			padding-inline-start: 0px;
+			li.swiper-slide {
+				list-style: none;
+				overflow: hidden;
 				display: block;
-				@include respond-to(xl) {
-					display: none;
-				}
-			}
-			img {
-				width: 100%;
-				height: 551px;
-				@include respond-to(xl) {
-					height: auto;
-					max-height: 619px;
-				}
-			}
-			iframe {
-				width: 100%;
-				height: 290px;
-				@include respond-to(xl) {
-					height: 519px;
-				// 	height: 515px;
-				// 	max-height: 515px;
+				.views-slideshow-swiper-main-frame-row-item {
+					display: inline-flex;
+					width: 100%;
+					overflow: hidden;
+					height: 100%;
+					.views-field.views-field-views-conditional {
+						width: 100%;
+						// .slider-homes-img-destock {
+						// 	display: none;
+						// 	@include respond-to(xl) {
+						// 		display: block;
+						// 	}
+						// }
+						// .slider-homes-img-movil {
+						// 	display: block;
+						// 	@include respond-to(xl) {
+						// 		display: none;
+						// 	}
+						// }
+						img {
+							width: 100%;
+							height: 100%;
+						}
+						.youtube-container--responsive {
+							padding-bottom: 46%;
+							width: 100%;
+						}
+					}
 				}
 			}
 		}
@@ -124,6 +131,7 @@
 	.field-content {
 		.slider-homes-bottom {
 			padding: 0 15px;
+			overflow: hidden;
 			@include margin(.834 0);
 			@include respond-to(m) {
 				width: 750px;

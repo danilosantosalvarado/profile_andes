@@ -2055,7 +2055,7 @@ th {
 }
 
 body > .main-container.container-fluid {
-  margin-top: 61px;
+  margin-top: 100px;
 }
 
 .inside {
@@ -2089,51 +2089,43 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
-.view-slider-homes ul li.swiper-slide {
+.view-slider-homes .views_slideshow_swiper-processed {
+  height: 673px;
+  border: 2px solid red;
+}
+
+.view-slider-homes .views_slideshow_swiper-processed ul {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide {
   list-style: none;
-}
-
-.view-slider-homes ul li.swiper-slide .slider-homes-img-destock {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .view-slider-homes ul li.swiper-slide .slider-homes-img-destock {
-    display: block;
-  }
-}
-
-.view-slider-homes ul li.swiper-slide .slider-homes-img-movil {
+  overflow: hidden;
   display: block;
 }
 
-@media (min-width: 992px) {
-  .view-slider-homes ul li.swiper-slide .slider-homes-img-movil {
-    display: none;
-  }
-}
-
-.view-slider-homes ul li.swiper-slide img {
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 100%;
-  height: 551px;
+  overflow: hidden;
+  height: 100%;
 }
 
-@media (min-width: 992px) {
-  .view-slider-homes ul li.swiper-slide img {
-    height: auto;
-    max-height: 619px;
-  }
-}
-
-.view-slider-homes ul li.swiper-slide iframe {
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional {
   width: 100%;
-  height: 290px;
 }
 
-@media (min-width: 992px) {
-  .view-slider-homes ul li.swiper-slide iframe {
-    height: 519px;
-  }
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional img {
+  width: 100%;
+  height: 100%;
+}
+
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .youtube-container--responsive {
+  padding-bottom: 46%;
+  width: 100%;
 }
 
 /* ------| Ubicado Leth |----- */
@@ -2178,6 +2170,7 @@ body > .main-container.container-fluid {
 
 .view-slider-homes .field-content .slider-homes-bottom {
   padding: 0 15px;
+  overflow: hidden;
   margin: 1.251rem 0;
 }
 
