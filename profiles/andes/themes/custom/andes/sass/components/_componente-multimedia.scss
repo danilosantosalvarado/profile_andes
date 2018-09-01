@@ -56,25 +56,25 @@
 						width: 100%;
 					}
 				}
-				a {
-					text-decoration: none;
-					.container-multimedia {
-						//date
-						.multimedia-date {
-							font-family: $latoregular;
-							@include font-size(xxs);
-							color: color('grey-dark');
+				//titulo
+				.views-field-title {
+					a {
+						font-family: $crimson-textroman;
+						@include type-layout(s, 1.16);
+						color: color('green-Primary');
+						@include respond-to(xxxl) {
+							@include font-size(l);
 						}
-						//titulo
-						.multimedia-titulo {
-							font-family: $crimson-textroman;
-							@include type-layout(l, 1.16);
-							color: color('green-Primary');
-							margin-bottom: 14px;
-							&:hover {
-								text-decoration-line: underline;
-							}
+						&:hover {
+							text-decoration-line: underline;
 						}
+					}
+					margin-bottom: 5px;
+				}
+				.views-field-body {
+					font-size: 11.6px;
+					@include respond-to(xxxl) {
+						@include font-size(s);
 					}
 				}
 			}
