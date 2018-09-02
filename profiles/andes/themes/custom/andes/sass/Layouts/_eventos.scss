@@ -126,6 +126,7 @@
         }
         //Button
         .views-field-view-node {
+          margin: 20px;
           a {
             @include respond-to(xs) {
               position: absolute;
@@ -133,17 +134,19 @@
               right: 10px;
               margin: 0px;
             }
-            border: 1px solid color('orange');
+            display: block;
+            max-width: 180px;
             font-family: $latolight;
             font-size: 15.3px;
             color: #484851;
             text-decoration: none;
+            text-align: center;
+            border: 1px solid color('blue-light');
             padding: 10px 30px;
-            margin: 20px;
+            margin: 0 auto;
             outline: none;
-            float: right;
             &:hover {
-              background-color: color('orange');
+              background-color: color('blue-light');
               color: #ffffff;
             }
           }
