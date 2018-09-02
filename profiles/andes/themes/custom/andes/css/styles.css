@@ -4267,6 +4267,14 @@ body > .main-container.container-fluid {
   height: 100%;
 }
 
+@media (min-width: 1111px) {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    /*  display: none !important;
+      display: block !important; */
+  }
+}
+
 .navbar-default .navbar-collapse.in,
 .navbar-default .navbar-form.in {
   display: block !important;
