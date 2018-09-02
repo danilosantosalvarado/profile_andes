@@ -211,14 +211,14 @@
         position: relative;
         background: #f4f1f1;
         margin: 10px 0;
-        @include respond-to(m) {
-          width: 47%;
-          height: 464px;
+        @include respond-to(xs) {
+          width: 46.3%;
+          height: 485px;
           margin: 0.7em;
         }
         @include respond-to(xl) {
           width: 31%;
-          height: 525px;
+          height: 545px;
         }
         @include respond-to(xxxl) {
           width: 23%;
