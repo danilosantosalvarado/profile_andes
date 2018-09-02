@@ -4236,8 +4236,7 @@ body > .main-container.container-fluid {
 
 .tb-megamenu .nav-collapse.collapse {
   height: auto !important;
-  display: block;
-  padding-bottom: 67px;
+  height: 100% !important;
 }
 
 .tb-megamenu .nav-collapse .nav > li.active > a:hover,
@@ -4265,22 +4264,72 @@ body > .main-container.container-fluid {
 .navbar-default .navbar-form {
   padding: 0;
   margin: 0;
+  height: 100%;
+}
+
+.navbar-default .navbar-collapse.in,
+.navbar-default .navbar-form.in {
+  display: block !important;
+  float: left;
+  width: 100%;
+}
+
+.navbar-default .navbar-collapse.in .tb-megamenu .nav-collapse.collapse,
+.navbar-default .navbar-form.in .tb-megamenu .nav-collapse.collapse {
+  display: block;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-default .navbar-collapse.in .tb-megamenu .nav-collapse.collapse,
+  .navbar-default .navbar-form.in .tb-megamenu .nav-collapse.collapse {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse.in,
+  .navbar-default .navbar-form.in {
+    display: block !important;
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-default .navbar-collapse.in,
+  .navbar-default .navbar-form.in {
+    display: block !important;
+    float: left;
+    width: 100%;
+  }
 }
 
 .navbar.container,
 .navbar.container-fluid {
   margin-top: 0;
   border: none;
+  height: 100% !important;
+  display: block;
+  overflow: hidden;
+  height: 1000px;
+}
+
+.navbar.container .container-fluid,
+.navbar.container-fluid .container-fluid {
+  height: 100%;
 }
 
 .region-navigation {
   width: 100%;
   z-index: 3;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
   .region-navigation {
     position: fixed;
+    height: auto;
   }
 }
 
@@ -4428,6 +4477,7 @@ body > .main-container.container-fluid {
   -webkit-transition: background-color .2s;
   -o-transition: background-color .2s;
   transition: background-color .2s;
+  height: 100%;
 }
 
 .tb-megamenu-menu-mega-menu .tb-megamenu-button {
@@ -4442,7 +4492,7 @@ body > .main-container.container-fluid {
   padding: 0;
   position: relative;
   width: 100%;
-  top: -9px;
+  top: 0px;
   height: auto !important;
   -webkit-transition: right .4s;
   -o-transition: right .4s;
@@ -5003,9 +5053,14 @@ body > .main-container.container-fluid {
 /* se crear bloque en mobile */
 .navbar-header {
   background: yellow;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin: 0 !important;
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .navbar-header {
+    display: none;
+  }
 }
 
 .navbar-header::before {
@@ -5021,6 +5076,7 @@ body > .main-container.container-fluid {
   background: transparent;
   border: 2px solid #696969;
   border-radius: 0;
+  z-index: 9;
 }
 
 .navbar-header .navbar-toggle:hover, .navbar-header .navbar-toggle:focus {
@@ -5056,6 +5112,18 @@ body > .main-container.container-fluid {
 
 .wrapper-mega-menu {
   background-color: #ead134;
+  height: 100%;
+}
+
+.wrapper-mega-menu .container {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .wrapper-mega-menu .container {
+    height: auto;
+  }
 }
 
 /*
