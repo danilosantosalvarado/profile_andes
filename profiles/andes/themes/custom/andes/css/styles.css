@@ -3309,16 +3309,22 @@ body > .main-container.container-fluid {
   }
 }
 
+.view-display-id-especiales_destacadas .view-content ul li.views-row .views-field-view-node {
+  margin: 20px;
+}
+
 .view-display-id-especiales_destacadas .view-content ul li.views-row .views-field-view-node a {
-  border: 1px solid #46b9c0;
+  display: block;
+  max-width: 180px;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 15.3px;
   color: #484851;
   text-decoration: none;
+  text-align: center;
+  border: 1px solid #46b9c0;
   padding: 10px 30px;
-  margin: 20px;
+  margin: 0 auto;
   outline: none;
-  float: right;
 }
 
 @media (min-width: 555px) {
