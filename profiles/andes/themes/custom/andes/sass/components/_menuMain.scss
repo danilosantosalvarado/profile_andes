@@ -180,9 +180,8 @@ $white:#fff;
     //position: relative;
     position: absolute;
     width: inherit;
-    width: 1170px;
-    margin: 0 auto;
-
+    width: 20%;
+    margin: 14px auto 0;
   }
   h2{
     display: none
@@ -194,7 +193,7 @@ $white:#fff;
       margin-bottom: 7px;
       margin-top: 2px;
       display: inline-block;
-      width: 48%;
+      width: 47%;
     }
   }
   .views-row-2{
@@ -276,12 +275,15 @@ $white:#fff;
 }
 
 /* menus yo soy  */
-.tb-megamenu-menu-menu-top-soy{
-  .nav-collapse {
-    //float: right;
-    padding: 0 5%;
+.block-tb-megamenu{
+  width:80%;
+  float: right;
+  .tb-megamenu-menu-menu-top-soy{
+    .nav-collapse {
+      //float: right;
+      padding: 0 5%;
+    }
   }
-
 }
 /* menu mega menu */
 .tb-megamenu-menu-mega-menu {
@@ -304,8 +306,8 @@ $white:#fff;
      @include respond-to(xl){
       top: 0px;
       padding: 0;
-      width: 70%;
-      height: 85%;
+      //width: 80%;
+      //height: 85%;
       overflow-x: initial;
       overflow-y: initial;
       background: transparent;
@@ -463,7 +465,7 @@ $white:#fff;
           height: 50px;
           width: auto;
           @include respond-to(xl){
-            width: 136px;
+            width: auto;
             height: 77px;
           }
 
@@ -483,7 +485,7 @@ $white:#fff;
           @include respond-to(xl){
             font-size: .83rem;
             font-weight: initial;
-            display: table;
+            display: block;
           }
           &.dropdown-toggle{
             &::after{
@@ -806,6 +808,10 @@ $white:#fff;
     height: 100%;
     @include respond-to(xl){
       height: auto;
+      width: 970px;
+
+    }
+    @include respond-to(xxl){
     }
   }
 }
