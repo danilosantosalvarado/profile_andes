@@ -2076,7 +2076,7 @@ th {
 }
 
 body > .main-container.container-fluid {
-  margin-top: 100px;
+  margin-top: 240px;
 }
 
 .inside {
@@ -2111,7 +2111,7 @@ body > .main-container.container-fluid {
 */
 /* ------| Slider Home|----- */
 .view-slider-homes .views_slideshow_swiper-processed {
-  height: 673px;
+  height: 609px;
   border: 2px solid red;
 }
 
@@ -2139,14 +2139,31 @@ body > .main-container.container-fluid {
   width: 100%;
 }
 
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional img {
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .imge-conten {
+  height: 100%;
+}
+
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .imge-conten img {
   width: 100%;
   height: 100%;
 }
 
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .youtube-container--responsive {
-  padding-bottom: 46%;
-  width: 100%;
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .iframe-conten {
+  display: block;
+  overflow: hidden;
+  height: 55%;
+  border: 1px solid blueviolet;
+}
+
+@media (min-width: 768px) {
+  .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .iframe-conten {
+    height: 79%;
+  }
+}
+
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .iframe-conten .youtube-container--responsive {
+  padding-bottom: initial;
+  height: 100%;
 }
 
 /* ------| Ubicado Leth |----- */

@@ -7,7 +7,7 @@
 /* ------| Slider Home|----- */
 .view-slider-homes {
 	.views_slideshow_swiper-processed {
-		height: 673px;
+		height: 609px;
 		border: 2px solid red;
 		ul {
 			padding-inline-start: 0px;
@@ -34,13 +34,25 @@
 						// 		display: none;
 						// 	}
 						// }
-						img {
-							width: 100%;
+						.imge-conten  {
 							height: 100%;
+							img {
+								width: 100%;
+								height: 100%;
+							}
 						}
-						.youtube-container--responsive {
-							padding-bottom: 46%;
-							width: 100%;
+						.iframe-conten {
+							display: block;
+							overflow: hidden;
+							height: 55%;
+							border: 1px solid blueviolet;
+							@include respond-to(m) {
+								height: 79%;
+							}
+							.youtube-container--responsive {
+								padding-bottom: initial;
+								height: 100%;
+							}
 						}
 					}
 				}
