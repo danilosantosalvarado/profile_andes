@@ -64,28 +64,31 @@
 				}
 				//Button
 				.views-field-view-node {
-					a {
-						@include respond-to(xs) {
-							position: absolute;
-							bottom: 20px;
-							right: 10px;
-							margin: 0px;
-						}
-						border: 1px solid color('orange');
-						font-family: $latolight;
-						font-size: 15.3px;
-						color: #484851;
-						text-decoration: none;
-						padding: 10px 30px;
-						margin: 20px;
-						outline: none;
-						float: right;
-						&:hover {
-							background-color: color('orange');
-							color: #ffffff;
-						}
-					}
-				}
+          margin: 20px;
+          a {
+            @include respond-to(xs) {
+              position: absolute;
+              bottom: 20px;
+              right: 10px;
+              margin: 0px;
+            }
+            display: block;
+            max-width: 180px;
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid color('orange');
+            padding: 10px 30px;
+            margin: 0 auto;
+            outline: none;
+            &:hover {
+              background-color: color('orange');
+              color: #ffffff;
+            }
+          }
+        }
 			}
 		}
 	}
@@ -95,6 +98,7 @@
 .view-display-id-noticias_destacadas {
 	.skin-default {
 		position: relative;
+		.slideshow-controls-top,
 		.views-slideshow-controls-bottom {
 			display: block;
 			//Conten Flechas

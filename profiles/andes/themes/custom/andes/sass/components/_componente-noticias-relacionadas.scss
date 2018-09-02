@@ -12,80 +12,87 @@
 		width: 74%;
 		float: left;
 	}
-  ul {
-		-webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 0px;
-	}
-	li.swiper-slide {
-	  display: block;
-	  background: color('grey-light');
-    list-style: none;
-		@include respond-to(xl) {
-			height: 558px;
-		}
-	}
-	.views-row {
-	  //Imagenes
-		.view-content {
-			border-bottom: 4px solid color('orange');
-			img {
-				width: 100%;
+	ul {
+		-webkit-padding-start: 0px;
+		li {
+			list-style: none;
+			position: relative;
+			background: color('grey-light');
+			@include respond-to(xs) {
+				height: 460px;
 			}
-		}
-		//Contenedor
-		.conten-noticias {
-			display: inline-block;
-			@include padding(1.05 .834);
+			@include respond-to(xl) {
+				height: 519px;
+			}
+			//Imagenes
+			.views-field-view {
+				border-bottom: 3px solid color('orange');
+				img{
+					width: 100%;
+				}
+				.youtube-container--responsive {
+					padding-bottom: 62.25%;
+				}
+			}
 			//Fecha
-			.compo-notias-fecha {
-				font-family: $latoregular;
-				@include type-layout(xxs, 1.23);
-		    @include margin-bottom(.6);
-		    color: color('orange');
-		  }
-		  //Titulo
-		  .compo-notias-titulo {
-		  	font-family: $crimson-textbold;
-		  	@include type-layout(l, .96);
-		  	color: #484851;
-		  	@include margin(.834 0 .834);
-		  	@include respond-to(xl) {
+			.views-field-created {
+				margin: 10px 0px;
+				span {
+					font-family: $latoregular;
+					@include type-layout(xxs, 1.23);
+					padding: 0 15px;
+					color: color('orange');
+				}
+			}
+			//Titulo
+			.views-field-title {
+				font-family: $crimson-textbold;
+				@include type-layout(l, .96);
+				color: #484851;
+				@include margin(.834 0 .834);
+				padding: 0 15px;
+				@include respond-to(xl) {
 					@include font-size(ll);
 					@include margin(.9 0 1.042);
-		  	}
-		  }
-		  //Body
-		  .compo-notias-body {
+				}
+			}
+			//Body
+			.views-field-body {
 				font-family: $crimson-textregular;
 				@include type-layout(m, 1.06);
 				@include margin-bottom(.417);
+				padding: 0 15px;
 				@include respond-to(xl) {
 					@include font-size(o);
-		  	}
-		  }
-		  //Button
-		  .compo-notias-enlace {
+				}
+			}
+			//Button
+			.views-field-view-node {
+				margin: 20px;
 				a {
-					@include respond-to(xl) {
+					@include respond-to(xs) {
 						position: absolute;
 						bottom: 20px;
 						right: 10px;
 						margin: 0px;
 					}
-					border: 1px solid color('orange');
+					display: block;
+					max-width: 180px;
 					font-family: $latolight;
 					font-size: 15.3px;
-	    		color: #484851;
-	    		text-decoration: none;
-	        padding: 10px 30px;
-	        margin-top: 20px;
-	    		outline: none;
-	    		float: right;
+					color: #484851;
+					text-decoration: none;
+					text-align: center;
+					border: 1px solid color('orange');
+					padding: 10px 30px;
+					margin: 0 auto;
+					outline: none;
+					&:hover {
+						background-color: color('orange');
+						color: #ffffff;
+					}
 				}
-		  }
+			}
 		}
 	}
 }
