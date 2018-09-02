@@ -4584,7 +4584,14 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   .tb-megamenu-menu-mega-menu .always-show {
+    top: 0px;
+    padding: 0;
+    width: 70%;
     height: 85%;
+    overflow-x: initial;
+    overflow-y: initial;
+    background: transparent;
+    float: right;
   }
 }
 
@@ -4657,17 +4664,6 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .tb-megamenu-menu-mega-menu .always-show .dropdown-menu.container-submenu.active-mobile .tb-megamenu-column-inner {
     padding: 40px 0 0 41px;
-  }
-}
-
-@media (min-width: 992px) {
-  .tb-megamenu-menu-mega-menu .always-show {
-    top: 0px;
-    padding: 0;
-    width: 70%;
-    overflow-x: initial;
-    overflow-y: initial;
-    background: transparent;
   }
 }
 

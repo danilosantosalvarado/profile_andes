@@ -301,8 +301,15 @@ $white:#fff;
     top: 0px;
     height: auto !important;
     transition: right .4s;
-    @include respond-to(xl){
+     @include respond-to(xl){
+      top: 0px;
+      padding: 0;
+      width: 70%;
       height: 85%;
+      overflow-x: initial;
+      overflow-y: initial;
+      background: transparent;
+      float: right;
     }
     .dropdown-menu.container-submenu{
       &.active-mobile{
@@ -371,14 +378,6 @@ $white:#fff;
           }
         }
       }
-    }
-    @include respond-to(xl){
-      top: 0px;
-      padding: 0;
-      width: 70%;
-      overflow-x: initial;
-      overflow-y: initial;
-      background: transparent;
     }
     .separador-menu {
       width: 100%;
