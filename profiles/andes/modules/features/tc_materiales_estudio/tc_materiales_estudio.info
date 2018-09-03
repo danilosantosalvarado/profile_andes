@@ -1,0 +1,12 @@
+name = tc_materiales_estudio
+description = Feacture materiales de estudio
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_instance][] = node-materiales_de_estudio-body
+features[node][] = materiales_de_estudio

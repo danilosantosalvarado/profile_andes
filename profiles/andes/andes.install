@@ -1,14 +1,14 @@
 <?php
 
+include_once 'api/andes.taxonomy.inc';
+
  /**
  * Implements hook_form_FORM_ID_alter().
  */
 function andes_form_install_configure_form_alter(&$form, $form_state) {
-// Server settings.
   $form['server_settings']['site_default_country']['#default_value'] = 'CO';
-  $form['server_settings']['date_default_timezone']['#default_value'] = 'America/Bogota';
+  drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-date-default-timezone").val("America/Bogota"); });', 'inline');
 }
-
 /**
  * Implements hook_install().
  */
@@ -346,7 +346,7 @@ function andes_install() {
   // Update the menu router information.
   menu_rebuild();
 
-  // Create Menu (Mega-Menu) 
+  // // Create Menu (Mega-Menu) 
   $menu_mega = array(
     'menu_name' => 'menu-mega-menu',  
     'title' => 'Mega Menu', 
@@ -364,12 +364,19 @@ function andes_install() {
 
   // Create Menu (Menu Principal) 
   $menu_main = array(
+    'menu_name' => 'menu-enlaces-de-interes',  
+    'title' => 'Enlaces de interes', 
+    'description' => 'Enlaces de interes');
+
+  menu_save($menu_main);
+
+  // Create Menu (Menu Principal) 
+  $menu_main = array(
     'menu_name' => 'main-menu',  
     'title' => 'Menu principal', 
     'description' => 'Menu principal(Menu-principal)');
 
   menu_save($menu_main);
-
 
 
   // Enable the admin theme.
@@ -403,22 +410,27 @@ function andes_install() {
    // Enabled  Task Pages Manager 
    variable_set('page_manager_node_view_disabled', FALSE);  
 
-   // Import Menu ("Mega Menu"). 
-    $options = array();
-    
+   // Import Menu ("menu-mega-menu"). 
     module_load_include('inc', 'menu_import', 'includes/import');
+    
+    $options = array();
+   
+   // Import Menu ("menu-mega-menu"). 
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("Menu Soy"). 
-    module_load_include('inc', 'menu_import', 'includes/import');
+   // Import Menu ("menu-top-soy"). 
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-menu-top-soy-export.txt', 'menu-top-soy',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("Menu Soy"). 
-    module_load_include('inc', 'menu_import', 'includes/import');
+   // Import Menu ("main-menu"). 
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/main-menu-export.txt', 'main-menu',$options);
     menu_import_save_menu($menu, $options);
+
+   // Import Menu ("menu-enlaces-de-interes"). 
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'menu-enlaces-de-interes',$options);
+    menu_import_save_menu($menu, $options);
+
 
     // Set Enabled Preflix languages en
     db_update('languages')
@@ -498,6 +510,23 @@ function andes_install_tasks($install_state) {
 
   $flag = TRUE;
   $tasks = array();
+
+  $tasks['install_tax'] = array(
+    'display_name' => st('Importacion de Taxonomias'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_install_taxonomy',
+  );
+
+  $tasks['install_style_image'] = array(
+    'display_name' => st('Importacion de Estilos de Imagen'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_install_style_image',
+  );  
+
   $tasks['install_mod'] = array(
     'display_name' => st('Importacion de contenido'),
     'display' => TRUE,
@@ -524,6 +553,64 @@ function _install_mods() {
 }
 
 function _install_andes_batch(){
-  $modules = array('udla_load_events');
-  module_enable($modules, TRUE);
+  // Import Beans types 
+  module_enable(array('beans_types'), TRUE);
+  // Creation content types.
+  module_enable(array('tc_noticias'), TRUE);
+  module_enable(array('tc_eventos'), TRUE);
+  module_enable(array('tc_layouts'), TRUE);
+  module_enable(array('tc_materiales_estudio'), TRUE);
+  module_enable(array('tc_publicaciones'), TRUE);
+  // Import Fields Condicions.
+  module_enable(array('field_condicion_list'), TRUE);
+  // Import nodes for content type noticias
+  module_enable(array('udla_load_events'), TRUE);
+}
+
+function _install_taxonomy() {
+  // Create taxonomy machine_name.
+  taxonomy_vocabulary_save((object) array('name' => 'Noticias','machine_name' => 'categorias_noticia'));
+  taxonomy_vocabulary_save((object) array('name' => 'Área tematica','machine_name' => 'area_tematica'));  
+  taxonomy_vocabulary_save((object) array('name' => 'Editorial','machine_name' => 'editorial'));
+  taxonomy_vocabulary_save((object) array('name' => 'Eventos','machine_name' => 'eventos'));
+  taxonomy_vocabulary_save((object) array('name' => 'Footer Top','machine_name' => 'footer_top'));
+  taxonomy_vocabulary_save((object) array('name' => 'Formato','machine_name' => 'formato'));
+  taxonomy_vocabulary_save((object) array('name' => 'Lateral Items','machine_name' => 'lateral_items'));
+  taxonomy_vocabulary_save((object) array('name' => 'Redes Sociales','machine_name' => 'redes_sociales'));
+  taxonomy_vocabulary_save((object) array('name' => 'Tipo de layout','machine_name' => 'tipo_layout'));
+
+  $install_state['mods'] = array('Taxonomy' => 1);
+  
+  $batch = array(
+    'title' => t('Importando Taxonomias'),
+  );
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_taxonomy_batch', array($module));
+  }
+  return $batch;
+}
+
+function _install_taxonomy_batch(){
+  andes_import_taxonomy();
+}
+
+function _install_style_image(){
+  
+  $install_state['mods'] = array('Style Image' => 1);
+  
+  $batch = array(
+    'title' => t('Importando Estilos de Imagen'),
+  );
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_style_image_batch', array($module));
+  }
+  return $batch;  
+}
+
+function _install_style_image_batch(){
+  module_enable(array('estilos'), TRUE);
 }

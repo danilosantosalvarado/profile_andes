@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Quictabs_list feature.
+ */
+
+include_once 'quictabs_list.features.inc';

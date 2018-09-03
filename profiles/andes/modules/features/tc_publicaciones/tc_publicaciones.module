@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tc_publicaciones feature.
+ */
+
+include_once 'tc_publicaciones.features.inc';

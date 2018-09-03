@@ -1,5 +1,4 @@
-Inicio {"url":"<front>","weight":"-50"}
-DIVERSIDAD {"url":"<front>","expanded":true,"weight":"-50"}
+DIVERSIDAD {"url":"<front>","expanded":true,"options":{"attributes":{"title":""},"content":[]},"weight":"-50"}
 -CENTRO DE APOYO A LA DIVERSIDAD Y LA EQUIDAD (CADE) {"url":"<front>","expanded":true,"weight":"0"}
 --Curso Herramientas para la vida universitaria {"url":"<front>","expanded":true,"weight":"-50"}
 --Seguimiento a estudiantes {"url":"<front>","expanded":true,"weight":"-49"}
@@ -114,7 +113,7 @@ EMPLEABILIDAD - CTP {"url":"<front>","expanded":true,"weight":"-48"}
 ---Artículos relacionados {"url":"<front>","weight":"-49"}
 ---Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
 CULTURA {"url":"<front>","expanded":true,"weight":"-47"}
--EVENTOS {"url":"<front>","weight":"0"}
+-EVENTOS {"url":"<front>","weight":"-50"}
 --Conciertos {"url":"<front>","weight":"-50"}
 ---Colombia Suena {"url":"<front>","weight":"-50"}
 ---Serie de pianistas {"url":"<front>","weight":"-49"}
@@ -128,19 +127,20 @@ CULTURA {"url":"<front>","expanded":true,"weight":"-47"}
 --Festivales {"url":"<front>","weight":"-49"}
 ---Festival de Músicas del Mundo {"url":"<front>","weight":"-50"}
 ---Festival de Jazz {"url":"<front>","weight":"-49"}
----Festival de Bandas {"url":"<front>","weight":"-48"}
----Festival Universitario de Danza Contemporánea {"url":"<front>","weight":"-47"}
+---Festival de Bandas {"url":"<front>","weight":"-47"}
+---Festival Universitario de Danza Contemporánea {"url":"<front>","weight":"-46"}
 --Exposiciones {"url":"<front>","weight":"-48"}
 --Arte y Cultura Audiovisual {"url":"<front>","weight":"-47"}
 --Artes Escénicas {"url":"<front>","weight":"-46"}
 ---Teatro {"url":"<front>","weight":"-50"}
----Lecturas dramáticas {"url":"<front>","weight":"-49"}
+---Lecturas dramáticas {"url":"<front>","weight":"-48"}
 --Cine {"url":"<front>","weight":"-45"}
----Cine Colombiano {"url":"<front>","weight":"-50"}
----Cine Independiente {"url":"<front>","weight":"-49"}
----Bogoshorts bajo la luna {"url":"<front>","weight":"-48"}
+---Cine Colombiano {"url":"<front>","weight":"-49"}
+---Cine Independiente {"url":"<front>","weight":"-48"}
+---Bogoshorts bajo la luna {"url":"<front>","weight":"-47"}
 --Cultura Digital {"url":"<front>","weight":"-44"}
 --Revista Skene {"url":"<front>","weight":"-43"}
+-image {"url":"<front>","options":{"attributes":{"title":""},"content":{"image":181}},"weight":"-49"}
 APOYO {"url":"<front>","expanded":true,"weight":"-46"}
 -DECALAB {"url":"<front>","weight":"-50"}
 --Guías y formatos {"url":"<front>","weight":"-50"}
@@ -148,11 +148,11 @@ APOYO {"url":"<front>","expanded":true,"weight":"-46"}
 --Investigación {"url":"<front>","weight":"-48"}
 --Biblioteca {"url":"<front>","weight":"-47"}
 -APOYOS INDIVIDUALES {"url":"<front>","weight":"-49"}
---Apoyo Académico {"url":"<front>","weight":"-49"}
+--Apoyo Académico {"url":"<front>","weight":"-50"}
 ---Orión (estudiantes en prueba académica) {"url":"<front>","weight":"0"}
---Apoyo Psicológico {"url":"<front>","weight":"0"}
---Apoyo en casos disciplinarios {"url":"<front>","weight":"0"}
---Apoyo Orientación Vocacional {"url":"<front>","weight":"0"}
+--Apoyo Psicológico {"url":"<front>","weight":"-47"}
+--Apoyo en casos disciplinarios {"url":"<front>","weight":"-46"}
+--Apoyo Orientación Vocacional {"url":"<front>","weight":"-49"}
 -TALLERES {"url":"<front>","weight":"-48"}
 -TALLERES OBLIGATORIOS {"url":"<front>","weight":"-47"}
 --Talleres obligatorios de reingreso académico {"url":"<front>","weight":"-50"}
@@ -166,3 +166,12 @@ APOYO {"url":"<front>","expanded":true,"weight":"-46"}
 -Más información {"url":"<front>","weight":"-45"}
 -Envíanos tus datos {"url":"<front>","weight":"-44"}
 -Inscripciones aquí {"url":"<front>","weight":"-43"}
+Layouts {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
+-layout 1 {"url":"layout-uno\/layout-1","options":{"attributes":{"title":""}},"node_uuid":"f9d377d7-a029-4cfa-9671-f06c2aae41b5","weight":"-50"}
+-layout 2 {"url":"content\/layout-2","options":{"attributes":{"title":""}},"node_uuid":"b32361dc-89af-4c2c-9576-1ec07d5e85e4","weight":"-49"}
+-layout 3 {"url":"layout-tres\/layout-3","options":{"attributes":{"title":""}},"node_uuid":"ba9c84b6-d90d-430e-9a07-d7923ccdfe17","weight":"-48"}
+-layout 4 {"url":"content\/layout-4","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"ad41cf54-9b5f-429d-a077-a5a445609343","weight":"-47"}
+-layout 5 {"url":"layout-cinco\/layout-5","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"7966d685-dc1f-43b9-9497-683d5208cf9c","weight":"-46"}
+-layout 7 {"url":"content\/layout-7","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"849d8dd1-346b-4415-9307-1ab9e295cbaa","weight":"-45"}
+-layout 9 {"url":"layout-nueve\/layout-9","options":{"attributes":{"title":""}},"node_uuid":"6357c4cf-4981-4b4a-b6c0-f1a8b709b324","weight":"-44"}
+-layout 11 {"url":"layout-once\/layout-11","options":{"attributes":{"title":""}},"node_uuid":"e686ad53-c72c-4c6a-8ac9-2dd05a695896","weight":"-43"}

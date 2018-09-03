@@ -1,0 +1,144 @@
+Compose tips {"url":"filter\/tips","hidden":true,"weight":"0"}
+-Compose tips {"url":"filter\/tips\/%","weight":"0"}
+ {"url":"node\/%","weight":"0"}
+-Delete {"url":"node\/%\/delete","hidden":true,"weight":"1"}
+-Edit {"url":"node\/%\/edit","hidden":true,"weight":"0"}
+--Edit {"url":"node\/%\/edit\/%","hidden":true,"weight":"0"}
+--Edit {"url":"node\/%\/edit\/add\/%\/%","hidden":true,"weight":"0"}
+-Revisions {"url":"node\/%\/revisions","hidden":true,"weight":"2"}
+--Delete earlier revision {"url":"node\/%\/revisions\/%\/delete","weight":"0"}
+--Revert to earlier revision {"url":"node\/%\/revisions\/%\/revert","weight":"0"}
+--Revisions {"url":"node\/%\/revisions\/%\/view","weight":"0"}
+-View {"url":"node\/%\/view","hidden":true,"weight":"-10"}
+-Manage display {"url":"node\/%\/display","description":"Manage display of this content.","hidden":true,"weight":"0"}
+-Devel {"url":"node\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"node\/%\/devel\/load","hidden":true,"weight":"0"}
+--Load by UUID {"url":"node\/%\/devel\/load-by-uuid","hidden":true,"weight":"100"}
+--Render {"url":"node\/%\/devel\/render","hidden":true,"weight":"100"}
+--Tokens {"url":"node\/%\/devel\/token","hidden":true,"weight":"5"}
+-Translate {"url":"node\/%\/translate","hidden":true,"weight":"1"}
+--Delete {"url":"node\/%\/translate\/delete\/%","weight":"0"}
+-Node export {"url":"node\/%\/node_export","hidden":true,"weight":"5"}
+-Track {"url":"node\/%\/track","hidden":true,"weight":"2"}
+Add content {"url":"node\/add","weight":"0"}
+-Artículo {"url":"node\/add\/article","description":"Use los <em>art\u00edculos<\/em> para contenido que tenga relevancia temporal como las noticias o las publicaciones en blogs.","weight":"0"}
+-Página básica {"url":"node\/add\/page","description":"Use las <em>p\u00e1ginas b\u00e1sicas<\/em> para publicar contenido que no var\u00eda, como es el caso de una p\u00e1gina \"Sobre nosotros\" o \"Acerca de...\"","weight":"0"}
+-Node export: import {"url":"node\/add\/node_export","description":"Import content using <em>Node export<\/em>.","weight":"0"}
+-Publicaciones {"url":"node\/add\/publicaciones","weight":"0"}
+-Layouts {"url":"node\/add\/layouts","weight":"0"}
+-Materiales de Estudio {"url":"node\/add\/materiales-de-estudio","weight":"0"}
+-Eventos {"url":"node\/add\/eventos","weight":"0"}
+My account {"url":"user\/%","weight":"0"}
+-Cancel account {"url":"user\/%\/cancel","weight":"0"}
+--Confirm account cancellation {"url":"user\/%\/cancel\/confirm\/%\/%","weight":"0"}
+-Edit {"url":"user\/%\/edit","hidden":true,"weight":"0"}
+--Account {"url":"user\/%\/edit\/account","hidden":true,"weight":"0"}
+-View {"url":"user\/%\/view","hidden":true,"weight":"-10"}
+-Shortcuts {"url":"user\/%\/shortcuts","hidden":true,"weight":"0"}
+-Manage display {"url":"user\/%\/display","description":"Manage display of this user profile.","hidden":true,"weight":"0"}
+-Devel {"url":"user\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"user\/%\/devel\/load","hidden":true,"weight":"0"}
+--Load by UUID {"url":"user\/%\/devel\/load-by-uuid","hidden":true,"weight":"100"}
+--Render {"url":"user\/%\/devel\/render","hidden":true,"weight":"100"}
+--Tokens {"url":"user\/%\/devel\/token","hidden":true,"weight":"5"}
+-Track page visits {"url":"user\/%\/track\/navigation","hidden":true,"weight":"2"}
+Comment permalink {"url":"comment\/%","weight":"0"}
+-Approve {"url":"comment\/%\/approve","weight":"1"}
+-Delete {"url":"comment\/%\/delete","hidden":true,"weight":"2"}
+-Edit {"url":"comment\/%\/edit","hidden":true,"weight":"0"}
+-View comment {"url":"comment\/%\/view","hidden":true,"weight":"-10"}
+-Devel {"url":"comment\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"comment\/%\/devel\/load","hidden":true,"weight":"0"}
+--Load by UUID {"url":"comment\/%\/devel\/load-by-uuid","hidden":true,"weight":"100"}
+--Render {"url":"comment\/%\/devel\/render","hidden":true,"weight":"100"}
+--Tokens {"url":"comment\/%\/devel\/token","hidden":true,"weight":"5"}
+Add new comment {"url":"comment\/reply\/%","weight":"0"}
+Search {"url":"search","hidden":true,"weight":"0"}
+-Content {"url":"search\/node","hidden":true,"weight":"0"}
+--Content {"url":"search\/node\/%","hidden":true,"weight":"0"}
+-Users {"url":"search\/user","hidden":true,"weight":"0"}
+--Users {"url":"search\/user\/%","hidden":true,"weight":"0"}
+-008899433174443356507:yksyotj4-7q {"url":"search\/google","hidden":true,"weight":"-10"}
+--008899433174443356507:yksyotj4-7q {"url":"search\/google\/%","hidden":true,"weight":"0"}
+Taxonomy term {"url":"taxonomy\/term\/%","weight":"0"}
+-Edit {"url":"taxonomy\/term\/%\/edit","hidden":true,"weight":"10"}
+--Edit {"url":"taxonomy\/term\/%\/edit\/%","hidden":true,"weight":"10"}
+--Edit {"url":"taxonomy\/term\/%\/edit\/add\/%\/%","hidden":true,"weight":"10"}
+-View {"url":"taxonomy\/term\/%\/view","hidden":true,"weight":"0"}
+-Manage display {"url":"taxonomy\/term\/%\/display","description":"Manage display of this term.","hidden":true,"weight":"11"}
+-Devel {"url":"taxonomy\/term\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"taxonomy\/term\/%\/devel\/load","hidden":true,"weight":"0"}
+--Load by UUID {"url":"taxonomy\/term\/%\/devel\/load-by-uuid","hidden":true,"weight":"100"}
+--Render {"url":"taxonomy\/term\/%\/devel\/render","hidden":true,"weight":"100"}
+--Tokens {"url":"taxonomy\/term\/%\/devel\/token","hidden":true,"weight":"5"}
+-Translate {"url":"taxonomy\/term\/%\/translate","hidden":true,"weight":"11"}
+--Delete {"url":"taxonomy\/term\/%\/translate\/delete\/%","weight":"0"}
+Add Block {"url":"block\/add","weight":"0"}
+-Sliders Homes {"url":"block\/add\/sliders-homes","weight":"0"}
+-Bloque Footer Contacto {"url":"block\/add\/bloque-footer-contacto","weight":"0"}
+-Anuncios {"url":"block\/add\/anuncios","weight":"0"}
+-Ranking Home {"url":"block\/add\/ranking-home","weight":"0"}
+Block {"url":"block\/%","weight":"0"}
+-Delete Block {"url":"block\/%\/delete","hidden":true,"weight":"1"}
+-Edit Block {"url":"block\/%\/edit","hidden":true,"weight":"0"}
+--Edit Block {"url":"block\/%\/edit\/%","hidden":true,"weight":"0"}
+--Edit Block {"url":"block\/%\/edit\/add\/%\/%","hidden":true,"weight":"0"}
+-Revisions {"url":"block\/%\/revisions","hidden":true,"weight":"0"}
+-- {"url":"block\/%\/revisions\/%","weight":"0"}
+---Delete {"url":"block\/%\/revisions\/%\/delete","hidden":true,"weight":"1"}
+---Edit {"url":"block\/%\/revisions\/%\/edit","hidden":true,"weight":"0"}
+---Set active {"url":"block\/%\/revisions\/%\/set-active","hidden":true,"weight":"0"}
+---View {"url":"block\/%\/revisions\/%\/view","hidden":true,"weight":"-10"}
+-View {"url":"block\/%\/view","hidden":true,"weight":"-20"}
+-Devel {"url":"block\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"block\/%\/devel\/load","hidden":true,"weight":"0"}
+--Render {"url":"block\/%\/devel\/render","hidden":true,"weight":"100"}
+-Translate {"url":"block\/%\/translate","hidden":true,"weight":"2"}
+--Delete {"url":"block\/%\/translate\/delete\/%","weight":"0"}
+ {"url":"field-collection\/field-slider-principal-items\/%","weight":"0"}
+-Delete {"url":"field-collection\/field-slider-principal-items\/%\/delete","hidden":true,"weight":"0"}
+-Edit {"url":"field-collection\/field-slider-principal-items\/%\/edit","hidden":true,"weight":"0"}
+-View {"url":"field-collection\/field-slider-principal-items\/%\/view","hidden":true,"weight":"-10"}
+- {"url":"field-collection\/field-slider-principal-items\/%\/revisions\/%","weight":"0"}
+ {"url":"field-collection\/field-slider-principal-items\/add\/%\/%","weight":"0"}
+ {"url":"file\/%","weight":"0"}
+-Delete {"url":"file\/%\/delete","hidden":true,"weight":"1"}
+-Devel {"url":"file\/%\/devel","hidden":true,"weight":"100"}
+--Load {"url":"file\/%\/devel\/load","hidden":true,"weight":"0"}
+--Render {"url":"file\/%\/devel\/render","hidden":true,"weight":"100"}
+--Tokens {"url":"file\/%\/devel\/token","hidden":true,"weight":"5"}
+-Edit {"url":"file\/%\/edit","hidden":true,"weight":"0"}
+-Usage {"url":"file\/%\/usage","hidden":true,"weight":"0"}
+-View {"url":"file\/%\/view","hidden":true,"weight":"-10"}
+Add file {"url":"file\/add","weight":"0"}
+-Upload {"url":"file\/add\/upload","hidden":true,"weight":"-10"}
+--Archive {"url":"file\/add\/upload\/archive","hidden":true,"weight":"-5"}
+--File {"url":"file\/add\/upload\/file","hidden":true,"weight":"-10"}
+ {"url":"field-collection\/field-items-content\/%","weight":"0"}
+-Delete {"url":"field-collection\/field-items-content\/%\/delete","hidden":true,"weight":"0"}
+-Edit {"url":"field-collection\/field-items-content\/%\/edit","hidden":true,"weight":"0"}
+-View {"url":"field-collection\/field-items-content\/%\/view","hidden":true,"weight":"-10"}
+- {"url":"field-collection\/field-items-content\/%\/revisions\/%","weight":"0"}
+ {"url":"field-collection\/field-items-content\/add\/%\/%","weight":"0"}
+ {"url":"field-collection\/field-accordion\/%","weight":"0"}
+-Delete {"url":"field-collection\/field-accordion\/%\/delete","hidden":true,"weight":"0"}
+-Edit {"url":"field-collection\/field-accordion\/%\/edit","hidden":true,"weight":"0"}
+-View {"url":"field-collection\/field-accordion\/%\/view","hidden":true,"weight":"-10"}
+- {"url":"field-collection\/field-accordion\/%\/revisions\/%","weight":"0"}
+ {"url":"field-collection\/field-accordion\/add\/%\/%","weight":"0"}
+ {"url":"field-collection\/field-items-acordeon\/%","weight":"0"}
+-Delete {"url":"field-collection\/field-items-acordeon\/%\/delete","hidden":true,"weight":"0"}
+-Edit {"url":"field-collection\/field-items-acordeon\/%\/edit","hidden":true,"weight":"0"}
+-View {"url":"field-collection\/field-items-acordeon\/%\/view","hidden":true,"weight":"-10"}
+- {"url":"field-collection\/field-items-acordeon\/%\/revisions\/%","weight":"0"}
+ {"url":"field-collection\/field-items-acordeon\/add\/%\/%","weight":"0"}
+Calendario {"url":"calendario","weight":"0"}
+-mes {"url":"calendario\/mes","hidden":true,"weight":"0"}
+-Semana {"url":"calendario\/semana","hidden":true,"weight":"2"}
+-Día {"url":"calendario\/dia","hidden":true,"weight":"3"}
+ {"url":"field-collection\/field-internos-externos-descarga\/%","weight":"0"}
+-Delete {"url":"field-collection\/field-internos-externos-descarga\/%\/delete","hidden":true,"weight":"0"}
+-Edit {"url":"field-collection\/field-internos-externos-descarga\/%\/edit","hidden":true,"weight":"0"}
+-View {"url":"field-collection\/field-internos-externos-descarga\/%\/view","hidden":true,"weight":"-10"}
+- {"url":"field-collection\/field-internos-externos-descarga\/%\/revisions\/%","weight":"0"}
+ {"url":"field-collection\/field-internos-externos-descarga\/add\/%\/%","weight":"0"}
