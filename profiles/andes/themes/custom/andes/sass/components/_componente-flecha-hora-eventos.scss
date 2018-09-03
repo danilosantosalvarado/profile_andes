@@ -42,6 +42,22 @@
           padding: 0 5px;
         }
       }
+      .button-eventos {
+        a {
+          display: block;
+          max-width: 150px;
+          font-family: $latoregular;
+          color: color('blue-light');
+          text-align: center;
+          text-decoration: none;
+          border: 1px solid color('blue-light');
+          padding: 10px 30px;
+          &:hover {
+            background-color: color('blue-light');
+            color: color('white');
+          }
+        }
+      }
     }
   }
 }

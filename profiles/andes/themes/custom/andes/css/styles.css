@@ -4729,6 +4729,22 @@ body > .main-container.container-fluid {
   padding: 0 5px;
 }
 
+.view-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a {
+  display: block;
+  max-width: 150px;
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  color: #46b9c0;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #46b9c0;
+  padding: 10px 30px;
+}
+
+.view-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a:hover {
+  background-color: #46b9c0;
+  color: #fff;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Componente Redes Sociales layout 1
