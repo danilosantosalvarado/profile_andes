@@ -135,6 +135,9 @@
   padding: 0;
   overflow-x: hidden;
 }
+.container {
+  overflow: hidden;
+}
 body > .main-container.container-fluid {
   margin-top: 0px;
   @include respond-to(xl) {

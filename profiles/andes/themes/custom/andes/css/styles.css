@@ -2189,6 +2189,10 @@ th {
   overflow-x: hidden;
 }
 
+.container {
+  overflow: hidden;
+}
+
 body > .main-container.container-fluid {
   margin-top: 0px;
 }
