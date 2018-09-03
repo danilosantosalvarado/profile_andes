@@ -3,8 +3,31 @@
 // Multimedia
 //------------------------------------------------------------------------------
 */
+/* ------| Conten mini panel |----- */
+.pane-home-noticias-componente-noticia  {
+	.pane-content {
+		.panel-col-first {
+			width: 100%;
+			@include respond-to(xl) {
+				width: 50%;
 
+			}
+		}
+		.panel-col-last {
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
+		}
+	}
+}
+
+/* ------| swiper vertical |----- */
 .view-display-id-home_noticias_destacadas {
+  display: none;
+	@include respond-to(xl) {
+		display: block;
+	}
 	margin: 0 auto;
 	padding: 15px;
 	position: relative;
@@ -107,6 +130,94 @@
         }
       }
     }
+	}
+}
+/* ------| Multimedia swioe horizontal movil |----- */
+.view-display-id-home_noticias_destacadas_mobile {
+	@include respond-to(xl) {
+		display: none;
+	}
+	.swiper-container-horizontal {
+		width: 90%;
+		margin: 0 auto;
+		ul {
+			-webkit-padding-start: 0px;
+			li {
+				.views-field-view {
+					img{
+            width: 100%;
+          }
+          .youtube-container--responsive {
+            padding-bottom: 63.25%;
+          }
+				}
+				//Fecha
+				.views-field-created {
+					margin: 15px 0;
+					text-align: center;
+					span {
+						font-family: $latoregular;
+						@include font-size(s);
+						color: color('grey-dark');
+					}
+				}
+				//title
+				.multimedia-titulo {
+          width: 80%;
+          margin: 0 auto;
+          padding: 25px 0 0;
+					a {
+						font-family: $crimson-textroman;
+						@include type-layout(l, 1.16);
+						color: color('green-Primary');
+						margin-bottom: 14px;
+					}
+        }
+        //body
+        .multimedia-body {
+          width: 80%;
+          margin: 0 auto;
+          div {
+            font-family: $latoregular;
+            @include font-size(s);
+            margin-top: 10px;
+          }
+        }
+			}
+		}
+	}
+}
+
+/* ------| Bules swper |----- */
+.view-display-id-home_noticias_destacadas_mobile {
+  margin: 15px 0 20px;
+	.views-slideshow-pager-field-processed {
+		padding: 25px 0;
+		text-align: center;
+  .views-slideshow-pager-field-item {
+    padding: 0 5px;
+    display: inline-block;
+    a {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      display: block;
+      text-decoration: none;
+      border: 1px solid color('blue-light');
+      border-radius: 10px;
+      background-color: color('grey-secundary');
+      padding: 0;
+    }
+    &.active {
+      a {
+        background-color: color('blue-light');
+        border: 1px solid color('blue-light');
+      }
+    }
+  }
+		@include respond-to(xl) {
+			display: none;
+		}
 	}
 }
 
@@ -343,3 +454,4 @@
     }
   }
 }
+

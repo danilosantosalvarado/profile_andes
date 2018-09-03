@@ -1,0 +1,20 @@
+Normatividad Institucional {"url":"<front>","expanded":true,"weight":"1"}
+-Actos internos e incremento {"url":"<front>","weight":"0"}
+-Bienestar {"url":"<front>","weight":"1"}
+-Derechos pecunarios {"url":"<front>","weight":"2"}
+-Estatuto Docente {"url":"<front>","weight":"3"}
+-Estatuto general {"url":"<front>","weight":"4"}
+-Ley de transparencia {"url":"<front>","weight":"5"}
+-Porcentaje de incremento {"url":"<front>","weight":"6"}
+-Reglamentos de estudiantes {"url":"<front>","weight":"7"}
+-Uso de datos Personales {"url":"<front>","weight":"8"}
+Enlaces Rápidos {"url":"<front>","expanded":true,"weight":"2"}
+-Centro de español {"url":"<front>","weight":"0"}
+-Conecta-TE {"url":"<front>","weight":"1"}
+-Convivencia y transparencia {"url":"<front>","weight":"2"}
+-Emergencias: Extensión 0000 {"url":"<front>","weight":"3"}
+-Eventos destacados {"url":"<front>","weight":"4"}
+-Mapa del Sitio {"url":"<front>","weight":"5"}
+-Multimedia {"url":"<front>","weight":"6"}
+-Noticias {"url":"<front>","weight":"7"}
+-Preguntas frecuentes {"url":"<front>","weight":"8"}

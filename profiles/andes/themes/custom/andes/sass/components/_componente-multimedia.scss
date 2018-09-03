@@ -131,6 +131,28 @@
 		}
 	}
 }
+
+/* ------| ver todas las noticias |----- */
+.view-display-id-multimedia_destacada {
+	position: relative;
+	.view-footer {
+		a {
+			display: inline-block;
+			position: absolute;
+			right: 16px;
+			bottom: -18px;
+			font-family: $latoregular;
+			@include font-size(m);
+			color: #484851;
+			text-decoration: none;
+			border: 1px solid rgb(78, 59, 59);
+			padding: 10px 20px;
+			background: #fff;
+			z-index: 1;
+		}
+	}
+
+}
 /* ------| Multimedia swioe horizontal movil |----- */
 .view-display-id-multimedia_destacada_mobile {
 	@include respond-to(xl) {
