@@ -682,13 +682,19 @@ $white:#fff;
         @include respond-to(xl) {
           background-color: #FFFFFF;
         }
+        > .dropdown-toggle{
+          @include respond-to(xl) {
+            color: initial;
+            background: initial;
+          }
+        }
       }
       @include respond-to(xl) {
        /*  width: 136px;
         height: 74px; */
       }
       > a{
-        /* position: relative;
+       position: relative;
         padding: 9px 8px;
         list-style: none;
         color: #a9a9a9;
@@ -704,7 +710,7 @@ $white:#fff;
         display: inline-block;
         vertical-align: middle;
         font-weight: initial;
-        background: transparent; */
+        background: transparent;
       }
     }
   }
