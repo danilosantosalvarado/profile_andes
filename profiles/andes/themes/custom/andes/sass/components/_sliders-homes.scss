@@ -7,8 +7,7 @@
 /* ------| Slider Home|----- */
 .view-slider-homes {
 	.views_slideshow_swiper-processed {
-		height: 673px;
-		border: 2px solid red;
+		height: 609px;
 		ul {
 			padding-inline-start: 0px;
 			li.swiper-slide {
@@ -34,13 +33,24 @@
 						// 		display: none;
 						// 	}
 						// }
-						img {
-							width: 100%;
+						.imge-conten  {
 							height: 100%;
+							img {
+								width: 100%;
+								height: 100%;
+							}
 						}
-						.youtube-container--responsive {
-							padding-bottom: 46%;
-							width: 100%;
+						.iframe-conten {
+							display: block;
+							overflow: hidden;
+							height: 50%;
+							@include respond-to(m) {
+								height: 79%;
+							}
+							.youtube-container--responsive {
+								padding-bottom: initial;
+								height: 100%;
+							}
 						}
 					}
 				}
@@ -146,7 +156,6 @@
 			//titulo
 			.title-slider-homes {
 				width: 100%;
-				float: left;
 				font-family: $latobold;
 				@include font-size(l);
 				@include margin(.417 0);
@@ -154,6 +163,9 @@
 				color: #585863;
 				min-height: 50px;
 				padding-bottom: 10px;
+				@include respond-to(xs) {
+					float: left;
+				}
 				@include respond-to(m) {
 					width: 41.66666667%;
 					text-align: right;
@@ -163,11 +175,13 @@
 			}
 			//sub titulo
 			.body-slider-homes {
-				float: left;
 		    margin: 0;
 		    font-family: $crimson-textregular;
 		    text-align: left;
-		    color: #585863;
+				color: #585863;
+				@include respond-to(xs) {
+					float: left;
+				}
 		  	@include font-size(m);
 		  	border-top: 1px solid #ebba00;
 		    padding-top: 15px;
@@ -182,14 +196,23 @@
 			}
 			//button
 			.link-slider-homes {
+				margin: 15px 0;
+				@include respond-to(xs) {
+				 margin: 0;
+				}
 				a {
-					float: right;
+					max-width: 145px;
+					display: block;
 					text-decoration: none;
-					@include margin(.834 .834 0 auto);
-				  max-width: 145px;
+					text-align: center;
+					@include margin(0 auto);
 				  border: 1px solid #484851;
 				  color: #484851;
-				  padding: 10px 35px;
+					padding: 10px 35px;
+					@include respond-to(xs) {
+						float: right;
+						@include margin(.834 .834 0 auto);
+					}
 				  &:hover {
     				background: color('grey-dark');
     				color: color('white');
@@ -236,7 +259,7 @@
 	}
 }
 
-//Puntos Slider right, left, center en linea
+//Bulles Slider right, left, center en linea
 .view-slider-homes {
 	.views-slideshow-controls-bottom {
 		display: block;
@@ -249,25 +272,40 @@
 		@include respond-to(m) {
 			text-align: right;
 		}
-		.views-slideshow-pager-fields	{
+		.views-slideshow-pager-field-processed	{
 			width: 100%;
 			position: absolute;
-			bottom: 10%;
+			bottom: 3%;
 			right: 0px;
 			z-index: 9;
-			// margin-top: -5%;
+			@include respond-to(xl) {
+				bottom: 10%;
+			}
 			@include respond-to(m) {
 				padding-right: 9%;
 			}
 			.views-slideshow-pager-field-item {
-				padding: 0 5px;
 				display: inline-block;
+				@include respond-to(xl) {
+					padding: 0 5px;
+				}
 				a {
-					@extend %a-sli-puntos;
+					width: 40px;
+					height: 18px;
+					font-size: 0;
+					display: block;
+					text-decoration: none;
+					border-bottom: 3px solid color('grey-secundary');
+					padding: 0;
+					margin: 0 5px;
+					@include respond-to(xl) {
+						width: 63px;
+						margin: 0px
+					}
 				}
 				&.active {
 					a {
-						border-bottom: 3px solid color('grey-light');
+						border-bottom: 3px solid color('yellow-defaul');
 					}
 				}
 			}
@@ -278,11 +316,12 @@
 //Puntos botton
 .view-slider-homes {
 	.slider-homes-bottom-control {
-		// text-align: center;
-		margin: 15px 0 20px;
 		.views-slideshow-pager-field-processed {
-			position: initial;
-			padding: 0px;
+			position: absolute;
+			bottom: 6px;
+			width: 100%;
+			padding: 0;
+			z-index: 1;
 			@include bullet(transparent, grey-secundary, yellow-defaul, yellow-defaul);
 		}
 	}
