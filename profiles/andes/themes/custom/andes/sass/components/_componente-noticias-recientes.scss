@@ -1,0 +1,156 @@
+/*
+//------------------------------------------------------------------------------
+// Componenete Noticias Recienetes
+//------------------------------------------------------------------------------
+*/
+
+.view-display-id-noticias_recientes  {
+	.swiper-container-horizontal {
+		width: 90%;
+		margin: 0 auto;
+		ul {
+			-webkit-padding-start: 0px;
+			li {
+				list-style: none;
+				position: relative;
+				background: color('grey-light');
+				@include respond-to(xs) {
+					height: 460px;
+				}
+				@include respond-to(xl) {
+					height: 519px;
+				}
+				//Imagenes
+				.views-field-view {
+					border-bottom: 3px solid color('orange');
+					img{
+						width: 100%;
+					}
+					.youtube-container--responsive {
+						padding-bottom: 62.25%;
+					}
+				}
+				//Fecha
+				.views-field-created {
+					margin: 10px 0px;
+					span {
+						font-family: $latoregular;
+						@include type-layout(xxs, 1.23);
+						padding: 0 15px;
+						color: color('orange');
+					}
+				}
+				//Titulo
+				.views-field-title {
+					font-family: $crimson-textbold;
+					@include type-layout(l, .96);
+					color: #484851;
+					@include margin(.834 0 .834);
+					padding: 0 15px;
+					@include respond-to(xl) {
+						@include font-size(ll);
+						@include margin(.9 0 1.042);
+					}
+				}
+				//Body
+				.views-field-body {
+					font-family: $crimson-textregular;
+					@include type-layout(m, 1.06);
+					@include margin-bottom(.417);
+					padding: 0 15px;
+					@include respond-to(xl) {
+						@include font-size(o);
+					}
+				}
+				//Button
+				.views-field-view-node {
+          margin: 20px;
+          a {
+            @include respond-to(xs) {
+              position: absolute;
+              bottom: 20px;
+              right: 10px;
+              margin: 0px;
+            }
+            display: block;
+            max-width: 180px;
+            font-family: $latolight;
+            font-size: 15.3px;
+            color: #484851;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid color('orange');
+            padding: 10px 30px;
+            margin: 0 auto;
+            outline: none;
+            &:hover {
+              background-color: color('orange');
+              color: #ffffff;
+            }
+          }
+        }
+			}
+		}
+	}
+}
+
+//Flechas paginador
+.view-display-id-noticias_recientes  {
+	.skin-default {
+		position: relative;
+		.slideshow-controls-top,
+		.views-slideshow-controls-bottom {
+			display: block;
+			//Conten Flechas
+			.views-slideshow-controls-text {
+				display: none;
+				@include respond-to(xl) {
+					display: block;
+				}
+				//Button Izquierda
+				a[rel='prev'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
+				//Buttom Pause
+				.views-slideshow-controls-text-pause {
+					display: none;
+				}
+				//Button Deracha
+				a[rel='next'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					left: inherit;
+					right: 0;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_next.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
+			}
+		}
+	}
+}
+
+//Puntos Slider
+.view-display-id-noticias_recientes  {
+	margin: 15px 0 20px;
+	.views-slideshow-pager-field-processed {
+		padding: 25px 0;
+		@include bullet(orange, grey-secundary, orange, orange );
+		@include respond-to(xl) {
+			display: none;
+		}
+	}
+}
+
+
+
