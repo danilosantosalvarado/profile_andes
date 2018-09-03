@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       var docWidth = $(document).width(),
         $level1 = $('.tb-megamenu-item.level-1'),
-        $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a');
+        $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
 
         /* hover */
       $level1.hover(function () {
@@ -58,35 +58,46 @@
         $itemsNivel2.removeAttr('href');
         function dropdown() {
           /* Nivel3 */
-          $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function () {
+         $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function () {
             console.log($(this));
-            $('.box-black').parents('.row-fluid').addClass('parent-clone');
-            $('.box-black p').text('<' + $(this).text());
+            $('.clone-nivel-3').remove();
+            //$('.box-black').parents('.row-fluid').addClass('parent-clone');
+            $('.box-black p').text($(this).text());
             SubMenuCloneNivel3 = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
+            console.log(SubMenuCloneNivel3);
             $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
           });
 
           $('.level-2 > .dropdown-toggle').on("click", function () {
             $('.box-black').remove();
             $('.active-clone').remove();
-            $(this).parents('.tb-megamenu-column').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
-            $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
-            setTimeout(function () {
-              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active');
-              $('.box-black').addClass('active-box').siblings('.content-img').addClass('active-sub-nivel');
-            }, 100);
-            var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
 
+            $(this).parents('.tb-megamenu-column').addClass('none').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
+
+            $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
+            var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
             $(this).parents('.tb-megamenu-column').after(SubMenuClone);
+
+            $('.parent-clone').find('.content-img').addClass('active-img')
+            setTimeout(function () {
+              $('.box-black').addClass('active-box');
+            }, 100);
+
+            //$('.active-clone').siblings('.tb-megamenu-column').addClass('hidden');
+
+
             var child = $(this).siblings('.nav-child').html();
             var item = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
             $('.box-black').click(function () {
-              $('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
+              $(this).siblings('.tb-megamenu-column').removeClass('none')
+              $('.parent-clone').find('.content-img').removeClass('active-img');
               $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
               $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
               $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
               $('.active-clone').remove();
               $('.clone-nivel-3').remove();
+              $('.parent-clone').find('.tb-megamenu-column').removeClass('hidden');
+
             });
             dropdown();
           });
