@@ -1003,3 +1003,32 @@ $white:#fff;
   }
 }
 
+.block-google-cse {
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  background-color: color('white');
+  transition: top .5s;
+  &.buscador-open{
+    top: 30px;
+    transition: top .5s;
+  }
+  form{
+    width: 970px;
+    margin: 0 auto;
+    padding: 6px 0;
+    @include respond-to(xl){
+      width: 1170px;
+    }
+    .block-title{
+      display: none;
+    }
+    .control-label {
+      display: none;
+    }
+    button{
+      display: none;
+    }
+  }
+
+}
