@@ -136,7 +136,10 @@
   overflow-x: hidden;
 }
 body > .main-container.container-fluid {
-  margin-top: 240px;
+  margin-top: 0px;
+  @include respond-to(xl) {
+    margin-top: 60px;
+  }
 }
 .inside {
   margin: 0 !important;

@@ -322,3 +322,61 @@
 		}
 	}
 }
+
+
+/* ------| Tags categorias  |----- */
+.noticias {
+	.field-name-field-categoria {
+		display: flex;
+    justify-content: center;
+		align-items: center;
+		margin: 20px 0;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 20px;
+			border-top: 1px solid #9e9ca1;
+			width: 90%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			z-index: -1;
+		}
+		.field-item {
+			display: inline-flex;
+			span {
+				margin: 0 10px 0 0;
+				a {
+					color: #484851;
+					text-decoration: none;
+					font-family: $latobold;
+					display: block;
+					padding: 10px 20px;
+					border: 1px solid #9e9ca1;
+					font-size: 0.89rem;
+					background-color: white;
+				}
+			}
+		}
+
+		.hierarchical-select-item-separator {
+			display: none;
+		}
+	}
+	.pane-node-title {
+		h1 {
+			font-family: $latoblack;
+			@include font-size(ll);
+			color: color('grey');
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			// @include margin-bottom(1.7);
+			@include respond-to(m) {
+				@include font-size(xxxl);
+			}
+		}
+	}
+}
