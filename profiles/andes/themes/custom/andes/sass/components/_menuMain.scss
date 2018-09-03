@@ -60,11 +60,7 @@ $white:#fff;
         }
       }
     }
-    li.dropdown.active {
-      > .dropdown-toggle {
-        //background-color: transparent;
-      }
-    }
+
     li.dropdown.open.active > .dropdown-toggle,
     > li.dropdown.open.active > a:hover{
        background-color: transparent;
@@ -177,11 +173,11 @@ $white:#fff;
     display: block;
   }
   @include respond-to(xl){
-    //position: relative;
-    position: absolute;
-    width: inherit;
+    position: relative;
     width: 20%;
-    margin: 14px auto 0;
+    float: left;
+    margin: 15px 0 0;
+    height: auto;
   }
   h2{
     display: none
@@ -250,12 +246,18 @@ $white:#fff;
 /* volvel institucional*/
 #block-views-logos-header-block-2{
   position: absolute;
+  @include respond-to(xl){
+    position: relative;
+    display: inline-block;
+    margin-top: 6px;
+  }
   .element-invisible{
     display: none;
   }
   a{
-    padding: 10px 25px;
+    padding: 8px 7px;
     background: #353535;
+    @include font-size(xxs);
     color: $white;
   }
   h2.block-title{
@@ -265,6 +267,32 @@ $white:#fff;
 /* Bloque buscar */
 .barra-buscar{
   display: none;
+  @include respond-to(xl){
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    top: 21px;
+    position: absolute;
+    right: -4px;
+    &:before{
+      content: '...';
+      background: url(../img/Icon/icon-lupa.png) no-repeat center;
+      top: 0px;
+      position: absolute;
+      font-size: 0;
+      background-size: 20px;
+      z-index: 9;
+      width: 23px;
+      height: 23px;
+      right: 0;
+      background-position: 1px -20px;
+      cursor: pointer;
+    }
+    span{
+      display: none
+    }
+  }
 }
 
 /* Estilo de bloques clonados */
@@ -276,12 +304,68 @@ $white:#fff;
 
 /* menus yo soy  */
 .block-tb-megamenu{
-  width:80%;
-  float: right;
+  @include respond-to(xl){
+    width:80%;
+    float: left;
+  }
   .tb-megamenu-menu-menu-top-soy{
+    display: block;
+    position: relative;
+    float: right;
     .nav-collapse {
       //float: right;
       padding: 0 5%;
+      @include respond-to(xl){
+        padding: 0;
+      }
+      &.always-show {
+        ul {
+          li {
+            &.clone-mobile-block {
+              background: #353535;
+              padding: 0 13px;
+              border-right: solid 1px #979797;
+              a{
+                color: #fff;
+                font-size: font-size(s);
+              }
+            }
+            a {
+              @include respond-to(xl){
+                padding: 7px 10px;
+                background: transparent;
+                color: color('gray-menu-soy');
+                @include font-size(xxs);
+                font-family: Lato, sans-serif;
+                border-right: none;
+                font-weight: weight(normal);
+
+                //padding: 0;
+                //top: 8px;
+                &.dropdown-toggle{
+                  background-color: transparent;
+                  padding-right: 28px;
+                  color: color('gray-menu-soy');
+                  font-size: font-size(xxs);
+                  border-left: 1px solid #222;
+                  &:before{
+                    content: '...';
+                    background: url(../img/icon-flecha-abajo.png) no-repeat center;
+                    top: 10px;
+                    position: absolute;
+                    font-size: 0;
+                    background-size: 15px;
+                    z-index: 9;
+                    width: 15px;
+                    height: 14px;
+                    right: 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -289,6 +373,12 @@ $white:#fff;
 .tb-megamenu-menu-mega-menu {
   transition: background-color .2s;
   height: 100%;
+  width: 100%;
+  //float: right;
+  @include respond-to(xxl){
+    width: max-content;
+    float: right;
+  }
   .tb-megamenu-button{
     display: none;
   }
@@ -306,13 +396,11 @@ $white:#fff;
      @include respond-to(xl){
       top: 0px;
       padding: 0;
-      //width: 80%;
-      //height: 85%;
       overflow-x: initial;
       overflow-y: initial;
       background: transparent;
       float: right;
-
+      padding-right: 30px;
     }
     .dropdown-menu.container-submenu{
       &.active-mobile{
@@ -392,6 +480,9 @@ $white:#fff;
       position: relative;
       margin: 20px 0 0;
       padding: 0 20px;
+      @include respond-to(xl){
+        display: none;
+      }
     }
     .menu-soy {
       width: 90%;
@@ -403,6 +494,9 @@ $white:#fff;
       font-size: .88rem;
       color: #a8a8a8;
       padding: 7px 20px;
+      @include respond-to(xl){
+        display: none;
+      }
       span {
         display: block;
         position: relative;
@@ -454,24 +548,28 @@ $white:#fff;
     }
     ul.tb-megamenu-nav.level-0{
       li.level-1.active{
-        float: inherit;
+        /* float: inherit;
         margin: 0 auto;
-        padding: 0 0px;
+        padding: 0 0px; */
         @include respond-to(xl){
-          float: left;
-          margin-left: 0;
+         /*  float: left;
+          margin-left: 0; */
         }
         &.active{
-          height: 50px;
-          width: auto;
-          @include respond-to(xl){
-            width: auto;
-            height: 77px;
+        /*   height: 50px;
+          width: auto; */
+          &:hover{
+           // background-color: transparent;
           }
-
+          @include respond-to(xl){
+            /* width: auto;
+            height: 77px;
+            float: left;
+            margin-left: 0; */
+          }
         }
         >a{
-          text-decoration: none;
+          /* text-decoration: none; */
         }
         a{
           border: none;
@@ -483,9 +581,15 @@ $white:#fff;
           text-align: center;
           background: transparent;
           @include respond-to(xl){
-            font-size: .83rem;
             font-weight: initial;
             display: block;
+            padding: 0 11px;
+            @include font-size(s);
+            text-transform: lowercase;
+            cursor: pointer;
+            &:hover {
+              color: color('grey');
+            }
           }
           &.dropdown-toggle{
             &::after{
@@ -537,6 +641,10 @@ $white:#fff;
       justify-content: center;
       align-content: center;
       flex-direction: column;
+      @include respond-to(xl) {
+        width: 127px;
+        height: 75px;
+      }
       &.open {
         background-color: #1a1a1a;
         border: none;
@@ -545,8 +653,8 @@ $white:#fff;
         }
       }
       @include respond-to(xl) {
-        width: 136px;
-        height: 74px;
+       /*  width: 136px;
+        height: 74px; */
       }
       > a{
         /* position: relative;
@@ -799,6 +907,12 @@ $white:#fff;
   @include respond-to(xl){
     display: block;
   }
+  .block-tb-megamenu {
+    width: 87%;
+    float: right;
+    padding: 0;
+    margin: 0;
+  }
 }
 .wrapper-mega-menu {
   background-color: #ead134;
@@ -806,12 +920,13 @@ $white:#fff;
   .container{
     width: 100%;
     height: 100%;
+    position: relative;
     @include respond-to(xl){
       height: auto;
       width: 970px;
-
     }
     @include respond-to(xxl){
+      width: 1170px;
     }
   }
 }

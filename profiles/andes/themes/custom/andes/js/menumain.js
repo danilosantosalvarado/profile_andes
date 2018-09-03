@@ -21,9 +21,10 @@
       jQuery(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
 
       /*  add buscador */
-      $(".wrapper-mega-menu").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
+      $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
 
       $(".barra-buscar").click(function () {
+        console.log('test')
         $('#block-google-cse-google-cse').toggleClass("buscador-open");
       });
       /* ciclo item de mega menu */
