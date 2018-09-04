@@ -455,3 +455,25 @@
   }
 }
 
+/* ------| Noticias body y fecha |----- */
+.noticias {
+  #date-noticia {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    @include respond-to(m) {
+      width: 550px;
+      margin: 0 auto;
+    }
+    .pane-content {
+      font-family: $latobold;
+      color: color('orange-primary');
+      @include type-layout(xxs, 1.23);
+    }
+  }
+  #body-contain {
+    @include respond-to(m) {
+      width: 550px;
+      margin: 0 auto;
+    }
+  }
+}

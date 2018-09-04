@@ -1342,6 +1342,33 @@ th {
   display: none;
 }
 
+/* ------| Noticias body y fecha |----- */
+.noticias #date-noticia {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .noticias #date-noticia {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
+.noticias #date-noticia .pane-content {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  color: #e34d1f;
+  font-size: 0.75rem;
+  line-height: 1.23;
+}
+
+@media (min-width: 768px) {
+  .noticias #body-contain {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
 /*
 //------------------------------------------------------------------------------
 //  Home Publicaciones
