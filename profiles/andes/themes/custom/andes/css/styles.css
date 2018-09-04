@@ -797,6 +797,14 @@ th {
   display: none;
 }
 
+/* ------| Noticias body y fecha |----- */
+@media (min-width: 768px) {
+  .eventos #body-contain {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
 /*
 //------------------------------------------------------------------------------
 // Multimedia

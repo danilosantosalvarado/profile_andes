@@ -215,3 +215,13 @@
     }
   }
 }
+
+/* ------| Noticias body y fecha |----- */
+.eventos{
+  #body-contain {
+    @include respond-to(m) {
+      width: 550px;
+      margin: 0 auto;
+    }
+  }
+}
