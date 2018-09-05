@@ -9,23 +9,80 @@
     display: block;
     overflow: hidden;
     padding: 25px 0;
-    //imagen
-    .container-image {
+    //Ubicacion left
+    .item-content-ubication-left {
       @include respond-to(m) {
-        width: 45%;
-        display: table-cell;
-        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      img {
+      .views-field {
+        @include respond-to(m) {
+          width: 50%;
+        }
+      }
+      .container-title-desc {
+        @include respond-to(m) {
+          width: 50%;
+          float: left;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+    //Ubicacion rigth
+    .item-content-ubication-rigth {
+      @include respond-to(m) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .views-field {
+        @include respond-to(m) {
+          width: 50%;
+        }
+      }
+      .container-title-desc {
+        @include respond-to(m) {
+          width: 50%;
+        }
+      }
+    }
+    //Ubicacion top
+    .item-content-ubication-top {
+      .views-field {
+        width: 100%;
+        @include respond-to(m) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      .container-title-desc {
+        @include respond-to(m) {
+          width: 100%;
+        }
+      }
+    }
+    //Ubicacion bottom
+    .item-content-ubication-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .views-field {
+        @include respond-to(m) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      .container-title-desc {
         width: 100%;
       }
     }
-    //video
-    .container-image-video {
-      @include respond-to(m) {
-        width: 45%;
-        display: table-cell;
-        vertical-align: middle;
+    //imagen
+    .views-field {
+      img {
+        width: 100%;
       }
       iframe {
         width: 100%;
@@ -53,6 +110,7 @@
       .dos-body {
         font-family: $crimson-textregular;
         @include font-size(m);
+        text-align: justify
       }
     }
   }
