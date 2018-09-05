@@ -1945,7 +1945,7 @@ th {
   .view-id-componente_layout_2 .views-field-views-conditional .container-title-desc {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 30px;
+    padding: 30px;
   }
 }
 

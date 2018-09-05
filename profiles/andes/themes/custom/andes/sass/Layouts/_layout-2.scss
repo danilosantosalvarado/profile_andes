@@ -94,7 +94,7 @@
       @include respond-to(m) {
         display: table-cell;
         vertical-align: middle;
-        padding-left: 30px;
+        padding: 30px;
       }
       //title
       .dos-titulo {
