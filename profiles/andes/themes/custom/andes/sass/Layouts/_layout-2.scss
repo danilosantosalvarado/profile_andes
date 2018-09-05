@@ -59,8 +59,10 @@
         }
       }
       .container-title-desc {
+        width: 100%;
         @include respond-to(m) {
-          width: 100%;
+          width: 80%;
+          margin: 0 auto;
         }
       }
     }
@@ -77,6 +79,10 @@
       }
       .container-title-desc {
         width: 100%;
+        @include respond-to(m) {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
     //imagen

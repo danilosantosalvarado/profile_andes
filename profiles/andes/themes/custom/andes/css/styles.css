@@ -1900,9 +1900,14 @@ th {
   }
 }
 
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .container-title-desc {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .container-title-desc {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -1927,6 +1932,13 @@ th {
 
 .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .container-title-desc {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .container-title-desc {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .view-id-componente_layout_2 .views-field-views-conditional .views-field img {
