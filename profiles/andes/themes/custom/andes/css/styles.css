@@ -1943,8 +1943,6 @@ th {
 
 @media (min-width: 768px) {
   .view-id-componente_layout_2 .views-field-views-conditional .container-title-desc {
-    display: table-cell;
-    vertical-align: middle;
     padding: 30px;
   }
 }
