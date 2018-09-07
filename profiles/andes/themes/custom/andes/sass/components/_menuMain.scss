@@ -22,28 +22,35 @@ $white:#fff;
   .row-fluid [class*="span"]{
     left: initial;
     @include respond-to(xl){
-      left: 0 !important;
-      margin-left: 0;
+      /* left: 0 !important; */
+    /*   margin-left: 0; */
     }
     .row-fluid .content-img{
-      display: none !important;
-      @include respond-to(xl){
-        display: block !important;
+      display: none;
+      @include respond-to(xl) {
+        margin: 0;
+        padding: 0;
+        display: block;
         position: absolute;
         width: 100%;
         left: 30%;
+        top: 20px;
         border-left: none !important;
-        transition: all .3s ease-in-out;
+        transition:  .7s;
         &.active-img{
-          left: 40%;
-          transition: all .3s ease-in-out;
+          left: 46%;
+          transition:  .7s;
+        }
+        a{
+          margin: 0;
+        }
+        &.active-sub-nivel{
+          /* top: 10px;
+          left: 600px;
+          transition: all .3s ease-in-out; */
         }
       }
-      &.active-sub-nivel{
-        top: 10px;
-        left: 600px;
-        transition: all .3s ease-in-out;
-      }
+
       .menu-title{
         display: none;
       }
@@ -51,6 +58,9 @@ $white:#fff;
         border-left: none !important;
       }
     }
+  }
+  .dropdown-submenu > a::after{
+    display: none;
   }
   .nav {
     .dropdown > .dropdown-toggle .caret{
@@ -73,10 +83,7 @@ $white:#fff;
 
   .nav-collapse {
     &.collapse{
-      height: auto !important;
-      //display: block;
       height: 100% !important;
-      //padding-bottom: 67px;
     }
     .nav > li.active > a:hover,
     .nav > li.active > a:focus {
@@ -91,8 +98,12 @@ $white:#fff;
     background-color: transparent;
   }
   .mega-inner{
-    padding: 0;
+    padding: 0 !important;
   }
+}
+.tb-megamenu .nav > li > a:focus,
+.tb-megamenu .nav > li > a:hover {
+
 }
 .navbar-default {
   .navbar-collapse,
@@ -100,10 +111,6 @@ $white:#fff;
     padding: 0;
     margin: 0;
     height: 100%;
-    @include respond-to(xxl){
-     /*  display: none !important;
-      display: block !important; */
-    }
     &.in{
       display: block !important;
       float: left;
@@ -122,9 +129,6 @@ $white:#fff;
         display: block !important;
         float: left;
         width: 100%;
-        .tb-megamenu .nav-collapse.collapse{
-          //display: none;
-        }
       }
     }
     @include respond-to(xl){
@@ -132,9 +136,6 @@ $white:#fff;
         display: block !important;
         float: left;
         width: 100%;
-        .tb-megamenu .nav-collapse.collapse{
-         // display: none;
-        }
       }
     }
   }
@@ -272,11 +273,11 @@ $white:#fff;
 .barra-buscar{
   display: none;
   @include respond-to(xl){
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     display: block;
     float: right;
-    top: 21px;
+    top: 30px;
     position: absolute;
     right: -4px;
     &:before{
@@ -285,12 +286,12 @@ $white:#fff;
       top: 0px;
       position: absolute;
       font-size: 0;
-      background-size: 20px;
+      background-size: 18px;
       z-index: 9;
-      width: 23px;
-      height: 23px;
+      width: 18px;
+      height: 18px;
       right: 0;
-      background-position: 1px -20px;
+      background-position: 1px -17px;
       cursor: pointer;
     }
     span{
@@ -317,24 +318,165 @@ $white:#fff;
   .hidden{
     display: none !important;
   }
-  .active-clone {
-    .level-2 {
+  .box-black {
+    background-color: #1a1a1a;
+    height: auto;
+    width: 100%;
+    right: 0px;
+    top: 0px;
+    padding: 20px 30px;
+    z-index: 9;
+    opacity: 0;
+    transition: .7s;
+    @include respond-to(xl){
+      position: absolute;
+      padding: 0;
+      height: 400px;
+      width: 20%;
+      top: 0;
+      left: -50%;
+
+    }
+    &.active-box{
+      right: 0px;
+      opacity: 1;
+      transition: .7s;
       @include respond-to(xl){
-        padding-left: 30px !important;
-        border-left: none !important;
+        left: 0px;
+        opacity: 1;
       }
-      li{
-        @include respond-to(xl){
-          border-left: 1px solid #c8c8ca;
+    }
+    p{
+      @include font-size(xs);
+      font-family: $latobold;
+      color: color(white);
+      border: none !important;
+      word-wrap: break-word;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: inherit;
+      position: relative;
+      transition: .3s;
+      @include respond-to(xl){
+        margin-left: 20%;
+        padding: 15px 10px;
+      }
+      &:before{
+        content: '...';
+        background: url(../img/Icon/arrow-slide-prev.png) no-repeat center;
+        top: 40%;
+        left: -12px;
+        position: absolute;
+        font-size: 0;
+        background-size: 10px;
+        width: 10px;
+        height: 10px;
+      }
+      &:hover{
+        color: #484851;
+        transition: .3s;
+      }
+    }
+  }
+  .mega-col-nav{
+    opacity: 1;
+    transition: 1s;
+    &.active-nivel-1 {
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+  /* nivel 2 de menu */
+  .clone-nivel-2,
+  .clone-nivel-3 {
+    position: absolute;
+    top: 0;
+    left: -30%;
+    display: block;
+    border: none;
+    background: color('white');
+    box-shadow: none;
+    opacity: 0;
+    width: 25%;
+    transition: .7s;
+    padding: 0;
+    &.active-clone,
+    &.active-clone2 {
+      left: 20%;
+      opacity: 1;
+      transition: .7s;
+    }
+    .tb-megamenu-column-inner{
+      padding: 0 0 0 30px !important;
+    }
+    .mega-nav.level-2,
+    .mega-nav.level-3 {
+      width: 100%;
+      padding: 0px;
+      border-left: 1px solid #c8c8ca;
+      @include respond-to(xl){
+        width: 90%;
+        margin-top: 20px;
+        //columns: 2;
+      }
+      &.active{
+        background-color: rgba(255, 255, 255, 1.0);
+        transition: background-color 2s;
+      }
+      > li{
+        padding: 12px 0;
+        margin-left: 15px;
+        &:first-child{
+          padding-top: 0;
         }
-        a{
-          @include respond-to(xl){
-            text-align: left !important;
-            padding: 5px 0px 5px 25px !important;
+      }
+      > li a{
+        background-color: transparent;
+        background: 0 0;
+        text-align: left;
+        @include font-size(s);
+        border: none;
+        cursor: pointer;
+        color: color('grey-dark');
+        font-weight: weight(normal);
+        font-family: $latolight;
+        position: relative;
+        display: initial;
+        padding: 0;
+        &:hover{
+          text-decoration: underline;
+        }
+        &.dropdown-toggle {
+          &:before{
+            content: '...';
+            background: url(../img/Icon/arrow_next.svg) no-repeat center;
+            position: absolute;
+            font-size: 0;
+            background-size: 20px;
+            height: 20px;
+            width: 20px;
+            right: -15px;
+            top: -3px;
           }
         }
       }
-
+    }
+    .level-2 {
+      @include respond-to(xl){
+       /*  padding-left: 30px !important;
+        border-left: none !important; */
+      }
+      li{
+        @include respond-to(xl){
+          //border-left: 1px solid #c8c8ca;
+        }
+        a{
+          @include respond-to(xl){
+            //text-align: left !important;
+           // padding: 5px 0px 5px 25px !important;
+          }
+        }
+      }
     }
   }
 }
@@ -360,31 +502,37 @@ $white:#fff;
           li {
             &.clone-mobile-block {
               background: #353535;
-              padding: 0 13px;
-              border-right: solid 1px #979797;
+              border-left: solid 1px #979797;
               a{
-                color: #fff;
-                font-size: font-size(s);
+                color: color(white);
+                font-weight: weight(normal);
+                font-family: $latobold;
+                font-size: 15px;
+                padding: 7.5px 13px;
               }
             }
             a {
               @include respond-to(xl){
-                padding: 7px 10px;
+                padding: 8.5px 10px;
                 background: transparent;
-                color: color('gray-menu-soy');
-                @include font-size(xxs);
-                font-family: Lato, sans-serif;
                 border-right: none;
                 font-weight: weight(normal);
-
-                //padding: 0;
-                //top: 8px;
+                font-family: $latoregular;
+                color: color('gray-menu-soy');
+                @include font-size(xs);
+                transition: .3s;
+                &:hover{
+                  color: color(white);
+                  transition: .3s;
+                }
                 &.dropdown-toggle{
                   background-color: transparent;
                   padding-right: 28px;
+                  font-weight: weight(normal);
+                  font-family: $latoregular;
                   color: color('gray-menu-soy');
-                  font-size: font-size(xxs);
-                  border-left: 1px solid #222;
+                  @include font-size(xs);
+                  border-left: solid 1px #979797;
                   &:before{
                     content: '...';
                     background: url(../img/icon-flecha-abajo.png) no-repeat center;
@@ -419,6 +567,7 @@ $white:#fff;
   .tb-megamenu-button{
     display: none;
   }
+
   .always-show{
     background: #1a1a1a;
     height: 100%;
@@ -439,8 +588,110 @@ $white:#fff;
       float: right;
       padding-right: 30px;
     }
+    /* primeros item del menu */
+    ul.level-0  > li.level-1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      height: 50px;
+      @include respond-to(xl) {
+        width: 127px;
+        height: 74px;
+        padding: 0 5px;
+      }
+      &.open {
+        background-color: #1a1a1a;
+        border: none;
+        box-shadow: none;
+        @include respond-to(xl) {
+          background-color: #FFFFFF;
+        }
+        > a.dropdown-toggle {
+          opacity: .6;
+          transition: .3s;
+        }
+      }
+      > a {
+        color: color('grey') !important;
+        font-weight: weight(normal);
+        font-family: $latoregular;
+        background-color: transparent !important;
+        text-align: center;
+        border: none;
+        padding: 10px 0;
+        font-size: 15px;
+        opacity: 1;
+        transition: .3s;
+        &.dropdown-toggle{
+          &::after{
+            display: none;
+          }
+          &:hover{
+            background: transparent;
+          }
+        }
+      }
+    }
+    /* bloque nivel 1 del menu */
+    .mega-nav.level-1 {
+      width: 100%;
+      padding: 0px;
+      border-left: 1px solid #c8c8ca;
+      @include respond-to(xl){
+        width: 90%;
+        margin-top: 20px;
+        //columns: 2;
+      }
+      &.active{
+        background-color: rgba(255, 255, 255, 1.0);
+        transition: background-color 2s;
+      }
+      > li{
+        padding: 12px 0;
+        margin-left: 15px;
+        &:first-child{
+          padding-top: 0;
+        }
+      }
+      > li a{
+        background-color: transparent;
+        background: 0 0;
+        text-align: left;
+        @include font-size(s);
+        border: none;
+        cursor: pointer;
+        color: color('grey-dark');
+        font-weight: weight(normal);
+        font-family: $latolight;
+        position: relative;
+        display: initial;
+        padding: 0;
+        &:hover{
+          text-decoration: underline;
+        }
+        &.dropdown-toggle{
+          &:before{
+            content: '...';
+            background: url(../img/Icon/arrow_next.svg) no-repeat center;
+            position: absolute;
+            font-size: 0;
+            background-size: 20px;
+            right: -15px;
+            height: 20px;
+            width: 20px;
+            top: -3px;
+          }
+        }
+
+      }
+    }
+    .level-3 .nav-child{
+      background-color: red;
+      opacity: 0 !important;
+    }
     /* desctop */
-    ul.level-1.items-3 {
+   /*  ul.level-1.items-3 {
       padding-left: 30px;
       @include respond-to(xl){
         width: 100%;
@@ -456,43 +707,20 @@ $white:#fff;
           }
         }
       }
-    }
+    } */
     .dropdown-menu.container-submenu{
       &.active-mobile{
-        position: absolute;
+        position: fixed;
         background-color: #ffffff;
-        top: 0;
+        top: 128px;
         display: block !important;
         padding: 0;
         left: 0 !important;
         transition: left .4s;
         height: 100%;
-        .box-black{
-          /* p {
-            color: #fff;
-            font-family: Lato, sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            position: relative;
-            &:before{
-              content: '...';
-              background: url(../img/Icon/arrow-slide-prev.png) no-repeat center;
-              top: -8px;
-              position: absolute;
-              font-size: 0;
-              background-size: 30px;
-              z-index: 9;
-              width: 40px;
-              height: 40px;
-              right: 0;
-            }
-          }*/
-        }
         .mega-dropdown-inner {
           ul.tb-megamenu-subnav{
             border-left: solid 1px #c8c8ca;
-           /*  margin: 40px 10%;
-            width: 90%; */
             li{
               padding: 7px 20px 7px 0;
               a {
@@ -523,6 +751,17 @@ $white:#fff;
           }
         }
       }
+    }
+    /* bloques en mobile */
+    .box-black-mobile {
+      background-color: #1a1a1a;
+      height: auto;
+      width: 100%;
+      right: 0px;
+      top: 0px;
+      padding: 20px 30px;
+      z-index: 9;
+      transition: .7s;
     }
     .separador-menu {
       width: 100%;
@@ -600,46 +839,6 @@ $white:#fff;
         }
       }
     }
-    ul.tb-megamenu-nav.level-0{
-      li.level-1.active{
-        a{
-          border: none;
-          font-size: 1.08rem;
-          text-decoration: none;
-          font-family: Lato,sans-serif;
-          font-weight: 300;
-          color: color('gray-menu');
-          text-align: center;
-          background: transparent;
-          @include respond-to(xl){
-            font-weight: initial;
-            display: block;
-            padding: 0 11px;
-            @include font-size(s);
-            text-transform: lowercase;
-            cursor: pointer;
-            &:hover {
-              color: color('grey');
-            }
-          }
-          &.dropdown-toggle{
-            &::after{
-              display: none;
-            }
-            /* &::after{
-              content: '>';
-              display: block;
-              width: 20px;
-              height: 20px;
-            } */
-            &:hover{
-              //text-decoration: underline;
-              background: transparent;
-            }
-          }
-        }
-      }
-    }
   }
   .dropdown-toggle{
     &::after{
@@ -650,18 +849,18 @@ $white:#fff;
     .mega-nav > li a,
     .dropdown-menu {
       .mega-nav > li a{
-        background-color: transparent;
+       /* background-color: transparent;
         background: 0 0;
         text-align: left;
         font-size: .78rem;
         color: #484851;
         padding: 10px 10px;
         border: none;
-        cursor: pointer;
+        cursor: pointer; */
       }
     }
     .nav > li {
-      list-style: none;
+     /*  list-style: none;
       float: left;
       position: initial;
       width: 100%;
@@ -671,18 +870,12 @@ $white:#fff;
       display: flex;
       justify-content: center;
       align-content: center;
-      flex-direction: column;
-      @include respond-to(xl) {
+      flex-direction: column; */
+     /*  @include respond-to(xl) {
         width: 127px;
-        height: 75px;
-      }
-      &.open {
-        background-color: #1a1a1a;
-        border: none;
-        @include respond-to(xl) {
-          background-color: #FFFFFF;
-        }
-      }
+        height: 74px;
+      } */
+
       @include respond-to(xl) {
        /*  width: 136px;
         height: 74px; */
@@ -711,15 +904,14 @@ $white:#fff;
   .level-0 .level-1{
     &:nth-child(4) > .nav-child{
         /* temporal */
-       /* display: block;
-        background-color: red;*/
-
+      //display: block;
+      //background-color: red;
     }
 
     &.open{
       > .nav-child{
         @include respond-to(xl){
-          display: block;
+          //display: block;
          // background-color: red;
         }
       }
@@ -738,7 +930,7 @@ $white:#fff;
         background-color: #ffffff;
         border: none;
         padding-left: 0;
-        height: 314px;
+        height: 332px;
         left: initial !important;
         overflow: hidden;
         z-index: 99;
@@ -749,98 +941,61 @@ $white:#fff;
         left: 0;
         right: 0; */
       }
+      > .mega-dropdown-inner{
+        max-width: 1170px;
+        margin: 0 auto;
+      }
+      &.active-clone{
+
+        &.efect{
+        /*  opacity: 1;
+          margin-left: 0px;
+          transition: all .3s ease-in-out; */
+        }
+        .dropdown-submenu .tb-megamenu-submenu{
+          @include respond-to(xl){
+            //opacity: 0;
+            //height: 0;
+           // left: 1000% !important;
+          }
+        }
+      }
       ul.level-1,
       ul.level-3 {
         @include respond-to(xl){
-          padding-left: 30px !important;
-          border-left: none !important;
+          //padding-left: 30px !important;
+          //border-left: none !important;
         }
         li {
           @include respond-to(xl){
-            border-left: 1px solid #c8c8ca;
+            //border-left: 1px solid #c8c8ca;
           }
           a{
             @include respond-to(xl){
-              text-align: left !important;
-              padding: 5px 10px 5px 30px !important;
+              //text-align: left !important;
+              //padding: 5px 10px 5px 30px !important;
             }
           }
         }
       }
-      .mega-dropdown-inner{
-        max-width: 1170px;
-        margin: 0 auto;
-      }
+
     }
   }
   @include respond-to(xl){
     p {
-      color: #fff;
+      /* color: #fff;
       font-family: Lato, sans-serif;
       font-weight: 700;
       @include font-size(s);
       position: relative;
       padding: 12px 40px 0 0px;
       text-align: right;
-      text-transform: capitalize;
-      &:before{
-        content: '...';
-        background: url(../img/Icon/arrow-slide-prev.png) no-repeat center;
-        top: -8px;
-        position: absolute;
-        font-size: 0;
-        background-size: 20px;
-        z-index: 9;
-        width: 22px;
-        height: 22px;
-        right: 8px;
-        top: 12px;
-      }
+      text-transform: capitalize; */
+
     }
   }
-  .box-black {
-    background-color: #1a1a1a;
-    height: auto;
-    width: 100%;
-    right: 0px;
-    top: 0px;
-    transition: right .5s;
-    padding: 20px 30px;
-    z-index: 9;
-    @include respond-to(xl){
-      position: absolute;
-      padding: 0;
-      height: 400px;
-      width: 20%;
-      top: 0;
-      left: -1000px;
-      -webkit-transition: left .5s; /* Safari */
-      transition: left .5s;
-    }
-    &.active-box{
-      right: 0px;
-      -webkit-transition: right .5s; /* Safari */
-      transition: right .5s;
-      @include respond-to(xl){
-        left: 0px;
-        -webkit-transition: left .5s; /* Safari */
-        transition: left .5s;
-      }
-    }
-    a{
-      font-size: 12px;
-      color: #FFFFFF !important;
-      border: none !important;
-      word-wrap: break-word;
-      word-break: break-all;
-      word-wrap: break-word;
-      white-space: inherit;
-      &:hover{
-        color: #484851 !important;
-      }
-    }
-  }
-  .clone-nivel-3{
+
+  /* .clone-nivel-3{
     display: block;
     position: absolute;
     border: none;
@@ -849,46 +1004,17 @@ $white:#fff;
     left: 20% !important;
     width: auto;
     top: -8px;
-  }
-  .nav-child{
-    &.active-clone{
-      position: absolute;
-      top: 0;
-      display: block;
-      opacity: 0;
-      transition: .4;
-      border: none;
-      background: color('white');
-      box-shadow: none;
-      left: 20% !important;
-      transition: left .4s;
-      opacity: 1;
-      margin-left: 0px;
-      transition: all .3s ease-in-out;
-      &.efect{
-       /*  opacity: 1;
-        margin-left: 0px;
-        transition: all .3s ease-in-out; */
-      }
-      .dropdown-submenu .tb-megamenu-submenu{
-        @include respond-to(xl){
-          opacity: 0;
-          height: 0;
-          left: 1000% !important;
-        }
-      }
-    }
-  }
+  } */
   li.level-2 *.nav-child{
     left: 1000% !important;
     position: fixed;
     background-color: color(white);
-    transition: left .4s;
+    transition: .3s;
     top: 128px;
     height: 100%;
     &.active-mobile{
       left: 0 !important;
-      transition: left .4s;
+      transition: .3s;
     }
     @include respond-to(xl){
       opacity: 0;
@@ -899,31 +1025,16 @@ $white:#fff;
     }
   }
   ul.tb-megamenu-subnav.level-1{
-    width: 40%;
+   // width: 40%;
   }
   ul.tb-megamenu-subnav.level-3 .tb-megamenu-submenu{
-    opacity: 0;
+    opacity: 0 !important;
+
   }
   ul.tb-megamenu-subnav.level-1,
   ul.tb-megamenu-subnav.level-2,
   ul.tb-megamenu-subnav.level-3 {
-    width: 100%;
-    padding: 0px;
-    border-left: 1px solid #c8c8ca;
-    background-color: rgba(255, 255, 255, 1.0);
-    transition: background-color 2s;
-    @include respond-to(xl){
-      width: 90%;
-    }
-    &.active{
-      background-color: rgba(255, 255, 255, 1.0);
-      transition: background-color 2s;
-    }
-    > li a{
-      &:first-child{
-        padding-top: 0;
-      }
-    }
+
   }
   .nav-collapse {
    // float: right;
@@ -987,8 +1098,14 @@ $white:#fff;
   }
 }
 .wrapper-mega-menu {
-  background-color: #ead134;
+  background-color: color(white);
   height: 100%;
+  &.yellow{
+    background-color: color('yellow-menu');
+  }
+  @include respond-to(xxl){
+    height: 74px;
+  }
   .container{
     width: 100%;
     height: 100%;
@@ -1031,5 +1148,4 @@ $white:#fff;
       display: none;
     }
   }
-
 }

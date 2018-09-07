@@ -2,17 +2,8 @@
   Drupal.behaviors.menuMain = {
     attach: function (context, settings) {
       var docWidth = $(document).width(),
-        $level1 = $('.tb-megamenu-item.level-1'),
+        $level1 = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0 > li.level-1 > a'),
         $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
-
-        /* hover */
-      $level1.hover(function () {
-        if (!this) {
-          console.log("hover");
-        }
-        /*   $(this).fadeOut(100);
-          $(this).fadeIn(500); */
-      });
 
       /* wrapper para area segura  */
       jQuery(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
@@ -22,18 +13,30 @@
 
       /*  add buscador */
       $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
-
       $(".barra-buscar").click(function () {
-        console.log('test')
         $('#block-google-cse-google-cse').toggleClass("buscador-open");
       });
-      /* ciclo item de mega menu */
       if (docWidth > 992) {
-        /* Scroll menu  */
+
+        /* hover finalizar las animaciones*/
+        $level1.hover(
+          function () {
+            console.log('in');
+            $('.box-black').remove();
+            $('.clone-nivel-2').remove();
+            $('.clone-nivel-3').remove();
+            removerClassBoxBlack();
+            $('.clone-nivel-3').removeClass('active-clone2');
+          }, function () {
+            console.log('on');
+          }
+        );
+
+        /* Scroll menu cambio de colO r */
         $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
-            menu = $('.tb-megamenu-menu-mega-menu');
-          if (scroll > 100) {
+            menu = $('.wrapper-mega-menu');
+          if (scroll > 300) {
             menu.removeClass('black');
             menu.addClass('yellow');
           }
@@ -42,23 +45,65 @@
             menu.addClass('black');
           }
         });
-        var leftContainer = $('.wrapper-mega-menu .container').offset();
-        /* ciclo */
+
+        /* ciclo para el ancho de primer contenedor */
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset = $(this).offset(),
             menuhover = $(this).find('>.nav-child');
           if (menuhover.parent('li').hasClass('level-1')) {
             menuhover.css({
-              'margin-left': '-' + offset.left + 'px',
-              'width': docWidth + -14 +'px',
+              'margin-left': '-' + offset.left - 4 + 'px',
+              'width': docWidth  +'px',
             })
           }
-          //
         });
+
+        /* retiro el atributo href  */
         $itemsNivel2.removeAttr('href');
-        function dropdown() {
-          /* Nivel3 */
-         $('.active-clone .tb-megamenu-subnav a.dropdown-toggle').on('click', function () {
+
+        /* Nivel 2 se crea el box black */
+        $('.level-2 > .dropdown-toggle').on("click", function () {
+
+          /* remove de los clones */
+          $('.box-black').remove();
+          $('.clone-nivel-2').remove();
+          /* se crea el box black */
+          $(this).parents('.tb-megamenu-column').addClass('active-nivel-1').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
+          /* clase padre para todo los clones */
+          $('.box-black').parents('.row-fluid').addClass('parent-clone');
+          /* hacemos el clone */
+          var SubMenuClone = $(this).siblings().clone().addClass('clone-nivel-2');
+          $(this).parents('.tb-megamenu-column').after(SubMenuClone);
+          /* clase animacion de la imagen */
+          $('.parent-clone').find('.content-img').addClass('active-img');
+          /* se crea para que poner clase que hace la animacion */
+          setTimeout(function () {
+            $('.box-black').addClass('active-box');
+            $('.clone-nivel-2').addClass('active-clone');
+          }, 1);
+           /* pendiente verificar  o limpiar memoria*/
+          var child = $(this).siblings('.nav-child').html();
+          var item = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
+          /* pendiente verificar */
+          /* cuando se da click en la box black */
+          $('.box-black').click(function () {
+            /* remover clases animacion de salida*/
+            removerClassBoxBlack();
+          });
+          reBuildEl();
+        });
+
+        function removerClassBoxBlack() {
+          $('.parent-clone').find('.content-img').removeClass('active-img');
+          $('.box-black').removeClass('active-box');
+          $('.clone-nivel-2').removeClass('active-clone');
+          $('.tb-megamenu-column').removeClass('active-nivel-1');
+        }
+
+        function reBuildEl(){
+          /* Animacio del nivel Nivel 3 */
+          console.log($('.level-3 a.dropdown-toggle'));
+          $('.clone-nivel-2 .level-3 a.dropdown-toggle').on('click', function () {
             console.log($(this));
             $('.clone-nivel-3').remove();
             //$('.box-black').parents('.row-fluid').addClass('parent-clone');
@@ -66,45 +111,20 @@
             SubMenuCloneNivel3 = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
             console.log(SubMenuCloneNivel3);
             $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
-          });
-
-          $('.level-2 > .dropdown-toggle').on("click", function () {
-            $('.box-black').remove();
-            $('.active-clone').remove();
-
-            $(this).parents('.tb-megamenu-column').addClass('none').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
-
-            $('.box-black').addClass('active-box').parents('.row-fluid').addClass('parent-clone');
-            var SubMenuClone = $(this).siblings().clone().addClass('active-clone');
-            $(this).parents('.tb-megamenu-column').after(SubMenuClone);
-
-            $('.parent-clone').find('.content-img').addClass('active-img')
+            /* se crea para que poner clase que hace la animacion */
             setTimeout(function () {
-              $('.box-black').addClass('active-box');
-            }, 100);
+              $('.clone-nivel-3').addClass('active-clone2');
+            }, 1);
 
-            //$('.active-clone').siblings('.tb-megamenu-column').addClass('hidden');
-
-
-            var child = $(this).siblings('.nav-child').html();
-            var item = $(this).parents('.level-1').find('.tb-megamenu-column-inner').html();
             $('.box-black').click(function () {
-              $(this).siblings('.tb-megamenu-column').removeClass('none')
-              $('.parent-clone').find('.content-img').removeClass('active-img');
-              $('.box-black').removeClass('active-box'); /* nivel 2 animacion */
-              $('.nav-child.active').removeClass('active'); /* nivel 2 animacion */
-              $('ul.level-1.active').removeClass('active'); /* nivel 1 animacion */
-              $('.active-clone').remove();
-              $('.clone-nivel-3').remove();
-              $('.parent-clone').find('.tb-megamenu-column').removeClass('hidden');
-
+              /* remover clases animacion de salida*/
+              $('.clone-nivel-3').removeClass('active-clone2');
             });
-            dropdown();
+            //$('.clone-nivel-2 a.dropdown-toggle').removeAttr('href');
           });
         }
-        dropdown()
       }
-      /* js mobile */
+      /* js para la version mobile */
       else {
          /* mobile */
         const
@@ -121,11 +141,11 @@
           $('.nav-child').removeClass('active-mobile');
         });
         itemMobil.on("click", function () {
-          $('.box-black').remove();
+          $('.box-black-mobile').remove();
           let $this = $(this);
           $this.siblings().addClass('active-mobile');
-          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black' style='none'><p>" + $this.text() + "</p></div>");
-          $('.box-black').click(function () {
+          $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black-mobile' style='none'><p>" + $this.text() + "</p></div>");
+          $('.box-black-mobile').click(function () {
             //$('.box-black').addClass('active-box').siblings('.content-img').removeClass('eve');
             //$('.box-black').removeClass('active-box'); /* nivel 2 animacion */
             $(this).parents('.active-mobile').removeClass('active-mobile'); /* nivel 2 animacion */
