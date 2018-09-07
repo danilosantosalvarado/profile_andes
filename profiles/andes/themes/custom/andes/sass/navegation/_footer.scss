@@ -227,12 +227,13 @@
 				background-color: transparent;
 				padding: 0px;
 				margin: 20px 0;
+				box-shadow: none;
 				.caret {
 					display: none;
 				}
 			}
 			.dropdown-menu {
-				position: initial;
+				position: static;
 				display: block;
 				background-color: transparent;
 				border: initial;
