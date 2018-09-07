@@ -6280,10 +6280,16 @@ body > .main-container.container-fluid {
   z-index: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-id-componente_layout_4 .view-content .views-row {
     float: left;
     margin: 10px 5px;
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_4 .view-content .views-row {
     width: 48.6%;
   }
 }
