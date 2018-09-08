@@ -6280,10 +6280,16 @@ body > .main-container.container-fluid {
   z-index: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-id-componente_layout_4 .view-content .views-row {
     float: left;
     margin: 10px 5px;
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_layout_4 .view-content .views-row {
     width: 48.6%;
   }
 }
@@ -7882,6 +7888,8 @@ body > .main-container.container-fluid {
   background-color: transparent;
   padding: 0px;
   margin: 20px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
@@ -7895,7 +7903,7 @@ body > .main-container.container-fluid {
 .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu,
 #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
 #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu {
-  position: initial;
+  position: static;
   display: block;
   background-color: transparent;
   border: initial;
