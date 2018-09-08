@@ -1,0 +1,172 @@
+<?php
+$view = new view();
+$view->name = 'componente_layout_11';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'field_collection_item';
+$view->human_name = 'Componente layout 11';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Componente layout 11';
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '8';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['tags']['first'] = '« primero';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'siguiente ›';
+$handler->display->display_options['pager']['options']['tags']['last'] = 'última »';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Field collection item: Entity with the Items Content (field_items_content) */
+$handler->display->display_options['relationships']['field_items_content_node']['id'] = 'field_items_content_node';
+$handler->display->display_options['relationships']['field_items_content_node']['table'] = 'field_collection_item';
+$handler->display->display_options['relationships']['field_items_content_node']['field'] = 'field_items_content_node';
+/* Campo: Campo: Imagen Derecha */
+$handler->display->display_options['fields']['field_image_banner']['id'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['table'] = 'field_data_field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['field'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['label'] = '';
+$handler->display->display_options['fields']['field_image_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_banner']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_banner']['settings'] = array(
+  'image_style' => 'componentes__430x255_',
+  'image_link' => '',
+);
+/* Campo: Field collection item: Video */
+$handler->display->display_options['fields']['field_video_banner']['id'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['table'] = 'field_data_field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['field'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['label'] = '';
+$handler->display->display_options['fields']['field_video_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_video_banner']['click_sort_column'] = 'input';
+$handler->display->display_options['fields']['field_video_banner']['settings'] = array(
+  'youtube_size' => 'responsive',
+  'youtube_width' => '',
+  'youtube_height' => '',
+  'youtube_autoplay' => 0,
+  'youtube_loop' => 0,
+  'youtube_showinfo' => 0,
+  'youtube_controls' => 0,
+  'youtube_autohide' => 0,
+  'youtube_iv_load_policy' => 0,
+);
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['label'] = '';
+$handler->display->display_options['fields']['field_titulo']['alter']['max_length'] = '50';
+$handler->display->display_options['fields']['field_titulo']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['field_titulo']['element_label_colon'] = FALSE;
+/* Campo: Campo: Body */
+$handler->display->display_options['fields']['field_body']['id'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['table'] = 'field_data_field_body';
+$handler->display->display_options['fields']['field_body']['field'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['label'] = '';
+$handler->display->display_options['fields']['field_body']['alter']['max_length'] = '200';
+$handler->display->display_options['fields']['field_body']['alter']['trim'] = TRUE;
+$handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
+/* Campo: Field collection item: Tipo de item */
+$handler->display->display_options['fields']['field_tipo_item']['id'] = 'field_tipo_item';
+$handler->display->display_options['fields']['field_tipo_item']['table'] = 'field_data_field_tipo_item';
+$handler->display->display_options['fields']['field_tipo_item']['field'] = 'field_tipo_item';
+$handler->display->display_options['fields']['field_tipo_item']['exclude'] = TRUE;
+/* Campo: Campo: Enlace Ver más */
+$handler->display->display_options['fields']['field_enlace_ver_mas']['id'] = 'field_enlace_ver_mas';
+$handler->display->display_options['fields']['field_enlace_ver_mas']['table'] = 'field_data_field_enlace_ver_mas';
+$handler->display->display_options['fields']['field_enlace_ver_mas']['field'] = 'field_enlace_ver_mas';
+$handler->display->display_options['fields']['field_enlace_ver_mas']['label'] = '';
+$handler->display->display_options['fields']['field_enlace_ver_mas']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_enlace_ver_mas']['click_sort_column'] = 'url';
+/* Campo: Views: Views Conditional */
+$handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['label'] = '';
+$handler->display->display_options['fields']['views_conditional']['exclude'] = TRUE;
+$handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['views_conditional']['if'] = 'field_tipo_item';
+$handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+$handler->display->display_options['fields']['views_conditional']['equalto'] = 'imagen';
+$handler->display->display_options['fields']['views_conditional']['then'] = '<div class=[field_ubicacion_img_video]>
+  <div class="container-image">[field_image_banner]</div>
+  <div class="container-title-desc">
+      <div class="cuar-titulo">[field_titulo]</div>
+      <div class="cuar-body">[field_body]</div>
+      <div class="cuar-enlace">[field_enlace_ver_mas]</div>
+  </div>
+</div>';
+$handler->display->display_options['fields']['views_conditional']['or'] = '<div class=[field_ubicacion_img_video]>
+  <div class="container-video">[field_video_banner]</div>
+  <div class="container-title-desc">
+      <div class="cuar-titulo">[field_titulo]</div>
+      <div class="cuar-body">[field_body]</div>
+      <div class="cuar-enlace">[field_enlace_ver_mas]</div>
+  </div>
+</div>';
+$handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
+/* Contextual filter: Contenido: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_items_content_node';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_items_content' => 'field_items_content',
+);
+/* Filter criterion: Contenido: Items Content (field_items_content:language) */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'field_data_field_items_content';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'field_items_content_node';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
+
+/* Display: Componente layout 11 */
+$handler = $view->new_display('block', 'Componente layout 11', 'block');
+$translatables['componente_layout_11'] = array(
+  t('Master'),
+  t('Componente layout 11'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« primero'),
+  t('‹ anterior'),
+  t('siguiente ›'),
+  t('última »'),
+  t('field_items_content'),
+  t('Tipo de item'),
+  t('Todo'),
+);
+?>

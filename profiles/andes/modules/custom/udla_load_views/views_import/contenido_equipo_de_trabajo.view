@@ -1,0 +1,225 @@
+<?php
+$view = new view();
+$view->name = 'contenido_equipo_de_trabajo';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Contenido equipo de trabajo';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Contenido equipo de trabajo';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '3';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['tags']['first'] = '« primero';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'siguiente ›';
+$handler->display->display_options['pager']['options']['tags']['last'] = 'última »';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Campo: Campo: IMAGEN */
+$handler->display->display_options['fields']['field_imagen_1_1']['id'] = 'field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['table'] = 'field_data_field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['field'] = 'field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['label'] = '';
+$handler->display->display_options['fields']['field_imagen_1_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_imagen_1_1']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen_1_1']['settings'] = array(
+  'image_style' => '',
+  'image_link' => '',
+);
+/* Campo: Contenido: Título */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Campo: Contenido: Ocupación */
+$handler->display->display_options['fields']['field_edicion']['id'] = 'field_edicion';
+$handler->display->display_options['fields']['field_edicion']['table'] = 'field_data_field_edicion';
+$handler->display->display_options['fields']['field_edicion']['field'] = 'field_edicion';
+$handler->display->display_options['fields']['field_edicion']['label'] = '';
+$handler->display->display_options['fields']['field_edicion']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_edicion']['type'] = 'text_plain';
+/* Campo: Contenido: Email */
+$handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+$handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['label'] = '';
+$handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
+/* Campo: Campo: Teléfono */
+$handler->display->display_options['fields']['field_telefono']['id'] = 'field_telefono';
+$handler->display->display_options['fields']['field_telefono']['table'] = 'field_data_field_telefono';
+$handler->display->display_options['fields']['field_telefono']['field'] = 'field_telefono';
+$handler->display->display_options['fields']['field_telefono']['label'] = '';
+$handler->display->display_options['fields']['field_telefono']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_telefono']['alter']['text'] = 'Ext. [field_telefono] ';
+$handler->display->display_options['fields']['field_telefono']['element_label_colon'] = FALSE;
+/* Campo: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+$handler->display->display_options['fields']['php']['php_output'] = '
+<div class="col-md-4 col-sm-6 col-xs-6">	
+ <div class="thumbnail">
+   <div class="imagen">
+     <img src="http://localhost/decanatura/sites/default/files/deportes6_4.png">
+   </div>
+   <div class="caption">
+     <div class="conte-text">
+       <p>Maria Galindo Rojas</p>
+       <p>Ocupacion</p>
+       <p></p>
+       <p>208</p>
+     </div>
+   </div>
+ </div>
+</div>';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+/* Sort criterion: Contenido: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Contenido: Has taxonomy term ID (with depth) */
+$handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+$handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+$handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+$handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
+$handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
+/* Filter criterion: Contenido: Publicado */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenido: Tipo */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'equipo_de_trabajo' => 'equipo_de_trabajo',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+
+/* Display: Contenido equipo de trabajo */
+$handler = $view->new_display('block', 'Contenido equipo de trabajo', 'block');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Campo: IMAGEN */
+$handler->display->display_options['fields']['field_imagen_1_1']['id'] = 'field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['table'] = 'field_data_field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['field'] = 'field_imagen_1_1';
+$handler->display->display_options['fields']['field_imagen_1_1']['label'] = '';
+$handler->display->display_options['fields']['field_imagen_1_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_imagen_1_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_imagen_1_1']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen_1_1']['settings'] = array(
+  'image_style' => 'equipo_de_trabajo__195x195_',
+  'image_link' => '',
+);
+/* Campo: Contenido: Título */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Campo: Contenido: Ocupación */
+$handler->display->display_options['fields']['field_edicion']['id'] = 'field_edicion';
+$handler->display->display_options['fields']['field_edicion']['table'] = 'field_data_field_edicion';
+$handler->display->display_options['fields']['field_edicion']['field'] = 'field_edicion';
+$handler->display->display_options['fields']['field_edicion']['label'] = '';
+$handler->display->display_options['fields']['field_edicion']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_edicion']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_edicion']['type'] = 'text_plain';
+/* Campo: Contenido: Email */
+$handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+$handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+$handler->display->display_options['fields']['field_email']['label'] = '';
+$handler->display->display_options['fields']['field_email']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
+/* Campo: Campo: Teléfono */
+$handler->display->display_options['fields']['field_telefono']['id'] = 'field_telefono';
+$handler->display->display_options['fields']['field_telefono']['table'] = 'field_data_field_telefono';
+$handler->display->display_options['fields']['field_telefono']['field'] = 'field_telefono';
+$handler->display->display_options['fields']['field_telefono']['label'] = '';
+$handler->display->display_options['fields']['field_telefono']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_telefono']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_telefono']['alter']['text'] = 'Ext. [field_telefono] ';
+$handler->display->display_options['fields']['field_telefono']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_telefono']['type'] = 'text_plain';
+/* Campo: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+$handler->display->display_options['fields']['php']['php_output'] = '<div class="col-md-4 col-sm-4 col-xs-12">	
+ <div class="thumbnail">
+   <div class="imagen">
+     <?php echo($row->field_imagen_1_1); ?>
+   </div>
+   <div class="caption">
+     <div class="conte-text">
+       <p><?php echo($row->title); ?> </p>
+       <p><?php echo($row->field_edicion); ?></p>
+       <p><?php echo($row->field_email); ?></p>
+       <p><?php echo($row->field_telefono); ?></p>
+     </div>
+   </div>
+ </div>
+</div>';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+$translatables['contenido_equipo_de_trabajo'] = array(
+  t('Master'),
+  t('Contenido equipo de trabajo'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« primero'),
+  t('‹ anterior'),
+  t('siguiente ›'),
+  t('última »'),
+  t('Ext. [field_telefono] '),
+  t('Todo'),
+);
+?>

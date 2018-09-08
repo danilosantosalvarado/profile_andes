@@ -535,6 +535,14 @@ function andes_install_tasks($install_state) {
     'function' => '_install_mods',
   );
 
+  $tasks['install_views'] = array(
+    'display_name' => st('Importacion de vistas'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP, 
+    'function' => '_install_views',
+  );
+
   return $tasks;
 }
 
@@ -552,18 +560,33 @@ function _install_mods() {
   return $batch;
 }
 
+
+function _install_views() {
+  $install_state['mods'] = array('views' => 1);
+  
+  $batch = array(
+    'title' => t('Importando vistas'),
+  );
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_views_batch', array($module));
+  }
+  return $batch;
+}
+
+function _install_views_batch(){
+  module_enable(array('udla_load_views'), TRUE);
+}
+
 function _install_andes_batch(){
-  // Import Beans types 
   module_enable(array('beans_types'), TRUE);
-  // Creation content types.
   module_enable(array('tc_noticias'), TRUE);
   module_enable(array('tc_eventos'), TRUE);
   module_enable(array('tc_layouts'), TRUE);
   module_enable(array('tc_materiales_estudio'), TRUE);
   module_enable(array('tc_publicaciones'), TRUE);
-  // Import Fields Condicions.
   module_enable(array('field_condicion_list'), TRUE);
-  // Import nodes for content type noticias
   module_enable(array('udla_load_events'), TRUE);
 }
 

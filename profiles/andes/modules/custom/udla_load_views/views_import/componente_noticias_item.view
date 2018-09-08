@@ -1,0 +1,112 @@
+<?php
+$view = new view();
+$view->name = 'componente_noticias_item';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'field_collection_item';
+$view->human_name = 'Componente noticias Item';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Multimedia';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Campo: Campo: Imagen Derecha */
+$handler->display->display_options['fields']['field_image_banner']['id'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['table'] = 'field_data_field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['field'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['label'] = '';
+$handler->display->display_options['fields']['field_image_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_banner']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_image_banner']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_banner']['settings'] = array(
+  'image_style' => 'componer_noticias_',
+  'image_link' => '',
+);
+/* Campo: Field collection item: Video */
+$handler->display->display_options['fields']['field_video_banner']['id'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['table'] = 'field_data_field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['field'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['label'] = '';
+$handler->display->display_options['fields']['field_video_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_video_banner']['click_sort_column'] = 'input';
+$handler->display->display_options['fields']['field_video_banner']['settings'] = array(
+  'youtube_size' => 'responsive',
+  'youtube_width' => '',
+  'youtube_height' => '',
+  'youtube_autoplay' => 0,
+  'youtube_loop' => 0,
+  'youtube_showinfo' => 0,
+  'youtube_controls' => 0,
+  'youtube_autohide' => 0,
+  'youtube_iv_load_policy' => 0,
+);
+/* Contextual filter: Field collection item: Field collection item ID */
+$handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['default_action'] = 'default';
+$handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'raw';
+$handler->display->display_options['arguments']['item_id']['default_argument_options']['index'] = '0';
+$handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+
+/* Display: Thumbnail pager */
+$handler = $view->new_display('block', 'Thumbnail pager', 'block_1');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Campo: Imagen Derecha */
+$handler->display->display_options['fields']['field_image_banner']['id'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['table'] = 'field_data_field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['field'] = 'field_image_banner';
+$handler->display->display_options['fields']['field_image_banner']['label'] = '';
+$handler->display->display_options['fields']['field_image_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_image_banner']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_image_banner']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_image_banner']['settings'] = array(
+  'image_style' => 'componer_noticias_',
+  'image_link' => '',
+);
+/* Campo: Field collection item: Video */
+$handler->display->display_options['fields']['field_video_banner']['id'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['table'] = 'field_data_field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['field'] = 'field_video_banner';
+$handler->display->display_options['fields']['field_video_banner']['label'] = '';
+$handler->display->display_options['fields']['field_video_banner']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_video_banner']['click_sort_column'] = 'input';
+$handler->display->display_options['fields']['field_video_banner']['type'] = 'youtube_thumbnail';
+$handler->display->display_options['fields']['field_video_banner']['settings'] = array(
+  'image_style' => 'thumbnail',
+  'image_link' => '',
+);
+$translatables['componente_noticias_item'] = array(
+  t('Master'),
+  t('Multimedia'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Todo'),
+  t('Block'),
+  t('Thumbnail pager'),
+);
+?>

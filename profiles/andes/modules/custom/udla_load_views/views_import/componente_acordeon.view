@@ -1,0 +1,349 @@
+<?php
+$view = new view();
+$view->name = 'componente_acordeon';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'field_collection_item';
+$view->human_name = 'Componente Acordeón';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Componente Acordeón';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '0';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Field collection item: Items acordeón */
+$handler->display->display_options['fields']['field_items_acordeon']['id'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['table'] = 'field_data_field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['field'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['text'] = '[field_items_acordeon-value]';
+$handler->display->display_options['fields']['field_items_acordeon']['type'] = 'field_collection_list';
+$handler->display->display_options['fields']['field_items_acordeon']['settings'] = array(
+  'add' => '',
+  'edit' => '',
+  'translate' => '',
+  'delete' => '',
+  'description' => 1,
+);
+$handler->display->display_options['fields']['field_items_acordeon']['delta_offset'] = '0';
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_accordion' => 'field_accordion',
+);
+
+/* Display: Componente Acordeón */
+$handler = $view->new_display('block', 'Componente Acordeón', 'block');
+$handler->display->display_options['defaults']['query'] = FALSE;
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Field collection item: Entity with the Accordion (field_accordion) */
+$handler->display->display_options['relationships']['field_accordion_node']['id'] = 'field_accordion_node';
+$handler->display->display_options['relationships']['field_accordion_node']['table'] = 'field_collection_item';
+$handler->display->display_options['relationships']['field_accordion_node']['field'] = 'field_accordion_node';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['label'] = '';
+$handler->display->display_options['fields']['field_titulo']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Field collection item: Items acordeón */
+$handler->display->display_options['fields']['field_items_acordeon']['id'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['table'] = 'field_data_field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['field'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['text'] = '[field_items_acordeon-value]';
+$handler->display->display_options['fields']['field_items_acordeon']['type'] = 'field_collection_list';
+$handler->display->display_options['fields']['field_items_acordeon']['settings'] = array(
+  'add' => '',
+  'edit' => '',
+  'translate' => '',
+  'delete' => '',
+  'description' => 1,
+);
+$handler->display->display_options['fields']['field_items_acordeon']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_items_acordeon']['separator'] = ',';
+/* Campo: Global: Ver */
+$handler->display->display_options['fields']['view']['id'] = 'view';
+$handler->display->display_options['fields']['view']['table'] = 'views';
+$handler->display->display_options['fields']['view']['field'] = 'view';
+$handler->display->display_options['fields']['view']['label'] = '';
+$handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view']['view'] = 'componente_acordeon';
+$handler->display->display_options['fields']['view']['display'] = 'block_1';
+$handler->display->display_options['fields']['view']['arguments'] = '[%field_items_acordeon]';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Contenido: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_accordion_node';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_accordion' => 'field_accordion',
+);
+/* Filter criterion: Contenido: Accordion (field_accordion:language) */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'field_data_field_accordion';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'field_accordion_node';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
+
+/* Display: Acordeón Items */
+$handler = $view->new_display('block', 'Acordeón Items', 'block_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Acordeón Items';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_accordion';
+$handler->display->display_options['style_options']['default_row_class'] = FALSE;
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['style_options']['collapsible'] = 1;
+$handler->display->display_options['style_options']['row-start-open'] = 'none';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['label'] = '';
+$handler->display->display_options['fields']['field_titulo']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['element_wrapper_class'] = 'acordion-titulo';
+$handler->display->display_options['fields']['field_titulo']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Campo: Body */
+$handler->display->display_options['fields']['field_body']['id'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['table'] = 'field_data_field_body';
+$handler->display->display_options['fields']['field_body']['field'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['label'] = '';
+$handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Field collection item: Field collection item ID */
+$handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['item_id']['break_phrase'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_items_acordeon' => 'field_items_acordeon',
+);
+
+/* Display: Tabs Items */
+$handler = $view->new_display('block', 'Tabs Items', 'block_2');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Tabs Items';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'quicktabs';
+$handler->display->display_options['style_options']['tab_title_field'] = 'field_titulo';
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['label'] = '';
+$handler->display->display_options['fields']['field_titulo']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_titulo']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Campo: Body */
+$handler->display->display_options['fields']['field_body']['id'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['table'] = 'field_data_field_body';
+$handler->display->display_options['fields']['field_body']['field'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['label'] = '';
+$handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Field collection item: Field collection item ID */
+$handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['item_id']['break_phrase'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_items_acordeon' => 'field_items_acordeon',
+);
+
+/* Display: Componente Tabs */
+$handler = $view->new_display('block', 'Componente Tabs', 'block_3');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['defaults']['query'] = FALSE;
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+$handler->display->display_options['defaults']['relationships'] = FALSE;
+/* Relationship: Field collection item: Entity with the Accordion (field_accordion) */
+$handler->display->display_options['relationships']['field_accordion_node']['id'] = 'field_accordion_node';
+$handler->display->display_options['relationships']['field_accordion_node']['table'] = 'field_collection_item';
+$handler->display->display_options['relationships']['field_accordion_node']['field'] = 'field_accordion_node';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['label'] = '';
+$handler->display->display_options['fields']['field_titulo']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_titulo']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Field collection item: Items acordeón */
+$handler->display->display_options['fields']['field_items_acordeon']['id'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['table'] = 'field_data_field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['field'] = 'field_items_acordeon';
+$handler->display->display_options['fields']['field_items_acordeon']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_items_acordeon']['alter']['text'] = '[field_items_acordeon-value]';
+$handler->display->display_options['fields']['field_items_acordeon']['type'] = 'field_collection_list';
+$handler->display->display_options['fields']['field_items_acordeon']['settings'] = array(
+  'add' => '',
+  'edit' => '',
+  'translate' => '',
+  'delete' => '',
+  'description' => 1,
+);
+$handler->display->display_options['fields']['field_items_acordeon']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_items_acordeon']['separator'] = ',';
+/* Campo: Global: Ver */
+$handler->display->display_options['fields']['view']['id'] = 'view';
+$handler->display->display_options['fields']['view']['table'] = 'views';
+$handler->display->display_options['fields']['view']['field'] = 'view';
+$handler->display->display_options['fields']['view']['label'] = '';
+$handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view']['view'] = 'componente_acordeon';
+$handler->display->display_options['fields']['view']['display'] = 'block_2';
+$handler->display->display_options['fields']['view']['arguments'] = '[%field_items_acordeon]';
+$handler->display->display_options['defaults']['arguments'] = FALSE;
+/* Contextual filter: Contenido: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_accordion_node';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_accordion' => 'field_accordion',
+);
+/* Filter criterion: Contenido: Accordion (field_accordion:language) */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'field_data_field_accordion';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['relationship'] = 'field_accordion_node';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
+$translatables['componente_acordeon'] = array(
+  t('Master'),
+  t('Componente Acordeón'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Field collection item ID'),
+  t('.'),
+  t(','),
+  t('Titulo'),
+  t('Items acordeón'),
+  t('[field_items_acordeon-value]'),
+  t('field_accordion'),
+  t('Todo'),
+  t('Acordeón Items'),
+  t('Tabs Items'),
+  t('Componente Tabs'),
+);
+?>

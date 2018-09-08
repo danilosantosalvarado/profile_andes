@@ -1,0 +1,155 @@
+<?php
+$view = new view();
+$view->name = 'fecha_y_hora_evento';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'fecha y hora evento';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Contenido: Lugar (field_lugar) */
+$handler->display->display_options['relationships']['field_lugar_lid']['id'] = 'field_lugar_lid';
+$handler->display->display_options['relationships']['field_lugar_lid']['table'] = 'field_data_field_lugar';
+$handler->display->display_options['relationships']['field_lugar_lid']['field'] = 'field_lugar_lid';
+/* Campo: Global: PHP */
+$handler->display->display_options['fields']['php']['id'] = 'php';
+$handler->display->display_options['fields']['php']['table'] = 'views';
+$handler->display->display_options['fields']['php']['field'] = 'php';
+$handler->display->display_options['fields']['php']['label'] = '';
+$handler->display->display_options['fields']['php']['exclude'] = TRUE;
+$handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+$handler->display->display_options['fields']['php']['php_output'] = '<figure class="ico-calendar">
+     <img src="http://186.96.117.202:8081/sitio-base/sites/default/files/icono_181.png" title="" alt="">
+</figure>';
+$handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+$handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+/* Campo: Location: Additional */
+$handler->display->display_options['fields']['additional']['id'] = 'additional';
+$handler->display->display_options['fields']['additional']['table'] = 'location';
+$handler->display->display_options['fields']['additional']['field'] = 'additional';
+$handler->display->display_options['fields']['additional']['label'] = 'Lugar';
+$handler->display->display_options['fields']['additional']['exclude'] = TRUE;
+$handler->display->display_options['fields']['additional']['element_wrapper_class'] = 'lugar-eventos';
+$handler->display->display_options['fields']['additional']['element_default_classes'] = FALSE;
+/* Campo: Contenido: Fecha */
+$handler->display->display_options['fields']['field_fecha_eventos']['id'] = 'field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['table'] = 'field_data_field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['field'] = 'field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_fecha_eventos']['element_wrapper_class'] = 'fecha-eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_fecha_eventos']['settings'] = array(
+  'format_type' => 'custom',
+  'custom_date_format' => 'j \\of F Y',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+);
+/* Campo: Contenido: Agendar */
+$handler->display->display_options['fields']['field_agendar']['id'] = 'field_agendar';
+$handler->display->display_options['fields']['field_agendar']['table'] = 'field_data_field_agendar';
+$handler->display->display_options['fields']['field_agendar']['field'] = 'field_agendar';
+$handler->display->display_options['fields']['field_agendar']['label'] = '';
+$handler->display->display_options['fields']['field_agendar']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_agendar']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_agendar']['click_sort_column'] = 'url';
+/* Campo: Contenido: Fecha */
+$handler->display->display_options['fields']['field_fecha_eventos_1']['id'] = 'field_fecha_eventos_1';
+$handler->display->display_options['fields']['field_fecha_eventos_1']['table'] = 'field_data_field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos_1']['field'] = 'field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos_1']['label'] = '';
+$handler->display->display_options['fields']['field_fecha_eventos_1']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_fecha_eventos_1']['alter']['text'] = '<div class="imagen-eento">[php]</div>  
+<div class="box-internal">  
+  <div class="lugar-eventos"><span>Lugar: </span> <span>[additional]</span></div>  
+  <div class="fecha-eventos"><span>Fecha: </span>[field_fecha_eventos]</div>  
+  <div class="hora-eventos"><span>hora: </span>[field_fecha_eventos_1]</div>
+<div class="button-eventos">[field_agendar]</div>
+</div>';
+$handler->display->display_options['fields']['field_fecha_eventos_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_fecha_eventos_1']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_fecha_eventos_1']['settings'] = array(
+  'format_type' => 'custom',
+  'custom_date_format' => 'g\\:H\\ a',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+);
+/* Sort criterion: Contenido: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Contenido: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+$handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+$handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+  'eventos' => 'eventos',
+);
+/* Filter criterion: Contenido: Publicado */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenido: Tipo */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'eventos' => 'eventos',
+);
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$translatables['fecha_y_hora_evento'] = array(
+  t('Master'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Location from field_lugar'),
+  t('Lugar'),
+  t('Fecha'),
+  t('<div class="imagen-eento">[php]</div>  
+<div class="box-internal">  
+  <div class="lugar-eventos"><span>Lugar: </span> <span>[additional]</span></div>  
+  <div class="fecha-eventos"><span>Fecha: </span>[field_fecha_eventos]</div>  
+  <div class="hora-eventos"><span>hora: </span>[field_fecha_eventos_1]</div>
+<div class="button-eventos">[field_agendar]</div>
+</div>'),
+  t('Todo'),
+  t('Block'),
+);
+?>

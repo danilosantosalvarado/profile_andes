@@ -1,0 +1,7 @@
+name = udla load views
+description = Import Views Profile
+dependencies[] = views
+dependencies[] = ctools
+package = TBWA
+version = 0
+core = 7.x

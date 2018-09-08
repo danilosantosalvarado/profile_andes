@@ -1,0 +1,109 @@
+<?php
+$view = new view();
+$view->name = 'componente_enlaces';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Componente Enlaces';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Componente Enlaces';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Contenido: Internos externos descargas (field_internos_externos_descarga) */
+$handler->display->display_options['relationships']['field_internos_externos_descarga_value']['id'] = 'field_internos_externos_descarga_value';
+$handler->display->display_options['relationships']['field_internos_externos_descarga_value']['table'] = 'field_data_field_internos_externos_descarga';
+$handler->display->display_options['relationships']['field_internos_externos_descarga_value']['field'] = 'field_internos_externos_descarga_value';
+$handler->display->display_options['relationships']['field_internos_externos_descarga_value']['delta'] = '-1';
+/* Campo: Contenido: Título */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['exclude'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Campo: Contenido: Internos externos descargas */
+$handler->display->display_options['fields']['field_internos_externos_descarga']['id'] = 'field_internos_externos_descarga';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['table'] = 'field_data_field_internos_externos_descarga';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['field'] = 'field_internos_externos_descarga';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['label'] = '';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_internos_externos_descarga']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_internos_externos_descarga']['alter']['text'] = '[field_internos_externos_descarga-value]';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_internos_externos_descarga']['type'] = 'field_collection_fields';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['settings'] = array(
+  'view_mode' => 'full',
+);
+$handler->display->display_options['fields']['field_internos_externos_descarga']['delta_offset'] = '0';
+$handler->display->display_options['fields']['field_internos_externos_descarga']['separator'] = ',';
+/* Campo: Global: Ver */
+$handler->display->display_options['fields']['view']['id'] = 'view';
+$handler->display->display_options['fields']['view']['table'] = 'views';
+$handler->display->display_options['fields']['view']['field'] = 'view';
+$handler->display->display_options['fields']['view']['label'] = '';
+$handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view']['view'] = 'componente_enlaces_item';
+$handler->display->display_options['fields']['view']['arguments'] = '[%field_internos_externos_descarga]';
+/* Sort criterion: Contenido: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Contenido: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Contenido: Publicado */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenido: Tipo */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'layouts' => 'layouts',
+);
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$translatables['componente_enlaces'] = array(
+  t('Master'),
+  t('Componente Enlaces'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('field collection item from field_internos_externos_descarga'),
+  t('[field_internos_externos_descarga-value]'),
+  t('All'),
+  t('Block'),
+);
+?>
