@@ -282,12 +282,37 @@ $white:#fff;
 }
 #block-lang-dropdown-language {
   overflow: hidden;
+  position: relative;
+  padding-right: 16px;
+  display: none;
+  @include respond-to(xl){
+    display: block;
+  }
   .block-title{
     display: none;
   }
-  .form-select{
-    padding: 8px 9px;
-    height: auto;
+  .form-type-select{
+    &:before{
+      content: '...';
+      background: url(../img/icon-flecha-abajo.png) no-repeat center;
+      top: 10px;
+      position: absolute;
+      font-size: 0;
+      background-size: 15px;
+      z-index: 9;
+      width: 15px;
+      height: 14px;
+      right: 0;
+    }
+    .form-select{
+      padding: 8px 9px;
+      height: auto;
+      background: transparent;
+      border: none;
+      appearance: none;
+      color: color('gray-menu-soy');
+
+    }
   }
 }
 /* Bloque buscar */
@@ -547,7 +572,7 @@ $white:#fff;
                     font-size: 0;
                     background-size: 15px;
                     z-index: 9;
-                    width: 15px;
+                    width: 16px;
                     height: 14px;
                     right: 4px;
                   }
