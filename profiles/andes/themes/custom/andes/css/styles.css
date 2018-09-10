@@ -7316,10 +7316,6 @@ body > .main-container.container-fluid {
 // Carrucel Multimedia
 //------------------------------------------------------------------------------
 */
-.view-componente-carrusel-multimedia {
-  border: 1px solid blue;
-}
-
 .view-componente-carrusel-multimedia .viewsSlideshowCycle-processed {
   overflow: hidden;
   margin: 10px 0;
