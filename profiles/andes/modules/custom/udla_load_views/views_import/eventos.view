@@ -1,0 +1,195 @@
+<?php
+$view = new view();
+$view->name = 'eventos';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Eventos';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Eventos';
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['query']['options']['distinct'] = TRUE;
+$handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '12';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['tags']['first'] = '« primero';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'siguiente ›';
+$handler->display->display_options['pager']['options']['tags']['last'] = 'última »';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Contenido: Lugar (field_lugar) */
+$handler->display->display_options['relationships']['field_lugar_lid']['id'] = 'field_lugar_lid';
+$handler->display->display_options['relationships']['field_lugar_lid']['table'] = 'field_data_field_lugar';
+$handler->display->display_options['relationships']['field_lugar_lid']['field'] = 'field_lugar_lid';
+/* Relationship: Contenido: Taxonomy terms on node */
+$handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+$handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+$handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+  'eventos' => 'eventos',
+  'area_tematica' => 0,
+  'editorial' => 0,
+  'tags' => 0,
+  'footer_top' => 0,
+  'formato' => 0,
+  'categorias_noticia' => 0,
+  'tipo_layout' => 0,
+);
+/* Relationship: Contenido: Entity translation: translations */
+$handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+$handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
+$handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+/* Campo: Campo: Slider principal Items */
+$handler->display->display_options['fields']['field_slider_principal_items']['id'] = 'field_slider_principal_items';
+$handler->display->display_options['fields']['field_slider_principal_items']['table'] = 'field_data_field_slider_principal_items';
+$handler->display->display_options['fields']['field_slider_principal_items']['field'] = 'field_slider_principal_items';
+$handler->display->display_options['fields']['field_slider_principal_items']['label'] = '';
+$handler->display->display_options['fields']['field_slider_principal_items']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_slider_principal_items']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_slider_principal_items']['alter']['text'] = '[field_slider_principal_items-value]';
+$handler->display->display_options['fields']['field_slider_principal_items']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_slider_principal_items']['type'] = 'field_collection_fields';
+$handler->display->display_options['fields']['field_slider_principal_items']['settings'] = array(
+  'view_mode' => 'full',
+);
+$handler->display->display_options['fields']['field_slider_principal_items']['delta_offset'] = '0';
+/* Campo: Global: Ver */
+$handler->display->display_options['fields']['view']['id'] = 'view';
+$handler->display->display_options['fields']['view']['table'] = 'views';
+$handler->display->display_options['fields']['view']['field'] = 'view';
+$handler->display->display_options['fields']['view']['label'] = '';
+$handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['view']['view'] = 'componente_noticias_item';
+$handler->display->display_options['fields']['view']['arguments'] = '[%field_slider_principal_items]';
+/* Campo: Contenido: Título */
+$handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+$handler->display->display_options['fields']['title_1']['table'] = 'node';
+$handler->display->display_options['fields']['title_1']['field'] = 'title';
+$handler->display->display_options['fields']['title_1']['label'] = '';
+$handler->display->display_options['fields']['title_1']['alter']['text'] = '<div class="eventos-container">
+    <div class="eventos-titulo">[title_1] </div>
+    <div class="eventos-fecha"><span>Fecha:</span>[field_fecha_eventos] </div>
+    <div class="eventos-lugar"><span>Lugar:</span><span>[additional]</span></div>
+</div>
+';
+$handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+/* Campo: Contenido: Fecha */
+$handler->display->display_options['fields']['field_fecha_eventos']['id'] = 'field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['table'] = 'field_data_field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['field'] = 'field_fecha_eventos';
+$handler->display->display_options['fields']['field_fecha_eventos']['settings'] = array(
+  'format_type' => 'custom',
+  'custom_date_format' => 'd \\o\\f F \\o\\f Y',
+  'fromto' => 'both',
+  'multiple_number' => '',
+  'multiple_from' => '',
+  'multiple_to' => '',
+  'show_remaining_days' => 0,
+);
+/* Campo: Location: Additional */
+$handler->display->display_options['fields']['additional']['id'] = 'additional';
+$handler->display->display_options['fields']['additional']['table'] = 'location';
+$handler->display->display_options['fields']['additional']['field'] = 'additional';
+$handler->display->display_options['fields']['additional']['label'] = 'Lugar:';
+$handler->display->display_options['fields']['additional']['element_label_colon'] = FALSE;
+/* Campo: Contenido: Enlace */
+$handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+$handler->display->display_options['fields']['view_node']['label'] = '';
+$handler->display->display_options['fields']['view_node']['alter']['text'] = '<p>ver mas</p>
+';
+$handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+/* Sort criterion: Contenido: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+/* Contextual filter: Contenido: Has taxonomy term ID */
+$handler->display->display_options['arguments']['tid']['id'] = 'tid';
+$handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+$handler->display->display_options['arguments']['tid']['field'] = 'tid';
+$handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['tid']['exception']['title'] = 'Todo';
+$handler->display->display_options['arguments']['tid']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Contenido: Publicado */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Contenido: Tipo */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'eventos' => 'eventos',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Campo: Slider principal Items (field_slider_principal_items:language) */
+$handler->display->display_options['filters']['language']['id'] = 'language';
+$handler->display->display_options['filters']['language']['table'] = 'field_data_field_slider_principal_items';
+$handler->display->display_options['filters']['language']['field'] = 'language';
+$handler->display->display_options['filters']['language']['value'] = array(
+  '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+);
+$handler->display->display_options['filters']['language']['group'] = 1;
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['path'] = 'listar-eventos';
+$translatables['eventos'] = array(
+  t('Master'),
+  t('Eventos'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« primero'),
+  t('‹ anterior'),
+  t('siguiente ›'),
+  t('última »'),
+  t('Location from field_lugar'),
+  t('term'),
+  t('Translations'),
+  t('[field_slider_principal_items-value]'),
+  t('<div class="eventos-container">
+    <div class="eventos-titulo">[title_1] </div>
+    <div class="eventos-fecha"><span>Fecha:</span>[field_fecha_eventos] </div>
+    <div class="eventos-lugar"><span>Lugar:</span><span>[additional]</span></div>
+</div>
+'),
+  t('Fecha'),
+  t('Lugar:'),
+  t('<p>ver mas</p>
+'),
+  t('Todo'),
+  t('Page'),
+);
+?>

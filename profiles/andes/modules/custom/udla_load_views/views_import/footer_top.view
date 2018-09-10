@@ -1,0 +1,106 @@
+<?php
+$view = new view();
+$view->name = 'footer_top';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'taxonomy_term_data';
+$view->human_name = 'Global - Footer Top';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '5';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['style_options']['row_class_special'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Campo: Campo: Imagen */
+$handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['label'] = '';
+$handler->display->display_options['fields']['field_imagen']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_imagen']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+/* Campo: Término de taxonomía: Nombre */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Campo: Término de taxonomía: Descripción del término */
+$handler->display->display_options['fields']['description']['id'] = 'description';
+$handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['description']['field'] = 'description';
+$handler->display->display_options['fields']['description']['label'] = '';
+$handler->display->display_options['fields']['description']['exclude'] = TRUE;
+$handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+/* Campo: Término de taxonomía: url */
+$handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+$handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+$handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+$handler->display->display_options['fields']['field_url']['label'] = '';
+$handler->display->display_options['fields']['field_url']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_url']['click_sort_column'] = 'url';
+/* Campo: Término de taxonomía: Color de linea */
+$handler->display->display_options['fields']['field_color_linea']['id'] = 'field_color_linea';
+$handler->display->display_options['fields']['field_color_linea']['table'] = 'field_data_field_color_linea';
+$handler->display->display_options['fields']['field_color_linea']['field'] = 'field_color_linea';
+$handler->display->display_options['fields']['field_color_linea']['label'] = '';
+$handler->display->display_options['fields']['field_color_linea']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_color_linea']['alter']['text'] = '	<div class="conten-footer ">
+		<div class="image-footer-top"> [field_imagen] </div>
+		<div class="text-footer-top">[name] [description] [field_color_linea] </div>
+		[field_url]
+	</div>';
+$handler->display->display_options['fields']['field_color_linea']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_color_linea']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_color_linea']['settings'] = array(
+  'width' => '20',
+  'height' => '20',
+);
+/* Filter criterion: Vocabulario de taxonomía: Nombre de sistema */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'footer_top' => 'footer_top',
+);
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$translatables['footer_top'] = array(
+  t('Master'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('	<div class="conten-footer ">
+		<div class="image-footer-top"> [field_imagen] </div>
+		<div class="text-footer-top">[name] [description] [field_color_linea] </div>
+		[field_url]
+	</div>'),
+  t('Block'),
+);
+?>

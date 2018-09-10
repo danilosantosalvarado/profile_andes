@@ -1,0 +1,191 @@
+<?php
+$view = new view();
+$view->name = 'componente_enlaces_item';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'field_collection_item';
+$view->human_name = 'Componente enlaces Item';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Componente enlaces Item';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '15';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Relationship: Field collection item: Item Descarga (field_item_descarga:fid) */
+$handler->display->display_options['relationships']['field_item_descarga_fid']['id'] = 'field_item_descarga_fid';
+$handler->display->display_options['relationships']['field_item_descarga_fid']['table'] = 'field_data_field_item_descarga';
+$handler->display->display_options['relationships']['field_item_descarga_fid']['field'] = 'field_item_descarga_fid';
+/* Relationship: File Usage: Contenido */
+$handler->display->display_options['relationships']['file_to_node']['id'] = 'file_to_node';
+$handler->display->display_options['relationships']['file_to_node']['table'] = 'file_usage';
+$handler->display->display_options['relationships']['file_to_node']['field'] = 'file_to_node';
+$handler->display->display_options['relationships']['file_to_node']['relationship'] = 'field_item_descarga_fid';
+$handler->display->display_options['relationships']['file_to_node']['label'] = 'Content';
+/* Campo: Field collection item: Field collection item ID */
+$handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+$handler->display->display_options['fields']['item_id']['label'] = '';
+$handler->display->display_options['fields']['item_id']['exclude'] = TRUE;
+$handler->display->display_options['fields']['item_id']['element_label_colon'] = FALSE;
+/* Campo: Field collection item: Tipo de Enlace */
+$handler->display->display_options['fields']['field_tipo_de_enlace']['id'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['field_tipo_de_enlace']['table'] = 'field_data_field_tipo_de_enlace';
+$handler->display->display_options['fields']['field_tipo_de_enlace']['field'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['field_tipo_de_enlace']['label'] = '';
+$handler->display->display_options['fields']['field_tipo_de_enlace']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_tipo_de_enlace']['element_label_colon'] = FALSE;
+/* Campo: Field collection item: Tipo de Enlace */
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['id'] = 'field_tipo_de_enlace_1';
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['table'] = 'field_data_field_tipo_de_enlace';
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['field'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['label'] = '';
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_tipo_de_enlace_1']['type'] = 'list_key';
+/* Campo: Field collection item: Enlace Interno */
+$handler->display->display_options['fields']['field_enlace_interno']['id'] = 'field_enlace_interno';
+$handler->display->display_options['fields']['field_enlace_interno']['table'] = 'field_data_field_enlace_interno';
+$handler->display->display_options['fields']['field_enlace_interno']['field'] = 'field_enlace_interno';
+$handler->display->display_options['fields']['field_enlace_interno']['label'] = '';
+$handler->display->display_options['fields']['field_enlace_interno']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_enlace_interno']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_enlace_interno']['alter']['text'] = '<a href=[field_enlace_interno-url]><p>[field_enlace_interno-title]</p></a>';
+$handler->display->display_options['fields']['field_enlace_interno']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_enlace_interno']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_enlace_interno']['click_sort_column'] = 'url';
+/* Campo: Field collection item: Enlace Externo */
+$handler->display->display_options['fields']['field_enlace_externo']['id'] = 'field_enlace_externo';
+$handler->display->display_options['fields']['field_enlace_externo']['table'] = 'field_data_field_enlace_externo';
+$handler->display->display_options['fields']['field_enlace_externo']['field'] = 'field_enlace_externo';
+$handler->display->display_options['fields']['field_enlace_externo']['label'] = '';
+$handler->display->display_options['fields']['field_enlace_externo']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_enlace_externo']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_enlace_externo']['alter']['text'] = '<a href=[field_enlace_externo-url]><p>[field_enlace_externo-title]</p></a>';
+$handler->display->display_options['fields']['field_enlace_externo']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_enlace_externo']['click_sort_column'] = 'url';
+/* Campo: Field collection item: Item Descarga */
+$handler->display->display_options['fields']['field_item_descarga']['id'] = 'field_item_descarga';
+$handler->display->display_options['fields']['field_item_descarga']['table'] = 'field_data_field_item_descarga';
+$handler->display->display_options['fields']['field_item_descarga']['field'] = 'field_item_descarga';
+$handler->display->display_options['fields']['field_item_descarga']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_item_descarga']['alter']['text'] = '[field_item_descarga-data]1';
+$handler->display->display_options['fields']['field_item_descarga']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_item_descarga']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+/* Campo: Field collection item: Titulo */
+$handler->display->display_options['fields']['field_titulo']['id'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['table'] = 'field_data_field_titulo';
+$handler->display->display_options['fields']['field_titulo']['field'] = 'field_titulo';
+$handler->display->display_options['fields']['field_titulo']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_titulo']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['field_titulo']['type'] = 'text_plain';
+/* Campo: Archivo: Ruta */
+$handler->display->display_options['fields']['uri']['id'] = 'uri';
+$handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+$handler->display->display_options['fields']['uri']['field'] = 'uri';
+$handler->display->display_options['fields']['uri']['relationship'] = 'field_item_descarga_fid';
+$handler->display->display_options['fields']['uri']['label'] = 'Path';
+$handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+$handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
+/* Campo: Views: Views Conditional */
+$handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional']['label'] = '';
+$handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['views_conditional']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['views_conditional']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['views_conditional']['if'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+$handler->display->display_options['fields']['views_conditional']['equalto'] = 'Enlace Interno';
+$handler->display->display_options['fields']['views_conditional']['then'] = '<div class=[field_tipo_de_enlace_1]>
+[field_enlace_interno]
+</div>';
+$handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
+/* Campo: Views: Views Conditional */
+$handler->display->display_options['fields']['views_conditional_1']['id'] = 'views_conditional_1';
+$handler->display->display_options['fields']['views_conditional_1']['table'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional_1']['field'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional_1']['label'] = '';
+$handler->display->display_options['fields']['views_conditional_1']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['views_conditional_1']['element_wrapper_type'] = '0';
+$handler->display->display_options['fields']['views_conditional_1']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['views_conditional_1']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['views_conditional_1']['if'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['views_conditional_1']['condition'] = '1';
+$handler->display->display_options['fields']['views_conditional_1']['equalto'] = 'Enlace Externo';
+$handler->display->display_options['fields']['views_conditional_1']['then'] = '<div class=[field_tipo_de_enlace_1]>
+[field_enlace_externo]
+</div>';
+$handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
+/* Campo: Views: Views Conditional */
+$handler->display->display_options['fields']['views_conditional_2']['id'] = 'views_conditional_2';
+$handler->display->display_options['fields']['views_conditional_2']['table'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional_2']['field'] = 'views_conditional';
+$handler->display->display_options['fields']['views_conditional_2']['label'] = '';
+$handler->display->display_options['fields']['views_conditional_2']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['views_conditional_2']['element_default_classes'] = FALSE;
+$handler->display->display_options['fields']['views_conditional_2']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['views_conditional_2']['if'] = 'field_tipo_de_enlace';
+$handler->display->display_options['fields']['views_conditional_2']['condition'] = '1';
+$handler->display->display_options['fields']['views_conditional_2']['equalto'] = 'Descarga';
+$handler->display->display_options['fields']['views_conditional_2']['then'] = '<div class=[field_tipo_de_enlace_1]>
+  <a href=[uri] download><p>[field_titulo]</p></a>
+</div>';
+$handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
+/* Contextual filter: Field collection item: Field collection item ID */
+$handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+$handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+$handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'fixed';
+$handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+$handler->display->display_options['arguments']['item_id']['break_phrase'] = TRUE;
+/* Filter criterion: Field collection item: Nombre del campo */
+$handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['table'] = 'field_collection_item';
+$handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+$handler->display->display_options['filters']['field_name']['value'] = array(
+  'field_internos_externos_descarga' => 'field_internos_externos_descarga',
+);
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block');
+$translatables['componente_enlaces_item'] = array(
+  t('Master'),
+  t('Componente enlaces Item'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('file from field_item_descarga'),
+  t('Content'),
+  t('.'),
+  t(','),
+  t('<a href=[field_enlace_interno-url]><p>[field_enlace_interno-title]</p></a>'),
+  t('<a href=[field_enlace_externo-url]><p>[field_enlace_externo-title]</p></a>'),
+  t('Item Descarga'),
+  t('[field_item_descarga-data]1'),
+  t('Titulo'),
+  t('Path'),
+  t('All'),
+  t('Block'),
+);
+?>

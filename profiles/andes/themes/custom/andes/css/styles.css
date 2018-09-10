@@ -7283,6 +7283,87 @@ body > .main-container.container-fluid {
   display: none;
 }
 
+/*
+//------------------------------------------------------------------------------
+// Carrucel Multimedia
+//------------------------------------------------------------------------------
+*/
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed {
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame {
+  width: 80% !important;
+  height: 465px !important;
+  margin: 0 auto;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  position: static !important;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame .views-slideshow-cycle-main-frame-row .views-slideshow-cycle-main-frame-row-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame .views-slideshow-cycle-main-frame-row .views-slideshow-cycle-main-frame-row-item .views-field-field-slider-principal-items {
+  display: none;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame .views-slideshow-cycle-main-frame-row .views-slideshow-cycle-main-frame-row-item .views-field.views-field-view {
+  width: 100%;
+}
+
+.view-id-componente_carrusel_multimedia .viewsSlideshowCycle-processed .views-slideshow-cycle-main-frame .views-slideshow-cycle-main-frame-row .views-slideshow-cycle-main-frame-row-item .views-field.views-field-view .view-id-componente_noticias_item .view-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom {
+  padding: 24px 10px;
+  background-color: #FDBD2C;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed div {
+  display: block;
+  width: 100%;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item {
+  padding-left: 24px;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item div[data-toggle="tooltip"] {
+  display: block;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item div[data-toggle="tooltip"] .view-content {
+  width: 100%;
+  max-width: 230px;
+  max-height: 132px;
+}
+
+.view-id-componente_carrusel_multimedia .views-slideshow-controls-bottom .views-slideshow-pager-field-processed .views-slideshow-pager-field-item div[data-toggle="tooltip"] img {
+  width: 100%;
+  height: 100%;
+  max-width: 230px;
+  max-height: 132px;
+}
+
 .view-componente-noticia-multimedia-destacada {
   position: relative;
   margin: 20px 0;
@@ -7852,6 +7933,8 @@ body > .main-container.container-fluid {
   background-color: transparent;
   padding: 0px;
   margin: 20px 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
@@ -7865,7 +7948,7 @@ body > .main-container.container-fluid {
 .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu,
 #block-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
 #block-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu {
-  position: initial;
+  position: static;
   display: block;
   background-color: transparent;
   border: initial;

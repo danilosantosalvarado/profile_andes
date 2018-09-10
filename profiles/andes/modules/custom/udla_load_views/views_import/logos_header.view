@@ -1,0 +1,204 @@
+<?php
+$view = new view();
+$view->name = 'logos_header';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'taxonomy_term_data';
+$view->human_name = 'Logos Header';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Logos Header';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Restablecer';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Campo: Término de taxonomía: Nombre */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Campo: Campo: Imagen */
+$handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+/* Filter criterion: Vocabulario de taxonomía: Nombre de sistema */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'lateral_items' => 'lateral_items',
+);
+
+/* Display: Logos Header Desktop */
+$handler = $view->new_display('block', 'Logos Header Desktop', 'block');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '2';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Término de taxonomía: Nombre */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Campo: Campo: Imagen */
+$handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['label'] = '';
+$handler->display->display_options['fields']['field_imagen']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_imagen']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Vocabulario de taxonomía: Nombre de sistema */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'lateral_items' => 'lateral_items',
+);
+/* Filter criterion: Campo: Imagen (field_imagen:fid) */
+$handler->display->display_options['filters']['field_imagen_fid']['id'] = 'field_imagen_fid';
+$handler->display->display_options['filters']['field_imagen_fid']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['filters']['field_imagen_fid']['field'] = 'field_imagen_fid';
+$handler->display->display_options['filters']['field_imagen_fid']['operator'] = 'not empty';
+
+/* Display: Logo Header Mobile */
+$handler = $view->new_display('block', 'Logo Header Mobile', 'block_1');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Logo Header Mobile';
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '2';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Término de taxonomía: Nombre */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Campo: Campo: Imagen */
+$handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['label'] = '';
+$handler->display->display_options['fields']['field_imagen']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_imagen']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Vocabulario de taxonomía: Nombre de sistema */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'lateral_items' => 'lateral_items',
+);
+/* Filter criterion: Campo: Imagen (field_imagen:fid) */
+$handler->display->display_options['filters']['field_imagen_fid']['id'] = 'field_imagen_fid';
+$handler->display->display_options['filters']['field_imagen_fid']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['filters']['field_imagen_fid']['field'] = 'field_imagen_fid';
+$handler->display->display_options['filters']['field_imagen_fid']['operator'] = 'not empty';
+
+/* Display: Volver A Institucional */
+$handler = $view->new_display('block', 'Volver A Institucional', 'block_2');
+$handler->display->display_options['defaults']['pager'] = FALSE;
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '1';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Campo: Término de taxonomía: Nombre */
+$handler->display->display_options['fields']['name']['id'] = 'name';
+$handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+$handler->display->display_options['fields']['name']['field'] = 'name';
+$handler->display->display_options['fields']['name']['label'] = '';
+$handler->display->display_options['fields']['name']['exclude'] = TRUE;
+$handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+/* Campo: Campo: Imagen */
+$handler->display->display_options['fields']['field_imagen']['id'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['table'] = 'field_data_field_imagen';
+$handler->display->display_options['fields']['field_imagen']['field'] = 'field_imagen';
+$handler->display->display_options['fields']['field_imagen']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_imagen']['click_sort_column'] = 'fid';
+$handler->display->display_options['fields']['field_imagen']['settings'] = array(
+  'file_view_mode' => 'default',
+);
+/* Campo: Término de taxonomía: url */
+$handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+$handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+$handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+$handler->display->display_options['fields']['field_url']['label'] = '';
+$handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_url']['hide_empty'] = TRUE;
+$handler->display->display_options['fields']['field_url']['click_sort_column'] = 'url';
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Vocabulario de taxonomía: Nombre de sistema */
+$handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+$handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+$handler->display->display_options['filters']['machine_name']['value'] = array(
+  'lateral_items' => 'lateral_items',
+);
+/* Filter criterion: Término de taxonomía: url (field_url:url) */
+$handler->display->display_options['filters']['field_url_url']['id'] = 'field_url_url';
+$handler->display->display_options['filters']['field_url_url']['table'] = 'field_data_field_url';
+$handler->display->display_options['filters']['field_url_url']['field'] = 'field_url_url';
+$handler->display->display_options['filters']['field_url_url']['operator'] = 'not empty';
+$translatables['logos_header'] = array(
+  t('Master'),
+  t('Logos Header'),
+  t('more'),
+  t('Apply'),
+  t('Restablecer'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Imagen'),
+  t('Logos Header Desktop'),
+  t('Logo Header Mobile'),
+  t('Volver A Institucional'),
+);
+?>
