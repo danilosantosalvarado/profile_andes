@@ -25,12 +25,9 @@
         top: 0;
         z-index: 0;
       }
-      @include respond-to(xs) {
+      @include respond-to(m) {
         float: left;
         margin: 10px 5px;
-        width: 48%;
-      }
-      @include respond-to(m) {
         width: 48.6%;
       }
       @include respond-to(xl) {
