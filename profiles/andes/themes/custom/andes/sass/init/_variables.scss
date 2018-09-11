@@ -72,20 +72,25 @@ $font-weight: (
 // monospace) hints at what type of font to use if the web browser doesn't
 // find any of the fonts in the list.
 
-// Serif font stacks.
-$times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
-$times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
-$georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
 
 // Sans-serif font stacks.
-$crimson-textbold:      'Crimson_textbold', 'Arial Narrow', Helvetica, sans-serif;
-$crimson-textregular:   'Crimson_textregular', 'Arial Narrow', Helvetica, sans-serif;
-$crimson-textroman:     'Crimson_textroman', 'Arial Narrow', Helvetica, sans-serif;
-$crimson-textitalic:     'Crimson_textroman', 'Arial Narrow', Helvetica, sans-serif;
-$latobold:              'Lato bold', 'Arial Narrow', Helvetica, sans-serif;
-$latoblack:             'Lato black', 'Arial Narrow', Helvetica, sans-serif;
-$latolight:             'Lato light', 'Arial Narrow', Helvetica, sans-serif;
-$latoregular:           'Lato regular', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-textbold:        'Crimson_textbold', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-textbolditalic:  'Crimson_textbolditalic', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-semibold:        'Crimson_semibold', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-semiboldItalic:  'Crimson_semiboldItalic', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-textregular:     'Crimson_textregular', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-textroman:       'Crimson_textroman', 'Arial Narrow', Helvetica, sans-serif;
+$crimson-textitalic:      'Crimson_textroman', 'Arial Narrow', Helvetica, sans-serif;
+$latobold:                'Lato bold', 'Arial Narrow', Helvetica, sans-serif;
+$latoboldItalic:          'Lato boldItalic', 'Arial Narrow', Helvetica, sans-serif;
+$latoblack:               'Lato black', 'Arial Narrow', Helvetica, sans-serif;
+$latoblackItalic:         'Lato blackItalic', 'Arial Narrow', Helvetica, sans-serif;
+$latohairline:            'Lato hairline', 'Arial Narrow', Helvetica, sans-serif;
+$latohairlineItalic:      'Lato hairlineItalic', 'Arial Narrow', Helvetica, sans-serif;
+$latoitalic:              'Lato italic', 'Arial Narrow', Helvetica, sans-serif;
+$latolight:               'Lato light', 'Arial Narrow', Helvetica, sans-serif;
+$latolightItalic:         'Lato lightItalic', 'Arial Narrow', Helvetica, sans-serif;
+$latoregular:             'Lato regular', 'Arial Narrow', Helvetica, sans-serif;
 
 
 // Monospace font stacks.
