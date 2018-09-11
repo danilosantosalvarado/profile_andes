@@ -67,12 +67,6 @@ dependencies[] = metatag
 dependencies[] = media
 dependencies[] = mediafield
 dependencies[] = field_group
-dependencies[] = i18n_translation
-dependencies[] = i18n_menu
-dependencies[] = entity_translation_i18n_menu
-dependencies[] = path_breadcrumbs
-dependencies[] = path_breadcrumbs_ui
-dependencies[] = path_breadcrumbs_i18n
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api

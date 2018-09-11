@@ -1,0 +1,79 @@
+/*
+//------------------------------------------------------------------------------
+// Carrucel Multimedia
+//------------------------------------------------------------------------------
+*/
+
+.view-componente-carrusel-multimedia {
+  .viewsSlideshowCycle-processed {
+    overflow: hidden;
+    margin: 10px 0;
+    .views-slideshow-cycle-main-frame {
+      width: 80% !important;
+      height: 465px !important;
+      margin: 0 auto;
+      // border: 2px solid yellow;
+      .views-slideshow-cycle-main-frame-row  {
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0 !important;
+        // border: 2px solid red;
+        position: static !important;
+        .views-slideshow-cycle-main-frame-row-item {
+          display: inline-flex;
+          width: 100%;
+          height: 100%;
+          .views-field-field-slider-principal-items {
+            display: none;
+          }
+          .views-field.views-field-view {
+            width: 100%;
+            .view-id-componente_noticias_item {
+              // display: flex;
+               width: 100%;
+               height: 100%;
+              .view-content {
+                img  {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .views-slideshow-controls-bottom {
+    padding: 24px 10px;
+    background-color: color('Yellow-secundary');
+    .views-slideshow-pager-field-processed {
+      display: flex;
+      div {
+        display: block;
+        width: 100%;
+      }
+      .views-slideshow-pager-field-item {
+        padding-left: 24px;
+         div[data-toggle="tooltip"] {
+           display: block;
+          //media
+
+          .view-content {
+            width: 100%;
+            max-width: 230px;
+            max-height: 132px;
+           }
+          //imagen
+          img  {
+            width: 100%;
+            height: 100%;
+            max-width: 230px;
+            max-height: 132px;
+          }
+        }
+      }
+    }
+  }
+}
+
