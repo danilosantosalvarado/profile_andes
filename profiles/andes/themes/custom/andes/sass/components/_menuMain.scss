@@ -139,6 +139,7 @@ $white:#fff;
       }
     }
   }
+
 }
 .navbar.container,
 .navbar.container-fluid{
@@ -163,6 +164,7 @@ $white:#fff;
 }
 /* fin del reset */
 
+
 /* Bloques de menu */
 /* Bloques imagenes de mobile */
 #block-views-logos-header-block{
@@ -174,10 +176,12 @@ $white:#fff;
   margin: 12px 0 0 88px;
   @include respond-to(xl){
     display: block;
+  }
+  @include respond-to(xl){
     position: relative;
-    width: 23%;
+    width: 20%;
     float: left;
-    margin: 2px 0 0;
+    margin: 15px 0 0;
     height: auto;
   }
   h2{
@@ -197,11 +201,8 @@ $white:#fff;
     margin-left: 7px;
     margin-top: 10px;
     .content{
+      border-left: 1px solid white;
       padding: 2px 11px;
-      @include respond-to(xl){
-        border-left: 1px solid white;
-        padding: 2px 0 0 11px;
-      }
     }
   }
 }
@@ -225,94 +226,47 @@ $white:#fff;
   }
   .views-row-1,
   .views-row-2{
-    max-width: 120px;
-    width: 100%;
+    max-width: 144px;
+    margin-bottom: 7px;
+    margin-top: 15px;
     @include respond-to(xl){
       display: inline-block;
       width: 48%;
     }
   }
   .views-row-1{
-    position: absolute;
-    top: 76px;
-    margin-top: 0;
-    display: block;
     .content{
       margin-right: 4px;
     }
   }
   .views-row-2{
-    margin-top: 16px;
+    margin-left: 7px;
+    margin-top: 6px;
     .content{
-      @include respond-to(xl){
-        border-left: 1px solid white;
-        padding: 0 11px;
-      }
+      border-left: 1px solid white;
+      padding: 0 11px;
     }
   }
 }
-/* volver institucional*/
+/* volvel institucional*/
 #block-views-logos-header-block-2{
   position: absolute;
-  list-style: none;
-  border-left: solid 1px #979797;
-  background:#353535;
   @include respond-to(xl){
-    //position: absolute;
-   // margin-top: 0px;
+    position: relative;
+    display: inline-block;
+    margin-top: 6px;
   }
   .element-invisible{
     display: none;
   }
   a{
+    padding: 8px 7px;
+    background: #353535;
+    @include font-size(xxs);
     color: $white;
-    float: left;
-    transition: 0.3s;
-    padding: 7.5px 25px;
-    @include font-size(14.5px);
-    font-family: $latolight;
-    &:hover{
-      opacity: .5;
-      text-decoration: none;
-    }
   }
   h2.block-title{
     display: none;
-  }
-}
-#block-lang-dropdown-language {
-  overflow: hidden;
-  position: relative;
-  padding-right: 16px;
-  display: none;
-  @include respond-to(xl){
-    display: block;
-  }
-  .block-title{
-    display: none;
-  }
-  .form-type-select{
-    &:before{
-      content: '...';
-      background: url(../img/icon-flecha-abajo.png) no-repeat center;
-      top: 10px;
-      position: absolute;
-      font-size: 0;
-      background-size: 15px;
-      z-index: 9;
-      width: 15px;
-      height: 14px;
-      right: 0;
-    }
-    .form-select{
-      padding: 8px 9px;
-      height: auto;
-      background: transparent;
-      border: none;
-      appearance: none;
-      color: color('gray-menu-soy');
-
-    }
   }
 }
 /* Bloque buscar */
@@ -323,9 +277,9 @@ $white:#fff;
     height: 18px;
     display: block;
     float: right;
-    top: 29px;
+    top: 30px;
     position: absolute;
-    right: 20px;
+    right: -4px;
     &:before{
       content: '...';
       background: url(../img/Icon/icon-lupa.png) no-repeat center;
@@ -371,7 +325,7 @@ $white:#fff;
     right: 0px;
     top: 0px;
     padding: 20px 30px;
-    z-index: 99;
+    z-index: 9;
     opacity: 0;
     transition: .7s;
     @include respond-to(xl){
@@ -470,10 +424,8 @@ $white:#fff;
         transition: background-color 2s;
       }
       > li{
-        @include respond-to(xl){
         padding: 12px 0;
         margin-left: 15px;
-        }
         &:first-child{
           padding-top: 0;
         }
@@ -509,13 +461,30 @@ $white:#fff;
         }
       }
     }
+    .level-2 {
+      @include respond-to(xl){
+       /*  padding-left: 30px !important;
+        border-left: none !important; */
+      }
+      li{
+        @include respond-to(xl){
+          //border-left: 1px solid #c8c8ca;
+        }
+        a{
+          @include respond-to(xl){
+            //text-align: left !important;
+           // padding: 5px 0px 5px 25px !important;
+          }
+        }
+      }
+    }
   }
 }
 
 /* menus yo soy  */
 .block-tb-megamenu{
   @include respond-to(xl){
-    width: 76%;
+    width:80%;
     float: left;
   }
   .tb-megamenu-menu-menu-top-soy{
@@ -572,7 +541,7 @@ $white:#fff;
                     font-size: 0;
                     background-size: 15px;
                     z-index: 9;
-                    width: 16px;
+                    width: 15px;
                     height: 14px;
                     right: 4px;
                   }
@@ -620,79 +589,58 @@ $white:#fff;
       padding-right: 30px;
     }
     /* primeros item del menu */
-    ul.level-0 {
-      margin-top: 15px;
+    ul.level-0  > li.level-1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      height: 50px;
       @include respond-to(xl) {
-        margin-top: 0;
+        width: 127px;
+        height: 74px;
+        padding: 0 5px;
       }
-      li.level-1 {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        height: 39px;
-        margin: 10px 0;
+      &.open {
+        background-color: #1a1a1a;
+        border: none;
+        box-shadow: none;
         @include respond-to(xl) {
-          width: 127px;
-          height: 74px;
-          padding: 0 5px;
-          margin: 0;
+          background-color: #FFFFFF;
         }
-        &.open {
-          background-color: #1a1a1a;
-          border: none;
-          box-shadow: none;
-          @include respond-to(xl) {
-            background-color: #FFFFFF;
-          }
-          > a.dropdown-toggle {
-            @include respond-to(xl) {
-              opacity: .6;
-              transition: .3s;
-            }
-          }
-        }
-        > a {
-          color: color('gray-menu') !important;
-          font-weight: weight(normal);
-          font-family: $latolight;
-          background-color: transparent !important;
-          text-align: center;
-          border: none;
-          padding: 10px 0;
-          opacity: 1;
+        > a.dropdown-toggle {
+          opacity: .6;
           transition: .3s;
-          @include font-size(l);
-          @include respond-to(xl) {
-            font-family: $latoregular;
-            color: color('grey') !important;
-            @include font-size(15px);
+        }
+      }
+      > a {
+        color: color('grey') !important;
+        font-weight: weight(normal);
+        font-family: $latoregular;
+        background-color: transparent !important;
+        text-align: center;
+        border: none;
+        padding: 10px 0;
+        font-size: 15px;
+        opacity: 1;
+        transition: .3s;
+        &.dropdown-toggle{
+          &::after{
+            display: none;
           }
-          &.dropdown-toggle{
-            &::after{
-              display: none;
-            }
-            &:hover{
-              background: transparent;
-            }
+          &:hover{
+            background: transparent;
           }
         }
       }
     }
-
     /* bloque nivel 1 del menu */
     .mega-nav.level-1 {
       width: 100%;
       padding: 0px;
       border-left: 1px solid #c8c8ca;
-      margin: 42px 6%;
-      padding: 0 20px;
       @include respond-to(xl){
         width: 90%;
-        margin: 0;
-        padding: 0;
         margin-top: 20px;
-        padding-left: 20px;
         //columns: 2;
       }
       &.active{
@@ -700,9 +648,8 @@ $white:#fff;
         transition: background-color 2s;
       }
       > li{
-        @include respond-to(xl){
-          margin: 12px 0;
-        }
+        padding: 12px 0;
+        margin-left: 15px;
         &:first-child{
           padding-top: 0;
         }
@@ -720,7 +667,6 @@ $white:#fff;
         position: relative;
         display: initial;
         padding: 0;
-        margin-left: 0;
         &:hover{
           text-decoration: underline;
         }
@@ -744,11 +690,29 @@ $white:#fff;
       background-color: red;
       opacity: 0 !important;
     }
+    /* desctop */
+   /*  ul.level-1.items-3 {
+      padding-left: 30px;
+      @include respond-to(xl){
+        width: 100%;
+      }
+      li{
+        @include respond-to(xl){
+          border-left: solid 1px #c8c8ca !important;
+        }
+        a{
+          @include respond-to(xl){
+            padding: 5px 0px 5px 50px !important;
+            text-align: left !important;
+          }
+        }
+      }
+    } */
     .dropdown-menu.container-submenu{
       &.active-mobile{
         position: fixed;
         background-color: #ffffff;
-        top: 0px;
+        top: 128px;
         display: block !important;
         padding: 0;
         left: 0 !important;
@@ -756,14 +720,12 @@ $white:#fff;
         height: 100%;
         .mega-dropdown-inner {
           ul.tb-megamenu-subnav{
-            border-left: 1px solid #c8c8ca;
-            margin: 42px 6%;
-            padding: 0 20px;
+            border-left: solid 1px #c8c8ca;
             li{
               padding: 7px 20px 7px 0;
               a {
-                //padding: 0;
-                //text-align: left;
+                padding: 0;
+                text-align: left;
               }
               a.dropdown-toggle{
                 position: relative;
@@ -773,18 +735,11 @@ $white:#fff;
                   top: -8px;
                   position: absolute;
                   font-size: 0;
-                  background-size: 23px;
+                  background-size: 30px;
                   z-index: 9;
-                  width: 38px;
-                  height: 35px;
-                  right: -27px;
-                  @include respond-to(xl){
-                    background-size: 20px;
-                    height: 20px;
-                    width: 20px;
-                    right: -15px;
-                    top: -3px;
-                  }
+                  width: 40px;
+                  height: 40px;
+                  right: 0;
                 }
               }
             }
@@ -804,28 +759,9 @@ $white:#fff;
       width: 100%;
       right: 0px;
       top: 0px;
-      padding: 16px 30px;
+      padding: 20px 30px;
       z-index: 9;
       transition: .7s;
-      p{
-        color: color(white);
-        font-family: $latobold;
-        font-weight: 700;
-        @include font-size(l);
-        position: relative;
-        &:before{
-          content: '...';
-          background: url(../img/Icon/cerrar-menu-mobile.png) no-repeat center;
-          top: 5px;
-          position: absolute;
-          font-size: 0;
-          background-size: 9px;
-          z-index: 9;
-          width: 25px;
-          height: 15px;
-          right: -13px;
-        }
-      }
     }
     .separador-menu {
       width: 100%;
@@ -909,13 +845,78 @@ $white:#fff;
       display: none;
     }
   }
+  &.tb-megamenu {
+    .mega-nav > li a,
+    .dropdown-menu {
+      .mega-nav > li a{
+       /* background-color: transparent;
+        background: 0 0;
+        text-align: left;
+        font-size: .78rem;
+        color: #484851;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer; */
+      }
+    }
+    .nav > li {
+     /*  list-style: none;
+      float: left;
+      position: initial;
+      width: 100%;
+      padding: 0 5px;
+      margin-left: 0;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column; */
+     /*  @include respond-to(xl) {
+        width: 127px;
+        height: 74px;
+      } */
 
+      @include respond-to(xl) {
+       /*  width: 136px;
+        height: 74px; */
+      }
+      > a{
+        /* position: relative;
+        padding: 9px 8px;
+        list-style: none;
+        color: #a9a9a9;
+        font-size: 13px;
+        font-weight: inherit;
+        color: #484851;
+        border: none;
+        font-family: Lato,sans-serif;
+        font-size: .83rem;
+        line-height: .9rem;
+        text-align: center;
+        transition: .3s;
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: initial;
+        background: transparent; */
+      }
+    }
+  }
   .level-0 .level-1{
-    &:nth-child(2) > .nav-child{
+    &:nth-child(4) > .nav-child{
         /* temporal */
       //display: block;
       //background-color: red;
     }
+
+    &.open{
+      > .nav-child{
+        @include respond-to(xl){
+          //display: block;
+         // background-color: red;
+        }
+      }
+    }
+
     > .nav-child{
       overflow: hidden;
       background-color: transparent;
@@ -935,19 +936,81 @@ $white:#fff;
         z-index: 99;
         position: absolute;
         top: 100%;
+      /*   margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; */
       }
       > .mega-dropdown-inner{
         max-width: 1170px;
         margin: 0 auto;
       }
+      &.active-clone{
+
+        &.efect{
+        /*  opacity: 1;
+          margin-left: 0px;
+          transition: all .3s ease-in-out; */
+        }
+        .dropdown-submenu .tb-megamenu-submenu{
+          @include respond-to(xl){
+            //opacity: 0;
+            //height: 0;
+           // left: 1000% !important;
+          }
+        }
+      }
+      ul.level-1,
+      ul.level-3 {
+        @include respond-to(xl){
+          //padding-left: 30px !important;
+          //border-left: none !important;
+        }
+        li {
+          @include respond-to(xl){
+            //border-left: 1px solid #c8c8ca;
+          }
+          a{
+            @include respond-to(xl){
+              //text-align: left !important;
+              //padding: 5px 10px 5px 30px !important;
+            }
+          }
+        }
+      }
+
     }
   }
+  @include respond-to(xl){
+    p {
+      /* color: #fff;
+      font-family: Lato, sans-serif;
+      font-weight: 700;
+      @include font-size(s);
+      position: relative;
+      padding: 12px 40px 0 0px;
+      text-align: right;
+      text-transform: capitalize; */
+
+    }
+  }
+
+  /* .clone-nivel-3{
+    display: block;
+    position: absolute;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    left: 20% !important;
+    width: auto;
+    top: -8px;
+  } */
   li.level-2 *.nav-child{
     left: 1000% !important;
     position: fixed;
     background-color: color(white);
     transition: .3s;
-    top: 0;
+    top: 128px;
     height: 100%;
     &.active-mobile{
       left: 0 !important;
@@ -961,19 +1024,30 @@ $white:#fff;
       top: 87px;
     }
   }
+  ul.tb-megamenu-subnav.level-1{
+   // width: 40%;
+  }
   ul.tb-megamenu-subnav.level-3 .tb-megamenu-submenu{
     opacity: 0 !important;
 
+  }
+  ul.tb-megamenu-subnav.level-1,
+  ul.tb-megamenu-subnav.level-2,
+  ul.tb-megamenu-subnav.level-3 {
+
+  }
+  .nav-collapse {
+   // float: right;
+   // padding: 0 5%;
   }
 }
 
 /* mobile styles */
 /* se crear bloque en mobile */
 .navbar-header{
-  background: color('yellow');
+  background:yellow;
   margin: 0 !important;
   width: 100%;
-  height: 128px;
   @include respond-to(xl){
     display:none;
   }
@@ -982,7 +1056,7 @@ $white:#fff;
     display: block;
     width: 100%;
     background: black;
-    height: 68px;
+    height: 75px;
     font-size: 0;
   }
   .navbar-toggle{
@@ -1017,11 +1091,10 @@ $white:#fff;
     display: block;
   }
   .block-tb-megamenu {
-    width: 80%;
-    //float: right;
+    width: 87%;
+    float: right;
     padding: 0;
     margin: 0;
-    margin-left: 181px;
   }
 }
 .wrapper-mega-menu {
@@ -1044,7 +1117,6 @@ $white:#fff;
     }
     @include respond-to(xxl){
       width: 1170px;
-      padding: 0 15px;
     }
   }
 }
