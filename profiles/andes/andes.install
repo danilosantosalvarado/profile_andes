@@ -467,7 +467,8 @@ function andes_install() {
   variable_set("locale_language_providers_weight_language", $providers_weight);  
   //  Set bundle "noticias" -> Entity Node
   variable_set('language_content_type_' . 'noticias', 4); 
-  variable_set('language_content_type_' . 'materiales_de_estudio', 4); 
+  variable_set('language_content_type_' . 'materiales_de_estudio', 4);
+  variable_set('language_content_type_' . 'eventos', 4);
 }
 
 function andes_profile_details() {
@@ -529,7 +530,7 @@ function _install_mods() {
   module_enable(array('beans_types'), TRUE);
   // Create contents types.
   module_enable(array('tc_noticias'), TRUE);
-  module_enable(array('tc_eventos'), TRUE);
+  module_enable(array('ct_eventos'), TRUE);
   module_enable(array('tc_layouts'), TRUE);
   module_enable(array('tc_materiales_de_estudio'), TRUE);
   module_enable(array('tc_publicaciones'), TRUE);
