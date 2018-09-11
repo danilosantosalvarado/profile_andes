@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the tc_materiales_estudio feature.
- */
-
-include_once 'tc_materiales_estudio.features.inc';

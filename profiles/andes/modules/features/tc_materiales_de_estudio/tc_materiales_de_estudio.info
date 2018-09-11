@@ -1,5 +1,5 @@
-name = tc_materiales_estudio
-description = Feacture materiales de estudio
+name = tc_materiales_de_estudio
+description = Feature Content type ("Materiales de estudio")
 core = 7.x
 package = Features
 version = 7.x-1.0
@@ -8,5 +8,7 @@ dependencies[] = node
 dependencies[] = text
 features[features_api][] = api:2
 features[field_base][] = body
+features[field_base][] = title_field
 features[field_instance][] = node-materiales_de_estudio-body
+features[field_instance][] = node-materiales_de_estudio-title_field
 features[node][] = materiales_de_estudio

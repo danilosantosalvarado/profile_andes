@@ -1,16 +1,6 @@
 <?php
 
-/**
- * Implements hook_menu().
- */
-module_load_include('inc', 'phpexcel');
-  
-function udla_load_events_install() {
-    // Instalacion.
-  // module_load_include('inc', 'phpexcel');
-  $file_path = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/noticias.xls';
-  $result = phpexcel_import($file_path);
-   foreach ($result[false] as $key => $value) {
+function _import_noticias_batch($value){
       $node = entity_create('node', array('type' => 'noticias'));
       $node->uid = 1;
       $wrapper = entity_metadata_wrapper('node', $node);
@@ -56,12 +46,10 @@ function udla_load_events_install() {
       $wrapper_collections->field_video_banner->set(array('input' => $value['field_items_slider_en']));
       $wrapper_collections->save();
       $wrapper->save();
-   }
+}
 
- // Add nodes materiales de
-  $file_path = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/materiales_de_estudio.xls';
-  $result = phpexcel_import($file_path);
-   foreach ($result[false] as $key => $value) {
+
+function _import_material_estudio_batch($value){
       $node = entity_create('node', array('type' => 'materiales_de_estudio'));
       $node->uid = 1;
       $wrapper = entity_metadata_wrapper('node', $node);
@@ -91,12 +79,9 @@ function udla_load_events_install() {
       $wrapper->title_field->set($value['title_field_en']);
       $wrapper->body->set(array('value' => $value['body_en']));
 
-       $colletions = entity_create('field_collection_item', array('field_name' => 'field_items_slider'));
-       $colletions->setHostEntity('node',$node, 'en');
-       $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
-       $wrapper_collections->save();
-
+      $colletions = entity_create('field_collection_item', array('field_name' => 'field_items_slider'));
+      $colletions->setHostEntity('node',$node, 'en');
+      $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
+      $wrapper_collections->save();
       $wrapper->save();
-   }
-
 }
