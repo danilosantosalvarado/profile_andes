@@ -1,0 +1,19 @@
+name = Views Slideshow: Feature Slider
+description = Adds a feature slider modern moble touch slider to Views Slideshow.
+core = 7.x
+package = Views
+
+dependencies[] = libraries
+dependencies[] = views_slideshow
+
+files[] = views_slidershow_features_slider.module
+files[] = views_slidershow_features_slider.views_slideshow.inc
+files[] = theme/views_slidershow_features_slider.theme.inc
+files[] = js/featureCarousel.min.js
+files[] = js/actions.js
+
+; Information added by Drupal.org packaging script on 2015-08-26
+version = "7.x-2.0+5-dev"
+core = "7.x"
+project = "views_slidershow_features_slider"
+

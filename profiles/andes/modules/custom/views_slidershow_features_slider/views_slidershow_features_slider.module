@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * @file
+ * Adds Feature Carousel as a backend for Views Slideshow.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function views_slidershow_features_slider_help($path, $arg) {
+  switch ($path) {
+    // Main module help for the block module
+    case 'admin/help#views_slidershow_features_slider':
+      return '<p>' . t('More to come. For now see the README.txt file please.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function views_slidershow_features_slider_theme($existing, $type, $theme, $path) {
+  return array(
+    'views_slidershow_features_slider' => array(
+      'variables' => array('view' => NULL, 'settings' => array(), 'rows' => array(), 'title' => ''),
+      'template' => 'theme/views-slideshow-swiper',
+      'file' => 'theme/views_slidershow_features_slider.theme.inc',
+      'pattern' => 'views_slidershow_features_slider__',
+    ),
+    'views_slidershow_features_slider_main_frame' => array(
+      'variables' => array('vss_id' => NULL, 'view' => NULL, 'settings' => NULL, 'rows' => NULL),
+      'template' => 'theme/views-slideshow-swiper-main-frame',
+    ),
+    'views_slidershow_features_slider_main_frame_row' => array(
+      'variables' => array('vss_id' => NULL, 'items' => NULL, 'count' => NULL, 'view' => NULL),
+      'template' => 'theme/views-slideshow-swiper-main-frame-row',
+    ),
+    'views_slidershow_features_slider_main_frame_row_item' => array(
+      'variables' => array('item' => NULL, 'item_count' => NULL, 'view' => NULL),
+      'template' => 'theme/views-slideshow-swiper-main-frame-row-item',
+    ),
+  );
+}
+
+function _views_slidershow_features_slider_install_msg() {
+  return t('You need to install the Feature Carousel library. Unzip the library archive into a directory in sites/all/libraries called Swiper so the JS file is located at: sites/all/libraries/Feature-Carousel/js/jquery.featureCarousel.js. You can find the plugin at !url.', array('!url' => l('https://bkosborne.com/jquery-feature-carousel', 'https://bkosborne.com/jquery-feature-carousel', array('attributes' => array('target' => '_blank')))));
+}
+
+function views_slidershow_features_slider_libraries_info() {
+  $libraries = array();
+  // $libraries['Feature-Carousel'] = array(
+  //   'name' => 'Feature Carousel',
+  //   'vendor url' => 'https://bkosborne.com/jquery-feature-carousel',
+  //   'download url' => 'http://www.bkosborne.com/sites/default/files/featurecarousel.zip',
+  //   'path' => 'dist',
+  //   'version arguments' => array(
+  //     'file' => 'package.json',
+  //     'pattern' => '#version"[^"]*"([^"]*)#',
+  //   ),
+  //   'files' => array(
+  //     'js' => array('js/featureCarousel.min.js'),
+  //     'css' => array('css/feature-carousel.css'),
+  //   ),
+  //   'variants' => array(
+  //     'source' => array(
+  //       'path' => 'dist',
+  //       'files' => array(
+  //         'js' => array('js/featureCarousel.js'),
+  //         'css' => array('css/feature-carousel.css'),
+  //       ),
+  //     ),
+  //     'minified' => array(
+  //       'path' => 'dist',
+  //       'files' => array(
+  //         'js' => array('js/featureCarousel.min.js'),
+  //         'css' => array('css/feature-carousel.css'),
+  //       ),
+  //     ),
+  //   ),
+  // );
+
+  return $libraries;
+}
+
+include_once('theme/views_slidershow_features_slider.theme.inc');
+
+function template_preprocess_views_slidershow_features_slider_main_frame(&$vars) {
+  _views_slidershow_features_slider_preprocess_views_slidershow_features_slider_main_frame($vars);
+}
+
+function template_preprocess_views_slidershow_features_slider_main_frame_row(&$vars) {
+  _views_slidershow_features_slider_preprocess_views_slidershow_features_slider_main_frame_row($vars);
+}
+
+function template_preprocess_views_slidershow_features_slider_main_frame_row_item(&$vars) {
+  _views_slidershow_features_slider_preprocess_views_slidershow_features_slider_main_frame_row_item($vars);
+}
+

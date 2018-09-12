@@ -1,0 +1,12 @@
+name = Menu lateral
+description = Provides vertical menu with anchors. 
+dependencies[] = panels
+dependencies[] = libraries
+files[] = js/anclas.js
+files[] = css/style.css
+package = Custom
+core = 7.x
+version = "7.0"
+project = "tbwa"
+datestamp = "1536696621"
+

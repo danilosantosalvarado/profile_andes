@@ -1,0 +1,38 @@
+<?php 
+
+/**
+ * Implements hook_block_info().
+ */
+function menu_lateral_block_info() {
+
+  $blocks['menu_lateral'] = array(
+    'info' => t('Menu lateral con anclas'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function menu_lateral_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+
+    case 'menu_lateral':
+      $block['subject'] = t(' ');
+      $block['content'] = menu_lateral_traer_ids();
+      break;
+    
+  }
+  return $block;
+}
+
+function menu_lateral_traer_ids(){
+	drupal_add_css(drupal_get_path('module', 'menu_lateral') . '/css/style.css');
+	drupal_add_js(drupal_get_path('module', 'menu_lateral') . '/js/anclas.js');
+	return '<ul id="render-menu-lateral"></ul>';
+
+}
