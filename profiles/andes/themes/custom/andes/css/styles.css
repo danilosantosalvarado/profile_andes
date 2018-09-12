@@ -6503,7 +6503,6 @@ body > .main-container.container-fluid {
 /* ------| Equipos  |----- */
 .view-contenido-equipo-de-trabajo {
   padding: 20px 0 0 0;
-  /* ------| Paguinadores |----- */
 }
 
 @media (min-width: 992px) {
@@ -6558,22 +6557,9 @@ body > .main-container.container-fluid {
   border-radius: 50%;
 }
 
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
-}
-
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
   width: 100%;
   height: 100%;
-  padding: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -6587,28 +6573,33 @@ body > .main-container.container-fluid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  z-index: -2;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.6);
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p {
   color: #000;
   text-align: center;
   margin: 0;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p {
     color: #fff;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(1) {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(1) {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1;
@@ -6616,57 +6607,58 @@ body > .main-container.container-fluid {
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(1) {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(1) {
     font-size: 1.5rem;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(2) {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(2) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(2) {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(2) {
     font-size: 1.5rem;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(3) {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(3) {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
     font-size: 1.5rem;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(4) {
+.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(4) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption .conte-text p:nth-child(4) {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(4) {
     font-size: 1.5rem;
   }
 }
 
-.view-contenido-equipo-de-trabajo .text-center {
+/* ------| Paguinadores |----- */
+.text-center {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination {
+.text-center ul.pagination {
   background: #fff;
   border-radius: 0;
   padding: 10px;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination::before {
+.text-center ul.pagination::before {
   content: '';
   display: block;
   position: absolute;
@@ -6679,7 +6671,7 @@ body > .main-container.container-fluid {
   z-index: -1;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li {
+.text-center ul.pagination li {
   color: #484851;
   border: 1px solid #fff;
   border-radius: 0;
@@ -6689,7 +6681,7 @@ body > .main-container.container-fluid {
   margin: 0 5px;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li a {
+.text-center ul.pagination li a {
   color: #484851;
   border: 1px solid #fff;
   font-family: Lato,sans-serif;
@@ -6697,22 +6689,22 @@ body > .main-container.container-fluid {
   background-color: #fff;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li a .ajax-progress {
+.text-center ul.pagination li a .ajax-progress {
   display: none;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li.active {
+.text-center ul.pagination li.active {
   border-color: #ff8827;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li.active span {
+.text-center ul.pagination li.active span {
   background-color: transparent;
   border-radius: initial;
   color: #000;
   border: initial;
 }
 
-.view-contenido-equipo-de-trabajo .text-center ul.pagination li.next, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.prev, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-last, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-first {
+.text-center ul.pagination li.next, .text-center ul.pagination li.prev, .text-center ul.pagination li.pager-last, .text-center ul.pagination li.pager-first {
   display: none;
 }
 
