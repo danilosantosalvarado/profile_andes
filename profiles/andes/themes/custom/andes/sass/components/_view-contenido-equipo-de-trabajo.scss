@@ -50,6 +50,21 @@
     .views-row {
       display: block;
       .field-content {
+        .content-equipo {
+          position: relative;
+          min-height: 1px;
+          margin: 0 auto;
+          padding-right: 15px;
+          padding-left: 15px;
+          float: left;
+          width: 100%;
+          @include respond-to(xs) {
+            width: 50%;
+          }
+          @include respond-to(xl) {
+            width: 33.33333333%;
+          }
+        }
         //contenedor
         .thumbnail{
           position: relative;
@@ -57,8 +72,10 @@
           background-color: transparent;
           border: none;
           padding: 0;
-          &:hover .caption {
-            z-index: 2;
+          @include respond-to(xl) {
+            &:hover .caption {
+              z-index: 2;
+            }
           }
           /* imagen */
           .imagen {
@@ -68,25 +85,32 @@
           }
           /* text */
           .caption {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
+            @include respond-to(xl) {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -2;
+            }
             .conte-text {
               width: 100%;
               height: 100%;
-              background: rgba(0, 0, 0, 0.6);
-              border-radius: 50%;
               padding: 10px;
               display: inline-flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
+              @include respond-to(xl) {
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.6);
+              }
               p {
-                color:  color('white');
+                @include respond-to(xl) {
+                  color:  color('white');
+                }
+                color:  color('black');
                 text-align: center;
                 margin: 0;
                 &:nth-child(1) {
