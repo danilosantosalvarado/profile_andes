@@ -6468,7 +6468,7 @@ body > .main-container.container-fluid {
 }
 
 .view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar {
-  width: 3px;
+  width: 2px;
 }
 
 .view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar-thumb {
@@ -6484,7 +6484,9 @@ body > .main-container.container-fluid {
 }
 
 .view-id-equipo_de_trabajo ul.quicktabs-tabs li a {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   padding: 5px 4px;
+  text-decoration: none;
   font-size: 1.125rem;
 }
 
@@ -6493,6 +6495,7 @@ body > .main-container.container-fluid {
 }
 
 .view-id-equipo_de_trabajo ul.quicktabs-tabs li.active a {
+  color: #888;
   border-bottom: 3px solid #46b9c0;
 }
 
@@ -6548,6 +6551,10 @@ body > .main-container.container-fluid {
 }
 
 @media (min-width: 992px) {
+  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail {
+    width: 279px;
+    height: 279px;
+  }
   .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail:hover .caption {
     z-index: 2;
   }
@@ -6630,7 +6637,7 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
-    font-size: 1.5rem;
+    font-size: 1.1875rem;
   }
 }
 

@@ -12,7 +12,7 @@
     padding: 30px 0;
     /* width */
     &::-webkit-scrollbar {
-      width: 3px;
+      width: 2px;
     }
     /* scroll */
     &::-webkit-scrollbar-thumb {
@@ -22,15 +22,18 @@
       flex: 1 1 0;
       padding: 0 20px;
       text-align: center;
-      a{
+      a {
+        font-family: $latoregular;
         padding: 5px 4px;
+        text-decoration: none;
         @include font-size(o);
         &:hover{
           text-decoration: none;
         }
       }
       &.active{
-        a{
+        a {
+          color: #888;
           border-bottom: 3px solid color('blue-light');
           &:hover{
             text-decoration: none;
@@ -73,6 +76,8 @@
           border: none;
           padding: 0;
           @include respond-to(xl) {
+            width: 279px;
+            height: 279px;
             &:hover .caption {
               z-index: 2;
             }
@@ -128,8 +133,7 @@
                 font-family: $latoregular;
                 @include font-size(m);
                 @include respond-to(xl) {
-                  @include font-size(xl);
-
+                  @include font-size(l);
                 }
               }
               &:nth-child(4) {
