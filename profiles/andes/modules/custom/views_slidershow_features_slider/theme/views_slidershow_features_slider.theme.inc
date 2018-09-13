@@ -95,17 +95,16 @@ function _views_slidershow_features_slider_preprocess_views_slidershow_features_
 
   // drupal_add_js(drupal_get_path('module', 'views_slidershow_features_slider') . '/js/jquery.js');
 
+  drupal_add_js(array('viewsSlideshowFeatures' => array('#views_slidershow_features_slider_main_' . $vss_id => $settings)), 'setting');
 
+  drupal_add_js(drupal_get_path('module', 'views_slidershow_features_slider') . '/js/actions.js');
   // Load accompanying script and stylesheet.
   drupal_add_js(drupal_get_path('module', 'views_slidershow_features_slider') . '/js/featureCarousel.min.js',  array(
     'scope' => 'header',
     'weigth' => 1
   ));
   drupal_add_css(drupal_get_path('module', 'views_slidershow_features_slider') . '/css/feature-carousel.css');
-  drupal_add_js(drupal_get_path('module', 'views_slidershow_features_slider') . '/js/actions.js',  array(
-    'scope' => 'footer',
-    'weigth' => 1
-  ));
+
   // Required container class for Swiper
   $vars['classes_array'][] = '3d-carousel';
 

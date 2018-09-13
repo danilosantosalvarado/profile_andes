@@ -66,13 +66,6 @@ function views_slidershow_features_slider_views_slideshow_option_definition() {
     ),
   );
 
-  
-  // @todo figure out which options to define
-  // @todo integrate with "optionsets"
-
-  drupal_add_js(array('tbwa' => array('defecto' => $options['views_slidershow_features_slider']['contains'])), array('type' => 'setting'));
-  drupal_add_js(drupal_get_path('module', 'views_slidershow_features_slider') . '/js/actions.js');
-
   return $options;
 }
 

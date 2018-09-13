@@ -8,7 +8,7 @@
 		$(".menu-lateral").each(function(){
 			var html = $(this).attr('id');
 			var html = html.replace("-"," ");
-			atributo.push('<li class="seccions"><a href="#'+$(this).attr('id')+'"><div><p class="seccion-text">'+html+'</p></div></a></li>');
+			atributo.push('<li class="seccions"><a href="#'+$(this).attr('id')+'"><div><p class="seccion-text">'+Drupal.t(html)+'</p></div></a></li>');
 			itemsPositionTop.push($(this).position().top);
 			itemsPositionEnd.push($(this)[0].scrollHeight);
 			idPosition.push($(this).attr('id'));
