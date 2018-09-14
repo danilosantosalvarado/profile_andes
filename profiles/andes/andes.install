@@ -553,6 +553,12 @@ function _install_mods() {
     $batch['operations'][] = array('_import_material_estudio_batch', array($value));
   }
 
+  $file_path_eventos = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventosjson.xlsx';
+  $eventos = phpexcel_import($file_path_eventos);
+ 
+  foreach ($eventos[false] as $key => $value) {
+    $batch['operations'][] = array('_import_eventos_bath', array($value));
+  }
 
   return $batch;
 }
