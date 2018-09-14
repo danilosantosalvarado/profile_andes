@@ -1853,6 +1853,193 @@ th {
   }
 }
 
+/*
+//------------------------------------------------------------------------------
+// Layotu actividades
+//------------------------------------------------------------------------------
+*/
+.view-id-componente_actividades_home .view-header {
+  background-color: #E6E7E8;
+  padding-top: 50px;
+}
+
+.view-id-componente_actividades_home .view-header .title {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-header .title {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_actividades_home .view-header .title {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-componente_actividades_home .view-header .title {
+    width: 1170px;
+  }
+}
+
+.view-id-componente_actividades_home .view-header .title h4 {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #58595B;
+  margin: 0px;
+  padding: 0 15px 20px;
+}
+
+.view-id-componente_actividades_home .view-filters {
+  background-color: #E6E7E8;
+  padding-bottom: 50px;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets {
+    width: 1170px;
+  }
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-categoria-eventos-tid-wrapper {
+  padding: 5px 15px;
+  width: 30%;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-categoria-eventos-tid-wrapper select {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #808184;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0 12px;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper {
+  padding: 5px 15px;
+  width: 30%;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper .form-item {
+  width: 100%;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper .form-item .date-padding {
+  width: 100%;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper .form-item .date-padding input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #808184;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../img/Icon/calendar.svg) no-repeat;
+  background-size: 22px;
+  background-color: white;
+  background-position: 98% 5px;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button {
+  padding: 0;
+}
+
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button .btn-info {
+  width: 39px;
+  height: 39px;
+  display: inline-block;
+  font-size: 0px;
+  padding: 0px;
+  background: url(../img/Icon/buscar.svg) no-repeat;
+  background-size: 22px;
+  background-position: 7px 7px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+div#ui-datepicker-div {
+  border: 1px solid #666;
+  background: white;
+  border-radius: 0px;
+}
+
+div#ui-datepicker-div .ui-datepicker-header {
+  border: 1px solid transparent;
+  background: white;
+}
+
+div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-w {
+  background: url(../img/Icon/arrow_prev.svg) no-repeat;
+  background-size: contain;
+}
+
+div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-e {
+  background: url(../img/Icon/arrow_next.svg) no-repeat;
+  background-size: contain;
+}
+
+div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month,
+div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-year {
+  -moz-appearance: inherit;
+  -webkit-appearance: inherit;
+  appearance: inherit;
+  border: 1px solid transparent;
+  background: white;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+div#ui-datepicker-div table th {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+div#ui-datepicker-div table td a {
+  border: 1px solid transparent;
+  background: white;
+  color: #000;
+  text-align: center;
+}
+
+div#ui-datepicker-div table td a.ui-state-highlight {
+  border: 1px solid #4C48A8;
+  background: #4C48A8;
+  color: white;
+}
+
 .view-componente-ranking-home {
   display: block;
   margin: 0 auto;
