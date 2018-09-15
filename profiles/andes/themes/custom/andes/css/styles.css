@@ -1860,7 +1860,13 @@ th {
 */
 .view-id-componente_actividades_home .view-header {
   background-color: #E6E7E8;
-  padding-top: 50px;
+  padding-top: 38px;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-header {
+    padding-top: 50px;
+  }
 }
 
 .view-id-componente_actividades_home .view-header .title {
@@ -1888,6 +1894,7 @@ th {
 }
 
 .view-id-componente_actividades_home .view-header .title h4 {
+  text-align: center;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #58595B;
@@ -1895,9 +1902,21 @@ th {
   padding: 0 15px 20px;
 }
 
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-header .title h4 {
+    text-align: left;
+  }
+}
+
 .view-id-componente_actividades_home .view-filters {
   background-color: #E6E7E8;
-  padding-bottom: 50px;
+  padding-bottom: 38px;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-filters {
+    padding-bottom: 50px;
+  }
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets {
@@ -1926,7 +1945,13 @@ th {
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-categoria-eventos-tid-wrapper {
   padding: 5px 15px;
-  width: 30%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-categoria-eventos-tid-wrapper {
+    width: 45%;
+  }
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-categoria-eventos-tid-wrapper select {
@@ -1943,8 +1968,15 @@ th {
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper {
-  padding: 5px 15px;
-  width: 30%;
+  padding: 29px 15px 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper {
+    padding: 5px 15px;
+    width: 45%;
+  }
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets #edit-field-fecha-eventos-value-wrapper .form-item {
@@ -1972,7 +2004,17 @@ th {
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button {
-  padding: 0;
+  padding-top: 19px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button {
+    padding: 0;
+    width: auto;
+    text-align: left;
+  }
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button .btn-info {
@@ -1989,6 +2031,120 @@ th {
   border: 1px solid #000;
 }
 
+.view-id-componente_actividades_home .view-content .item-list {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home .view-content .item-list {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_actividades_home .view-content .item-list {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-componente_actividades_home .view-content .item-list {
+    width: 1170px;
+  }
+}
+
+.view-id-componente_actividades_home .view-content ul {
+  -webkit-padding-start: 0px;
+}
+
+.view-id-componente_actividades_home .view-content ul li {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 0 20px;
+}
+
+@media (min-width: 555px) {
+  .view-id-componente_actividades_home .view-content ul li {
+    width: 50%;
+    height: 485px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_actividades_home .view-content ul li {
+    width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-componente_actividades_home .view-content ul li {
+    width: 25%;
+  }
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-view img {
+  width: 100%;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-additional {
+  position: relative;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container {
+  margin-left: 30%;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .img-icons {
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  top: -39px;
+  left: 7px;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-titulo {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #58595B;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-fecha,
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-hora,
+.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-lugar {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #404041;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-view-node {
+  float: right;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-view-node a {
+  text-decoration: none;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-view-node a p {
+  font-size: 1rem;
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  color: #000;
+  margin-top: 39px;
+  margin-bottom: 71px;
+  border: 1px solid #404041;
+  padding: 0.3em 0.9em;
+}
+
+.view-id-componente_actividades_home .view-content ul li .views-field-view-node a p:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ------| Mini calendar |----- */
 div#ui-datepicker-div {
   border: 1px solid #666;
   background: white;
