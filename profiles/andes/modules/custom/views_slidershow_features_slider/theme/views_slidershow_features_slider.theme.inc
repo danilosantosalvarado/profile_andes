@@ -83,7 +83,7 @@ function _views_slidershow_features_slider_preprocess_views_slidershow_features_
   }
 
   // Load the Swiper library for use.
-  libraries_load('Swiper');
+  // libraries_load('Swiper');
 
   // Create the settings container
   // Due to a limitation inside of views_slideshow, the ID for the settings container
@@ -112,6 +112,7 @@ function _views_slidershow_features_slider_preprocess_views_slidershow_features_
   $rendered_rows = '';
   $slideshow_count = 0;
   foreach ($rows as $count => $row) {
+    $row = str_replace("<img", '<img class="carousel_img" ', $row);
     $items[] = $row;
     // @todo see if we can group multiple items per slide
     $rendered_rows .= theme('views_slidershow_features_slider_main_frame_row', array('vss_id' => $vss_id, 'items' => $items, 'count' => $count, 'view' => $view));

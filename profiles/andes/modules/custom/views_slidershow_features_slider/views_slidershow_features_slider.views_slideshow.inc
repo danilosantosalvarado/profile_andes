@@ -126,32 +126,32 @@ function views_slidershow_features_slider_views_slideshow_slideshow_type_form(&$
   );
   $form['views_slidershow_features_slider']['topPadding'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('how much to pad the top of the carousel'),
   );
   $form['views_slidershow_features_slider']['sidePadding'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('spacing between the sides of the container'),
   );
   $form['views_slidershow_features_slider']['smallFeatureOffset'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('the additional offset to pad the side features from the top of the carousel'),
   );
   $form['views_slidershow_features_slider']['startingFeature'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('indicates which feature to start the carousel at'),
   );
   $form['views_slidershow_features_slider']['carouselSpeed'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('speed in milliseconds it takes to rotate the carousel'),
   );
   $form['views_slidershow_features_slider']['autoPlay'] = array(
     '#type' => 'textfield',
-    '#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer'),
     '#description' => t('time in milliseconds to set interval to autorotate the carousel set to zero to disable it, negative to go left'),
   );
   $form['views_slidershow_features_slider']['pauseOnHover'] = array(
@@ -169,6 +169,7 @@ function views_slidershow_features_slider_views_slideshow_slideshow_type_form(&$
   $form['views_slidershow_features_slider']['trackerSummation'] = array(
     '#type' => 'checkbox',
     '#description' => t("a summation of the features can also be used to display an x Of y style of tracking this can be combined with the above option as well"),
+    '#default_value' => false
   );
   $form['views_slidershow_features_slider']['preload'] = array(
     '#type' => 'checkbox',
