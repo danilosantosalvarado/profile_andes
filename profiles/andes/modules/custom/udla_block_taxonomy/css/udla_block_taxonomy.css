@@ -1,11 +1,101 @@
+@font-face {
+  font-family: 'LatoBold';
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+}
+
 .level-container-disable, .level-box-disable{
   display: none;
 }
-
 .level-container-active, .level-box-active{
   display: block;
 }
+.pane-udla-block-taxonomy ul {
+  margin: 20px 0;
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.pane-udla-block-taxonomy ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+.pane-udla-block-taxonomy ul li.level-li-active button{
+  background: #e34d1f;
+  border-color: transparent;
+  color: white;
+}
+.pane-udla-block-taxonomy ul li button {
+  display: block;
+  list-style: none;
+  padding: 10px 20px;
+  border-color: #9e9ca1;
+  background: #f4f1f1;
+  text-align: center;
+  font-family: 'LatoBold';
+  font-size: .8889rem;
+  line-height: 1;
+}
+.pane-udla-block-taxonomy .level-box-active {
+  position: relative;
+}
+.pane-udla-block-taxonomy .level-box-active::before {
+  content: '';
+  width: 90%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #9e9ca1;
+  margin: 0 auto;
+  z-index: -1;
+}
+.pane-udla-block-taxonomy .level-box-active li {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.pane-udla-block-taxonomy .level-box-active li::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 36px;
+  border-left: 1px solid #9e9ca1;
+  border-top: 1px solid #9e9ca1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.pane-udla-block-taxonomy .level-box-active li::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 36px;
+  border-right: 1px solid #9e9ca1;
+  border-bottom: 1px solid #9e9ca1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.pane-udla-block-taxonomy .level-box-active li.level-li-active::before {
+  border-left: 2px solid #9e9ca1;
+  border-top: 2px solid #9e9ca1;
+}
+.pane-udla-block-taxonomy .level-box-active li.level-li-active::after {
+  border-right: 2px solid #9e9ca1;
+  border-bottom: 2px solid #9e9ca1;
+}
 
-.level-li-active button{
-  background-color: red;
+.pane-udla-block-taxonomy .level-box-active li button {
+  border-width: 0px;
 }
