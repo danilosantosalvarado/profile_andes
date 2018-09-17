@@ -2487,6 +2487,7 @@ body > .main-container.container-fluid {
 .view-more-footer {
   position: relative;
   text-align: center;
+  padding: 40px 0;
 }
 
 .view-more-footer::before {
@@ -7687,6 +7688,11 @@ body > .main-container.container-fluid {
   padding: 10px 20px;
   background: #fff;
   z-index: 1;
+}
+
+.view-display-id-multimedia_destacada .view-footer a:hover {
+  background: #484851;
+  color: #fff;
 }
 
 /* ------| Multimedia swioe horizontal movil |----- */
