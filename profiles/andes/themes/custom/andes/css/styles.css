@@ -3328,7 +3328,6 @@ body > .main-container.container-fluid {
 .view-id-componente_acordeon .ui-accordion-content {
   border-radius: initial;
   border-color: #ddd;
-  padding: 25px 25px 0px;
 }
 
 .view-id-componente_acordeon .ui-accordion-content p {
@@ -4023,43 +4022,43 @@ body > .main-container.container-fluid {
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-created {
-  margin: 10px 0px;
+  margin: 25px 25px 0;
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-created span {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.23;
-  padding: 0 15px;
   color: #ff8827;
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title {
+  margin: 20px 25px 25px;
+}
+
+.view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title span {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   line-height: 0.96;
   color: #484851;
-  margin: 1.251rem 0 1.251rem;
-  padding: 0 15px;
 }
 
 @media (min-width: 992px) {
-  .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title {
+  .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title span {
     font-size: 1.4375rem;
-    margin: 1.35rem 0 1.563rem;
   }
 }
 
-.view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body {
+.view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body .field-content {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.06;
+  line-height: 0.95;
   margin-bottom: 0.6255rem;
-  padding: 0 15px;
+  padding: 0 25px;
 }
 
-@media (min-width: 992px) {
-  .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body {
+@media (min-width: 666px) {
+  .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body .field-content {
     font-size: 1.125rem;
   }
 }
@@ -4085,8 +4084,8 @@ body > .main-container.container-fluid {
 @media (min-width: 555px) {
   .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-view-node a {
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    bottom: 29px;
+    right: 20px;
     margin: 0px;
   }
 }
@@ -4318,7 +4317,7 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .view-display-id-otras_noticias {
     width: 22%;
-    height: 63.3vh;
+    height: 517px;
     margin-left: 20px;
     margin-bottom: 20px;
   }

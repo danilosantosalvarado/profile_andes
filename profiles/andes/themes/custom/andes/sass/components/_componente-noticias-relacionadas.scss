@@ -107,7 +107,8 @@
 	margin-bottom: 10px;
 	@include respond-to(xl) {
 		width: 22%;
-		height: 63.3vh;
+		// height: 63.3vh;
+		height: 517px;
 		margin-left: 20px;
 		margin-bottom: 20px;
 	}
