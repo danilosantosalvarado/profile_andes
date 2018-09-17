@@ -1,54 +1,191 @@
-/* global */
-.form-select{
-  height: 46px;
-  width: 230px;
-}
-.views-exposed-form .views-exposed-widget .btn{
-  margin-top: 0px;
-  max-width: 150px;
-  -webkit-appearance: none;
-  border: 1px solid #ddd;
-  background: #fff;
-  text-decoration: none;
-  color: #484848;
-  font-size: 0.9rem;
-  padding: 10px 30px;
-  position: relative;
-  border-radius: 0;
-  margin: 2px 0;
-  display: block;
-  width: 100%;
+
+/* ------| Mneu dia, mes, año |----- */
+.page-calendario  {
+  ul.tabs--primary {
+    background: #1e1e1e;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-bottom: 0;
+      &.active a,
+      a {
+        margin-right: 0;
+        line-height: 1.42857143;
+        border: 0;
+        border-radius: 0;
+        @include font-size(m);
+        color: #fff;
+        background-color: transparent !important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
-.view-calendario {
-  width: 1170px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-.calendar-calendar{
-  margin-top: 30px;
-  th.days{
-    background: #1e1e1e;
-    color: #fff;
-    font-weight: normal;
-    border: 1px solid #fff;
+/* ------| Calendario |----- */
+.view-id-calendario {
+  padding: 0 15px 40px;
+  @include respond-to(m) {
+    width: 750px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
-  .month-view {
-    .full{
-        td.date-box.empty,
-        tr td.date-box{
-        background: #fff200 !important;
-        color: #484851 !important;
+  @include respond-to(xl) {
+    width: 970px;
+  }
+  @include respond-to(xxxl) {
+    width: 1200px;
+  }
+  .view-header {
+    h3 {
+      font-family: $latoregular;
+      font-size: 28px;
+      color: rgb(33, 37, 41);
+    }
+  }
+  .view-filters {
+    //filtro
+    #edit-term-node-tid-depth-wrapper {
+      width: 50%;
+      padding: 0.7em 1em 0 0;
+      @include respond-to(m) {
+        width: 21.1%;
       }
-      td.single-day div.monthview{
-        background: transparent;
+      .form-item  {
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          height: 10px;
+          width: 10px;
+          margin-top: 0;
+          border-bottom: 2px solid #353535;
+          border-right: 2px solid #353535;
+          pointer-events: none;
+          position: absolute;
+          right: 12px;
+          top: 15px;
+          // transform-origin: 66% 66%;
+          transform: rotate(45deg);
+          // transition: all 0.15s ease-in-out;
+        }
+        select {
+          height: 38px;
+          border-radius: 0px;
+          appearance: none;
+          box-shadow: none;
+        }
       }
-      td .inner div.day {
+    }
+    //button
+    .views-submit-button {
+      width: 50%;
+      padding: .5em 0em 0 0;
+      @include respond-to(m) {
+       width: auto;
+      }
+      button {
+        width: 100%;
+        display: block;
+        margin: 2px 0;
+        border: 1px solid #ddd;
+        border-radius: 0;
+        padding: 10px 30px;
+        background: #fff;
+        text-decoration: none;
+        font-family: $latoregular;
+        @include font-size(s);
+        color: #484848;
+        appearance: none;
+        @include respond-to(m) {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+  .view-content {
+    .calendar-calendar {
+      margin-top: 30px;
+      th.days {
+        background: #1e1e1e;
+        color: #fff;
+        font-weight: normal;
+        border: 1px solid #fff;
+      }
+      .month-view {
+        .full {
+            td.date-box.empty,
+            tr td.date-box {
+            background: #fff200 !important;
+            color: #484851 !important;
+          }
+          tr.date-box {
+            td div.day {
+              a {
+                color: #484851;
+                font-weight: bold;
+              }
+            }
+          }
+          tr.single-day {
+            div.monthview {
+              background: transparent;
+              .views-field-title {
+                a {
+                  font-family: $latobold;
+                  color: color('black');
+                  text-decoration: none;
+                }
+              }
+              .views-field-field-fecha-eventos {
+                span {
+                  color: #484851;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+      .month-view .full td.multi-day div.monthview,
+      .week-view .full td.multi-day div.weekview,
+      .day-view .full td.multi-day div.dayview {
+        background: color('grey-secundary');
+        border-radius: 0px;
+        a {
+          font-family: $latobold;
+          color: color('black');
+          text-decoration: none;
+        }
+        span {
           color: #484851;
           font-weight: bold;
-        a{
-          color: #484851;
-          font-weight: bold;
+        }
+        .cutoff {
+          background: color('grey-secundary');
+        }
+      }
+      //calendar filtro semana, día
+      .day-view .full div.single-day div.dayview,
+      .week-view .full div.single-day div.weekview {
+        height: auto;
+        border: 1px solid color('grey-secundary');
+        background-color: color('grey-secundary');
+        border-radius: 0;
+        .views-field-title {
+          a {
+            font-family: $latobold;
+            color: color('black');
+            text-decoration: none;
+          }
+        }
+        .views-field-field-fecha-eventos {
+          span {
+            color: #484851;
+            font-weight: bold;
+          }
         }
       }
     }

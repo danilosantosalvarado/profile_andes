@@ -32,34 +32,37 @@
 				}
 				//Fecha
 				.views-field-created {
-					margin: 10px 0px;
+					margin: 25px 25px 0;
 					span {
 						font-family: $latoregular;
-						@include type-layout(xxs, 1.23);
-						padding: 0 15px;
+						@include type-layout(xs, 1.23);
 						color: color('orange');
 					}
 				}
 				//Titulo
 				.views-field-title {
-					font-family: $crimson-textbold;
-					@include type-layout(l, .96);
-					color: #484851;
-					@include margin(.834 0 .834);
-					padding: 0 15px;
-					@include respond-to(xl) {
-						@include font-size(ll);
-						@include margin(.9 0 1.042);
+					margin: 20px 25px 25px;
+						// padding: 0 25px;
+					span {
+						font-family: $crimson-textbold;
+						@include type-layout(l, .96);
+						color: #484851;
+
+						@include respond-to(xl) {
+							@include font-size(ll);
+						}
 					}
 				}
 				//Body
 				.views-field-body {
-					font-family: $crimson-textregular;
-					@include type-layout(m, 1.06);
-					@include margin-bottom(.417);
-					padding: 0 15px;
-					@include respond-to(xl) {
-						@include font-size(o);
+					.field-content {
+						font-family: $crimson-textregular;
+						@include type-layout(m, .95);
+						@include margin-bottom(.417);
+						padding: 0 25px;
+						@include respond-to(s) {
+							@include font-size(o);
+						}
 					}
 				}
 				//Button
@@ -68,8 +71,8 @@
           a {
             @include respond-to(xs) {
               position: absolute;
-              bottom: 20px;
-              right: 10px;
+              bottom: 29px;
+              right: 20px;
               margin: 0px;
             }
             display: block;

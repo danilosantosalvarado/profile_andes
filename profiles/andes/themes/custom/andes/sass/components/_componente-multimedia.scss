@@ -149,6 +149,10 @@
 			padding: 10px 20px;
 			background: #fff;
 			z-index: 1;
+			&:hover {
+				background: #484851;
+				color: color('white')
+			}
 		}
 	}
 

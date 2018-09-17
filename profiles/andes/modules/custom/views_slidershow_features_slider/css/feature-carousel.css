@@ -21,7 +21,6 @@
   }
 }
 
-
 #jq_carousel .carousel_elm {
   position:absolute;
   top:-1000px;
@@ -60,7 +59,7 @@
 #jq_carousel .carousel_elm .carousel_caption .titulo-3d {
   font-size: 38px;
   text-align: left;
-  line-height: 31.77px;
+  line-height: 39.77px;
   color: #fdbd2c;
   width: 66%;
   float: left;
@@ -151,8 +150,9 @@
   height:100%;
   background:#a7a8a9;
   text-align:center;
-  z-index:9999;
+  z-index: 9999;
 }
+
 #lightbox #lghtbox_cls {
   position:absolute;
   top:-.2em;
@@ -164,15 +164,18 @@
   font-size:12px;
   cursor:pointer;
 }
+
 #lightbox_cnt {
  margin:.3em auto;
 }
+
 #lightbox_cnt #lghtboximg {
   box-shadow:0 0 .5em #111;
   -webkit-box-shadow:0 0 .5em #111;
   -moz-box-shadow:0 0 .5em #111;
   max-width:100%;
 }
+
 #lightbox #lightbox_cntx {
   position:relative;
   margin:.3em;
