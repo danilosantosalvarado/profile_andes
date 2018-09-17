@@ -1,7 +1,7 @@
 <?php
 
 include_once 'api/andes.taxonomy.inc';
-include_once 'api/andes.noticias.inc';
+include_once 'api/andes.content.inc';
  /**
  * Implements hook_form_FORM_ID_alter().
  */
@@ -43,9 +43,9 @@ function andes_install() {
   );
   $filtered_html_format = (object) $filtered_html_format;
   filter_format_save($filtered_html_format);
-
   // Enable Theme Default.
   variable_set('theme_default','andes');
+  // Set permisions to gmap_markers.js
 
   $full_html_format = array(
     'format' => 'full_html',
@@ -525,7 +525,6 @@ function _install_mods() {
   $batch = array(
     'title' => t('Importando contenido'),
   );
-
   // Create beans types.
   module_enable(array('beans_types'), TRUE);
   // Create contents types.
@@ -553,7 +552,7 @@ function _install_mods() {
     $batch['operations'][] = array('_import_material_estudio_batch', array($value));
   }
 
-  $file_path_eventos = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventosjson.xlsx';
+  $file_path_eventos = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventos.xlsx';
   $eventos = phpexcel_import($file_path_eventos);
  
   foreach ($eventos[false] as $key => $value) {

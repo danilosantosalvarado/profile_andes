@@ -524,7 +524,7 @@ function gmap_regenerate_markers() {
  * @todo move this to GmapCacheToolbox
  */
 function gmap_flush_caches() {
-  gmap_regenerate_markers();
+  variable_del('gmap_marker_file');
 }
 
 /**
