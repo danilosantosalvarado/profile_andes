@@ -6974,27 +6974,20 @@ body > .main-container.container-fluid {
 }
 
 .view-id-calendario .view-filters #edit-term-node-tid-depth-wrapper .form-item::before {
-  border-bottom: 2px solid #353535;
-  border-right: 2px solid #353535;
   content: '';
-  display: block;
   display: block;
   height: 10px;
   width: 10px;
   margin-top: 0;
+  border-bottom: 2px solid #353535;
+  border-right: 2px solid #353535;
   pointer-events: none;
   position: absolute;
   right: 12px;
   top: 15px;
-  -webkit-transform-origin: 66% 66%;
-  -ms-transform-origin: 66% 66%;
-  transform-origin: 66% 66%;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .view-id-calendario .view-filters #edit-term-node-tid-depth-wrapper .form-item select {
@@ -7104,6 +7097,27 @@ body > .main-container.container-fluid {
 .view-id-calendario .view-content .calendar-calendar .week-view .full td.multi-day div.weekview .cutoff,
 .view-id-calendario .view-content .calendar-calendar .day-view .full td.multi-day div.dayview .cutoff {
   background: #c6c6c6;
+}
+
+.view-id-calendario .view-content .calendar-calendar .day-view .full div.single-day div.dayview,
+.view-id-calendario .view-content .calendar-calendar .week-view .full div.single-day div.weekview {
+  height: auto;
+  border: 1px solid #c6c6c6;
+  background-color: #c6c6c6;
+  border-radius: 0;
+}
+
+.view-id-calendario .view-content .calendar-calendar .day-view .full div.single-day div.dayview .views-field-title a,
+.view-id-calendario .view-content .calendar-calendar .week-view .full div.single-day div.weekview .views-field-title a {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.view-id-calendario .view-content .calendar-calendar .day-view .full div.single-day div.dayview .views-field-field-fecha-eventos span,
+.view-id-calendario .view-content .calendar-calendar .week-view .full div.single-day div.weekview .views-field-field-fecha-eventos span {
+  color: #484851;
+  font-weight: bold;
 }
 
 /*

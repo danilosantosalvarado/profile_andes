@@ -56,26 +56,20 @@
       .form-item  {
         position: relative;
         &::before {
-          border-bottom: 2px solid #353535;
-          border-right: 2px solid #353535;
           content: '';
-          display: block;
           display: block;
           height: 10px;
           width: 10px;
           margin-top: 0;
+          border-bottom: 2px solid #353535;
+          border-right: 2px solid #353535;
           pointer-events: none;
           position: absolute;
           right: 12px;
           top: 15px;
-          -webkit-transform-origin: 66% 66%;
-          -ms-transform-origin: 66% 66%;
-          transform-origin: 66% 66%;
-          -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
+          // transform-origin: 66% 66%;
           transform: rotate(45deg);
-          -webkit-transition: all 0.15s ease-in-out;
-          transition: all 0.15s ease-in-out;
+          // transition: all 0.15s ease-in-out;
         }
         select {
           height: 38px;
@@ -173,7 +167,27 @@
           background: color('grey-secundary');
         }
       }
-
+      //calendar filtro semana, día
+      .day-view .full div.single-day div.dayview,
+      .week-view .full div.single-day div.weekview {
+        height: auto;
+        border: 1px solid color('grey-secundary');
+        background-color: color('grey-secundary');
+        border-radius: 0;
+        .views-field-title {
+          a {
+            font-family: $latobold;
+            color: color('black');
+            text-decoration: none;
+          }
+        }
+        .views-field-field-fecha-eventos {
+          span {
+            color: #484851;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
