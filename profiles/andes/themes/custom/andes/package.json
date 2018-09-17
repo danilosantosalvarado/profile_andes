@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.24.7",
     "chroma-sass": "^1.2.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -20,7 +20,7 @@
     "gulp-load-plugins": "^1.5.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^2.3.1",
+    "gulp-sass": "^2.3.2",
     "gulp-sass-lint": "^1.4.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.4",
@@ -29,5 +29,8 @@
     "sass-lint": "^1.12.1",
     "support-for": "^1.0.7",
     "typey": "^1.1.2"
+  },
+  "dependencies": {
+    "breakpoint": "^0.1.6"
   }
 }

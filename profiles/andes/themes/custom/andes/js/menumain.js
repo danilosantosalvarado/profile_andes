@@ -6,29 +6,52 @@
         $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
 
       /* wrapper para area segura  */
-      jQuery(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
-      jQuery(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
-      jQuery(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
-      jQuery(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
+      $(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
+      $(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
+      $(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
+      $(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
 
+      /* cambio de idioma  se decide  que se muestre el select*/
+      /* let arrayIdioma = $('#block-lang-dropdown-language .form-type-select .form-select option'), titleSelect = '';
+      $('#block-lang-dropdown-language').append(
+        "<div class='dropDown'></div>"
+      );
+      for (let index = 0; index < arrayIdioma.length; index++) {
+        let element = arrayIdioma[index];
+        if (element.selected == false){
+          titleSelect =  element.text;
+          className = 'dropDown-'+ index;
+          dropDown(titleSelect, className)
+          console.log();
+        }
+      } */
+      function dropDown(titleSelect, className) {
+        let clone = $('#block-lang-dropdown-language .dropDown').append(
+          "<div class='item " + className + "'><a href=''>" + titleSelect + "</a></div>");
+        return clone;
+      }
       /*  add buscador */
       $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
       $(".barra-buscar").click(function () {
         $('#block-google-cse-google-cse').toggleClass("buscador-open");
       });
-      if (docWidth > 992) {
 
+
+      if (docWidth > 992) {
+        /* add class varios elementos */
+        /* cuando sea flotante a derecha clase necesaria */
+        $(".float-right .row-fluid .tb-megamenu-column:nth-child(2)").addClass('nivel-right');
+        /* Contenedor de imagen  */
+        $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img');
         /* hover finalizar las animaciones*/
         $level1.hover(
           function () {
-            console.log('in');
             $('.box-black').remove();
             $('.clone-nivel-2').remove();
             $('.clone-nivel-3').remove();
             removerClassBoxBlack();
             $('.clone-nivel-3').removeClass('active-clone2');
           }, function () {
-            console.log('on');
           }
         );
 
@@ -36,7 +59,7 @@
         $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
-          if (scroll > 300) {
+          if (scroll > 30) {
             menu.removeClass('black');
             menu.addClass('yellow');
           }
@@ -50,12 +73,29 @@
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset = $(this).offset(),
             menuhover = $(this).find('>.nav-child');
+            menutopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1').find('>.nav-child'),
+            offsettopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1 a.dropdown-toggle').offset();
+
           if (menuhover.parent('li').hasClass('level-1')) {
             menuhover.css({
               'margin-left': '-' + offset.left - 4 + 'px',
               'width': docWidth  +'px',
             })
           }
+          /* remover el href en guia servicios add clase de para click*/
+          menutopSoy.siblings('a').addClass('buttom-guia').removeAttr('href');
+          if (menutopSoy.parent('li').hasClass('level-1')) {
+            menutopSoy.addClass('nivel-1-top-soy')
+            menutopSoy.css({
+              'margin-left': '-' + (offsettopSoy.left - 54) + 'px',
+              'width': docWidth + 'px',
+            })
+          }
+          let text  = menuhover.find('.level-2 a.dropdown-toggle').text();
+          //console.log(text);
+        });
+        $('.buttom-guia').on("click", function () {
+          $(this).toggleClass('active').siblings('.nivel-1-top-soy').toggleClass('active');
         });
 
         /* retiro el atributo href  */
@@ -63,7 +103,6 @@
 
         /* Nivel 2 se crea el box black */
         $('.level-2 > .dropdown-toggle').on("click", function () {
-
           /* remove de los clones */
           $('.box-black').remove();
           $('.clone-nivel-2').remove();
@@ -75,7 +114,8 @@
           var SubMenuClone = $(this).siblings().clone().addClass('clone-nivel-2');
           $(this).parents('.tb-megamenu-column').after(SubMenuClone);
           /* clase animacion de la imagen */
-          $('.parent-clone').find('.content-img').addClass('active-img');
+          //$('.parent-clone').find('.content-img').addClass('active-img');
+          $('.parent-clone').find('.content-img').addClass('active-img').parents('.tb-megamenu-subnav').addClass('container-img');
           /* se crea para que poner clase que hace la animacion */
           setTimeout(function () {
             $('.box-black').addClass('active-box');
@@ -102,14 +142,12 @@
 
         function reBuildEl(){
           /* Animacio del nivel Nivel 3 */
-          console.log($('.level-3 a.dropdown-toggle'));
+          //console.log($('.level-3 a.dropdown-toggle'));
           $('.clone-nivel-2 .level-3 a.dropdown-toggle').on('click', function () {
-            console.log($(this));
             $('.clone-nivel-3').remove();
             //$('.box-black').parents('.row-fluid').addClass('parent-clone');
             $('.box-black p').text($(this).text());
             SubMenuCloneNivel3 = $(this).siblings('.nav-child').clone().addClass('clone-nivel-3');
-            console.log(SubMenuCloneNivel3);
             $(this).parents('.parent-clone').find('.tb-megamenu-column').after(SubMenuCloneNivel3).siblings('.active-clone').addClass('none');
             /* se crea para que poner clase que hace la animacion */
             setTimeout(function () {
