@@ -1,0 +1,79 @@
+<?php
+include_once 'inc/udla_block_taxonomy.functions.inc';
+
+
+/**
+ * Implements hook_block_info().
+ */
+function udla_block_taxonomy_block_info() {
+  $blocks = array();
+    $vocabularies = _get_udla_taxonomy_block(); 
+    foreach ($vocabularies as $vocabulary) {   
+      $blocks[$vocabulary['machine']] = array(
+        'info' => t('Bloque de Taxonomía '.$vocabulary['name']),
+        'cache' => DRUPAL_NO_CACHE
+      );
+    }
+    
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function udla_block_taxonomy_block_view($delta = '') {
+
+  $block = array();
+  $vocabularies = _get_udla_taxonomy_block();
+  foreach ($vocabularies as $vocabulary) {
+    switch ($delta) {
+        case $vocabulary['machine']:
+          $block['subject'] = t($vocabulary['name']);
+          $block['content'] = _get_taxonomy_render($vocabulary['vid']);
+        break; 
+    }
+  } 
+  
+  return $block;
+}
+
+function _get_udla_taxonomy_block(){
+  $names_block_taxonomy = array();
+  $vocabularies = taxonomy_get_vocabularies();
+  foreach ($vocabularies as $vocabulary) {
+    $names_block_taxonomy[]  = array('machine' => strval('ubt_'.$vocabulary->machine_name), 'name' => $vocabulary->name, 'vid' => $vocabulary->vid) ;
+  }
+  return $names_block_taxonomy;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function udla_block_taxonomy_theme($existing, $type, $theme, $path) {
+  $items = array();
+  $items['first_elements_taxonomy'] = array(
+    'variables' => array(
+      'items' => array(),
+    ),
+    'template' => 'ubt-first-elements',
+    'path' => $path . '/templates',
+  );
+  $items['others_container_taxonomy'] = array(
+    'variables' => array(
+      'level' => 0,
+      'items' => '',
+    ),
+    'template' => 'ubt-others-container',
+    'path' => $path . '/templates',
+  );
+  $items['others_elements_taxonomy'] = array(
+    'variables' => array(
+      'level' => 0,
+      'items' => array(),
+      'parent' => 0
+    ),
+    'template' => 'ubt-others-elements',
+    'path' => $path . '/templates',
+  );
+  return $items;
+}

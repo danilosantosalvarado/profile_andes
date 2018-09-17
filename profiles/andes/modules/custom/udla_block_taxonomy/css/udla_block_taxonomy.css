@@ -1,0 +1,11 @@
+.level-container-disable, .level-box-disable{
+  display: none;
+}
+
+.level-container-active, .level-box-active{
+  display: block;
+}
+
+.level-li-active button{
+  background-color: red;
+}

@@ -1,0 +1,4 @@
+name = Udla Blocks Taxonomy
+description = "Funcionalidad de customización para listados de taxonomia con filtros"
+package = TBWA Colombia
+core = 7.x
