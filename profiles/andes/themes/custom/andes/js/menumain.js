@@ -86,7 +86,7 @@
           if (menutopSoy.parent('li').hasClass('level-1')) {
             menutopSoy.addClass('nivel-1-top-soy')
             menutopSoy.css({
-              'margin-left': '-' + (offsettopSoy.left - 54) + 'px',
+              'margin-left': '-' + (offsettopSoy.left) + 'px',
               'width': docWidth + 'px',
             })
           }
@@ -169,14 +169,20 @@
           classBlockClone = 'clone-mobile-block',
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
           className = 'clone',
-          itemMobil = $contentFather.find('.level-1  a');
+          itemMobil = $contentFather.find('.level-1  a'),
+          /* calcula el alto menos la cabecera */
+          heigthCalc = $(window).height()- 128;
 
+        console.log(heigthCalc)
 
-        /*  */
+        $contentFather.parents('.always-show').css('height' , heigthCalc + "px");
+
+        /* scroll de  body   */
         $('.navbar-toggle').on("click", function () {
           $('body').toggleClass('not-scroll');
           $('.nav-child').removeClass('active-mobile');
         });
+        $('.height-calc')
         itemMobil.siblings('.tb-megamenu-submenu').addClass('container-submenu')
         itemMobil.on("click", function () {
           let $this = $(this);
