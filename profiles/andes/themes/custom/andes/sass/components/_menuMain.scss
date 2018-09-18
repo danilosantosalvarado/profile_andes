@@ -417,11 +417,10 @@ $white:#fff;
       right: 45% !important;
     }
   }
-
   .box-black {
     @include respond-to(xl){
       right: -50% !important;
-      left: initial !important;
+     // left: initial !important;
     }
     &.active-box{
       @include respond-to(xl){

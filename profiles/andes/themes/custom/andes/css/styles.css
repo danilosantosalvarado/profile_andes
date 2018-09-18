@@ -5229,7 +5229,7 @@ body > .main-container.container-fluid {
   .navbar.container-fluid {
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
   }
 }
 
@@ -5516,7 +5516,6 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .float-right .box-black {
     right: -50% !important;
-    left: initial !important;
   }
 }
 
