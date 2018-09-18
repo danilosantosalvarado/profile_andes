@@ -87,7 +87,7 @@ function _import_material_estudio_batch($value){
 }
 
 function _import_eventos_bath($value){
-     $node = entity_create('node', array('type' => 'eventos'));
+      $node = entity_create('node', array('type' => 'eventos'));
       $node->uid = 1;
       $wrapper = entity_metadata_wrapper('node', $node);
       $wrapper->title->set($value['title_field_es']);
@@ -112,25 +112,26 @@ function _import_eventos_bath($value){
       $link_es = explode("=", $value['field_agendar_es']);
       $wrapper->field_agendar->set(array('title' => $link_es[false], 'url' => $link_es[true]));
       $wrapper->field_destacado->set(trim($value['field_destacado']));
-   
-      $wrapper->field_lugar->set(array(
-          'lid' => '15',
-          'name' => '',
-          'street' => '',
-          'additional' => 'Auditorio bla',
-          'city' => 'Bogota',
-          'province' => 'BDC',
-          'postal_code' => '',
-          'country' => 'co',
-          'latitude' => '4.596916',
-          'longitude' => '-74.072880',
-          'source' => '1',
-          'is_primary' => '0',
-          'locpick' => 
-          array ('user_latitude' => '4.596916','user_longitude' => '-74.072880',),
-          'province_name' => 'Bogota D.C.',
-          'country_name' => 'Colombia',
-      ));
+    
+        $location = json_decode($value['field_lugar_es'],true);
+        $wrapper->field_lugar->set(array(
+            'lid' => $location[false]['lid'],
+            'name' => '',
+            'street' => '',
+            'additional' => $location[false]['additional'],
+            'city' => $location[false]['city'],
+            'province' => $location[false]['province'],
+            'postal_code' => '',
+            'country' => $location[false]['country'],
+            'latitude' => $location[false]['latitude'],
+            'longitude' => $location[false]['longitude'],
+            'source' => $location[false]['source'],
+            'is_primary' => $location[false]['is_primary'],
+            'locpick' => 
+            array ('user_latitude' => $location[false]['locpick']['user_latitude'],'user_longitude' => $location[false]['locpick']['user_longitude']),
+            'province_name' => $location[false]['province_name'],
+            'country_name' => $location[false]['country_name'],
+        ));
 
       
       foreach (json_decode($value['field_slider_principal_items_es'],true) as $key => $item) {
@@ -189,24 +190,25 @@ function _import_eventos_bath($value){
       $wrapper->field_agendar->set(array('title' => $link_en[false], 'url' => $link_en[true]));
       $wrapper->field_destacado->set(trim($value['field_destacado']));
 
+      $location = json_decode($value['field_lugar_en'],true);
       $wrapper->field_lugar->set(array(
-        'lid' => '15',
-        'name' => '',
-        'street' => '',
-        'additional' => 'Auditorio bla',
-        'city' => 'Bogota',
-        'province' => 'BDC',
-        'postal_code' => '',
-        'country' => 'co',
-        'latitude' => '4.596916',
-        'longitude' => '-74.072880',
-        'source' => '1',
-        'is_primary' => '0',
-        'locpick' => array('user_latitude' => '4.596916','user_longitude' => '-74.072880',),
-        'province_name' => 'Bogota D.C.',
-        'country_name' => 'Colombia',
+          'lid' => $location[false]['lid'],
+          'name' => '',
+          'street' => '',
+          'additional' => $location[false]['additional'],
+          'city' => $location[false]['city'],
+          'province' => $location[false]['province'],
+          'postal_code' => '',
+          'country' => $location[false]['country'],
+          'latitude' => $location[false]['latitude'],
+          'longitude' => $location[false]['longitude'],
+          'source' => $location[false]['source'],
+          'is_primary' => $location[false]['is_primary'],
+          'locpick' => 
+          array ('user_latitude' => $location[false]['locpick']['user_latitude'],'user_longitude' => $location[false]['locpick']['user_longitude']),
+          'province_name' => $location[false]['province_name'],
+          'country_name' => $location[false]['country_name'],
       ));
-
      
       foreach (json_decode($value['field_slider_principal_items_en'],true) as $key => $item) {
         $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
