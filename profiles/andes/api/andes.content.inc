@@ -87,7 +87,7 @@ function _import_material_estudio_batch($value){
 }
 
 function _import_eventos_bath($value){
-      $node = entity_create('node', array('type' => 'eventos'));
+     $node = entity_create('node', array('type' => 'eventos'));
       $node->uid = 1;
       $wrapper = entity_metadata_wrapper('node', $node);
       $wrapper->title->set($value['title_field_es']);
@@ -99,7 +99,7 @@ function _import_eventos_bath($value){
       
       $date_es = explode("|", $value['field_fecha_eventos_es']);
           
-      $date_start_es = new DateTime($date_es[false]);
+      $date_start_es = new DateTime($date_es[false]); 
       $date_end_es = new DateTime($date_es[true]);
     
       $wrapper->field_fecha_eventos->set(array(
@@ -132,33 +132,31 @@ function _import_eventos_bath($value){
           'country_name' => 'Colombia',
       ));
 
-      $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
-      $colletions->setHostEntity('node',$node,'es');
-     
-      $field_slider_principal_items_es = json_decode($value['field_slider_principal_items_es'],true);
+      
+      foreach (json_decode($value['field_slider_principal_items_es'],true) as $key => $item) {
+        $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
+        $colletions->setHostEntity('node',$node,'es');
+        $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
+        $wrapper_collections->field_slider_ubicacion->set($item['field_slider_ubicacion']);
+        $wrapper_collections->field_titulo->set($item['field_titulo']);
+        $wrapper_collections->field_titulo_especiales->set(array('value' => $item['field_titulo_especiales']));
+        $wrapper_collections->field_body->set(array('value' => $item['field_body']));
 
-      $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
-      $wrapper_collections->field_slider_ubicacion->set($field_slider_principal_items_es[false]['field_slider_ubicacion']);
-      $wrapper_collections->field_titulo->set($field_slider_principal_items_es[false]['field_titulo']);
-      $wrapper_collections->field_titulo_especiales->set(array('value' => $field_slider_principal_items_es[false]['field_titulo_especiales']));
-      $wrapper_collections->field_body->set(array('value' => $field_slider_principal_items_es[false]['field_body']));
-      $wrapper_collections->field_tipo_item->set('imagen');
-      // Image Banner
-      $name = basename($field_slider_principal_items_es[false]['field_image_banner']);
-      $file = file_save_data(file_get_contents($field_slider_principal_items_es[false]['field_image_banner']), 'public://'.$name);
-      $wrapper_collections->field_image_banner->file->set($file);
-      // end Image Banner
+        $file = file_save_data(file_get_contents($item['field_image_banner']), 'public://'.basename($item['field_image_banner']));
+        $wrapper_collections->field_image_banner->file->set($file);
       
-      // Image Banner Mobile
-      $name = basename($field_slider_principal_items_es[false]['field_image_banner_mobile']);
-      $file = file_save_data(file_get_contents($field_slider_principal_items_es[false]['field_image_banner_mobile']), 'public://'.$name);
-      $wrapper_collections->field_image_banner_mobile->file->set($file);
-      // end Image Banner Mobile      
+        $file = file_save_data(file_get_contents($item['field_image_banner_mobile']), 'public://'.basename($item['field_image_banner_mobile']));
+        $wrapper_collections->field_image_banner_mobile->file->set($file);
       
-      $wrapper_collections->field_video_banner->set(array('input' => $field_slider_principal_items_es[false]['field_video_banner']));
-      $wrapper_collections->field_enlace_ver_mas->set(array('title' => $field_slider_principal_items_es[false]['field_enlace_ver_mas']['title'], 'url' => $field_slider_principal_items_es[false]['field_enlace_ver_mas']['url']));
-      $wrapper_collections->save();
-     
+        $wrapper_collections->field_video_banner->set(array('input' => $item['field_video_banner']));
+
+        $wrapper_collections->field_enlace_ver_mas->set(
+            array('title' => $item['field_enlace_ver_mas']['title'], 'url' => $item['field_enlace_ver_mas']['url'])
+        );
+        $wrapper_collections->save();
+      }
+
+      
       $handler = entity_translation_get_handler('node', $node);
       // Configuration about what to translate
       $translation = array(
@@ -208,33 +206,30 @@ function _import_eventos_bath($value){
         'province_name' => 'Bogota D.C.',
         'country_name' => 'Colombia',
       ));
-      // Wrapper Fielcollections Api.
-       $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
-       $colletions->setHostEntity('node',$node,'en');
 
-      $field_slider_principal_items_en = json_decode($value['field_slider_principal_items_en'],true);
+     
+      foreach (json_decode($value['field_slider_principal_items_en'],true) as $key => $item) {
+        $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
+        $colletions->setHostEntity('node',$node,'en');
+        $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
+        $wrapper_collections->field_slider_ubicacion->set($item['field_slider_ubicacion']);
+        $wrapper_collections->field_titulo->set($item['field_titulo']);
+        $wrapper_collections->field_titulo_especiales->set(array('value' => $item['field_titulo_especiales']));
+        $wrapper_collections->field_body->set(array('value' => $item['field_body']));
 
-      $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
-      $wrapper_collections->field_slider_ubicacion->set($field_slider_principal_items_en[false]['field_slider_ubicacion']);
-      $wrapper_collections->field_titulo->set($field_slider_principal_items_en[false]['field_titulo']);
-      $wrapper_collections->field_titulo_especiales->set(array('value' => $field_slider_principal_items_en[false]['field_titulo_especiales']));
-      $wrapper_collections->field_body->set(array('value' => $field_slider_principal_items_en[false]['field_body']));
-      $wrapper_collections->field_tipo_item->set('imagen');
-      // img
-      $name = basename($field_slider_principal_items_en[false]['field_image_banner']);
-      $file = file_save_data(file_get_contents($field_slider_principal_items_en[false]['field_image_banner']), 'public://'.$name);
-      $wrapper_collections->field_image_banner->file->set($file);
-      // end img
+        $file = file_save_data(file_get_contents($item['field_image_banner']), 'public://'.basename($item['field_image_banner']));
+        $wrapper_collections->field_image_banner->file->set($file);
+      
+        $file = file_save_data(file_get_contents($item['field_image_banner_mobile']), 'public://'.basename($item['field_image_banner_mobile']));
+        $wrapper_collections->field_image_banner_mobile->file->set($file);
+      
+        $wrapper_collections->field_video_banner->set(array('input' => $item['field_video_banner']));
+        
+        $wrapper_collections->field_enlace_ver_mas->set(
+            array('title' => $item['field_enlace_ver_mas']['title'], 'url' => $item['field_enlace_ver_mas']['url'])
+        );
+        $wrapper_collections->save();
+      }
 
-      // Image Banner Mobile
-      $name = basename($field_slider_principal_items_en[false]['field_image_banner_mobile']);
-      $file = file_save_data(file_get_contents($field_slider_principal_items_en[false]['field_image_banner_mobile']), 'public://'.$name);
-      $wrapper_collections->field_image_banner_mobile->file->set($file);
-      // end Image Banner Mobile   
-
-      $wrapper_collections->field_video_banner->set(array('input' => $field_slider_principal_items_en[false]['field_video_banner']));
-      $wrapper_collections->field_enlace_ver_mas->set(array('title' => $field_slider_principal_items_en[false]['field_enlace_ver_mas']['title'], 'url' => $field_slider_principal_items_en[false]['field_enlace_ver_mas']['url']));
-      $wrapper_collections->save();
-
-      $wrapper->save();
+      $wrapper->save(); 
 }
