@@ -6,10 +6,25 @@
 
 /* ------| Slider Home|----- */
 .view-banner-nodes {
+	.views_slideshow_swiper-processed {
+		// height: 609px;
+	}
 	ul {
 		li.swiper-slide {
 			width: 100% !important;
-			height: 619px;
+			// height: 619px;
+			list-style: none;
+			overflow: hidden;
+			display: block;
+			.views-slideshow-swiper-main-frame-row-item {
+				display: inline-flex;
+				width: 100%;
+				overflow: hidden;
+				height: 100%;
+				.views-field-views-conditional {
+					width: 100%;
+				}
+			}
 			.slider-homes-img-destock {
 				display: none;
 				@include respond-to(xl) {
@@ -39,6 +54,7 @@
 /* ------| Ubicado Leth |----- */
 .view-banner-nodes {
 	.slider-homes-left {
+		background-color: rgba(0, 0, 0, 0.5);
 		@extend %slider-homes-lef;
   	//Titulo
   	.title-slider-homes {
@@ -58,6 +74,7 @@
 /* ------| Ubicado Rigth |----- */
 .view-banner-nodes {
 	.slider-homes-right {
+		background-color: rgba(0, 0, 0, 0.5);
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
   		left: inherit;
@@ -81,6 +98,7 @@
 /* ------| Ubicado Centro |----- */
 .view-banner-nodes {
 	.slider-homes-center {
+		background-color: rgba(0, 0, 0, 0.5);
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
   		left: inherit;

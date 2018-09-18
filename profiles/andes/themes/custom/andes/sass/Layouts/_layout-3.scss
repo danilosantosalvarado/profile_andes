@@ -1,0 +1,36 @@
+/*
+//------------------------------------------------------------------------------
+// Layouts 3
+//------------------------------------------------------------------------------
+*/
+
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  .title-slider-homes {
+    font-family: $latoblack;
+    @include font-size(xl);
+    color: color('white');
+    text-transform: uppercase;
+    @include respond-to(xl) {
+      @include font-size(xxxl);
+    }
+  }
+  .body-slider-homes {
+    p {
+      font-family: $latolight;
+      @include font-size(l);
+      color: color('white');
+      padding: 10px 0;
+    }
+  }
+}
