@@ -1282,6 +1282,74 @@ th {
 // Home Especiales
 //------------------------------------------------------------------------------
 */
+/* ------| slider alineacion center |----- */
+.slider-homes-specials-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-homes-specials-title .text-center {
+  color: #fff;
+}
+
+.slider-homes-specials-title .text-center:nth-child(1) {
+  font-family: "Crimson_textroman", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials-title .text-center:nth-child(1) {
+    font-size: 1.5rem;
+  }
+}
+
+.slider-homes-specials-title .text-center:nth-child(2) {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px 0;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials-title .text-center:nth-child(2) {
+    font-size: 2.6875rem;
+  }
+}
+
+.slider-homes-specials-title .text-center:nth-child(3) {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials-title .text-center:nth-child(3) {
+    font-size: 1.1875rem;
+  }
+}
+
+.slider-homes-specials-title .text-center:nth-child(4) {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
 /* ------| quicktabs Tabs |----- */
 #quicktabs-quicktabs_especiales ul.quicktabs-tabs {
   width: 100%;
@@ -1762,6 +1830,199 @@ th {
   text-align: justify;
 }
 
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-homes-layout-two .title-slider-homes {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-layout-two .title-slider-homes {
+    font-size: 2.6875rem;
+  }
+}
+
+.slider-homes-layout-two .body-slider-homes p {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Layouts 3
+//------------------------------------------------------------------------------
+*/
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-homes-layout-three .title-slider-homes {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-layout-three .title-slider-homes {
+    font-size: 2.6875rem;
+  }
+}
+
+.slider-homes-layout-three .body-slider-homes p {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Layouts 4
+//------------------------------------------------------------------------------
+*/
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-four-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-homes-layout-four-title .titulo-layout-4 {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-layout-four-title .titulo-layout-4 {
+    font-size: 2.6875rem;
+  }
+}
+
+.slider-homes-layout-four-title .subtitulo-layout-4 {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.slider-homes-layout-four-title .text-layout-4 {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Layouts 7
+//------------------------------------------------------------------------------
+*/
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-seven {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-homes-layout-seven .title-slider-homes {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-layout-seven .title-slider-homes {
+    font-size: 2.6875rem;
+  }
+}
+
+.slider-homes-layout-seven .body-slider-homes p {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #fff;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Layouts 9
@@ -1851,6 +2112,19 @@ th {
   #layout-nine .center-wrapper .field-name-field-lugar {
     margin-top: 0px;
   }
+}
+
+/*
+//------------------------------------------------------------------------------
+// Layouts 11
+//------------------------------------------------------------------------------
+*/
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-eleven .title-slider-homes {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #484851;
+  padding: 5px 0;
 }
 
 /*
@@ -2895,7 +3169,22 @@ body > .main-container.container-fluid {
 /* ------| Slider Home|----- */
 .view-banner-nodes ul li.swiper-slide {
   width: 100% !important;
-  height: 619px;
+  list-style: none;
+  overflow: hidden;
+  display: block;
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional {
+  width: 100%;
 }
 
 .view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
@@ -2933,7 +3222,15 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Ubicado Leth |----- */
+.view-banner-nodes .slider-homes-left {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* ------| Ubicado Rigth |----- */
+.view-banner-nodes .slider-homes-right {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 768px) {
   .view-banner-nodes .slider-homes-right {
     left: inherit;
@@ -2954,6 +3251,10 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Ubicado Centro |----- */
+.view-banner-nodes .slider-homes-center {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 768px) {
   .view-banner-nodes .slider-homes-center {
     left: inherit;
