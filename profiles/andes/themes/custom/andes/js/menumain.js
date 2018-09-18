@@ -35,15 +35,14 @@
       $(".barra-buscar").click(function () {
         $('#block-google-cse-google-cse').toggleClass("buscador-open");
       });
-
-
-      if (docWidth > 992) {
-        /* add class varios elementos */
-        /* cuando sea flotante a derecha clase necesaria */
-        $(".float-right .row-fluid .tb-megamenu-column:nth-child(2)").addClass('nivel-right');
-        /* Contenedor de imagen  */
-        $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img');
+      /* add class varios elementos */
+      /* cuando sea flotante a derecha clase necesaria */
+      $(".float-right .row-fluid .tb-megamenu-column:nth-child(2)").addClass('nivel-right');
+      /* Contenedor de imagen  */
+      $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img');
         /* hover finalizar las animaciones*/
+      if (docWidth > 992) {
+
         $level1.hover(
           function () {
             $('.box-black').remove();
@@ -87,7 +86,7 @@
           if (menutopSoy.parent('li').hasClass('level-1')) {
             menutopSoy.addClass('nivel-1-top-soy')
             menutopSoy.css({
-              'margin-left': '-' + (offsettopSoy.left - 54) + 'px',
+              'margin-left': '-' + (offsettopSoy.left) + 'px',
               'width': docWidth + 'px',
             })
           }
@@ -170,17 +169,25 @@
           classBlockClone = 'clone-mobile-block',
           $contentFather = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0'),
           className = 'clone',
-          itemMobil = $contentFather.find('.level-1  a');
+          itemMobil = $contentFather.find('.level-1  a'),
+          /* calcula el alto menos la cabecera */
+          heigthCalc = $(window).height()- 128;
 
+        console.log(heigthCalc)
 
-        /*  */
+        $contentFather.parents('.always-show').css('height' , heigthCalc + "px");
+
+        /* scroll de  body   */
         $('.navbar-toggle').on("click", function () {
           $('body').toggleClass('not-scroll');
           $('.nav-child').removeClass('active-mobile');
         });
+        $('.height-calc')
+        itemMobil.siblings('.tb-megamenu-submenu').addClass('container-submenu')
         itemMobil.on("click", function () {
-          $('.box-black-mobile').remove();
           let $this = $(this);
+          $('.box-black-mobile').remove();
+          console.log($this);
           $this.siblings().addClass('active-mobile');
           $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black-mobile' style='none'><p>" + $this.text() + "</p></div>");
           $('.box-black-mobile').click(function () {
