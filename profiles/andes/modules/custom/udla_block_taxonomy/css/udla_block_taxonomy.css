@@ -47,6 +47,10 @@
   font-family: 'LatoBold';
   font-size: .8889rem;
   line-height: 1;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
 }
 .pane-udla-block-taxonomy .level-box-active {
   position: relative;
