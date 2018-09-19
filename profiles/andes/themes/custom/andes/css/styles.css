@@ -1302,6 +1302,7 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slider-homes-specials-title .text-center {
@@ -3167,11 +3168,22 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
+.view-banner-nodes .views_slideshow_swiper-processed {
+  height: 609px;
+  border: 1px solid blue;
+}
+
+.view-banner-nodes ul {
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid red;
+}
+
 .view-banner-nodes ul li.swiper-slide {
-  width: 100% !important;
   list-style: none;
   overflow: hidden;
   display: block;
+  border: 1px solid green;
 }
 
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
@@ -3209,12 +3221,7 @@ body > .main-container.container-fluid {
 
 .view-banner-nodes ul li.swiper-slide img {
   width: 100%;
-}
-
-@media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide img {
-    max-height: 619px;
-  }
+  height: 100%;
 }
 
 .view-banner-nodes ul li.swiper-slide .youtube-container--responsive {
@@ -3376,6 +3383,7 @@ body > .main-container.container-fluid {
   font-size: 0;
   background: url("../img/Icon/arrow-slide-prev.png") no-repeat center;
   z-index: 1;
+  border: 1px solid red;
 }
 
 .view-banner-nodes .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text .views-slideshow-controls-text-pause {
@@ -3393,6 +3401,7 @@ body > .main-container.container-fluid {
   font-size: 0;
   background: url("../img/Icon/arrow-slide-next.png") no-repeat center;
   z-index: 1;
+  border: 1px solid red;
 }
 
 .view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'],
