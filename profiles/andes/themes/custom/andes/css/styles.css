@@ -2729,7 +2729,7 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   body > .main-container.container-fluid {
-    margin-top: 60px;
+    margin-top: 110px;
   }
 }
 
@@ -3170,20 +3170,17 @@ body > .main-container.container-fluid {
 /* ------| Slider Home|----- */
 .view-banner-nodes .views_slideshow_swiper-processed {
   height: 609px;
-  border: 1px solid blue;
 }
 
 .view-banner-nodes ul {
   padding: 0px;
   margin: 0px;
-  border: 1px solid red;
 }
 
 .view-banner-nodes ul li.swiper-slide {
   list-style: none;
   overflow: hidden;
   display: block;
-  border: 1px solid green;
 }
 
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
@@ -5319,6 +5316,66 @@ body > .main-container.container-fluid {
   text-align: center;
   padding: 40px 0;
   border-top: 1px solid #ddd;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Componente catalogo
+//------------------------------------------------------------------------------
+*/
+/* ------| Filtro cuadro, fila |----- */
+#quicktabs-componente_catalogo ul {
+  float: right;
+}
+
+#quicktabs-componente_catalogo ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#quicktabs-componente_catalogo ul li:nth-child(1).active .quicktabs-tab-view-calendar-component-block {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid red;
+  font-size: 0px;
+  background: url("../img/Icon/button-cuadricula.png") no-repeat;
+  background-position-x: 0px;
+  background-size: cover;
+}
+
+#quicktabs-componente_catalogo ul li:nth-child(1) .quicktabs-tab-view-calendar-component-block {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid red;
+  font-size: 0px;
+  background: url("../img/Icon/button-cuadricula.png") no-repeat;
+  background-position-x: 0px;
+  background-size: cover;
+}
+
+#quicktabs-componente_catalogo ul li:nth-child(2) .quicktabs-tab-view-calendar-component-block-1 {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid red;
+  font-size: 0px;
+  background: url("../img/Icon/button-cuadricula.png") no-repeat;
+  background-position-x: -59px;
+  background-size: cover;
+}
+
+#quicktabs-componente_catalogo ul li:nth-child(2).active .quicktabs-tab-view-calendar-component-block-1 {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border: 1px solid red;
+  font-size: 0px;
+  background: url("../img/Icon/button-liena.png") no-repeat;
+  background-position-x: -55px;
+  background-size: cover;
 }
 
 /* colores  clases globales*/

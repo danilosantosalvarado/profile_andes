@@ -1,0 +1,64 @@
+/*
+//------------------------------------------------------------------------------
+// Componente catalogo
+//------------------------------------------------------------------------------
+*/
+
+/* ------| Filtro cuadro, fila |----- */
+#quicktabs-componente_catalogo {
+  ul {
+    float: right;
+    li {
+      display: inline-flex;
+      &:nth-child(1) {
+        &.active {
+          .quicktabs-tab-view-calendar-component-block {
+            width: 40px;
+            height: 40px;
+            display: block;
+            border: 1px solid red;
+            font-size: 0px;
+            background: url('../img/Icon/button-cuadricula.png') no-repeat;
+            background-position-x: 0px;
+            background-size: cover;
+          }
+        }
+        .quicktabs-tab-view-calendar-component-block {
+          width: 40px;
+          height: 40px;
+          display: block;
+          border: 1px solid red;
+          font-size: 0px;
+          background: url('../img/Icon/button-cuadricula.png') no-repeat;
+          background-position-x: 0px;
+          background-size: cover;
+        }
+      }
+      &:nth-child(2) {
+        .quicktabs-tab-view-calendar-component-block-1 {
+          width: 40px;
+          height: 40px;
+          display: block;
+          border: 1px solid red;
+          font-size: 0px;
+          background: url('../img/Icon/button-cuadricula.png') no-repeat;
+          background-position-x: -59px;
+          background-size: cover;
+        }
+        &.active {
+          .quicktabs-tab-view-calendar-component-block-1 {
+            width: 40px;
+            height: 40px;
+            display: block;
+            border: 1px solid red;
+            font-size: 0px;
+            background: url('../img/Icon/button-liena.png') no-repeat;
+            background-position-x: -55px;
+            background-size: cover;
+          }
+        }
+
+      }
+    }
+  }
+}
