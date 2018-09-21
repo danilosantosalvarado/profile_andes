@@ -5381,28 +5381,38 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Filtro Cuadricula |----- */
-.view-id-calendar-component .views-row {
+.view-id-calendar-component ul {
+  padding: 0px;
+}
+
+.view-id-calendar-component ul li.views-row {
   list-style: none;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
   float: left;
-  width: 66.66666667%;
+  width: 100%;
 }
 
-@media (min-width: 992px) {
-  .view-id-calendar-component .views-row {
+@media (min-width: 555px) {
+  .view-id-calendar-component ul li.views-row {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-id-calendar-component ul li.views-row {
     width: 33.33333333%;
   }
 }
 
-.view-id-calendar-component .views-row .cursos {
+.view-id-calendar-component ul li.views-row .cursos {
   position: relative;
   margin-bottom: 31px;
 }
 
-.view-id-calendar-component .views-row .cursos .img-depor {
+.view-id-calendar-component ul li.views-row .cursos .img-depor {
   position: absolute;
   top: 0;
   background: rgba(88, 89, 91, 0.82);
@@ -5426,30 +5436,30 @@ body > .main-container.container-fluid {
           align-items: center;
 }
 
-.view-id-calendar-component .views-row .cursos .img-depor h2 {
+.view-id-calendar-component ul li.views-row .cursos .img-depor h2 {
   display: none;
 }
 
-.view-id-calendar-component .views-row .cursos .img-depor img {
+.view-id-calendar-component ul li.views-row .cursos .img-depor img {
   width: 40px;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  .view-id-calendar-component .views-row .cursos .img-depor img {
+  .view-id-calendar-component ul li.views-row .cursos .img-depor img {
     width: 93px;
   }
 }
 
-.view-id-calendar-component .views-row .cursos:hover .hover-curso {
+.view-id-calendar-component ul li.views-row .cursos:hover .hover-curso {
   z-index: 1;
 }
 
-.view-id-calendar-component .views-row .cursos:hover .img-depor {
+.view-id-calendar-component ul li.views-row .cursos:hover .img-depor {
   z-index: -1;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso {
   position: absolute;
   top: 0;
   background: rgba(53, 158, 208, 0.78);
@@ -5458,7 +5468,7 @@ body > .main-container.container-fluid {
   z-index: -1;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex {
   color: white;
   width: 80%;
   height: 83%;
@@ -5480,21 +5490,21 @@ body > .main-container.container-fluid {
           align-items: center;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex span {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex span {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   padding: 0 15px;
   text-align: center;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex p {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   padding: 0 15px;
   text-align: center;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex .button {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex .button {
   width: 100%;
   display: block;
   text-align: center;
@@ -5503,7 +5513,7 @@ body > .main-container.container-fluid {
   bottom: 6%;
 }
 
-.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex .button a {
+.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex .button a {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.875rem;
   color: #fff;
