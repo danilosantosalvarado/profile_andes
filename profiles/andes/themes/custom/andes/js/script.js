@@ -7,7 +7,7 @@
 
   // function galeria home
   jQuery(document).on("click", ".galeria-home", function() {    
-    var imageSrc = jQuery(this).parents(".box-3").find("img").attr("src");
+    var imageSrc = jQuery(this).parents(".box-modal").find("img").attr("src");
     jQuery(".modal-gallery-home").attr("src", imageSrc);
   });
 
