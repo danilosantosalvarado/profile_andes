@@ -5,7 +5,12 @@
     jQuery(".modal-masonry").attr("src", imageSrc);
   });
 
-  
+  // function galeria home
+  jQuery(document).on("click", ".galeria-home", function() {    
+    var imageSrc = jQuery(this).parents(".box-modal").find("img").attr("src");
+    jQuery(".modal-gallery-home").attr("src", imageSrc);
+  });
+
   // $(window).resize(function() {
   //   var docWidth = $(document).width();
   //    var data = {
