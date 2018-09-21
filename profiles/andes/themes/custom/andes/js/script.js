@@ -1,5 +1,11 @@
 (function ($) {
+  // function adctivar modal Masonry
+  jQuery(document).on("click", ".open-modal", function() {
+    var imageSrc = jQuery(this).parents(".masonry-item").find("img").attr("src");
+    jQuery(".modal-masonry").attr("src", imageSrc);
+  });
 
+  
   // $(window).resize(function() {
   //   var docWidth = $(document).width();
   //    var data = {
