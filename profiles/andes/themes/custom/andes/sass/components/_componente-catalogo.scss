@@ -6,32 +6,31 @@
 
 /* ------| Filtro cuadro, fila |----- */
 #quicktabs-componente_catalogo {
-  ul {
-    float: right;
+  ul.quicktabs-tabs {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
     li {
-      display: inline-flex;
+      padding: 0px;
       &:nth-child(1) {
-        &.active {
-          .quicktabs-tab-view-calendar-component-block {
-            width: 40px;
-            height: 40px;
-            display: block;
-            border: 1px solid red;
-            font-size: 0px;
-            background: url('../img/Icon/button-cuadricula.png') no-repeat;
-            background-position-x: 0px;
-            background-size: cover;
-          }
-        }
         .quicktabs-tab-view-calendar-component-block {
           width: 40px;
           height: 40px;
           display: block;
-          border: 1px solid red;
           font-size: 0px;
-          background: url('../img/Icon/button-cuadricula.png') no-repeat;
+          background: url('../img/Icon/button-linea.png') no-repeat;
           background-position-x: 0px;
           background-size: cover;
+        }
+        &.active {
+          padding: 0px;
+          .quicktabs-tab-view-calendar-component-block {
+            background: url('../img/Icon/button-cuadricula.png') no-repeat;
+            background-size: cover;
+            background-position-x: 0px;
+          }
         }
       }
       &:nth-child(2) {
@@ -39,25 +38,118 @@
           width: 40px;
           height: 40px;
           display: block;
-          border: 1px solid red;
           font-size: 0px;
           background: url('../img/Icon/button-cuadricula.png') no-repeat;
-          background-position-x: -59px;
+          background-position-x: -62px;
           background-size: cover;
         }
         &.active {
+          padding: 0px;
           .quicktabs-tab-view-calendar-component-block-1 {
-            width: 40px;
-            height: 40px;
-            display: block;
-            border: 1px solid red;
-            font-size: 0px;
-            background: url('../img/Icon/button-liena.png') no-repeat;
-            background-position-x: -55px;
+            background: url('../img/Icon/button-linea.png') no-repeat;
+            background-position-x: -62px;
             background-size: cover;
           }
         }
+      }
+    }
+  }
+}
 
+/* ------| Filtro Cuadricula |----- */
+.view-id-calendar-component {
+  .views-row {
+    list-style: none;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 66.66666667%;
+    @include respond-to(xl) {
+      width: 33.33333333%;
+    }
+    .cursos  {
+      position: relative;
+      margin-bottom: 31px;
+      .img-depor {
+        position: absolute;
+        top: 0;
+        background: rgba(88, 89, 91, 0.82);
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          display: none;
+        }
+        img {
+          width: 40px;
+          height: auto;
+          @include respond-to(xl) {
+            width: 93px;
+          }
+        }
+      }
+      &:hover .hover-curso {
+        z-index: 1;
+      }
+      &:hover .img-depor {
+        z-index: -1;
+      }
+      .hover-curso {
+        position: absolute;
+        top: 0;
+        background: rgba(53, 158, 208, 0.78);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        .hover-curso-tex {
+          color: white;
+          width: 80%;
+          height: 83%;
+          margin: 0 auto;
+          margin-top: 5%;
+          border: 1px solid white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-family: $latoblack;
+            @include font-size(m);
+            padding: 0 15px;
+            text-align: center;
+          }
+          p {
+            font-family: $crimson-textregular;
+            @include font-size(m);
+            padding: 0 15px;
+            text-align: center;
+          }
+          .button {
+              width: 100%;
+              display: block;
+              text-align: center;
+              position: absolute;
+              left: 0;
+              bottom: 6%;
+            a {
+              font-family: $latoregular;
+              @include font-size(s);
+              color: color('white');
+              text-decoration: none;
+              border: 2px solid white;
+              padding: 0.6em 1.5em;
+              background: rgb(53, 158, 208);
+            }
+          }
+        }
       }
     }
   }

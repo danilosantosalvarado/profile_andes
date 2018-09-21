@@ -5324,58 +5324,193 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Filtro cuadro, fila |----- */
-#quicktabs-componente_catalogo ul {
-  float: right;
+#quicktabs-componente_catalogo ul.quicktabs-tabs {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  width: 100%;
 }
 
-#quicktabs-componente_catalogo ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+#quicktabs-componente_catalogo ul.quicktabs-tabs li {
+  padding: 0px;
 }
 
-#quicktabs-componente_catalogo ul li:nth-child(1).active .quicktabs-tab-view-calendar-component-block {
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(1) .quicktabs-tab-view-calendar-component-block {
   width: 40px;
   height: 40px;
   display: block;
-  border: 1px solid red;
   font-size: 0px;
-  background: url("../img/Icon/button-cuadricula.png") no-repeat;
+  background: url("../img/Icon/button-linea.png") no-repeat;
   background-position-x: 0px;
   background-size: cover;
 }
 
-#quicktabs-componente_catalogo ul li:nth-child(1) .quicktabs-tab-view-calendar-component-block {
-  width: 40px;
-  height: 40px;
-  display: block;
-  border: 1px solid red;
-  font-size: 0px;
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(1).active {
+  padding: 0px;
+}
+
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(1).active .quicktabs-tab-view-calendar-component-block {
   background: url("../img/Icon/button-cuadricula.png") no-repeat;
+  background-size: cover;
   background-position-x: 0px;
-  background-size: cover;
 }
 
-#quicktabs-componente_catalogo ul li:nth-child(2) .quicktabs-tab-view-calendar-component-block-1 {
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(2) .quicktabs-tab-view-calendar-component-block-1 {
   width: 40px;
   height: 40px;
   display: block;
-  border: 1px solid red;
   font-size: 0px;
   background: url("../img/Icon/button-cuadricula.png") no-repeat;
-  background-position-x: -59px;
+  background-position-x: -62px;
   background-size: cover;
 }
 
-#quicktabs-componente_catalogo ul li:nth-child(2).active .quicktabs-tab-view-calendar-component-block-1 {
-  width: 40px;
-  height: 40px;
-  display: block;
-  border: 1px solid red;
-  font-size: 0px;
-  background: url("../img/Icon/button-liena.png") no-repeat;
-  background-position-x: -55px;
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(2).active {
+  padding: 0px;
+}
+
+#quicktabs-componente_catalogo ul.quicktabs-tabs li:nth-child(2).active .quicktabs-tab-view-calendar-component-block-1 {
+  background: url("../img/Icon/button-linea.png") no-repeat;
+  background-position-x: -62px;
   background-size: cover;
+}
+
+/* ------| Filtro Cuadricula |----- */
+.view-id-calendar-component .views-row {
+  list-style: none;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 66.66666667%;
+}
+
+@media (min-width: 992px) {
+  .view-id-calendar-component .views-row {
+    width: 33.33333333%;
+  }
+}
+
+.view-id-calendar-component .views-row .cursos {
+  position: relative;
+  margin-bottom: 31px;
+}
+
+.view-id-calendar-component .views-row .cursos .img-depor {
+  position: absolute;
+  top: 0;
+  background: rgba(88, 89, 91, 0.82);
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-id-calendar-component .views-row .cursos .img-depor h2 {
+  display: none;
+}
+
+.view-id-calendar-component .views-row .cursos .img-depor img {
+  width: 40px;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .view-id-calendar-component .views-row .cursos .img-depor img {
+    width: 93px;
+  }
+}
+
+.view-id-calendar-component .views-row .cursos:hover .hover-curso {
+  z-index: 1;
+}
+
+.view-id-calendar-component .views-row .cursos:hover .img-depor {
+  z-index: -1;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso {
+  position: absolute;
+  top: 0;
+  background: rgba(53, 158, 208, 0.78);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex {
+  color: white;
+  width: 80%;
+  height: 83%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex span {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex p {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex .button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 6%;
+}
+
+.view-id-calendar-component .views-row .cursos .hover-curso .hover-curso-tex .button a {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 0.6em 1.5em;
+  background: #359ed0;
 }
 
 /* colores  clases globales*/
