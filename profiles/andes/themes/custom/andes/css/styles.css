@@ -7208,7 +7208,7 @@ body > .main-container.container-fluid {
   height: 100% !important;
 }
 
-.wrapper {
+.view-id-galerias_home .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -7277,7 +7277,7 @@ body > .main-container.container-fluid {
   grid-row: 4;
 }
 
-.wrapper4 {
+.view-id-galerias_home .wrapper4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
