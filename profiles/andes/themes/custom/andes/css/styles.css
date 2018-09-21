@@ -7210,6 +7210,7 @@ body > .main-container.container-fluid {
 
 .view-id-galerias_home ul {
   list-style: none;
+  padding: 0px;
 }
 
 .view-id-galerias_home .wrapper {
