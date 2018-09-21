@@ -7208,6 +7208,10 @@ body > .main-container.container-fluid {
   height: 100% !important;
 }
 
+.view-id-galerias_home ul {
+  list-style: none;
+}
+
 .view-id-galerias_home .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
