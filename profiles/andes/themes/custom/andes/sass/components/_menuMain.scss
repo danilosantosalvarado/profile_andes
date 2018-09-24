@@ -977,6 +977,11 @@ $white:#fff;
             color: color('grey') !important;
             @include font-size(15px);
           }
+          &.text-hover {
+            color: color('grey') !important;
+            opacity: 1 !important;
+            transition: .3s;
+          }
           &.dropdown-toggle{
             &::after{
               display: none;

@@ -48,9 +48,11 @@
             $('.box-black').remove();
             $('.clone-nivel-2').remove();
             $('.clone-nivel-3').remove();
+            $('.dropdown-toggle').removeClass('text-hover');
             removerClassBoxBlack();
             $('.clone-nivel-3').removeClass('active-clone2');
           }, function () {
+            $(this).addClass('text-hover');
           }
         );
 
