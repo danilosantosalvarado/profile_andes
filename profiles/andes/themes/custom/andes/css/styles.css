@@ -2128,6 +2128,68 @@ th {
   padding: 5px 0;
 }
 
+.view-id-eventos_decanatura {
+  border: 1px solid red;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .view-id-eventos_decanatura {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-eventos_decanatura {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-id-eventos_decanatura {
+    width: 1170px;
+  }
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  position: initial !important;
+  height: auto !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed .masonry-item {
+  position: initial !important;
+  width: auto !important;
+  opacity: .5;
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed .masonry-item .views-field-views-conditional {
+  position: relative;
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed .masonry-item .views-field-views-conditional .title-slider-homes {
+  position: absolute;
+  top: 0px;
+  left: 10%;
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed .masonry-item .views-field-views-conditional .title-slider-homes a {
+  color: #4585ff;
+}
+
+.view-id-eventos_decanatura .view-content.masonry-processed .masonry-item:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Layotu actividades
