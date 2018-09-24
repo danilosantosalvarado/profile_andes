@@ -3380,7 +3380,6 @@ body > .main-container.container-fluid {
   font-size: 0;
   background: url("../img/Icon/arrow-slide-prev.png") no-repeat center;
   z-index: 1;
-  border: 1px solid red;
 }
 
 .view-banner-nodes .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text .views-slideshow-controls-text-pause {
@@ -3398,7 +3397,6 @@ body > .main-container.container-fluid {
   font-size: 0;
   background: url("../img/Icon/arrow-slide-next.png") no-repeat center;
   z-index: 1;
-  border: 1px solid red;
 }
 
 .view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'],
