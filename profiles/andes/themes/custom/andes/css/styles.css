@@ -5588,25 +5588,25 @@ body > .main-container.container-fluid {
 .tb-megamenu .mega-dropdown-menu .row-fluid .content-img,
 .tb-megamenu .row-fluid .row-fluid .content-img {
   display: none;
-  margin-top: 20px;
 }
 
 @media (min-width: 992px) {
   .tb-megamenu .mega-dropdown-menu .row-fluid .content-img,
   .tb-megamenu .row-fluid .row-fluid .content-img {
-    display: block;
+    display: inline-block;
     /*  margin-left: -20px;
           transition:  .7s; */
-    position: absolute;
-    left: 31%;
+    margin-top: 15px;
     -webkit-transition: .7s;
     -o-transition: .7s;
     transition: .7s;
-    width: 70%;
+    width: 62%;
+    margin-left: 0;
   }
   .tb-megamenu .mega-dropdown-menu .row-fluid .content-img.active-img,
   .tb-megamenu .row-fluid .row-fluid .content-img.active-img {
-    left: 42%;
+    margin-left: 2%;
+    width: 60%;
     -webkit-transition: .7s;
     -o-transition: .7s;
     transition: .7s;
@@ -5629,6 +5629,22 @@ body > .main-container.container-fluid {
   margin: 0;
 }
 
+@media (min-width: 992px) {
+  .tb-megamenu .mega-dropdown-menu .row-fluid .content-img ul li a,
+  .tb-megamenu .row-fluid .row-fluid .content-img ul li a {
+    height: 300px;
+    display: block;
+  }
+  .tb-megamenu .mega-dropdown-menu .row-fluid .content-img ul li a .container-menu-image,
+  .tb-megamenu .mega-dropdown-menu .row-fluid .content-img ul li a .image-menu,
+  .tb-megamenu .mega-dropdown-menu .row-fluid .content-img ul li a .img-responsive,
+  .tb-megamenu .row-fluid .row-fluid .content-img ul li a .container-menu-image,
+  .tb-megamenu .row-fluid .row-fluid .content-img ul li a .image-menu,
+  .tb-megamenu .row-fluid .row-fluid .content-img ul li a .img-responsive {
+    height: 300px;
+  }
+}
+
 .tb-megamenu .mega-dropdown-menu .row-fluid .content-img .menu-title,
 .tb-megamenu .row-fluid .row-fluid .content-img .menu-title {
   display: none;
@@ -5637,6 +5653,11 @@ body > .main-container.container-fluid {
 .tb-megamenu .mega-dropdown-menu .row-fluid .content-img ul.tb-megamenu-subnav.level-1,
 .tb-megamenu .row-fluid .row-fluid .content-img ul.tb-megamenu-subnav.level-1 {
   border-left: none !important;
+}
+
+.tb-megamenu .mega-dropdown-menu .row-fluid .content-nivel-1,
+.tb-megamenu .row-fluid .row-fluid .content-nivel-1 {
+  width: 35%;
 }
 
 .tb-megamenu .dropdown-submenu > a::after {
@@ -6031,17 +6052,12 @@ body > .main-container.container-fluid {
 }
 
 .float-right .nivel-right {
-  width: 30% !important;
+  width: 35% !important;
   float: right !important;
 }
 
-.float-right .content-img {
-  left: inherit !important;
-  right: 34% !important;
-}
-
 .float-right .content-img.active-img {
-  right: 45% !important;
+  margin-left: 0 !important;
 }
 
 @media (min-width: 992px) {
@@ -6066,7 +6082,7 @@ body > .main-container.container-fluid {
 .float-right .clone-nivel-2.active-clone, .float-right .clone-nivel-2.active-clone2,
 .float-right .clone-nivel-3.active-clone,
 .float-right .clone-nivel-3.active-clone2 {
-  right: 20% !important;
+  right: 16% !important;
   left: initial !important;
 }
 
@@ -6212,7 +6228,7 @@ body > .main-container.container-fluid {
 .parent-clone .clone-nivel-2.active-clone, .parent-clone .clone-nivel-2.active-clone2,
 .parent-clone .clone-nivel-3.active-clone,
 .parent-clone .clone-nivel-3.active-clone2 {
-  left: 20%;
+  left: 16%;
   opacity: 1;
   -webkit-transition: .7s;
   -o-transition: .7s;
@@ -6728,6 +6744,22 @@ body > .main-container.container-fluid {
   padding: 0 0 0 20px;
 }
 
+@media (min-width: 992px) {
+  .tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px 0 0 0;
+    height: 310px;
+  }
+}
+
 .tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1.active {
   background-color: white;
   -webkit-transition: background-color 2s;
@@ -6738,6 +6770,10 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 > li {
     margin: 12px 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
   }
 }
 
@@ -6972,7 +7008,7 @@ body > .main-container.container-fluid {
   display: none;
 }
 
-.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(2) > .nav-child {
+.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(4) > .nav-child {
   /* temporal */
 }
 
@@ -7201,122 +7237,6 @@ body > .main-container.container-fluid {
 
 .block-google-cse form button {
   display: none;
-}
-
-.view-id-galerias_home img {
-  width: 100%;
-  height: 100% !important;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-}
-
-/* layout 1  */
-.box.a {
-  grid-column: 1/5;
-  grid-row: 1;
-}
-
-.box.b {
-  grid-column: 1/3;
-  grid-row: 2;
-}
-
-.box.c {
-  grid-column: 3/5;
-  grid-row: 2;
-}
-
-.box.d {
-  grid-column: 1/5;
-  grid-row: 3;
-}
-
-/* layout 2  */
-.box-1.a {
-  grid-column: 1/3;
-  grid-row: 1;
-}
-
-.box-1.b {
-  grid-row: 1;
-  grid-column: 3/5;
-}
-
-.box-1.c {
-  grid-column: 1/5;
-  grid-row: 2;
-}
-
-/* layout 3  */
-.box-2.a {
-  grid-column: 1/4;
-  grid-row: 1/5;
-}
-
-.box-2.b {
-  grid-column: 4/5;
-  grid-row: 1;
-}
-
-.box-2.c {
-  grid-column: 4/5;
-  grid-row: 2;
-}
-
-.box-2.d {
-  grid-column: 4/5;
-  grid-row: 3;
-}
-
-.box-2.e {
-  grid-column: 4/5;
-  grid-row: 4;
-}
-
-.wrapper4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-}
-
-/* layout 4  */
-.box-3.a {
-  grid-column: 1/3;
-  grid-row: 1/4;
-}
-
-.box-3.b {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.box-3.c {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.box-3.d {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.box-3.e {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-.box-3.f {
-  grid-column: 2;
-  grid-row: 4;
-}
-
-.box-3.g {
-  grid-column: 3;
-  grid-row: 4;
 }
 
 /*

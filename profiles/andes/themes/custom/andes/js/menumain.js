@@ -39,7 +39,7 @@
       /* cuando sea flotante a derecha clase necesaria */
       $(".float-right .row-fluid .tb-megamenu-column:nth-child(2)").addClass('nivel-right');
       /* Contenedor de imagen  */
-      $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img');
+      $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img').siblings('.tb-megamenu-column').addClass('content-nivel-1');
         /* hover finalizar las animaciones*/
       if (docWidth > 992) {
 

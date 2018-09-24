@@ -47,17 +47,22 @@ $white:#fff;
       }
       .content-img {
         display: none;
-        margin-top: 20px;
         @include respond-to(xl) {
-          display: block;
+          display: inline-block;
          /*  margin-left: -20px;
           transition:  .7s; */
-          position: absolute;
-          left: 31%;
+          //position: absolute;
+          //left: 31%;
+          margin-top: 15px;
           transition:  .7s;
-          width: 70%;
+          width: 62%;
+          margin-left: 0;
+          //width: 70%;
           &.active-img{
-            left: 42%;
+            //left: 42%;
+            //width: 62%;
+            margin-left: 2%;
+            width: 60%;
             transition:  .7s;
           }
           a{
@@ -70,6 +75,17 @@ $white:#fff;
           li{
             padding: 0;
             margin: 0;
+            a{
+              @include respond-to(xl) {
+              height: 300px;
+              display: block;
+                .container-menu-image,
+                .image-menu,
+                .img-responsive{
+                  height: 300px;
+                }
+              }
+            }
           }
         }
         .menu-title{
@@ -78,6 +94,12 @@ $white:#fff;
         ul.tb-megamenu-subnav.level-1{
           border-left: none !important;
         }
+      }
+      .content-nivel-1 {
+        //background: red;
+        //margin-top: 20px;
+        //margin-left: 0;
+        width: 35%
       }
     }
   }
@@ -412,14 +434,15 @@ $white:#fff;
 /* flotante a la derecha */
 .float-right{
   .nivel-right {
-    width: 30% !important;
+    width: 35% !important;
     float: right !important;
   }
   .content-img {
-    left: inherit !important;
-    right: 34% !important;
+    //left: inherit !important;
+    //right: 34% !important;
     &.active-img {
-      right: 45% !important;
+      //right: 45% !important;
+      margin-left: 0 !important;
     }
   }
   /* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -449,7 +472,7 @@ $white:#fff;
     left: inherit !important;
     &.active-clone,
     &.active-clone2 {
-      right: 20% !important;
+      right: 16% !important;
       left: initial !important;
     }
   }
@@ -557,7 +580,7 @@ $white:#fff;
     height: 100%;
     &.active-clone,
     &.active-clone2 {
-      left: 20%;
+      left: 16%;
       opacity: 1;
       transition: .7s;
     }
@@ -974,6 +997,11 @@ $white:#fff;
       margin: 23px 0 0 0;
       padding: 0 0 0 20px;
       @include respond-to(xl){
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        height: 310px;
       }
       &.active{
         background-color: rgba(255, 255, 255, 1.0);
@@ -982,6 +1010,9 @@ $white:#fff;
       > li{
         @include respond-to(xl){
           margin: 12px 0;
+          //flex-grow: 2;
+          flex-shrink: 0;
+          flex-basis: 0;
         }
         &:first-child{
           padding-top: 0;
@@ -1192,7 +1223,7 @@ $white:#fff;
   }
 
   .level-0 .level-1{
-    &:nth-child(2) > .nav-child{
+    &:nth-child(4) > .nav-child{
         /* temporal */
       //display: block;
       //background-color: red;
