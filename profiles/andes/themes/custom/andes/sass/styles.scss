@@ -34,21 +34,21 @@
 // and are not documented.
 //
 // Style guide: layouts
-@import 'Layouts/eventos',
-				'Layouts/noticias',
-				'Layouts/publicaciones',
-				'Layouts/especiales',
-				'Layouts/layout-1',
-				'Layouts/layout-2',
-				'Layouts/layout-3',
-				'Layouts/layout-4',
-				'Layouts/layout-5',
-				'Layouts/layout-7',
-				'Layouts/layout-9',
-				'Layouts/layout-11',
-				'Layouts/layout-cultura',
-				'Layouts/layout-actividades',
-				'Layouts/view-componente-ranking-home';
+@import 'Layouts/eventos';
+@import	'Layouts/noticias';
+@import	'Layouts/publicaciones';
+@import	'Layouts/especiales';
+@import	'Layouts/layout-1';
+@import	'Layouts/layout-2';
+@import	'Layouts/layout-3';
+@import	'Layouts/layout-4';
+@import	'Layouts/layout-5';
+@import	'Layouts/layout-7';
+@import	'Layouts/layout-9';
+@import	'Layouts/layout-11';
+@import	'Layouts/layout-cultura';
+@import	'Layouts/layout-actividades';
+@import	'Layouts/view-componente-ranking-home';
 
 // Components
 //
@@ -58,34 +58,34 @@
 // Weight: 1
 //
 // Style guide: components
-@import 'Components/plaisholder',
-				'Components/sliders-homes',
-				'Components/interna_noticias',
-				'Components/componente-three-collumnas',
-				'Components/componente-acordion',
-				'Components/componente-eventos-destacados',
-				'Components/componente-filas-taps',
-				'Components/componente-four-items',
-				'Components/componente-especiales-destacados',
-				'Components/componente-noticias',
-				'Components/componente-noticias-relacionadas',
-				'Components/componente-noticias-recientes',
-				'Components/componente-publicaciones',
-				'Components/interna_publicaciones',
-				'Components/componente-flecha-hora-eventos',
-				'Components/componente-redes-sociales',
-				'Components/componente-catalogo',
-				'Components/menuMain',
-				'Components/componente-galeria',
-				'Components/componente-para-cajas-negras',
-				'Components/view-componente-enlaces-item',
-				'Components/view-calendario',
-				'Components/componente-anuncios',
-				'Components/view-contenido-equipo-de-trabajo',
-				'Components/componente-multimedia',
-				'Components/componente-multimedia-recientes',
-				'Components/componente-multimedia-carrucel',
-				'Components/componente-noticia-multimedia-destacada';
+@import 'Components/plaisholder';
+@import 'Components/sliders-homes';
+@import 'Components/interna_noticias';
+@import 'Components/componente-three-collumnas';
+@import 'Components/componente-acordion';
+@import 'Components/componente-eventos-destacados';
+@import 'Components/componente-filas-taps';
+@import 'Components/componente-four-items';
+@import 'Components/componente-especiales-destacados';
+@import 'Components/componente-noticias';
+@import 'Components/componente-noticias-relacionadas';
+@import 'Components/componente-noticias-recientes';
+@import 'Components/componente-publicaciones';
+@import 'Components/interna_publicaciones';
+@import 'Components/componente-flecha-hora-eventos';
+@import 'Components/componente-redes-sociales';
+@import 'Components/componente-catalogo';
+@import 'Components/menuMain';
+@import 'Components/componente-galeria';
+@import 'Components/componente-para-cajas-negras';
+@import 'Components/view-componente-enlaces-item';
+@import 'Components/view-calendario';
+@import 'Components/componente-anuncios';
+@import 'Components/view-contenido-equipo-de-trabajo';
+@import 'Components/componente-multimedia';
+@import 'Components/componente-multimedia-recientes';
+@import 'Components/componente-multimedia-carrucel';
+@import 'Components/componente-noticia-multimedia-destacada';
 
 
 
@@ -97,8 +97,8 @@
 // Weight: 2
 //
 // Style guide: navigation
-@import 'Navegation/enlaces_de_interes',
-				'Navegation/footer';
+@import 'Navegation/enlaces_de_interes';
+@import 'Navegation/footer';
 
 // Forms
 //
