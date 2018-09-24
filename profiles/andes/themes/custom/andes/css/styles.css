@@ -2130,11 +2130,6 @@ th {
 
 /*
 //------------------------------------------------------------------------------
-// Layotu Cultura
-//------------------------------------------------------------------------------
-*/
-/*
-//------------------------------------------------------------------------------
 // Layotu actividades
 //------------------------------------------------------------------------------
 */
@@ -6729,6 +6724,15 @@ body > .main-container.container-fluid {
     color: #484851 !important;
     font-size: 0.9375rem;
   }
+}
+
+.tb-megamenu-menu-mega-menu .always-show ul.level-0 li.level-1 > a.text-hover {
+  color: red;
+  color: #484851 !important;
+  opacity: 1 !important;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .tb-megamenu-menu-mega-menu .always-show ul.level-0 li.level-1 > a.dropdown-toggle::after {
