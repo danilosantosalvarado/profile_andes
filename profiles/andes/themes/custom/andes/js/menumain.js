@@ -31,10 +31,13 @@
         return clone;
       }
       /*  add buscador */
-      $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
-      $(".barra-buscar").click(function () {
-        $('#block-google-cse-google-cse').toggleClass("buscador-open");
-      });
+      if (!$('.mega-menu-2').hasClass('barra-buscar')) {
+        console.log('true');
+        $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
+        $(".barra-buscar").click(function () {
+          $('#block-google-cse-google-cse').toggleClass("buscador-open");
+        });
+      }
       /* add class varios elementos */
       /* cuando sea flotante a derecha clase necesaria */
       $(".float-right .row-fluid .tb-megamenu-column:nth-child(2)").addClass('nivel-right');
@@ -60,7 +63,7 @@
         $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
-          if (scroll > 30) {
+          if (scroll > 10) {
             menu.removeClass('black');
             menu.addClass('yellow');
           }

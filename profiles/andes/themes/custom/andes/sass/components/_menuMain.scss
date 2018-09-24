@@ -1000,7 +1000,6 @@ $white:#fff;
     .mega-nav.level-1 {
       width: 100%;
       padding: 0px;
-      border-left: 1px solid #c8c8ca;
       margin: 23px 0 0 0;
       padding: 0 0 0 20px;
       @include respond-to(xl){
@@ -1009,6 +1008,7 @@ $white:#fff;
         flex-direction: column;
         margin: 10px 0 0 0;
         height: 310px;
+        padding: 0;
       }
       &.active{
         background-color: rgba(255, 255, 255, 1.0);
@@ -1016,10 +1016,10 @@ $white:#fff;
       }
       > li{
         @include respond-to(xl){
-          margin: 12px 0;
-          //flex-grow: 2;
+          padding: 10px 0 10px 23px;
           flex-shrink: 0;
           flex-basis: 0;
+          border-left: 1px solid #c8c8ca;
         }
         &:first-child{
           padding-top: 0;
@@ -1230,7 +1230,7 @@ $white:#fff;
   }
 
   .level-0 .level-1{
-    &:nth-child(4) > .nav-child{
+    &:nth-child(6) > .nav-child{
         /* temporal */
       //display: block;
       //background-color: red;
@@ -1367,6 +1367,9 @@ $white:#fff;
   height: 74px;
   &.yellow{
     background-color: color('yellow-menu');
+  }
+  &.black {
+    background-color:Black;
   }
   @include respond-to(xxl){
     //height: 74px;

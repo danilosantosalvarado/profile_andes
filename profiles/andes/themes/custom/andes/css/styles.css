@@ -6808,7 +6808,6 @@ body > .main-container.container-fluid {
 .tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 {
   width: 100%;
   padding: 0px;
-  border-left: 1px solid #c8c8ca;
   margin: 23px 0 0 0;
   padding: 0 0 0 20px;
 }
@@ -6826,6 +6825,7 @@ body > .main-container.container-fluid {
             flex-direction: column;
     margin: 10px 0 0 0;
     height: 310px;
+    padding: 0;
   }
 }
 
@@ -6838,11 +6838,12 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   .tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 > li {
-    margin: 12px 0;
+    padding: 10px 0 10px 23px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
+    border-left: 1px solid #c8c8ca;
   }
 }
 
@@ -7077,7 +7078,7 @@ body > .main-container.container-fluid {
   display: none;
 }
 
-.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(4) > .nav-child {
+.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(6) > .nav-child {
   /* temporal */
 }
 
@@ -7245,6 +7246,10 @@ body > .main-container.container-fluid {
 
 .wrapper-mega-menu.yellow {
   background-color: #FFF200;
+}
+
+.wrapper-mega-menu.black {
+  background-color: Black;
 }
 
 .wrapper-mega-menu .container {
