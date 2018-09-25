@@ -675,9 +675,10 @@ $white:#fff;
         ul.level-0 {
           li.level-1:nth-child(1) {
             a {
-              color: color('gray-menu-soy');
+              color: color('white');
+              cursor: inherit;
               &:hover{
-                color: color('gray-menu-soy');
+                color: color('white');
                 transition: .3s;
               }
             }
@@ -700,7 +701,8 @@ $white:#fff;
                 background: transparent;
                 border-right: none;
                 font-family: $latolight;
-                color: color('gray-menu-soy');
+                //color: color('gray-menu-soy');
+                color: color('white');
                 @include font-size(xs);
                 font-weight: 400;
                 transition: .3s;
@@ -730,8 +732,16 @@ $white:#fff;
                     right: 10px;
                   }
                   &.buttom-guia{
+                    cursor: pointer;
+                    &:hover{
+                      color: color('white');
+                    }
                     &.active{
                       background-color: color('white');
+                      color: color('black');
+                      &:hover{
+                        color: color('black');
+                      }
                       &:before{
                         background: url(../img/icon-flecha-arriba-active.png) no-repeat center;
                       }
@@ -1256,7 +1266,7 @@ $white:#fff;
   .level-0 .level-1{
     &:nth-child(1) > .nav-child{
         /* temporal */
-      display: block;
+      //display: block;
       //background-color: red;
     }
     > .nav-child{

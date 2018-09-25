@@ -6416,11 +6416,12 @@ body > .main-container.container-fluid {
 }
 
 .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1:nth-child(1) a {
-  color: #a9a9a9;
+  color: #fff;
+  cursor: inherit;
 }
 
 .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1:nth-child(1) a:hover {
-  color: #a9a9a9;
+  color: #fff;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -6445,7 +6446,7 @@ body > .main-container.container-fluid {
     background: transparent;
     border-right: none;
     font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
-    color: #a9a9a9;
+    color: #fff;
     font-size: 0.8125rem;
     font-weight: 400;
     -webkit-transition: .3s;
@@ -6479,8 +6480,18 @@ body > .main-container.container-fluid {
     height: 14px;
     right: 10px;
   }
+  .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a.dropdown-toggle.buttom-guia {
+    cursor: pointer;
+  }
+  .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a.dropdown-toggle.buttom-guia:hover {
+    color: #fff;
+  }
   .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a.dropdown-toggle.buttom-guia.active {
     background-color: #fff;
+    color: #000;
+  }
+  .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a.dropdown-toggle.buttom-guia.active:hover {
+    color: #000 !important;
   }
   .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a.dropdown-toggle.buttom-guia.active:before {
     background: url(../img/icon-flecha-arriba-active.png) no-repeat center;
@@ -7099,7 +7110,6 @@ body > .main-container.container-fluid {
 
 .tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(1) > .nav-child {
   /* temporal */
-  display: block;
 }
 
 .tb-megamenu-menu-mega-menu .level-0 .level-1 > .nav-child {
