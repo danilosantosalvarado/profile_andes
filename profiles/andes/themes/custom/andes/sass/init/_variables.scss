@@ -150,18 +150,3 @@ $line-height-method: ratio;
 
 // Output media queries where the above px are converted to ems.
 // @include breakpoint-set('to ems', true);
-
-$basic: 543px;
-$pair: 456px 794px;
-
-#foo {
-  content: 'No Media Queries';
-
-  @include breakpoint($basic) {
-    content: 'Basic Media Query';
-  }
-
-  @include breakpoint($pair) {
-    content: 'Paired Media Query';
-  }
-}

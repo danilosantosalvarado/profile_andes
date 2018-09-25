@@ -113,35 +113,22 @@
               text-align: center;
               margin: 0;
               &:nth-child(1) {
-                font-family: $crimson-semibold;
+                font-family: $latobold;
                 @include font-size(m);
                 line-height: 1;
                 letter-spacing: 1px;
-                @include respond-to(xl) {
-                  @include font-size(xl);
-                }
               }
               &:nth-child(2) {
                 font-family: $latolight;
                 @include font-size(m);
-                @include respond-to(xl) {
-                  @include font-size(xl);
-
-                }
               }
               &:nth-child(3) {
-                font-family: $latoregular;
+                font-family: $latolight;;
                 @include font-size(m);
-                @include respond-to(xl) {
-                  @include font-size(l);
-                }
               }
               &:nth-child(4) {
                 font-family: $latolight;
                 @include font-size(m);
-                @include respond-to(xl) {
-                  @include font-size(xl);
-                }
               }
             }
           }
