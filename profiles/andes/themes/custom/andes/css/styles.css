@@ -6393,19 +6393,17 @@ body > .main-container.container-fluid {
   text-decoration: underline;
 }
 
-.parent-clone .clone-nivel-2 .mega-nav.level-2 > li a.dropdown-toggle:before,
-.parent-clone .clone-nivel-2 .mega-nav.level-3 > li a.dropdown-toggle:before,
-.parent-clone .clone-nivel-3 .mega-nav.level-2 > li a.dropdown-toggle:before,
-.parent-clone .clone-nivel-3 .mega-nav.level-3 > li a.dropdown-toggle:before {
-  content: '...';
+.parent-clone .clone-nivel-2 .mega-nav.level-2 > li a.dropdown-toggle .caret,
+.parent-clone .clone-nivel-2 .mega-nav.level-3 > li a.dropdown-toggle .caret,
+.parent-clone .clone-nivel-3 .mega-nav.level-2 > li a.dropdown-toggle .caret,
+.parent-clone .clone-nivel-3 .mega-nav.level-3 > li a.dropdown-toggle .caret {
   background: url(../img/Icon/arrow_next.svg) no-repeat center;
-  position: absolute;
-  font-size: 0;
   background-size: 20px;
-  height: 20px;
-  width: 20px;
-  right: -15px;
-  top: -3px;
+  height: 16px;
+  width: 13px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
 }
 
 /* menus yo soy  */
@@ -6433,6 +6431,17 @@ body > .main-container.container-fluid {
   }
 }
 
+.block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1:nth-child(1) a {
+  color: #a9a9a9;
+}
+
+.block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1:nth-child(1) a:hover {
+  color: #a9a9a9;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
 .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1.clone-mobile-block {
   background: #353535;
   border-left: solid 1px #979797;
@@ -6448,7 +6457,7 @@ body > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a {
-    padding: 8.5px 10px;
+    padding: 9px 10px;
     background: transparent;
     border-right: none;
     font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
@@ -6507,8 +6516,9 @@ body > .main-container.container-fluid {
   display: block !important;
 }
 
-.tb-megamenu-menu-menu-top-soy .level-0 .level-1:nth-child(2) > .nav-child {
+.tb-megamenu-menu-menu-top-soy .level-0 .level-1:nth-child(1) > .nav-child {
   /* temporal */
+  display: block;
 }
 
 .tb-megamenu-menu-menu-top-soy .level-0 .level-1 > .nav-child {
@@ -6800,7 +6810,6 @@ body > .main-container.container-fluid {
 }
 
 .tb-megamenu-menu-mega-menu .always-show ul.level-0 li.level-1 > a.text-hover {
-  color: red;
   color: #484851 !important;
   opacity: 1 !important;
   -webkit-transition: .3s;
@@ -6883,16 +6892,31 @@ body > .main-container.container-fluid {
   text-decoration: underline;
 }
 
-.tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 > li a.dropdown-toggle:before {
-  content: '...';
+.tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 > li a.dropdown-toggle {
+  /*  &:after{
+            content: '...';
+            background: url(../img/Icon/arrow_next.svg) no-repeat center;
+            position: absolute;
+            font-size: 0;
+            background-size: 20px;
+            right: -15px;
+            height: 20px;
+            width: 20px;
+            top: -4px;
+          } */
+}
+
+.tb-megamenu-menu-mega-menu .always-show .mega-nav.level-1 > li a.dropdown-toggle .caret {
+  background: red;
+  position: relative;
   background: url(../img/Icon/arrow_next.svg) no-repeat center;
-  position: absolute;
-  font-size: 0;
   background-size: 20px;
-  right: -15px;
-  height: 20px;
-  width: 20px;
-  top: -3px;
+  display: inline-block;
+  vertical-align: top;
+  width: 14px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 .tb-megamenu-menu-mega-menu .always-show .level-3 .nav-child {
@@ -7089,8 +7113,9 @@ body > .main-container.container-fluid {
   display: none;
 }
 
-.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(6) > .nav-child {
+.tb-megamenu-menu-mega-menu .level-0 .level-1:nth-child(1) > .nav-child {
   /* temporal */
+  display: block;
 }
 
 .tb-megamenu-menu-mega-menu .level-0 .level-1 > .nav-child {
@@ -7164,7 +7189,7 @@ body > .main-container.container-fluid {
 /* mobile styles */
 /* se crear bloque en mobile */
 .navbar-header {
-  background: #ffea00;
+  background: #ead134;
   margin: 0 !important;
   width: 100%;
   height: 128px;
