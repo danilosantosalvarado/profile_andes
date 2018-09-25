@@ -702,6 +702,7 @@ $white:#fff;
                 font-family: $latolight;
                 color: color('gray-menu-soy');
                 @include font-size(xs);
+                font-weight: 400;
                 transition: .3s;
                 &:hover{
                   color: color(white);

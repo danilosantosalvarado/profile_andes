@@ -6447,6 +6447,7 @@ body > .main-container.container-fluid {
     font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
     color: #a9a9a9;
     font-size: 0.8125rem;
+    font-weight: 400;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
