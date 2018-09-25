@@ -35,6 +35,8 @@
         console.log('true');
         $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
         $(".barra-buscar").click(function () {
+          $(this).toggleClass('icon-close');
+          $('#google-cse-results-searchbox-form input').attr('placeholder', 'Buscar');
           $('#block-google-cse-google-cse').toggleClass("buscador-open");
         });
       }
@@ -66,6 +68,7 @@
           if (scroll > 10) {
             menu.removeClass('black');
             menu.addClass('yellow');
+            $(".barra-buscar").removeClass('cerrar');
           }
           else {
             menu.removeClass('yellow');

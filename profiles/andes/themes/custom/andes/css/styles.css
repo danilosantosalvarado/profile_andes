@@ -6092,6 +6092,9 @@ body > .main-container.container-fluid {
     background-position: 1px -17px;
     cursor: pointer;
   }
+  .barra-buscar.icon-close:before {
+    background: url(../img/Icon/icon-cerrar.png) no-repeat center;
+  }
   .barra-buscar span {
     display: none;
   }
@@ -7240,7 +7243,6 @@ body > .main-container.container-fluid {
 }
 
 .wrapper-mega-menu {
-  background-color: #fff;
   height: 74px;
 }
 
@@ -7273,26 +7275,59 @@ body > .main-container.container-fluid {
 }
 
 .block-google-cse {
-  position: absolute;
-  top: -100px;
+  position: fixed;
+  top: -100%;
   width: 100%;
   background-color: #fff;
-  -webkit-transition: top .5s;
-  -o-transition: top .5s;
-  transition: top .5s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .block-google-cse.buscador-open {
-  top: 30px;
-  -webkit-transition: top .5s;
-  -o-transition: top .5s;
-  transition: top .5s;
+  top: 110px;
+  z-index: 9;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.block-google-cse #google-cse-results-searchbox-form .form-type-textfield {
+  position: relative;
+}
+
+.block-google-cse #google-cse-results-searchbox-form .form-type-textfield:before {
+  content: '...';
+  background: url(../img/Icon/icon-lupa.png) no-repeat center;
+  top: 0px;
+  position: absolute;
+  font-size: 0;
+  background-size: 18px;
+  width: 18px;
+  height: 18px;
+  right: 30px;
+  background-position: 1px -17px;
+  cursor: pointer;
+}
+
+.block-google-cse #google-cse-results-searchbox-form input {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #484851;
+  font-size: 1.9375rem;
+  background: initial !important;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.block-google-cse .block-title {
+  display: none;
 }
 
 .block-google-cse form {
   width: 970px;
   margin: 0 auto;
-  padding: 6px 0;
+  padding: 6px 0 10px;
 }
 
 @media (min-width: 992px) {
