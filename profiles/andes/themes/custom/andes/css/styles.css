@@ -1,20 +1,4 @@
 @charset "UTF-8";
-#foo {
-  content: 'No Media Queries';
-}
-
-@media (min-width: 543px) {
-  #foo {
-    content: 'Basic Media Query';
-  }
-}
-
-@media (min-width: 456px) and (max-width: 794px) {
-  #foo {
-    content: 'Paired Media Query';
-  }
-}
-
 @font-face {
   font-family: 'Crimson_textbold';
   src: url("../fonts/Crimsontext/CrimsonText-Bold.ttf") format("truetype");
@@ -8212,16 +8196,10 @@ body > .main-container.container-fluid {
 }
 
 .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(1) {
-  font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1;
   letter-spacing: 1px;
-}
-
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(1) {
-    font-size: 1.5rem;
-  }
 }
 
 .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(2) {
@@ -8229,32 +8207,14 @@ body > .main-container.container-fluid {
   font-size: 1rem;
 }
 
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(2) {
-    font-size: 1.5rem;
-  }
-}
-
 .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
-  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-}
-
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
-    font-size: 1.1875rem;
-  }
 }
 
 .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(4) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-}
-
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(4) {
-    font-size: 1.5rem;
-  }
 }
 
 /* ------| Paguinadores |----- */
