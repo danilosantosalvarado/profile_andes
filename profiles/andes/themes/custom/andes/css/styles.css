@@ -5992,7 +5992,7 @@ body > .main-container.container-fluid {
 }
 
 #block-views-logos-header-block-2 a:hover, #block-views-logos-header-block-2 a:focus {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 #block-views-logos-header-block-2 h2.block-title {
@@ -6451,8 +6451,7 @@ body > .main-container.container-fluid {
     padding: 8.5px 10px;
     background: transparent;
     border-right: none;
-    font-weight: normal;
-    font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+    font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
     color: #a9a9a9;
     font-size: 0.8125rem;
     -webkit-transition: .3s;
