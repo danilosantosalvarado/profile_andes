@@ -5986,7 +5986,7 @@ body > .main-container.container-fluid {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  padding: 7.5px 25px;
+  padding: 8px 25px;
   font-size: 0.8125rem;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
 }
@@ -7220,6 +7220,7 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .wrapper-menu-soy {
     display: block;
+    height: 37px;
   }
 }
 

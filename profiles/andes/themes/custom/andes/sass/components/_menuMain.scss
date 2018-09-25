@@ -324,7 +324,7 @@ $white:#fff;
     color: $white;
     float: left;
     transition: 0.3s;
-    padding: 7.5px 25px;
+    padding: 8px 25px;
     @include font-size(xs);
     font-family: $latolight;
     &:hover,
@@ -1345,6 +1345,7 @@ $white:#fff;
   display: none;
   @include respond-to(xl){
     display: block;
+    height: 37px;
   }
   .block-tb-megamenu {
     width: 80%;
