@@ -5973,7 +5973,6 @@ body > .main-container.container-fluid {
 #block-views-logos-header-block-2 {
   position: absolute;
   list-style: none;
-  border-left: solid 1px #979797;
   background: #353535;
 }
 
@@ -5988,12 +5987,11 @@ body > .main-container.container-fluid {
   -o-transition: 0.3s;
   transition: 0.3s;
   padding: 7.5px 25px;
-  font-size: 0.90625rem;
+  font-size: 0.8125rem;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
 }
 
-#block-views-logos-header-block-2 a:hover {
-  opacity: .5;
+#block-views-logos-header-block-2 a:hover, #block-views-logos-header-block-2 a:focus {
   text-decoration: none;
 }
 

@@ -311,7 +311,7 @@ $white:#fff;
 #block-views-logos-header-block-2{
   position: absolute;
   list-style: none;
-  border-left: solid 1px #979797;
+  //border-left: solid 1px #979797;
   background:#353535;
   @include respond-to(xl){
     //position: absolute;
@@ -325,11 +325,12 @@ $white:#fff;
     float: left;
     transition: 0.3s;
     padding: 7.5px 25px;
-    @include font-size(14.5px);
+    @include font-size(xs);
     font-family: $latolight;
-    &:hover{
-      opacity: .5;
-      text-decoration: none;
+    &:hover,
+    &:focus{
+      //opacity: .5;
+      text-decoration: none !important;
     }
   }
   h2.block-title{
