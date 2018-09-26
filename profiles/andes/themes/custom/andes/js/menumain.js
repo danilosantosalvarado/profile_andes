@@ -66,13 +66,14 @@
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
           if (scroll > 10) {
-            menu.removeClass('black');
-            menu.addClass('yellow');
+            
+            menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
+            menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
             $(".barra-buscar").removeClass('cerrar');
           }
           else {
-            menu.removeClass('yellow');
-            menu.addClass('black');
+            menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
+            menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
           }
         });
 

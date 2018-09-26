@@ -34,8 +34,23 @@ function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id)
       ),
       '#suffix' => '<div class="colorfield-picker"></div>',
     );
-    $form['#submit'][] = 'udla_blocks_alter_form_submit';
+    if($form['module']['#value'] == 'tb_megamenu'){
+      $form['settings']['background_color_change'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Background Color Change'),
+        '#size' => 7,
+        '#maxlength' => 7,
+        '#default_value' => isset($block->background_color_change) ? $block->background_color_change : '',
+        '#attributes' => array('class' => array('colorfield-colorpicker')),
+        '#attached' => array(
+          'library' => array(array('system', 'farbtastic')),
+          'js' => array(drupal_get_path('module', 'colorfield') . '/js/colorfield-farbtastic.js'),
+        ),
+        '#suffix' => '<div class="colorfield-picker"></div>',
+      );
 
+    }
+    $form['#submit'][] = 'udla_blocks_alter_form_submit';
   }
 }
 
@@ -68,7 +83,8 @@ function udla_blocks_alter_form_submit($form, $form_state)
       if (module_exists('context')) {
         cache_clear_all('context', 'cache', true);
       }
-      sleep(1);
+      drupal_clear_css_cache();
+      sleep(3);
     }
     if (isset($form_state['values']['text_color']) && $form['settings']['text_color']['#default_value'] != $form_state['values']['text_color'] && user_access('administer blocks')) {
       $result = db_select('backgrounds_color', 'bc')
@@ -91,7 +107,29 @@ function udla_blocks_alter_form_submit($form, $form_state)
       drupal_clear_css_cache();
       sleep(3);
     }
+    if (isset($form_state['values']['background_color_change']) && $form['settings']['background_color_change']['#default_value'] != $form_state['values']['background_color_change'] && user_access('administer blocks')) {
 
+      $result = db_select('backgrounds_color', 'bc')
+        ->fields('bc', array('color'))
+        ->condition('color', $form_state['values']['background_color_change'], '=')
+        ->execute()
+        ->fetchAssoc();
+      if (empty($result)) {
+        _color_set_for_data($form_state['values']['background_color_change']);
+      }
+
+      db_update('block')
+        ->fields(array('background_color_change' => $form_state['values']['background_color_change']))
+        ->condition('module', $form_state['values']['module'])
+        ->condition('delta', $form_state['values']['delta'])
+        ->execute();
+      // Flush all context module cache to use the updated background_color_change.
+      if (module_exists('context')) {
+        cache_clear_all('context', 'cache', true);
+      }
+      drupal_clear_css_cache();
+      sleep(3);
+    }
 
   }
 }
@@ -127,13 +165,24 @@ function udla_blocks_alter_init()
  * Implementation of hook_preprocess_HOOK().
  */
 function udla_blocks_alter_preprocess_block(&$vars)
-{
   $block = $vars['block'];
+
   if (!empty($block->background_color)) {
-    $result = _block_data_css($block->background_color, 'background');
-    if (!empty($result)) {
-      $vars['classes_array'][] = implode(' ', $result);
+    if ( isset($block->background_color_change) && !empty($block->background_color_change)) {
+      $result = _block_data_css($block->background_color, 'background');
+      $result_b = _block_data_css($block->background_color_change, 'background');
+      drupal_add_js(array('udla_blocks_alter' => array('background_color' => reset($result))), array('type' => 'setting'));
+      drupal_add_js(array('udla_blocks_alter' => array('background_color_change' => reset($result_b))), array('type' => 'setting'));
+  
+    }else{
+      $result = _block_data_css($block->background_color, 'background');
+  
+      if (!empty($result)) {
+        $vars['classes_array'][] = implode(' ', $result);
+  
+      }
     }
+
   }
   if (!empty($block->color_title)) {
     $result = _block_data_css($block->color_title, 'text');
@@ -141,6 +190,7 @@ function udla_blocks_alter_preprocess_block(&$vars)
       $vars['classes_array'][] = implode(' ', $result);
     }
   }
+
 }
 
 
