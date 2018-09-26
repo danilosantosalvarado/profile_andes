@@ -5290,14 +5290,14 @@ body > .main-container.container-fluid {
 //Componente fecha y hora eventos
 //------------------------------------------------------------------------------
 */
-.view-id-fecha_y_hora_evento .views-row {
+.view-display-id-fecha_y_hora_evento .views-row {
   float: left;
   width: 100%;
   padding: 20px 15px;
 }
 
 @media (min-width: 768px) {
-  .view-id-fecha_y_hora_evento .views-row {
+  .view-display-id-fecha_y_hora_evento .views-row {
     padding: 20px 0;
     max-width: 550px;
     margin: 0 auto;
@@ -5306,12 +5306,12 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-id-fecha_y_hora_evento .views-row .imagen-eento {
+.view-display-id-fecha_y_hora_evento .views-row .imagen-eento {
   float: left;
   width: 50px;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal {
   float: left;
   width: auto;
   padding-left: 20px;
@@ -5319,9 +5319,9 @@ body > .main-container.container-fluid {
           box-sizing: content-box;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos,
-.view-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos,
-.view-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos,
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos,
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos {
   margin-bottom: 1rem;
   widows: 100%;
   display: -webkit-box;
@@ -5329,24 +5329,24 @@ body > .main-container.container-fluid {
   display: flex;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos span:nth-child(1),
-.view-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos span:nth-child(1),
-.view-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos span:nth-child(1) {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos span:nth-child(1),
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos span:nth-child(1),
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos span:nth-child(1) {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   color: #000;
   font-size: 0.8125rem;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos span:nth-child(2),
-.view-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos span:nth-child(2),
-.view-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos span:nth-child(2) {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .lugar-eventos span:nth-child(2),
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .fecha-eventos span:nth-child(2),
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .hora-eventos span:nth-child(2) {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   color: #000;
   font-size: 0.8125rem;
   padding: 0 5px;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a {
   display: block;
   max-width: 150px;
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
@@ -5357,7 +5357,7 @@ body > .main-container.container-fluid {
   padding: 10px 30px;
 }
 
-.view-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a:hover {
+.view-display-id-fecha_y_hora_evento .views-row .box-internal .button-eventos a:hover {
   background-color: #46b9c0;
   color: #fff;
 }
