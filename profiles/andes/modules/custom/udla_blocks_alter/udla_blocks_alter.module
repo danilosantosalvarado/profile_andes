@@ -164,7 +164,7 @@ function udla_blocks_alter_init()
 /**
  * Implementation of hook_preprocess_HOOK().
  */
-function udla_blocks_alter_preprocess_block(&$vars)
+function udla_blocks_alter_preprocess_block(&$vars){
   $block = $vars['block'];
 
   if (!empty($block->background_color)) {
