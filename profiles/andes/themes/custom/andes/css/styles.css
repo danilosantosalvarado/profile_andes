@@ -2859,10 +2859,6 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
-.view-slider-homes .views_slideshow_swiper-processed {
-  height: 609px;
-}
-
 .view-slider-homes .views_slideshow_swiper-processed ul {
   padding: 0px;
   list-style: none;
@@ -2879,8 +2875,6 @@ body > .main-container.container-fluid {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
-  overflow: hidden;
-  height: 100%;
 }
 
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional {
@@ -2909,12 +2903,10 @@ body > .main-container.container-fluid {
 
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-content .img-desktop {
   width: 100%;
-  height: 100%;
 }
 
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-content .img-desktop img {
   width: 100%;
-  height: 100%;
 }
 
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .iframe-conten {
