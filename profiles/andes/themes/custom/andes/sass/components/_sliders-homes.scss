@@ -14,10 +14,13 @@
 			li.swiper-slide {
 				overflow: hidden;
 				display: block;
-				height: 600px;
+				// height: 600px;
+				height: auto;
+				// border: 2px solid red;
 				.views-slideshow-swiper-main-frame-row-item {
 					display: inline-flex;
 					width: 100%;
+					height: 100%;
 					// overflow: hidden;
 					// height: 100%;
 					.views-field.views-field-views-conditional {
@@ -51,7 +54,8 @@
 							overflow: hidden;
 							height: 50%;
 							@include respond-to(m) {
-								height: 79%;
+								// height: 79%;
+								height: 73%;
 							}
 							.youtube-container--responsive {
 								padding-bottom: initial;
@@ -146,83 +150,92 @@
 .view-slider-homes {
 	.field-content {
 		.slider-homes-bottom {
-			padding: 0 15px;
-			overflow: hidden;
-			@include margin(.834 0);
 			@include respond-to(m) {
-				width: 750px;
-				@include margin(.834 auto .834);
+				padding: 20px 30px;
+				background-color: #f4f1f1;
+				border-bottom: 1px solid #ebba00;
 			}
-			@include respond-to(xl) {
-				width: 970px;
-			}
-			@include respond-to(xxxl) {
-  			width: 1170px;
-			}
-			//titulo
-			.title-slider-homes {
-				width: 100%;
-				font-family: $latobold;
-				@include font-size(l);
-				@include margin(.417 0);
-				text-transform: uppercase;
-				color: #585863;
-				min-height: 50px;
-				padding-bottom: 10px;
-				@include respond-to(xs) {
-					float: left;
-				}
+			.conten {
+				padding: 0 15px 39px;
+				overflow: hidden;
+				margin: 0 auto;
 				@include respond-to(m) {
-					width: 41.66666667%;
-					text-align: right;
-					padding-right: 25px;
-					padding-bottom: 0;
+					width: 750px;
 				}
-			}
-			//sub titulo
-			.body-slider-homes {
-		    margin: 0;
-		    font-family: $crimson-textregular;
-		    text-align: left;
-				color: #585863;
-				@include respond-to(xs) {
-					float: left;
+				@include respond-to(xl) {
+					width: 970px;
 				}
-		  	@include font-size(m);
-		  	border-top: 1px solid #ebba00;
-		    padding-top: 15px;
-		    position: relative;
-		    min-height: 50px;
-		    @include respond-to(m) {
-					width: 33.33333333%;
-					border: 0;
-					border-left: 1px solid #ebba00;
-					padding-left: 25px;
-		    }
-			}
-			//button
-			.link-slider-homes {
-				margin: 15px 0;
-				@include respond-to(xs) {
-				 margin: 0;
+				@include respond-to(xxxl) {
+					width: 1170px;
 				}
-				a {
-					max-width: 145px;
-					display: block;
-					text-decoration: none;
-					text-align: center;
-					@include margin(0 auto);
-				  border: 1px solid #484851;
-				  color: #484851;
-					padding: 10px 35px;
+				//titulo
+				.title-slider-homes {
+					width: 100%;
+					font-family: $latobold;
+					@include font-size(l);
+					@include margin(.417 0);
+					text-transform: uppercase;
+					color: #585863;
+					min-height: 50px;
+					padding-bottom: 10px;
 					@include respond-to(xs) {
-						float: right;
-						@include margin(.834 .834 0 auto);
+						float: left;
 					}
-				  &:hover {
-    				background: color('grey-dark');
-    				color: color('white');
-    			}
+					@include respond-to(m) {
+						width: 41.66666667%;
+						text-align: right;
+						padding-right: 25px;
+						padding-bottom: 0;
+					}
+				}
+				//sub titulo
+				.body-slider-homes {
+					margin: 0;
+					font-family: $crimson-textregular;
+					text-align: left;
+					color: #585863;
+					padding: 0 15px 0 25px;
+					@include respond-to(xs) {
+						float: left;
+					}
+					@include font-size(m);
+					border-top: 1px solid #ebba00;
+					// padding-top: 15px;
+					position: relative;
+					min-height: 50px;
+					@include respond-to(m) {
+						width: 33.33333333%;
+						border: 0;
+						border-left: 1px solid #ebba00;
+						// padding-left: 25px;
+					}
+				}
+				//button
+				.link-slider-homes {
+					margin: 15px 0;
+					@include respond-to(xs) {
+					margin: 0;
+					}
+					a {
+						max-width: 145px;
+						display: block;
+						text-decoration: none;
+						text-align: center;
+						@include margin(0 auto);
+						border: 1px solid #484851;
+						font-family: $latolight;
+						@include font-size(m);
+						color: #484851;
+						padding: 10px 35px;
+						@include respond-to(xs) {
+							float: right;
+							@include margin(.834 .834 0 auto);
+						}
+						&:hover {
+							background: color('grey-dark');
+							color: color('white');
+						}
+					}
 				}
 			}
 		}
@@ -324,7 +337,8 @@
 	.slider-homes-bottom-control {
 		.views-slideshow-pager-field-processed {
 			position: absolute;
-			bottom: 6px;
+			// bottom: 6px;
+			bottom: 32px;
 			width: 100%;
 			padding: 0;
 			z-index: 1;
