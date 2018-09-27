@@ -50,7 +50,7 @@
 
         $level1.hover(
           function () {
-            //$('body').addClass('dark-layer');
+            $('body').addClass('dark-layer');
             $('.box-black').remove();
             $('.clone-nivel-2').remove();
             $('.clone-nivel-3').remove();
@@ -59,7 +59,7 @@
             $('.clone-nivel-3').removeClass('active-clone2');
           }, function () {
             $(this).addClass('text-hover');
-            console.log(this);
+            console.log('remover');
             if ($level1.find('>.nav-child')){
               //$('body').removeClass('dark-layer');
             }

@@ -5859,6 +5859,7 @@ body > .main-container.container-fluid {
   border: none;
   height: 100% !important;
   display: block;
+  margin: 0;
   /*  overflow: hidden;
   height: 109px; */
 }
@@ -7272,9 +7273,9 @@ body > .main-container.container-fluid {
   z-index: 9;
   background: url(../img/Icon/icon-menu-mobile.png) no-repeat center;
   background-position: 0 0px;
-  background-size: 21px;
-  height: 21px;
-  width: 21px;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
   margin-top: 19px;
   -webkit-transition: .3s;
   -o-transition: .3s;
