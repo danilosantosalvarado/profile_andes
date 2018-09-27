@@ -63,6 +63,13 @@ function udla_blocks_alter_schema_alter(&$schema)
       'default' => '',
       'description' => 'String containing the classes for the block.',
     );
+    $schema['block']['fields']['background_color_change'] = array(
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => true,
+      'default' => '',
+      'description' => 'String containing the classes for the block.',
+    );
   }
 }
 
@@ -71,6 +78,7 @@ function udla_blocks_alter_schema_alter(&$schema)
  */
 function udla_blocks_alter_update_7100()
 {
+
   // Check if the block_background_color table exists to prevent installation profiles
   // from running this update for versions without the block_background_color table.
   if (db_table_exists('block_background_color')) {
@@ -119,6 +127,7 @@ function udla_blocks_alter_update_7100()
     // Restore the primary key.
     db_add_primary_key('block_background_color', array('module', 'delta'));
   }
+
 }
 
 /**
@@ -126,6 +135,7 @@ function udla_blocks_alter_update_7100()
  */
 function udla_blocks_alter_update_7101()
 {
+
   // Ensure the block_background_color table exists, which is not true for all versions.
   if (db_table_exists('block_background_color')) {
     // Drop current primary key.
@@ -156,6 +166,7 @@ function udla_blocks_alter_update_7101()
  */
 function udla_blocks_alter_update_7103()
 {
+
   if (!db_field_exists('block', 'block_background_color')) {
     $schema['block'] = array();
     udla_blocks_alter_schema_alter($schema);
@@ -206,5 +217,20 @@ function udla_blocks_alter_schema()
     ),
     'primary key' => array('colorid'),
   );
-  return $schema;
+  return $schema; 
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function udla_blocks_alter_update_7590(){
+  $spec = array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => true,
+    'default' => '',  
+    'description' => 'String containing the classes for the block.',
+  );
+  db_add_field('block', 'background_color_change', $spec);
+  
 }
