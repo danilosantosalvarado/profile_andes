@@ -50,6 +50,7 @@
 
         $level1.hover(
           function () {
+            //$('body').addClass('dark-layer');
             $('.box-black').remove();
             $('.clone-nivel-2').remove();
             $('.clone-nivel-3').remove();
@@ -58,6 +59,10 @@
             $('.clone-nivel-3').removeClass('active-clone2');
           }, function () {
             $(this).addClass('text-hover');
+            console.log(this);
+            if ($level1.find('>.nav-child')){
+              //$('body').removeClass('dark-layer');
+            }
           }
         );
 
@@ -82,7 +87,7 @@
             menuhover = $(this).find('>.nav-child');
             menutopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1').find('>.nav-child'),
             offsettopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1 a.dropdown-toggle').offset();
-
+          menuhover.addClass('dark-layer')
           if (menuhover.parent('li').hasClass('level-1')) {
             menuhover.css({
               'margin-left': '-' + offset.left - 4 + 'px',

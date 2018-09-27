@@ -132,10 +132,27 @@ $white:#fff;
         }
       }
     }
-
+    li.dropdown.open .dark-layer{
+      &:hover{
+        /* &:after {
+          display: none;
+        } */
+      }
+     /*  &:after {
+        content: '...';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: black;
+        padding: 30px;
+        position: fixed;
+        opacity: .5;
+      } */
+    }
     li.dropdown.open.active > .dropdown-toggle,
     > li.dropdown.open.active > a:hover{
-       background-color: transparent;
+        background-color: transparent;
+        color: inherit;
     }
   }
 
@@ -704,7 +721,7 @@ $white:#fff;
               a{
                 color: color(white);
                 font-weight: weight(normal);
-                font-family: $latobold;
+                font-family: $latoregular;
                 font-size: 15px;
                 padding: 7.5px 13px;
               }
@@ -967,7 +984,7 @@ $white:#fff;
       //overflow-y: initial;
     }
     /* primeros item del menu */
-    ul.level-0 {
+    ul.level-0.nav {
       margin-top: 15px;
       @include respond-to(xl) {
         margin-top: 0;
@@ -998,9 +1015,23 @@ $white:#fff;
               transition: .3s;
             }
           }
+          /* > .nav-child .mega-dropdown-inner{
+            position: relative;
+            &:after {
+              content: '...';
+              width: 100%;
+              height: 100%;
+              display: block;
+              background-color: black;
+              padding: 30px;
+              position: fixed;
+              opacity: .5;
+              left: 0;
+            }
+          } */
         }
         > a {
-          color: color('gray-menu') !important;
+          color: color('gray-menu');
           font-weight: weight(normal);
           font-family: $latolight;
           background-color: transparent !important;
@@ -1012,11 +1043,11 @@ $white:#fff;
           @include font-size(l);
           @include respond-to(xl) {
             font-family: $latoregular;
-            color: color('grey') !important;
+            color: color('grey');
             @include font-size(15px);
           }
           &.text-hover {
-            color: color('grey') !important;
+            color: color('grey');
             opacity: 1 !important;
             transition: .3s;
 //
@@ -1279,7 +1310,7 @@ $white:#fff;
   }
 
   .level-0 .level-1{
-    &:nth-child(5) > .nav-child{
+    &:nth-child(3) > .nav-child{
         /* temporal meag menu */
       //display: block;
       //background-color: red;
@@ -1293,6 +1324,7 @@ $white:#fff;
       top: 0;
       margin: 0;
       transition: all .3s ease-in-out;
+
       @include respond-to(xl){
         background-color: #ffffff;
         border: none;
@@ -1313,6 +1345,7 @@ $white:#fff;
         max-width: 1170px;
         margin: 0 auto;
         overflow: hidden;
+        height: 100%;
       }
     }
   }
