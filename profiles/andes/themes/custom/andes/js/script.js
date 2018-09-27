@@ -6,7 +6,7 @@
   });
 
   // function galeria home
-  jQuery(document).on("click", ".galeria-home", function() {    
+  jQuery(document).on("click", ".galeria-home", function() {
     var imageSrc = jQuery(this).parents(".box-modal").find("img").attr("src");
     jQuery(".modal-gallery-home").attr("src", imageSrc);
   });
@@ -184,6 +184,20 @@ setTimeout(function(){
     $(".barra-buscar").click(function(){
       $( '#block-google-cse-google-cse' ).toggleClass( "buscador-open" );
     }); */
+  });
+
+  jQuery(document).ready(function($) {
+    $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
+      var alto = $('#views_slideshow_swiper_slider_homes-block_1 .img-desktop img').attr('height');
+      // var alto = $('#views_slideshow_swiper_slider_homes-block_1').height();
+      console.log(alto);
+      if ($(this).find('.slider-homes-bottom').length) {
+        var caja_bottom = $('.slider-homes-bottom').outerHeight();
+        $(this).find('.img-desktop img').height(alto - caja_bottom);
+      }else{
+        $(this).find('.img-desktop img').height(alto);
+      }
+    });
   });
 
 }(jQuery));
