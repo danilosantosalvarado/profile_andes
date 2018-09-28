@@ -67,11 +67,11 @@
         );
 
         /* Scroll menu cambio de colO r */
-        $(window).scroll(function (event) {
+       /* $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
           if (scroll > 10) {
-            
+
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
             $(".barra-buscar").removeClass('cerrar');
@@ -80,7 +80,7 @@
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
           }
-        });
+        });*/
 
         /* ciclo para el ancho de primer contenedor */
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
@@ -107,6 +107,29 @@
           let text  = menuhover.find('.level-2 a.dropdown-toggle').text();
           //console.log(text);
         });
+        /* remueve la capa oscura del menu en el fondo */
+        $('.dark-layer-hover').hover(
+          function () {
+          }, function () {
+            $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
+          }
+        );
+
+        $('.wrapper-mega-menu .block-tb-megamenu .level-0 li').hover(
+          function () {
+            console.log('in')
+          }, function () {
+            $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
+          }
+        );
+
+        $('.wrapper-menu-soy').hover(
+          function () {
+            $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
+          }, function () {
+          }
+        );
+
         $('.buttom-guia').on("click", function () {
           $(this).toggleClass('active').siblings('.nivel-1-top-soy').toggleClass('active');
         });
