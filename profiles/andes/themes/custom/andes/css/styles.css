@@ -2676,7 +2676,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   text-align: center;
   width: 85%;
   margin: 0 auto;
-  padding: 0 1.251rem;
+  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -2962,6 +2962,16 @@ body > .main-container.container-fluid {
   position: relative;
 }
 
+.view-slider-homes .skin-default .views-slideshow-controls-text {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .view-slider-homes .skin-default .views-slideshow-controls-text {
+    display: block;
+  }
+}
+
 .view-slider-homes .skin-default .views-slideshow-controls-text a[rel='prev'] {
   display: none;
   width: 40px;
@@ -3073,22 +3083,37 @@ body > .main-container.container-fluid {
   /* ------| flechas paginador abajo  |----- */
 }
 
+.view-slider-homes .field-content .slider-homes-bottom {
+  background-color: #f4f1f1;
+  border-bottom: 1px solid #ebba00;
+}
+
 @media (min-width: 768px) {
   .view-slider-homes .field-content .slider-homes-bottom {
     padding: 20px 30px;
-    background-color: #f4f1f1;
-    border-bottom: 1px solid #ebba00;
   }
 }
 
 .view-slider-homes .field-content .slider-homes-bottom .conten {
-  padding: 0 15px 39px;
+  padding: 20px 15px 39px;
   overflow: hidden;
   margin: 0 auto;
 }
 
+@media (min-width: 555px) {
+  .view-slider-homes .field-content .slider-homes-bottom .conten {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 768px) {
   .view-slider-homes .field-content .slider-homes-bottom .conten {
+    padding: 0 15px 39px;
     width: 750px;
   }
 }
@@ -3122,7 +3147,7 @@ body > .main-container.container-fluid {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-slider-homes .field-content .slider-homes-bottom .conten .title-slider-homes {
     width: 41.66666667%;
     text-align: right;
@@ -3132,25 +3157,21 @@ body > .main-container.container-fluid {
 }
 
 .view-slider-homes .field-content .slider-homes-bottom .conten .body-slider-homes {
-  margin: 0;
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   text-align: left;
   color: #585863;
-  padding: 0 15px 0 25px;
   font-size: 1rem;
   border-top: 1px solid #ebba00;
   position: relative;
   min-height: 50px;
+  padding: 15px 0 25px;
+  margin: 0;
 }
 
 @media (min-width: 555px) {
   .view-slider-homes .field-content .slider-homes-bottom .conten .body-slider-homes {
     float: left;
-  }
-}
-
-@media (min-width: 768px) {
-  .view-slider-homes .field-content .slider-homes-bottom .conten .body-slider-homes {
+    padding: 0 15px 0 25px;
     width: 33.33333333%;
     border: 0;
     border-left: 1px solid #ebba00;
@@ -3183,6 +3204,12 @@ body > .main-container.container-fluid {
 @media (min-width: 555px) {
   .view-slider-homes .field-content .slider-homes-bottom .conten .link-slider-homes a {
     float: right;
+    margin: 1.251rem 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-slider-homes .field-content .slider-homes-bottom .conten .link-slider-homes a {
     margin: 1.251rem 1.251rem 0 auto;
   }
 }

@@ -145,6 +145,10 @@
 		position: relative;
 		//Flechas paguinador
 		.views-slideshow-controls-text {
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
 			//Button Izquierda
 			a[rel='prev'] {
 				display: none;
@@ -248,16 +252,21 @@
 	//posicion contenido abajo
 	.field-content {
 		.slider-homes-bottom {
+			background-color: #f4f1f1;
+			border-bottom: 1px solid #ebba00;
 			@include respond-to(m) {
 				padding: 20px 30px;
-				background-color: #f4f1f1;
-				border-bottom: 1px solid #ebba00;
 			}
 			.conten {
-				padding: 0 15px 39px;
+				padding: 20px 15px 39px;
 				overflow: hidden;
 				margin: 0 auto;
+				@include respond-to(xs) {
+					display: flex;
+					align-items: center;
+				}
 				@include respond-to(m) {
+					padding: 0 15px 39px;
 					width: 750px;
 				}
 				@include respond-to(xl) {
@@ -279,7 +288,7 @@
 					@include respond-to(xs) {
 						float: left;
 					}
-					@include respond-to(m) {
+					@include respond-to(xs) {
 						width: 41.66666667%;
 						text-align: right;
 						padding-right: 25px;
@@ -288,20 +297,21 @@
 				}
 				//sub titulo
 				.body-slider-homes {
-					margin: 0;
 					font-family: $crimson-textregular;
 					text-align: left;
 					color: #585863;
-					padding: 0 15px 0 25px;
-					@include respond-to(xs) {
-						float: left;
-					}
 					@include font-size(m);
 					border-top: 1px solid #ebba00;
-					// padding-top: 15px;
 					position: relative;
 					min-height: 50px;
-					@include respond-to(m) {
+					padding: 15px 0 25px;
+					margin: 0;
+					// @include respond-to(xs) {
+
+					// }
+					@include respond-to(xs) {
+						float: left;
+						padding: 0 15px 0 25px;
 						width: 33.33333333%;
 						border: 0;
 						border-left: 1px solid #ebba00;
@@ -327,6 +337,9 @@
 						padding: 10px 35px;
 						@include respond-to(xs) {
 							float: right;
+							@include margin(.834 0 0 auto);
+						}
+						@include respond-to(m) {
 							@include margin(.834 .834 0 auto);
 						}
 						&:hover {

@@ -33,15 +33,15 @@
   z-index: 1;
   text-align: center;
   width: 85%;
-  @include margin(0 auto);
-  @include padding(0 .834);
+  margin: 0 auto;
+  padding: 0 15px;
   @include respond-to(m) {
     left: 10%;
     right: inherit;
     width: auto;
     max-width: 500px;
     text-align: left;
-      @include margin(0);
+    @include margin(0);
   }
 }
 
