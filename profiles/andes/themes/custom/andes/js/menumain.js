@@ -32,6 +32,7 @@
       }
       /*  add buscador */
       if (!$('.mega-menu-2').hasClass('barra-buscar')) {
+        console.log('true');
         $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
         $(".barra-buscar").click(function () {
           $(this).toggleClass('icon-close');
@@ -49,7 +50,7 @@
 
         $level1.hover(
           function () {
-            $('body .main-container.container-fluid .region-content').addClass('dark-layer');
+            $('body').addClass('dark-layer');
             $('.box-black').remove();
             $('.clone-nivel-2').remove();
             $('.clone-nivel-3').remove();
@@ -58,6 +59,10 @@
             $('.clone-nivel-3').removeClass('active-clone2');
           }, function () {
             $(this).addClass('text-hover');
+            console.log('remover');
+            if ($level1.find('>.nav-child')){
+              //$('body').removeClass('dark-layer');
+            }
           }
         );
 
@@ -66,7 +71,7 @@
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
           if (scroll > 10) {
-
+            
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
             $(".barra-buscar").removeClass('cerrar');
@@ -83,7 +88,7 @@
             menuhover = $(this).find('>.nav-child');
             menutopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1').find('>.nav-child'),
             offsettopSoy = $('.tb-megamenu-menu-menu-top-soy .tb-megamenu-item.level-1 a.dropdown-toggle').offset();
-          menuhover.addClass('dark-layer-hover')
+          menuhover.addClass('dark-layer')
           if (menuhover.parent('li').hasClass('level-1')) {
             menuhover.css({
               'margin-left': '-' + offset.left - 4 + 'px',
@@ -100,22 +105,8 @@
             })
           }
           let text  = menuhover.find('.level-2 a.dropdown-toggle').text();
+          //console.log(text);
         });
-        /* remueve la capa oscura del menu en el fondo */
-        $('.dark-layer-hover').hover(
-          function () {
-          }, function () {
-            $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
-          }
-        );
-
-        $('.wrapper-menu-soy').hover(
-          function () {
-            $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
-          }, function () {
-          }
-        );
-
         $('.buttom-guia').on("click", function () {
           $(this).toggleClass('active').siblings('.nivel-1-top-soy').toggleClass('active');
         });
@@ -196,6 +187,7 @@
           /* calcula el alto menos la cabecera */
           heigthCalc = $(window).height()- 128;
 
+        console.log(heigthCalc)
 
         $contentFather.parents('.always-show').css('height' , heigthCalc + "px");
 
@@ -204,6 +196,7 @@
           $('body').toggleClass('not-scroll');
           $('.nav-child').removeClass('active-mobile');
         });
+        $('.height-calc')
         itemMobil.siblings('.tb-megamenu-submenu').addClass('container-submenu')
         itemMobil.on("click", function () {
           let $this = $(this);
@@ -221,22 +214,15 @@
 
         itemMobil.removeAttr('href');
         $contentFather.after("<div class='" + className + "'></div>");
-        $contentFather.after("<div class='menu-special' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
-        $contentFather.after("<div class='menu-special' id='menu-soy2'><span>Idioma:</span><select name='' id='select-clone'><option>Español</option></select></div>");
-        $contentFather.after("<div class='menu-special menu-guia-mobile' id='menu-soy'>guia de servicios<span></span></div>");
+        $contentFather.after("<div class='menu-soy' id='menu-soy'><span>Soy:</span><select name='' id='select-clone'><option>Elegir</option></select></div>");
         $contentFather.after("<div class='separador-menu'></div>");
 
         /* init */
         generatorData(className, classBlockClone, 'block')
         generatorData(className, classSelect, 'select')
-        generatorData2(className, classSelect, 'select')
 
 
         /* inicia el html insertado */
-        function generatorData2(className, typeClone, typeBlock) {
-          var data = $('.form-item-lang-dropdown-select input');
-          loopsData(data, typeBlock);
-        }
         function generatorData(className, typeClone, typeBlock) {
           var data = $('#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1.' + typeClone + ' a');
           loopsData(data, typeBlock);
