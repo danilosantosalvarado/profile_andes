@@ -1,104 +1,129 @@
-ul#render-menu-lateral {
-  z-index: 1;
-  position: fixed;
-  top: 45%;
-  right: 2rem;
-  padding: 0px;
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.ttf");
 }
+
+/* ------| Menu scroll |------ */
+ul#render-menu-lateral {
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  padding: 0px;
+  list-style: none;
+  z-index: 1;
+}
+
 ul#render-menu-lateral::before {
   content: "";
   position: absolute;
-  top: -58px;
-  right: 18px;
-  width: 2.5px;
+  bottom: 0px;
+  left: 19px;
+  width: 3.5px;
   height: 263px;
   -webkit-mask: url(../img/scrol_linea.svg) no-repeat 50% 50%;
+          mask: url(../img/scrol_linea.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
-  mask: url(../img/scrol_linea.svg) no-repeat 50% 50%;
-  mask-size: cover;
+          mask-size: cover;
   background-color: #CCCCCC;
 }
+
 ul#render-menu-lateral li {
-  list-style: none;
-  -webkit-margin-end: 40px;
   text-align: right;
-  padding: 7px 0;
+  margin: 9px 0;
   position: relative;
 }
+
 ul#render-menu-lateral li a {
   text-decoration: none;
 }
+
 ul#render-menu-lateral li a p {
-  font-family: Lato Black;
+  font-family: "Lato-Bold";
   font-size: 16px;
-  letter-spacing: 1.6px;
   color: #808080;
+  letter-spacing: 1.6px;
+  text-align: right;
   text-transform: uppercase;
-  padding-right: 6px;
+  white-space: nowrap;
+  margin-right: 37px;
   visibility: hidden;
 }
+
 ul#render-menu-lateral li a p:hover, ul#render-menu-lateral li a p:focus, ul#render-menu-lateral li a p:active {
   font-family: Lato Black;
-  font-size: 26px;
+  font-size: 20px;
   letter-spacing: 2.6px;
   color: #000000 !important;
-  margin-top: -7px;
+  margin-top: 0px;
 }
+
 ul#render-menu-lateral li::before {
   content: "";
   position: absolute;
-  right: -31px;
+  left: 10px;
   width: 20px;
   height: 20px;
   -webkit-mask: url(../img/scroll_punto.svg) no-repeat 50% 50%;
+          mask: url(../img/scroll_punto.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
-  mask: url(../img/scroll_punto.svg) no-repeat 50% 50%;
-  mask-size: cover;
+          mask-size: cover;
   background-color: #CCCCCC;
+  cursor: pointer;
 }
+
 ul#render-menu-lateral li.a-active::before {
-  top: 0px;
-  right: -37px;
+  top: -5px;
+  left: 3px;
   width: 34px;
   height: 34px;
   -webkit-mask: url(../img/scroll_active.svg) no-repeat 50% 50%;
+          mask: url(../img/scroll_active.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
-  mask: url(../img/scroll_active.svg) no-repeat 50% 50%;
-  mask-size: cover;
+          mask-size: cover;
   background-color: #fdd35b;
+  cursor: pointer;
 }
+
 ul#render-menu-lateral li.l-chat {
   margin-top: 57px;
 }
+
 ul#render-menu-lateral li.l-chat::before {
   content: "";
   position: absolute;
-  top: -5px;
-  right: -48px;
+  top: -10px;
+  left: -8px;
   width: 55px;
   height: 55px;
   -webkit-mask: url(../img/scroll_chat.svg) no-repeat 50% 50%;
+          mask: url(../img/scroll_chat.svg) no-repeat 50% 50%;
   -webkit-mask-size: cover;
-  mask: url(../img/scroll_chat.svg) no-repeat 50% 50%;
-  mask-size: cover;
+          mask-size: cover;
   background-color: #fdd35b;
 }
+
 ul#render-menu-lateral li.l-chat p {
-  font-family: Lato Black;
+  font-family: "Lato-Bold";
   font-size: 25px;
   line-height: 26.48px;
   color: #B3B3B3;
-  padding-right: 17px;
+  padding-right: 12px;
 }
+
 ul#render-menu-lateral li.l-chat p:hover {
-  margin-top: -2px;
+  font-size: 28px;
 }
+
 ul#render-menu-lateral:hover li p {
   visibility: inherit;
+  margin-left: -400px;
 }
 
 @media only screen and (max-width: 992px) {
-  ul#render-menu-lateral {
+  ul#an-menu-lateral {
     display: none;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
