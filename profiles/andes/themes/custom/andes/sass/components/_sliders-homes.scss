@@ -7,22 +7,17 @@
 /* ------| Slider Home|----- */
 .view-slider-homes {
 	.views_slideshow_swiper-processed {
-		// height: 609px;
 		ul {
 			padding: 0px;
 			list-style: none;
 			li.swiper-slide {
 				overflow: hidden;
 				display: block;
-				// height: 600px;
 				height: auto;
-				// border: 2px solid red;
 				.views-slideshow-swiper-main-frame-row-item {
 					display: inline-flex;
 					width: 100%;
 					height: 100%;
-					// overflow: hidden;
-					// height: 100%;
 					.views-field.views-field-views-conditional {
 						width: 100%;
 						.img-desktop{
@@ -38,14 +33,11 @@
 							}
 						}
 						.img-content {
-							// height: 100%;
 							.img-desktop,
 							.img-mobile {
 								width: 100%;
-								// height: 100%;
 								img {
 								width: 100%;
-								// height: 100%;
 								}
 							}
 
@@ -118,7 +110,7 @@
 	}
 }
 
-// /* ------| Ubicado Centro |----- */
+/* ------| Ubicado Centro |----- */
 .view-slider-homes {
 	.slider-homes-center {
 		@extend %slider-homes-lef;
@@ -147,8 +139,113 @@
 	}
 }
 
-// /* ------| Ubicado Abajo |----- */
+/* ------| Flechas slider |----- */
 .view-slider-homes {
+	.skin-default {
+		position: relative;
+		//Flechas paguinador
+		.views-slideshow-controls-text {
+			//Button Izquierda
+			a[rel='prev'] {
+				display: none;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				left: 2%;
+				top: 40%;
+				font-size: 0;
+				background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+				background-size: 40px 40px;
+				z-index: 1;
+			}
+			//Buttom Pause
+			.views-slideshow-controls-text-pause {
+				display: none;
+			}
+			//Button Deracha
+			a[rel='next'] {
+				display: none;
+				width: 40px;
+				height: 40px;
+				font-size: 0;
+				position: absolute;
+				top: 40%;
+				left: inherit;
+				right: 2%;
+				background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+				background-size: 40px 40px;
+				z-index: 1;
+			}
+		}
+	}
+	//Hover flechas paguinador
+	&:hover {
+		.views-slideshow-controls-text {
+			a[rel='prev'] {
+				display: block;
+			}
+			a[rel='next'] {
+				display: block;
+			}
+		}
+	}
+}
+
+/* ------| Bulles Slider right, left, center en linea |----- */
+.view-slider-homes {
+	.views-slideshow-controls-bottom {
+		display: block;
+	}
+	.views-slideshow-controls-bottom {
+		text-align: center;
+		@include respond-to(m) {
+			text-align: right;
+		}
+		.views-slideshow-pager-field-processed	{
+			width: 100%;
+			position: absolute;
+			bottom: 3%;
+			right: 0px;
+			z-index: 9;
+			@include respond-to(xl) {
+				bottom: 10%;
+			}
+			@include respond-to(m) {
+				padding-right: 9%;
+			}
+			.views-slideshow-pager-field-item {
+				display: inline-block;
+				@include respond-to(xl) {
+					padding: 0 5px;
+				}
+				a {
+					width: 40px;
+					height: 18px;
+					font-size: 0;
+					display: block;
+					text-decoration: none;
+					border-bottom: 3px solid color('grey-secundary');
+					padding: 0;
+					margin: 0 5px;
+					@include respond-to(xl) {
+						width: 63px;
+						margin: 0px
+					}
+				}
+				&.active {
+					a {
+						border-bottom: 3px solid color('yellow-defaul');
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* ------| Ubicado Abajo |----- */
+.view-slider-homes {
+	//posicion contenido abajo
 	.field-content {
 		.slider-homes-bottom {
 			@include respond-to(m) {
@@ -241,100 +338,49 @@
 			}
 		}
 	}
-}
 
-/* ------| Paguinador |----- */
-.view-slider-homes {
+	/* ------| flechas paginador abajo  |----- */
 	.skin-default {
-		position: relative;
-		//Flechas paguinador
-		.views-slideshow-controls-text {
-    	//Button Izquierda
-			a[rel='prev'] {
-				@extend %a-slidw-prev;
-			}
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				@extend %a-slidw-prev;
-		    left: inherit;
-		    right: 2%;
-				background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
-		  }
-		}
-	}
-	//Hover flechas paguinador
-	&:hover {
-		.views-slideshow-controls-text {
-			a[rel='prev'] {
-				display: block;
-			}
-			a[rel='next'] {
-				display: block;
-			}
-		}
-	}
-}
-
-//Bulles Slider right, left, center en linea
-.view-slider-homes {
-	.views-slideshow-controls-bottom {
-		display: block;
-	}
-	.views-slideshow-controls-bottom,
-	.slider-homes-right-control,
-	.slider-homes-center-control,
-	.slider-homes-left-control {
-		text-align: center;
-		@include respond-to(m) {
-			text-align: right;
-		}
-		.views-slideshow-pager-field-processed	{
-			width: 100%;
-			position: absolute;
-			bottom: 3%;
-			right: 0px;
-			z-index: 9;
-			@include respond-to(xl) {
-				bottom: 10%;
-			}
-			@include respond-to(m) {
-				padding-right: 9%;
-			}
-			.views-slideshow-pager-field-item {
-				display: inline-block;
-				@include respond-to(xl) {
-					padding: 0 5px;
-				}
-				a {
-					width: 40px;
-					height: 18px;
-					font-size: 0;
+		.slider-homes-bottom-control {
+			//Flechas paguinador
+			.views-slideshow-controls-text {
+				//Button Izquierda
+				a[rel='prev'] {
 					display: block;
-					text-decoration: none;
-					border-bottom: 3px solid color('grey-secundary');
-					padding: 0;
-					margin: 0 5px;
-					@include respond-to(xl) {
-						width: 63px;
-						margin: 0px
-					}
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					left: 2%;
+					top: 76%;
+					font-size: 0;
+					background: url('../img/Icon/slide-prev.png') no-repeat center;
+					background-size: 28px 28px;
+					z-index: 1;
+					opacity: .5;
 				}
-				&.active {
-					a {
-						border-bottom: 3px solid color('yellow-defaul');
-					}
+				//Buttom Pause
+				.views-slideshow-controls-text-pause {
+					display: none;
+				}
+				//Button Deracha
+				a[rel='next'] {
+					display: block;
+					width: 40px;
+					height: 40px;
+					font-size: 0;
+					position: absolute;
+					top: 76%;
+					left: inherit;
+					right: 2%;
+					background: url('../img/Icon/slide-next.png') no-repeat center;
+					background-size: 28px 28px;
+					z-index: 1;
+					opacity: .5;
 				}
 			}
 		}
 	}
-}
-
-//Puntos botton
-.view-slider-homes {
+	// /* ------| Bulles posicion botton  |----- */
 	.slider-homes-bottom-control {
 		.views-slideshow-pager-field-processed {
 			position: absolute;
@@ -347,3 +393,4 @@
 		}
 	}
 }
+
