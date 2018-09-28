@@ -186,19 +186,30 @@ setTimeout(function(){
     }); */
   });
 
+// funcion que acomoda div .slider-homes-bottom
   jQuery(document).ready(function($) {
-    $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
-      var alto = $('#views_slideshow_swiper_slider_homes-block_1 .img-desktop img').attr('height');
-      // var alto = $('#views_slideshow_swiper_slider_homes-block_1').height();
-      console.log(alto);
-      if ($(this).find('.slider-homes-bottom').length) {
-        var caja_bottom = $('.slider-homes-bottom').outerHeight();
-        $(this).find('.img-desktop img').height(alto - caja_bottom);
-      }else{
-        $(this).find('.img-desktop img').height(alto);
+    acoplar_top();
+    function acoplar_top() {
+      var ancho = $(window).width();
+      if (ancho > 992) {
+        $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
+          var alto = $('#views_slideshow_swiper_slider_homes-block_1 .img-desktop img').attr('height');
+          if ($(this).find('.slider-homes-bottom').length) {
+            var caja_bottom = $('.slider-homes-bottom').outerHeight();
+            $(this).find('.img-desktop img').height(alto - caja_bottom);
+          }else{
+            $(this).find('.img-desktop img').height(alto);
+          }
+        });      
       }
+    }
+
+    $(window).resize(function(event) {
+      acoplar_top();
     });
+   
   });
+
 
 }(jQuery));
 
