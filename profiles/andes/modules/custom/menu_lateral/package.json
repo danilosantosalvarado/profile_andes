@@ -1,0 +1,25 @@
+{
+  "name": "menulateral",
+  "version": "1.0.0",
+  "description": "menulateral",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "danilo santos - danilosantosalvarado@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "npm": "^6.1.1"
+  }
+}
