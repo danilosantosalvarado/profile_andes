@@ -8,12 +8,14 @@
 	.swiper-container-horizontal {
 		width: 90%;
 		margin: 0 auto;
+		padding: 0 10px;
 		ul {
-			-webkit-padding-start: 0px;
+			list-style: none;
+			padding: 0px;
 			li {
-				list-style: none;
 				position: relative;
 				background: color('grey-light');
+				    margin-bottom: 20px;
 				@include respond-to(xs) {
 					height: 460px;
 				}
@@ -36,20 +38,18 @@
 					span {
 						font-family: $latoregular;
 						@include type-layout(xs, 1.23);
-						color: color('orange');
+						color: color('orange-primary');
 					}
 				}
 				//Titulo
 				.views-field-title {
 					margin: 20px 25px 25px;
-						// padding: 0 25px;
 					span {
-						font-family: $crimson-textbold;
-						@include type-layout(l, .96);
+						font-family: $crimson-semibold;
+						@include type-layout(l, 1);
 						color: #484851;
-
 						@include respond-to(xl) {
-							@include font-size(ll);
+							@include font-size(sl);
 						}
 					}
 				}
@@ -57,38 +57,42 @@
 				.views-field-body {
 					.field-content {
 						font-family: $crimson-textregular;
-						@include type-layout(m, .95);
+						@include type-layout(ms, 1.16);
 						@include margin-bottom(.417);
 						padding: 0 25px;
-						@include respond-to(s) {
-							@include font-size(o);
-						}
+						// @include respond-to(ms) {
+						// 	@include font-size(o);
+						// }
 					}
 				}
 				//Button
 				.views-field-view-node {
           margin: 20px;
           a {
-            @include respond-to(xs) {
-              position: absolute;
-              bottom: 29px;
-              right: 20px;
-              margin: 0px;
-            }
-            display: block;
+						display: inline-block;
+						width: 180px;
             max-width: 180px;
-            font-family: $latolight;
-            font-size: 15.3px;
-            color: #484851;
+            font-family: $latoregular;
+            @include font-size(m);
+            color: color('grey-dark');
             text-decoration: none;
             text-align: center;
-            border: 1px solid color('orange');
-            padding: 10px 30px;
+            border: 1px solid color('orange-primary');
+            padding: 10px 20px;
             margin: 0 auto;
-            outline: none;
+						outline: none;
+						position: absolute;
+						bottom: 25px;
+						right: 0;
+						left: 0;
+						@include respond-to(m) {
+							right: 25px;
+							left: inherit;
+							max-width: 150px;
+            }
             &:hover {
-              background-color: color('orange');
-              color: #ffffff;
+              background-color: color('orange-primary');
+              color: color('white');
             }
           }
         }
@@ -113,13 +117,14 @@
 				//Button Izquierda
 				a[rel='prev'] {
 					font-size: 0;
-					width: 40px;
-					height: 40px;
+					width: 50px;
+					height: 50px;
 					position: absolute;
 					top: 50%;
 					border: 1px solid #777;
 					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-					background-size: 40px 40px;
+					background-size: 50px 50px;
+					padding: 1px 7px 2px;
 				}
 				//Buttom Pause
 				.views-slideshow-controls-text-pause {
@@ -128,15 +133,17 @@
 				//Button Deracha
 				a[rel='next'] {
 					font-size: 0;
-					width: 40px;
-					height: 40px;
+					width: 50px;
+					height: 50px;
 					position: absolute;
 					top: 50%;
 					left: inherit;
 					right: 0;
 					border: 1px solid #777;
 					background: url('../img/Icon/arrow_next.svg') no-repeat center;
-					background-size: 40px 40px;
+					background-size: 50px 50px;
+					padding: 1px 7px 2px;
+
 				}
 			}
 		}

@@ -2889,6 +2889,11 @@ body > .main-container.container-fluid {
   }
 }
 
+.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-content .img-mobile img {
+  width: 100%;
+  height: 100%;
+}
+
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right,
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center,
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left {
@@ -3161,6 +3166,7 @@ body > .main-container.container-fluid {
   text-transform: uppercase;
   color: #585863;
   min-height: 50px;
+  line-height: 20.9px;
   padding-bottom: 10px;
 }
 
@@ -3181,9 +3187,10 @@ body > .main-container.container-fluid {
 
 .view-slider-homes .field-content .slider-homes-bottom .conten .body-slider-homes {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
   text-align: left;
   color: #585863;
-  font-size: 1rem;
+  line-height: 19.8px;
   border-top: 1px solid #ebba00;
   position: relative;
   min-height: 50px;
@@ -4434,16 +4441,18 @@ body > .main-container.container-fluid {
 .view-display-id-noticias_destacadas .swiper-container-horizontal {
   width: 90%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul {
-  -webkit-padding-start: 0px;
+  list-style: none;
+  padding: 0px;
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li {
-  list-style: none;
   position: relative;
   background: #f4f1f1;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 555px) {
@@ -4478,7 +4487,7 @@ body > .main-container.container-fluid {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.23;
-  color: #ff8827;
+  color: #e34d1f;
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title {
@@ -4486,30 +4495,24 @@ body > .main-container.container-fluid {
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title span {
-  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
-  line-height: 0.96;
+  line-height: 1;
   color: #484851;
 }
 
 @media (min-width: 992px) {
   .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-title span {
-    font-size: 1.4375rem;
+    font-size: 1.25rem;
   }
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body .field-content {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 0.95;
+  font-size: 0.9375rem;
+  line-height: 1.16;
   margin-bottom: 0.6255rem;
   padding: 0 25px;
-}
-
-@media (min-width: 666px) {
-  .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-body .field-content {
-    font-size: 1.125rem;
-  }
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-view-node {
@@ -4517,31 +4520,35 @@ body > .main-container.container-fluid {
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-view-node a {
-  display: block;
+  display: inline-block;
+  width: 180px;
   max-width: 180px;
-  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 15.3px;
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
   color: #484851;
   text-decoration: none;
   text-align: center;
-  border: 1px solid #ff8827;
-  padding: 10px 30px;
+  border: 1px solid #e34d1f;
+  padding: 10px 20px;
   margin: 0 auto;
   outline: none;
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  left: 0;
 }
 
-@media (min-width: 555px) {
+@media (min-width: 768px) {
   .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-view-node a {
-    position: absolute;
-    bottom: 29px;
-    right: 20px;
-    margin: 0px;
+    right: 25px;
+    left: inherit;
+    max-width: 150px;
   }
 }
 
 .view-display-id-noticias_destacadas .swiper-container-horizontal ul li .views-field-view-node a:hover {
-  background-color: #ff8827;
-  color: #ffffff;
+  background-color: #e34d1f;
+  color: #fff;
 }
 
 .view-display-id-noticias_destacadas .skin-default {
@@ -4568,13 +4575,14 @@ body > .main-container.container-fluid {
 .view-display-id-noticias_destacadas .skin-default .slideshow-controls-top .views-slideshow-controls-text a[rel='prev'],
 .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'] {
   font-size: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 50%;
   border: 1px solid #777;
   background: url("../img/Icon/arrow_prev.svg") no-repeat center;
-  background-size: 40px 40px;
+  background-size: 50px 50px;
+  padding: 1px 7px 2px;
 }
 
 .view-display-id-noticias_destacadas .skin-default .slideshow-controls-top .views-slideshow-controls-text .views-slideshow-controls-text-pause,
@@ -4585,15 +4593,16 @@ body > .main-container.container-fluid {
 .view-display-id-noticias_destacadas .skin-default .slideshow-controls-top .views-slideshow-controls-text a[rel='next'],
 .view-display-id-noticias_destacadas .skin-default .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='next'] {
   font-size: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 50%;
   left: inherit;
   right: 0;
   border: 1px solid #777;
   background: url("../img/Icon/arrow_next.svg") no-repeat center;
-  background-size: 40px 40px;
+  background-size: 50px 50px;
+  padding: 1px 7px 2px;
 }
 
 .view-display-id-noticias_destacadas {
