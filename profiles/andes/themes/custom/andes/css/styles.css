@@ -9663,8 +9663,8 @@ body > .main-container.container-fluid {
   background-color: transparent;
   border: initial;
   border-radius: 0;
-  -webkit-box-shadow: initial;
-          box-shadow: initial;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   margin: 0;
   padding: 0;
 }
