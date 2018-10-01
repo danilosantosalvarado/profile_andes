@@ -283,3 +283,13 @@
 	}
 }
 
+/* ------| copyright |----- */
+.copyright {
+	padding: 20px 0;
+	p {
+		font-family: $latoregular;
+		color: #818181;
+    margin: 0;
+    @include font-size(xxs);
+	}
+}

@@ -9672,4 +9672,16 @@ body > .main-container.container-fluid {
   box-sizing: content-box;
 }
 
+/* ------| copyright |----- */
+.copyright {
+  padding: 20px 0;
+}
+
+.copyright p {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  color: #818181;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
