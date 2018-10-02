@@ -10,44 +10,50 @@
 /* ------| Panel container |----- */
 #mini-panel-footer {
 	margin: 0 auto;
-	// padding: 0 35px;
+	padding: 40px 15px;
+	@include respond-to(xxl) {
+		max-width: 540px;
+	}
 	@include respond-to(m) {
-		width: 750px;
-		// padding: 0 15px;
+		max-width: 750px;
 	}
 	@include respond-to(xl) {
-		width: 970px;
+		max-width: 970px;
+		display: flex;
 	}
 	@include respond-to(xxxl) {
-		width: 1170px;
+		max-width: 1170px;
 	}
 }
 
 /* ------| Panel responsive |----- */
 #mini-panel-footer {
-	.panel-col-first,
-	%panel-col {
+	.panel-panel.panel-col-first {
 		float: initial;
 		width: 100%;
-		@include respond-to(m) {
-			float: left !important;
-			width: 33% !important;
+		@include respond-to(xl) {
+			float: left;
+			width: 30%;
 		}
 		.inside {
 			margin: 0;
 		}
 	}
-	.panel-col {
-		@extend %panel-col;
+	.panel-panel.panel-col {
+		float: initial;
+		width: 100%;
 		@include respond-to(xl) {
-			width: 40% !important;
-		}
-		@include respond-to(xxl) {
-			width: 33% !important;
+			float: left;
+			width: 40%;
 		}
 	}
-	.panel-col-last {
-		@extend %panel-col;
+	.panel-panel.panel-col-last {
+		float: initial;
+		width: 100%;
+		@include respond-to(xl) {
+			float: left;
+			width: 30%;
+		}
 	}
 }
 
@@ -55,75 +61,63 @@
 
 /* ------| Contactos Footer |----- */
 .bean-bloque-footer-contacto {
-	@include respond-to(m) {
-		padding: 15px;
-	}
+	// @include respond-to(m) {
+	// 	padding: 15px 15px 0;
+	// }
 	//Imagenes
 	.group-header {
+		// padding: 40px 0 0;
+    float: left;
+    width: 100%;
 		display: flex;
-		flex-direction: column;
-		padding: 40px 0 0;
-		@include respond-to(xl) {
-			flex-direction: row;
-			padding: 40px 0;
-		}
 		.field-name-field-imagen,
 		.field-name-field-image-sublogo {
-			flex: 1 1 100%;
-			margin-bottom: 30px;
-			@include respond-to(xl) {
-				flex: 1 1 100%;
-				flex-wrap: nowrap;
-				margin: 0;
-				padding: 0px 2%;
-			}
+			width: 100%;
+			max-width: 140px;
+			padding-right: 15px;
+			display: block;
+			float: left;
 			.field-label {
 				display: none;
 			}
 			img {
-				margin: 0 auto;
-				width: 150px;
+				max-width: 140px;
+				display: block;
 			}
 		}
 	}
 	//Direccion
 	.group-left {
 		width: 100%;
-		padding: 0 35px;
-		@include respond-to(m) {
-			padding: 0;
-		}
+		padding-top: 25px;
 		@include respond-to(xl) {
 			width: 50%;
-
 		}
 		.field-name-field-direccion,
 		.field-name-field-ciudad-pais {
+			margin-bottom: 16px;
 			.field-label {
 				display: none;
 			}
 			.field-item {
-				font-family: $latolight;
+				font-family: $latoregular;
 				color: #fff;
-		    font-size: 12.5px;
-		    line-height: 1;
+		   @include font-size(s);
+		    line-height: normal;
 		    text-align:  left;
 				margin-bottom: 10px;
-				@include respond-to(m) {
-					text-align:  center;
-				}
 		  }
 		}
 		.field-name-field-zipcode {
 			display: flex;
 			justify-content: left;
-			font-family: $latolight;
+			font-family: $latoregular;
 			color: #fff;
-	    font-size: 12.5px;
-	    line-height: 1;
-			margin-bottom: 10px;
-			@include respond-to(m) {
-				justify-content: center;
+			@include font-size(s);
+	    line-height: normal;
+			.field-label {
+				white-space: nowrap;
+				padding-right: 5px;
 			}
 		}
 	}
@@ -135,9 +129,9 @@
 		}
 		.field-name-field-telefono {
 			background: #232323;
-			padding: 10px 40px;
-			margin: 40px 0;
-			@include respond-to(m) {
+			padding: 20px 40px;
+			margin: 40px -15px 0;
+			@include respond-to(xl) {
 				margin: 0;
 				padding: 0;
 				background: transparent;
@@ -151,7 +145,7 @@
 				height: 30px;
 				position: relative;
 				top: 0;
-				@include respond-to(m) {
+				@include respond-to(xl) {
 					display: initial;
 				}
 			}
@@ -161,20 +155,14 @@
 			.field-items {
 				display: inline-block;
 				padding-left: 5%;
-				@include respond-to(m) {
-					display: initial;
-					padding: 0;
-				}
 				.field-item {
-					font-family: $latolight;
+					font-family: $latoregular;
 					color: #fff;
-					font-size: 12.5px;
+					@include font-size(s);
 					line-height: 1;
 					margin-bottom: 10px;
 					text-align: left;
-					@include respond-to(m) {
-						text-align: center;
-					}
+					white-space: nowrap;
 				}
 			}
 		}
@@ -182,17 +170,22 @@
 }
 
 /* ------| Enlaces  Footer |----- */
-// #block-panels-mini-footer {
-// 	background-color: black;
-// }
-.pane-menu-menu-enlaces-de-interes,
-#block-menu-menu-enlaces-de-interes {
+#block-panels-mini-footer {
+	@include respond-to(xl) {
+		border-top: 1px solid #222;
+	}
+}
+
+.pane-menu-menu-enlaces-de-interes {
+	@include respond-to(xl) {
+		border-left: 1px solid #222;
+		border-right: 1px solid #222;
+	}
+	// padding: 0 15px;
 	.menu.nav {
-		padding-left: 35px;
-		@include respond-to(m) {
-			padding-left: 0px;
-			padding-top: 65px;
-		}
+		// @include respond-to(xl) {
+		// 	padding-top: 65px;
+		// }
 		.open > a,
 		.nav .open > a:hover {
 			background-color: transparent;
@@ -201,21 +194,20 @@
 		.last.dropdown {
 			width: 100%;
 			float: left;
-			padding-bottom: 10px;
-			@include respond-to(m) {
-				margin-bottom: 20px;
+			@include respond-to(xl) {
+				padding: 0 15px;
 			}
 			@include respond-to(xl) {
 				width: 50%;
 			}
-			@include respond-to(m) {
+			@include respond-to(xl) {
 				&:before {
 					content: '';
+					width: 50%;
+					height: 1px;
 					position: relative;
 					display: block;
-					top: -18px;
-					height: 1px;
-					width: 50%;
+					top: 0px;
 					border-top: 1px solid #ffef00;
 				}
 			}
@@ -226,8 +218,11 @@
 				text-transform: uppercase;
 				background-color: transparent;
 				padding: 0px;
-				margin: 20px 0;
+				margin: 20px 0 8px;
 				box-shadow: none;
+				// @include respond-to(xl) {
+				// 	margin: 20px 0;
+				// }
 				.caret {
 					display: none;
 				}
@@ -252,6 +247,7 @@
 						text-transform: initial;
 						background-color: transparent;
 						padding: 0;
+						white-space: normal;
 						&:hover {
 							color: #fff;
 							text-decoration: none;
@@ -266,19 +262,15 @@
 
 /* ------| Redes Sociales |----- */
 .view-id-footer_redes_sociales {
-	padding-top: 65px;
-	padding-left: 35px;
-	// padding-top: 20px;
-		@include respond-to(xl) {
-		// border-left: 1px solid #222222;
-		// width: 23%;
+	padding-top: 20px;
+	@include respond-to(xl) {
 		padding-left: 15px;
-		box-sizing: content-box;
 	}
 	h3 {
 		color: color('white');
 		@include font-size(s);
-    text-transform: uppercase;
+		text-transform: uppercase;
+		margin: 0 0 8px;
 	}
 	.views-row {
 		display: block;
@@ -291,3 +283,13 @@
 	}
 }
 
+/* ------| copyright |----- */
+.copyright {
+	padding: 20px 0;
+	p {
+		font-family: $latoregular;
+		color: #818181;
+    margin: 0;
+    @include font-size(xxs);
+	}
+}
