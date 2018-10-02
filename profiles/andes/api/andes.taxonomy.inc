@@ -347,4 +347,40 @@ function andes_import_taxonomy() {
   );
   taxonomy_csv_vocabulary_import($tipo_layout);
 
+  $categoria_equipos_trabajo = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 11,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'categoria_equipos_trabajo',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'categoria_equipos_trabajo.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+  taxonomy_csv_vocabulary_import($categoria_equipos_trabajo);
 }

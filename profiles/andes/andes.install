@@ -2,10 +2,14 @@
 
 include_once 'api/andes.taxonomy.inc';
 include_once 'api/andes.content.inc';
+include_once 'api/andes.beans.inc';
+
+
  /**
  * Implements hook_form_FORM_ID_alter().
  */
 function andes_form_install_configure_form_alter(&$form, $form_state) {
+  $path_beans = getcwd().'/profiles/andes/beans/';
   $form['server_settings']['site_default_country']['#default_value'] = 'CO';
   drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-date-default-timezone").val("America/Bogota"); });', 'inline');
 }
@@ -95,7 +99,7 @@ function andes_install() {
       'region' => 'navigation',
       'pages' => '',
       'cache' => -1,
-    ),    
+    ),
     array(
       'module' => 'node',
       'delta' => 'recent',
@@ -316,34 +320,34 @@ function andes_install() {
   // Update the menu router information.
   menu_rebuild();
 
-  // // Create Menu (Mega-Menu) 
+  // // Create Menu (Mega-Menu)
   $menu_mega = array(
-    'menu_name' => 'menu-mega-menu',  
-    'title' => 'Mega Menu', 
+    'menu_name' => 'menu-mega-menu',
+    'title' => 'Mega Menu',
     'description' => 'Main menu (Mega-Menu)');
 
   menu_save($menu_mega);
 
-  // Create Menu (Top-Soy-Menu) 
+  // Create Menu (Top-Soy-Menu)
   $menu_top_soy = array(
-    'menu_name' => 'menu-top-soy',  
-    'title' => 'Mega top soy', 
+    'menu_name' => 'menu-top-soy',
+    'title' => 'Mega top soy',
     'description' => 'Mega top soy (Mega-top-soy)');
 
   menu_save($menu_top_soy);
 
-  // Create Menu (Menu Principal) 
+  // Create Menu (Menu Principal)
   $menu_main = array(
-    'menu_name' => 'menu-enlaces-de-interes',  
-    'title' => 'Enlaces de interes', 
+    'menu_name' => 'menu-enlaces-de-interes',
+    'title' => 'Enlaces de interes',
     'description' => 'Enlaces de interes');
 
   menu_save($menu_main);
 
-  // Create Menu (Menu Principal) 
+  // Create Menu (Menu Principal)
   $menu_main = array(
-    'menu_name' => 'main-menu',  
-    'title' => 'Menu principal', 
+    'menu_name' => 'main-menu',
+    'title' => 'Menu principal',
     'description' => 'Menu principal(Menu-principal)');
 
   menu_save($menu_main);
@@ -372,32 +376,32 @@ function andes_install() {
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
     ->condition('name', 'andes')
-    ->execute();    
+    ->execute();
 
    variable_set('admin_theme', 'adminimal');
-   variable_set('node_admin_theme', '1');   
+   variable_set('node_admin_theme', '1');
 
-   // Enabled  Task Pages Manager 
-   variable_set('page_manager_node_view_disabled', FALSE);  
+   // Enabled  Task Pages Manager
+   variable_set('page_manager_node_view_disabled', FALSE);
 
-   // Import Menu ("menu-mega-menu"). 
+   // Import Menu ("menu-mega-menu").
     module_load_include('inc', 'menu_import', 'includes/import');
-    
+
     $options = array();
-   
-   // Import Menu ("menu-mega-menu"). 
+
+   // Import Menu ("menu-mega-menu").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("menu-top-soy"). 
+   // Import Menu ("menu-top-soy").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-menu-top-soy-export.txt', 'menu-top-soy',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("main-menu"). 
+   // Import Menu ("main-menu").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/main-menu-export.txt', 'main-menu',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("menu-enlaces-de-interes"). 
+   // Import Menu ("menu-enlaces-de-interes").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'menu-enlaces-de-interes',$options);
     menu_import_save_menu($menu, $options);
 
@@ -415,14 +419,14 @@ function andes_install() {
       ->execute();
 
     // Multilanguage
-    // Set setting language_negotiation_set // Es - Multilanguage 
+    // Set setting language_negotiation_set // Es - Multilanguage
     require_once DRUPAL_ROOT . '/includes/language.inc';
     require_once DRUPAL_ROOT . '/includes/locale.inc';
 
     $negotiation = array (
-      'language-default' => 
+      'language-default' =>
       array (
-        'callbacks' => 
+        'callbacks' =>
         array (
           'language' => 'language_from_default',
         ),
@@ -430,15 +434,15 @@ function andes_install() {
         'name' => 'Predeterminado',
         'description' => 'Usar el idioma predeterminado del sitio (Español).',
       ),
-      'locale-url' => 
+      'locale-url' =>
       array (
-        'types' => 
+        'types' =>
         array (
           0 => 'language_content',
           1 => 'language',
           2 => 'language_url',
         ),
-        'callbacks' => 
+        'callbacks' =>
         array (
           'language' => 'locale_language_from_url',
           'switcher' => 'locale_language_switcher_url',
@@ -454,7 +458,7 @@ function andes_install() {
    language_negotiation_set('language', $negotiation);
 
     $providers_weight = array (
-      0 => 
+      0 =>
       array (
         'locale-url' => '-8',
         'locale-session' => '-6',
@@ -464,10 +468,11 @@ function andes_install() {
       ),
     );
 
-  variable_set("locale_language_providers_weight_language", $providers_weight);  
+  variable_set("locale_language_providers_weight_language", $providers_weight);
   //  Set bundle "noticias" -> Entity Node
-  variable_set('language_content_type_' . 'noticias', 4); 
+  variable_set('language_content_type_' . 'noticias', 4);
   variable_set('language_content_type_' . 'eventos', 4);
+  variable_set('language_content_type_' . 'equipo_de_trabajo', 4);
 }
 
 function andes_profile_details() {
@@ -476,11 +481,21 @@ function andes_profile_details() {
 }
 
 
-
+/*
+ *This function is used for added task used after to Site Config
+*/
 function andes_install_tasks($install_state) {
 
   $flag = TRUE;
   $tasks = array();
+
+  $tasks['install_beans'] = array(
+    'display_name' => st('Importacion de Bloques'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_install_beans',
+  );
 
   $tasks['install_tax'] = array(
     'display_name' => st('Importacion de Taxonomias'),
@@ -496,13 +511,13 @@ function andes_install_tasks($install_state) {
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_style_image',
-  );  
+  );
 
   $tasks['install_mod'] = array(
     'display_name' => st('Importacion de contenido'),
     'display' => TRUE,
     'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP, 
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_mods',
   );
 
@@ -510,7 +525,7 @@ function andes_install_tasks($install_state) {
     'display_name' => st('Importacion de vistas'),
     'display' => TRUE,
     'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP, 
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_views',
   );
 
@@ -520,14 +535,14 @@ function andes_install_tasks($install_state) {
 function _install_mods() {
 
   module_load_include('inc', 'phpexcel');
-  
+
   $batch = array(
     'title' => t('Importando contenido'),
   );
-  // Create beans types.
-  module_enable(array('beans_types'), TRUE);
+
   // Create contents types.
   module_enable(array('tc_noticias'), TRUE);
+  module_enable(array('tc_equipos'), TRUE);
   module_enable(array('ct_eventos'), TRUE);
   module_enable(array('tc_layouts'), TRUE);
   module_enable(array('tc_publicaciones'), TRUE);
@@ -538,25 +553,31 @@ function _install_mods() {
 
   $file_path_noticias = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/noticias.xls';
   $noticias = phpexcel_import($file_path_noticias);
- 
+
   foreach ($noticias[false] as $key => $value) {
     $batch['operations'][] = array('_import_noticias_batch', array($value));
   }
 
   $file_path_eventos = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventos.xlsx';
   $eventos = phpexcel_import($file_path_eventos);
- 
+
   foreach ($eventos[false] as $key => $value) {
     $batch['operations'][] = array('_import_eventos_bath', array($value));
   }
 
+  // $file_path_ = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventos.xlsx';
+  // $eventos = phpexcel_import($file_path_eventos);
+
+  // foreach ($eventos[false] as $key => $value) {
+  //   $batch['operations'][] = array('_import_eventos_bath', array($value));
+  // }
   return $batch;
 }
 
 
 function _install_views() {
   $install_state['mods'] = array('views' => 1);
-  
+
   $batch = array(
     'title' => t('Importando vistas'),
   );
@@ -576,7 +597,7 @@ function _install_views_batch(){
 function _install_taxonomy() {
   // Create taxonomy machine_name.
   taxonomy_vocabulary_save((object) array('name' => 'Noticias','machine_name' => 'categorias_noticia'));
-  taxonomy_vocabulary_save((object) array('name' => 'Área tematica','machine_name' => 'area_tematica'));  
+  taxonomy_vocabulary_save((object) array('name' => 'Área tematica','machine_name' => 'area_tematica'));
   taxonomy_vocabulary_save((object) array('name' => 'Editorial','machine_name' => 'editorial'));
   taxonomy_vocabulary_save((object) array('name' => 'Eventos','machine_name' => 'eventos'));
   taxonomy_vocabulary_save((object) array('name' => 'Footer Top','machine_name' => 'footer_top'));
@@ -584,9 +605,10 @@ function _install_taxonomy() {
   taxonomy_vocabulary_save((object) array('name' => 'Lateral Items','machine_name' => 'lateral_items'));
   taxonomy_vocabulary_save((object) array('name' => 'Redes Sociales','machine_name' => 'redes_sociales'));
   taxonomy_vocabulary_save((object) array('name' => 'Tipo de layout','machine_name' => 'tipo_layout'));
+  taxonomy_vocabulary_save((object) array('name' => 'Categoría equipos de trabajo', 'machine_name' => 'categoria_equipos_trabajo'));
 
   $install_state['mods'] = array('Taxonomy' => 1);
-  
+
   $batch = array(
     'title' => t('Importando Taxonomias'),
   );
@@ -603,9 +625,9 @@ function _install_taxonomy_batch(){
 }
 
 function _install_style_image(){
-  
+
   $install_state['mods'] = array('Style Image' => 1);
-  
+
   $batch = array(
     'title' => t('Importando Estilos de Imagen'),
   );
@@ -614,9 +636,67 @@ function _install_style_image(){
   foreach ($install_state['mods'] as $key => $module) {
     $batch['operations'][] = array('_install_style_image_batch', array($module));
   }
-  return $batch;  
+  return $batch;
 }
 
 function _install_style_image_batch(){
   module_enable(array('estilos'), TRUE);
+}
+
+
+function _install_beans(){
+  //load module PHPEXCEL for prepare import data
+  module_load_include('inc', 'phpexcel');
+  //Name to Batch
+  $batch = array(
+    'title' => t('Importando Bloques Beans'),
+  );
+
+   // Load beans types.
+   module_enable(array('beans_types'), TRUE);
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  $beans = array(
+    'sliders_homes',
+  );
+  // $batch['operations'] = _get_beans_import($beans);
+  $path_beans = getcwd().'/profiles/andes/beans/';
+  $operations = array();
+  foreach ($beans as $bean_name) {
+    $bean_data = phpexcel_import($path_beans.$bean_name.".xlsx");
+    foreach (reset($bean_data) as $bean_value) {
+      $batch['operations'][] = array('_import_beans_batch', array($bean_value,$bean_name));
+    }
+  }
+  return $batch;
+}
+
+function _save_data_field_collection( $field, $langugage = "", $data = array(), $entity = array(), $entity_type = ""){
+  foreach (json_decode($data[$field.$language],true) as $key => $item) {
+    $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
+    if (empty($langugage)) {
+      $colletions->setHostEntity($entity_type, $entity, 'es');
+    }
+    if (!empty($language)) {
+      $colletions->setHostEntity($entity_type, $entity,str_replace("_","",$language));
+    }
+    $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
+    $wrapper_collections->field_slider_ubicacion->set($item['field_slider_ubicacion']);
+    $wrapper_collections->field_titulo->set($item['field_titulo']);
+    $wrapper_collections->field_titulo_especiales->set(array('value' => $item['field_titulo_especiales']));
+    $wrapper_collections->field_body->set(array('value' => $item['field_body']));
+
+    $file = file_save_data(file_get_contents($item['field_image_banner']), 'public://'.basename($item['field_image_banner']));
+    $wrapper_collections->field_image_banner->file->set($file);
+
+    // $file = file_save_data(file_get_contents($item['field_image_banner_mobile']), 'public://'.basename($item['field_image_banner_mobile']));
+    // $wrapper_collections->field_image_banner_mobile->file->set($file);
+
+    $wrapper_collections->field_video_banner->set(array('input' => $item['field_video_banner']));
+
+    $wrapper_collections->field_enlace_ver_mas->set(
+        array('title' => $item['field_enlace_ver_mas']['title'], 'url' => $item['field_enlace_ver_mas']['url'])
+    );
+    $wrapper_collections->save();
+  }
 }
