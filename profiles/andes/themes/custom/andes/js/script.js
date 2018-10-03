@@ -1,4 +1,11 @@
 (function ($) {
+  // function wrapper to image element
+  $(window).ready(function() {
+    $('img').each(function() {
+      $(this).wrap('<figure></figure>');
+    });
+  });
+
   // function adctivar modal Masonry
   jQuery(document).on("click", ".open-modal", function() {
     var imageSrc = jQuery(this).parents(".masonry-item").find("img").attr("src");
@@ -187,28 +194,42 @@ setTimeout(function(){
   });
 
 // funcion que acomoda div .slider-homes-bottom
-  // jQuery(document).ready(function($) {
-  //   acoplar_top();
-  //   function acoplar_top() {
-  //     var ancho = $(window).width();
-  //     if (ancho > 992) {
-  //       $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
-  //         var alto = $('#views_slideshow_swiper_slider_homes-block_1 .img-desktop img').attr('height');
-  //         if ($(this).find('.slider-homes-bottom').length) {
-  //           var caja_bottom = $('.slider-homes-bottom').outerHeight();
-  //           $(this).find('.img-desktop img').height(alto - caja_bottom);
-  //         }else{
-  //           $(this).find('.img-desktop img').height(alto);
-  //         }
-  //       });
-  //     }
-  //   }
+  jQuery(document).ready(function($) {
+    acoplar_top();
 
-  //   $(window).resize(function(event) {
-  //     acoplar_top();
-  //   });
+    function acoplar_top() {
+      var ancho = $(window).width();
+      if (ancho > 992) {
+        var caja_bottom = $('.slider-homes-bottom').outerHeight();
+        var alto = $('#views_slideshow_swiper_slider_homes-block_1').find('.img-desktop img').attr('height');
+        $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
+          if ($(this).find('.slider-homes-bottom').length < 1) {  
+            switch ($(this).find('.iframe-conten').length) {
+              case 0:
+                $(this).find('.img-desktop img').height(parseInt(alto) + parseInt(caja_bottom));
+                break;
+              case 1:
+                $(this).find('.iframe-conten').css('height', parseInt(alto)+parseInt(caja_bottom));
+                break;
+              default:
+                break;
+            }          
+          } else{
+              $(this).find('.img-desktop img').height(parseInt(alto));
+              if ($(this).find('.iframe-conten').length > 0) {
+                var otro = parseInt(alto)+6;
+                $(this).find('.iframe-conten').css('height', otro);                
+              }
+            }  
+        });
+      }
+    }
 
-  // });
+    $(window).resize(function(event) {
+      acoplar_top();
+    });
+
+  });
 
 
 }(jQuery));
