@@ -8,8 +8,11 @@
 }
 
 .view-eventos-decanatura .view-content{
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
+	-ms-grid-rows: 140px 140px 140px 300px;
 	grid-template-rows: 140px 140px 140px 300px;
 	grid-auto-flow: dense;
 	grid-gap: 10px;

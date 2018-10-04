@@ -46,12 +46,15 @@ options.sass = {
 };
 
 // Define which browsers to add vendor prefixes for.
+//http://autoprefixer.github.io/
+//https://browserl.ist/?q=last%204%20version
 options.autoprefixer = {
   browsers: [
     'last 5 versions',
     '> 1%',
     'Ie 9',
-    'Ie 10'
+    'Ie 10',
+    'Ie 11'
   ]
 };
 
