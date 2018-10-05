@@ -2138,14 +2138,20 @@ th {
   padding: 5px 0;
 }
 
-.view.view-eventos-decanatura {
+.view-eventos-decanatura {
   position: relative;
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura {
+    padding: 0 15px;
+  }
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
@@ -2171,7 +2177,7 @@ th {
   }
 }
 
-.masonry-item {
+.view-eventos-decanatura .masonry-item {
   position: relative !important;
   top: 0 !important;
   left: 0 !important;
@@ -2185,12 +2191,19 @@ th {
           transform: translate3d(0, 0, 0) !important;
 }
 
-.field-content {
-  display: block;
+.view-eventos-decanatura .views-field {
+  position: relative;
+  height: 100%;
 }
 
-.iframe-conten,
-.imge-conten {
+.view-eventos-decanatura .field-content {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.view-eventos-decanatura .iframe-conten,
+.view-eventos-decanatura .imge-conten {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2199,69 +2212,74 @@ th {
   z-index: 10;
 }
 
-.iframe-conten img,
-.imge-conten img {
+.view-eventos-decanatura .iframe-conten img,
+.view-eventos-decanatura .imge-conten img {
   position: absolute;
   min-width: 100%;
   min-height: 100%;
-  max-width: none;
+  width: auto;
   max-width: 200%;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: 50%;
   left: 50%;
-  width: auto;
-  -webkit-transition: -webkit-transform ease-out .4s;
-  transition: -webkit-transform ease-out .4s;
-  -o-transition: transform ease-out .4s;
-  transition: transform ease-out .4s;
-  transition: transform ease-out .4s, -webkit-transform ease-out .4s;
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transform: scale(1) translate3d(-50%, -50%, 0);
-          transform: scale(1) translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 
-.masonry-item:nth-child(odd),
-.item-lg {
-  grid-row: span 2;
-  height: 290px;
-}
-
-@media (min-width: 768px) {
-  .masonry-item:nth-child(odd),
-  .item-lg {
-    height: 420px;
+@supports ((display: -ms-grid) or (display: grid)) {
+  .view-eventos-decanatura .masonry-item:nth-child(odd),
+  .view-eventos-decanatura .item-lg {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: span 2;
+    height: 290px;
+  }
+  @media (min-width: 768px) {
+    .view-eventos-decanatura .masonry-item:nth-child(odd),
+    .view-eventos-decanatura .item-lg {
+      height: 420px;
+    }
   }
 }
 
-.masonry-item:nth-child(even),
-.item-sm {
-  grid-row: span 1;
-  height: 140px;
-}
-
-@media (min-width: 768px) {
-  .masonry-item:nth-child(even),
-  .item-sm {
-    height: 200px;
+@supports ((display: -ms-grid) or (display: grid)) {
+  .view-eventos-decanatura .masonry-item:nth-child(even),
+  .view-eventos-decanatura .item-sm {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: span 1;
+    height: 140px;
+  }
+  @media (min-width: 768px) {
+    .view-eventos-decanatura .masonry-item:nth-child(even),
+    .view-eventos-decanatura .item-sm {
+      height: 200px;
+    }
   }
 }
 
-.masonry-item:last-child,
-.item-full {
-  grid-column: span 2;
-  grid-row: auto;
-  height: 290px;
-}
-
-@media (min-width: 768px) {
-  .masonry-item:last-child,
-  .item-full {
-    height: 400px;
+@supports ((display: -ms-grid) or (display: grid)) {
+  .view-eventos-decanatura .masonry-item:last-child,
+  .view-eventos-decanatura .item-full {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: span 2;
+    grid-row: auto;
+    height: 290px;
+  }
+  @media (min-width: 768px) {
+    .view-eventos-decanatura .masonry-item:last-child,
+    .view-eventos-decanatura .item-full {
+      height: 400px;
+    }
   }
 }
 
-.box-date {
+.view-eventos-decanatura .box-date {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -2269,21 +2287,21 @@ th {
   font-weight: 700;
 }
 
-.box-date .date-number {
+.view-eventos-decanatura .box-date .date-number {
   display: block;
   color: white;
   font-size: 32px;
   line-height: 1;
 }
 
-.box-date .date-month {
+.view-eventos-decanatura .box-date .date-month {
   display: block;
   font-size: 11px;
   line-height: 1;
   color: white;
 }
 
-.box-icon {
+.view-eventos-decanatura .box-icon {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -2306,10 +2324,10 @@ th {
           align-items: center;
 }
 
-.slider-homes-left,
-.slider-homes-center,
-.slider-homes-right,
-.slider-homes-bottom {
+.view-eventos-decanatura .slider-homes-left,
+.view-eventos-decanatura .slider-homes-center,
+.view-eventos-decanatura .slider-homes-right,
+.view-eventos-decanatura .slider-homes-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2317,38 +2335,172 @@ th {
   z-index: 20;
 }
 
-.title-slider-homes {
+.view-eventos-decanatura .title-slider-homes {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px 15px;
+  padding: 10px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media (min-width: 768px) {
-  .title-slider-homes {
+  .view-eventos-decanatura .title-slider-homes {
     width: 80%;
   }
 }
 
-.title-slider-homes a {
+@media (min-width: 444px) {
+  .view-eventos-decanatura .title-slider-homes {
+    width: 90%;
+    padding: 10px 15px;
+  }
+}
+
+.view-eventos-decanatura .title-slider-homes a {
   display: block;
   text-decoration: none;
   outline: 0;
   color: white;
-  font-size: 21px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
   padding-bottom: 4px;
   border-bottom: 1px solid #F69331;
 }
 
-@media (min-width: 768px) {
-  .title-slider-homes a {
+@media (min-width: 444px) {
+  .view-eventos-decanatura .title-slider-homes a {
     font-size: 30px;
   }
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura .title-slider-homes a {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 444px) {
+  .view-eventos-decanatura .title-slider-homes a {
+    font-size: 16px;
+  }
+}
+
+.view-eventos-decanatura .view-content-detail {
+  background-color: #000;
+  margin-bottom: 15px;
+  padding: 15px 10px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura .view-content-detail {
+    padding: 20px 15px;
+  }
+}
+
+.view-eventos-decanatura .head-bar {
+  display: table-row;
+}
+
+.view-eventos-decanatura .head-bar .box-date {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 10px;
+  text-align: center;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura .head-bar .box-date {
+    padding: 0 15px;
+  }
+}
+
+.view-eventos-decanatura .head-bar .box-data {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  padding: 0 10px;
+  font-size: 12px;
+  border-left: 2px solid #F69331;
+}
+
+@media (min-width: 444px) {
+  .view-eventos-decanatura .head-bar .box-data {
+    font-size: 16px;
+  }
+}
+
+.view-eventos-decanatura .head-content {
+  margin-top: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura .head-content {
+    margin-top: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.view-eventos-decanatura .head-content p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 18px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .view-eventos-decanatura .head-content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 444px) {
+  .view-eventos-decanatura .head-content p {
+    white-space: initial;
+    max-height: none;
+    overflow: auto;
+  }
+}
+
+.view-eventos-decanatura .head-btn {
+  display: block;
+  max-width: 120px;
+  padding: 4px 8px;
+  margin-left: auto;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #F69331;
+}
+
+.view-eventos-decanatura .view-content-load {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+
+.view-eventos-decanatura .view-content-load img {
+  cursor: pointer;
 }
 
 /*
