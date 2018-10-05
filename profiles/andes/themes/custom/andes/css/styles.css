@@ -2143,15 +2143,19 @@ th {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 10px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .view-eventos-decanatura {
-    padding: 0 15px;
+    padding: 20px 15px;
   }
+}
+
+.view-eventos-decanatura .view-content {
+  grid-auto-flow: dense;
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
@@ -2160,8 +2164,8 @@ th {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 140px 140px 140px 300px;
-        grid-template-rows: 140px 140px 140px 300px;
+    -ms-grid-rows: 160px 160px 160px 300px;
+        grid-template-rows: 160px 160px 160px 300px;
     grid-gap: 10px;
     margin: 0 auto;
     width: 100%;
@@ -2170,8 +2174,8 @@ th {
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .view-content {
-      -ms-grid-rows: 200px 200px 200px 400px;
-          grid-template-rows: 200px 200px 200px 400px;
+      -ms-grid-rows: 160px 160px 160px 300px;
+          grid-template-rows: 160px 160px 160px 300px;
       grid-gap: 20px;
     }
   }
@@ -2218,7 +2222,6 @@ th {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  max-width: 200%;
   -o-object-fit: cover;
      object-fit: cover;
   top: 50%;
@@ -2236,12 +2239,12 @@ th {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: span 2;
-    height: 290px;
+    height: 330px;
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .masonry-item:nth-child(odd),
     .view-eventos-decanatura .item-lg {
-      height: 420px;
+      height: 340px;
     }
   }
 }
@@ -2252,12 +2255,12 @@ th {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: span 1;
-    height: 140px;
+    height: 160px;
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .masonry-item:nth-child(even),
     .view-eventos-decanatura .item-sm {
-      height: 200px;
+      height: 160px;
     }
   }
 }
@@ -2269,12 +2272,12 @@ th {
     -ms-grid-column-span: 3;
     grid-column: span 2;
     grid-row: auto;
-    height: 290px;
+    height: 300px;
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .masonry-item:last-child,
     .view-eventos-decanatura .item-full {
-      height: 400px;
+      height: 300px;
     }
   }
 }
@@ -2292,6 +2295,7 @@ th {
   color: white;
   font-size: 32px;
   line-height: 1;
+  text-align: left;
 }
 
 .view-eventos-decanatura .box-date .date-month {
@@ -2388,18 +2392,38 @@ th {
   }
 }
 
-.view-eventos-decanatura .view-content-detail {
+.view-eventos-decanatura .masonry-item:hover .detail-content {
+  /*display: block;*/
+  visibility: visible;
+  opacity: 1;
+}
+
+.view-eventos-decanatura .detail-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  /*display: none;*/
+  visibility: hidden;
+  opacity: 0;
   background-color: #000;
-  margin-bottom: 15px;
-  padding: 15px 10px;
-  max-width: 620px;
+  padding: 10px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transition: opacity ease-out .4s;
+  -o-transition: opacity ease-out .4s;
+  transition: opacity ease-out .4s;
 }
 
 @media (min-width: 768px) {
-  .view-eventos-decanatura .view-content-detail {
-    padding: 20px 15px;
+  .view-eventos-decanatura .detail-content {
+    padding: 10px;
   }
 }
 
@@ -2411,53 +2435,41 @@ th {
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  padding: 0 10px;
+  padding-right: 10px;
   text-align: center;
   left: 0;
   top: 0;
-}
-
-@media (min-width: 768px) {
-  .view-eventos-decanatura .head-bar .box-date {
-    padding: 0 15px;
-  }
+  line-height: 1;
 }
 
 .view-eventos-decanatura .head-bar .box-data {
   display: table-cell;
   vertical-align: middle;
   color: white;
-  padding: 0 10px;
+  padding-left: 10px;
   font-size: 12px;
+  line-height: 1;
   border-left: 2px solid #F69331;
+  font-size: 12px;
 }
 
-@media (min-width: 444px) {
+@media (min-width: 768px) {
   .view-eventos-decanatura .head-bar .box-data {
-    font-size: 16px;
+    line-height: 1.4;
+    font-size: 14px;
   }
 }
 
 .view-eventos-decanatura .head-content {
-  margin-top: 18px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .view-eventos-decanatura .head-content {
-    margin-top: 24px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  margin-top: 12px;
 }
 
 .view-eventos-decanatura .head-content p {
   color: white;
-  font-size: 16px;
-  line-height: 1.2;
-  margin-bottom: 24px;
-  -ms-text-overflow: ellipsis;
+  text-rendering: geometricPrecision;
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 10px;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
@@ -2465,24 +2477,18 @@ th {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .view-eventos-decanatura .head-content p {
-    font-size: 18px;
-  }
-}
-
 @media (min-width: 444px) {
   .view-eventos-decanatura .head-content p {
     white-space: initial;
     max-height: none;
-    overflow: auto;
+    overflow: initial;
   }
 }
 
 .view-eventos-decanatura .head-btn {
   display: block;
   max-width: 120px;
-  padding: 4px 8px;
+  padding: 6px 4px;
   margin-left: auto;
   margin-right: 0px;
   text-align: center;
@@ -2491,6 +2497,11 @@ th {
   font-weight: 400;
   font-size: 12px;
   background-color: #F69331;
+}
+
+.view-eventos-decanatura .head-btn:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .view-eventos-decanatura .view-content-load {

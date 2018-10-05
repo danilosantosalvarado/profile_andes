@@ -3,26 +3,29 @@
 	width: 100%;
 	max-width: 1170px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 10px 15px;
 	box-sizing: border-box;
 
 	@include respond-to(m) {
-		padding: 0 15px;
+		padding: 20px 15px;
+	}
+
+	.view-content {
+		grid-auto-flow: dense;
 	}
 
 	@supports (display: grid) {
-		.view-content{
+		.view-content {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 140px 140px 140px 300px;
-			// grid-auto-flow: dense;
+			grid-template-rows: 160px 160px 160px 300px;
 			grid-gap: 10px;
 			margin: 0 auto;
 			width: 100%;
 			max-width: 620px;
 			height: auto !important;
 			@include respond-to(m) {
-				grid-template-rows: 200px 200px 200px 400px;
+				grid-template-rows: 160px 160px 160px 300px;
 				grid-gap: 20px;
 			}
 		}
@@ -67,7 +70,7 @@
 			min-width: 100%;
 			min-height: 100%;
 			width: auto;
-			max-width: 200%;
+			// max-width: 200%;
 			object-fit: cover;
 			top: 50%;
 			left: 50%;
@@ -82,9 +85,9 @@
 			-ms-grid-row: 1;
 			-ms-grid-row-span: 3;
 			grid-row: span 2;
-			height: 290px;
+			height: 330px;
 			@include respond-to(m) {
-				height: 420px;
+				height: 340px;
 			}
 		}
 	}
@@ -95,9 +98,9 @@
 			-ms-grid-row: 1;
 			-ms-grid-row-span: 2;
 			grid-row: span 1;
-			height: 140px;
+			height: 160px;
 			@include respond-to(m) {
-				height: 200px;
+				height: 160px;
 			}
 		}
 	}
@@ -109,9 +112,9 @@
 			-ms-grid-column-span: 3;
 			grid-column: span 2;
 			grid-row: auto;
-			height: 290px;
+			height: 300px;
 			@include respond-to(m) {
-				height: 400px;
+				height: 300px;
 			}
 		}
 	}
@@ -129,6 +132,7 @@
 		color: white;
 		font-size: 32px;
 		line-height: 1;
+		text-align: left;
 	}
 
 	.box-date .date-month{
@@ -204,18 +208,37 @@
 		}
 	}
 
-	.view-content-detail{
+	// update
+
+	.masonry-item:hover .detail-content{
+		/*display: block;*/
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.detail-content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+		/*display: none;*/
+		visibility: hidden;
+		opacity: 0;
 		background-color: #000;
-		margin-bottom: 15px;
-		padding: 15px 10px;
-		max-width: 620px;
+		padding: 10px;
+		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		// backface-visibility: hidden;
+		transform-origin: 50% 0;
+		transition: opacity ease-out .4s;
 	}
 
 	@include respond-to(m) {
-		.view-content-detail{
-			padding: 20px 15px;
+		.detail-content{
+			padding: 10px;
 		}
 	}
 
@@ -227,77 +250,59 @@
 		display: table-cell;
 		vertical-align: middle;
 		position: relative;
-		padding: 0 10px;
+		padding-right: 10px;
 		text-align: center;
 		left: 0;
 		top: 0;
-	}
-
-	@include respond-to(m) {
-		.head-bar .box-date{
-			padding: 0 15px;
-		}
+		line-height: 1;
 	}
 
 	.head-bar .box-data{
 		display: table-cell;
 		vertical-align: middle;
 		color: white;
-		padding: 0 10px;
+		padding-left: 10px;
 		font-size: 12px;
+		line-height: 1;
 		border-left: 2px solid #F69331;
+		font-size: 12px;
 	}
 
-	@include respond-to(xxs) {
+	@include respond-to(m) {
 		.head-bar .box-data{
-			font-size: 16px;
+			line-height: 1.4;
+			font-size: 14px;
 		}
 	}
 
 	.head-content{
-		margin-top: 18px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	@include respond-to(m) {
-		.head-content{
-			margin-top: 24px;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+		margin-top: 12px;
 	}
 
 	.head-content p{
 		color: white;
-		font-size: 16px;
-		line-height: 1.2;
-		margin-bottom: 24px;
-		-ms-text-overflow: ellipsis;
+		text-rendering: geometricPrecision;
+		font-size: 14px;
+		line-height: 1.1;
+		margin-bottom: 10px;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		max-height: 18px;
 		overflow: hidden;
 	}
 
-	@include respond-to(m) {
-		.head-content p{
-			font-size: 18px;
-		}
-	}
-
 	@include respond-to(xxs) {
 		.head-content p{
 			white-space: initial;
 			max-height: none;
-			overflow: auto;
+			overflow: initial;
 		}
 	}
 
 	.head-btn{
 		display: block;
 		max-width: 120px;
-		padding: 4px 8px;
+		padding: 6px 4px;
 		margin-left: auto;
 		margin-right: 0px; 
 		text-align: center;
@@ -306,6 +311,10 @@
 		font-weight: 400;
 		font-size: 12px;
 		background-color: #F69331;
+	}
+	.head-btn:hover{
+		color: white;
+		text-decoration: none;
 	}
 
 	.view-content-load{
