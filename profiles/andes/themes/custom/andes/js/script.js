@@ -2,10 +2,10 @@
 
 
   // function adctivar modal Masonry
-  jQuery(document).on("click", ".open-modal", function() {
-    var imageSrc = jQuery(this).parents(".masonry-item").find("img").attr("src");
-    jQuery(".modal-masonry").attr("src", imageSrc);
-  });
+  // jQuery(document).on("click", ".open-modal", function() {
+  //   var imageSrc = jQuery(this).parents(".masonry-item").find("img").attr("src");
+  //   jQuery(".modal-masonry").attr("src", imageSrc);
+  // });
 
   // function galeria home
   jQuery(document).on("click", ".galeria-home", function() {
@@ -67,7 +67,7 @@
         var caja_bottom = $('.slider-homes-bottom').outerHeight();
         var alto = $('#views_slideshow_swiper_slider_homes-block_1').find('.img-desktop img').attr('height');
         $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
-          if ($(this).find('.slider-homes-bottom').length < 1) {  
+          if ($(this).find('.slider-homes-bottom').length < 1) {
             switch ($(this).find('.iframe-conten').length) {
               case 0:
                 $(this).find('.img-desktop img').height(parseInt(alto) + parseInt(caja_bottom));
@@ -77,14 +77,14 @@
                 break;
               default:
                 break;
-            }          
+            }
           } else{
               $(this).find('.img-desktop img').height(parseInt(alto));
               if ($(this).find('.iframe-conten').length > 0) {
                 var otro = parseInt(alto)+6;
-                $(this).find('.iframe-conten').css('height', otro);                
+                $(this).find('.iframe-conten').css('height', otro);
               }
-            }  
+            }
         });
       }
     }
@@ -242,7 +242,7 @@ setTimeout(function(){
   //       var caja_bottom = $('.slider-homes-bottom').outerHeight();
   //       var alto = $('#views_slideshow_swiper_slider_homes-block_1').find('.img-desktop img').attr('height');
   //       $('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
-  //         if ($(this).find('.slider-homes-bottom').length < 1) {  
+  //         if ($(this).find('.slider-homes-bottom').length < 1) {
   //           switch ($(this).find('.iframe-conten').length) {
   //             case 0:
   //               $(this).find('.img-desktop img').height(parseInt(alto) + parseInt(caja_bottom));
@@ -252,14 +252,14 @@ setTimeout(function(){
   //               break;
   //             default:
   //               break;
-  //           }          
+  //           }
   //         } else{
   //             $(this).find('.img-desktop img').height(parseInt(alto));
   //             if ($(this).find('.iframe-conten').length > 0) {
   //               var otro = parseInt(alto)+6;
-  //               $(this).find('.iframe-conten').css('height', otro);                
+  //               $(this).find('.iframe-conten').css('height', otro);
   //             }
-  //           }  
+  //           }
   //       });
   //     }
   //   }
