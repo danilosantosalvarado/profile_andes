@@ -10,33 +10,70 @@
     ul.quicktabs-tabs {
       width: 100%;
       padding: 0;
-      margin: 0;
-      padding-bottom: 40px;
-      padding-inline-start: 0px;
-      li {
-        margin: 10px 0;
-        display: block;
-        list-style: none;
-        @include respond-to(xs) {
-          display: inline-block;
-          margin: 0px;
+      margin: 20px 0;
+      list-style: none;
+      position: relative;
+      @include respond-to(xs) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+          content: '';
+          width: 100%;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          border-top: 1px solid #9e9ca1;
+          margin: 0 auto;
+          z-index: -1;
         }
+      }
+      li {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin: 0 5px;
         a {
+          width: 100%;
+          display: block;
+          position: relative;
           font-family: $latobold;
           @include font-size(s);
           text-align: center;
           text-decoration: none;
-          transition: background .5s;
-          background-color: #f0eeee;
-          padding: 15px 50px;
-          display: block;
+          padding: 10px 20px;
+          border-color: #9e9ca1;
+          background: color('white');
+          line-height: 1;
           cursor: pointer;
-        }
-        &.active {
-          a {
-            background-color: color('orange');
-            color: color('white');
-            transition: background .5s;
+          border-top-width: 0px;
+          border-right-width: 0px;
+          border-bottom-width: 0px;
+          border-left-width: 0px;
+          &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 36px;
+            border-left: 1px solid #9e9ca1;
+            border-top: 1px solid #9e9ca1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 36px;
+            border-right: 1px solid #9e9ca1;
+            border-bottom: 1px solid #9e9ca1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
           }
         }
       }

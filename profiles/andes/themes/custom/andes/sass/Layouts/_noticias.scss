@@ -3,6 +3,7 @@
 // Multimedia
 //------------------------------------------------------------------------------
 */
+
 /* ------| Conten mini panel |----- */
 .pane-home-noticias-componente-noticia  {
 	.pane-content {
@@ -31,7 +32,6 @@
 	margin: 0 auto;
 	padding: 15px;
 	position: relative;
-  // border: 1px solid #006135;
   &::before {
     content: "";
     position: absolute;
@@ -272,7 +272,6 @@
 		@extend %link-slider-home;
 	}
 }
-
 
 /*
 //------------------------------------------------------------------------------

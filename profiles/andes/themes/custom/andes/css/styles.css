@@ -324,45 +324,86 @@ th {
 .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs {
   width: 100%;
   padding: 0;
-  margin: 0;
-  padding-bottom: 40px;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
-}
-
-.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li {
-  margin: 10px 0;
-  display: block;
+  margin: 20px 0;
   list-style: none;
+  position: relative;
 }
 
 @media (min-width: 555px) {
-  .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li {
-    display: inline-block;
-    margin: 0px;
+  .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs:before {
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #9e9ca1;
+    margin: 0 auto;
+    z-index: -1;
   }
 }
 
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin: 0 5px;
+}
+
 .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a {
+  width: 100%;
+  display: block;
+  position: relative;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.875rem;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: background .5s;
-  -o-transition: background .5s;
-  transition: background .5s;
-  background-color: #f0eeee;
-  padding: 15px 50px;
-  display: block;
+  padding: 10px 20px;
+  border-color: #9e9ca1;
+  background: #fff;
+  line-height: 1;
   cursor: pointer;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
 }
 
-.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li.active a {
-  background-color: #ff8827;
-  color: #fff;
-  -webkit-transition: background .5s;
-  -o-transition: background .5s;
-  transition: background .5s;
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 36px;
+  border-left: 1px solid #9e9ca1;
+  border-top: 1px solid #9e9ca1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 36px;
+  border-right: 1px solid #9e9ca1;
+  border-bottom: 1px solid #9e9ca1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
 /* ------| Eventos |----- */
