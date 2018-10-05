@@ -17,11 +17,10 @@
 // Support the same browsers as normalize.css v3.
 // Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
 $support-for: (
-  // IE 9-11
-  ie:  9,
+  ie:  11,
   // The last 4 versions of all other browsers.
   '*': -4,
-);
+)!default;
 
 
 // Font faces, stacks and sizes.

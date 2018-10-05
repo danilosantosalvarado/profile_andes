@@ -2190,25 +2190,26 @@ th {
           box-sizing: border-box;
 }
 
-.view-eventos-decanatura .view-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 140px 140px 140px 300px;
-  grid-template-rows: 140px 140px 140px 300px;
-  grid-auto-flow: dense;
-  grid-gap: 10px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 620px;
-  height: auto !important;
-}
-
-@media (min-width: 768px) {
+@supports ((display: -ms-grid) or (display: grid)) {
   .view-eventos-decanatura .view-content {
-    grid-template-rows: 200px 200px 200px 400px;
-    grid-gap: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 140px 140px 140px 300px;
+        grid-template-rows: 140px 140px 140px 300px;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 620px;
+    height: auto !important;
+  }
+  @media (min-width: 768px) {
+    .view-eventos-decanatura .view-content {
+      -ms-grid-rows: 200px 200px 200px 400px;
+          grid-template-rows: 200px 200px 200px 400px;
+      grid-gap: 20px;
+    }
   }
 }
 
@@ -3314,10 +3315,6 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Ubicado Abajo |----- */
-.view-slider-homes {
-  /* ------| flechas paginador abajo  |----- */
-}
-
 .view-slider-homes .field-content .slider-homes-bottom {
   background-color: #f4f1f1;
   border-bottom: 1px solid #ebba00;
@@ -7787,122 +7784,166 @@ body > .main-container.container-fluid {
   padding: 0px;
 }
 
-.view-id-galerias_home ul .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* layout 1  */
-  /* layout 2  */
-  /* layout 3  */
+@supports ((display: -ms-grid) or (display: grid)) {
+  .view-id-galerias_home ul .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* layout 1  */
+    /* layout 2  */
+    /* layout 3  */
+  }
+  .view-id-galerias_home ul .wrapper .box.a {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .view-id-galerias_home ul .wrapper .box.b {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .view-id-galerias_home ul .wrapper .box.c {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .view-id-galerias_home ul .wrapper .box.d {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .view-id-galerias_home ul .wrapper .box-1.a {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .view-id-galerias_home ul .wrapper .box-1.b {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
+  }
+  .view-id-galerias_home ul .wrapper .box-1.c {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .view-id-galerias_home ul .wrapper .box-2.a {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1/5;
+  }
+  .view-id-galerias_home ul .wrapper .box-2.b {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .view-id-galerias_home ul .wrapper .box-2.c {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .view-id-galerias_home ul .wrapper .box-2.d {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .view-id-galerias_home ul .wrapper .box-2.e {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
 }
 
-.view-id-galerias_home ul .wrapper .box.a {
-  grid-column: 1/5;
-  grid-row: 1;
-}
-
-.view-id-galerias_home ul .wrapper .box.b {
-  grid-column: 1/3;
-  grid-row: 2;
-}
-
-.view-id-galerias_home ul .wrapper .box.c {
-  grid-column: 3/5;
-  grid-row: 2;
-}
-
-.view-id-galerias_home ul .wrapper .box.d {
-  grid-column: 1/5;
-  grid-row: 3;
-}
-
-.view-id-galerias_home ul .wrapper .box-1.a {
-  grid-column: 1/3;
-  grid-row: 1;
-}
-
-.view-id-galerias_home ul .wrapper .box-1.b {
-  grid-row: 1;
-  grid-column: 3/5;
-}
-
-.view-id-galerias_home ul .wrapper .box-1.c {
-  grid-column: 1/5;
-  grid-row: 2;
-}
-
-.view-id-galerias_home ul .wrapper .box-2.a {
-  grid-column: 1/4;
-  grid-row: 1/5;
-}
-
-.view-id-galerias_home ul .wrapper .box-2.b {
-  grid-column: 4/5;
-  grid-row: 1;
-}
-
-.view-id-galerias_home ul .wrapper .box-2.c {
-  grid-column: 4/5;
-  grid-row: 2;
-}
-
-.view-id-galerias_home ul .wrapper .box-2.d {
-  grid-column: 4/5;
-  grid-row: 3;
-}
-
-.view-id-galerias_home ul .wrapper .box-2.e {
-  grid-column: 4/5;
-  grid-row: 4;
-}
-
-.view-id-galerias_home ul .wrapper4 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 731px;
-  /* layout 4  */
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.a {
-  grid-column: 1/3;
-  grid-row: 1/4;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.b {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.c {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.d {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.e {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.f {
-  grid-column: 2;
-  grid-row: 4;
-}
-
-.view-id-galerias_home ul .wrapper4 .box-3.g {
-  grid-column: 3;
-  grid-row: 4;
+@supports ((display: -ms-grid) or (display: grid)) {
+  .view-id-galerias_home ul .wrapper4 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 731px;
+    /* layout 4  */
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.a {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.b {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.c {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.d {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.e {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.f {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .view-id-galerias_home ul .wrapper4 .box-3.g {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
 }
 
 /*
@@ -8485,18 +8526,12 @@ body > .main-container.container-fluid {
 // Equipos
 //------------------------------------------------------------------------------
 */
-.view-id-equipo_de_trabajo {
-  /* tabs de equipos */
-}
-
 .view-id-equipo_de_trabajo ul.quicktabs-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
   padding: 30px 0;
-  /* width */
-  /* scroll */
 }
 
 .view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar {
@@ -8578,8 +8613,6 @@ body > .main-container.container-fluid {
   background-color: transparent;
   border: none;
   padding: 0;
-  /* imagen */
-  /* text */
 }
 
 @media (min-width: 992px) {

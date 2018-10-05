@@ -6,23 +6,21 @@
 	padding: 0 15px;
 	box-sizing: border-box;
 }
-
-.view-eventos-decanatura .view-content{
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
-	-ms-grid-rows: 140px 140px 140px 300px;
-	grid-template-rows: 140px 140px 140px 300px;
-	grid-auto-flow: dense;
-	grid-gap: 10px;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 620px;
-	height: auto !important;
-	@include respond-to(m, true){
-		grid-template-rows: 200px 200px 200px 400px;
-		grid-gap: 20px;
+@supports (display: grid) {
+	.view-eventos-decanatura .view-content{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 140px 140px 140px 300px;
+		// grid-auto-flow: dense;
+		grid-gap: 10px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 620px;
+		height: auto !important;
+		@include respond-to(m, true){
+			grid-template-rows: 200px 200px 200px 400px;
+			grid-gap: 20px;
+		}
 	}
 }
 

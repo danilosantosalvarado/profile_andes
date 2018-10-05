@@ -29,8 +29,5 @@
     "sass-lint": "^1.12.1",
     "support-for": "^1.0.7",
     "typey": "^1.1.2"
-  },
-  "dependencies": {
-    "breakpoint": "^0.1.6"
   }
 }
