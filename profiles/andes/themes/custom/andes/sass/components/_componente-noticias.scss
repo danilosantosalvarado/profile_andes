@@ -32,9 +32,6 @@
 						border-top: 3px solid #ff8827;
 						background: #f4f1f1;
 						min-height: 364px;
-						@include respond-to(xs) {
-
-						}
 						//Fecha
 						.views-field-created {
 							font-family: $latoregular;
@@ -81,7 +78,6 @@
 							a {
 								display: block;
 								width: 180px;
-								// max-width: 180px;
 								font-family: $latoregular;
 								@include font-size(m);
 								color: color('grey-dark');
@@ -96,11 +92,6 @@
 								right: 0;
 								left: 0;
 								@include respond-to(xs) {
-									// position: absolute;
-									// bottom: 20px;
-									// right: 15px;
-									// margin: 0px;
-									// max-width: 150px;
 									right: 25px;
 									left: inherit;
 									max-width: 150px;
