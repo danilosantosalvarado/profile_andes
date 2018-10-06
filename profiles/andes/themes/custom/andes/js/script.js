@@ -278,70 +278,123 @@ setTimeout(function(){
 	 * [listEvents description]
 	 * @type {[type]}
 	 */
-	/*function slice(array, start, end) {
-		var length = array == null ? 0 : array.length
+	function slice(array, start, end) {
+		var length = array == null ? 0 : array.length;
 		if (!length) {
-			return []
+			return [];
 		}
 		start = start == null ? 0 : start
-		end = end === undefined ? length : end
+		end = end === undefined ? length : end;
 
 		if (start < 0) {
-			start = -start > length ? 0 : (length + start)
+			start = -start > length ? 0 : (length + start);
 		}
-		end = end > length ? length : end
+		end = end > length ? length : end;
 		if (end < 0) {
-			end += length
+			end += length;
 		}
-		length = start > end ? 0 : ((end - start) >>> 0)
-		start >>>= 0
+		length = start > end ? 0 : ((end - start) >>> 0);
+		start >>>= 0;
 
-		var index = -1
-		var result = new Array(length)
+		var index = -1;
+		var result = new Array(length);
 		while (++index < length) {
-			result[index] = array[index + start]
+			result[index] = array[index + start];
 		}
-		return result
+		return result;
 	}
 	function chunk(array, size) {
-		size = Math.max(size, 0)
-		var length = array == null ? 0 : array.length
+		size = Math.max(size, 0);
+		var length = array == null ? 0 : array.length;
 		if (!length || size < 1) {
-			return []
+			return [];
 		}
-		var index = 0
-		var resIndex = 0
-		var result = new Array(Math.ceil(length / size))
+		var index = 0;
+		var resIndex = 0;
+		var result = new Array(Math.ceil(length / size));
 
 		while (index < length) {
-			result[resIndex++] = slice(array, index, (index += size))
+			result[resIndex++] = slice(array, index, (index += size));
 		}
-		return result
-	}*/
+		return result;
+	}
 
-	function testListEvents(){
-		var listEvents = document.querySelectorAll('.view-eventos-decanatura .masonry-item');
-		if (listEvents.length == 0) {
-			setTimeout(function(){testListEvents()}, 200);
+	var eventsData = {size: 0};
+
+	function listEvents(){
+		var list = document.querySelectorAll('.view-eventos-decanatura .masonry-item');
+		if (list.length == 0) {
+			setTimeout(function(){listEvents()}, 200);
 			return true;
 		}
-		// var partialEvents = chunk(listEvents ,6 );
-		var partialEvents = [listEvents];
+		eventsData.size = list.length;
+		var partialEvents = chunk(list, 6);
+		// var partialEvents = [list];
 
-		try{
-			partialEvents[0][0].classList.add('item-full');
-			partialEvents[0][1].classList.add('item-lg');
-			partialEvents[0][2].classList.add('item-sm');
-			partialEvents[0][3].classList.add('item-lg');
-			partialEvents[0][4].classList.add('item-sm');
-			partialEvents[0][5].classList.add('item-full');
-		}catch(err){
-			console.warn(err);
-			return true;
+		partialEvents.map(function(ls, idx){
+			var opt = ls.length;
+			console.log(ls);
+
+			switch(opt){
+				case 6:
+					ls[0].classList.add('item-full');
+					ls[1].classList.add('item-lg');
+					ls[2].classList.add('item-sm');
+					ls[3].classList.add('item-lg');
+					ls[4].classList.add('item-sm');
+					ls[5].classList.add('item-full');
+				break;
+				case 5:
+					ls[0].classList.add('item-lg');
+					ls[1].classList.add('item-sm');
+					ls[2].classList.add('item-lg');
+					ls[3].classList.add('item-sm');
+					ls[4].classList.add('item-full');
+				break;
+				case 4:
+					ls[0].classList.add('item-lg');
+					ls[1].classList.add('item-sm');
+					ls[2].classList.add('item-lg');
+					ls[3].classList.add('item-sm');
+				break;
+				case 3:
+					ls[0].classList.add('item-sm');
+					ls[1].classList.add('item-sm');
+					ls[2].classList.add('item-full');
+				break;
+				case 2:
+					ls[0].classList.add('item-sm');
+					ls[1].classList.add('item-sm');
+				break;
+				case 1:
+					ls[0].classList.add('item-full');
+				break;
+			}
+		});
+
+	}
+
+	function onEventsLoad(){
+		var newSizeEvents = document.querySelectorAll('.view-eventos-decanatura .masonry-item').length;
+		if( newSizeEvents != eventsData.size ){
+			listEvents();
+		}else{
+			setTimeout(function(){onEventsLoad()}, 200);
 		}
 	}
 
-	testListEvents();
+	function eventsLoad(){
+
+		var btnLoadMore = document.querySelector('.view-eventos-decanatura .pager.pager-load-more a');
+		if ( !btnLoadMore ) {
+			setTimeout(function(){eventsLoad()}, 200);
+			return false;
+		}
+		btnLoadMore.addEventListener('click', onEventsLoad, false);
+	}
+
+	eventsLoad();
+	listEvents();
 
 
 }(jQuery));
