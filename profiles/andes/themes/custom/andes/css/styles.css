@@ -3119,11 +3119,11 @@ body > .main-container.container-fluid {
   }
 }
 
-/* ------| ver todos|----- */
+/* ------| Button ver todos|----- */
 .view-more-footer {
   position: relative;
   text-align: center;
-  padding: 40px 0;
+  margin-top: 20px;
 }
 
 .view-more-footer::before {
@@ -4264,21 +4264,15 @@ body > .main-container.container-fluid {
   font-size: 0;
   display: block;
   text-decoration: none;
-  border: 1px solid #ff8827;
+  border: 1px solid #46b9c0;
   border-radius: 10px;
-  background-color: #c6c6c6;
+  background-color: #fff;
   padding: 0;
 }
 
 .view-id-componente_eventos .views-slideshow-pager-field-processed .views-slideshow-pager-field-item.active a {
-  background-color: #ff8827;
-  border: 1px solid #ff8827;
-}
-
-@media (min-width: 992px) {
-  .view-id-componente_eventos .views-slideshow-pager-field-processed {
-    display: none;
-  }
+  background-color: #46b9c0;
+  border: 1px solid #46b9c0;
 }
 
 /*
@@ -8988,7 +8982,7 @@ body > .main-container.container-fluid {
   color: #fff;
 }
 
-/* ------| Multimedia swioe horizontal movil |----- */
+/* ------| Multimedia swiper horizontal movil |----- */
 @media (min-width: 992px) {
   .view-display-id-multimedia_destacada_mobile {
     display: none;

@@ -1,14 +1,13 @@
 # ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
-/sites/default/**/files
-/sites/default/**/private
-/sites/default/settings.php
+
+/sites/*/settings.php
 /nbproject
 /profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css
 
 # Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
-/files/*
+#sites/*/files
+#sites/*/private
+#/files/*
 /cache
 /nbproject
 
@@ -49,3 +48,5 @@ Thumbs.db
 package-lock.json
 node_modules
 
+#Phpstorm
+.idea

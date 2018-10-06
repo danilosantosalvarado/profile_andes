@@ -138,9 +138,9 @@
 	margin: 15px 0 20px;
 	.views-slideshow-pager-field-processed {
 		padding: 25px 0;
-		@include bullet(orange, grey-secundary, orange, orange );
-		@include respond-to(xl) {
-			display: none;
-		}
+		@include bullet(blue-light, white, blue-light, blue-light );
+		// @include respond-to(xl) {
+		// 	display: none;
+		// }
 	}
 }

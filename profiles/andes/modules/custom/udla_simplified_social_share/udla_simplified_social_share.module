@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Implement socialshare support for Drupal EXTRA
+ */
+ 
+
+/**
+ * Implements hook_block_info().
+ *
+ * @return array An associative array whose keys define the delta for each block and whose values contain the block descriptions
+ */
+function udla_simplified_social_share_block_info() {
+  $blocks['open_sharing_vertical'] = array(
+    'info' => t('Open Social Sharing Vertical'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * @param $delta Which block to render. This is a unique identifier for the block within the module, defined in hook_block_info()
+ * @return array Contain block's body and subject
+ */
+
+function udla_simplified_social_share_block_view($delta) {      
+  $block = array();
+  $item = menu_get_object($type = 'node', $position = 1, $path = NULL); 
+  $item_summary = isset($item->body['und'][0]['summary']) && !empty($item->body['und'][0]['summary']) ? $item->body['und'][0]['summary'] :'';
+  if (empty($item_summary ) && !empty($item->body['und'][0]['value'])) {
+      if(strlen($item->body['und'][0]['value']) >= 500){     
+       $item_summary = substr($item->body['und'][0]['value'], 0, strpos($item->body['und'][0]['value'], '.', 500)); 
+      }else{
+        $item_summary = $item->body['und'][0]['value'];
+      }
+       $item_summary.= '.';
+  }  
+  $item_image = isset($item->field_image['und'][0]['uri']) && !empty($item->field_image['und'][0]['uri']) ? file_create_url($item->field_image['und'][0]['uri']) :'';
+ 
+
+  if ($delta == 'open_sharing_vertical') {
+    $output = '';
+    drupal_add_css(drupal_get_path('module', 'udla_simplified_social_share') . '/css/simplified_open_social_share.css');
+
+    simplified_open_social_share_horizontal_script_code();
+    $output .= simplified_open_social_share_horizontal_sharing_div($item_summary,$item_image);
+    $output = str_replace('os-share-widget-interface', 'os-share-widget-interface os-share-widget-interface-vertical', $output);
+    $block['content'] = $output;
+  }
+  return $block;
+}

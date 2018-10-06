@@ -166,11 +166,11 @@ body > .main-container.container-fluid {
   }
 }
 
-/* ------| ver todos|----- */
+/* ------| Button ver todos|----- */
 .view-more-footer {
   position: relative;
   text-align: center;
-  padding: 40px 0;
+  margin-top: 20px;
   &::before {
     content: '';
     display: block;

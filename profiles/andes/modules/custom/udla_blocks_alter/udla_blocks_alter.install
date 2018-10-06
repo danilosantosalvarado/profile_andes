@@ -217,7 +217,7 @@ function udla_blocks_alter_schema()
     ),
     'primary key' => array('colorid'),
   );
-  return $schema; 
+  return $schema;
 }
 
 /**
@@ -228,9 +228,54 @@ function udla_blocks_alter_update_7590(){
     'type' => 'varchar',
     'length' => 255,
     'not null' => true,
-    'default' => '',  
+    'default' => '',
     'description' => 'String containing the classes for the block.',
   );
   db_add_field('block', 'background_color_change', $spec);
-  
+
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function udla_blocks_alter_update_7591(){
+  $spec = array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => true,
+    'default' => '',
+    'description' => 'String containing the classes for the block.',
+  );
+  db_add_field('block', 'text_color', $spec);
+  db_drop_field('block', 'color_title');
+}
+
+
+/**
+ * Implements hook_update_N().
+ */
+function udla_blocks_alter_update_7592(){
+  $spec = array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => true,
+    'default' => '',
+    'description' => 'String containing the classes for the block.',
+  );
+  db_add_field('block', 'hover_link', $spec);
+  db_add_field('block', 'hover_content', $spec);
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function udla_blocks_alter_update_7593(){
+  $spec = array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => true,
+    'default' => '',
+    'description' => 'String containing the classes for the block.',
+  );
+  db_add_field('block', 'hover_content_text', $spec);
 }
