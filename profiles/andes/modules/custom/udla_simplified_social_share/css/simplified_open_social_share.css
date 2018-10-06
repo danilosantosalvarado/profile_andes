@@ -1,0 +1,9 @@
+
+.os-share-widget-interface-vertical{
+  display: inline-grid;
+  float: right;
+}
+
+.os-share-widget-interface-vertical a{
+  margin-bottom: 3px;
+}
