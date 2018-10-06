@@ -6,24 +6,17 @@
 
 .view-id-componente_eventos {
   .swiper-container-horizontal {
-		width: 90%;
-		margin: 0 auto;
-    ul {
-      padding-inline-start: 0px;
-      li {
-        list-style: none;
-        position: relative;
-        background: #f4f1f1;
-        @include respond-to(xs) {
-          height: 460px;
-        }
-        @include respond-to(xl) {
-          height: 505px;
-        }
-
+    @include respond-to(xl) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+		ul {
+			list-style: none;
+			padding: 0px;
+			li {
         //Img
         .views-field-view {
-          border-bottom: 3px solid color('orange');
           img{
             width: 100%;
           }
@@ -31,74 +24,62 @@
             padding-bottom: 62.25%;
           }
         }
-
-        //Titulo
-        .views-field-title {
-          font-family: $crimson-textbold;
-          @include type-layout(l, .96);
-          color: #484851;
-          @include margin(.834 0 .834);
-          padding: 0 25px;
-          @include respond-to(xl) {
-            @include font-size(ll);
-            @include margin(2.042 0 1.042);
-          }
-        }
-        //Fecha
-        .views-field-field-fecha-eventos {
-          display: inline-flex;
-          @include margin-bottom(.7);
-          padding: 0 25px;
-          span {
-            font-family: $latobold;
-            @include font-size(xs);
-            margin-right: 5px;
-          }
-          .field-content {
-            span {
-              font-family: $latoregular;
-              @include font-size(xs);
-            }
-          }
-        }
-        //Lugar
-        .views-field-additional {
-          @include margin-bottom(.7);
-          padding: 0 25px;
-          span {
-            font-family: $latobold;
-            @include font-size(xs);
-            margin-right: 5px;
-            &:nth-child(2) {
-              font-family: $latoregular;
-              @include font-size(xs);
-            }
-          }
-        }
-        //Button
-        .views-field-view-node {
-          margin: 20px;
-          a {
-            @include respond-to(xs) {
-              position: absolute;
-              bottom: 20px;
-              right: 10px;
-              margin: 0px;
-            }
-            display: block;
-            max-width: 180px;
-            font-family: $latolight;
-            font-size: 15.3px;
+        .box-content {
+          position: relative;
+          padding: 25px;
+          border-top: 3px solid #ff8827;
+          background: #f4f1f1;
+          min-height: 250px;
+          //Titulo
+          .views-field-title {
+            font-family: $crimson-semibold;
+            @include type-layout(sl, .90);
             color: #484851;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid color('orange');
-            padding: 10px 30px;
-            margin: 0 auto;
-            outline: none;
-            &:hover {
-              background-color: color('orange');
-              color: #ffffff;
+            margin: 15px 0 20px;
+            @include respond-to(m) {
+              @include font-size(ll);
+            }
+          }
+          //Fecha Lugar
+          .views-field-created,
+          .views-field-lugar {
+            span.text {
+              font-family: $latobold;
+              @include font-size(xs);
+              color: #333;
+            }
+            span.txt {
+              font-family: $latoregular;
+              @include font-size(xs);
+            }
+          }
+          //Button
+          .views-field-view-node {
+            a {
+              display: block;
+              width: 180px;
+              font-family: $latoregular;
+              @include font-size(m);
+              color: color('grey-dark');
+              text-decoration: none;
+              text-align: center;
+              border: 1px solid color('orange-primary');
+              padding: 10px 20px;
+              margin: 0 auto;
+              outline: none;
+              position: absolute;
+              bottom: 25px;
+              right: 0;
+              left: 0;
+              @include respond-to(xs) {
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
+              }
+              &:hover {
+                background-color: color('orange');
+                color: #ffffff;
+              }
             }
           }
         }

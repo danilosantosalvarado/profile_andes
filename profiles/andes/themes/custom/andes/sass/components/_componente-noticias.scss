@@ -6,110 +6,100 @@
 
 .view-display-id-noticias_destacadas {
 	.swiper-container-horizontal {
-		width: 90%;
-		margin: 0 auto;
-		padding: 0 10px;
+		@include respond-to(xl) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
 		ul {
 			list-style: none;
 			padding: 0px;
 			li {
-				position: relative;
-				background: color('grey-light');
-				margin-bottom: 20px;
-				@include respond-to(xs) {
-					height: 460px;
-				}
-				@include respond-to(xl) {
-					height: 519px;
-				}
-
+				// margin: 0 10px;
 				.views-row {
 					//Imagenes
 					.views-field-view {
-						border-bottom: 3px solid color('orange');
-						img{
+						img {
 							width: 100%;
 						}
 						.youtube-container--responsive {
 							padding-bottom: 62.25%;
 						}
 					}
-					//Fecha
-					.views-field-created {
-						margin: 25px 25px 0;
-						span {
+					.box-content {
+						position: relative;
+						padding: 25px;
+						border-top: 3px solid #ff8827;
+						background: #f4f1f1;
+						min-height: 364px;
+						//Fecha
+						.views-field-created {
 							font-family: $latoregular;
 							@include type-layout(xs, 1.23);
-							color: color('orange-primary');
+							color: color('orange');
+							padding: 5px 0px;
 						}
-					}
-					//hora
-					.views-field-field-fecha-eventos {
-						margin: 15px 25px 0;
-						display: flex;
-						font-family: $latoregular;
-						@include type-layout(xs, 1.23);
-						color: color('orange-primary');
-					}
-					//lugar
-					.views-field-additional {
-						margin: 0 25px;
-						font-family: $latoregular;
-						@include type-layout(xs, 1.23);
-						color: color('orange-primary');
-					}
-					//Titulo
-					.views-field-title {
-						margin: 20px 25px 25px;
-						span {
+						// //hora
+						// .views-field-field-fecha-eventos {
+						// 	margin: 15px 25px 0;
+						// 	display: flex;
+						// 	font-family: $latoregular;
+						// 	@include type-layout(xs, 1.23);
+						// 	color: color('orange-primary');
+						// }
+						// //lugar
+						// .views-field-additional {
+						// 	margin: 0 25px;
+						// 	font-family: $latoregular;
+						// 	@include type-layout(xs, 1.23);
+						// 	color: color('orange-primary');
+						// }
+						//Titulo
+						.views-field-title {
 							font-family: $crimson-semibold;
-							@include type-layout(l, 1);
+							@include type-layout(sl, .90);
 							color: #484851;
-							@include respond-to(xl) {
-								@include font-size(sl);
-							}
-						}
-					}
-					//Body
-					.views-field-body {
-						.field-content {
-							font-family: $crimson-textregular;
-							@include type-layout(ms, 1.16);
-							@include margin-bottom(.417);
-							padding: 0 25px;
-							// @include respond-to(ms) {
-							// 	@include font-size(o);
-							// }
-						}
-					}
-					//Button
-					.views-field-view-node {
-						margin: 20px;
-						a {
-							display: inline-block;
-							width: 180px;
-							max-width: 180px;
-							font-family: $latoregular;
-							@include font-size(m);
-							color: color('grey-dark');
-							text-decoration: none;
-							text-align: center;
-							border: 1px solid color('orange-primary');
-							padding: 10px 20px;
-							margin: 0 auto;
-							outline: none;
-							position: absolute;
-							bottom: 25px;
-							right: 0;
-							left: 0;
+							margin: 15px 0 20px;
 							@include respond-to(m) {
-								right: 25px;
-								left: inherit;
-								max-width: 150px;
+								@include font-size(ll);
 							}
-							&:hover {
-								background-color: color('orange-primary');
-								color: color('white');
+						}
+						//Body
+						.views-field-body {
+							font-family: $crimson-textregular;
+							@include font-size(m);
+							margin-bottom: 16px;
+							@include respond-to(xs) {
+								height: 7pc;
+							}
+						}
+						//Button
+						.views-field-view-node {
+							a {
+								display: block;
+								width: 180px;
+								font-family: $latoregular;
+								@include font-size(m);
+								color: color('grey-dark');
+								text-decoration: none;
+								text-align: center;
+								border: 1px solid color('orange-primary');
+								padding: 10px 20px;
+								margin: 0 auto;
+								outline: none;
+								position: absolute;
+								bottom: 25px;
+								right: 0;
+								left: 0;
+								@include respond-to(xs) {
+									right: 25px;
+									left: inherit;
+									max-width: 150px;
+								}
+								&:hover {
+									background-color: color('orange-primary');
+									color: color('white');
+								}
 							}
 						}
 					}

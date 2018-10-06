@@ -362,9 +362,6 @@
             @include type-layout(sl, .90);
             color: #484851;
             margin: 15px 0 20px;
-            // @include respond-to(xs) {
-            //   height: 4.7pc;
-            // }
             @include respond-to(m) {
               @include font-size(ll);
             }
