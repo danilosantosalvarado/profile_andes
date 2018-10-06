@@ -378,6 +378,7 @@ setTimeout(function(){
 		var newSizeEvents = document.querySelectorAll('.view-eventos-decanatura .masonry-item').length;
 		if( newSizeEvents != eventsData.size ){
 			listEvents();
+			eventsLoad();
 		}else{
 			setTimeout(function(){onEventsLoad()}, 200);
 		}
