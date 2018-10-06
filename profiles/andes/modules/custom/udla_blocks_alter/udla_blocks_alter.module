@@ -146,10 +146,18 @@ function _color_set_for_data($value)
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
   } else {
-    $fh = fopen($realpath, 'wb+');
+    $fh = fopen($realpath, 'w+');
+    chmod($realpath, 0777);
     fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
     fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
     fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' a{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a{border-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a:hover{background: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{background: ' . $value . ' !important; border-top-color:'.$value.' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content .text-content-'.drupal_clean_css_identifier($value, array()).'{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
   }
   fclose($fh);
   $colorid = db_insert('backgrounds_color') // Table name no longer needs {}
