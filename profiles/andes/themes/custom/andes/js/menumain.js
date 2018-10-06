@@ -67,7 +67,7 @@
         );
 
         /* Scroll menu cambio de colO r */
-       /* $(window).scroll(function (event) {
+        $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
           if (scroll > 10) {
@@ -80,7 +80,7 @@
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
           }
-        });*/
+        });
 
         /* ciclo para el ancho de primer contenedor */
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
