@@ -27,7 +27,7 @@
         .box-content {
           position: relative;
           padding: 25px;
-          border-top: 3px solid #ff8827;
+          border-top: 3px solid color('blue-light');
           background: #f4f1f1;
           min-height: 250px;
           //Titulo
@@ -63,7 +63,7 @@
               color: color('grey-dark');
               text-decoration: none;
               text-align: center;
-              border: 1px solid color('orange-primary');
+              border: 1px solid color('blue-light');
               padding: 10px 20px;
               margin: 0 auto;
               outline: none;
@@ -77,7 +77,7 @@
                 max-width: 150px;
               }
               &:hover {
-                background-color: color('orange');
+                background-color: color('blue-light');
                 color: #ffffff;
               }
             }

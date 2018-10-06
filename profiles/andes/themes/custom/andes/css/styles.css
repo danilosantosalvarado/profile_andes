@@ -2154,18 +2154,12 @@ th {
   }
 }
 
-.view-eventos-decanatura .view-content {
-  grid-auto-flow: dense;
-}
-
 @supports ((display: -ms-grid) or (display: grid)) {
   .view-eventos-decanatura .view-content {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 160px 160px 160px 300px;
-        grid-template-rows: 160px 160px 160px 300px;
     grid-gap: 10px;
     margin: 0 auto;
     width: 100%;
@@ -2174,8 +2168,6 @@ th {
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .view-content {
-      -ms-grid-rows: 160px 160px 160px 300px;
-          grid-template-rows: 160px 160px 160px 300px;
       grid-gap: 20px;
     }
   }
@@ -2234,7 +2226,6 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:nth-child(odd),
   .view-eventos-decanatura .item-lg {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -2242,7 +2233,6 @@ th {
     height: 330px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:nth-child(odd),
     .view-eventos-decanatura .item-lg {
       height: 340px;
     }
@@ -2250,7 +2240,6 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:nth-child(even),
   .view-eventos-decanatura .item-sm {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -2258,7 +2247,6 @@ th {
     height: 160px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:nth-child(even),
     .view-eventos-decanatura .item-sm {
       height: 160px;
     }
@@ -2266,8 +2254,7 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:last-child,
-  .view-eventos-decanatura .item-full {
+  .view-eventos-decanatura .masonry-item.item-full {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: span 2;
@@ -2275,8 +2262,7 @@ th {
     height: 300px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:last-child,
-    .view-eventos-decanatura .item-full {
+    .view-eventos-decanatura .masonry-item.item-full {
       height: 300px;
     }
   }
@@ -2392,12 +2378,6 @@ th {
   }
 }
 
-.view-eventos-decanatura .masonry-item:hover .detail-content {
-  /*display: block;*/
-  visibility: visible;
-  opacity: 1;
-}
-
 .view-eventos-decanatura .detail-content {
   position: absolute;
   top: 0;
@@ -2419,6 +2399,14 @@ th {
   -webkit-transition: opacity ease-out .4s;
   -o-transition: opacity ease-out .4s;
   transition: opacity ease-out .4s;
+}
+
+@media (min-width: 444px) {
+  .view-eventos-decanatura .masonry-item:hover .detail-content {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -3062,7 +3050,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   }
 }
 
-.view-display-id-home_noticias_destacada .views-field-view-node a, .view-slider-homes .slider-homes-left .link-slider-homes a, .view-slider-homes .slider-homes-right .link-slider-homes a, .view-slider-homes .slider-homes-center .link-slider-homes a, .view-banner-nodes .slider-homes-left .link-slider-homes a, .view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a {
+.view-display-id-home_noticias_destacada .views-field-view-node a, .view-slider-homes .slider-homes-left .link-slider-homes a, .view-slider-homes .slider-homes-right .link-slider-homes a, .view-slider-homes .slider-homes-center .link-slider-homes a, .view-banner-nodes .slider-homes-left .link-slider-homes a {
   display: block;
   max-width: 300px;
   text-align: center;
@@ -3075,13 +3063,13 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 @media (min-width: 768px) {
-  .view-display-id-home_noticias_destacada .views-field-view-node a, .view-slider-homes .slider-homes-left .link-slider-homes a, .view-slider-homes .slider-homes-right .link-slider-homes a, .view-slider-homes .slider-homes-center .link-slider-homes a, .view-banner-nodes .slider-homes-left .link-slider-homes a, .view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a {
+  .view-display-id-home_noticias_destacada .views-field-view-node a, .view-slider-homes .slider-homes-left .link-slider-homes a, .view-slider-homes .slider-homes-right .link-slider-homes a, .view-slider-homes .slider-homes-center .link-slider-homes a, .view-banner-nodes .slider-homes-left .link-slider-homes a {
     float: right;
     margin: 0.315rem auto;
   }
 }
 
-.view-display-id-home_noticias_destacada .views-field-view-node a:hover, .view-slider-homes .slider-homes-left .link-slider-homes a:hover, .view-slider-homes .slider-homes-right .link-slider-homes a:hover, .view-slider-homes .slider-homes-center .link-slider-homes a:hover, .view-banner-nodes .slider-homes-left .link-slider-homes a:hover, .view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a:hover {
+.view-display-id-home_noticias_destacada .views-field-view-node a:hover, .view-slider-homes .slider-homes-left .link-slider-homes a:hover, .view-slider-homes .slider-homes-right .link-slider-homes a:hover, .view-slider-homes .slider-homes-center .link-slider-homes a:hover, .view-banner-nodes .slider-homes-left .link-slider-homes a:hover {
   background: #484851;
   color: #fff;
 }
@@ -4147,7 +4135,7 @@ body > .main-container.container-fluid {
 .view-id-componente_eventos .swiper-container-horizontal ul li .box-content {
   position: relative;
   padding: 25px;
-  border-top: 3px solid #ff8827;
+  border-top: 3px solid #46b9c0;
   background: #f4f1f1;
   min-height: 250px;
 }
@@ -4187,7 +4175,7 @@ body > .main-container.container-fluid {
   color: #484851;
   text-decoration: none;
   text-align: center;
-  border: 1px solid #e34d1f;
+  border: 1px solid #46b9c0;
   padding: 10px 20px;
   margin: 0 auto;
   outline: none;
@@ -4206,7 +4194,7 @@ body > .main-container.container-fluid {
 }
 
 .view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-view-node a:hover {
-  background-color: #ff8827;
+  background-color: #46b9c0;
   color: #ffffff;
 }
 
@@ -8840,7 +8828,6 @@ body > .main-container.container-fluid {
   margin: 0 auto;
   padding: 15px;
   position: relative;
-  border: 1px solid #006135;
 }
 
 @media (min-width: 992px) {
@@ -8849,13 +8836,20 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-display-id-multimedia_destacada ul {
-  -webkit-padding-start: 0px;
-  height: 380px;
+.view-display-id-multimedia_destacada::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: 1px solid #e34d1f;
+  width: 94%;
+  height: 100%;
 }
 
-.view-display-id-multimedia_destacada ul li.swiper-slide {
+.view-display-id-multimedia_destacada ul {
   list-style: none;
+  padding: 0px;
+  height: 380px;
 }
 
 .view-display-id-multimedia_destacada ul li.swiper-slide .view-display-id-default .views-field-field-video-banner {
@@ -8941,7 +8935,7 @@ body > .main-container.container-fluid {
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
   background: url("../img/Icon/arrow_prev.svg") no-repeat center;
-  border: 1px solid #777;
+  border: 1px solid #e34d1f;
   background-color: #fff;
   z-index: 2;
 }
@@ -8965,7 +8959,7 @@ body > .main-container.container-fluid {
           transform: rotate(-90deg);
   background: url("../img/Icon/arrow_next.svg") no-repeat center;
   background-color: white;
-  border: 1px solid #777;
+  border: 1px solid #e34d1f;
   z-index: 2;
 }
 
@@ -8983,14 +8977,14 @@ body > .main-container.container-fluid {
   font-size: 1rem;
   color: #484851;
   text-decoration: none;
-  border: 1px solid #4e3b3b;
+  border: 1px solid #e34d1f;
   padding: 10px 20px;
   background: #fff;
   z-index: 1;
 }
 
 .view-display-id-multimedia_destacada .view-footer a:hover {
-  background: #484851;
+  background: #e34d1f;
   color: #fff;
 }
 
@@ -9111,6 +9105,30 @@ body > .main-container.container-fluid {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.125rem;
   line-height: 1.1;
+}
+
+.view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a {
+  display: block;
+  max-width: 300px;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  color: #484851;
+  border: 1px solid #e34d1f;
+  margin: 2.1rem auto 0;
+  padding: 0.63rem 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a {
+    float: right;
+    margin: 0.315rem auto;
+  }
+}
+
+.view-display-id-multimedia_destacada_unica .multimedia-conponente-enlace a:hover {
+  background: #e34d1f;
+  color: #fff;
 }
 
 /*
