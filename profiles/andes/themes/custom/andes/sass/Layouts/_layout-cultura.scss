@@ -10,22 +10,18 @@
 		padding: 20px 15px;
 	}
 
-	.view-content {
-		grid-auto-flow: dense;
-	}
-
 	@supports (display: grid) {
 		.view-content {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 160px 160px 160px 300px;
+			// grid-template-rows: 160px 160px 160px 300px;
 			grid-gap: 10px;
 			margin: 0 auto;
 			width: 100%;
 			max-width: 620px;
 			height: auto !important;
 			@include respond-to(m) {
-				grid-template-rows: 160px 160px 160px 300px;
+				// grid-template-rows: 160px 160px 160px 300px;
 				grid-gap: 20px;
 			}
 		}
@@ -80,7 +76,7 @@
 	}
 	
 	@supports (display: grid) {
-		.masonry-item:nth-child(odd),
+		// .masonry-item:nth-child(odd),
 		.item-lg{
 			-ms-grid-row: 1;
 			-ms-grid-row-span: 3;
@@ -93,7 +89,7 @@
 	}
 	
 	@supports (display: grid) {
-		.masonry-item:nth-child(even),
+		// .masonry-item:nth-child(even),
 		.item-sm{
 			-ms-grid-row: 1;
 			-ms-grid-row-span: 2;
@@ -106,8 +102,9 @@
 	}
 
 	@supports (display: grid) {
-		.masonry-item:last-child,
-		.item-full{
+		// .masonry-item:last-child,
+		// .masonry-item:first-child,
+		.masonry-item.item-full{
 			-ms-grid-column: 1;
 			-ms-grid-column-span: 3;
 			grid-column: span 2;
@@ -210,11 +207,7 @@
 
 	// update
 
-	.masonry-item:hover .detail-content{
-		/*display: block;*/
-		visibility: visible;
-		opacity: 1;
-	}
+	
 
 	.detail-content{
 		position: absolute;
@@ -236,6 +229,13 @@
 		transition: opacity ease-out .4s;
 	}
 
+	@include respond-to(xxs) {
+		.masonry-item:hover .detail-content{
+			/*display: block;*/
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 	@include respond-to(m) {
 		.detail-content{
 			padding: 10px;

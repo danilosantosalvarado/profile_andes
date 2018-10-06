@@ -2154,18 +2154,12 @@ th {
   }
 }
 
-.view-eventos-decanatura .view-content {
-  grid-auto-flow: dense;
-}
-
 @supports ((display: -ms-grid) or (display: grid)) {
   .view-eventos-decanatura .view-content {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 160px 160px 160px 300px;
-        grid-template-rows: 160px 160px 160px 300px;
     grid-gap: 10px;
     margin: 0 auto;
     width: 100%;
@@ -2174,8 +2168,6 @@ th {
   }
   @media (min-width: 768px) {
     .view-eventos-decanatura .view-content {
-      -ms-grid-rows: 160px 160px 160px 300px;
-          grid-template-rows: 160px 160px 160px 300px;
       grid-gap: 20px;
     }
   }
@@ -2234,7 +2226,6 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:nth-child(odd),
   .view-eventos-decanatura .item-lg {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -2242,7 +2233,6 @@ th {
     height: 330px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:nth-child(odd),
     .view-eventos-decanatura .item-lg {
       height: 340px;
     }
@@ -2250,7 +2240,6 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:nth-child(even),
   .view-eventos-decanatura .item-sm {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -2258,7 +2247,6 @@ th {
     height: 160px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:nth-child(even),
     .view-eventos-decanatura .item-sm {
       height: 160px;
     }
@@ -2266,8 +2254,7 @@ th {
 }
 
 @supports ((display: -ms-grid) or (display: grid)) {
-  .view-eventos-decanatura .masonry-item:last-child,
-  .view-eventos-decanatura .item-full {
+  .view-eventos-decanatura .masonry-item.item-full {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: span 2;
@@ -2275,8 +2262,7 @@ th {
     height: 300px;
   }
   @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item:last-child,
-    .view-eventos-decanatura .item-full {
+    .view-eventos-decanatura .masonry-item.item-full {
       height: 300px;
     }
   }
@@ -2392,12 +2378,6 @@ th {
   }
 }
 
-.view-eventos-decanatura .masonry-item:hover .detail-content {
-  /*display: block;*/
-  visibility: visible;
-  opacity: 1;
-}
-
 .view-eventos-decanatura .detail-content {
   position: absolute;
   top: 0;
@@ -2419,6 +2399,14 @@ th {
   -webkit-transition: opacity ease-out .4s;
   -o-transition: opacity ease-out .4s;
   transition: opacity ease-out .4s;
+}
+
+@media (min-width: 444px) {
+  .view-eventos-decanatura .masonry-item:hover .detail-content {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
