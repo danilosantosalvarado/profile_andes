@@ -11,7 +11,6 @@
 			width: 100%;
 			@include respond-to(xl) {
 				width: 50%;
-
 			}
 		}
 		.panel-col-last {
@@ -31,12 +30,20 @@
 	margin: 0 auto;
 	padding: 15px;
 	position: relative;
-	border: 1px solid #006135;
+	&::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid color('orange-primary');
+    width: 94%;
+    height: 100%;
+  }
 	ul {
-		-webkit-padding-start: 0px;
+		list-style: none;
+		padding: 0px;
 		height: 380px;
 		li.swiper-slide {
-	    list-style: none;
 			//video
 			.view-display-id-default {
 				.views-field-field-video-banner {
@@ -104,7 +111,7 @@
 					bottom: -28px;
 					transform: rotate(-90deg);
 					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-					border: 1px solid #777;
+					border: 1px solid color('orange-primary');
 					background-color: color('white');
 					z-index: 2;
 				}
@@ -124,7 +131,7 @@
 					transform: rotate(-90deg);
 					background: url('../img/Icon/arrow_next.svg') no-repeat center;
 					background-color: white;
-					border: 1px solid #777;
+					border: 1px solid color('orange-primary');
 					z-index: 2;
 				}
 			}
@@ -143,14 +150,14 @@
 			bottom: -18px;
 			font-family: $latoregular;
 			@include font-size(m);
-			color: #484851;
+			color: color('grey-dark');
 			text-decoration: none;
-			border: 1px solid rgb(78, 59, 59);
+			border: 1px solid color('orange-primary');
 			padding: 10px 20px;
-			background: #fff;
+			background: color('white');
 			z-index: 1;
 			&:hover {
-				background: #484851;
+				background: color('orange-primary');
 				color: color('white')
 			}
 		}
@@ -246,6 +253,25 @@
 	}
 	//button
 	.multimedia-conponente-enlace {
-		@extend %link-slider-home;
+		a {
+			display: block;
+			max-width: 300px;
+			text-align: center;
+			text-decoration: none;
+			background: color('white');
+			color: color('grey');
+			border: 1px solid color('orange-primary');
+			@include margin(1.4 auto 0);
+			@include padding (.42 1.25);
+			@include respond-to(m) {
+				float: right;
+				@include margin(.21 auto);
+				//margin: 5px auto;
+			}
+			&:hover {
+				background: color('orange-primary');
+				color: color('white');
+			}
+		}
 	}
 }
