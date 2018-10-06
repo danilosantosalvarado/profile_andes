@@ -326,6 +326,27 @@
 		cursor: pointer;
 	}
 
+	.pager.pager-load-more a {
+		display: inline-block;
+		text-indent: -9999px;
+		background-image: url(../img/Icon/events-arrow-down.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-top: 45px;
+		margin-bottom: 29px;
+		width: 37px;
+		height: 37px;
+		border-radius: 0;
+		border: 0;
+		&:hover{
+			background-color: transparent;
+			opacity: .5;
+		}
+		.ajax-progress{
+			display: none;
+		}
+	}
+
 }
 
 
