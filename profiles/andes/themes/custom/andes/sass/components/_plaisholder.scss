@@ -1,6 +1,8 @@
 //Mixin la agregacion de color de los bullet de slider
 @mixin bullet($color-borde, $color-back, $color-active-borde, $color-active-back ) {
-  text-align: center;
+  padding: 25px 0px;
+  display: flex;
+  justify-content: center;
   .views-slideshow-pager-field-item {
     padding: 0 5px;
     display: inline-block;

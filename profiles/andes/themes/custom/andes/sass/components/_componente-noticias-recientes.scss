@@ -5,24 +5,20 @@
 */
 
 .view-display-id-noticias_recientes  {
+	padding-top: 40px;
+	padding-bottom: 60px;
 	.swiper-container-horizontal {
-		width: 90%;
-		margin: 0 auto;
+		@include respond-to(xl) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
 		ul {
-			-webkit-padding-start: 0px;
+			list-style: none;
+			padding: 0px;
 			li {
-				list-style: none;
-				position: relative;
-				background: color('grey-light');
-				@include respond-to(xs) {
-					height: 460px;
-				}
-				@include respond-to(xl) {
-					height: 519px;
-				}
 				//Imagenes
 				.views-field-view {
-					border-bottom: 3px solid color('orange');
 					img{
 						width: 100%;
 					}
@@ -30,71 +26,79 @@
 						padding-bottom: 62.25%;
 					}
 				}
-				//Fecha
-				.views-field-created {
-					margin: 10px 0px;
-					span {
-						font-family: $latoregular;
-						@include type-layout(xxs, 1.23);
-						padding: 0 15px;
+				.box-content {
+					position: relative;
+					padding: 25px;
+					border-top: 3px solid #ff8827;
+					background: #f4f1f1;
+					min-height: 364px;
+					//Fecha
+					.content-date {
 						color: color('orange');
+						.views-field-created {
+							font-family: $latoregular;
+							@include type-layout(xs, 1.23);
+							padding: 5px 0px;
+						}
+					}
+					//Titulo
+					.views-field-title {
+						margin: 15px 0 20px;
+						span,
+						a {
+							font-family: $crimson-semibold;
+							@include type-layout(sl, .90);
+							text-decoration: none;
+							@include respond-to(m) {
+								@include font-size(ll);
+							}
+						}
+					}
+					//Body
+					.views-field-body {
+						font-family: $crimson-textregular;
+						@include font-size(m);
+						margin-bottom: 16px;
+						@include respond-to(xs) {
+							height: 7pc;
+						}
+					}
+					//Button
+					.views-field-view-node {
+						a {
+							display: block;
+							width: 180px;
+							font-family: $latoregular;
+							@include font-size(m);
+							color: color('grey-dark');
+							text-decoration: none;
+							text-align: center;
+							border: 1px solid color('orange-primary');
+							padding: 10px 20px;
+							margin: 0 auto;
+							outline: none;
+							position: absolute;
+							bottom: 25px;
+							right: 0;
+							left: 0;
+							@include respond-to(xs) {
+								right: 25px;
+								left: inherit;
+								max-width: 150px;
+							}
+							&:hover {
+								background-color: color('orange-primary');
+								color: color('white');
+							}
+						}
 					}
 				}
-				//Titulo
-				.views-field-title {
-					font-family: $crimson-textbold;
-					@include type-layout(l, .96);
-					color: #484851;
-					@include margin(.834 0 .834);
-					padding: 0 15px;
-					@include respond-to(xl) {
-						@include font-size(ll);
-						@include margin(.9 0 1.042);
-					}
-				}
-				//Body
-				.views-field-body {
-					font-family: $crimson-textregular;
-					@include type-layout(m, 1.06);
-					@include margin-bottom(.417);
-					padding: 0 15px;
-					@include respond-to(xl) {
-						@include font-size(o);
-					}
-				}
-				//Button
-				.views-field-view-node {
-          margin: 20px;
-          a {
-            @include respond-to(xs) {
-              position: absolute;
-              bottom: 20px;
-              right: 10px;
-              margin: 0px;
-            }
-            display: block;
-            max-width: 180px;
-            font-family: $latolight;
-            font-size: 15.3px;
-            color: #484851;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid color('orange');
-            padding: 10px 30px;
-            margin: 0 auto;
-            outline: none;
-            &:hover {
-              background-color: color('orange');
-              color: #ffffff;
-            }
-          }
-        }
 			}
 		}
 	}
 }
 
-//Flechas paginador
+/* ------| Flechas paginador |----- */
 .view-display-id-noticias_recientes  {
 	.skin-default {
 		position: relative;
@@ -139,16 +143,13 @@
 		}
 	}
 }
-
-//Puntos Slider
+/* ------| Puntos Slider |----- */
 .view-display-id-noticias_recientes  {
-	margin: 15px 0 20px;
 	.views-slideshow-pager-field-processed {
-		padding: 25px 0;
-		@include bullet(orange, grey-secundary, orange, orange );
-		@include respond-to(xl) {
-			display: none;
-		}
+		@include bullet(orange, white, orange, orange );
+		// @include respond-to(xl) {
+		// 	display: none;
+		// }
 	}
 }
 

@@ -5,6 +5,8 @@
 */
 
 .view-display-id-noticias_destacadas {
+	padding-top: 40px;
+	padding-bottom: 60px;
 	.swiper-container-horizontal {
 		@include respond-to(xl) {
 			width: 90%;
@@ -33,11 +35,13 @@
 						background: #f4f1f1;
 						min-height: 364px;
 						//Fecha
-						.views-field-created {
-							font-family: $latoregular;
-							@include type-layout(xs, 1.23);
+						.content-date {
 							color: color('orange');
-							padding: 5px 0px;
+							.views-field-created {
+								font-family: $latoregular;
+								@include type-layout(xs, 1.23);
+								padding: 5px 0px;
+							}
 						}
 						// //hora
 						// .views-field-field-fecha-eventos {
@@ -56,11 +60,15 @@
 						// }
 						//Titulo
 						.views-field-title {
-							font-family: $crimson-semibold;
-							@include type-layout(sl, .90);
 							margin: 15px 0 20px;
-							@include respond-to(m) {
-								@include font-size(ll);
+							span,
+							a {
+								font-family: $crimson-semibold;
+								@include type-layout(sl, .90);
+								text-decoration: none;
+								@include respond-to(m) {
+									@include font-size(ll);
+								}
 							}
 						}
 						//Body
@@ -156,7 +164,7 @@
 // }
 /* ------| end  zzzzzzz |----- */
 
-//Flechas paginador
+/* ------| Flechas paginador |----- */
 .view-display-id-noticias_destacadas {
 	.skin-default {
 		position: relative;
@@ -205,12 +213,10 @@
 	}
 }
 
-//Puntos Slider
+/* ------| Puntos Slider |----- */
 .view-display-id-noticias_destacadas {
-	margin: 15px 0 20px;
 	.views-slideshow-pager-field-processed {
-		padding: 25px 0;
-		@include bullet(orange, grey-secundary, orange, orange );
+		@include bullet(orange, white, orange, orange );
 		@include respond-to(xl) {
 			display: none;
 		}
