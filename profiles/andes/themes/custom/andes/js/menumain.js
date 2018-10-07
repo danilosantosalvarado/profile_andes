@@ -70,8 +70,8 @@
         $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
-            Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color != undefined ? Drupal.settings.udla_blocks_alter.background_color : "");
-            Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change != undefined ? Drupal.settings.udla_blocks_alter.background_color_change : "");
+            Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color != undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
+            Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change != undefined) ? Drupal.settings.udla_blocks_alter.background_color_change : "";
           if (scroll > 10) {
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
