@@ -143,15 +143,15 @@ function _color_set_for_data($value)
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a:hover{background: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a{border-color: '.$value.' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a:hover{background-color: ' . $value . ' !important; border-color: '.$value.' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer::before{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a{border-color: '.$value.' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{background-color: ' . $value . ' !important; border-color: '.$value.' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer::before{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{background: ' . $value . ' !important; border-top-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content .text-content-'.drupal_clean_css_identifier($value, array()).'{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
 
   } else {
     $fh = fopen($realpath, 'w+');
@@ -163,15 +163,15 @@ function _color_set_for_data($value)
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a:hover{background: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a{border-color: '.$value.' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a:hover{background-color: ' . $value . ' !important; border-color: '.$value.' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-footer::before{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a{border-color: '.$value.' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{background-color: ' . $value . ' !important; border-color: '.$value.' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer::before{border-top-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{background: ' . $value . ' !important; border-top-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-' . drupal_clean_css_identifier($value, array()) . ' .box-content .text-content-'.drupal_clean_css_identifier($value, array()).'{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
-    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
 
   }
   fclose($fh);

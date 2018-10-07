@@ -3143,13 +3143,13 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Button ver todos|----- */
-.view-footer {
+.view-more-footer {
   position: relative;
   text-align: center;
   margin-top: 20px;
 }
 
-.view-footer::before {
+.view-more-footer::before {
   content: '';
   display: block;
   position: absolute;
@@ -3162,7 +3162,7 @@ body > .main-container.container-fluid {
   z-index: 1;
 }
 
-.view-footer a {
+.view-more-footer a {
   display: inline-block;
   position: relative;
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
@@ -3175,7 +3175,7 @@ body > .main-container.container-fluid {
   z-index: 1;
 }
 
-.view-footer a:hover {
+.view-more-footer a:hover {
   color: #fff;
   background-color: #ff8827;
 }
