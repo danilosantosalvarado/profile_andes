@@ -32,7 +32,7 @@
       }
       /*  add buscador */
       if (!$('.mega-menu-2').hasClass('barra-buscar')) {
-        console.log('true');
+        //console.log('true');
         $(".wrapper-mega-menu .container").append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
         $(".barra-buscar").click(function () {
           $(this).toggleClass('icon-close');
@@ -70,8 +70,9 @@
         $(window).scroll(function (event) {
           var scroll = $(window).scrollTop(),
             menu = $('.wrapper-mega-menu');
+            Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color != undefined ? Drupal.settings.udla_blocks_alter.background_color : "");
+            Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change != undefined ? Drupal.settings.udla_blocks_alter.background_color_change : "");
           if (scroll > 10) {
-
             menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
             menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
             $(".barra-buscar").removeClass('cerrar');
@@ -117,7 +118,7 @@
 
         $('.wrapper-mega-menu .block-tb-megamenu .level-0 li').hover(
           function () {
-            console.log('in')
+            //console.log('in')
           }, function () {
             $('body .main-container.container-fluid .region-content').removeClass('dark-layer');
           }
@@ -210,7 +211,7 @@
           /* calcula el alto menos la cabecera */
           heigthCalc = $(window).height()- 128;
 
-        console.log(heigthCalc)
+        //console.log(heigthCalc)
 
         $contentFather.parents('.always-show').css('height' , heigthCalc + "px");
 
@@ -224,7 +225,7 @@
         itemMobil.on("click", function () {
           let $this = $(this);
           $('.box-black-mobile').remove();
-          console.log($this);
+          //console.log($this);
           $this.siblings().addClass('active-mobile');
           $this.siblings('.tb-megamenu-submenu').find('>.mega-dropdown-inner').before("<div class='box-black-mobile' style='none'><p>" + $this.text() + "</p></div>");
           $('.box-black-mobile').click(function () {
