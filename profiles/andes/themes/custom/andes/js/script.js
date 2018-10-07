@@ -131,39 +131,39 @@ function checkSize(){
 		return data;
 	}
 // function actionClick(item, parentClass, swiperId, SliderBullet =1){
-function actionClick(item, parentClass, swiperId, SliderBullet = 1){
-	var sibling  = $(item).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
-	var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
-	var slidePosition = $('#'+sibling).find('li.swiper-slide-active').attr('data-swiper-slide-index');
-	var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
-	var SlideClassParent = swiperId;
+	function actionClick(item, parentClass, swiperId, SliderBullet =1){
+		var sibling  = $(item).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
+		var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
+		var slidePosition = $('#'+sibling).find('li.swiper-slide-active').attr('data-swiper-slide-index');
+		var slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
+		var SlideClassParent = swiperId;
 
-	if (SlideClass == "") {
-		$(item).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-		$('.'+parentClass).addClass(SlideClassParent+"-container");
-		SlideClass = slideActivePosition+"-control";
-		ParentSlideClass = slideActivePosition+"-container";
-		PositionSlide = slidePosition;
-		if(SliderBullet == 1){
-			$('.'+parentClass+' .views-slideshow-simple-pager div').eq(slidePosition).addClass('active');
+		if (SlideClass == "") {
+			$(item).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+			$('.'+parentClass).addClass(SlideClassParent+"-container");
+			SlideClass = slideActivePosition+"-control";
+			ParentSlideClass = slideActivePosition+"-container";
+			PositionSlide = slidePosition;
+			if(SliderBullet == 1){
+				$('.'+parentClass+' .views-slideshow-simple-pager div').eq(slidePosition).addClass('active');
+			}
+			lastPosition = slidePosition;
 		}
-		lastPosition = slidePosition;
-	}
-	else{
-		$(item).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
-		$(item).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-		$('.'+parentClass).removeClass(ParentSlideClass);
-		$('.'+parentClass).addClass(slideActivePosition+"-container");
-		if(SliderBullet == 1){
-			$('.'+parentClass+' .views-slideshow-simple-pager div').eq(lastPosition).removeClass('active');
-			$('.'+parentClass+' .views-slideshow-simple-pager div').eq(slidePosition).addClass('active');
-		}
+		else{
+			$(item).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
+			$(item).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+			$('.'+parentClass).removeClass(ParentSlideClass);
+			$('.'+parentClass).addClass(slideActivePosition+"-container");
+			if(SliderBullet == 1){
+				$('.'+parentClass+' .views-slideshow-simple-pager div').eq(lastPosition).removeClass('active');
+				$('.'+parentClass+' .views-slideshow-simple-pager div').eq(slidePosition).addClass('active');
+			}
 
-		SlideClass = slideActivePosition+"-control";
-		ParentSlideClass = slideActivePosition+"-container";
-		lastPosition = slidePosition;
+			SlideClass = slideActivePosition+"-control";
+			ParentSlideClass = slideActivePosition+"-container";
+			lastPosition = slidePosition;
+		}
 	}
-}
 setTimeout(function(){
 	//functionality used for Sliders actions onClick
 	if($(".views_slideshow_swiper_main").length > 0){
