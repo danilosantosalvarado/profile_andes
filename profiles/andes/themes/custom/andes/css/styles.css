@@ -9168,7 +9168,8 @@ body > .main-container.container-fluid {
 
 .view-display-id-multimedia_recientes .view-content .views-row .views-column,
 .view-display-home_multimedia_vistas .view-content .views-row .views-column {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border: 1px solid red;
 }
 
 .view-display-id-multimedia_recientes .view-content .views-row .views-column .views-field img,

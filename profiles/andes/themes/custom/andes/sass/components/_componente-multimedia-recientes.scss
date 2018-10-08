@@ -12,7 +12,8 @@
     .views-row {
       //Img
       .views-column {
-        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border: 1px solid red;
         .views-field {
           img{
             width: 100%;
