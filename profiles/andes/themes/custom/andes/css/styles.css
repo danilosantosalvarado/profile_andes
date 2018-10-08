@@ -2148,22 +2148,21 @@ th {
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+.view-eventos-decanatura .view-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 620px;
+  height: auto !important;
+}
+
+@media (min-width: 768px) {
   .view-eventos-decanatura .view-content {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 620px;
-    height: auto !important;
-  }
-  @media (min-width: 768px) {
-    .view-eventos-decanatura .view-content {
-      grid-gap: 20px;
-    }
+    grid-gap: 20px;
   }
 }
 

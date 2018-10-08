@@ -10,7 +10,7 @@
 		padding: 20px 15px;
 	}
 
-	@supports (display: grid) {
+	// @supports (display: grid) {
 		.view-content {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -25,7 +25,7 @@
 				grid-gap: 20px;
 			}
 		}
-	}
+	// }
 	
 	.masonry-item{
 		position: relative !important;
