@@ -132,6 +132,7 @@ function checkSize(){
 	}
 // function actionClick(item, parentClass, swiperId, SliderBullet =1){
 	function actionClick(item, parentClass, swiperId, SliderBullet =1){
+		var SliderBullet = SliderBullet || 1;
 		var sibling  = $(item).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
 		var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
 		var slidePosition = $('#'+sibling).find('li.swiper-slide-active').attr('data-swiper-slide-index');
