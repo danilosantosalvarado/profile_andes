@@ -239,7 +239,7 @@ setTimeout(function(){
 	var eventsData = {size: 0};
 
 	function listEvents(){
-		var list = document.querySelectorAll('.view-eventos-decanatura .masonry-item');
+		var list = $('.view-eventos-decanatura .masonry-item').get();
 		if (list.length == 0) {
 			setTimeout(function(){listEvents()}, 200);
 			return true;
@@ -254,37 +254,37 @@ setTimeout(function(){
 
 			switch(opt){
 				case 6:
-					ls[0].classList.add('item-full');
-					ls[1].classList.add('item-lg');
-					ls[2].classList.add('item-sm');
-					ls[3].classList.add('item-lg');
-					ls[4].classList.add('item-sm');
-					ls[5].classList.add('item-full');
+					$(ls[0]).addClass('item-full');
+					$(ls[1]).addClass('item-lg');
+					$(ls[2]).addClass('item-sm');
+					$(ls[3]).addClass('item-lg');
+					$(ls[4]).addClass('item-sm');
+					$(ls[5]).addClass('item-full');
 				break;
 				case 5:
-					ls[0].classList.add('item-lg');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-lg');
-					ls[3].classList.add('item-sm');
-					ls[4].classList.add('item-full');
+					$(ls[0]).addClass('item-lg');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-lg');
+					$(ls[3]).addClass('item-sm');
+					$(ls[4]).addClass('item-full');
 				break;
 				case 4:
-					ls[0].classList.add('item-lg');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-lg');
-					ls[3].classList.add('item-sm');
+					$(ls[0]).addClass('item-lg');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-lg');
+					$(ls[3]).addClass('item-sm');
 				break;
 				case 3:
-					ls[0].classList.add('item-sm');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-full');
+					$(ls[0]).addClass('item-sm');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-full');
 				break;
 				case 2:
-					ls[0].classList.add('item-sm');
-					ls[1].classList.add('item-sm');
+					$(ls[0]).addClass('item-sm');
+					$(ls[1]).addClass('item-sm');
 				break;
 				case 1:
-					ls[0].classList.add('item-full');
+					$(ls[0]).addClass('item-full');
 				break;
 			}
 		});
@@ -292,7 +292,7 @@ setTimeout(function(){
 	}
 
 	function onEventsLoad(){
-		var newSizeEvents = document.querySelectorAll('.view-eventos-decanatura .masonry-item').length;
+		var newSizeEvents = $('.view-eventos-decanatura .masonry-item').length;
 		if( newSizeEvents != eventsData.size ){
 			listEvents();
 			eventsLoad();
@@ -303,12 +303,12 @@ setTimeout(function(){
 
 	function eventsLoad(){
 
-		var btnLoadMore = document.querySelector('.view-eventos-decanatura .pager.pager-load-more a');
+		var btnLoadMore = $('.view-eventos-decanatura .pager.pager-load-more a');
 		if ( !btnLoadMore ) {
 			setTimeout(function(){eventsLoad()}, 200);
 			return false;
 		}
-		btnLoadMore.addEventListener('click', onEventsLoad, false);
+		btnLoadMore.on('click', onEventsLoad, false);
 	}
 
 	eventsLoad();
