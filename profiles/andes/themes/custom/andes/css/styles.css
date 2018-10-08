@@ -2204,6 +2204,18 @@ th {
           transform: translate3d(-50%, -50%, 0);
 }
 
+.view-eventos-decanatura .iframe-conten.object-fit,
+.view-eventos-decanatura .imge-conten.object-fit {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.view-eventos-decanatura .iframe-conten.object-fit img,
+.view-eventos-decanatura .imge-conten.object-fit img {
+  opacity: 0;
+}
+
 .view-eventos-decanatura .item-lg {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
