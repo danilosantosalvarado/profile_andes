@@ -8,88 +8,92 @@
 //}
 
 .view-display-id-noticias_relacionadas {
-	@include respond-to(xl) {
-		width: 74%;
-		float: left;
-	}
-	ul {
-		-webkit-padding-start: 0px;
-		li {
+	padding-top: 40px;
+	padding-bottom: 60px;
+	.swiper-container-horizontal {
+		@include respond-to(xl) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+		ul {
 			list-style: none;
-			position: relative;
-			background: color('grey-light');
-			@include respond-to(xs) {
-				height: 460px;
-			}
-			@include respond-to(xl) {
-				height: 519px;
-			}
-			//Imagenes
-			.views-field-view {
-				border-bottom: 3px solid color('orange');
-				img{
-					width: 100%;
-				}
-				.youtube-container--responsive {
-					padding-bottom: 62.25%;
-				}
-			}
-			//Fecha
-			.views-field-created {
-				margin: 10px 0px;
-				span {
-					font-family: $latoregular;
-					@include type-layout(xxs, 1.23);
-					padding: 0 15px;
-					color: color('orange');
-				}
-			}
-			//Titulo
-			.views-field-title {
-				font-family: $crimson-textbold;
-				@include type-layout(l, .96);
-				color: #484851;
-				@include margin(.834 0 .834);
-				padding: 0 15px;
-				@include respond-to(xl) {
-					@include font-size(ll);
-					@include margin(.9 0 1.042);
-				}
-			}
-			//Body
-			.views-field-body {
-				font-family: $crimson-textregular;
-				@include type-layout(m, 1.06);
-				@include margin-bottom(.417);
-				padding: 0 15px;
-				@include respond-to(xl) {
-					@include font-size(o);
-				}
-			}
-			//Button
-			.views-field-view-node {
-				margin: 20px;
-				a {
-					@include respond-to(xs) {
-						position: absolute;
-						bottom: 20px;
-						right: 10px;
-						margin: 0px;
+			padding: 0px;
+			li {
+				//Imagenes
+				.views-field-view {
+					img{
+						width: 100%;
 					}
-					display: block;
-					max-width: 180px;
-					font-family: $latolight;
-					font-size: 15.3px;
-					color: #484851;
-					text-decoration: none;
-					text-align: center;
-					border: 1px solid color('orange');
-					padding: 10px 30px;
-					margin: 0 auto;
-					outline: none;
-					&:hover {
-						background-color: color('orange');
-						color: #ffffff;
+					.youtube-container--responsive {
+						padding-bottom: 62.25%;
+					}
+				}
+				.box-content {
+					position: relative;
+					padding: 25px;
+					border-top: 3px solid #ff8827;
+					background: #f4f1f1;
+					min-height: 364px;
+					//Fecha
+					.content-date {
+						color: color('orange');
+						.views-field-created {
+							font-family: $latoregular;
+							@include type-layout(xs, 1.23);
+							padding: 5px 0px;
+						}
+					}
+					//Titulo
+					.views-field-title {
+						margin: 15px 0 20px;
+						span,
+						a {
+							font-family: $crimson-semibold;
+							@include type-layout(sl, .90);
+							text-decoration: none;
+							@include respond-to(m) {
+								@include font-size(ll);
+							}
+						}
+					}
+					//Body
+					.views-field-body {
+						font-family: $crimson-textregular;
+						@include font-size(m);
+						margin-bottom: 16px;
+						@include respond-to(xs) {
+							height: 7pc;
+						}
+					}
+					//Button
+					.views-field-view-node {
+						a {
+							display: block;
+							width: 180px;
+							font-family: $latoregular;
+							@include font-size(m);
+							color: color('grey-dark');
+							text-decoration: none;
+							text-align: center;
+							border: 1px solid color('orange-primary');
+							padding: 10px 20px;
+							margin: 0 auto;
+							outline: none;
+							position: absolute;
+							bottom: 25px;
+							right: 0;
+							left: 0;
+							@include respond-to(xs) {
+								right: 25px;
+								left: inherit;
+								max-width: 150px;
+							}
+							&:hover {
+								background-color: color('orange-primary');
+								color: color('white');
+							}
+						}
 					}
 				}
 			}
@@ -97,65 +101,121 @@
 	}
 }
 
-/* ------| Lista enlaces Relacionados |----- */
-.view-display-id-otras_noticias {
-  width: 100%;
-  float: left;
-  background: #e34d1f;
-  border-bottom: 3px solid #484851;
-	padding: 25px;
-	margin-bottom: 10px;
-	@include respond-to(xl) {
-		width: 22%;
-		// height: 63.3vh;
-		height: 517px;
-		margin-left: 20px;
-		margin-bottom: 20px;
-	}
-  .view-header {
-    h4 {
-      font-family: $crimson-textbold;
-      @include type-layout(l, 1);
-      color: color('white');
-      text-decoration: none;
-      text-transform: none;
-			margin: 10px 0;
-			@include respond-to (xl) {
-				margin: 20px 0;
-			}
-    }
-  }
-  .view-content {
-    ul {
-      padding-inline-start: 0px;
-      color: #fff;
-      list-style: none;
-      li {
-				padding: 5px 0;
-				border-bottom: 1px solid #fff;
+/* ------| Flechas paginador |----- */
+.view-display-id-noticias_relacionadas {
+	.skin-default {
+		position: relative;
+		.slideshow-controls-top,
+		.views-slideshow-controls-bottom {
+			display: block;
+			//Conten Flechas
+			.views-slideshow-controls-text {
+				display: none;
 				@include respond-to(xl) {
-					padding: 10px 0;
+					display: block;
 				}
-        a {
-          font-family: $crimson-textregular;
-          @include font-size(l);
-          color: color('white');
-          text-align: left;
-          text-decoration: none;
-          transition: .3s;
-          padding-left: 16px;
-          &::before {
-            content: "•";
-            font-size: 30px;
-            padding-right: 8px;
-            margin-left: -31px;
-            color: #fff;
-          }
-        }
-        &:hover {
-          opacity: .6;
-        }
-      }
-    }
-  }
+				//Button Izquierda
+				a[rel='prev'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
+				//Buttom Pause
+				.views-slideshow-controls-text-pause {
+					display: none;
+				}
+				//Button Deracha
+				a[rel='next'] {
+					font-size: 0;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					top: 50%;
+					left: inherit;
+					right: 0;
+					border: 1px solid #777;
+					background: url('../img/Icon/arrow_next.svg') no-repeat center;
+					background-size: 40px 40px;
+				}
+			}
+		}
+	}
 }
+
+/* ------| Puntos Slider |----- */
+.view-display-id-noticias_relacionadas {
+	.views-slideshow-pager-field-processed {
+		@include bullet(orange, white, orange, orange );
+		// @include respond-to(xl) {
+		// 	display: none;
+		// }
+	}
+}
+
+// /* ------| Lista enlaces Relacionados |----- */
+// .view-display-id-otras_noticias {
+//   width: 100%;
+//   float: left;
+//   background: #e34d1f;
+//   border-bottom: 3px solid #484851;
+// 	padding: 25px;
+// 	margin-bottom: 10px;
+// 	@include respond-to(xl) {
+// 		width: 22%;
+// 		// height: 63.3vh;
+// 		height: 517px;
+// 		margin-left: 20px;
+// 		margin-bottom: 20px;
+// 	}
+//   .view-header {
+//     h4 {
+//       font-family: $crimson-textbold;
+//       @include type-layout(l, 1);
+//       color: color('white');
+//       text-decoration: none;
+//       text-transform: none;
+// 			margin: 10px 0;
+// 			@include respond-to (xl) {
+// 				margin: 20px 0;
+// 			}
+//     }
+//   }
+//   .view-content {
+//     ul {
+//       padding-inline-start: 0px;
+//       color: #fff;
+//       list-style: none;
+//       li {
+// 				padding: 5px 0;
+// 				border-bottom: 1px solid #fff;
+// 				@include respond-to(xl) {
+// 					padding: 10px 0;
+// 				}
+//         a {
+//           font-family: $crimson-textregular;
+//           @include font-size(l);
+//           color: color('white');
+//           text-align: left;
+//           text-decoration: none;
+//           transition: .3s;
+//           padding-left: 16px;
+//           &::before {
+//             content: "•";
+//             font-size: 30px;
+//             padding-right: 8px;
+//             margin-left: -31px;
+//             color: #fff;
+//           }
+//         }
+//         &:hover {
+//           opacity: .6;
+//         }
+//       }
+//     }
+//   }
+// }
