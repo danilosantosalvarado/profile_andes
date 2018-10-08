@@ -75,7 +75,7 @@
 		}
 	}
 	
-	@supports (display: grid) {
+	// @supports (display: grid) {
 		// .masonry-item:nth-child(odd),
 		.item-lg{
 			-ms-grid-row: 1;
@@ -86,9 +86,9 @@
 				height: 340px;
 			}
 		}
-	}
+	// }
 	
-	@supports (display: grid) {
+	// @supports (display: grid) {
 		// .masonry-item:nth-child(even),
 		.item-sm{
 			-ms-grid-row: 1;
@@ -99,9 +99,9 @@
 				height: 160px;
 			}
 		}
-	}
+	// }
 
-	@supports (display: grid) {
+	// @supports (display: grid) {
 		// .masonry-item:last-child,
 		// .masonry-item:first-child,
 		.masonry-item.item-full{
@@ -114,7 +114,7 @@
 				height: 300px;
 			}
 		}
-	}
+	// }
 
 	.box-date{
 		position: absolute;
