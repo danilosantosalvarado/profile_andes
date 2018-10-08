@@ -2138,22 +2138,21 @@ th {
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+.view-eventos-decanatura .view-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 620px;
+  height: auto !important;
+}
+
+@media (min-width: 768px) {
   .view-eventos-decanatura .view-content {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 620px;
-    height: auto !important;
-  }
-  @media (min-width: 768px) {
-    .view-eventos-decanatura .view-content {
-      grid-gap: 20px;
-    }
+    grid-gap: 20px;
   }
 }
 
@@ -2209,46 +2208,43 @@ th {
           transform: translate3d(-50%, -50%, 0);
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+.view-eventos-decanatura .item-lg {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: span 2;
+  height: 330px;
+}
+
+@media (min-width: 768px) {
   .view-eventos-decanatura .item-lg {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-row: span 2;
-    height: 330px;
-  }
-  @media (min-width: 768px) {
-    .view-eventos-decanatura .item-lg {
-      height: 340px;
-    }
+    height: 340px;
   }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+.view-eventos-decanatura .item-sm {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: span 1;
+  height: 160px;
+}
+
+@media (min-width: 768px) {
   .view-eventos-decanatura .item-sm {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: span 1;
     height: 160px;
   }
-  @media (min-width: 768px) {
-    .view-eventos-decanatura .item-sm {
-      height: 160px;
-    }
-  }
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
+.view-eventos-decanatura .masonry-item.item-full {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: span 2;
+  grid-row: auto;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
   .view-eventos-decanatura .masonry-item.item-full {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: span 2;
-    grid-row: auto;
     height: 300px;
-  }
-  @media (min-width: 768px) {
-    .view-eventos-decanatura .masonry-item.item-full {
-      height: 300px;
-    }
   }
 }
 

@@ -131,7 +131,8 @@ function checkSize(){
 		return data;
 	}
 // function actionClick(item, parentClass, swiperId, SliderBullet =1){
-	function actionClick(item, parentClass, swiperId, SliderBullet =1){
+	function actionClick(item, parentClass, swiperId, SliderBullet){
+		var SliderBullet = SliderBullet || 1;
 		var sibling  = $(item).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
 		var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
 		var slidePosition = $('#'+sibling).find('li.swiper-slide-active').attr('data-swiper-slide-index');
@@ -239,14 +240,13 @@ setTimeout(function(){
 	var eventsData = {size: 0};
 
 	function listEvents(){
-		var list = document.querySelectorAll('.view-eventos-decanatura .masonry-item');
+		var list = $('.view-eventos-decanatura .masonry-item').get();
 		if (list.length == 0) {
 			setTimeout(function(){listEvents()}, 200);
 			return true;
 		}
 		eventsData.size = list.length;
 		var partialEvents = chunk(list, 6);
-		// var partialEvents = [list];
 
 		partialEvents.map(function(ls, idx){
 			var opt = ls.length;
@@ -254,45 +254,51 @@ setTimeout(function(){
 
 			switch(opt){
 				case 6:
-					ls[0].classList.add('item-full');
-					ls[1].classList.add('item-lg');
-					ls[2].classList.add('item-sm');
-					ls[3].classList.add('item-lg');
-					ls[4].classList.add('item-sm');
-					ls[5].classList.add('item-full');
+					$(ls[0]).addClass('item-full');
+					$(ls[1]).addClass('item-lg');
+					$(ls[2]).addClass('item-sm');
+					$(ls[3]).addClass('item-lg');
+					$(ls[4]).addClass('item-sm');
+					$(ls[5]).addClass('item-full');
 				break;
 				case 5:
-					ls[0].classList.add('item-lg');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-lg');
-					ls[3].classList.add('item-sm');
-					ls[4].classList.add('item-full');
+					$(ls[0]).addClass('item-lg');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-lg');
+					$(ls[3]).addClass('item-sm');
+					$(ls[4]).addClass('item-full');
 				break;
 				case 4:
-					ls[0].classList.add('item-lg');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-lg');
-					ls[3].classList.add('item-sm');
+					$(ls[0]).addClass('item-lg');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-lg');
+					$(ls[3]).addClass('item-sm');
 				break;
 				case 3:
-					ls[0].classList.add('item-sm');
-					ls[1].classList.add('item-sm');
-					ls[2].classList.add('item-full');
+					$(ls[0]).addClass('item-sm');
+					$(ls[1]).addClass('item-sm');
+					$(ls[2]).addClass('item-full');
 				break;
 				case 2:
-					ls[0].classList.add('item-sm');
-					ls[1].classList.add('item-sm');
+					$(ls[0]).addClass('item-sm');
+					$(ls[1]).addClass('item-sm');
 				break;
 				case 1:
-					ls[0].classList.add('item-full');
+					$(ls[0]).addClass('item-full');
 				break;
 			}
 		});
 
+		var ua = window.navigator.userAgent;
+		var msie = ua.indexOf("MSIE ");
+
+		if( msie == 0 )
+			ieSupport(partialEvents);
+
 	}
 
 	function onEventsLoad(){
-		var newSizeEvents = document.querySelectorAll('.view-eventos-decanatura .masonry-item').length;
+		var newSizeEvents = $('.view-eventos-decanatura .masonry-item').length;
 		if( newSizeEvents != eventsData.size ){
 			listEvents();
 			eventsLoad();
@@ -303,12 +309,61 @@ setTimeout(function(){
 
 	function eventsLoad(){
 
-		var btnLoadMore = document.querySelector('.view-eventos-decanatura .pager.pager-load-more a');
+		var btnLoadMore = $('.view-eventos-decanatura .pager.pager-load-more a');
 		if ( !btnLoadMore ) {
 			setTimeout(function(){eventsLoad()}, 200);
 			return false;
 		}
-		btnLoadMore.addEventListener('click', onEventsLoad, false);
+		btnLoadMore.on('click', onEventsLoad, false);
+	}
+
+	function ieSupport(pList){
+
+		var partialEvents = pList;
+		console.log('msie');
+
+		partialEvents.map(function(ls, idx){
+			var countRow = idx * 6;
+			var opt = ls.length;
+
+			$('.view-eventos-decanatura .view-content').css({'margin': '10px !important'});
+
+			switch(opt){
+				case 6:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[2]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 4, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[4]).css({"-ms-grid-row": countRow + 5, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[5]).css({"-ms-grid-row": countRow + 7, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 5:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 4, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[4]).css({"-ms-grid-row": countRow + 5, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 4:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 2, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+				break;
+				case 3:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 2, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 2:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+				break;
+				case 1:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+			}
+		});
 	}
 
 	eventsLoad();
