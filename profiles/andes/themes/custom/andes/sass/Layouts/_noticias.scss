@@ -338,7 +338,7 @@
             width: 100%;
           }
           .youtube-container--responsive {
-            padding-bottom: 63.25%;
+            padding-bottom: 61.25%;
           }
         }
         .box-content {
@@ -346,8 +346,8 @@
           padding: 20px 15px;
           border-top: 3px solid #ff8827;
           background: #f4f1f1;
-          @include respond-to(xl) {
-            min-height: 347px;
+          @include respond-to(xs) {
+            min-height: 360px;
           }
           //Fecha
           .views-field-created {
@@ -387,17 +387,22 @@
               text-align: center;
               border: 1px solid color('orange');
               padding: 10px 20px;
+              max-width: 180px;
               margin: 0 auto;
-              outline: none;
+              @include respond-to(xs) {
+                position: absolute;
+                bottom: 25px;
+                right: 0;
+                left: 0;
+              }
               &:hover {
                 background-color: color('orange');
                 color: #ffffff;
               }
               @include respond-to(m) {
-                position: absolute;
-                bottom: 20px;
-                right: 15px;
-                margin: 0px;
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
               }
             }
           }

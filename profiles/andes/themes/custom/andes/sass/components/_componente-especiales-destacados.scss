@@ -8,95 +8,89 @@
   display: block;
   overflow: hidden;
   .view-content {
-    ul {
-      padding-inline-start: 0px;
-      li.views-row {
-        list-style: none;
-        float: left;
-        width: 100%;
-        position: relative;
-        background: #f4f1f1;
-        margin: 10px 0;
-        @include respond-to(xs) {
-          width: 46.2%;
-					margin: 0.7em;
-					height: 500px;
-        }
-        @include respond-to(xl) {
-          width: 30.6%;
-					height: 567px;
-        }
-        @include respond-to(xxxl) {
-          width: 23.2%;
-        }
-        //Img
-        .views-field-view {
-          border-bottom: 3px solid color('blue-light');
+    .views-row {
+      //Img
+      .views-column {
+        margin-bottom: 15px;
+        .views-field {
           img{
             width: 100%;
           }
           .youtube-container--responsive {
-            padding-bottom: 62.25%;
+            padding-bottom: 61.25%;
           }
         }
-        //Fecha
-        .views-field-created {
-          margin: 10px 0px;
-          span {
+        .box-content {
+          position: relative;
+          padding: 20px 15px;
+          border-top: 3px solid #ff8827;
+          background: #f4f1f1;
+          @include respond-to(xs) {
+            min-height: 360px;
+          }
+          //Fecha
+          .views-field-created {
             font-family: $latoregular;
-            @include type-layout(xxs, 1.23);
-            padding: 0 15px;
-            color: color('blue-light');
+            @include type-layout(xs, 1.23);
+            color: color('orange');
+            padding: 5px 0px;
           }
-        }
-        //Titulo
-        .views-field-title {
-          font-family: $crimson-textbold;
-          @include type-layout(l, .96);
-          color: #484851;
-          @include margin(.834 0 .834);
-          padding: 0 15px;
-          @include respond-to(xl) {
-            @include font-size(ll);
-            @include margin(.9 0 1.042);
-          }
-        }
-        //Body
-        .views-field-body {
-          font-family: $crimson-textregular;
-          @include type-layout(m, 1.06);
-          @include margin-bottom(.417);
-          padding: 0 15px;
-          @include respond-to(xl) {
-            @include font-size(o);
-          }
-        }
-        //Button
-        .views-field-view-node {
-          margin: 20px;
-          a {
-            @include respond-to(xs) {
-              position: absolute;
-              bottom: 20px;
-              right: 10px;
-              margin: 0px;
-            }
-            display: block;
-            max-width: 180px;
-            font-family: $latolight;
-            font-size: 15.3px;
+          //Titulo
+          .views-field-title {
+            font-family: $crimson-semibold;
+            @include type-layout(sl, .90);
             color: #484851;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid color('blue-light');
-            padding: 10px 30px;
-            margin: 0 auto;
-            outline: none;
-            &:hover {
-              background-color: color('blue-light');
-              color: #ffffff;
+            margin: 15px 0 20px;
+            @include respond-to(m) {
+              @include font-size(ll);
             }
           }
+          //Body
+          .views-field-body {
+            font-family: $crimson-textregular;
+            @include font-size(m);
+            margin-bottom: 16px;
+            @include respond-to(xs) {
+              height: 7pc;
+            }
+          }
+          //Button
+          .views-field-view-node {
+            a {
+              display: block;
+              max-width: 180px;
+              font-family: $latoregular;
+              @include font-size(m);
+              color: #484851;
+              text-decoration: none;
+              text-align: center;
+              border: 1px solid color('orange');
+              padding: 10px 20px;
+              max-width: 180px;
+              margin: 0 auto;
+              @include respond-to(xs) {
+                position: absolute;
+                bottom: 25px;
+                right: 0;
+                left: 0;
+              }
+              &:hover {
+                background-color: color('orange');
+                color: #ffffff;
+              }
+              @include respond-to(m) {
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
+              }
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 555px) and (max-width: 767px) {
+        .views-column {
+          width: 50%;
+          float: left;
         }
       }
     }
