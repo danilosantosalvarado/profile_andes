@@ -74,6 +74,16 @@
 			transform: translate3d(-50%, -50%, 0);
 		}
 	}
+
+	.iframe-conten.object-fit,
+	.imge-conten.object-fit{
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		img{
+			opacity: 0;
+		}
+	}
 	
 	// @supports (display: grid) {
 		// .masonry-item:nth-child(odd),

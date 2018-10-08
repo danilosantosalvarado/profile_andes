@@ -298,6 +298,10 @@ setTimeout(function(){
 		if( 'objectFit' in document.documentElement.style === false ){
 			console.log('Object fit no supported');
 			$('.imge-conten, .iframe-conten').addClass('object-fit');
+			$('.imge-conten, .iframe-conten').each(function(idx, el){
+				var srcImg = $(el).find('img').prop('src');
+				$(el).css({'background-image': 'url(' + srcImg + ')'})
+			});
 		}
 
 	}
