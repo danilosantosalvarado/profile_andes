@@ -295,6 +295,11 @@ setTimeout(function(){
 		if( msie == 0 )
 			ieSupport(partialEvents);
 
+		if( 'objectFit' in document.documentElement.style === false ){
+			console.log('Object fit no supported');
+			$('.imge-conten, .iframe-conten').addClass('object-fit');
+		}
+
 	}
 
 	function onEventsLoad(){
