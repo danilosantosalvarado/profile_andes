@@ -25,9 +25,9 @@ a,
 // Any element can receive focus, but only links can be visited, so we can
 // safely lower this selector's specificity. This also ensures visited links
 // with additional styles won't have their styles overridden.
-:visited {
-  color: color(link-visited);
-}
+// :visited {
+//   color: color(link-visited);
+// }
 
 // a:hover,
 // a:focus {
