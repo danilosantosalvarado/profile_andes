@@ -152,10 +152,6 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-:visited {
-  color: #93141a;
-}
-
 a:active {
   color: #484851;
 }
