@@ -1,0 +1,150 @@
+/*
+//------------------------------------------------------------------------------
+// Componente layout 11
+//------------------------------------------------------------------------------
+*/
+
+.view-id-componente_layout_11 {
+  display: block;
+  overflow: hidden;
+  .view-content {
+    .views-row {
+      //Img
+      .views-column {
+        margin-bottom: 15px;
+        .views-field {
+          img{
+            width: 100%;
+          }
+          .youtube-container--responsive {
+            padding-bottom: 61.25%;
+          }
+        }
+        .box-content {
+          position: relative;
+          padding: 20px 15px;
+          border-top: 3px solid #ff8827;
+          background: #f4f1f1;
+          @include respond-to(xs) {
+            min-height: 360px;
+          }
+
+          //Titulo
+          .views-field-field-titulo {
+            font-family: $crimson-semibold;
+            @include type-layout(sl, .90);
+            color: #484851;
+            margin: 15px 0 20px;
+            @include respond-to(m) {
+              @include font-size(ll);
+            }
+          }
+          //Body
+          .views-field-field-body {
+            font-family: $crimson-textregular;
+            @include font-size(m);
+            margin-bottom: 16px;
+            @include respond-to(xs) {
+              height: 7pc;
+            }
+          }
+          //Button
+          .views-field-field-enlace-ver-mas {
+            a {
+              display: block;
+              max-width: 180px;
+              font-family: $latoregular;
+              @include font-size(m);
+              color: #484851;
+              text-decoration: none;
+              text-align: center;
+              border: 1px solid color('orange');
+              padding: 10px 20px;
+              max-width: 180px;
+              margin: 0 auto;
+              @include respond-to(xs) {
+                position: absolute;
+                bottom: 25px;
+                right: 0;
+                left: 0;
+              }
+              &:hover {
+                background-color: color('orange');
+                color: #ffffff;
+              }
+              @include respond-to(m) {
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
+              }
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 555px) and (max-width: 767px) {
+        .views-column {
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+/* ------| Paguinadores |----- */
+
+.view-id-componente_layout_11 {
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    ul.pagination {
+      background: #fff;
+      border-radius: 0;
+      padding: 10px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid #e55d12;
+        z-index: -1;
+      }
+      li {
+        color: #484851;
+        border: 1px solid #fff;
+        border-radius: 0;
+        background-color: #fff;
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid #fff;
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: #fff;
+        }
+        &.active {
+          border-color: #e55d12;
+          span {
+            background-color: transparent;
+            border-radius: initial;
+            color: color('black');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
+          display: none;
+        }
+      }
+    }
+  }
+}
