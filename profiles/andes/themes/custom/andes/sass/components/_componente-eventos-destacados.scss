@@ -29,7 +29,9 @@
           padding: 25px;
           border-top: 3px solid color('blue-light');
           background: #f4f1f1;
-          min-height: 250px;
+          @include respond-to(xs) {
+            min-height: 326px;
+          }
           //Titulo
           .views-field-title {
             font-family: $crimson-semibold;
@@ -40,17 +42,37 @@
               @include font-size(ll);
             }
           }
-          //Fecha Lugar
-          .views-field-created,
-          .views-field-lugar {
-            span.text {
-              font-family: $latobold;
-              @include font-size(xs);
-              color: #333;
+          //fecha
+          .content-date {
+            margin-bottom: 16px;
+            .views-field  {
+              display: flex;
+              > span {
+                font-family: $latobold;
+                @include font-size(xs);
+                color: #333;
+                padding-right: 5px;
+              }
+              .field-content {
+                font-family: $latoregular;
+                @include font-size(xs);
+              }
             }
-            span.txt {
-              font-family: $latoregular;
-              @include font-size(xs);
+          }
+          //lugar
+          .content-description {
+            margin-bottom: 16px;
+            .views-field-additional {
+              > span:nth-child(1) {
+                font-family: $latobold;
+                @include font-size(xs);
+                color: #333;
+                padding-right: 5px;
+              }
+              span:nth-child(2) {
+                font-family: $latoregular;
+                @include font-size(xs);
+              }
             }
           }
           //Button

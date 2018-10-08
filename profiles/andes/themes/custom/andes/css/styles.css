@@ -412,134 +412,124 @@ th {
   overflow: hidden;
 }
 
-.view-id-eventos .view-content ul {
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
+.view-id-eventos .view-content .views-row .views-column {
+  padding-bottom: 15px;
 }
 
-.view-id-eventos .view-content ul .views-row {
-  list-style: none;
-  float: left;
+.view-id-eventos .view-content .views-row .views-column .views-field img {
   width: 100%;
+}
+
+.view-id-eventos .view-content .views-row .views-column .views-field .youtube-container--responsive {
+  padding-bottom: 61.25%;
+}
+
+.view-id-eventos .view-content .views-row .views-column .box-content {
   position: relative;
+  padding: 25px;
+  border-top: 3px solid #ff8827;
   background: #f4f1f1;
-  margin: 10px 0;
 }
 
 @media (min-width: 555px) {
-  .view-id-eventos .view-content ul .views-row {
-    width: 46.2%;
-    height: 440px;
-    margin: 0.7em;
+  .view-id-eventos .view-content .views-row .views-column .box-content {
+    min-height: 290px;
   }
 }
 
-@media (min-width: 992px) {
-  .view-id-eventos .view-content ul .views-row {
-    width: 30.6%;
-    height: 505px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view-id-eventos .view-content ul .views-row {
-    width: 23.2%;
-  }
-}
-
-.view-id-eventos .view-content ul .views-row .views-field-view {
-  border-bottom: 3px solid #ff8827;
-}
-
-.view-id-eventos .view-content ul .views-row .views-field-view img {
-  width: 100%;
-}
-
-.view-id-eventos .view-content ul .views-row .views-field-view .youtube-container--responsive {
-  padding-bottom: 62.25%;
-}
-
-.view-id-eventos .view-content ul .views-row .views-field-title-1 {
-  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.1875rem;
-  line-height: 0.96;
+.view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1 {
+  font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.25rem;
+  line-height: 0.9;
   color: #484851;
-  margin: 1.251rem 0 1.251rem;
-  padding: 0 25px;
+  margin: 20px 0 25px;
 }
 
-@media (min-width: 992px) {
-  .view-id-eventos .view-content ul .views-row .views-field-title-1 {
+@media (min-width: 768px) {
+  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1 {
     font-size: 1.4375rem;
-    margin: 3.063rem 0 1.563rem;
   }
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: 1.05rem;
-  padding: 0 25px;
+.view-id-eventos .view-content .views-row .views-column .box-content .content-date {
+  margin-bottom: 16px;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos span {
+.view-id-eventos .view-content .views-row .views-column .box-content .content-date .views-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-id-eventos .view-content .views-row .views-column .box-content .content-date .views-field > span {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
-  margin-right: 5px;
+  color: #333;
+  padding-right: 5px;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-field-fecha-eventos .field-content span {
+.view-id-eventos .view-content .views-row .views-column .box-content .content-date .views-field .field-content {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-additional {
-  margin-bottom: 1.05rem;
-  padding: 0 25px;
+.view-id-eventos .view-content .views-row .views-column .box-content .content-description {
+  margin-bottom: 16px;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-additional span {
+.view-id-eventos .view-content .views-row .views-column .box-content .content-description .views-field-additional > span:nth-child(1) {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
-  margin-right: 5px;
+  color: #333;
+  padding-right: 5px;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-additional span:nth-child(2) {
+.view-id-eventos .view-content .views-row .views-column .box-content .content-description .views-field-additional span:nth-child(2) {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-view-node {
-  margin: 20px;
-}
-
-.view-id-eventos .view-content ul .views-row .views-field-view-node a {
+.view-id-eventos .view-content .views-row .views-column .box-content .views-field-view-node a {
   display: block;
   max-width: 180px;
-  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 15.3px;
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
   color: #484851;
   text-decoration: none;
   text-align: center;
-  border: 1px solid #46b9c0;
-  padding: 10px 30px;
+  border: 1px solid #ff8827;
+  padding: 10px 20px;
+  max-width: 180px;
   margin: 0 auto;
-  outline: none;
 }
 
 @media (min-width: 555px) {
-  .view-id-eventos .view-content ul .views-row .views-field-view-node a {
+  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-view-node a {
     position: absolute;
-    bottom: 20px;
-    right: 10px;
-    margin: 0px;
+    bottom: 25px;
+    right: 0;
+    left: 0;
   }
 }
 
-.view-id-eventos .view-content ul .views-row .views-field-view-node a:hover {
-  background-color: #46b9c0;
+.view-id-eventos .view-content .views-row .views-column .box-content .views-field-view-node a:hover {
+  background-color: #ff8827;
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-view-node a {
+    right: 25px;
+    left: inherit;
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 767px) {
+  .view-id-eventos .view-content .views-row .views-column {
+    width: 50%;
+    float: left;
+  }
 }
 
 /* ------| Paguinadores |----- */
@@ -4160,7 +4150,12 @@ body > .main-container.container-fluid {
   padding: 25px;
   border-top: 3px solid #46b9c0;
   background: #f4f1f1;
-  min-height: 250px;
+}
+
+@media (min-width: 555px) {
+  .view-id-componente_eventos .swiper-container-horizontal ul li .box-content {
+    min-height: 326px;
+  }
 }
 
 .view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-title {
@@ -4177,15 +4172,40 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-created span.text,
-.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-lugar span.text {
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-date {
+  margin-bottom: 16px;
+}
+
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-date .views-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-date .views-field > span {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   color: #333;
+  padding-right: 5px;
 }
 
-.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-created span.txt,
-.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .views-field-lugar span.txt {
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-date .views-field .field-content {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+}
+
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-description {
+  margin-bottom: 16px;
+}
+
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-description .views-field-additional > span:nth-child(1) {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  color: #333;
+  padding-right: 5px;
+}
+
+.view-id-componente_eventos .swiper-container-horizontal ul li .box-content .content-description .views-field-additional span:nth-child(2) {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
 }
