@@ -247,7 +247,6 @@ setTimeout(function(){
 		}
 		eventsData.size = list.length;
 		var partialEvents = chunk(list, 6);
-		// var partialEvents = [list];
 
 		partialEvents.map(function(ls, idx){
 			var opt = ls.length;
@@ -290,6 +289,12 @@ setTimeout(function(){
 			}
 		});
 
+		var ua = window.navigator.userAgent;
+		var msie = ua.indexOf("MSIE ");
+
+		if( msie == 0 )
+			ieSupport(partialEvents);
+
 	}
 
 	function onEventsLoad(){
@@ -310,6 +315,55 @@ setTimeout(function(){
 			return false;
 		}
 		btnLoadMore.on('click', onEventsLoad, false);
+	}
+
+	function ieSupport(pList){
+
+		var partialEvents = pList;
+		console.log('msie');
+
+		partialEvents.map(function(ls, idx){
+			var countRow = idx * 6;
+			var opt = ls.length;
+
+			$('.view-eventos-decanatura .view-content').css({'margin': '10px !important'});
+
+			switch(opt){
+				case 6:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[2]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 4, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[4]).css({"-ms-grid-row": countRow + 5, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[5]).css({"-ms-grid-row": countRow + 7, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 5:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 4, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[4]).css({"-ms-grid-row": countRow + 5, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 4:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 2, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 2, "-ms-grid-row-span": 2, "-ms-grid-column": 2});
+					$(ls[3]).css({"-ms-grid-row": countRow + 3, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+				break;
+				case 3:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[2]).css({"-ms-grid-row": countRow + 2, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+				case 2:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 2});
+					$(ls[1]).css({"-ms-grid-row": countRow + 1, "-ms-grid-row-span": 1, "-ms-grid-column": 1});
+				break;
+				case 1:
+					$(ls[0]).css({"-ms-grid-row": countRow + 1, "-ms-grid-column-span": 2, "-ms-grid-column": 1});
+				break;
+			}
+		});
 	}
 
 	eventsLoad();
