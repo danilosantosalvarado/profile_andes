@@ -292,13 +292,13 @@ setTimeout(function(){
 		var ua = window.navigator.userAgent;
 		var msie = ua.indexOf("MSIE ");
 
-		if( msie == 0 )
+		// if( msie == 0 )
 			ieSupport(partialEvents);
 
 		if( 'objectFit' in document.documentElement.style === false ){
 			console.log('Object fit no supported');
-			$('.imge-conten, .iframe-conten').addClass('object-fit');
-			$('.imge-conten, .iframe-conten').each(function(idx, el){
+			jQuery('.imge-conten, .iframe-conten').addClass('object-fit');
+			jQuery('.imge-conten, .iframe-conten').each(function(idx, el){
 				var srcImg = $(el).find('img').prop('src');
 				$(el).css({'background-image': 'url(' + srcImg + ')'})
 			});
@@ -318,12 +318,12 @@ setTimeout(function(){
 
 	function eventsLoad(){
 
-		var btnLoadMore = $('.view-eventos-decanatura .pager.pager-load-more a');
+		var btnLoadMore = $('.view-eventos-decanatura .pager.pager-load-more a').get(0);
 		if ( !btnLoadMore ) {
 			setTimeout(function(){eventsLoad()}, 200);
 			return false;
 		}
-		btnLoadMore.on('click', onEventsLoad, false);
+		btnLoadMore.addEventListener('click', onEventsLoad, false);
 	}
 
 	function ieSupport(pList){
