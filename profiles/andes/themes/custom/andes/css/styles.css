@@ -2691,73 +2691,52 @@ th {
   border: 1px solid #000;
 }
 
-.view-id-componente_actividades_home .view-content .item-list {
+.view-id-componente_actividades_home > .view-content {
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .view-id-componente_actividades_home .view-content .item-list {
+  .view-id-componente_actividades_home > .view-content {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .view-id-componente_actividades_home .view-content .item-list {
+  .view-id-componente_actividades_home > .view-content {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .view-id-componente_actividades_home .view-content .item-list {
+  .view-id-componente_actividades_home > .view-content {
     width: 1170px;
   }
 }
 
-.view-id-componente_actividades_home .view-content ul {
-  -webkit-padding-start: 0px;
+.view-id-componente_actividades_home > .view-content .views-row .views-column {
+  margin-bottom: 15px;
 }
 
-.view-id-componente_actividades_home .view-content ul li {
-  list-style: none;
-  display: block;
-  float: left;
+.view-id-componente_actividades_home > .view-content .views-row .views-column .views-field-view img {
   width: 100%;
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .views-field-view .youtube-container--responsive {
+  width: 100%;
+  padding-bottom: 61.25%;
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
   position: relative;
-  padding: 0 20px;
 }
 
 @media (min-width: 555px) {
-  .view-id-componente_actividades_home .view-content ul li {
-    width: 50%;
-    height: 485px;
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
+    min-height: 326px;
   }
 }
 
-@media (min-width: 992px) {
-  .view-id-componente_actividades_home .view-content ul li {
-    width: 33.33333333%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view-id-componente_actividades_home .view-content ul li {
-    width: 25%;
-  }
-}
-
-.view-id-componente_actividades_home .view-content ul li .views-field-view img {
-  width: 100%;
-}
-
-.view-id-componente_actividades_home .view-content ul li .views-field-additional {
-  position: relative;
-}
-
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container {
-  margin-left: 30%;
-}
-
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .img-icons {
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-field-image {
   width: 61px;
   height: 61px;
   position: absolute;
@@ -2765,43 +2744,89 @@ th {
   left: 7px;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-titulo {
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-title {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #58595B;
-  margin-top: 25px;
-  margin-bottom: 16px;
+  padding-top: 25px;
+  margin-left: 30%;
+  margin-right: 10px;
+  padding-bottom: 16px;
+  line-height: 1;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-fecha,
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-hora,
-.view-id-componente_actividades_home .view-content ul li .views-field-additional .eventos-container .eventos-lugar {
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .content-date {
+  margin-left: 30%;
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .content-date .views-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .content-date .views-field > span {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.875rem;
-  color: #404041;
+  color: #333;
+  padding-right: 5px;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-view-node {
-  float: right;
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .content-date .views-field .field-content {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-view-node a {
-  text-decoration: none;
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node {
+  padding: 14px 0px;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-view-node a p {
+@media (min-width: 555px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node {
+    padding: 0px;
+  }
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node a {
+  display: block;
+  max-width: 180px;
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
-  color: #000;
-  margin-top: 39px;
-  margin-bottom: 71px;
+  color: #484851;
+  text-decoration: none;
+  text-align: center;
   border: 1px solid #404041;
-  padding: 0.3em 0.9em;
+  padding: 5px 40px;
+  margin: 0 auto;
 }
 
-.view-id-componente_actividades_home .view-content ul li .views-field-view-node a p:hover {
-  background-color: #000;
-  color: #fff;
+@media (min-width: 555px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node a {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+  }
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node a:hover {
+  background-color: #404041;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node a {
+    right: 25px;
+    left: inherit;
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 767px) {
+  .view-id-componente_actividades_home .views-column {
+    width: 50%;
+    float: left;
+  }
 }
 
 /* ------| Mini calendar |----- */
