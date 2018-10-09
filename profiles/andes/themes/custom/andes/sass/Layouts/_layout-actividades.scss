@@ -131,99 +131,116 @@
       }
     }
   }
-  //eventos
-  .view-content {
-    .item-list {
-      margin: 0 auto;
-      @include respond-to(m) {
-          width: 750px;
-      }
-      @include respond-to(xl) {
-          width: 970px;
-      }
-      @include respond-to(xxxl) {
-          width: 1170px;
-      }
+  // /* ------| cards actividades |----- */
+  > .view-content {
+    margin: 0 auto;
+    @include respond-to(m) {
+        width: 750px;
     }
-    ul {
-			-webkit-padding-start: 0px;
-			li {
-        list-style: none;
-        display: block;
-        float: left;
-        width: 100%;
-        position: relative;
-        padding: 0 20px;
-        @include respond-to(xs) {
-          width: 50%;
-          height: 485px;
-        }
-        @include respond-to(xl) {
-          width: 33.33333333%;
-          // height: 545px;
-        }
-        @include respond-to(xxxl) {
-          width: 25%;
-        }
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    .views-row {
+      //Img
+      .views-column {
+        margin-bottom: 15px;
         //imagen
         .views-field-view {
           img {
             width: 100%;
           }
-        }
-        //texto
-        .views-field-additional  {
-          position: relative;
-          .eventos-container {
-            margin-left: 30%;
-            //img-icons
-            .img-icons {
-              width: 61px;
-              height: 61px;
-              position: absolute;
-              top: -39px;
-              left: 7px;
-            }
-            //title
-            .eventos-titulo {
-              font-family: $latoblack;
-              @include font-size(m);
-              color: #58595B;
-              margin-top: 25px;
-              margin-bottom: 16px;
-            }
-            //fecha
-            .eventos-fecha,
-            .eventos-hora,
-            .eventos-lugar {
-              font-family: $latoregular;
-              @include font-size(s);
-              color: #404041;
-            }
-
+          .youtube-container--responsive {
+            width: 100%;
+            padding-bottom: 61.25%;
           }
         }
-         //buttons
-         .views-field-view-node {
-          float: right;
-          a {
-            text-decoration: none;
-            p {
+        //texto
+        .box-content  {
+          position: relative;
+          // background: #f4f1f1;
+          @include respond-to(xs) {
+            min-height: 326px;
+          }
+          //img-icons
+          .views-field-field-image {
+            width: 61px;
+            height: 61px;
+            position: absolute;
+            top: -39px;
+            left: 7px;
+          }
+          //title
+          .views-field-title {
+            font-family: $latoblack;
+            @include font-size(xl);
+            color: #58595B;
+            padding-top: 25px;
+            margin-left: 30%;
+            margin-right: 10px;
+            padding-bottom: 16px;
+            line-height: 1;
+          }
+          .content-date {
+            margin-left: 30%;
+            .views-field  {
+              display: flex;
+              > span {
+                font-family: $latoregular;
+                @include font-size(s);
+                color: #333;
+                padding-right: 5px;
+              }
+              .field-content {
+                font-family: $latoregular;
+                @include font-size(s);
+              }
+            }
+          }
+          //buttons
+          .views-field-view-node {
+            padding: 14px 0px;
+            @include respond-to(xs) {
+              padding: 0px;
+            }
+            a {
+              display: block;
+              max-width: 180px;
+              font-family: $latoregular;
               @include font-size(m);
-              font-family: $latoblack;
-              color: color('black');
-              margin-top: 39px;
-              margin-bottom: 71px;
+              color: #484851;
+              text-decoration: none;
+              text-align: center;
               border: 1px solid #404041;
-              padding: 0.3em 0.9em;
+              padding: 5px 40px;
+              margin: 0 auto;
+              @include respond-to(xs) {
+                position: absolute;
+                bottom: 25px;
+                right: 0;
+                left: 0;
+              }
               &:hover {
-                background-color: color('black');
-                color: color('white');
+                background-color: #404041;
+                color: #ffffff;
+              }
+              @include respond-to(m) {
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
               }
             }
           }
         }
       }
+    }
+  }
+  @media screen and (min-width: 555px) and (max-width: 767px) {
+    .views-column {
+      width: 50%;
+      float: left;
     }
   }
 }
