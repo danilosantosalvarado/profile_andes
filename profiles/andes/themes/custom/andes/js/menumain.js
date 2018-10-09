@@ -1,4 +1,23 @@
 (function ($) {
+  /* Scroll menu cambio de color */
+  $(window).scroll(function (event) {
+    let scroll = $(window).scrollTop(),
+        menu = $('.wrapper-mega-menu');
+    if ( Drupal.settings.udla_blocks_alter !== undefined) {
+      Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color !== undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
+      Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change !== undefined )? Drupal.settings.udla_blocks_alter.background_color_change : "";
+      if (scroll > 10) {
+        menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
+        menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
+        $(".barra-buscar").removeClass('cerrar');
+      }
+      else {
+        menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
+        menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
+      }
+    }
+  });
+
   Drupal.behaviors.menuMain = {
     attach: function (context, settings) {
       var docWidth = $(document).width(),
@@ -66,25 +85,6 @@
           }
         );
 
-        /* Scroll menu cambio de colO r */
-        $(window).scroll(function (event) {
-          var scroll = $(window).scrollTop(),
-            menu = $('.wrapper-mega-menu');
-          if ( Drupal.settings.udla_blocks_alter != undefined) {
-            Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color != undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
-            Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change != undefined )? Drupal.settings.udla_blocks_alter.background_color_change : "";
-            if (scroll > 10) {
-              menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
-              menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
-              $(".barra-buscar").removeClass('cerrar');
-            }
-            else {
-              menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
-              menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
-            }
-          }
-        });
-
         /* ciclo para el ancho de primer contenedor */
         $(".tb-megamenu-menu-mega-menu .tb-megamenu-item.level-1").each(function (key, value) {
           var offset = $(this).offset(),
@@ -147,7 +147,7 @@
           $('.clone-nivel-2').remove();
           /* se crea el box black */
           $(this).parents('.tb-megamenu-column').addClass('active-nivel-1').before("<div class='box-black' style='none'><p>" + $(this).text() + "</p></div>");
-          /* clase padre para todo los clones */
+          /* clase padre para todos los clones */
           $('.box-black').parents('.row-fluid').addClass('parent-clone');
           /* hacemos el clone */
           var SubMenuClone = $(this).siblings().clone().addClass('clone-nivel-2');
@@ -250,7 +250,11 @@
 
         /* inicia el html insertado */
         function generatorData(className, typeClone, typeBlock) {
-          var data = $('#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1.' + typeClone + ' a');
+          let selector = '#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1.' + typeClone + ' a';
+          if (typeBlock == 'select') {
+            selector = '#block-tb-megamenu-menu-menu-top-soy ul.tb-megamenu-nav.level-0 li.level-1 a.' + typeClone;
+          }
+          var data = $(selector);
           loopsData(data, typeBlock);
         }
         /* recorre los objetos */
