@@ -3,7 +3,7 @@
 
 	// function galeria home
 	jQuery(document).on("click", ".galeria-home", function() {
-		var imageSrc = jQuery(this).parents(".box-modal").find("img").attr("src");
+		var imageSrc = $(this).find("img").attr("src");
 		jQuery(".modal-gallery-home").attr("src", imageSrc);
 	});
 
@@ -328,7 +328,7 @@ setTimeout(function(){
 			jQuery('.imge-conten, .iframe-conten').addClass('object-fit');
 			jQuery('.imge-conten, .iframe-conten').each(function(idx, el){
 				var srcImg = $(el).find('img').prop('src');
-				$(el).css({'background-image': 'url(' + srcImg + ')'})
+				$(el).css({'background-image': 'url(' + srcImg + ')'});
 			});
 		}
 
@@ -357,7 +357,6 @@ setTimeout(function(){
 	function ieSupport(pList){
 
 		var partialEvents = pList;
-		console.log('msie');
 
 		partialEvents.map(function(ls, idx){
 			var countRow = idx * 7;
@@ -405,6 +404,16 @@ setTimeout(function(){
 
 	eventsLoad();
 	listEvents();
+
+	// galleria home support IE
+	if( 'objectFit' in document.documentElement.style === false ){
+		console.log('Object fit no supported');
+		jQuery('.wrapper-galeria-home .gh-item').addClass('object-fit');
+		jQuery('.wrapper-galeria-home .gh-item').each(function(idx, el){
+			var srcImg = $(el).find('img').prop('src');
+			$(el).css({'background-image': 'url(' + srcImg + ')'});
+		});
+	}
 
 
 }(jQuery));
