@@ -5,7 +5,16 @@
 	margin: 0 auto;
 	padding: 25px 15px;
 	box-sizing: border-box;
-	
+
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li{
+		padding: 0;
+		margin: 0;
+	}
 	
 	.field-content{
 		position: relative;
@@ -22,9 +31,11 @@
 
 	.modal-gallery-home{
 		// width: 100%;
+		display: block;
+		max-width: 100%;
+		height: auto;
 		margin-left: auto;
-		margin-right: auto;
-	}
+		margin-right: auto;	}
 
 	.gh-item{
 		position: relative;
@@ -115,7 +126,7 @@
 	}
 
 	.type-six .item-sm{
-		height: 180px;
+		height: 240px;
 	}
 
 	.type-six .item-top-left{
