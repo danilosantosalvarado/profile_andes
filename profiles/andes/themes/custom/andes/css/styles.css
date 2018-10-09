@@ -9614,10 +9614,164 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Acordion |----- */
-.view-id-decanatura_enlaces_rapidos .views-row {
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos {
+    background-color: black;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-header {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-header {
+    display: block;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-header h1 p {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-header .leadership-hr {
+  width: 80%;
+  border-top: 2px solid #fff;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 41px;
+    margin-bottom: 41px;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background-color: #D0D2D3;
+  padding: 10px 50px;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row a {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a > p {
+  float: left;
+  display: block;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg {
+  width: 50px;
+  height: 50px;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-1, .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-2 {
+  stroke: black;
+  stroke-width: 15px;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg path {
+  stroke: black;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-1, .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-2 {
+    stroke: white;
+    stroke-width: 15px;
+  }
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg path {
+    stroke: white;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text {
+  line-height: 1;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text p {
+  margin: 0px;
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text p:nth-child(1) strong {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: normal;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text p:nth-child(1) strong {
+    font-size: 1.5rem;
+    color: #B3B3B3;
+  }
+}
+
+.view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text p:nth-child(2) {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #484851;
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row a .show-text p:nth-child(2) {
+    font-size: 1.5rem;
+    color: #B3B3B3;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row-1 a {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-decanatura_enlaces_rapidos .view-content .views-row-2 a {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
 }
 
 /*

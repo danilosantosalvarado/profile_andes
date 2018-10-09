@@ -6,7 +6,127 @@
 
 /* ------| Acordion |----- */
 .view-id-decanatura_enlaces_rapidos {
-  .views-row  {
+  @include respond-to(xl) {
+    background-color: black;
+  }
+  .view-header {
+    display: none;
+    @include respond-to(xl) {
+      display: block;
+    }
+    h1 {
+      p {
+        font-family: $latoregular;
+        font-size: 32px;
+        color: white;
+        text-align: center;
+      }
+    }
+    .leadership-hr {
+      width: 80%;
+      border-top: 2px solid #fff;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+  }
+  .view-content {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    .views-row  {
+        justify-content: center;
+        flex: 1 1 0px;
+      @include respond-to(xl) {
+        flex-wrap: nowrap;
+        margin-top: 41px;
+        margin-bottom: 41px;
+
+      }
+      a {
+        // width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: #D0D2D3;
+        padding: 10px 50px;
+        @include respond-to(xl) {
+          width: 100%;
+          // justify-content: center;
+          background-color: transparent;
+        }
+        &:hover {
+
+        }
+        > p {
+          float: left;
+          display: block;
+          margin-right: 16px;
+          margin-bottom: 0;
+          svg {
+            width: 50px;
+            height: 50px;
+            .cls-1, .cls-2 {
+              stroke: black;
+              stroke-width: 15px;
+            }
+            path {
+              stroke: black;
+            }
+            @include respond-to(xl) {
+              .cls-1, .cls-2 {
+                stroke: white;
+                stroke-width: 15px;
+
+              }
+              path {
+                stroke: white;
+              }
+            }
+          }
+        }
+        .show-text {
+          line-height: 1;
+          p {
+            margin: 0px;
+          }
+          p:nth-child(1) {
+            strong {
+              font-family: $latoregular;
+              @include font-size(l);
+              font-weight: normal;
+
+              @include respond-to(xl) {
+                @include font-size(xl);
+                color: #B3B3B3;
+              }
+            }
+          }
+          p:nth-child(2) {
+            font-family: $latoblack;
+            @include font-size(l);
+            color: color('grey');
+            @include respond-to(xl) {
+              @include font-size(xl);
+              color: #B3B3B3;
+            }
+          }
+        }
+      }
+    }
+    .views-row-1 {
+      a {
+        @include respond-to(xl) {
+          justify-content: flex-end;
+        }
+      }
+    }
+    .views-row-2 {
+      a {
+        @include respond-to(xl) {
+          justify-content: end;
+        }
+      }
+    }
   }
 }
