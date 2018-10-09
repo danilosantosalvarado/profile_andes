@@ -3168,6 +3168,30 @@ body > .main-container.container-fluid {
   background-color: #ff8827;
 }
 
+/* ------| redes sociales scroll |----- */
+.pane-udla-simplified-social-share {
+  position: relative;
+}
+
+.fija {
+  position: fixed !important;
+  top: 20%;
+  bottom: auto;
+}
+
+.os-share-widget-interface-vertical {
+  position: absolute;
+  padding: 0px !important;
+  margin-left: 32%;
+  border-top: none !important;
+}
+
+.slider-bottom {
+  position: absolute;
+  bottom: -585px;
+  left: initial;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Slider Homes
@@ -9582,6 +9606,18 @@ body > .main-container.container-fluid {
 .view-display-id-componente_multimedia_noticia_destacada .views-field-view-1 .link-multimedia-destacado a:hover {
   background-color: #ff8827;
   color: #fff;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Enlaces rapidos
+//------------------------------------------------------------------------------
+*/
+/* ------| Acordion |----- */
+.view-id-decanatura_enlaces_rapidos .views-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*

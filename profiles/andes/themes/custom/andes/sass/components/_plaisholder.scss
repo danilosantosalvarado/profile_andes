@@ -169,6 +169,7 @@ body > .main-container.container-fluid {
 }
 
 /* ------| Button ver todos|----- */
+
 .view-more-footer{
   position: relative;
   text-align: center;
@@ -201,4 +202,27 @@ body > .main-container.container-fluid {
       background-color: color('orange')
     }
   }
+}
+/* ------| redes sociales scroll |----- */
+.pane-udla-simplified-social-share {
+  position: relative;
+}
+
+.fija {
+  position: fixed !important;
+  top: 20%;
+  bottom: auto;
+}
+
+.os-share-widget-interface-vertical {
+  position: absolute;
+  padding: 0px !important;
+  margin-left: 32%;
+  border-top: none !important;
+}
+
+.slider-bottom {
+  position: absolute;
+  bottom: -585px;
+  left: initial;
 }

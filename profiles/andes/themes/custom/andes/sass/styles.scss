@@ -88,13 +88,23 @@
 @import 'Components/componente-noticia-multimedia-destacada';
 
 
+// Components
+//
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+//
+// Weight: 2
+//
+// Style guide: components
+
+@import 'deca/enlaces-rapidos';
 
 // Navigation
 //
 // Navigation components are specialized design components that are used for
 // page navigation.
 //
-// Weight: 2
+// Weight: 3
 //
 // Style guide: navigation
 @import 'Navegation/enlaces_de_interes';
