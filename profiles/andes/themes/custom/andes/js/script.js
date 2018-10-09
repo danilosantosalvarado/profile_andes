@@ -290,9 +290,10 @@ setTimeout(function(){
 		});
 
 		var ua = window.navigator.userAgent;
+		console.log(ua);
 		var msie = ua.indexOf("MSIE ");
 
-		// if( msie == 0 )
+		if( ua.indexOf("MSIE ") > 0 || ua.indexOf("rv:") > 0 )
 			ieSupport(partialEvents);
 
 		if( 'objectFit' in document.documentElement.style === false ){
@@ -335,7 +336,7 @@ setTimeout(function(){
 			var countRow = idx * 7;
 			var opt = ls.length;
 
-			$('.view-eventos-decanatura .view-content').css({'margin': '10px !important'});
+			jQuery('.view-eventos-decanatura .view-content').attr("style", "margin: 10px !important");
 
 			switch(opt){
 				case 6:
