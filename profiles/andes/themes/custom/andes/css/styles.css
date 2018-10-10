@@ -8808,6 +8808,7 @@ body > .main-container.container-fluid {
   text-align: center;
   padding: 0;
   text-align: center;
+  display: block;
 }
 
 .view-componente-anuncios .views-slideshow-controls-bottom .views_slideshow_pager_field {
