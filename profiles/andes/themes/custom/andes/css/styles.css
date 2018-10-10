@@ -2048,29 +2048,7 @@ th {
 }
 
 /* ------| layaut first, last |----- */
-#layout-nine .center-wrapper {
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  #layout-nine .center-wrapper {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  #layout-nine .center-wrapper {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #layout-nine .center-wrapper {
-    width: 1170px;
-  }
-}
-
-#layout-nine .center-wrapper .pane-node-title h1 {
+#layout-nine .row-inside-first .pane-node-title h1 {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   color: #484851;
@@ -2081,35 +2059,29 @@ th {
 }
 
 @media (min-width: 555px) {
-  #layout-nine .center-wrapper .pane-node-title h1 {
+  #layout-nine .row-inside-first .pane-node-title h1 {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 992px) {
-  #layout-nine .center-wrapper .pane-node-title h1 {
+  #layout-nine .row-inside-first .pane-node-title h1 {
     font-size: 2.6875rem;
   }
 }
 
-#layout-nine .center-wrapper .field-name-body {
+#layout-nine .row-inside-first .field-name-body {
   padding: 0 15px;
 }
 
-#layout-nine .center-wrapper .field-name-body p {
+#layout-nine .row-inside-first .field-name-body p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.125rem;
   color: #000;
 }
 
-#layout-nine .center-wrapper .field-name-field-lugar {
+#layout-nine .row-inside-first .field-name-field-lugar {
   margin-top: 40px;
-}
-
-@media (min-width: 768px) {
-  #layout-nine .center-wrapper .field-name-field-lugar {
-    margin-top: 0px;
-  }
 }
 
 /*

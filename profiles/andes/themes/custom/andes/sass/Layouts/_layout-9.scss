@@ -21,17 +21,7 @@
 }
 
 /* ------| layaut first, last |----- */
-#layout-nine .center-wrapper {
-  margin: 0 auto;
-  @include respond-to(m) {
-    width: 750px;
-  }
-  @include respond-to(xl) {
-    width: 970px;
-  }
-  @include respond-to(xxxl) {
-    width: 1170px;
-  }
+#layout-nine .row-inside-first {
   //titulo
   .pane-node-title {
     h1 {
@@ -42,7 +32,6 @@
     text-transform: uppercase;
     font-weight: bold;
     padding-left: 15px;
-    // @include margin-bottom(1.7);
     @include respond-to(xs) {
         @include font-size(xl);
       }
@@ -63,9 +52,9 @@
   //Mapa
   .field-name-field-lugar {
     margin-top: 40px;
-    @include respond-to(m) {
-      margin-top: 0px;
-    }
+    // @include respond-to(m) {
+    //   margin-top: 0px;
+    // }
   }
 }
 
