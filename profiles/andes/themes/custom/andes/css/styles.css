@@ -7903,6 +7903,17 @@ body > .main-container.container-fluid {
           box-sizing: border-box;
 }
 
+.view-galerias-home ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.view-galerias-home li {
+  padding: 0;
+  margin: 0;
+}
+
 .view-galerias-home .field-content {
   position: relative;
   display: block;
@@ -7913,10 +7924,13 @@ body > .main-container.container-fluid {
   display: grid;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .view-galerias-home .modal-gallery-home {
+  display: block;
+  max-width: 100%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7966,11 +7980,11 @@ body > .main-container.container-fluid {
   -ms-grid-column-span: 2;
   grid-row: 1 / 4;
   grid-column: 1 / 3;
-  height: 540px;
+  height: 360px;
 }
 
 .view-galerias-home .type-seven .item-sm {
-  height: 180px;
+  height: 120px;
 }
 
 .view-galerias-home .type-seven .item-left-top {
@@ -8021,7 +8035,7 @@ body > .main-container.container-fluid {
 }
 
 .view-galerias-home .type-six .item-sm {
-  height: 180px;
+  height: 160px;
 }
 
 .view-galerias-home .type-six .item-top-left {
@@ -8072,7 +8086,7 @@ body > .main-container.container-fluid {
 }
 
 .view-galerias-home .type-penta .item-sm {
-  height: 240px;
+  height: 160px;
 }
 
 .view-galerias-home .type-penta .item-top-left {
@@ -8123,13 +8137,13 @@ body > .main-container.container-fluid {
   -ms-grid-column-span: 2;
   grid-row: 1 / 5;
   grid-column: 1 / 3;
-  height: 720px;
+  height: 480px;
 }
 
 .view-galerias-home .type-five .item-sm {
   -ms-grid-column: 3;
   grid-column: 3;
-  height: 180px;
+  height: 120px;
 }
 
 .view-galerias-home .type-five .item-top {
@@ -8158,13 +8172,13 @@ body > .main-container.container-fluid {
 }
 
 .view-galerias-home .type-four .item-lg {
-  height: 240px;
+  height: 160px;
 }
 
 .view-galerias-home .type-four .item-sm {
   -ms-grid-row: 2;
   grid-row: 2;
-  height: 240px;
+  height: 160px;
 }
 
 .view-galerias-home .type-four .item-top {
@@ -8207,7 +8221,7 @@ body > .main-container.container-fluid {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   grid-column: 1 / 3;
-  height: 240px;
+  height: 160px;
 }
 
 .view-galerias-home .type-three .item-sm {
