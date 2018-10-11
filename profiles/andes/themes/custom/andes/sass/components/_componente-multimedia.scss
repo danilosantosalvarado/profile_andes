@@ -170,10 +170,9 @@
 		display: none;
 	}
 	.swiper-container-horizontal {
-		width: 90%;
-		margin: 0 auto;
 		ul {
-			-webkit-padding-start: 0px;
+			padding: 0px;
+			list-style: none;
 			li {
 				.views-field-view {
 					img{

@@ -9260,13 +9260,9 @@ body > .main-container.container-fluid {
   }
 }
 
-.view-display-id-multimedia_destacada_mobile .swiper-container-horizontal {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .view-display-id-multimedia_destacada_mobile .swiper-container-horizontal ul {
-  -webkit-padding-start: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
 .view-display-id-multimedia_destacada_mobile .swiper-container-horizontal ul li .views-field-view img {
