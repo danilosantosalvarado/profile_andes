@@ -74,33 +74,33 @@
 
 		acoplarTop();
 
-		function acoplarTop() {
-			var ancho = $(window).width();
-			if (ancho > 992) {
-				var cajaBottom = $('.slider-homes-bottom').outerHeight();
-				var alto = $('#views_slideshow_swiper_slider_homes-block_1').find('.img-desktop img').attr('height');
-				$('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
-					if ($(this).find('.slider-homes-bottom').length < 1) {
-						switch ($(this).find('.iframe-conten').length) {
-							case 0:
-								$(this).find('.img-desktop img').height(parseInt(alto) + parseInt(cajaBottom));
-								break;
-							case 1:
-								$(this).find('.iframe-conten').css('height', parseInt(alto)+parseInt(cajaBottom));
-								break;
-							default:
-								break;
-						}
-					} else{
-							$(this).find('.img-desktop img').height(parseInt(alto));
-							if ($(this).find('.iframe-conten').length > 0) {
-								var otro = parseInt(alto)+6;
-								$(this).find('.iframe-conten').css('height', otro);
-							}
-						}
-				});
-			}
-		}
+		// function acoplarTop() {
+		// 	var ancho = $(window).width();
+		// 	if (ancho > 992) {
+		// 		var cajaBottom = $('.slider-homes-bottom').outerHeight();
+		// 		var alto = $('#views_slideshow_swiper_slider_homes-block_1').find('.img-desktop img').attr('height');
+		// 		$('#views_slideshow_swiper_slider_homes-block_1 li').each(function() {
+		// 			if ($(this).find('.slider-homes-bottom').length < 1) {
+		// 				switch ($(this).find('.iframe-conten').length) {
+		// 					case 0:
+		// 						$(this).find('.img-desktop img').height(parseInt(alto) + parseInt(cajaBottom));
+		// 						break;
+		// 					case 1:
+		// 						$(this).find('.iframe-conten').css('height', parseInt(alto)+parseInt(cajaBottom));
+		// 						break;
+		// 					default:
+		// 						break;
+		// 				}
+		// 			} else{
+		// 					$(this).find('.img-desktop img').height(parseInt(alto));
+		// 					if ($(this).find('.iframe-conten').length > 0) {
+		// 						var otro = parseInt(alto)+6;
+		// 						$(this).find('.iframe-conten').css('height', otro);
+		// 					}
+		// 				}
+		// 		});
+		// 	}
+		// }
 
 		$(window).resize(function(event) {
 			acoplarTop();

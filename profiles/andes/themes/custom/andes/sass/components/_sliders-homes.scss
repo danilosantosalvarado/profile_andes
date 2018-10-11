@@ -10,6 +10,7 @@
 		ul {
 			padding: 0px;
 			list-style: none;
+			margin: 0px;
 			li.swiper-slide {
 				overflow: hidden;
 				display: block;
@@ -33,12 +34,7 @@
 							}
 						}
 						.img-content {
-						// 	width: 100%;
-						// 	height: 100%;
-						// 	.img-desktop,
 							.img-mobile {
-						// 		width: 100%;
-						// 		height: 100%;
 								img {
 								width: 100%;
 								height: 100%;
@@ -68,8 +64,8 @@
 							overflow: hidden;
 							height: 50%;
 							@include respond-to(m) {
-								// height: 79%;
-								height: 73%;
+								height: 79%;
+								// height: 73%;
 							}
 							.youtube-container--responsive {
 								padding-bottom: initial;
@@ -165,52 +161,60 @@
 	.skin-default {
 		position: relative;
 		//Flechas paguinador
-		.views-slideshow-controls-text {
-			display: none;
-			@include respond-to(xl) {
-				display: block;
-			}
-			//Button Izquierda
-			a[rel='prev'] {
+		.slider-homes-right-control,
+		.slider-homes-center-control,
+		.slider-homes-left-control {
+			.views-slideshow-controls-text {
 				display: none;
-				width: 40px;
-				height: 40px;
-				position: absolute;
-				left: 2%;
-				top: 40%;
-				font-size: 0;
-				background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
-				background-size: 40px 40px;
-				z-index: 1;
-			}
-			//Buttom Pause
-			.views-slideshow-controls-text-pause {
-				display: none;
-			}
-			//Button Deracha
-			a[rel='next'] {
-				display: none;
-				width: 40px;
-				height: 40px;
-				font-size: 0;
-				position: absolute;
-				top: 40%;
-				left: inherit;
-				right: 2%;
-				background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
-				background-size: 40px 40px;
-				z-index: 1;
+				@include respond-to(xl) {
+					display: block;
+				}
+				//Button Izquierda
+				a[rel='prev'] {
+					display: none;
+					width: 40px;
+					height: 40px;
+					position: absolute;
+					left: 2%;
+					top: 40%;
+					font-size: 0;
+					background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+					background-size: 40px 40px;
+					z-index: 1;
+				}
+				//Buttom Pause
+				.views-slideshow-controls-text-pause {
+					display: none;
+				}
+				//Button Deracha
+				a[rel='next'] {
+					display: none;
+					width: 40px;
+					height: 40px;
+					font-size: 0;
+					position: absolute;
+					top: 40%;
+					left: inherit;
+					right: 2%;
+					background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+					background-size: 40px 40px;
+					z-index: 1;
+				}
 			}
 		}
 	}
-	//Hover flechas paguinador
+	// //Hover flechas paguinador
 	&:hover {
-		.views-slideshow-controls-text {
-			a[rel='prev'] {
-				display: block;
-			}
-			a[rel='next'] {
-				display: block;
+		.slider-homes-right-control,
+		.slider-homes-center-control,
+		.slider-homes-left-control {
+			.views-slideshow-controls-text {
+				a[rel='prev'] {
+					display: block;
+				}
+				a[rel='next'] {
+					display: block;
+				}
 			}
 		}
 	}
@@ -287,7 +291,7 @@
 					align-items: center;
 				}
 				@include respond-to(m) {
-					padding: 0 15px 39px;
+					padding: 0 15px 35px;
 					width: 750px;
 				}
 				@include respond-to(xl) {
@@ -383,7 +387,8 @@
 					height: 40px;
 					position: absolute;
 					left: 2%;
-					top: 76%;
+					top: initial;
+    			bottom: 91px;
 					font-size: 0;
 					background: url('../img/Icon/slide-prev.png') no-repeat center;
 					background-size: 28px 28px;
@@ -401,7 +406,8 @@
 					height: 40px;
 					font-size: 0;
 					position: absolute;
-					top: 76%;
+					top: initial;
+    			bottom: 91px;
 					left: inherit;
 					right: 2%;
 					background: url('../img/Icon/slide-next.png') no-repeat center;
@@ -416,8 +422,7 @@
 	.slider-homes-bottom-control {
 		.views-slideshow-pager-field-processed {
 			position: absolute;
-			// bottom: 6px;
-			bottom: 32px;
+			bottom: 0px;
 			width: 100%;
 			padding: 0;
 			z-index: 1;
