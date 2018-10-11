@@ -100,15 +100,21 @@
   overflow: hidden;
   .view-content {
     .views-row {
-      //Img
+
       .views-column {
         margin-bottom: 15px;
-        .views-field {
-          img{
-            width: 100%;
+        //Img
+        .views-field-view {
+          @include respond-to(xs) {
+            max-height: 150px;
           }
-          .youtube-container--responsive {
-            padding-bottom: 61.25%;
+          .views-field {
+            img{
+              width: 100%;
+            }
+            .youtube-container--responsive {
+              padding-bottom: 62%;
+            }
           }
         }
         .box-content {
