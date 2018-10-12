@@ -4,6 +4,19 @@
 //------------------------------------------------------------------------------
 */
 
+.lastUnit{
+  display: block;
+}
+
+.view-componente-layout-4{
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-to(m) {
+    max-width: inherit;
+  }
+}
+
 .view-id-componente_layout_4 {
   // max-width: 1140px;
   .view-content {
@@ -57,45 +70,56 @@
         .caja-body {
           font-family: $crimson-textregular;
           @include type-layout(l, .96);
+          font-size: 1rem;
           color: color('white');
           text-align: center;
+          margin-bottom: 8px;
         }
         .caja-enlace {
           padding: 5px 0;
           @include respond-to(xl) {
-            display: none;
+            // display: none;
+            opacity: 0;
           }
           a {
             display: block;
-            max-width: 181px;
+            max-width: 180px;
             font-family: $latolight;
             @include font-size(m);
+            font-size: 0.9rem;
             color: white;
             text-align: center;
             text-decoration: none;
-            padding: 8px 20px;
+            padding: 10px 20px;
             margin: 0 auto;
             border: 1px solid color('white');
-            background-color: color('black');
+            background-color: transparent;
             &:hover {
               background: #fff;
               color: color('grey-dark');
             }
 
+            @include respond-to(m) {
+              margin: 0 auto;
+              background-color: color('black');
+            }
           }
         }
       }
 
       @include respond-to(xl) {
+        .container-title-desc .caja-enlace a{
+          bottom: 20px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          transition: all ease .3s;
+        }
         &:hover {
           .caja-enlace {
-            display: block;
+            opacity: 1;
             a {
-              position: absolute;
-              left: 0;
-              right: 0;
               bottom: 10px;
-              transition: .3s;
               z-index: 2;
             }
           }
