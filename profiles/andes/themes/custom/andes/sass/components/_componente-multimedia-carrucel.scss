@@ -60,22 +60,33 @@
 	}
 
 	.views-slideshow-controls-bottom {
-		padding: 24px 10px;
-		background-color: color('Yellow-secundary');
-
-		@include respond-to(xxs) {
-			padding: 12px 10px;
-		}
 
 		.views-slideshow-pager-fields  {
+			padding: 24px 10px;
 			display: flex;
 			justify-content: stretch;
 			align-items: center;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			background-color: color('Yellow-secundary');
+
+			@include respond-to(xxs) {
+				padding: 12px 10px;
+			}
+
+			&:after{
+				content: " ";
+				height: 1px;
+				width: 1px;
+				flex: 0 0 1px;
+			}
+
 			.active img{
 				border: 0px solid transparent;
 			}
 			.views-slideshow-pager-field-item {
-				flex: 1 1 25%;
+				flex: 1 0 25%;
 				height: 80px;
 				position: relative;
 				overflow: hidden;
