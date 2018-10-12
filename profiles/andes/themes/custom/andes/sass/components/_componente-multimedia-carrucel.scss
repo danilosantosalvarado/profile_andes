@@ -96,6 +96,8 @@
 					background-color: rgba(0,0,0,.6);
 					opacity: 1;
 					transition: all ease-out .4s;
+					user-select: none;
+					pointer-events: none;
 				}
 				&:hover,
 				&.active{

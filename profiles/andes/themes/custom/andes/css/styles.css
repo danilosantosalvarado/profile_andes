@@ -9712,6 +9712,11 @@ body > .main-container.container-fluid {
   -webkit-transition: all ease-out .4s;
   -o-transition: all ease-out .4s;
   transition: all ease-out .4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields .views-slideshow-pager-field-item:hover:after, .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields .views-slideshow-pager-field-item.active:after {
