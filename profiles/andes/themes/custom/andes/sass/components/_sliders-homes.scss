@@ -16,7 +16,7 @@
 				display: block;
 				height: auto;
 				.views-slideshow-swiper-main-frame-row-item {
-					display: inline-flex;
+					display: grid;
 					width: 100%;
 					height: 100%;
 					.views-field.views-field-views-conditional {
@@ -41,42 +41,61 @@
 								}
 							}
 						}
+						// .cl-slider-homes-right,
+						// .cl-slider-homes-center,
+						// .cl-slider-homes-left {
+						// 	width: 100%;
+						// 	height: 100%;
+						// 	.img-content {
+						// 		height: 100%;
+						// 		.img-desktop,
+						// 		.img-mobile {
+						// 			width: 100%;
+						// 			height: 100%;
+						// 			figure {
+						// 				height: 100%;
+						// 				img {
+						// 				width: 100%;
+						// 				height: 100%;
+						// 					@include respond-to(xl) {
+						// 						width: auto;
+						// 						height: auto;
+						// 					}
+						// 				}
+						// 			}
+						// 		}
+						// 	}
+						// }
 						.cl-slider-homes-right,
 						.cl-slider-homes-center,
 						.cl-slider-homes-left {
-							width: 100%;
 							height: 100%;
-							.img-content {
-								height: 100%;
-								.img-desktop,
-								.img-mobile {
-									width: 100%;
+							.iframe-conten {
+								display: block;
+								overflow: hidden;
+								height: 50%;
+								@include respond-to(m) {
 									height: 100%;
-									// figure {
-									// 	height: 100%;
-									// 	img {
-									// 	width: 100%;
-									// 	height: 100%;
-									// 		@include respond-to(xl) {
-									// 			width: auto;
-									// 			height: auto;
-									// 		}
-									// 	}
-									// }
+								}
+								.youtube-container--responsive {
+									padding-bottom: initial;
+									height: 100%;
 								}
 							}
 						}
-						.iframe-conten {
-							display: block;
-							overflow: hidden;
-							height: 50%;
-							@include respond-to(m) {
-								height: 79%;
-								// height: 73%;
-							}
-							.youtube-container--responsive {
-								padding-bottom: initial;
-								height: 100%;
+						.cl-slider-homes-bottom {
+							height: 100%;
+							.iframe-conten {
+								display: block;
+								overflow: hidden;
+								height: 50%;
+								@include respond-to(m) {
+									height: 79%;
+								}
+								.youtube-container--responsive {
+									padding-bottom: initial;
+									height: 100%;
+								}
 							}
 						}
 					}
