@@ -15,31 +15,33 @@
 	var slideActive = "";
 	var slideActivePosition = "";
 
-
 	$(window).ready(function() {
 			//funcion redes sociales scroll eventos.
 		$('.os-share-widget-interface-vertical').appendTo('.vertical-share');
 		$('.os-share-widget-interface-vertical').prependTo('.vertical-share');
+
 		$(window).scroll(function() {
-			var scrollVentana = $(document).scrollTop();
-			var contenedorTop = $('.vertical-share').position().top;
-			var endVerticalScroll = $('.end-vertical-scroll').position().top + $('.end-vertical-scroll').height();
-			var altoRerdes = $('.os-share-widget-interface-vertical').height();
-			if(scrollVentana < contenedorTop){
-				if($('.os-share-widget-interface-vertical').hasClass('fija')){
-					$('.os-share-widget-interface-vertical').removeClass('fija');
+			if( $('.vertical-share').length > 0 ){
+				var scrollVentana = $(document).scrollTop();
+				var contenedorTop = $('.vertical-share').position().top;
+				var endVerticalScroll = $('.end-vertical-scroll').position().top + $('.end-vertical-scroll').height();
+				var altoRerdes = $('.os-share-widget-interface-vertical').height();
+				if(scrollVentana < contenedorTop){
+					if($('.os-share-widget-interface-vertical').hasClass('fija')){
+						$('.os-share-widget-interface-vertical').removeClass('fija');
+					}
+				}else if (scrollVentana >= contenedorTop) {
+					if($('.os-share-widget-interface-vertical').hasClass('slider-bottom')){
+						$('.os-share-widget-interface-vertical').removeClass('slider-bottom');
+					}
+					$('.os-share-widget-interface-vertical').addClass('fija');
 				}
-			}else if (scrollVentana >= contenedorTop) {
-				if($('.os-share-widget-interface-vertical').hasClass('slider-bottom')){
-					$('.os-share-widget-interface-vertical').removeClass('slider-bottom');
+				if(scrollVentana > endVerticalScroll-altoRerdes ){
+					if($('.os-share-widget-interface-vertical').hasClass('fija')){
+						$('.os-share-widget-interface-vertical').removeClass('fija');
+					}
+					$('.os-share-widget-interface-vertical').addClass('slider-bottom');
 				}
-				$('.os-share-widget-interface-vertical').addClass('fija');
-			}
-			if(scrollVentana > endVerticalScroll-altoRerdes ){
-				if($('.os-share-widget-interface-vertical').hasClass('fija')){
-					$('.os-share-widget-interface-vertical').removeClass('fija');
-				}
-				$('.os-share-widget-interface-vertical').addClass('slider-bottom');
 			}
 		});
 
@@ -72,7 +74,7 @@
 
 		// funcion que acomoda div .slider-homes-bottom
 
-		acoplarTop();
+		// acoplarTop();
 
 		// function acoplarTop() {
 		// 	var ancho = $(window).width();
@@ -102,9 +104,9 @@
 		// 	}
 		// }
 
-		$(window).resize(function(event) {
-			acoplarTop();
-		});
+		// $(window).resize(function(event) {
+		// acoplarTop();
+		// });
 
 	// Funcion breakpoint slider
 	checkSize();
@@ -115,12 +117,12 @@
 function checkSize(){
 	var docWidth = $(document).width();
 	 var data = {
-    slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 992) ? 2 : 1)) ),
-    spaceBetween: 20,
-    swipeTo: 0,
-    slidesPerGroup: ((docWidth >= 1200) ? 4 : ((docWidth > 768 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 768) ? 2 : 1)) ),
-    slidesPerColumn: 1
-  };
+		slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 992) ? 2 : 1)) ),
+		spaceBetween: 20,
+		swipeTo: 0,
+		slidesPerGroup: ((docWidth >= 1200) ? 4 : ((docWidth > 768 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 768) ? 2 : 1)) ),
+		slidesPerColumn: 1
+	};
 
 	if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 0 && docWidth <= 1200) ) {
 		setTimeout(function(){
@@ -147,16 +149,16 @@ function checkSize(){
 	//view-id-componente_eventos
 }
 
-	function returnClassParent(parent){
-		var parentArray = parent.attr('class').split(' ');
-		var data = "";
-		$.each(parentArray,function(index, val){
-			if(val.indexOf('view-display-id-') != -1){
-				data = val;
-			}
-		});
-		return data;
-	}
+function returnClassParent(parent){
+	var parentArray = parent.attr('class').split(' ');
+	var data = "";
+	$.each(parentArray,function(index, val){
+		if(val.indexOf('view-display-id-') != -1){
+			data = val;
+		}
+	});
+	return data;
+}
 
 	function actionClick(item, parentClass, swiperId, SliderBullet){
 		SliderBullet = SliderBullet || 1;
