@@ -9666,18 +9666,8 @@ body > .main-container.container-fluid {
   bottom: 0;
 }
 
-.view-componente-carrusel-multimedia .views-slideshow-controls-bottom {
-  padding: 24px 10px;
-  background-color: #FDBD2C;
-}
-
-@media (min-width: 444px) {
-  .view-componente-carrusel-multimedia .views-slideshow-controls-bottom {
-    padding: 12px 10px;
-  }
-}
-
 .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields {
+  padding: 24px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9687,6 +9677,25 @@ body > .main-container.container-fluid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #FDBD2C;
+}
+
+@media (min-width: 444px) {
+  .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields {
+    padding: 12px 10px;
+  }
+}
+
+.view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields:after {
+  content: " ";
+  height: 1px;
+  width: 1px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1px;
+          flex: 0 0 1px;
 }
 
 .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields .active img {
@@ -9695,8 +9704,8 @@ body > .main-container.container-fluid {
 
 .view-componente-carrusel-multimedia .views-slideshow-controls-bottom .views-slideshow-pager-fields .views-slideshow-pager-field-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
   height: 80px;
   position: relative;
   overflow: hidden;
