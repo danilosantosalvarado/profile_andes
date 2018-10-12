@@ -3281,16 +3281,6 @@ body > .main-container.container-fluid {
   height: 100%;
 }
 
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right .img-content .img-desktop img,
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right .img-content .img-mobile img,
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center .img-content .img-desktop img,
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center .img-content .img-mobile img,
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left .img-content .img-desktop img,
-.view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left .img-content .img-mobile img {
-  width: 100%;
-  height: 100%;
-}
-
 .view-slider-homes .views_slideshow_swiper-processed ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .iframe-conten {
   display: block;
   overflow: hidden;
@@ -3621,6 +3611,16 @@ body > .main-container.container-fluid {
 .view-slider-homes .field-content .slider-homes-bottom .conten .link-slider-homes a:hover {
   background: #484851;
   color: #fff;
+}
+
+.view-slider-homes .skin-default .slider-homes-bottom-control .views-slideshow-controls-text {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .view-slider-homes .skin-default .slider-homes-bottom-control .views-slideshow-controls-text {
+    display: block;
+  }
 }
 
 .view-slider-homes .skin-default .slider-homes-bottom-control .views-slideshow-controls-text a[rel='prev'] {
