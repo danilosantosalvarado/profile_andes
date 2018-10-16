@@ -1951,7 +1951,6 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slider-homes-layout-four-title .titulo-layout-4 {
@@ -3710,61 +3709,104 @@ body > .main-container.container-fluid {
 //------------------------------------------------------------------------------
 */
 /* ------| Slider Home|----- */
-.view-banner-nodes .views_slideshow_swiper-processed {
-  height: 609px;
-}
-
 .view-banner-nodes ul {
+  list-style: none;
   padding: 0px;
   margin: 0px;
+  border: 1px solid red;
 }
 
 .view-banner-nodes ul li.swiper-slide {
-  list-style: none;
   overflow: hidden;
   display: block;
+  height: auto;
+  border: 1px solid green;
 }
 
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -ms-grid;
+  display: grid;
   width: 100%;
-  overflow: hidden;
   height: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional {
   width: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-desktop {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .slider-homes-img-destock {
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-desktop {
     display: block;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide .slider-homes-img-movil {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-mobile {
   display: block;
 }
 
 @media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .slider-homes-img-movil {
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-mobile {
     display: none;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide img {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .img-content .img-mobile img {
   width: 100%;
   height: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .youtube-container--responsive {
-  padding-bottom: 45.25%;
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left {
+  height: 100%;
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right .iframe-conten,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center .iframe-conten,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left .iframe-conten {
+  display: block;
+  overflow: hidden;
+  height: 50%;
+}
+
+@media (min-width: 768px) {
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right .iframe-conten,
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center .iframe-conten,
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left .iframe-conten {
+    height: 100%;
+  }
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-right .iframe-conten .youtube-container--responsive,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-center .iframe-conten .youtube-container--responsive,
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-left .iframe-conten .youtube-container--responsive {
+  padding-bottom: initial;
+  height: 100%;
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-bottom {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-bottom {
+    height: 79%;
+  }
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-bottom .iframe-conten {
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field.views-field-views-conditional .cl-slider-homes-bottom .iframe-conten .youtube-container--responsive {
+  padding-bottom: initial;
+  height: 100%;
 }
 
 /* ------| Ubicado Leth |----- */
@@ -3820,93 +3862,6 @@ body > .main-container.container-fluid {
   }
 }
 
-/* ------| Ubicado Abajo |----- */
-.view-banner-nodes .field-content .slider-homes-bottom {
-  padding: 0 15px;
-  margin: 1.251rem 0;
-  overflow: hidden;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .view-banner-nodes .field-content .slider-homes-bottom {
-    width: 750px;
-    margin: 1.251rem auto 1.251rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .view-banner-nodes .field-content .slider-homes-bottom {
-    width: 970px;
-  }
-}
-
-.view-banner-nodes .field-content .slider-homes-bottom .title-slider-homes {
-  width: 100%;
-  float: left;
-  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.1875rem;
-  margin: 0.6255rem 0;
-  text-transform: uppercase;
-  color: #585863;
-  min-height: 50px;
-  padding-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-  .view-banner-nodes .field-content .slider-homes-bottom .title-slider-homes {
-    width: 41.66666667%;
-    text-align: right;
-    padding-right: 25px;
-    padding-bottom: 0;
-  }
-}
-
-.view-banner-nodes .field-content .slider-homes-bottom .body-slider-homes {
-  float: left;
-  position: relative;
-  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1rem;
-  text-align: left;
-  color: #585863;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  overflow: hidden;
-  max-height: 81px;
-  border-top: 1px solid #ebba00;
-  padding-top: 15px;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  .view-banner-nodes .field-content .slider-homes-bottom .body-slider-homes {
-    width: 33.33333333%;
-    border: 0;
-    border-left: 1px solid #ebba00;
-    padding-left: 25px;
-  }
-}
-
-.view-banner-nodes .field-content .slider-homes-bottom .link-slider-homes a {
-  float: right;
-  text-decoration: none;
-  margin: 1.251rem 1.251rem 0 auto;
-  max-width: 145px;
-  border: 1px solid #484851;
-  color: #484851;
-  padding: 10px 35px;
-}
-
-.view-banner-nodes .field-content .slider-homes-bottom .link-slider-homes a:hover {
-  background: #484851;
-  color: #fff;
-}
-
-/* ------| Ubicado Ninguno |----- */
-.view-banner-nodes .field-content .slider-homes-empty {
-  display: none;
-}
-
 /* ------| Paguinador |----- */
 .view-banner-nodes .skin-default {
   position: relative;
@@ -3944,6 +3899,154 @@ body > .main-container.container-fluid {
 .view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='prev'],
 .view-banner-nodes:hover .views-slideshow-controls-bottom .views-slideshow-controls-text a[rel='next'] {
   display: block;
+}
+
+/* ------| Ubicado Abajo |----- */
+.view-banner-nodes .field-content .slider-homes-bottom {
+  background-color: #f4f1f1;
+  border-bottom: 1px solid #ebba00;
+}
+
+@media (min-width: 768px) {
+  .view-banner-nodes .field-content .slider-homes-bottom {
+    padding: 20px 30px;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten {
+  padding: 20px 15px 39px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten {
+    padding: 0 15px 35px;
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten {
+    width: 1170px;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .Redes-sociales {
+  display: none;
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .title-slider-homes {
+  width: 100%;
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  margin: 0.6255rem 0;
+  text-transform: uppercase;
+  color: #585863;
+  min-height: 50px;
+  line-height: 20.9px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .title-slider-homes {
+    float: left;
+  }
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .title-slider-homes {
+    width: 41.66666667%;
+    text-align: right;
+    padding-right: 25px;
+    padding-bottom: 0;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .body-slider-homes {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  color: #585863;
+  line-height: 19.8px;
+  border-top: 1px solid #ebba00;
+  position: relative;
+  min-height: 50px;
+  padding: 15px 0 25px;
+  margin: 0;
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .body-slider-homes {
+    float: left;
+    padding: 0 15px 0 25px;
+    width: 33.33333333%;
+    border: 0;
+    border-left: 1px solid #ebba00;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes {
+  margin: 15px 0;
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes {
+    margin: 0;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes a {
+  max-width: 145px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #484851;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484851;
+  padding: 10px 35px;
+}
+
+@media (min-width: 555px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes a {
+    float: right;
+    margin: 1.251rem 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes a {
+    margin: 1.251rem 1.251rem 0 auto;
+  }
+}
+
+.view-banner-nodes .field-content .slider-homes-bottom .conten .link-slider-homes a:hover {
+  background: #484851;
+  color: #fff;
+}
+
+/* ------| Ubicado Ninguno |----- */
+.view-banner-nodes .field-content .slider-homes-empty {
+  display: none;
 }
 
 /* ------| bullet (puntos) |----- */

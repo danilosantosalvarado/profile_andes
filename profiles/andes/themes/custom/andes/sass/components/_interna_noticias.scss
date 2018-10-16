@@ -6,51 +6,78 @@
 
 /* ------| Slider Home|----- */
 .view-banner-nodes {
-	.views_slideshow_swiper-processed {
-		height: 609px;
-		// border: 1px solid blue;
-	}
 	ul {
+		list-style: none;
 		padding: 0px;
 		margin: 0px;
-		// border: 1px solid red;
+		border: 1px solid red;
 		li.swiper-slide {
-			list-style: none;
 			overflow: hidden;
 			display: block;
-			// border: 1px solid green;
+			height: auto;
+			border: 1px solid green;
 			.views-slideshow-swiper-main-frame-row-item {
-				display: inline-flex;
+				display: grid;
 				width: 100%;
-				overflow: hidden;
 				height: 100%;
-				.views-field-views-conditional {
+				.views-field.views-field-views-conditional {
 					width: 100%;
+					.img-desktop{
+						display: none;
+						@include respond-to(xl) {
+							display: block;
+						}
+					}
+					.img-mobile {
+						display: block;
+						@include respond-to(xl) {
+							display: none;
+						}
+					}
+					.img-content {
+						.img-mobile {
+							img {
+							width: 100%;
+							height: 100%;
+							}
+						}
+					}
+					//imagen slider destock
+					.cl-slider-homes-right,
+					.cl-slider-homes-center,
+					.cl-slider-homes-left,
+					// .cl-slider-homes-specials
+					{
+						height: 100%;
+						.iframe-conten {
+							display: block;
+							overflow: hidden;
+							height: 50%;
+							@include respond-to(m) {
+								height: 100%;
+							}
+							.youtube-container--responsive {
+								padding-bottom: initial;
+								height: 100%;
+							}
+						}
+					}
+					.cl-slider-homes-bottom {
+						height: 100%;
+						@include respond-to(m) {
+							height: 79%;
+						}
+						.iframe-conten {
+							display: block;
+							overflow: hidden;
+							height: 100%;
+							.youtube-container--responsive {
+								padding-bottom: initial;
+								height: 100%;
+							}
+						}
+					}
 				}
-			}
-			.slider-homes-img-destock {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-			}
-			.slider-homes-img-movil {
-				display: block;
-				@include respond-to(xl) {
-					display: none;
-				}
-			}
-			img {
-				 width: 100%;
-				 height: 100%;
-				// height: 551px;
-				// @include respond-to(xl) {
-				// 	// height: auto;
-				// 	max-height: 619px;
-				// }
-			}
-			.youtube-container--responsive {
-				padding-bottom: 45.25%;
 			}
 		}
 	}
@@ -123,77 +150,160 @@
 	}
 }
 
+/* ------| Paguinador |----- */
+.view-banner-nodes {
+	.skin-default {
+    position: relative;
+    .views-slideshow-controls-bottom {
+      //Flechas paguinador
+      .views-slideshow-controls-text {
+        //Button Izquierda
+        a[rel='prev'] {
+          display: none;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 2%;
+          top: 40%;
+          font-size: 0;
+          background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+					z-index: 1;
+        }
+        //Buttom Pause
+        .views-slideshow-controls-text-pause {
+          display: none;
+        }
+        //Button Deracha
+        a[rel='next'] {
+          display: none;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 40%;
+          left: inherit;
+          right: 2%;
+          font-size: 0;
+          background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+					z-index: 1;
+        }
+      }
+    }
+	}
+	//Hover flechas paguinador
+	&:hover {
+    .views-slideshow-controls-bottom {
+      .views-slideshow-controls-text {
+        a[rel='prev'],
+        a[rel='next']{
+          display: block;
+        }
+      }
+    }
+	}
+}
+
 /* ------| Ubicado Abajo |----- */
 .view-banner-nodes {
+	//posicion contenido abajo
 	.field-content {
 		.slider-homes-bottom {
-			padding: 0 15px;
-			@include margin(.834 0);
-			overflow: hidden;
-			display: block;
+			background-color: #f4f1f1;
+			border-bottom: 1px solid #ebba00;
 			@include respond-to(m) {
-				width: 750px;
-				@include margin(.834 auto .834);
+				padding: 20px 30px;
 			}
-			@include respond-to(xl) {
-				width: 970px;
-			}
-			// @include respond-to(xxxl) {
-  		// 	width: 1170px;
-			// }
-			//titulo
-			.title-slider-homes {
-				width: 100%;
-				float: left;
-				font-family: $latobold;
-				@include font-size(l);
-				@include margin(.417 0);
-				text-transform: uppercase;
-				color: #585863;
-				min-height: 50px;
-				padding-bottom: 10px;
-				@include respond-to(m) {
-					width: 41.66666667%;
-					text-align: right;
-					padding-right: 25px;
-					padding-bottom: 0;
+			.conten {
+				padding: 20px 15px 39px;
+				overflow: hidden;
+				margin: 0 auto;
+				@include respond-to(xs) {
+					display: flex;
+					align-items: center;
 				}
-			}
-			//sub titulo
-			.body-slider-homes {
-				float: left;
-		    position: relative;
-				font-family: $crimson-textregular;
-				@include font-size(m);
-		    text-align: left;
-				color: color('black-secundary');
-				text-overflow: ellipsis;
-  			overflow: hidden;
-  			max-height: 81px;
-		  	border-top: 1px solid color('yellow-defaul');
-		    padding-top: 15px;
-				margin: 0;
-		    @include respond-to(m) {
-					width: 33.33333333%;
-					border: 0;
-					border-left: 1px solid color('yellow-defaul');
-					padding-left: 25px;
-		    }
-			}
-			//button
-			.link-slider-homes {
-				a {
-					float: right;
-					text-decoration: none;
-					@include margin(.834 .834 0 auto);
-				  max-width: 145px;
-				  border: 1px solid color('grey-dark');
-				  color: color('grey-dark');
-				  padding: 10px 35px;
-				  &:hover {
-    				background: color('grey-dark');
-    				color: color('white');
-    			}
+				@include respond-to(m) {
+					padding: 0 15px 35px;
+					width: 750px;
+				}
+				@include respond-to(xl) {
+					width: 970px;
+				}
+				@include respond-to(xxxl) {
+					width: 1170px;
+				}
+				//redes sociales
+				.Redes-sociales {
+					display: none;
+				}
+				//titulo
+				.title-slider-homes {
+					width: 100%;
+					font-family: $latobold;
+					@include font-size(l);
+					@include margin(.417 0);
+					text-transform: uppercase;
+					color: #585863;
+					min-height: 50px;
+					line-height: 20.9px;
+					padding-bottom: 10px;
+					@include respond-to(xs) {
+						float: left;
+					}
+					@include respond-to(xs) {
+						width: 41.66666667%;
+						text-align: right;
+						padding-right: 25px;
+						padding-bottom: 0;
+					}
+				}
+				//sub titulo
+				.body-slider-homes {
+					font-family: $crimson-textregular;
+					@include font-size(m);
+					text-align: left;
+					color: #585863;
+					line-height: 19.8px;
+					border-top: 1px solid #ebba00;
+					position: relative;
+					min-height: 50px;
+					padding: 15px 0 25px;
+					margin: 0;
+					@include respond-to(xs) {
+						float: left;
+						padding: 0 15px 0 25px;
+						width: 33.33333333%;
+						border: 0;
+						border-left: 1px solid #ebba00;
+					}
+				}
+				//button
+				.link-slider-homes {
+					margin: 15px 0;
+					@include respond-to(xs) {
+					margin: 0;
+					}
+					a {
+						max-width: 145px;
+						display: block;
+						text-decoration: none;
+						text-align: center;
+						@include margin(0 auto);
+						border: 1px solid #484851;
+						font-family: $latolight;
+						@include font-size(m);
+						color: #484851;
+						padding: 10px 35px;
+						@include respond-to(xs) {
+							float: right;
+							@include margin(.834 0 0 auto);
+						}
+						@include respond-to(m) {
+							@include margin(.834 .834 0 auto);
+						}
+						&:hover {
+							background: color('grey-dark');
+							color: color('white');
+						}
+					}
 				}
 			}
 		}
@@ -209,94 +319,6 @@
 	}
 }
 
-// /* ------| Flechas paginador |----- */
-// .view-banner-nodes {
-// 	@include respond-to(xl) {
-// 		display: block;
-// 	}
-// 	.skin-default {
-// 		position: relative;
-// 		//Conten Flechas
-// 		.views-slideshow-controls-text {
-// 			display: none;
-// 			@include respond-to(xl) {
-// 				display: block;
-// 			}
-//     	//Button Izquierda
-//     	a[rel='prev'] {
-// 				@extend %a-prev;
-// 		  }
-// 			//Buttom Pause
-// 			.views-slideshow-controls-text-pause {
-// 				display: none;
-// 			}
-// 			//Button Deracha
-// 			a[rel='next'] {
-// 				@extend %a-prev;
-// 		  	left: inherit;
-// 		    right: -6%;
-// 				background: url('../img/Icon/arrow_next.svg') no-repeat center;
-// 		  }
-// 		}
-// 	}
-// }
-/* ------| Paguinador |----- */
-.view-banner-nodes {
-	.skin-default {
-    position: relative;
-    .views-slideshow-controls-bottom {
-
-      //Flechas paguinador
-      .views-slideshow-controls-text {
-        //Button Izquierda
-        a[rel='prev'] {
-          display: none;
-          width: 40px;
-          height: 40px;
-          position: absolute;
-          left: 2%;
-          top: 40%;
-          font-size: 0;
-          background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
-					z-index: 1;
-					// border: 1px solid red;
-        }
-        //Buttom Pause
-        .views-slideshow-controls-text-pause {
-          display: none;
-        }
-        //Button Deracha
-        a[rel='next'] {
-          display: none;
-          // @extend %a-slidw-prev;
-          width: 40px;
-          height: 40px;
-          position: absolute;
-          top: 40%;
-          left: inherit;
-          right: 2%;
-          font-size: 0;
-          background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
-					z-index: 1;
-					// border: 1px solid red;
-        }
-      }
-    }
-	}
-
-
-	//Hover flechas paguinador
-	&:hover {
-    .views-slideshow-controls-bottom {
-      .views-slideshow-controls-text {
-        a[rel='prev'],
-        a[rel='next']{
-          display: block;
-        }
-      }
-    }
-	}
-}
 /* ------| bullet (puntos) |----- */
 .view-banner-nodes {
 	.views-slideshow-controls-bottom {
