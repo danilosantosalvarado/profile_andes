@@ -15,12 +15,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,.5);
+  // background-color: rgba(0,0,0,.5);
   .title-slider-homes {
     font-family: $latoblack;
     @include font-size(xl);
     color: color('white');
     text-transform: uppercase;
+    text-align: center;
     @include respond-to(xl) {
       @include font-size(xxxl);
     }
@@ -30,6 +31,7 @@
       font-family: $latolight;
       @include font-size(l);
       color: color('white');
+      text-align: center;
     }
   }
 }

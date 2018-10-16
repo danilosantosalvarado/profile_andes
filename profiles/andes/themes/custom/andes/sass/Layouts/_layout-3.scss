@@ -5,7 +5,7 @@
 */
 
 /* ------| slider alineacion center |----- */
-.slider-homes-layout-three {
+.slider-homes-layout-three-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,22 +15,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,.5);
-  .title-slider-homes {
+  // background-color: rgba(0,0,0,.5);
+  div:nth-child(1) {
     font-family: $latoblack;
     @include font-size(xl);
     color: color('white');
     text-transform: uppercase;
+    text-align: center;
     @include respond-to(xl) {
       @include font-size(xxxl);
     }
   }
-  .body-slider-homes {
-    p {
+  div:nth-child(2) {
       font-family: $latolight;
       @include font-size(l);
       color: color('white');
+      text-align: center;
       padding: 10px 0;
-    }
+  }
+  div:nth-child(3) {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    color: color('white');
+    text-align: center;
+    padding: 10px 0;
   }
 }

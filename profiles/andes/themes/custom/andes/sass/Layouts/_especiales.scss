@@ -5,7 +5,7 @@
 */
 
 /* ------| slider alineacion center |----- */
-.slider-homes-specials-title {
+.slider-homes-specials {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,6 +15,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .Redes-sociales {
+    .share-container {
+      padding: 0;
+      border-top: none;
+    }
+  }
   .text-center {
     color: color('white');
     &:nth-child(1) {

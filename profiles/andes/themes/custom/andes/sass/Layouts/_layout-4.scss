@@ -5,7 +5,7 @@
 */
 
 /* ------| slider alineacion center |----- */
-.slider-homes-layout-four-title{
+.slider-homes-layout-four-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   // background-color: rgba(0,0,0,.5);
-  .titulo-layout-4 {
+  div:nth-child(1) {
     font-family: $latoblack;
     @include font-size(xl);
     color: color('white');
@@ -25,13 +25,13 @@
       @include font-size(xxxl);
     }
   }
-  .subtitulo-layout-4 {
+  div:nth-child(2) {
       font-family: $latoregular;
       @include font-size(l);
       color: color('white');
       padding: 10px 0;
   }
-  .text-layout-4 {
+  div:nth-child(3) {
       font-family: $crimson-textregular;
       @include font-size(m);
       color: color('white');
