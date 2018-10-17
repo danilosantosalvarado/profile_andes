@@ -3728,14 +3728,12 @@ body > .main-container.container-fluid {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  border: 1px solid red;
 }
 
 .view-banner-nodes ul li.swiper-slide {
   overflow: hidden;
   display: block;
   height: auto;
-  border: 1px solid green;
 }
 
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
@@ -3777,14 +3775,14 @@ body > .main-container.container-fluid {
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven {
   height: 100%;
 }
 
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .iframe-conten {
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten {
   display: block;
   overflow: hidden;
   height: 50%;
@@ -3794,7 +3792,7 @@ body > .main-container.container-fluid {
   .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten,
   .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten,
   .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten,
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .iframe-conten {
+  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten {
     height: 100%;
   }
 }
@@ -3802,8 +3800,8 @@ body > .main-container.container-fluid {
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten .youtube-container--responsive,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten .youtube-container--responsive,
 .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten .youtube-container--responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .iframe-conten .youtube-container--responsive {
-  padding-bottom: 44.3%;
+.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten .youtube-container--responsive {
+  padding-bottom: 47.25%;
   height: 100%;
 }
 
@@ -3959,12 +3957,6 @@ body > .main-container.container-fluid {
 @media (min-width: 992px) {
   .view-banner-nodes .field-content .slider-homes-bottom .conten {
     width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view-banner-nodes .field-content .slider-homes-bottom .conten {
-    width: 1170px;
   }
 }
 
