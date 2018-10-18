@@ -3130,6 +3130,16 @@ body > .main-container.container-fluid {
   }
 }
 
+body.logged-in > .main-container.container-fluid {
+  margin-top: 0px;
+}
+
+@media (min-width: 992px) {
+  body.logged-in > .main-container.container-fluid {
+    margin-top: 139px;
+  }
+}
+
 .inside {
   margin: 0 !important;
 }
