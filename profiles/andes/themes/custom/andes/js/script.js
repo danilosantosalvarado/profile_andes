@@ -199,9 +199,9 @@ function returnClassParent(parent){
 
 	setTimeout(function(){
 		$('#google-cse-results-searchbox-form').keypress(function(e) {
+			e.preventDefault();
 			if(e.which == 13) {
 				$('#google-cse-results-searchbox-form #edit-query').val();
-
 				window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
 			}
 		});
