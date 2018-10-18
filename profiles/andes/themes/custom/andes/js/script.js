@@ -3,6 +3,8 @@
 
 	var Swiper = window.Swiper;
 
+//
+
 	// function galeria home
 	jQuery(document).on("click", ".galeria-home", function() {
 		var imageSrc = $(this).find("img").attr("src");
@@ -196,6 +198,13 @@ function returnClassParent(parent){
 	}
 
 	setTimeout(function(){
+		$('#google-cse-results-searchbox-form').keypress(function(e) {
+			if(e.which == 13) {
+				$('#google-cse-results-searchbox-form #edit-query').val();
+
+				window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
+			}
+		});
 		//functionality used for Sliders actions onClick
 		if($(".views_slideshow_swiper_main").length > 0){
 			$.each($('.views_slideshow_swiper_main'),function(index, val){
