@@ -1112,13 +1112,17 @@
             li {
               @include respond-to(xl){
                 padding-left: 15px;
+                padding-top: 12px;
                 padding-bottom: 12px;
                 width: 50%;
                 border-left: 1px solid #c8c8ca;
               }
               &:first-child{
                 padding-top: 0;
-                margin-right: 0px;
+                padding-bottom: 0px;
+              }
+              :first-child a {
+                padding-top: 0;
               }
               a {
                 position: relative;

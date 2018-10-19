@@ -10050,6 +10050,7 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 992px) {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show .content-nivel-1 .mega-nav.level-1 li {
     padding-left: 15px;
+    padding-top: 12px;
     padding-bottom: 12px;
     width: 50%;
     border-left: 1px solid #c8c8ca;
@@ -10058,7 +10059,11 @@ body.logged-in > .main-container.container-fluid {
 
 .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show .content-nivel-1 .mega-nav.level-1 li:first-child {
   padding-top: 0;
-  margin-right: 0px;
+  padding-bottom: 0px;
+}
+
+.wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show .content-nivel-1 .mega-nav.level-1 li :first-child a {
+  padding-top: 0;
 }
 
 .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show .content-nivel-1 .mega-nav.level-1 li a {
