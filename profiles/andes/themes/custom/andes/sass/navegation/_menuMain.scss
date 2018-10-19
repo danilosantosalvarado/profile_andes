@@ -1,4 +1,4 @@
-/* colores  clases globales*/
+// /* colores  clases globales*/
 // .none {
 //   display: none !important;
 // }
@@ -25,14 +25,14 @@
   }
   .mega-dropdown-menu,
   .row-fluid{
-    /* @include respond-to(xl){
-      width: -moz-max-content;
-      .tb-megamenu-column {
-        display: inline-block;
-        width: auto;
-        margin: 0;
-      }
-    } */
+    // /* @include respond-to(xl){
+    //   width: -moz-max-content;
+    //   .tb-megamenu-column {
+    //     display: inline-block;
+    //     width: auto;
+    //     margin: 0;
+    //   }
+    // } */
     &.content-fluid {
       @include respond-to(xl){
         width: -moz-max-content;
@@ -131,23 +131,23 @@
         }
       }
     }
-    li.dropdown.open .dark-layer{
-      &:hover{
-        /* &:after {
-          display: none;
-        } */
-      }
-     /*  &:after {
-        content: '...';
-        width: 100%;
-        height: 100%;
-        display: block;
-        background-color: black;
-        padding: 30px;
-        position: fixed;
-        opacity: .5;
-      } */
-    }
+    // li.dropdown.open .dark-layer{
+    //   // &:hover{
+    //   //   /* &:after {
+    //   //     display: none;
+    //   //   } */
+    //   // }
+    //  /*  &:after {
+    //     content: '...';
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    //     background-color: black;
+    //     padding: 30px;
+    //     position: fixed;
+    //     opacity: .5;
+    //   } */
+    // }
     li.dropdown.open.active > .dropdown-toggle,
     > li.dropdown.open.active > a:hover{
         background-color: transparent;
@@ -250,7 +250,7 @@
     position: fixed;
   }
 }
-/* fin del reset */
+// /* fin del reset */
 
 // /* ----| Mega Menu Destock |---- */
 // .wrapper-mega-menu {
@@ -487,15 +487,15 @@
       margin-left: 0 !important;
     }
   }
-  /* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .box-black {
-      &.active-box{
-        @include respond-to(xl){
-          left: auto !important;
-        }
-      }
-    }
-  } */
+  // /* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  //   .box-black {
+  //     &.active-box{
+  //       @include respond-to(xl){
+  //         left: auto !important;
+  //       }
+  //     }
+  //   }
+  // } */
   .box-black {
     @include respond-to(xl){
       right: -50% !important;
@@ -605,7 +605,7 @@
       transition: 1s;
     }
   }
-  /* nivel 2 de menu */
+  // /* nivel 2 de menu */
   .clone-nivel-2,
   .clone-nivel-3 {
     position: absolute;
@@ -807,11 +807,11 @@
     }
   }
   .level-0 .level-1{
-    &:nth-child(1) > .nav-child{
-        /* temporal */
-      //display: block;
-      //background-color: red;
-    }
+    // &:nth-child(1) > .nav-child{
+    //     /* temporal */
+    //   //display: block;
+    //   //background-color: red;
+    // }
     > .nav-child{
       overflow: hidden;
       background-color: transparent;
@@ -843,7 +843,7 @@
       }
     }
   }
-  /* bloque nivel 1 del menu */
+  // /* bloque nivel 1 del menu */
     .mega-nav.level-1 {
       width: 100%;
       padding: 0px;
@@ -919,10 +919,10 @@
             padding: 0 20px;
             li{
               padding: 7px 20px 7px 0;
-              a {
-                //padding: 0;
-                //text-align: left;
-              }
+              // a {
+              //   //padding: 0;
+              //   //text-align: left;
+              // }
               a.dropdown-toggle{
                 position: relative;
                 &:before{
@@ -1240,10 +1240,10 @@
                 padding: 0 20px;
                 li{
                   padding: 7px 20px 7px 0;
-                  a {
-                    //padding: 0;
-                    //text-align: left;
-                  }
+                  // a {
+                  //   //padding: 0;
+                  //   //text-align: left;
+                  // }
                   a.dropdown-toggle{
                     position: relative;
                     &:before{
@@ -1389,12 +1389,12 @@
         }
       }
 
-      .level-0 .level-1{
-        &:nth-child(3) > .nav-child{
-            /* temporal meag menu */
-          //display: block;
-          //background-color: red;
-        }
+      .level-0 .level-1 {
+        // &:nth-child(3) > .nav-child{
+        //     /* temporal meag menu */
+        //   //display: block;
+        //   //background-color: red;
+        // }
         > .nav-child{
           overflow: hidden;
           background-color: transparent;
