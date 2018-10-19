@@ -9146,43 +9146,32 @@ body.logged-in > .main-container.container-fluid {
 /* fin del reset */
 /* Bloques de menu */
 /* Bloques imagenes de mobile */
-#block-views-logos-header-block {
-  position: absolute;
-  z-index: 9;
-  height: 75px;
+/* ----| Mega Menu Destock |---- */
+.wrapper-mega-menu #block-views-logos-header-block {
   display: none;
-  width: 242px;
-  margin: 12px 0 0 88px;
 }
 
 @media (min-width: 992px) {
-  #block-views-logos-header-block {
+  .wrapper-mega-menu #block-views-logos-header-block {
     display: block;
-    position: relative;
-    width: 23%;
+    width: 20%;
     float: left;
-    margin: 10px 0 0;
-    height: auto;
   }
 }
 
-#block-views-logos-header-block h2 {
+.wrapper-mega-menu #block-views-logos-header-block .block-title {
   display: none;
 }
 
-#block-views-logos-header-block .view-logos-header .view-content {
-  display: table;
-  width: 100%;
+.wrapper-mega-menu #block-views-logos-header-block .views-row {
+  width: 50%;
+  float: left;
 }
 
-@media (min-width: 992px) {
-  #block-views-logos-header-block .view-logos-header .view-content .views-row-1,
-  #block-views-logos-header-block .view-logos-header .view-content .views-row-2 {
-    max-width: 144px;
-    padding-right: 8px;
-    display: table-cell;
-    width: 47%;
-  }
+.wrapper-mega-menu #block-tb-megamenu-menu-mega-menu {
+  width: 80%;
+  float: right;
+  border: 1px solid red;
 }
 
 /* Bloques imagenes de desktop */
@@ -9285,6 +9274,10 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 992px) {
   #block-lang-dropdown-language {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 50px;
   }
 }
 
@@ -9684,14 +9677,6 @@ body.logged-in > .main-container.container-fluid {
 }
 
 /* ----| menus yo soy destock |---- */
-@media (min-width: 992px) {
-  .block-tb-megamenu {
-    width: 76%;
-    float: left;
-    height: 100%;
-  }
-}
-
 .block-tb-megamenu .tb-megamenu-menu-menu-top-soy {
   display: block;
   position: relative;
