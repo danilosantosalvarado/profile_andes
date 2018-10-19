@@ -9161,7 +9161,7 @@ body.logged-in > .main-container.container-fluid {
     position: relative;
     width: 23%;
     float: left;
-    margin: 2px 0 0;
+    margin: 10px 0 0;
     height: auto;
   }
 }
@@ -9170,30 +9170,18 @@ body.logged-in > .main-container.container-fluid {
   display: none;
 }
 
+#block-views-logos-header-block .view-logos-header .view-content {
+  display: table;
+  width: 100%;
+}
+
 @media (min-width: 992px) {
-  #block-views-logos-header-block .views-row-1,
-  #block-views-logos-header-block .views-row-2 {
+  #block-views-logos-header-block .view-logos-header .view-content .views-row-1,
+  #block-views-logos-header-block .view-logos-header .view-content .views-row-2 {
     max-width: 144px;
-    margin-bottom: 7px;
-    margin-top: 2px;
-    display: inline-block;
+    padding-right: 8px;
+    display: table-cell;
     width: 47%;
-  }
-}
-
-#block-views-logos-header-block .views-row-2 {
-  margin-left: 7px;
-  margin-top: 10px;
-}
-
-#block-views-logos-header-block .views-row-2 .content {
-  padding: 2px 11px;
-}
-
-@media (min-width: 992px) {
-  #block-views-logos-header-block .views-row-2 .content {
-    border-left: 1px solid white;
-    padding: 2px 0 0 11px;
   }
 }
 
