@@ -294,6 +294,7 @@
 /* ----| Mega Menu Destock |---- */
 .wrapper-mega-menu {
   #block-views-logos-header-block {
+    // ocultar logo en movil
     display: none;
     @include respond-to(xl) {
       display: block;
@@ -307,13 +308,21 @@
     .views-row {
       width: 50%;
       float: left;
+      p {
+        width: 124px;
+        height: 48px;
+        margin: 0px;
+        overflow: hidden;
+      }
     }
 
   }
   #block-tb-megamenu-menu-mega-menu {
-    width: 80%;
-    float: right;
-    border: 1px solid red;
+    @include respond-to(xl) {
+      width: 80%;
+      float: right;
+      // border: 1px solid red;
+    }
   }
 }
 
