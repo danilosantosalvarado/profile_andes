@@ -293,13 +293,15 @@
 
 /* ----| Mega Menu Destock |---- */
 .wrapper-mega-menu {
+  // Logos
   #block-views-logos-header-block {
-    // ocultar logo en movil
+    // ocultar logo en mobil
     display: none;
     @include respond-to(xl) {
       display: block;
-      width: 20%;
+      width: 25%;
       float: left;
+      margin-top: 10px;
     }
     //title
     .block-title {
@@ -313,13 +315,17 @@
         height: 48px;
         margin: 0px;
         overflow: hidden;
+        svg.cls-1 {
+          fill: black;
+        }
       }
     }
 
   }
+
   #block-tb-megamenu-menu-mega-menu {
     @include respond-to(xl) {
-      width: 80%;
+      width: 75%;
       float: right;
       border: 1px solid red;
     }
@@ -327,7 +333,7 @@
 }
 
 /* Bloques imagenes de desktop */
-#block-views-logos-header-block-1{
+#block-views-logos-header-block-1 {
   position: absolute;
   z-index: 99999;
   top: 0;
@@ -1498,7 +1504,7 @@
     }
     @include respond-to(xxl){
       width: 1170px;
-      padding: 0 15px;
+      // padding: 0 15px;
     }
   }
 }
@@ -1525,7 +1531,7 @@
     }
     @include respond-to(xxl){
       width: 1170px;
-      padding: 0 15px;
+      // padding: 0 15px;
     }
   }
 }

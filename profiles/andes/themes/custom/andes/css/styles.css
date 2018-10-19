@@ -9154,8 +9154,9 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 992px) {
   .wrapper-mega-menu #block-views-logos-header-block {
     display: block;
-    width: 20%;
+    width: 25%;
     float: left;
+    margin-top: 10px;
   }
 }
 
@@ -9175,9 +9176,13 @@ body.logged-in > .main-container.container-fluid {
   overflow: hidden;
 }
 
+.wrapper-mega-menu #block-views-logos-header-block .views-row p svg.cls-1 {
+  fill: black;
+}
+
 @media (min-width: 992px) {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu {
-    width: 80%;
+    width: 75%;
     float: right;
     border: 1px solid red;
   }
@@ -10592,7 +10597,6 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 1111px) {
   .wrapper-menu-soy .container {
     width: 1170px;
-    padding: 0 15px;
   }
 }
 
@@ -10620,7 +10624,6 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 1111px) {
   .wrapper-mega-menu .container {
     width: 1170px;
-    padding: 0 15px;
   }
 }
 
