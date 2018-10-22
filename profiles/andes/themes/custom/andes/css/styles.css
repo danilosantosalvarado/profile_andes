@@ -6645,9 +6645,9 @@ body.logged-in > .main-container.container-fluid {
 
 .view-id-componente_layout_4 .view-content .views-column .views-field-views-conditional .caja-listado .container-title-desc .caja-enlace a {
   display: block;
+  width: 100%;
   max-width: 180px;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1rem;
   font-size: 0.9rem;
   color: white;
   text-align: center;
@@ -6656,6 +6656,7 @@ body.logged-in > .main-container.container-fluid {
   margin: 0 auto;
   border: 1px solid #fff;
   background-color: transparent;
+  z-index: -1;
 }
 
 .view-id-componente_layout_4 .view-content .views-column .views-field-views-conditional .caja-listado .container-title-desc .caja-enlace a:hover {
@@ -6665,7 +6666,6 @@ body.logged-in > .main-container.container-fluid {
 
 @media (min-width: 768px) {
   .view-id-componente_layout_4 .view-content .views-column .views-field-views-conditional .caja-listado .container-title-desc .caja-enlace a {
-    margin: 0 auto;
     background-color: #000;
   }
 }
