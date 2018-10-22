@@ -8699,7 +8699,7 @@ body.logged-in > .main-container.container-fluid {
 
 @media (min-width: 992px) {
   .bean-bloque-footer-contacto .group-right .field-name-field-telefono:before {
-    display: initial;
+    display: none;
   }
 }
 
