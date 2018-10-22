@@ -157,7 +157,7 @@ body.logged-in  > .main-container.container-fluid {
 .inside {
   margin: 0 !important;
 	ul {
-		-webkit-padding-start: 0px;
+		padding: 0px;
     list-style: none;
 	}
 }
@@ -175,9 +175,14 @@ body.logged-in  > .main-container.container-fluid {
 		@include font-size(xxxl);
   }
 }
+/* ------| Titles nodos |----- */
+.pane-content {
+  > h1  {
+    text-align: center;
+  }
+}
 
-/* ------| Button ver todos|----- */
-
+/* ------| Button ver todos |----- */
 .view-more-footer{
   position: relative;
   text-align: center;
@@ -233,4 +238,13 @@ body.logged-in  > .main-container.container-fluid {
   position: absolute;
   bottom: -585px;
   left: initial;
+}
+
+/* ------| Campo body internas de nodos |----- */
+.field-name-body {
+  .field-item {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin-bottom: 25px;
+  }
 }
