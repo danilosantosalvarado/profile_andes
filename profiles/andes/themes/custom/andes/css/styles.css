@@ -5741,7 +5741,7 @@ body.logged-in > .main-container.container-fluid {
 /* ------| Container|----- */
 .publicaciones-interna #block-system-main {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px 25px;
 }
 
 @media (min-width: 768px) {
@@ -5828,6 +5828,10 @@ body.logged-in > .main-container.container-fluid {
   text-align: center;
 }
 
+.publicaciones-interna .field-name-field-boton-compra .field-item {
+  margin: 14px 0px;
+}
+
 .publicaciones-interna .field-name-field-boton-compra .field-item a {
   display: block;
   font-size: .85rem;
@@ -5860,11 +5864,17 @@ body.logged-in > .main-container.container-fluid {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #000;
+  margin-top: -2px;
 }
 
 .publicaciones-interna .field-name-body {
   padding: 20px 0;
   text-align: justify;
+}
+
+.publicaciones-interna .field-name-body .field-item {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 /*
