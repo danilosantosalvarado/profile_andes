@@ -6,7 +6,6 @@
 
 
 .view-componente-carrusel-multimedia {
-
 	.viewsSlideshowCycle-processed {
 		overflow: hidden;
 		margin: 10px 0;
@@ -60,7 +59,6 @@
 	}
 
 	.views-slideshow-controls-bottom {
-
 		.views-slideshow-pager-fields  {
 			padding: 24px 10px;
 			display: flex;
@@ -74,14 +72,12 @@
 			@include respond-to(xxs) {
 				padding: 12px 10px;
 			}
-
 			&:after{
 				content: " ";
 				height: 1px;
 				width: 1px;
 				flex: 0 0 1px;
 			}
-
 			.active img{
 				border: 0px solid transparent;
 			}
@@ -170,5 +166,8 @@
 		font-family: $crimson-textroman;
 		font-size: 18px;
 		color: #000000;
+		p {
+			color: #FDBD2C;
+		}
 	}
 }
