@@ -44,7 +44,7 @@
           .views-field-title {
             font-family: $crimson-semibold;
             @include type-layout(sl, .90);
-            color: #484851;
+            // color: #484851;
             margin: 15px 0 20px;
             @include respond-to(m) {
               @include font-size(ll);
