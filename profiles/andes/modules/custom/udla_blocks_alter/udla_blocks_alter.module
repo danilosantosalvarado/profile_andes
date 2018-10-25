@@ -90,6 +90,11 @@ function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id)
     }
     $form['#submit'][] = 'udla_blocks_alter_form_submit';
   }
+  // background color decanatura taxonomy
+  if ($form_id == 'taxonomy_form_term') {
+    $form['#submit'][] = 'udla_blocks_alter_form_submit';
+
+  }
 }
 
 
@@ -98,7 +103,9 @@ function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id)
  */
 function udla_blocks_alter_form_submit($form, $form_state)
 {
+
   if ($form_state['values']['form_id'] == 'block_admin_configure' || $form_state['values']['form_id'] == 'block_add_block_form') {
+    drupal_set_message(t('hola modulo bloque'), 'error');
     // Only save if value has changed.
     global $base_url;
     if (isset($form_state['values']['background_color']) && $form['settings']['background_color']['#default_value'] != $form_state['values']['background_color'] && user_access('administer blocks')) {
@@ -127,6 +134,31 @@ function udla_blocks_alter_form_submit($form, $form_state)
     drupal_clear_css_cache();
     sleep(3);
   }
+
+  // background color decanatura taxonomy
+
+  if ($form_state['values']['form_id'] == 'taxonomy_form_term' && $form['#term']['vocabulary_machine_name'] =='decanatura_categorias') { 
+    if (isset($form_state['values']['field_color_linea']['und'][false]['rgb']) && user_access('administer blocks')) {
+      _update_taxonomy_data_css($form_state, 'field_color_linea');
+    }
+    if (isset($form_state['values']['field_background_hover']['und'][false]['rgb']) && user_access('administer blocks')) {
+        _update_taxonomy_data_css($form_state, 'field_background_hover');
+    }
+    if (isset($form_state['values']['field_text_color']['und'][false]['rgb']) && user_access('administer blocks')) {
+       _update_taxonomy_data_css($form_state, 'field_text_color');
+    }
+    if (isset($form_state['values']['field_text_color_hover']['und'][false]['rgb']) && user_access('administer blocks')) {
+       _update_taxonomy_data_css($form_state, 'field_text_color_hover');
+    }
+    //
+    // Flush all context module cache to use the updated background_color.
+    if (module_exists('context')) {
+      cache_clear_all('context', 'cache', true);
+    }
+    drupal_clear_css_cache();
+    sleep(3);
+  }
+
 }
 
 function _color_set_for_data($value)
@@ -136,8 +168,8 @@ function _color_set_for_data($value)
   if (file_exists($realpath)) {
     chmod($realpath, 0777);
     $fh = fopen($realpath, 'a+');
-    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
-    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
+    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' a{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a{border-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a:hover{background: ' . $value . ' !important;}' . PHP_EOL);
@@ -154,12 +186,17 @@ function _color_set_for_data($value)
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
-
+    fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . '::before {background: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . ' a::before{background: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.border-top-' . drupal_clean_css_identifier($value, array()) . ' {border-top: 4px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pager-' . drupal_clean_css_identifier($value, array()) . ' a {border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh,'/* '.'end'.' */'. PHP_EOL);
+ 
   } else {
     $fh = fopen($realpath, 'w+');
     chmod($realpath, 0777);
-    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ';}' . PHP_EOL);
-    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ';}' . PHP_EOL);
+    fwrite($fh, '.background-' . drupal_clean_css_identifier($value, array()) . ' { background-color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' {color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.text-' . drupal_clean_css_identifier($value, array()) . ' a{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a{border-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-link-' . drupal_clean_css_identifier($value, array()) . ' .box-content a:hover{background: ' . $value . ' !important;}' . PHP_EOL);
@@ -176,6 +213,11 @@ function _color_set_for_data($value)
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover a{color: ' . $value . ' !important; border-color:'.$value.' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .box-content:hover .content-date{color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.hover-content-text-' . drupal_clean_css_identifier($value, array()) . ' .view-more-footer a:hover{color: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . '::before {background: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . ' a::before{background: ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.border-top-' . drupal_clean_css_identifier($value, array()) . ' {border-top: 4px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pager-' . drupal_clean_css_identifier($value, array()) . ' a {border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh,'/* '.'end'.' */'. PHP_EOL);
 
   }
   fclose($fh);
@@ -270,7 +312,19 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
   }
 
 }
+// background color decanatura taxonomy
+function _update_taxonomy_data_css($form_state, $name_field)
+{
+  $result = db_select('backgrounds_color', 'bc')
+  ->fields('bc', array('color'))
+  ->condition('color', $form_state['values'][$name_field]['und'][false]['rgb'], '=')
+  ->execute()
+  ->fetchAssoc();
+  if (empty($result)) {
+    _color_set_for_data($form_state['values'][$name_field]['und'][false]['rgb']);
+  }
 
+}
 function _update_block_data_css($form_state, $name_field)
 {
   $result = db_select('backgrounds_color', 'bc')
@@ -306,3 +360,9 @@ function _block_data_css($value_field, $name_field)
   }
   return $return;
 }
+
+
+
+
+
+

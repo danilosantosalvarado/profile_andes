@@ -18,7 +18,29 @@
 	var slideActivePosition = "";
 
 	$(window).ready(function() {
-			//funcion redes sociales scroll eventos.
+
+				//funcion cambio de colores anuncios.
+		var color = $('.sabor').attr('data-color');
+		var clase = color.slice(1, 7);
+
+		$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+clase);
+		$('#widget_pager_bottom_componente_anuncios-block_1').addClass('pager-'+clase);
+		$('.anuncios-enlace').addClass('pager-'+clase);
+
+		$('.views-slideshow-pager-field-item').each(function(index, el) {
+			$(this).click(function(event) {
+				$('.views-slideshow-pager-field-item').find('a').removeClass('background-'+clase);
+				if ($(this).hasClass('active')) {
+					$(this).find('a').addClass('background-'+clase);
+				}
+			});
+		});
+
+
+
+
+
+				//funcion redes sociales scroll eventos.
 		$('.os-share-widget-interface-vertical').appendTo('.vertical-share');
 		$('.os-share-widget-interface-vertical').prependTo('.vertical-share');
 
