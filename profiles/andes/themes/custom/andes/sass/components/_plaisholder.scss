@@ -78,12 +78,12 @@
   color: color('white');
   text-align: center;
   @include margin (1.25 0);
-  @include respond-to(m) {
-    text-align: left;
-  }
   text-overflow: ellipsis;
   // overflow: hidden;
   // max-height: 66px;
+  @include respond-to(m) {
+    text-align: left;
+  }
 }
 //Button
 %link-slider-home {
