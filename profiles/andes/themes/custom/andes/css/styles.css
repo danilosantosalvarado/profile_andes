@@ -3803,7 +3803,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3821,7 +3821,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3840,7 +3840,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: 0;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3876,7 +3876,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3900,7 +3900,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3925,7 +3925,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: 0;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3963,7 +3963,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -3987,7 +3987,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: -13px;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -4012,7 +4012,7 @@ body.logged-in > .main-container.container-fluid {
   top: 0px;
   left: 0;
   z-index: -1;
-  background-color: red;
+  background-color: transparent;
   opacity: .5;
 }
 
@@ -4061,10 +4061,10 @@ body.logged-in > .main-container.container-fluid {
 .view-slider-homes .field-content .slider-homes-bottom-deca .conten .title-slider-homes {
   width: 100%;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.1875rem;
+  font-size: 2.6875rem;
   margin: 0.6255rem 0;
   text-transform: uppercase;
-  color: #585863;
+  color: white;
   line-height: 20.9px;
   padding-bottom: 10px;
 }
@@ -4072,7 +4072,7 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 768px) {
   .view-slider-homes .field-content .slider-homes-bottom-deca .conten .title-slider-homes {
     position: absolute;
-    top: -36px;
+    top: -136px;
     left: 0px;
     z-index: 9999999;
   }
