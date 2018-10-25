@@ -469,7 +469,7 @@
 				&:before {
 					content: "";
 					width: 102%;
-					height: 188%;
+					height: 100%;
 					position: absolute;
 					top: 0px;
 					left: -13px;
@@ -481,8 +481,9 @@
 			//Sub titulo
 			.body-slider-homes {
 				@extend %body-slider-home;
+				padding: 1.875rem 0;
+				margin: 0px;
 				position: relative;
-				overflow: initial;
 				&:before {
 					content: "";
 					width: 102%;
@@ -544,7 +545,7 @@
 			&:before {
 				content: "";
 				width: 102%;
-				height: 188%;
+				height: 100%;
 				position: absolute;
 				top: 0px;
 				left: -13px;
@@ -559,8 +560,9 @@
     	@include respond-to(m) {
     		text-align: right;
 			}
+			padding: 1.875rem 0;
+			margin: 0px;
 			position: relative;
-			overflow: initial;
 			&:before {
 				content: "";
 				width: 102%;
@@ -619,11 +621,13 @@
       @include respond-to(m) {
       	text-align: center;
 			}
+			padding: 1.875rem 0;
+			margin: 0px;
 			position: relative;
 			&:before {
 				content: "";
 				width: 102%;
-				height: 188%;
+				height: 100%;
 				position: absolute;
 				top: 0px;
 				left: -13px;
@@ -638,8 +642,9 @@
     	@include respond-to(m) {
     		text-align: center;
 			}
+			padding: 1.875rem 0;
+			margin: 0px;
 			position: relative;
-			overflow: initial;
 			&:before {
 				content: "";
 				width: 102%;

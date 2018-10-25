@@ -10,12 +10,14 @@
 //   background-color: #1a1a1a;
 //   transition:  .3s;
 // }
-// .not-scroll {
-//   overflow-y: hidden;
-//   .navbar-header .navbar-toggle{
-//     background-position: 0 -21px;
-//   }
-// }
+
+//reduccion del menu en mobil
+.not-scroll {
+  overflow-y: hidden;
+  .navbar-header .navbar-toggle{
+    background-position: 0 -21px;
+  }
+}
 
 /* reset de megamenu */
 .tb-megamenu {

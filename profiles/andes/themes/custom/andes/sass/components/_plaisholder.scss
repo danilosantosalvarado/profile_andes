@@ -55,6 +55,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  padding: 10px 0px;
   @include respond-to(m) {
     @include font-size(xl);
     text-align: left;
@@ -62,6 +63,7 @@
   &:after {
     content: '';
     display: block;
+    width: 90%;
     height: 1px;
     border-top: 1px solid color('white');
     position: relative;
@@ -80,8 +82,8 @@
     text-align: left;
   }
   text-overflow: ellipsis;
-  overflow: hidden;
-  max-height: 66px;
+  // overflow: hidden;
+  // max-height: 66px;
 }
 //Button
 %link-slider-home {
@@ -97,8 +99,7 @@
     @include padding (.42 1.25);
     @include respond-to(m) {
       float: right;
-      @include margin(.21 auto);
-      //margin: 5px auto;
+      margin: 1.215rem auto;
     }
     &:hover {
       background: color('grey-dark');

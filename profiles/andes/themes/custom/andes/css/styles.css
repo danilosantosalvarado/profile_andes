@@ -3044,6 +3044,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  padding: 10px 0px;
 }
 
 @media (min-width: 768px) {
@@ -3056,6 +3057,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 .view-slider-homes .slider-homes-left .title-slider-homes:after, .view-slider-homes .slider-homes-right .title-slider-homes:after, .view-slider-homes .slider-homes-center .title-slider-homes:after, .view-slider-homes .slider-homes-left-deca .conten .title-slider-homes:after, .view-slider-homes .slider-homes-right-deca .title-slider-homes:after, .view-slider-homes .slider-homes-center-deca .title-slider-homes:after, .view-banner-nodes .slider-homes-left .title-slider-homes:after, .view-banner-nodes .slider-homes-right .title-slider-homes:after, .view-banner-nodes .slider-homes-center .title-slider-homes:after {
   content: '';
   display: block;
+  width: 90%;
   height: 1px;
   border-top: 1px solid #fff;
   position: relative;
@@ -3070,8 +3072,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   margin: 1.875rem 0;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
-  overflow: hidden;
-  max-height: 66px;
 }
 
 @media (min-width: 768px) {
@@ -3095,7 +3095,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 @media (min-width: 768px) {
   .view-display-id-home_noticias_destacada .views-field-view-node a, .view-slider-homes .slider-homes-left .link-slider-homes a, .view-slider-homes .slider-homes-right .link-slider-homes a, .view-slider-homes .slider-homes-center .link-slider-homes a, .view-slider-homes .slider-homes-left-deca .conten .link-slider-homes a, .view-slider-homes .slider-homes-right-deca .link-slider-homes a, .view-slider-homes .slider-homes-center-deca .link-slider-homes a, .view-banner-nodes .slider-homes-left .link-slider-homes a {
     float: right;
-    margin: 0.315rem auto;
+    margin: 1.215rem auto;
   }
 }
 
@@ -3798,7 +3798,7 @@ body.logged-in > .main-container.container-fluid {
 .view-slider-homes .slider-homes-left-deca .conten .title-slider-homes:before {
   content: "";
   width: 102%;
-  height: 188%;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: -13px;
@@ -3808,8 +3808,9 @@ body.logged-in > .main-container.container-fluid {
 }
 
 .view-slider-homes .slider-homes-left-deca .conten .body-slider-homes {
+  padding: 1.875rem 0;
+  margin: 0px;
   position: relative;
-  overflow: initial;
 }
 
 .view-slider-homes .slider-homes-left-deca .conten .body-slider-homes:before {
@@ -3870,7 +3871,7 @@ body.logged-in > .main-container.container-fluid {
 .view-slider-homes .slider-homes-right-deca .title-slider-homes:before {
   content: "";
   width: 102%;
-  height: 188%;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: -13px;
@@ -3880,8 +3881,9 @@ body.logged-in > .main-container.container-fluid {
 }
 
 .view-slider-homes .slider-homes-right-deca .body-slider-homes {
+  padding: 1.875rem 0;
+  margin: 0px;
   position: relative;
-  overflow: initial;
 }
 
 @media (min-width: 768px) {
@@ -3942,6 +3944,8 @@ body.logged-in > .main-container.container-fluid {
 }
 
 .view-slider-homes .slider-homes-center-deca .title-slider-homes {
+  padding: 1.875rem 0;
+  margin: 0px;
   position: relative;
 }
 
@@ -3954,7 +3958,7 @@ body.logged-in > .main-container.container-fluid {
 .view-slider-homes .slider-homes-center-deca .title-slider-homes:before {
   content: "";
   width: 102%;
-  height: 188%;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: -13px;
@@ -3964,8 +3968,9 @@ body.logged-in > .main-container.container-fluid {
 }
 
 .view-slider-homes .slider-homes-center-deca .body-slider-homes {
+  padding: 1.875rem 0;
+  margin: 0px;
   position: relative;
-  overflow: initial;
 }
 
 @media (min-width: 768px) {
@@ -9784,6 +9789,14 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   color: #818181;
   margin: 0;
   font-size: 0.75rem;
+}
+
+.not-scroll {
+  overflow-y: hidden;
+}
+
+.not-scroll .navbar-header .navbar-toggle {
+  background-position: 0 -21px;
 }
 
 /* reset de megamenu */
