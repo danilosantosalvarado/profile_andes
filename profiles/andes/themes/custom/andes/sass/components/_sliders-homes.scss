@@ -474,7 +474,7 @@
 					top: 0px;
 					left: -13px;
 					z-index: -1;
-					background-color: red;
+					background-color: transparent;
 					opacity: .5;
 				}
 			}
@@ -492,7 +492,7 @@
 					top: 0px;
 					left: -13px;
 					z-index: -1;
-					background-color: red;
+					background-color: transparent;
 					opacity: .5;
 				}
 			}
@@ -512,7 +512,7 @@
 						top: 0px;
 						left: 0;
 						z-index: -1;
-						background-color: red;
+						background-color: transparent;
 						opacity: .5;
 					}
 					&:hover {
@@ -550,7 +550,7 @@
 				top: 0px;
 				left: -13px;
 				z-index: -1;
-				background-color: red;
+				background-color: transparent;
 				opacity: .5;
 			}
 		}
@@ -571,7 +571,7 @@
 				top: 0px;
 				left: -13px;
 				z-index: -1;
-				background-color: red;
+				background-color: transparent;
 				opacity: .5;
 			}
 		}
@@ -594,7 +594,7 @@
 					top: 0px;
 					left: 0;
 					z-index: -1;
-					background-color: red;
+					background-color: transparent;
 					opacity: .5;
 				}
 				&:hover {
@@ -632,7 +632,7 @@
 				top: 0px;
 				left: -13px;
 				z-index: -1;
-				background-color: red;
+				background-color: transparent;
 				opacity: .5;
 			}
 		}
@@ -653,7 +653,7 @@
 				top: 0px;
 				left: -13px;
 				z-index: -1;
-				background-color: red;
+				background-color: transparent;
 				opacity: .5;
 			}
 		}
@@ -676,7 +676,7 @@
 					top: 0px;
 					left: 0;
 					z-index: -1;
-					background-color: red;
+					background-color: transparent;
 					opacity: .5;
 				}
 				&:hover {
@@ -700,13 +700,8 @@
 			}
 			.conten {
 				padding: 20px 15px 39px;
-				// overflow: hidden;
 				margin: 0 auto;
 				position: relative;
-				// @include respond-to(xs) {
-				// 	display: flex;
-				// 	align-items: center;
-				// }
 				@include respond-to(m) {
 					padding: 0 15px 35px;
 					width: 750px;
@@ -721,16 +716,15 @@
 				.title-slider-homes {
 					width: 100%;
 					font-family: $latobold;
-					@include font-size(l);
+					@include font-size(xxxl);
 					@include margin(.417 0);
 					text-transform: uppercase;
-					color: #585863;
-					// min-height: 50px;
+					color: white;
 					line-height: 20.9px;
 					padding-bottom: 10px;
 					@include respond-to(m) {
 						position: absolute;
-						top: -36px;
+						top: -136px;
 						left: 0px;
 						z-index: 9999999;
 					}
