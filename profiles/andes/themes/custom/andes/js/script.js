@@ -19,25 +19,26 @@
 
 	$(window).ready(function() {
 
-				//funcion cambio de colores anuncios.
+
+						//funcion cambio de colores anuncios.
 		var color = $('.sabor').attr('data-color');
-		var clase = color.slice(1, 7);
 
-		$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+clase);
-		$('#widget_pager_bottom_componente_anuncios-block_1').addClass('pager-'+clase);
-		$('.anuncios-enlace').addClass('pager-'+clase);
+		if (color !== null) {
+			
+			$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+color);
+			$('#widget_pager_bottom_componente_anuncios-block_1 , #widget_pager_bottom_componente_eventos-block_3_1').addClass('pager-'+color);
+			$('.anuncios-enlace').addClass('pager-'+color);
+			
 
-		$('.views-slideshow-pager-field-item').each(function(index, el) {
-			$(this).click(function(event) {
-				$('.views-slideshow-pager-field-item').find('a').removeClass('background-'+clase);
-				if ($(this).hasClass('active')) {
-					$(this).find('a').addClass('background-'+clase);
-				}
+			$('.views-slideshow-pager-field-item').each(function(index, el) {
+				$(this).click(function(event) {
+					$('.views-slideshow-pager-field-item').find('a').removeClass('background-'+color);
+					if ($(this).hasClass('active')) {
+						$(this).find('a').addClass('background-'+color);
+					}
+				});
 			});
-		});
-
-
-
+		}
 
 
 				//funcion redes sociales scroll eventos.
