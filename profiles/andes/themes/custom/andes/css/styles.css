@@ -4072,7 +4072,7 @@ body.logged-in > .main-container.container-fluid {
 @media (min-width: 768px) {
   .view-slider-homes .field-content .slider-homes-bottom-deca .conten .title-slider-homes {
     position: absolute;
-    top: -16px;
+    top: -36px;
     left: 0px;
     z-index: 9999999;
   }

@@ -730,7 +730,7 @@
 					padding-bottom: 10px;
 					@include respond-to(m) {
 						position: absolute;
-						top: -16px;
+						top: -36px;
 						left: 0px;
 						z-index: 9999999;
 					}
@@ -751,33 +751,6 @@
 				//button
 				.link-slider-homes {
 					display: none;
-					// margin: 15px 0;
-					// @include respond-to(xs) {
-					// margin: 0;
-					// }
-					// a {
-					// 	max-width: 145px;
-					// 	display: block;
-					// 	text-decoration: none;
-					// 	text-align: center;
-					// 	@include margin(0 auto);
-					// 	border: 1px solid #484851;
-					// 	font-family: $latolight;
-					// 	@include font-size(m);
-					// 	color: #484851;
-					// 	padding: 10px 35px;
-					// 	@include respond-to(xs) {
-					// 		float: right;
-					// 		@include margin(.834 0 0 auto);
-					// 	}
-					// 	@include respond-to(m) {
-					// 		@include margin(.834 .834 0 auto);
-					// 	}
-					// 	&:hover {
-					// 		background: color('grey-dark');
-					// 		color: color('white');
-					// 	}
-					// }
 				}
 			}
 		}
