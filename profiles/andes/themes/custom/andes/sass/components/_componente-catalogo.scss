@@ -15,7 +15,7 @@
     li {
       padding: 0px;
       &:nth-child(1) {
-        .quicktabs-tab-view-calendar-component-block {
+        .quicktabs-tab  {
           width: 40px;
           height: 40px;
           display: block;
@@ -26,7 +26,7 @@
         }
         &.active {
           padding: 0px;
-          .quicktabs-tab-view-calendar-component-block {
+          .quicktabs-tab  {
             background: url('../img/Icon/button-cuadricula.png') no-repeat;
             background-size: cover;
             background-position-x: 0px;
@@ -34,7 +34,7 @@
         }
       }
       &:nth-child(2) {
-        .quicktabs-tab-view-calendar-component-block-1 {
+        .quicktabs-tab {
           width: 40px;
           height: 40px;
           display: block;
@@ -45,12 +45,25 @@
         }
         &.active {
           padding: 0px;
-          .quicktabs-tab-view-calendar-component-block-1 {
+          .quicktabs-tab {
             background: url('../img/Icon/button-linea.png') no-repeat;
             background-position-x: -62px;
             background-size: cover;
           }
         }
+      }
+    }
+  }
+  > .quicktabs_main {
+    .quicktabs-tabpage {
+      select {
+        border-radius: 0px;
+        box-shadow: none;
+        appearance: none;
+        background: url(../img/Icon/slide-next.png)no-repeat;
+        background-size: 22px;
+        background-color: white;
+        background-position: 93% 5px;
       }
     }
   }
