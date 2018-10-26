@@ -164,7 +164,8 @@ body.logged-in  > .main-container.container-fluid {
 }
 
 /* ------| Titles panel |----- */
-.pane-title {
+.pane-title,
+h1.page-header {
   font-family: $latoblack;
   @include font-size(ll);
 	color: color('grey');
@@ -247,5 +248,53 @@ body.logged-in  > .main-container.container-fluid {
     font-family: $crimson-textregular;
     @include font-size(m);
     margin-bottom: 25px;
+  }
+}
+
+#body-contain {
+  p {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin-bottom: 25px;
+  }
+}
+
+/* ------| tad interna (deportes / cursos) |----- */
+.field-type-taxonomy-term-reference {
+  position: relative;
+  &:before {
+    content: "";
+    width: 67px;
+    height: 3px;
+    margin-left: 5px;
+    border-top: 1px solid black;
+    position: absolute;
+  }
+  .field-items {
+    padding: 20px 0px 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    .field-item{
+      margin: 5px;
+      border: 1px solid #F4F1F1;
+      padding: 7px 20px;
+      background-color: #F4F1F1;
+      a {
+        text-decoration: none;
+
+      }
+    }
+  }
+}
+
+/* ------| redes sociales scroll 2 |----- */
+.social-network-list {
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  li {
+    margin-left: 0px;
+    margin-bottom: 10px;
   }
 }
