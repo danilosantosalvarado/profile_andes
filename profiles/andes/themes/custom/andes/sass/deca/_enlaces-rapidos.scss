@@ -65,8 +65,9 @@
             width: 50px;
             height: 50px;
             .cls-1, .cls-2 {
-              stroke: black;
-              stroke-width: 15px;
+              // stroke: black;
+              // stroke-width: 15px;
+              fill: #fff !important;
             }
             path {
               stroke: black;
