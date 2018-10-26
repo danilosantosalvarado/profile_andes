@@ -298,3 +298,61 @@ h1.page-header {
     margin-bottom: 10px;
   }
 }
+
+/* ------| banner deportes /cursos |----- */
+.view-id-banner_taxonomy {
+  position: relative;
+ ul {
+   padding: 0px;
+   list-style: none;
+   margin: 0px;
+   li.swiper-slide {
+     overflow: hidden;
+     display: block;
+     height: auto;
+     .views-slideshow-swiper-main-frame-row-item {
+       .cl-slider-homes-left-deca {
+         .img-content {
+           .img-desktop{
+             display: none;
+             @include respond-to(xl) {
+               display: block;
+             }
+           }
+           .img-mobile {
+             display: block;
+             @include respond-to(xl) {
+               display: none;
+             }
+           }
+         }
+       }
+       .slider-homes-left-deca {
+         position: absolute;
+         bottom: 19%;
+         left: 10%;
+         a {
+           text-decoration: none;
+           font-family: $latoblack;
+           font-size: 60px;
+           color: white;
+           padding: 10px 54px;
+           position: relative;
+           z-index: 1;
+           &:before {
+             content: "";
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             background: #359ED0;
+             opacity: .5;
+             z-index: -1;
+           }
+         }
+       }
+     }
+   }
+ }
+}
