@@ -164,8 +164,7 @@ body.logged-in  > .main-container.container-fluid {
 }
 
 /* ------| Titles panel |----- */
-.pane-title,
-h1.page-header {
+.pane-title {
   font-family: $latoblack;
   @include font-size(ll);
 	color: color('grey');
@@ -177,11 +176,17 @@ h1.page-header {
 		@include font-size(xxxl);
   }
 }
+
 /* ------| Titles nodos |----- */
 .pane-content {
   > h1  {
     text-align: center;
   }
+}
+
+/* ------| Titles cursos  |----- */
+h1.page-header {
+  display: none;
 }
 
 /* ------| Button ver todos |----- */
