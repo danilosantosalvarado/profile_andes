@@ -67,6 +67,7 @@
             .cls-1, .cls-2 {
               // stroke: black;
               // stroke-width: 15px;
+              stroke: initial !important;
               fill: #fff !important;
             }
             path {
