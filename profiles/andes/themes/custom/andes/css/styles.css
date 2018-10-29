@@ -6665,15 +6665,21 @@ h1.page-header {
 */
 /* ------| Filtro cuadro, fila |----- */
 #quicktabs-componente_catalogo ul.quicktabs-tabs {
-  padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  overflow: hidden;
-  width: 100%;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #quicktabs-componente_catalogo ul.quicktabs-tabs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: hidden;
+    padding: 15px;
+  }
 }
 
 #quicktabs-componente_catalogo ul.quicktabs-tabs li {
@@ -6720,6 +6726,18 @@ h1.page-header {
   background-size: cover;
 }
 
+@media (max-width: 992px) {
+  #quicktabs-componente_catalogo #quicktabs-container-componente_catalogo .quicktabs-tabpage:nth-child(1) {
+    display: initial;
+  }
+}
+
+@media (max-width: 992px) {
+  #quicktabs-componente_catalogo #quicktabs-container-componente_catalogo .quicktabs-tabpage:nth-child(2) {
+    display: none;
+  }
+}
+
 #quicktabs-componente_catalogo > .quicktabs_main .quicktabs-tabpage select {
   border-radius: 0px;
   -webkit-box-shadow: none;
@@ -6734,38 +6752,35 @@ h1.page-header {
 }
 
 /* ------| Filtro Cuadricula |----- */
-.view-id-calendar-component ul {
-  padding: 0px;
-}
-
-.view-id-calendar-component ul li.views-row {
-  list-style: none;
+.view-id-calendar-component .views-column {
   position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 100%;
 }
 
-@media (min-width: 555px) {
-  .view-id-calendar-component ul li.views-row {
+@media (max-width: 555px) {
+  .view-id-calendar-component .views-column {
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 767px) {
+  .view-id-calendar-component .views-column {
     width: 50%;
+    float: left;
   }
 }
 
-@media (min-width: 768px) {
-  .view-id-calendar-component ul li.views-row {
-    width: 33.33333333%;
-  }
-}
-
-.view-id-calendar-component ul li.views-row .cursos {
+.view-id-calendar-component .views-column .cursos {
   position: relative;
-  margin-bottom: 31px;
+  margin-bottom: 15px;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .img-depor {
+@media (min-width: 992px) {
+  .view-id-calendar-component .views-column .cursos {
+    margin-bottom: 31px;
+  }
+}
+
+.view-id-calendar-component .views-column .cursos .img-depor {
   position: absolute;
   top: 0;
   background: rgba(88, 89, 91, 0.82);
@@ -6789,30 +6804,30 @@ h1.page-header {
           align-items: center;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .img-depor h2 {
+.view-id-calendar-component .views-column .cursos .img-depor h2 {
   display: none;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .img-depor img {
+.view-id-calendar-component .views-column .cursos .img-depor img {
   width: 40px;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  .view-id-calendar-component ul li.views-row .cursos .img-depor img {
+  .view-id-calendar-component .views-column .cursos .img-depor img {
     width: 93px;
   }
 }
 
-.view-id-calendar-component ul li.views-row .cursos:hover .hover-curso {
+.view-id-calendar-component .views-column .cursos:hover .hover-curso {
   z-index: 1;
 }
 
-.view-id-calendar-component ul li.views-row .cursos:hover .img-depor {
+.view-id-calendar-component .views-column .cursos:hover .img-depor {
   z-index: -1;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso {
+.view-id-calendar-component .views-column .cursos .hover-curso {
   position: absolute;
   top: 0;
   background: rgba(53, 158, 208, 0.78);
@@ -6821,7 +6836,7 @@ h1.page-header {
   z-index: -1;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex {
+.view-id-calendar-component .views-column .cursos .hover-curso .hover-curso-tex {
   color: white;
   width: 80%;
   height: 83%;
@@ -6843,21 +6858,21 @@ h1.page-header {
           align-items: center;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex span {
+.view-id-calendar-component .views-column .cursos .hover-curso .hover-curso-tex span {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   padding: 0 15px;
   text-align: center;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex p {
+.view-id-calendar-component .views-column .cursos .hover-curso .hover-curso-tex p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   padding: 0 15px;
   text-align: center;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex .button {
+.view-id-calendar-component .views-column .cursos .hover-curso .hover-curso-tex .button {
   width: 100%;
   display: block;
   text-align: center;
@@ -6866,7 +6881,7 @@ h1.page-header {
   bottom: 6%;
 }
 
-.view-id-calendar-component ul li.views-row .cursos .hover-curso .hover-curso-tex .button a {
+.view-id-calendar-component .views-column .cursos .hover-curso .hover-curso-tex .button a {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.875rem;
   color: #fff;
@@ -6874,6 +6889,100 @@ h1.page-header {
   border: 2px solid white;
   padding: 0.6em 1.5em;
   background: #359ed0;
+}
+
+/* ------| Filtro Lista |----- */
+.view-id-calendar-component.view-display-id-block_1 .views-row {
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #58595B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  color: white;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .views-field-field-image-full {
+  margin-right: 25px;
+  width: 69px;
+  height: 58px;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .views-field-field-image-full img {
+  background-color: #359ED0;
+  width: 100%;
+  height: auto;
+  padding: 11% 18%;
+  max-height: 58px;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-title span::after {
+  content: "  -  ";
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-fecha-eventos,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-fecha-eventos-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-fecha-eventos::after,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-fecha-eventos-2::after {
+  content: "  -  ";
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar > span {
+  padding-right: 5px;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .location,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .field-content,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .adr,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .map-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .location > span,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .field-content > span,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .adr > span,
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .map-link > span {
+  padding: 0 5px;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .map-link {
+  padding: 0 5px;
+}
+
+.view-id-calendar-component.view-display-id-block_1 .views-row .lista .views-field-field-lugar .map-link a {
+  text-decoration: none;
+  color: red;
+  padding-left: 5px;
 }
 
 .view-galerias-home {
@@ -9062,8 +9171,8 @@ h1.page-header {
 }
 
 .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-1, .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg .cls-2 {
-  stroke: black;
-  stroke-width: 15px;
+  stroke: initial !important;
+  fill: #fff !important;
 }
 
 .view-id-decanatura_enlaces_rapidos .view-content .views-row a > p svg path {
