@@ -7893,22 +7893,22 @@ h1.page-header {
   }
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+.view-componente-anuncios .view-content .views-row .views-field-field-image {
   border: 5px solid #fff;
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image img {
+.view-componente-anuncios .view-content .views-row .views-field-field-image img {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .views-field-field-image {
+  .view-componente-anuncios .view-content .views-row .views-field-field-image {
     float: left;
     width: 50%;
   }
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten {
+.view-componente-anuncios .view-content .views-row .anuncios-conten {
   background: #fff;
   border-top: 4px solid #b600eb;
   padding: 20px;
@@ -7916,14 +7916,14 @@ h1.page-header {
 }
 
 @media (min-width: 992px) {
-  .view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten {
+  .view-componente-anuncios .view-content .views-row .anuncios-conten {
     float: left;
     width: 50%;
     margin: 20px 0 0;
   }
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-titulo h3 {
+.view-componente-anuncios .view-content .views-row .anuncios-conten .anuncios-titulo h3 {
   font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.4375rem;
   color: #484851;
@@ -7931,12 +7931,13 @@ h1.page-header {
   text-decoration: none;
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-body p {
+.view-componente-anuncios .view-content .views-row .anuncios-conten .anuncios-body p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.view-componente-anuncios .view-content li .views-slideshow-swiper-main-frame-row-item .anuncios-conten .anuncios-enlace a {
+.view-componente-anuncios .view-content .views-row .anuncios-conten .anuncios-enlace a {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #484851;

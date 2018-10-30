@@ -21,62 +21,61 @@
     @include respond-to(xxxl) {
         width: 1170px;
     }
-    li {
-      .views-slideshow-swiper-main-frame-row-item {
-        //imagen
-        .views-field-field-image {
-          img {
-            width: 100%;
-          }
-          border: 5px solid #fff;
-          @include respond-to(xl) {
-            float: left;
-            width: 50%;
+    .views-row {
+      //imagen
+      .views-field-field-image {
+        img {
+          width: 100%;
+        }
+        border: 5px solid #fff;
+        @include respond-to(xl) {
+          float: left;
+          width: 50%;
+        }
+      }
+      //contenido
+      .anuncios-conten {
+        background: #fff;
+        border-top: 4px solid color('fucsia');
+        padding: 20px;
+        overflow: hidden;
+        @include respond-to(xl) {
+          float: left;
+          width: 50%;
+          margin: 20px 0 0;
+        }
+        //titulo
+        .anuncios-titulo {
+          h3 {
+            font-family: $crimson-textbold;
+            @include font-size(ll);
+            color: color('grey-dark');
+            line-height: 1.1;
+            // font-weight: 600;
+            text-decoration: none;
           }
         }
-        //contenido
-        .anuncios-conten {
-          background: #fff;
-          border-top: 4px solid color('fucsia');
-          padding: 20px;
-          overflow: hidden;
-          @include respond-to(xl) {
-            float: left;
-            width: 50%;
-            margin: 20px 0 0;
+        //body
+        .anuncios-body {
+          p {
+            font-family: $crimson-textregular;
+            @include font-size(m);
+            margin-bottom: 10px;
           }
-          //titulo
-          .anuncios-titulo {
-            h3 {
-              font-family: $crimson-textbold;
-              @include font-size(ll);
-              color: color('grey-dark');
-              line-height: 1.1;
-              // font-weight: 600;
-              text-decoration: none;
-            }
-          }
-          //body
-          .anuncios-body {
-            p {
-              font-family: $crimson-textregular;
-              @include font-size(m);
-            }
-          }
-          //enlaces
-          .anuncios-enlace {
-            a {
-              font-family: $crimson-textregular;
-              @include font-size(m);
-              color: color('grey-dark');
-              text-align: center;
-              text-decoration: none;
-              padding: 10px 20px;
-              border: 1px solid color('grey-dark');
-              max-width: 300px;
-              display: block;
-              float: right;
-            }
+        }
+        //enlaces
+        .anuncios-enlace {
+          a {
+            font-family: $crimson-textregular;
+            @include font-size(m);
+            color: color('grey-dark');
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid color('grey-dark');
+            max-width: 300px;
+            display: block;
+            float: right;
           }
         }
       }
