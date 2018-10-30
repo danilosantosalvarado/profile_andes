@@ -56,14 +56,16 @@ function udla_simplified_social_share_block_view($delta) {
   switch ($delta) {
     case 'social_share_horizontal':
 
-      $block['subject'] = t("Social Network");
-      $block['content'] = _get_social_networks();
+
+      $block['subject'] = t("Social Network horizontal");
+      $block['content'] = _get_social_networks('horizontal');
+
 
       break;
       case 'social_share_vertical':
 
-      $block['subject'] = t("Social Network");
-      $block['content'] = _get_social_networks();
+      $block['subject'] = t("Social Network Vertical");
+      $block['content'] = _get_social_networks('vertical');
 
       break;
     default:
@@ -104,7 +106,7 @@ function udla_simplified_social_share_theme($existing, $type, $theme, $path) {
   return array(
     'social_share_parent' => array(
       'template' => 'templates/social_share.parent',
-      'variables' => array('social_share_items' => NULL),
+      'variables' => array('social_share_items' => NULL,  'position' => NULL),
     ),
     'social_share_svg_render' => array(
       'template' => 'templates/social_share.svg',

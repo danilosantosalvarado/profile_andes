@@ -1,7 +1,7 @@
 <?php 
   if(!empty($social_share_items)){
 ?>
-  <ul class="social-network-list">
+  <ul class="social-network-list align-social-<?php echo (!empty($position)) ? $position : ''; ?>">
 <?php
   foreach ($social_share_items as $item_share) {
     if(is_string($item_share)){
