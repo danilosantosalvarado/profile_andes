@@ -1,6 +1,6 @@
 <?php
 
-function _get_social_networks(){
+function _get_social_networks($position){
   //social_share_parent
   drupal_add_css(drupal_get_path('module', 'udla_simplified_social_share') . '/css/admin.css');
   //
@@ -8,6 +8,7 @@ function _get_social_networks(){
   $parent = array(
     '#theme' => 'social_share_parent',
     '#social_share_items' => variable_get('social_network',''),
+    '#position' => $position, 
   );
   return drupal_render($parent);
 }
