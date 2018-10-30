@@ -139,7 +139,8 @@
   overflow-x: hidden;
 }
 .container {
-  overflow: hidden;
+  // overflow: hidden;
+  position: relative;
 }
 body > .main-container.container-fluid {
   margin-top: 0px;
@@ -223,29 +224,44 @@ h1.page-header {
     }
   }
 }
+
 /* ------| redes sociales scroll |----- */
 .pane-udla-simplified-social-share {
   position: relative;
 }
-
-.fija {
-  position: fixed !important;
-  top: 20%;
-  bottom: auto;
-}
-
-.os-share-widget-interface-vertical {
+.social-network-list.align-social-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
-  padding: 0px !important;
-  margin-left: 32%;
-  border-top: none !important;
+  top: 0;
+  left: -39px;
+  padding: 0;
+  z-index: 5;
+  transition: .3s;
+  li {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 0px 5px;
+    &:hover {
+      position: initial;
+    }
+    svg {
+      padding: 4px;
+    }
+  }
 }
 
-.slider-bottom {
-  position: absolute;
-  bottom: -585px;
-  left: initial;
-}
+// .os-share-widget-interface-vertical {
+//   position: absolute;
+//   padding: 0px !important;
+//   margin-left: 32%;
+//   border-top: none !important;
+// }
 
 /* ------| Campo body internas de nodos |----- */
 .field-name-body {
@@ -267,6 +283,7 @@ h1.page-header {
 /* ------| tad interna (deportes / cursos) |----- */
 .field-type-taxonomy-term-reference {
   position: relative;
+  padding-top: 40px;
   &:before {
     content: "";
     width: 67px;
@@ -281,26 +298,16 @@ h1.page-header {
     display: flex;
     flex-wrap: wrap;
     .field-item{
-      margin: 5px;
+      margin-right: 12px;
+      margin-bottom: 5px;
       border: 1px solid #F4F1F1;
-      padding: 7px 20px;
+      padding: 5px 8px;
       background-color: #F4F1F1;
       a {
         text-decoration: none;
-
+        @include font-size(xxs);
       }
     }
-  }
-}
-
-/* ------| redes sociales scroll 2 |----- */
-.social-network-list {
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  li {
-    margin-left: 0px;
-    margin-bottom: 10px;
   }
 }
 

@@ -3,12 +3,21 @@
 // Componente Redes Sociales layout 1
 //------------------------------------------------------------------------------
 */
-.share-container {
-  text-align: center;
-  padding: 40px 0;
+
+.social-network-list.align-social-horizontal {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
   border-top: 1px solid #ddd;
-  .more,
-  .os-share-more {
-    display: none;
+  padding: 20px 15px;
+  list-style: none;
+  li {
+    cursor: pointer;
+    &:hover {
+      position: initial;
+    }
+    svg {
+      padding: 4px;
+    }
   }
 }

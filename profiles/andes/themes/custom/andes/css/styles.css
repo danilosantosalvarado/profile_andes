@@ -3111,7 +3111,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 .container {
-  overflow: hidden;
+  position: relative;
 }
 
 body > .main-container.container-fluid {
@@ -3212,23 +3212,49 @@ h1.page-header {
   position: relative;
 }
 
-.fija {
-  position: fixed !important;
-  top: 20%;
-  bottom: auto;
+.social-network-list.align-social-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -39px;
+  padding: 0;
+  z-index: 5;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
-.os-share-widget-interface-vertical {
-  position: absolute;
-  padding: 0px !important;
-  margin-left: 32%;
-  border-top: none !important;
+.social-network-list.align-social-vertical li {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin: 0px 0px 5px;
 }
 
-.slider-bottom {
-  position: absolute;
-  bottom: -585px;
-  left: initial;
+.social-network-list.align-social-vertical li:hover {
+  position: initial;
+}
+
+.social-network-list.align-social-vertical li svg {
+  padding: 4px;
 }
 
 /* ------| Campo body internas de nodos |----- */
@@ -3247,6 +3273,7 @@ h1.page-header {
 /* ------| tad interna (deportes / cursos) |----- */
 .field-type-taxonomy-term-reference {
   position: relative;
+  padding-top: 40px;
 }
 
 .field-type-taxonomy-term-reference:before {
@@ -3269,31 +3296,16 @@ h1.page-header {
 }
 
 .field-type-taxonomy-term-reference .field-items .field-item {
-  margin: 5px;
+  margin-right: 12px;
+  margin-bottom: 5px;
   border: 1px solid #F4F1F1;
-  padding: 7px 20px;
+  padding: 5px 8px;
   background-color: #F4F1F1;
 }
 
 .field-type-taxonomy-term-reference .field-items .field-item a {
   text-decoration: none;
-}
-
-/* ------| redes sociales scroll 2 |----- */
-.social-network-list {
-  margin-bottom: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.social-network-list li {
-  margin-left: 0px;
-  margin-bottom: 10px;
+  font-size: 0.75rem;
 }
 
 /* ------| banner deportes /cursos |----- */
@@ -6647,15 +6659,29 @@ h1.page-header {
 // Componente Redes Sociales layout 1
 //------------------------------------------------------------------------------
 */
-.share-container {
-  text-align: center;
-  padding: 40px 0;
+.social-network-list.align-social-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
   border-top: 1px solid #ddd;
+  padding: 20px 15px;
+  list-style: none;
 }
 
-.share-container .more,
-.share-container .os-share-more {
-  display: none;
+.social-network-list.align-social-horizontal li {
+  cursor: pointer;
+}
+
+.social-network-list.align-social-horizontal li:hover {
+  position: initial;
+}
+
+.social-network-list.align-social-horizontal li svg {
+  padding: 4px;
 }
 
 /*
