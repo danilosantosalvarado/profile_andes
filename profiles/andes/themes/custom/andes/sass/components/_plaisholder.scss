@@ -268,7 +268,7 @@ h1.page-header {
   .field-item {
     font-family: $crimson-textregular;
     @include font-size(m);
-    margin-bottom: 25px;
+    margin: 25px 0;
   }
 }
 
@@ -276,7 +276,7 @@ h1.page-header {
   p {
     font-family: $crimson-textregular;
     @include font-size(m);
-    margin-bottom: 25px;
+    margin: 25px 0;
   }
 }
 

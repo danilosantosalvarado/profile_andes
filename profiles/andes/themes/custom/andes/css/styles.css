@@ -3261,13 +3261,13 @@ h1.page-header {
 .field-name-body .field-item {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 
 #body-contain p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 
 /* ------| tad interna (deportes / cursos) |----- */
