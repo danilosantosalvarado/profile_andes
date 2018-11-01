@@ -144,17 +144,6 @@
   position: relative;
 }
 
-//container las internas de los eventos, noticias
-.container-internas {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  @include respond-to(xl) {
-  width: 550px;
-  margin: 0 auto;
-  }
-}
-
 body > .main-container.container-fluid {
   margin-top: 0px;
   @include respond-to(xl) {
@@ -291,34 +280,19 @@ h1.page-header {
     }
   }
 }
-
-/* ------| Campo Fechas intena de eventos |----- */
-.field-name-field-fecha-eventos {
-  display: block;
-  padding: 15px 0 0;
-  margin: 0;
-  color: #e55d12;
-}
-
-/* ------| Campo body internas de nodos |----- */
-.field-name-body {
-  .field-item {
-    font-family: $crimson-textregular;
-    @include font-size(m);
-    margin: 25px 0;
+/* ------| container las internas de los nodos |----- */
+.container-node {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include respond-to(xl) {
+  width: 550px;
+  margin: 0 auto;
   }
 }
 
-#body-contain {
-  p {
-    font-family: $crimson-textregular;
-    @include font-size(m);
-    margin: 25px 0;
-  }
-}
-
-/* ------| tad interna (deportes / cursos) |----- */
-.field-type-taxonomy-term-reference {
+/* ------| Campo tags intena de nodos |----- */
+.field-name-field-tags.field-type-taxonomy-term-reference {
   position: relative;
   padding-top: 40px;
   &:before {
@@ -348,66 +322,91 @@ h1.page-header {
   }
 }
 
+/* ------| Campo Fechas intena de nodos |----- */
+.field-name-field-fecha-eventos {
+  display: block;
+  padding: 15px 0 0;
+  margin: 0;
+  color: #e55d12;
+}
+
+/* ------| Campo body internas de nodos |----- */
+.field-name-body {
+  .field-item {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin: 25px 0;
+  }
+}
+
+#body-contain {
+  p {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin: 25px 0;
+  }
+}
+
 /* ------| banner deportes /cursos |----- */
 .view-id-banner_taxonomy {
   position: relative;
- ul {
-   padding: 0px;
-   list-style: none;
-   margin: 0px;
-   li.swiper-slide {
-     overflow: hidden;
-     display: block;
-     height: auto;
-     .views-slideshow-swiper-main-frame-row-item {
-       .cl-slider-homes-left-deca {
-         .img-content {
-           .img-desktop{
-             display: none;
-             @include respond-to(xl) {
-               display: block;
-             }
-           }
-           .img-mobile {
-             display: block;
-             @include respond-to(xl) {
-               display: none;
-             }
-           }
-         }
-       }
-       .slider-homes-left-deca {
-         position: absolute;
-         bottom: 19%;
-         left: 10%;
-         a {
-           text-decoration: none;
-           font-family: $latoblack;
-           font-size: 60px;
-           color: white;
-           padding: 10px 54px;
-           position: relative;
-           z-index: 1;
-           &:before {
-             content: "";
-             width: 100%;
-             height: 100%;
-             position: absolute;
-             top: 0px;
-             left: 0px;
-             background: #359ED0;
-             opacity: .5;
-             z-index: -1;
-           }
-         }
-       }
-     }
-   }
- }
+  ul {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    li.swiper-slide {
+      overflow: hidden;
+      display: block;
+      height: auto;
+      .views-slideshow-swiper-main-frame-row-item {
+        .cl-slider-homes-left-deca {
+          .img-content {
+            .img-desktop{
+              display: none;
+              @include respond-to(xl) {
+                display: block;
+              }
+            }
+            .img-mobile {
+              display: block;
+              @include respond-to(xl) {
+                display: none;
+              }
+            }
+          }
+        }
+        .slider-homes-left-deca {
+          position: absolute;
+          bottom: 19%;
+          left: 10%;
+          a {
+            text-decoration: none;
+            font-family: $latoblack;
+            font-size: 60px;
+            color: white;
+            padding: 10px 54px;
+            position: relative;
+            z-index: 1;
+            &:before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background: #359ED0;
+              opacity: .5;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
-/* ------| componente calogo portal infomativo (wien_Catalogo) |----- */
+/* ------| componente catalogo portal infomativo (wien_Catalogo) |----- */
 .componente_catalogo .cursos  {
   position: relative;
   margin-bottom: 31px;

@@ -3114,19 +3114,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   position: relative;
 }
 
-.container-internas {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (min-width: 992px) {
-  .container-internas {
-    width: 550px;
-    margin: 0 auto;
-  }
-}
-
 body > .main-container.container-fluid {
   margin-top: 0px;
 }
@@ -3304,7 +3291,59 @@ h1.page-header {
   padding: 4px;
 }
 
-/* ------| Campo Fechas intena de eventos |----- */
+/* ------| container las internas de los nodos |----- */
+.container-node {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .container-node {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
+/* ------| Campo tags intena de nodos |----- */
+.field-name-field-tags.field-type-taxonomy-term-reference {
+  position: relative;
+  padding-top: 40px;
+}
+
+.field-name-field-tags.field-type-taxonomy-term-reference:before {
+  content: "";
+  width: 67px;
+  height: 3px;
+  margin-left: 5px;
+  border-top: 1px solid black;
+  position: absolute;
+}
+
+.field-name-field-tags.field-type-taxonomy-term-reference .field-items {
+  padding: 20px 0px 0px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.field-name-field-tags.field-type-taxonomy-term-reference .field-items .field-item {
+  margin-right: 12px;
+  margin-bottom: 5px;
+  border: 1px solid #F4F1F1;
+  padding: 5px 8px;
+  background-color: #F4F1F1;
+}
+
+.field-name-field-tags.field-type-taxonomy-term-reference .field-items .field-item a {
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+/* ------| Campo Fechas intena de nodos |----- */
 .field-name-field-fecha-eventos {
   display: block;
   padding: 15px 0 0;
@@ -3323,44 +3362,6 @@ h1.page-header {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   margin: 25px 0;
-}
-
-/* ------| tad interna (deportes / cursos) |----- */
-.field-type-taxonomy-term-reference {
-  position: relative;
-  padding-top: 40px;
-}
-
-.field-type-taxonomy-term-reference:before {
-  content: "";
-  width: 67px;
-  height: 3px;
-  margin-left: 5px;
-  border-top: 1px solid black;
-  position: absolute;
-}
-
-.field-type-taxonomy-term-reference .field-items {
-  padding: 20px 0px 0px;
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.field-type-taxonomy-term-reference .field-items .field-item {
-  margin-right: 12px;
-  margin-bottom: 5px;
-  border: 1px solid #F4F1F1;
-  padding: 5px 8px;
-  background-color: #F4F1F1;
-}
-
-.field-type-taxonomy-term-reference .field-items .field-item a {
-  text-decoration: none;
-  font-size: 0.75rem;
 }
 
 /* ------| banner deportes /cursos |----- */
@@ -3428,7 +3429,7 @@ h1.page-header {
   z-index: -1;
 }
 
-/* ------| componente calogo portal infomativo (wien_Catalogo) |----- */
+/* ------| componente catalogo portal infomativo (wien_Catalogo) |----- */
 .componente_catalogo .cursos {
   position: relative;
   margin-bottom: 31px;
