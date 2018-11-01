@@ -104,7 +104,7 @@
 		}
 
 		//add breidpoint news component.
-		if($('.view-id-slider_homes').length > 0){
+		if($('.view-id-slider_homes').length > 0) {
 			ParentSlideClass = $('.view-id-slider_homes .field-content').children('div').eq(1).attr("class");
 			$('.view-id-slider_homes').addClass(ParentSlideClass+"-container");
 			$('.view-id-slider_homes .views-slideshow-simple-pager div').eq(0).addClass('active');
@@ -165,59 +165,59 @@
 		// acoplarTop();
 		// });
 
-	// Funcion breakpoint slider
-	checkSize();
-	$(window).resize(checkSize);
-});
-
-// Funcion breakpoint slider
-function checkSize(){
-	var docWidth = $(document).width();
-	 var data = {
-		slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 992) ? 2 : 1)) ),
-		spaceBetween: 20,
-		swipeTo: 0,
-		slidesPerGroup: ((docWidth >= 1200) ? 4 : ((docWidth > 768 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 768) ? 2 : 1)) ),
-		slidesPerColumn: 1
-	};
-
-	if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 0 && docWidth <= 1200) ) {
-		setTimeout(function(){
-			var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
-		},50);
-	}
-	if ($('.view-id-componente_eventos .swiper-container-horizontal').length > 0) {
-		setTimeout(function(){
-			var swiper = new Swiper("#"+jQuery('.view-id-componente_eventos .swiper-container-horizontal').attr('id'), data);
-		},50);
-	}
-	if ($('.view-display-id-componente_publicaciones .swiper-container-horizontal').length > 0) {
-		setTimeout(function(){
-			var swiper = new Swiper("#"+jQuery('.view-display-id-componente_publicaciones .swiper-container-horizontal').attr('id'), data);
-		},50);
-	}
-	if ($('.view-display-id-especiales_destacadas .swiper-container-horizontal').length > 0) {
-		setTimeout(function(){
-			var swiper = new Swiper("#"+jQuery('.view-display-id-especiales_destacadas .swiper-container-horizontal').attr('id'), data);
-		},50);
-	}
-	//
-	//view-display-id-componente_publicaciones
-	//view-id-componente_eventos
-}
-
-function returnClassParent(parent){
-	var parentArray = parent.attr('class').split(' ');
-	var data = "";
-	$.each(parentArray,function(index, val){
-		if(val.indexOf('view-display-id-') != -1){
-			data = val;
-		}
+		// Funcion breakpoint slider
+		checkSize();
+		$(window).resize(checkSize);
 	});
-	return data;
-}
 
-	function actionClick(item, parentClass, swiperId, SliderBullet){
+	// Funcion breakpoint slider
+	function checkSize() {
+		var docWidth = $(document).width();
+		var data = {
+			slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 992) ? 2 : 1)) ),
+			spaceBetween: 20,
+			swipeTo: 0,
+			slidesPerGroup: ((docWidth >= 1200) ? 4 : ((docWidth > 768 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 768) ? 2 : 1)) ),
+			slidesPerColumn: 1
+		};
+
+		if ($('.view-componente-noticias .swiper-container-horizontal').length > 0 && (docWidth > 0 && docWidth <= 1200) ) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-componente-noticias .swiper-container-horizontal').attr('id'), data);
+			},50);
+		}
+		if ($('.view-id-componente_eventos .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-id-componente_eventos .swiper-container-horizontal').attr('id'), data);
+			},50);
+		}
+		if ($('.view-display-id-componente_publicaciones .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-display-id-componente_publicaciones .swiper-container-horizontal').attr('id'), data);
+			},50);
+		}
+		if ($('.view-display-id-especiales_destacadas .swiper-container-horizontal').length > 0) {
+			setTimeout(function(){
+				var swiper = new Swiper("#"+jQuery('.view-display-id-especiales_destacadas .swiper-container-horizontal').attr('id'), data);
+			},50);
+		}
+		//
+		//view-display-id-componente_publicaciones
+		//view-id-componente_eventos
+	}
+
+	function returnClassParent(parent) {
+		var parentArray = parent.attr('class').split(' ');
+		var data = "";
+		$.each(parentArray,function(index, val) {
+			if(val.indexOf('view-display-id-') != -1) {
+				data = val;
+			}
+		});
+		return data;
+	}
+
+	function actionClick(item, parentClass, swiperId, SliderBullet) {
 		SliderBullet = SliderBullet || 1;
 		var sibling  = $(item).parents('div.views-slideshow-controls-bottom').siblings().attr('id');
 		var slideActive = $('#'+sibling).find('li.swiper-slide-active').attr('id');
@@ -231,12 +231,12 @@ function returnClassParent(parent){
 			SlideClass = slideActivePosition+"-control";
 			ParentSlideClass = slideActivePosition+"-container";
 			var PositionSlide = slidePosition;
-			if(SliderBullet == 1){
+			if(SliderBullet == 1) {
 				$('.'+parentClass+' .views-slideshow-simple-pager div').eq(slidePosition).addClass('active');
 			}
 			lastPosition = slidePosition;
 		}
-		else{
+		else {
 			$(item).parents('div.views-slideshow-controls-bottom').removeClass(SlideClass);
 			$(item).parents('div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
 			$('.'+parentClass).removeClass(ParentSlideClass);
@@ -408,8 +408,7 @@ function returnClassParent(parent){
 		}
 	}
 
-	function eventsLoad(){
-
+	function eventsLoad() {
 		var btnLoadMore = $('.view-eventos-decanatura .pager.pager-load-more a').get(0);
 		if ( !btnLoadMore ) {
 			setTimeout(function(){eventsLoad();}, 200);
@@ -418,11 +417,9 @@ function returnClassParent(parent){
 		btnLoadMore.addEventListener('click', onEventsLoad, false);
 	}
 
-	function ieSupport(pList){
-
+	function ieSupport(pList) {
 		var partialEvents = pList;
-
-		partialEvents.map(function(ls, idx){
+		partialEvents.map(function(ls, idx) {
 			var countRow = idx * 7;
 			var opt = ls.length;
 
@@ -477,7 +474,6 @@ function returnClassParent(parent){
 			$(el).css({'background-image': 'url(' + srcImg + ')'});
 		});
 	}
-
 
 }(jQuery));
 
