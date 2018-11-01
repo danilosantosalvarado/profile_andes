@@ -3114,6 +3114,19 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   position: relative;
 }
 
+.container-internas {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .container-internas {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+
 body > .main-container.container-fluid {
   margin-top: 0px;
 }
@@ -3208,29 +3221,43 @@ h1.page-header {
 }
 
 /* ------| redes sociales scroll |----- */
-.pane-udla-simplified-social-share {
-  position: relative;
+.social-network-list.align-social-vertical {
+  padding: 10px 0;
+  margin: 0px;
 }
 
-.social-network-list.align-social-vertical {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (min-width: 992px) {
+  .social-network-list.align-social-vertical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 0;
+  }
+}
+
+.social-network-list.align-social-vertical.social-initial {
   position: absolute;
   top: 0;
-  left: -39px;
-  padding: 0;
-  z-index: 5;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  left: initial;
+}
+
+.social-network-list.align-social-vertical.social-fixed {
+  position: fixed;
+  bottom: auto;
+}
+
+.social-network-list.align-social-vertical.social-botton {
+  position: absolute;
+  top: initial;
+  left: initial;
+  bottom: 0px;
 }
 
 .social-network-list.align-social-vertical li {
@@ -3246,7 +3273,27 @@ h1.page-header {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  margin: 0px 0px 5px;
+  margin: 0 5px 0 0;
+}
+
+.social-network-list.align-social-vertical li:first-child {
+  margin-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .social-network-list.align-social-vertical li:first-child {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-network-list.align-social-vertical li {
+    margin: 0px 0px 5px;
+  }
+}
+
+.social-network-list.align-social-vertical li:last-child {
+  margin: 0px;
 }
 
 .social-network-list.align-social-vertical li:hover {
@@ -3255,6 +3302,14 @@ h1.page-header {
 
 .social-network-list.align-social-vertical li svg {
   padding: 4px;
+}
+
+/* ------| Campo Fechas intena de eventos |----- */
+.field-name-field-fecha-eventos {
+  display: block;
+  padding: 15px 0 0;
+  margin: 0;
+  color: #e55d12;
 }
 
 /* ------| Campo body internas de nodos |----- */

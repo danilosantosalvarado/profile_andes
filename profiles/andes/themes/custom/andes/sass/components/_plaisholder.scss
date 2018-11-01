@@ -138,10 +138,23 @@
   padding: 0;
   overflow-x: hidden;
 }
+
 .container {
   // overflow: hidden;
   position: relative;
 }
+
+//container las internas de los eventos, noticias
+.container-internas {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include respond-to(xl) {
+  width: 550px;
+  margin: 0 auto;
+  }
+}
+
 body > .main-container.container-fluid {
   margin-top: 0px;
   @include respond-to(xl) {
@@ -226,27 +239,50 @@ h1.page-header {
 }
 
 /* ------| redes sociales scroll |----- */
-.pane-udla-simplified-social-share {
-  position: relative;
-}
 .social-network-list.align-social-vertical {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: -39px;
-  padding: 0;
-  z-index: 5;
-  transition: .3s;
+  padding: 10px 0;
+  margin: 0px;
+  @include respond-to(xl) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0;
+  }
+  &.social-initial {
+    position: absolute;
+    top: 0;
+    left: initial;
+  }
+  &.social-fixed {
+    position: fixed;
+    bottom: auto;
+  }
+  &.social-botton {
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: 0px;
+  }
   li {
+    &:first-child {
+      margin-left: 15px;
+      @include respond-to(xl) {
+        margin-left: 0px;
+      }
+    }
     width: 44px;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 0px 0px 5px;
+    margin: 0 5px 0 0;
+    @include respond-to(xl) {
+      margin: 0px 0px 5px;
+    }
+    &:last-child {
+      margin: 0px;
+    }
     &:hover {
       position: initial;
     }
@@ -256,12 +292,13 @@ h1.page-header {
   }
 }
 
-// .os-share-widget-interface-vertical {
-//   position: absolute;
-//   padding: 0px !important;
-//   margin-left: 32%;
-//   border-top: none !important;
-// }
+/* ------| Campo Fechas intena de eventos |----- */
+.field-name-field-fecha-eventos {
+  display: block;
+  padding: 15px 0 0;
+  margin: 0;
+  color: #e55d12;
+}
 
 /* ------| Campo body internas de nodos |----- */
 .field-name-body {
@@ -371,7 +408,6 @@ h1.page-header {
 
 
 /* ------| componente calogo portal infomativo (wien_Catalogo) |----- */
-
 .componente_catalogo .cursos  {
   position: relative;
   margin-bottom: 31px;
