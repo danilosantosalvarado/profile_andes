@@ -1,52 +1,6 @@
-# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
-
-/sites/*/settings.php
-/nbproject
-/profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-#sites/*/files
-#sites/*/private
-#/files/*
-/cache
-/nbproject
-
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-*.sh
-
-# Logs and databases #
-######################
-*.log
-
-
-# OS generated files #
-######################
-.DS_Store*
-.DS_Store
-ehthumbs.db
-
-Thumbs.db
-._*
-
-# Vim generated files #
-######################
-*.un~
-
-# Gulp and npm #
-##########
-package-lock.json
-node_modules
-
-#Phpstorm
-.idea
+sites/*/files
+sites/*/private

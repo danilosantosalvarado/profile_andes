@@ -125,6 +125,6 @@ dependencies[] = udla_tb_megamenu_alter
 ; Chat
 dependencies[] = activehelper_livehelp
 ; Information added by Drupal.org packaging script on 2018-04-25
-version = "7.59"
+version = "7.60"
 project = "drupal"
 datestamp = "1524673286"
