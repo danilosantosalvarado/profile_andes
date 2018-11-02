@@ -4,12 +4,13 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-equipo_de_trabajo{
+.view-equipo-de-trabajo {
   // tabs de equipos
-  ul.quicktabs-tabs {
+  ul {
     display: flex;
     overflow-x: scroll;
-    padding: 30px 0;
+    padding: 20px 0;
+    list-style: none;
     // width
     &::-webkit-scrollbar {
       width: 2px;
@@ -22,6 +23,12 @@
       flex: 1 1 0;
       padding: 0 20px;
       text-align: center;
+      .views-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
       a {
         font-family: $latoregular;
         padding: 5px 4px;
@@ -43,95 +50,83 @@
     }
   }
 }
+
 /* ------| Equipos  |----- */
 .view-contenido-equipo-de-trabajo {
-  padding: 20px 0 0 0;
-  .view-content {
-    @include respond-to(xl) {
-      margin-top: 30px;
+  > .view-content {
+    margin: 0px 0px 25px;
+    overflow: hidden;
+    .views-column {
+      @media screen and (min-width: 555px) and (max-width: 767px) {
+        width: 50%;
+        float: left;
+      }
     }
-    .views-row {
-      display: block;
-      .field-content {
-        .content-equipo {
-          position: relative;
-          min-height: 1px;
-          margin: 0 auto;
-          padding-right: 15px;
-          padding-left: 15px;
-          float: left;
-          width: 100%;
-          @include respond-to(xs) {
-            width: 50%;
-          }
-          @include respond-to(xl) {
-            width: 33.33333333%;
-          }
+  }
+}
+
+.equipos-de-trabajo {
+  margin-bottom: 15px;
+  overflow: hidden;
+  .content-equipo {
+    position: relative;
+    min-height: 1px;
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+    @include respond-to(xl) {
+      &:hover .caption {
+        z-index: 2;
+      }
+    }
+    // imagen
+    .imagen {
+      img {
+        border-radius: 50%;
+      }
+    }
+    // text
+    .caption {
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      z-index: -2;
+      @include respond-to(xl) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 25px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .views-field {
+        @include respond-to(xl) {
+          color:  color('white');
         }
-        //contenedor
-        .thumbnail {
-          position: relative;
-          display: inline-block;
-          background-color: transparent;
-          border: none;
-          padding: 0;
-          @include respond-to(xl) {
-            width: 279px;
-            height: 279px;
-            &:hover .caption {
-              z-index: 2;
-            }
-          }
-          // imagen
-          .imagen {
-            img {
-              border-radius: 50%;
-            }
-          }
-          // text
-          .caption {
-            width: 100%;
-            height: 100%;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            z-index: -2;
-            @include respond-to(xl) {
-              position: absolute;
-              top: 0;
-              left: 0;
-              border-radius: 50%;
-              background: rgba(0, 0, 0, 0.6);
-            }
-            p {
-              @include respond-to(xl) {
-                color:  color('white');
-              }
-              color:  color('black');
-              text-align: center;
-              margin: 0;
-              &:nth-child(1) {
-                font-family: $latobold;
-                @include font-size(m);
-                line-height: 1;
-                letter-spacing: 1px;
-              }
-              &:nth-child(2) {
-                font-family: $latolight;
-                @include font-size(m);
-              }
-              &:nth-child(3) {
-                font-family: $latolight;;
-                @include font-size(m);
-              }
-              &:nth-child(4) {
-                font-family: $latolight;
-                @include font-size(m);
-              }
-            }
-          }
+        color:  color('black');
+        text-align: center;
+        margin: 0;
+        &:nth-child(1) {
+          font-family: $latobold;
+          @include font-size(m);
+          line-height: 1;
+          letter-spacing: 1px;
+        }
+        &:nth-child(2) {
+          font-family: $latolight;
+          @include font-size(m);
+        }
+        &:nth-child(3) {
+          font-family: $latolight;;
+          @include font-size(m);
+        }
+        &:nth-child(4) {
+          font-family: $latolight;
+          @include font-size(m);
         }
       }
     }
@@ -205,3 +200,6 @@
     }
   }
 }
+
+
+

@@ -8042,23 +8042,24 @@ h1.page-header {
 // Equipos
 //------------------------------------------------------------------------------
 */
-.view-id-equipo_de_trabajo ul.quicktabs-tabs {
+.view-equipo-de-trabajo ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  padding: 30px 0;
+  padding: 20px 0;
+  list-style: none;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar {
+.view-equipo-de-trabajo ul::-webkit-scrollbar {
   width: 2px;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs::-webkit-scrollbar-thumb {
+.view-equipo-de-trabajo ul::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs li {
+.view-equipo-de-trabajo ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -8066,86 +8067,76 @@ h1.page-header {
   text-align: center;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs li a {
+.view-equipo-de-trabajo ul li .views-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.view-equipo-de-trabajo ul li a {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   padding: 5px 4px;
   text-decoration: none;
   font-size: 1.125rem;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs li a:hover {
+.view-equipo-de-trabajo ul li a:hover {
   text-decoration: none;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs li.active a {
+.view-equipo-de-trabajo ul li.active a {
   color: #888;
   border-bottom: 3px solid #46b9c0;
 }
 
-.view-id-equipo_de_trabajo ul.quicktabs-tabs li.active a:hover {
+.view-equipo-de-trabajo ul li.active a:hover {
   text-decoration: none;
 }
 
 /* ------| Equipos  |----- */
-.view-contenido-equipo-de-trabajo {
-  padding: 20px 0 0 0;
+.view-contenido-equipo-de-trabajo > .view-content {
+  margin: 0px 0px 25px;
+  overflow: hidden;
 }
 
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content {
-    margin-top: 30px;
+@media screen and (min-width: 555px) and (max-width: 767px) {
+  .view-contenido-equipo-de-trabajo > .view-content .views-column {
+    width: 50%;
+    float: left;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row {
-  display: block;
+.equipos-de-trabajo {
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .content-equipo {
+.equipos-de-trabajo .content-equipo {
   position: relative;
   min-height: 1px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
   float: left;
   width: 100%;
 }
 
-@media (min-width: 555px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .content-equipo {
-    width: 50%;
-  }
-}
-
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .content-equipo {
-    width: 33.33333333%;
-  }
-}
-
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail {
-  position: relative;
-  display: inline-block;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-@media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail {
-    width: 279px;
-    height: 279px;
-  }
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail:hover .caption {
+  .equipos-de-trabajo .content-equipo:hover .caption {
     z-index: 2;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .imagen img {
+.equipos-de-trabajo .content-equipo .imagen img {
   border-radius: 50%;
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
+.equipos-de-trabajo .content-equipo .caption {
   width: 100%;
   height: 100%;
   display: -webkit-inline-box;
@@ -8166,45 +8157,46 @@ h1.page-header {
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption {
+  .equipos-de-trabajo .content-equipo .caption {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 10px 25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.6);
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p {
+.equipos-de-trabajo .content-equipo .caption .views-field {
   color: #000;
   text-align: center;
   margin: 0;
 }
 
 @media (min-width: 992px) {
-  .view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p {
+  .equipos-de-trabajo .content-equipo .caption .views-field {
     color: #fff;
   }
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(1) {
+.equipos-de-trabajo .content-equipo .caption .views-field:nth-child(1) {
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1;
   letter-spacing: 1px;
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(2) {
+.equipos-de-trabajo .content-equipo .caption .views-field:nth-child(2) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(3) {
+.equipos-de-trabajo .content-equipo .caption .views-field:nth-child(3) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
 
-.view-contenido-equipo-de-trabajo .view-content .views-row .field-content .thumbnail .caption p:nth-child(4) {
+.equipos-de-trabajo .content-equipo .caption .views-field:nth-child(4) {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
 }
