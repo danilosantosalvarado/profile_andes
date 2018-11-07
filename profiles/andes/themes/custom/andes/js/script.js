@@ -8,74 +8,119 @@
 		jQuery(".modal-gallery-home").attr("src", imageSrc);
 	});
 
-	//funcion redes sociales scroll interna de eventos.
+	//funcion redes sociales vertical scroll interna de eventos.
 	$(window).ready(function() {
-    socialscroll();
-    $(window).resize(socialscroll);
+		var a = $(window).width();
+		if (a > 992) {socialDesktop(); }else {socialMobile(); }
 	});
 
-	function socialscroll() {
-		var panel = jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id');
-		var	panelId = '#'.concat(panel);
-		var $menu_admin = $('#admin-menu').outerHeight(true);
-		var $menu_navigation = $('.region-navigation').outerHeight(true);
+	$(window).resize(function(event) {
+		var a = $(window).width();
+		if (a > 991) {socialDesktop(); }else {socialMobile(); }
+	});
 
-		$(window).scroll(function() {
-			if ($(window).width() >= 991) {
-				$('.align-social-vertical').prependTo(panelId);
-				if( panelId !== null ) {
-					var altoRerdes = $('.align-social-vertical').outerHeight(true);
-					var scrollVentana = $(document).scrollTop();
-					var contenedorTop = $(panelId).offset().top-($menu_navigation+$menu_admin);
-					var contenerdorHeight = $(panelId).height() + contenedorTop;
-					var endVerticalScroll = contenerdorHeight - altoRerdes;
+	$(window).scroll(function() {
+		var a = $(window).width();
+		if (a > 991) {socialScrollDesktop(); }else {socialScrollMobile(); }
+	});
 
-					if (scrollVentana <= contenedorTop) {
-						// exist social-bottom class
-						if($('.align-social-vertical').hasClass('social-botton')){
-							$('.align-social-vertical').removeClass('social-botton');
+	function socialMobile(){
+
+		if($('.align-social-vertical').hasClass('social-botton')){$('.align-social-vertical').removeClass('social-botton'); }
+		if($('.align-social-vertical').hasClass('social-fixed')){$('.align-social-vertical').removeClass('social-fixed'); }
+		if($('.align-social-vertical').hasClass('social-initial')){$('.align-social-vertical').removeClass('social-initial'); }
+		$('.align-social-vertical').addClass('social-mobile');
+	}
+
+	function socialDesktop() {
+		if($('.align-social-vertical').hasClass('social-mobile')){
+			$('.align-social-vertical').removeClass('social-mobile');
+		}
+	}
+
+	function socialScrollDesktop(){
+		var validation = $('body').find('.align-social-vertical');
+		if (validation.length > 0){
+
+					var panel = jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id');
+					var	panelId = '#'.concat(panel);
+					var $menu_admin = $('#admin-menu').outerHeight(true);
+					var $menu_navigation = $('.region-navigation').outerHeight(true);
+
+					$('.align-social-vertical').prependTo(panelId);
+					if( panelId !== null ) {
+						var altoRerdes = $('.align-social-vertical').outerHeight(true);
+						var scrollVentana = $(document).scrollTop();
+						var contenedorTop = $(panelId).offset().top-($menu_navigation+$menu_admin);
+						var contenerdorHeight = $(panelId).height() + contenedorTop;
+						var endVerticalScroll = contenerdorHeight - altoRerdes;
+
+						if (scrollVentana <= contenedorTop) {
+							// exist social-bottom class
+							if($('.align-social-vertical').hasClass('social-botton')){
+								$('.align-social-vertical').removeClass('social-botton');
+							}
+							// exist social-fixed class
+							if($('.align-social-vertical').hasClass('social-fixed')){
+								$('.align-social-vertical').removeClass('social-fixed');
+							}
+							//social-initial
+							$('.align-social-vertical').removeAttr("style");
+							$('.align-social-vertical').addClass('social-initial');
+
 						}
-						// exist social-fixed class
-						if($('.align-social-vertical').hasClass('social-fixed')){
-							$('.align-social-vertical').removeClass('social-fixed');
-						}
-						//social-initial
-						$('.align-social-vertical').removeAttr("style");
-						$('.align-social-vertical').addClass('social-initial');
+						else if (scrollVentana >= contenedorTop) {
+							// exist social-initial class
+							if($('.align-social-vertical').hasClass('social-initial')){
+								$('.align-social-vertical').removeClass('social-initial');
+							}
+							// exist social-bottom class
+							if($('.align-social-vertical').hasClass('social-botton')){
+								$('.align-social-vertical').removeClass('social-botton');
+							}
+							//social-fixed
+							$('.align-social-vertical').addClass('social-fixed');
+							$(".social-fixed").css({top: ($menu_admin+$menu_navigation)});
+							// $('.align-social-vertical').addClass('social-fixed');
 
+
+						}
+						if(scrollVentana > (contenerdorHeight-altoRerdes)) {
+						  // exist social-fixed class
+							if($('.align-social-vertical').hasClass('social-fixed')){
+								$('.align-social-vertical').removeClass('social-fixed');
+							}
+							// exist social-initial class
+							if($('.align-social-vertical').hasClass('social-initial')){
+								$('.align-social-vertical').removeClass('social-initial');
+							}
+							$('.align-social-vertical').removeAttr("style");
+							//social-botton
+							$('.align-social-vertical').addClass('social-botton');
+						}
 					}
-					else if (scrollVentana >= contenedorTop) {
-						// exist social-initial class
-						if($('.align-social-vertical').hasClass('social-initial')){
-							$('.align-social-vertical').removeClass('social-initial');
-						}
-						// exist social-bottom class
-						if($('.align-social-vertical').hasClass('social-botton')){
-							$('.align-social-vertical').removeClass('social-botton');
-						}
-						//social-fixed
-						$(".align-social-vertical").css({top: ($menu_admin+$menu_navigation)});
-						$('.align-social-vertical').addClass('social-fixed');
+		}			
+	}
 
+	function socialScrollMobile(){
+		var validation = $('body').find('.social-mobile');
+		if (validation.length > 0){
+			var menu_admin = $('#admin-menu').outerHeight(true);
+			var menu_navigation = $('.region-navigation').outerHeight(true);
+			var scrollWindow = $(window).scrollTop();
+			var scrollVerticalMenu = $('.social-mobile').offset().top;
 
-					}
-					if(scrollVentana > (contenerdorHeight-altoRerdes)) {
-					  // exist social-fixed class
-						if($('.align-social-vertical').hasClass('social-fixed')){
-							$('.align-social-vertical').removeClass('social-fixed');
-						}
-						// exist social-initial class
-						if($('.align-social-vertical').hasClass('social-initial')){
-							$('.align-social-vertical').removeClass('social-initial');
-						}
-						$('.align-social-vertical').removeAttr("style");
-						//social-botton
-						$('.align-social-vertical').addClass('social-botton');
-					}
+			if (scrollWindow >= (scrollVerticalMenu-(menu_admin+menu_navigation))) {
+				$('.social-mobile').addClass('social-mobile-fixed');
+			}else {
+				if($('.social-mobile').hasClass('social-mobile-fixed')){
+					$('.social-mobile').removeClass('social-mobile-fixed');
 				}
 			}
-		});
+		}		
 	}
+	//fin funcion redes sociales vertical scroll interna de eventos.
+
 
 	var SlideClass = "";
 	var ParentSlideClass = "";
