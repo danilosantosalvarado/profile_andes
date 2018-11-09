@@ -241,9 +241,7 @@
   }
 }
 
-.logged-in .navbar.container-fluid {
-  top: 28px;
-}
+
 
 .region-navigation{
   width: 100%;
@@ -341,103 +339,74 @@
     }
   }
 }
-/* volver institucional*/
-#block-views-logos-header-block-2{
-  position: absolute;
-  list-style: none;
-  //border-left: solid 1px #979797;
-  background:#353535;
-  @include respond-to(xl){
-    //position: absolute;
-   // margin-top: 0px;
-  }
-  .element-invisible{
-    display: none;
-  }
-  a{
-    color: color('white');
-    float: left;
-    transition: 0.3s;
-    padding: 8px 25px;
-    @include font-size(xs);
-    font-family: $latolight;
-    &:hover,
-    &:focus{
-      //opacity: .5;
-      text-decoration: none !important;
-    }
-  }
-  h2.block-title{
-    display: none;
-  }
-}
-#block-lang-dropdown-language {
-  overflow: hidden;
-  position: relative;
-  padding-right: 10px;
-  display: none;
-  @include respond-to(xl){
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 50px;
-  }
-  .dropDown{
-    position: fixed;
-    top: 45px;
-    background: #000;
-    padding: 15px 20px;
-    list-style: none;
-    z-index: 99;
-    &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 10px solid #000;
-      position: absolute;
-      top: -10px;
-      right: 10px;
-    }
-    .item {
-      font-size: .8333rem;
-      cursor: pointer;
-      margin-bottom: 2px;
-      a {
-        color: #fff;
-        padding: 0 5px;
-      }
-    }
-  }
-  .block-title{
-    display: none;
-  }
-  .form-type-select{
-    &:before{
-      content: '...';
-      background: url(../img/icon-flecha-abajo.png) no-repeat center;
-      top: 10px;
-      position: absolute;
-      font-size: 0;
-      background-size: 15px;
-      z-index: 9;
-      width: 15px;
-      height: 14px;
-      right: 0;
-    }
-    .form-select{
-      padding: 8px 9px;
-      height: auto;
-      background: transparent;
-      border: none;
-      appearance: none;
-      color: color('gray-menu-soy');
 
-    }
-  }
-}
+// #block-lang-dropdown-language {
+//   overflow: hidden;
+//   position: relative;
+//   padding-right: 10px;
+//   display: none;
+//   @include respond-to(xl){
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0px;
+//     width: 50px;
+//   }
+//   .block-title{
+//     display: none;
+//   }
+//   .dropDown {
+//     position: fixed;
+//     top: 45px;
+//     background: #000;
+//     padding: 15px 20px;
+//     list-style: none;
+//     z-index: 99;
+//     &::before {
+//       content: '';
+//       width: 0;
+//       height: 0;
+//       border-left: 10px solid transparent;
+//       border-right: 10px solid transparent;
+//       border-bottom: 10px solid #000;
+//       position: absolute;
+//       top: -10px;
+//       right: 10px;
+//     }
+//     .item {
+//       font-size: .8333rem;
+//       cursor: pointer;
+//       margin-bottom: 2px;
+//       a {
+//         color: #fff;
+//         padding: 0 5px;
+//       }
+//     }
+//   }
+
+//   .form-type-select{
+//     &:before{
+//       content: '...';
+//       background: url(../img/icon-flecha-abajo.png) no-repeat center;
+//       top: 10px;
+//       position: absolute;
+//       font-size: 0;
+//       background-size: 15px;
+//       z-index: 9;
+//       width: 15px;
+//       height: 14px;
+//       right: 0;
+//     }
+//     .form-select{
+//       padding: 8px 9px;
+//       height: auto;
+//       background: transparent;
+//       border: none;
+//       appearance: none;
+//       color: color('gray-menu-soy');
+//     }
+//   }
+// }
 /* Bloque buscar */
 .barra-buscar{
   display: none;
@@ -695,97 +664,294 @@
 
 /* ----| menus yo soy destock |---- */
 // .wrapper-menu-soy
-.block-tb-megamenu {
+// .block-tb-megamenu {
   // @include respond-to(xl){
   //   width: 76%;
   //   float: left;
   //   height: 100%;
   // }
-  .tb-megamenu-menu-menu-top-soy {
-    display: block;
-    position: relative;
-    float: right;
-    .nav-collapse {
-      //float: right;
-      padding: 0 5%;
-      @include respond-to(xl){
-        padding: 0;
-      }
-      &.always-show {
-        ul.level-0 {
-          li.level-1:nth-child(1) {
-            a {
-              color: color('white');
-              cursor: inherit;
-              &:hover{
-                color: color('white');
-                transition: .3s;
-              }
-            }
-          }
-          li.level-1 {
-            &.menu-destacado {
-              background: #353535;
-              + .menu-destacado {
-                border-left: solid 1px #979797;
-              }
-              a {
-                color: color('white');
-                font-weight: weight(normal);
-                font-family: $latoregular;
-                font-size: 15px;
-                padding: 7.5px 13px;
-              }
-            }
-            > a {
-              @include respond-to(xl){
-                padding: 9px 10px;
-                background: transparent;
-                border-right: none;
-                font-family: $latolight;
-                //color: color('gray-menu-soy');
-                color: color('white');
-                @include font-size(xs);
-                font-weight: 400;
-                transition: .3s;
-                &:hover{
-                  color: color(white);
-                  transition: .3s;
-                }
+  // .tb-megamenu-menu-menu-top-soy {
+  //   display: block;
+  //   position: relative;
+  //   float: right;
+  //   .nav-collapse {
+  //     //float: right;
+  //     padding: 0 5%;
+  //     @include respond-to(xl){
+  //       padding: 0;
+  //     }
+  //     &.always-show {
+  //       ul.level-0 {
+  //         li.level-1:nth-child(1) {
+  //           a {
+  //             color: color('white');
+  //             cursor: inherit;
+  //             &:hover{
+  //               color: color('white');
+  //               transition: .3s;
+  //             }
+  //           }
+  //         }
+  //         li.level-1 {
+  //           &.menu-destacado {
+  //             background: #353535;
+  //             + .menu-destacado {
+  //               border-left: solid 1px #979797;
+  //             }
+  //             a {
+  //               color: color('white');
+  //               font-weight: weight(normal);
+  //               font-family: $latoregular;
+  //               font-size: 15px;
+  //               padding: 7.5px 13px;
+  //             }
+  //           }
+  //           > a {
+  //             @include respond-to(xl){
+  //               padding: 9px 10px;
+  //               background: transparent;
+  //               border-right: none;
+  //               font-family: $latolight;
+  //               //color: color('gray-menu-soy');
+  //               color: color('white');
+  //               @include font-size(xs);
+  //               font-weight: 400;
+  //               transition: .3s;
+  //               &:hover{
+  //                 color: color(white);
+  //                 transition: .3s;
+  //               }
 
-                &.dropdown-toggle{
-                  background-color: transparent;
-                  padding-right: 35px;
-                  font-weight: weight(normal);
-                  font-family: $latoregular;
-                  color: color('gray-menu-soy');
-                  @include font-size(xs);
-                  border-left: solid 1px #979797;
-                  &:before{
-                    content: '...';
-                    background: url(../img/icon-flecha-abajo.png) no-repeat center;
-                    top: 10px;
-                    position: absolute;
-                    font-size: 0;
-                    background-size: 14px;
-                    z-index: 9;
-                    width: 13px;
-                    height: 14px;
-                    right: 10px;
+  //               &.dropdown-toggle{
+  //                 background-color: transparent;
+  //                 padding-right: 35px;
+  //                 font-weight: weight(normal);
+  //                 font-family: $latoregular;
+  //                 color: color('gray-menu-soy');
+  //                 @include font-size(xs);
+  //                 border-left: solid 1px #979797;
+  //                 &:before{
+  //                   content: '...';
+  //                   background: url(../img/icon-flecha-abajo.png) no-repeat center;
+  //                   top: 10px;
+  //                   position: absolute;
+  //                   font-size: 0;
+  //                   background-size: 14px;
+  //                   z-index: 9;
+  //                   width: 13px;
+  //                   height: 14px;
+  //                   right: 10px;
+  //                 }
+  //                 &.buttom-guia{
+  //                   cursor: pointer;
+  //                   &:hover{
+  //                     color: color('white');
+  //                   }
+  //                   &.active{
+  //                     background-color: color('white');
+  //                     color: color('black');
+  //                     &:hover{
+  //                       color: color('black');
+  //                     }
+  //                     &:before{
+  //                       background: url(../img/icon-flecha-arriba-active.png) no-repeat center;
+  //                     }
+  //                   }
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+// }
+
+/*
+//------------------------------------------------------------------------------
+// Menu Top Soy
+//------------------------------------------------------------------------------
+*/
+.wrapper-menu-soy {
+  background-color: black;
+  display: none;
+  @include respond-to(xl){
+    display: block;
+    height: 37px;
+  }
+  .container {
+    // /* ----| volver institucional |---- */
+    #block-views-logos-header-block-2 {
+      float: left;
+      list-style: none;
+      background:#353535;
+      h2.block-title {
+        display: none;
+      }
+      // .element-invisible {
+      //   display: none;
+      // }
+      a {
+        height: 37px;
+        color: color('white');
+        float: left;
+        transition: 0.3s;
+        padding: 8px 25px;
+        @include font-size(xs);
+        font-family: $latolight;
+        border-left: solid 1px #979797;
+        white-space: nowrap;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+    // /* ----| Menu soy enlaces |----  */
+    .block-tb-megamenu {
+      // width: 80%;
+      width: auto;
+      padding: 0;
+      margin: 0;
+      float: right;
+      .tb-megamenu-menu-menu-top-soy {
+        display: block;
+        position: relative;
+        .nav-collapse {
+          &.always-show {
+            // /* ---| Nivel 0 |--- */
+            ul.level-0 {
+              // float: right;
+              // display: flex;
+              li.level-1:nth-child(1) {
+                a {
+                  color:  #a9a9a9;
+                  cursor: inherit;
+                  &:hover{
+                    color:  #a9a9a9;
+                    transition: .3s;
                   }
-                  &.buttom-guia{
-                    cursor: pointer;
+                }
+              }
+              li.level-1 {
+                height: 37px;
+                padding: 0 8px;
+                > a {
+                  @include respond-to(xl){
+                    font-family: $latoregular;
+                    font-weight: 400;
+                    @include font-size(xs);
+                    color: #a9a9a9;
+                    padding: 0px;
+                    background: transparent;
+                    border-right: none;
+                    white-space: nowrap;
+                    //color: color('gray-menu-soy');
+                    transition: .3s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
                     &:hover{
-                      color: color('white');
+                      color: color(white);
+                      transition: .3s;
                     }
-                    &.active{
-                      background-color: color('white');
-                      color: color('black');
-                      &:hover{
-                        color: color('black');
+                  }
+                }
+                // /* ---| Destacados |--- */
+                &.menu-destacado {
+                  background: #353535;
+                  padding: 0px;
+                  + .menu-destacado {
+                    border-left: solid 1px #979797;
+                  }
+                  a {
+                    color: color('white');
+                    font-weight: weight(normal);
+                    font-family: $latoregular;
+                    @include font-size(ms);
+                    padding: 0px 13px;
+                  }
+                }
+                // /* ---| Nivel 1 |--- */
+                &.dropdown {
+                  padding: 0px;
+                  > a {
+                    &.dropdown-toggle {
+                      background-color: transparent;
+                      padding-left: 8px;
+                      padding-right: 8px;
+                      font-weight: weight(normal);
+                      font-family: $latoregular;
+                      color: color('gray-menu-soy');
+                      @include font-size(xs);
+                      border-left: solid 1px #979797;
+                      .caret {
+                        content: '';
+                        width: 22px;
+                        height: 8px;
+                        display: block;
+                        background: url(../img/flechas-menu-soy.png) no-repeat 7px;
+                        background-size: cover;
+                        margin: 0px;
+                        border: none;
+                        z-index: 9;
                       }
-                      &:before{
-                        background: url(../img/icon-flecha-arriba-active.png) no-repeat center;
+                      &.buttom-guia {
+                        cursor: pointer;
+                        &:hover {
+                          color: color('white');
+                        }
+                        &.active {
+                          background-color: color('white');
+                          color: color('black');
+                          &:hover {
+                            color: color('black');
+                          }
+                          .caret  {
+                            background: url(../img/flechas-menu-soy.png) no-repeat -14px;
+                            background-size: cover;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  // /* ---| Nivel 1 |--- */
+                  .nivel-1-top-soy {
+                    display: none !important;
+                    position: fixed;
+                    &.active {
+                      display: block !important;
+                    }
+                    &.nav-child {
+                      overflow: hidden;
+                      background-color: transparent;
+                      height: 100%;
+                      left: 120% !important;
+                      position: relative;
+                      top: 0;
+                      margin: 0;
+                      transition: all .3s ease-in-out;
+                      @include respond-to(xl) {
+                        background-color: #ffffff;
+                        border: none;
+                        padding-left: 0;
+                        height: 332px;
+                        left: initial !important;
+                        overflow: hidden;
+                        z-index: 99;
+                        position: absolute;
+                        // top: 100%;
+                        position: fixed;
+                        top: 35px;
+                        left: 0 !important;
+                        margin-left: 0 !important;
+                      }
+                      > .mega-dropdown-inner {
+                        max-width: 1170px;
+                        margin: 0 auto;
+                        overflow: hidden;
                       }
                     }
                   }
@@ -796,55 +962,140 @@
         }
       }
     }
+    // /* ----| Cambio de idioma  |----  */
+    #block-lang-dropdown-language {
+      display: none;
+      position: relative;
+      padding-right: 10px;
+      @include respond-to(xl){
+        display: block;
+        padding: 0px;
+        float: right;
+      }
+      .block-title{
+        display: none;
+      }
+      .form-type-select {
+        width: 80px;
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        margin: 0px;
+        select {
+          visibility: hidden;
+          padding-right: 10px;
+        }
+        .container-language {
+          font-family: $latoregular;
+          @include font-size(xs);
+          color: #a9a9a9;
+          text-transform: capitalize;
+          vertical-align: middle;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 8px 15px;
+          transition: all 0.2s ease-in;
+          &:after {
+            content: "";
+            width: 16px;
+            height: 14px;
+            background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+            background-size: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+        }
+        .select-options {
+          display: none;
+          position: absolute;
+          top: 45px;
+          right: 0;
+          z-index: 999;
+          margin: 0;
+          padding: 15px 20px;
+          list-style: none;
+          background-color: black;
+          &.active {
+            display: block;
+          }
+          &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #000;
+            position: absolute;
+            top: -10px;
+            right: 10px;
+          }
+          li {
+            margin-bottom: 2px;
+            padding: 0 5px;
+            a {
+              font-family: $latoregular;
+              @include font-size(ms);
+              color: color('white');
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-/* menu mega menu top soy*/
 .tb-megamenu-menu-menu-top-soy {
-  .nivel-1-top-soy{
+  .nivel-1-top-soy {
       display: none !important;
       position: fixed;
     &.active{
       display: block !important;
     }
   }
-  .level-0 .level-1{
-    // &:nth-child(1) > .nav-child{
-    //     /* temporal */
-    //   //display: block;
-    //   //background-color: red;
-    // }
-    > .nav-child{
-      overflow: hidden;
-      background-color: transparent;
-      height: 100%;
-      left: 120% !important;
-      position: relative;
-      top: 0;
-      margin: 0;
-      transition: all .3s ease-in-out;
-      @include respond-to(xl){
-        background-color: #ffffff;
-        border: none;
-        padding-left: 0;
-        height: 332px;
-        left: initial !important;
-        overflow: hidden;
-        z-index: 99;
-        position: absolute;
-        top: 100%;
-        position: fixed;
-        top: 35px;
-        left: 0 !important;
-        margin-left: 0 !important;
-      }
-      > .mega-dropdown-inner{
-        max-width: 1170px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-    }
-  }
+  // .level-0 .level-1 {
+  //   // &:nth-child(1) > .nav-child{
+  //   //     /* temporal */
+  //   //   //display: block;
+  //   //   //background-color: red;
+  //   // }
+  //   > .nav-child{
+  //     overflow: hidden;
+  //     background-color: transparent;
+  //     height: 100%;
+  //     left: 120% !important;
+  //     position: relative;
+  //     top: 0;
+  //     margin: 0;
+  //     transition: all .3s ease-in-out;
+  //     @include respond-to(xl){
+  //       background-color: #ffffff;
+  //       border: none;
+  //       padding-left: 0;
+  //       height: 332px;
+  //       left: initial !important;
+  //       overflow: hidden;
+  //       z-index: 99;
+  //       position: absolute;
+  //       top: 100%;
+  //       position: fixed;
+  //       top: 35px;
+  //       left: 0 !important;
+  //       margin-left: 0 !important;
+  //     }
+  //     > .mega-dropdown-inner {
+  //       max-width: 1170px;
+  //       margin: 0 auto;
+  //       overflow: hidden;
+  //     }
+  //   }
+  // }
   // /* bloque nivel 1 del menu */
     .mega-nav.level-1 {
       width: 100%;
@@ -957,7 +1208,6 @@
         }
       }
     }
-
 }
 
 /*
@@ -1512,63 +1762,39 @@
 .wrapper-menu-soy {
   .container{
     padding: 0;
+    // border: 1px solid slateblue;
   }
 }
-.wrapper-menu-soy {
-  background-color: black;
-  display: none;
-  @include respond-to(xl){
-    display: block;
-    height: 37px;
-  }
-  .block-tb-megamenu {
-    width: 80%;
-    //float: right;
-    padding: 0;
-    margin: 0;
-    margin-left: 181px;
-  }
-  .container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: initial;
-    @include respond-to(xl){
-      width: 970px;
-    }
-    @include respond-to(xxl){
-      width: 1170px;
-      // padding: 0 15px;
-    }
-  }
-}
-.wrapper-mega-menu {
-  //background-color: color(white);
-  //height: 74px;
-  &.yellow{
-    background-color: color('yellow-menu');
-  }
-  &.black {
-    background-color: #fff200;
-  }
-  @include respond-to(xxl){
-    //height: 74px;
-  }
-  .container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: initial;
-    @include respond-to(xl){
 
-      width: 970px;
-    }
-    @include respond-to(xxl){
-      width: 1170px;
-      // padding: 0 15px;
-    }
-  }
-}
+
+
+// .wrapper-mega-menu {
+//   //background-color: color(white);
+//   //height: 74px;
+//   &.yellow{
+//     background-color: color('yellow-menu');
+//   }
+//   &.black {
+//     background-color: #fff200;
+//   }
+  // @include respond-to(xxl){
+  //   //height: 74px;
+  // }
+  // .container{
+  //   width: 100%;
+  //   height: 100%;
+  //   position: relative;
+  //   overflow: initial;
+  //   @include respond-to(xl){
+
+  //     width: 970px;
+  //   }
+  //   @include respond-to(xxl){
+  //     width: 1170px;
+  //     // padding: 0 15px;
+  //   }
+  // }
+// }
 
 .block-google-cse {
   position: fixed;
@@ -1626,5 +1852,21 @@
     button{
       display: none;
     }
+  }
+}
+
+/*
+//------------------------------------------------------------------------------
+// menu administrador de drupal
+//------------------------------------------------------------------------------
+*/
+.logged-in {
+  /* ----| Contenedor de menus |---- */
+  .navbar.container-fluid {
+    top: 28px;
+  }
+  /* ------| guia de servicios nivel 1 |----- */
+  .tb-megamenu-menu-menu-top-soy .level-0 .level-1 > .nav-child {
+    top: 65px !important;
   }
 }

@@ -1,4 +1,44 @@
 (function ($) {
+  /* ----| Select clone of language change |----*/
+  $(document).ready(function(){
+    var a = $(window).width();
+    if (a > 992) {
+      clone_select();
+    }
+  })
+  $(window).resize(function(event) {
+		if (a > 992) {
+      clone_select();
+    }
+	});
+
+  function clone_select(){
+    $select = $('.lang_dropdown_form select');
+    $select.parent('.form-item').append('<div class="container-language"></div><ul class="select-options"></ul>');
+    $select.children().each(function(index, value){
+      if($(this).attr('selected') != undefined){
+        $('.container-language').html('<div>'+$(this).text().substring(0, 3)+'</div>');
+      }else{
+        $('.select-options').html('<li id="'+$(this).val()+'"><a href="#">'+$(this).text()+'</a></li>');
+        $('.select-options li').click(function(e) {
+          jQuery(".lang_dropdown_form select").val($(this).attr('id')).trigger('change');
+        });
+      }
+    })
+    $('.container-language').click(function(e) {
+      e.stopPropagation();
+      if($('.select-options').hasClass('active')){
+        $('.select-options').removeClass('active');
+      }else{
+        $('.select-options').addClass('active');
+      }
+    });
+    $(document).click(function() {
+      $('.select-options').removeClass('active');
+    });
+  }
+  /* ----| End Select clone of language change |----*/
+
   /* Scroll menu cambio de color */
   $(window).scroll(function (event) {
     let scroll = $(window).scrollTop(),
