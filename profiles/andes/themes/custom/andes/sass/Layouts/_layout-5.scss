@@ -3,6 +3,21 @@
 // // Layouts 5
 // //------------------------------------------------------------------------------
 // */
+// 
+
+.view-slider-homes{
+  .slider-homes-layout-five{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 // /* ------| Slider fluid |----- */
 // .slider-homes-layout-five-container {

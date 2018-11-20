@@ -35,7 +35,7 @@
 		// on-click
 
 		$(function(){
-			$('a[href*=#]').click(function(e) {
+			$('#render-menu-lateral a[href*=#]').click(function(e) {
 				e.preventDefault();
 				$("#render-menu-lateral li").removeClass("a-active");
 				$(this).parent().addClass('a-active')

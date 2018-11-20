@@ -4,6 +4,20 @@
 //------------------------------------------------------------------------------
 */
 
+.view-slider-homes{
+  .slider-homes-layout-seven{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* ------| slider alineacion center |----- */
 .slider-homes-layout-seven {
   position: absolute;

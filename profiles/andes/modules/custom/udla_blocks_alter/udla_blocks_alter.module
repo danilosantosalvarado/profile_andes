@@ -72,6 +72,17 @@ function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id)
       ),
       '#suffix' => '<div class="colorfield-picker"></div>',
     );
+    $form['settings']['background_image'] = array(
+      '#title' => t('Background image'),
+      '#type' => 'media',
+      '#tree' => TRUE,
+      '#input' => TRUE,
+      '#description' => t('If no image is uploaded, this image will be shown on display.'),
+      '#media_options' => array(
+          'global' => array('types' => array('image' => 'image'), 'schemes' => array('public' => 'public', ), 'enabledPlugins' => array('upload' => 'upload', ), ),
+        ),
+      '#default_value' => isset($block->background_image) ? $block->background_image : '',
+    );
     if($form['module']['#value'] == 'tb_megamenu'){
       $form['settings']['background_color_change'] = array(
         '#type' => 'textfield',
@@ -105,9 +116,14 @@ function udla_blocks_alter_form_submit($form, $form_state)
 {
 
   if ($form_state['values']['form_id'] == 'block_admin_configure' || $form_state['values']['form_id'] == 'block_add_block_form') {
-    drupal_set_message(t('hola modulo bloque'), 'error');
+
     // Only save if value has changed.
     global $base_url;
+    if (isset($form_state['values']['background_image']) && $form['settings']['background_image']['#default_value'] != $form_state['values']['background_image'] && user_access('administer blocks')) {
+       
+      _update_block_data_image($form_state, 'background_image');
+    }
+
     if (isset($form_state['values']['background_color']) && $form['settings']['background_color']['#default_value'] != $form_state['values']['background_color'] && user_access('administer blocks')) {
       _update_block_data_css($form_state, 'background_color');
     }
@@ -278,10 +294,36 @@ function udla_blocks_alter_preprocess_block(&$vars){
 function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts)
 {
   if ($pane->type == 'block') {
+
     $block = block_load($content->module, $content->delta);
+
+ if (!empty($block->background_image)){
+    $fid = file_load($block->background_image);
+    if (isset($fid)&&($fid !== '0')) {
+      $file_uri = file_create_url(file_build_uri($block->background_image->uri));
+      $fid = $file_uri.$fid->filename;
+      $wrapper = $block->module.'-'.$block->delta;
+     $wrapper = str_replace("_", "-", $wrapper);
+    //array($block->bid )
+      drupal_add_js(array(
+        'udla_blocks_alter' => array(
+          'data_ids' => array(
+            $block->bid => array(
+              'info_block' => $wrapper,
+              'url_img' => $fid
+            )
+          )
+        )
+      ), 'setting');
+      drupal_add_js(drupal_get_path('module', 'udla_blocks_alter') . '/js/udla_blocks_alter.js');
+    }
+  }
+
+
     if (!empty($block->background_color)) {
       $result = _block_data_css($block->background_color, 'background');
       if (!empty($result)) {
+
         $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
       }
     }
@@ -312,6 +354,8 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
   }
 
 }
+
+
 // background color decanatura taxonomy
 function _update_taxonomy_data_css($form_state, $name_field)
 {
@@ -344,6 +388,16 @@ function _update_block_data_css($form_state, $name_field)
 
 
 }
+function _update_block_data_image($form_state, $name_field){  
+
+  db_update('block')
+    ->fields(array($name_field => $form_state['values'][$name_field]))
+    ->condition('module', $form_state['values']['module'])
+    ->condition('delta', $form_state['values']['delta'])
+    ->execute();
+  drupal_set_message(t('Assigned image like background.'));
+}
+
 function _block_data_css($value_field, $name_field)
 {
   $return = array();
@@ -361,6 +415,16 @@ function _block_data_css($value_field, $name_field)
   return $return;
 }
 
+function _change_imagen_class($block){
+      if ( isset($block)) {
+        $name=file_load($block->background_image);
+        $file_uri = file_create_url(file_build_uri($block->background_image->uri));          
+        drupal_add_js(array('udla_blocks_alter' => array('name_img' => $name)), 'setting');
+        drupal_add_js(array('udla_blocks_alter' => array('url_img' => $file_uri)), 'setting');
+        drupal_add_js(array('udla_blocks_alter' => array('datos' => $block)), 'setting');
+        drupal_add_js(drupal_get_path('module', 'udla_blocks_alter') . '/js/udla_blocks_alter.js');
+      }
+}
 
 
 

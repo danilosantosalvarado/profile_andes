@@ -70,6 +70,13 @@ function udla_blocks_alter_schema_alter(&$schema)
       'default' => '',
       'description' => 'String containing the classes for the block.',
     );
+    $schema['block']['fields']['background_image'] = array(
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => true,
+      'default' => '',
+      'description' => 'String containing the classes for the block.',
+    );
   }
 }
 
@@ -278,4 +285,18 @@ function udla_blocks_alter_update_7593(){
     'description' => 'String containing the classes for the block.',
   );
   db_add_field('block', 'hover_content_text', $spec);
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function udla_blocks_alter_update_7594(){
+  $spec = array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => true,
+    'default' => '',
+    'description' => 'String containing the classes for the block.',
+  );
+  db_add_field('block', 'background_image', $spec);
 }

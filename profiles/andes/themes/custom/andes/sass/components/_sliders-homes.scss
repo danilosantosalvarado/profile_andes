@@ -4,23 +4,32 @@
 //------------------------------------------------------------------------------
 */
 
+.container .view-slider-homes .views_slideshow_swiper-processed .iframe-conten {
+	padding-top: 45% !important;
+}
+
 /* ------| Slider Home|----- */
 .view-slider-homes {
 	.views_slideshow_swiper-processed {
+
 		ul {
-			padding: 0px;
-			list-style: none;
+			// padding: 0px;
+			// list-style: none;
 			margin: 0px;
 			li.swiper-slide {
-				overflow: hidden;
-				display: block;
-				height: auto;
+				// overflow: hidden;
+				// display: block;
+				// height: auto;
 				.views-slideshow-swiper-main-frame-row-item {
-					display: grid;
+					// display: grid;
 					width: 100%;
 					height: 100%;
 					.views-field.views-field-views-conditional {
 						width: 100%;
+						.field-content{
+							position: relative;
+							display: block;
+						}
 						.img-desktop{
 							display: none;
 							@include respond-to(xl) {
@@ -50,31 +59,54 @@
 						.cl-slider-homes-left-deca {
 							height: 100%;
 							.iframe-conten {
+								position: relative;
 								display: block;
 								overflow: hidden;
-								height: 50%;
-								@include respond-to(m) {
-									height: 100%;
+								padding-top: 94%;
+								height: 100%;
+								@include respond-to(xl) {
+									padding-top: 29%;
+								}
+								.img-responsive{
+									visibility: hidden;
 								}
 								.youtube-container--responsive {
 									padding-bottom: initial;
 									height: 100%;
+									position: absolute;
+									display: block;
+									top: 0;
+									bottom: 0;
+									right: 0;
+									left: 0;
 								}
 							}
 						}
 						.cl-slider-homes-bottom,
 						.cl-slider-homes-bottom-deca {
 							height: 100%;
-							@include respond-to(m) {
-								height: 79%;
-							}
+							
 							.iframe-conten {
+								position: relative;
 								display: block;
 								overflow: hidden;
+								padding-top: 94%;
 								height: 100%;
+								@include respond-to(xl) {
+									padding-top: 29%;
+								}
+								.img-responsive{
+									visibility: hidden;
+								}
 								.youtube-container--responsive {
 									padding-bottom: initial;
 									height: 100%;
+									position: absolute;
+									display: block;
+									top: 0;
+									bottom: 0;
+									right: 0;
+									left: 0;
 								}
 							}
 						}
@@ -82,25 +114,27 @@
 				}
 			}
 		}
+
 	}
 }
+
 
 /* ------| Ubicado Leth |----- */
 .view-slider-homes {
 	.slider-homes-left {
 		@extend %slider-homes-lef;
-  	//Titulo
-  	.title-slider-homes {
+		//Titulo
+		.title-slider-homes {
 			@extend %title-slider-home;
-  	}
-  	//Sub titulo
-  	.body-slider-homes {
+		}
+		//Sub titulo
+		.body-slider-homes {
 			@extend %body-slider-home;
-  	}
-  	//Buttom
-  	.link-slider-homes {
-  		@extend %link-slider-home;
-  	}
+		}
+		//Buttom
+		.link-slider-homes {
+			@extend %link-slider-home;
+		}
 	}
 }
 
@@ -110,27 +144,27 @@
 	.slider-homes-right {
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
-  		left: inherit;
+			left: inherit;
 			right: 10%;
 		}
 		//Titulo
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: right;
-    	}
+		.title-slider-homes {
+			@extend %title-slider-home;
+			@include respond-to(m) {
+				text-align: right;
+			}
 		}
 		//Sub titulo
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: right;
-    	}
+		.body-slider-homes {
+			@extend %body-slider-home;
+			@include respond-to(m) {
+				text-align: right;
+			}
 		}
 		//Buttom
-  	.link-slider-homes {
-  		@extend %link-slider-home;
-  	}
+		.link-slider-homes {
+			@extend %link-slider-home;
+		}
 	}
 }
 
@@ -139,35 +173,192 @@
 	.slider-homes-center {
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
-  		left: inherit;
+			left: inherit;
 			right: 30%;
 		}
-		//titulo
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: center;
-    	}
+			//titulo
+		.title-slider-homes {
+			@extend %title-slider-home;
+			@include respond-to(m) {
+				text-align: center;
+			}	
 		}
 		//sub titulo
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: center;
-    	}
+		.body-slider-homes {
+			@extend %body-slider-home;
+			@include respond-to(m) {
+				text-align: center;
+			}
 		}
 		//Buttom
-  	.link-slider-homes {
-  		@extend %link-slider-home;
-  	}
+		.link-slider-homes {
+			@extend %link-slider-home;
+		}
 	}
 }
 
 /* ------| Flechas slider |----- */
+.view-slider-homes{
+	.conten{
+		position: relative;
+		&-box{
+			position: relative;
+			&:before{
+				@extend %before-box-color;
+			}
+		}
+	}
+	// main swiper
+	.skin-default{
+		// container swiper
+		.views_slideshow_main{
+			position: relative;
+			&:hover {
+				.swiper-home-next,
+				.swiper-home-prev{
+					display: block;
+				}
+			}
+		}
+		// controls
+		.swiper-home-next,
+		.swiper-home-prev{
+			display: none;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			font-size: 0;
+			background-size: 40px 40px;
+			z-index: 1;
+			&:focus{
+				outline: none;
+			}
+			// responsive hidden controls
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
+		}
+		.swiper-home-prev{
+			left: 2%;
+			right: auto;
+			margin-top: -20px;
+			background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+		}
+		.swiper-home-next{
+			right: 2%;
+			left: auto;
+			margin-top: -20px;
+			background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
+		}
+
+		// pagination
+		.pagination-wrap{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			width: 100%;
+			text-align: center;
+		}
+		.swiper-pagination-home{
+			display: inline-block;
+			text-align: center;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			padding: 15px 0;
+			box-sizing: border-box;
+			z-index: 1;
+
+			.swiper-pagination-bullet{
+				width: 40px;
+				height: 18px;
+				border-bottom: 3px solid color(grey-secundary);
+				border-radius: 0;
+				padding: 0;
+				margin: 0 5px;
+				background-color: transparent;
+				opacity: 1;
+				
+				@include respond-to(xl) {
+					width: 63px;
+				}	
+				&-active{
+					border-color: color(yellow-defaul);
+				}
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+	}
+	
+	// global layout styles text
+	.views_slideshow_main {
+		.title-slider-homes{
+			@extend %title-slider-home;
+		}
+		.body-slider-homes{
+			@extend %body-slider-home;
+		}
+		.link-slider-homes {
+			@extend %link-slider-home;
+		}
+	}
+
+	.slider-homes-left{
+		.link-slider-homes{
+			text-align: right;
+		}
+	}
+
+	.slider-homes-right{
+		.link-slider-homes{
+			text-align: left;
+		}
+	}
+
+	.slider-homes-bottom-container{
+		// controls
+		.swiper-home-next,
+		.swiper-home-prev{
+			background-size: 28px 28px;
+			top: auto;
+			bottom: 55px;
+			@include respond-to(xl) {
+				bottom: 70px;
+			}
+		}
+		.swiper-home-prev{
+			background: url('../img/Icon/slide-prev.png') no-repeat center;
+		}
+		.swiper-home-next{
+			background: url('../img/Icon/slide-next.png') no-repeat center;
+		}
+		.pagination-wrap{
+			.swiper-pagination-bullet{
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				background-color: color(grey-secundary);
+				border-color: transparent;
+				&-active{
+					background-color: color(yellow-defaul);
+					border-color: color(yellow-defaul);
+				}
+			}
+		}
+	}
+}
+
+// this block can be removed
 .view-slider-homes {
 	.skin-default {
 		position: relative;
-		//Flechas paguinador
+		//Flechas paginator
+		.slider-homes-specials-control,
 		.slider-homes-right-control,
 		.slider-homes-center-control,
 		.slider-homes-left-control,
@@ -192,10 +383,6 @@
 					background-size: 40px 40px;
 					z-index: 1;
 				}
-				//Buttom Pause
-				.views-slideshow-controls-text-pause {
-					display: none;
-				}
 				//Button Deracha
 				a[rel='next'] {
 					display: none;
@@ -215,6 +402,7 @@
 	}
 	// //Hover flechas paguinador
 	&:hover {
+		.slider-homes-specials-control,
 		.slider-homes-right-control,
 		.slider-homes-center-control,
 		.slider-homes-left-control,
@@ -232,6 +420,7 @@
 		}
 	}
 }
+// end block
 
 /* ------| Bulles Slider right, left, center en linea |----- */
 .view-slider-homes {
@@ -250,6 +439,7 @@
 			bottom: 3%;
 			right: 0px;
 			z-index: 9;
+			box-sizing: border-box;
 			@include respond-to(xl) {
 				bottom: 10%;
 			}
@@ -270,6 +460,7 @@
 					border-bottom: 3px solid color('grey-secundary');
 					padding: 0;
 					margin: 0 5px;
+					box-sizing: border-box;
 					@include respond-to(xl) {
 						width: 63px;
 						margin: 0px
@@ -292,12 +483,13 @@
 	.field-content {
 		.slider-homes-bottom {
 			background-color: #f4f1f1;
-			border-bottom: 1px solid #ebba00;
+			border-bottom: 2px solid #ebba00;
+			box-sizing: border-box;
 			@include respond-to(m) {
 				padding: 20px 30px;
 			}
 			.conten {
-				padding: 20px 15px 39px;
+				padding: 20px 15px 42px;
 				overflow: hidden;
 				margin: 0 auto;
 				@include respond-to(xs) {
@@ -314,24 +506,25 @@
 				@include respond-to(xxxl) {
 					width: 1170px;
 				}
+
 				//titulo
 				.title-slider-homes {
 					width: 100%;
 					font-family: $latobold;
 					@include font-size(l);
-					@include margin(.417 0);
+					// @include margin(.417 0);
 					text-transform: uppercase;
 					color: #585863;
-					min-height: 50px;
 					line-height: 20.9px;
 					padding-bottom: 10px;
+					box-sizing: border-box;
 					@include respond-to(xs) {
+						min-height: 50px;	
 						float: left;
-					}
-					@include respond-to(xs) {
 						width: 41.66666667%;
 						text-align: right;
-						padding-right: 25px;
+						padding-right: 20px;
+						padding-left: 20px;
 						padding-bottom: 0;
 					}
 				}
@@ -357,27 +550,30 @@
 				}
 				//button
 				.link-slider-homes {
-					margin: 15px 0;
+					// margin: 15px 0;
+					padding: 0px;
 					@include respond-to(xs) {
-					margin: 0;
+						padding: 0px 10px;
+						margin: 0;
 					}
 					a {
 						max-width: 145px;
 						display: block;
 						text-decoration: none;
 						text-align: center;
-						@include margin(0 auto);
+						// @include margin(0 auto);
 						border: 1px solid #484851;
 						font-family: $latolight;
 						@include font-size(m);
 						color: #484851;
 						padding: 10px 35px;
+						box-sizing: border-box;
 						@include respond-to(xs) {
-							float: right;
-							@include margin(.834 0 0 auto);
+							// float: right;
+							// @include margin(.834 0 0 auto);
 						}
 						@include respond-to(m) {
-							@include margin(.834 .834 0 auto);
+							// @include margin(.834 .834 0 auto);
 						}
 						&:hover {
 							background: color('grey-dark');
@@ -406,7 +602,7 @@
 					position: absolute;
 					left: 2%;
 					top: initial;
-    			bottom: 91px;
+					bottom: 70px;
 					font-size: 0;
 					background: url('../img/Icon/slide-prev.png') no-repeat center;
 					background-size: 28px 28px;
@@ -425,7 +621,7 @@
 					font-size: 0;
 					position: absolute;
 					top: initial;
-    			bottom: 91px;
+					bottom: 70px;
 					left: inherit;
 					right: 2%;
 					background: url('../img/Icon/slide-next.png') no-repeat center;
@@ -445,6 +641,7 @@
 			padding: 0;
 			z-index: 1;
 			@include bullet(transparent, grey-secundary, yellow-defaul, yellow-defaul);
+			padding: 15px 0;
 		}
 	}
 }
@@ -461,22 +658,10 @@
 		@extend %slider-homes-lef;
 		max-width: 75%;
 		.conten{
-
 			//Titulo
 			.title-slider-homes {
 				@extend %title-slider-home;
 				position: relative;
-				&:before {
-					content: "";
-					width: 102%;
-					height: 100%;
-					position: absolute;
-					top: 0px;
-					left: -13px;
-					z-index: -1;
-					background-color: transparent;
-					opacity: .5;
-				}
 			}
 			//Sub titulo
 			.body-slider-homes {
@@ -484,17 +669,6 @@
 				padding: 1.875rem 0;
 				margin: 0px;
 				position: relative;
-				&:before {
-					content: "";
-					width: 102%;
-					height: 100%;
-					position: absolute;
-					top: 0px;
-					left: -13px;
-					z-index: -1;
-					background-color: transparent;
-					opacity: .5;
-				}
 			}
 			//Buttom
 			.link-slider-homes {
@@ -531,52 +705,30 @@
 	.slider-homes-right-deca {
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
-  		left: inherit;
+			left: inherit;
 			right: 10%;
 			max-width: 75%;
 		}
 		//Titulo
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: right;
-			}
+		.title-slider-homes {
 			position: relative;
-			&:before {
-				content: "";
-				width: 102%;
-				height: 100%;
-				position: absolute;
-				top: 0px;
-				left: -13px;
-				z-index: -1;
-				background-color: transparent;
-				opacity: .5;
+			@extend %title-slider-home;
+			@include respond-to(m) {
+				text-align: right;
 			}
 		}
 		//Sub titulo
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: right;
+		.body-slider-homes {
+			@extend %body-slider-home;
+			@include respond-to(m) {
+				text-align: right;
 			}
 			padding: 1.875rem 0;
 			margin: 0px;
 			position: relative;
-			&:before {
-				content: "";
-				width: 102%;
-				height: 100%;
-				position: absolute;
-				top: 0px;
-				left: -13px;
-				z-index: -1;
-				background-color: transparent;
-				opacity: .5;
-			}
 		}
 		//Buttom
-  	.link-slider-homes {
+		.link-slider-homes {
 			@extend %link-slider-home;
 			a {
 				background: transparent;
@@ -602,7 +754,7 @@
 					border: 1px solid white;
 				}
 			}
-  	}
+		}
 	}
 }
 
@@ -611,54 +763,33 @@
 	.slider-homes-center-deca {
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
-  		left: inherit;
+			left: inherit;
 			right: 30%;
 			max-width: 75%;
 		}
+
 		//titulo
-    .title-slider-homes {
-      @extend %title-slider-home;
-      @include respond-to(m) {
-      	text-align: center;
+		.title-slider-homes {
+			@extend %title-slider-home;
+			@include respond-to(m) {
+				text-align: center;
 			}
 			padding: 1.875rem 0;
 			margin: 0px;
-			position: relative;
-			&:before {
-				content: "";
-				width: 102%;
-				height: 100%;
-				position: absolute;
-				top: 0px;
-				left: -13px;
-				z-index: -1;
-				background-color: transparent;
-				opacity: .5;
-			}
+			position: relative;		
 		}
-		//sub titulo
-    .body-slider-homes {
-    	@extend %body-slider-home;
-    	@include respond-to(m) {
-    		text-align: center;
+			//sub titulo
+		.body-slider-homes {
+			@extend %body-slider-home;
+			@include respond-to(m) {
+				text-align: center;
 			}
 			padding: 1.875rem 0;
 			margin: 0px;
 			position: relative;
-			&:before {
-				content: "";
-				width: 102%;
-				height: 100%;
-				position: absolute;
-				top: 0px;
-				left: -13px;
-				z-index: -1;
-				background-color: transparent;
-				opacity: .5;
-			}
 		}
 		//Buttom
-  	.link-slider-homes {
+		.link-slider-homes {
 			@extend %link-slider-home;
 			a {
 				background: transparent;
@@ -684,7 +815,7 @@
 					border: 1px solid white;
 				}
 			}
-  	}
+		}
 	}
 }
 
@@ -698,8 +829,9 @@
 			@include respond-to(m) {
 				padding: 20px 30px;
 			}
+			
 			.conten {
-				padding: 20px 15px 39px;
+				padding: 20px 15px 42px;
 				margin: 0 auto;
 				position: relative;
 				@include respond-to(m) {
@@ -767,7 +899,7 @@
 					position: absolute;
 					left: 2%;
 					top: initial;
-    			bottom: 91px;
+					bottom: 70px;
 					font-size: 0;
 					background: url('../img/Icon/slide-prev.png') no-repeat center;
 					background-size: 28px 28px;
@@ -786,7 +918,7 @@
 					font-size: 0;
 					position: absolute;
 					top: initial;
-    			bottom: 91px;
+					bottom: 70px;
 					left: inherit;
 					right: 2%;
 					background: url('../img/Icon/slide-next.png') no-repeat center;

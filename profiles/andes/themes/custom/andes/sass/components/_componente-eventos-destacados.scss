@@ -5,112 +5,190 @@
 */
 
 .view-id-componente_eventos {
-  .swiper-container-horizontal {
-    @include respond-to(xl) {
-			width: 90%;
+	.swiper-container-horizontal {
+		@include respond-to(xl) {
+			// width: 90%;
 			margin: 0 auto;
-			padding: 0 10px;
+			// padding: 0 50px;
+			// padding: 0 10px;
 		}
 		ul {
 			list-style: none;
 			padding: 0px;
 			li {
-        //Img
-        .views-field-view {
-          img{
-            width: 100%;
-          }
-          .youtube-container--responsive {
-            padding-bottom: 62.25%;
-          }
-        }
-        .box-content {
-          position: relative;
-          padding: 25px;
-          border-top: 3px solid color('blue-light');
-          background: #f4f1f1;
-          @include respond-to(xs) {
-            min-height: 326px;
-          }
-          //Titulo
-          .views-field-title {
-            font-family: $crimson-semibold;
-            @include type-layout(sl, .90);
-            // color: #484851;
-            margin: 15px 0 20px;
-            @include respond-to(m) {
-              @include font-size(ll);
-            }
-          }
-          //fecha
-          .content-date {
-            margin-bottom: 16px;
-            .views-field  {
-              display: flex;
-              > span {
-                font-family: $latobold;
-                @include font-size(xs);
-                // color: #333;
-                padding-right: 5px;
-              }
-              .field-content {
-                font-family: $latoregular;
-                @include font-size(xs);
-              }
-            }
-          }
-          //lugar
-          .content-description {
-            margin-bottom: 16px;
-            .views-field-additional {
-              > span:nth-child(1) {
-                font-family: $latobold;
-                @include font-size(xs);
-                // color: #333;
-                padding-right: 5px;
-              }
-              span:nth-child(2) {
-                font-family: $latoregular;
-                @include font-size(xs);
-              }
-            }
-          }
-          //Button
-          .views-field-view-node {
-            a {
-              display: block;
-              width: 180px;
-              font-family: $latoregular;
-              @include font-size(m);
-              color: color('grey-dark');
-              text-decoration: none;
-              text-align: center;
-              border: 1px solid color('blue-light');
-              padding: 10px 20px;
-              margin: 0 auto;
-              outline: none;
-              position: absolute;
-              bottom: 25px;
-              right: 0;
-              left: 0;
-              @include respond-to(xs) {
-                right: 25px;
-                left: inherit;
-                max-width: 150px;
-              }
-              &:hover {
-                background-color: color('blue-light');
-                color: #ffffff;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+				//Img
+				.views-field-view {
+					img{
+						width: 100%;
+					}
+					.youtube-container--responsive {
+						padding-bottom: 62.25%;
+					}
+				}
+				.box-content {
+					position: relative;
+					padding: 25px;
+					border-top: 3px solid color('blue-light');
+					background: #f4f1f1;
+					@include respond-to(xs) {
+						min-height: 326px;
+					}
+					//Titulo
+					.views-field-title {
+						font-family: $crimson-semibold;
+						@include type-layout(sl, .90);
+						// color: #484851;
+						margin: 15px 0 20px;
+						@include respond-to(m) {
+							@include font-size(ll);
+						}
+					}
+					//fecha
+					.content-date {
+						margin-bottom: 16px;
+						.views-field  {
+							display: flex;
+							> span {
+								font-family: $latobold;
+								@include font-size(xs);
+								// color: #333;
+								padding-right: 5px;
+							}
+							.field-content {
+								font-family: $latoregular;
+								@include font-size(xs);
+							}
+						}
+					}
+					//lugar
+					.content-description {
+						margin-bottom: 16px;
+						.views-field-additional {
+							> span:nth-child(1) {
+								font-family: $latobold;
+								@include font-size(xs);
+								// color: #333;
+								padding-right: 5px;
+							}
+							span:nth-child(2) {
+								font-family: $latoregular;
+								@include font-size(xs);
+							}
+						}
+					}
+					//Button
+					.views-field-view-node {
+						text-align: center;
+					    margin-left: 25px;
+					    margin-right: 25px;
+					    position: absolute;
+					    bottom: 25px;
+					    left: 0;
+					    right: 0;
+						@include respond-to(xs) {
+							text-align: right;
+							margin-left: 25px;
+							margin-right: 25px;
+						}
+						a {
+							display: inline-block;
+							width: 180px;
+							font-family: $latoregular;
+							@include font-size(m);
+							color: color('grey-dark');
+							text-decoration: none;
+							text-align: center;
+							border: 1px solid color('blue-light');
+							padding: 10px 20px;
+							margin: 0 auto;
+							outline: none;
+							position: relative;
+							@include respond-to(xs) {
+								// right: 25px;
+								// left: inherit;
+								max-width: 150px;
+							}
+							&:hover {
+								background-color: color('blue-light');
+								color: #ffffff;
+							}
+						}
+						.field-content{
+							display: block
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 //Flechas paginador
+.view-componente-eventos {
+	.skin-default{
+		.views_slideshow_main{
+			position: relative;
+			width: 90%;
+			margin: 0 auto;
+		}
+		// controls
+		.swiper-events-hightlight-next,
+		.swiper-events-hightlight-prev{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			border: 1px solid #777;
+			background-size: 40px 40px;
+			&:focus{
+				outline: none;
+			}
+		}
+		.swiper-events-hightlight-prev{
+			left: 0px;
+			right: auto;
+			background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+		}
+		.swiper-events-hightlight-next{
+			right: 0px;
+			left: auto;
+			background: url('../img/Icon/arrow_next.svg') no-repeat center;
+		}
+
+		// pagination
+		.pagination-wrap{
+			position: relative;
+			bottom: 0px;
+			width: 100%;
+			text-align: center;
+		}
+		.swiper-pagination-events-hightlight{
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			padding: 15px 0;
+			width: 100px;
+			box-sizing: border-box;
+			z-index: 1;
+			.swiper-pagination-bullet{
+				width: 15px;
+				height: 15px;
+				margin: 0 5px;
+				border: 1px solid color(blue-light);
+				background-color: white;
+				opacity: 1;
+				&-active{
+					background-color: color(blue-light);
+				}
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+	}
+
+}
+
 .view-id-componente_eventos {
 	.skin-default {
 		position: relative;

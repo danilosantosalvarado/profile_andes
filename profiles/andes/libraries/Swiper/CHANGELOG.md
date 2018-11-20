@@ -1,5 +1,35 @@
 # Change Log
 
+## [Swiper 4.4.2](https://github.com/nolimits4web/swiper/compare/v4.4.1...v4.4.2) - Released on November 1, 2018
+  * New `touchStartForcePreventDefault` parameter to force touch start event prevent default
+  * Breakpoints fix when breakpoint keys are strings
+  * Fixed issue when draggable scrollbar may not work on desktop Safari
+  * Fixed issue with wrong sort of Virtual Slides
+  * Minor fixes
+
+## [Swiper 4.4.1](https://github.com/nolimits4web/swiper/compare/v4.4.0...v4.4.1) - Released on September 14, 2018
+  * Fixed issue with preventing touchstart event
+
+## [Swiper 4.4.0](https://github.com/nolimits4web/swiper/compare/v4.3.5...v4.4.0) - Released on September 14, 2018
+  * Core
+    * New `centerInsufficientSlides` parameter to center slides if the amount of slides less than `slidesPerView`
+    * New `breakpointsInverse` parameter (boolean), if enabled then it will count breakpoints in reversed direction, e.g. will override parameters if window width is more than specified breakpoint
+  * Virtual Slides
+    * New `addSlidesBefore` and `addSlidesAfter` parameters to increase amount of pre-rendered slides
+  * Thumbs
+    * All new "Thumbs" module/component designed to control slider thumbnails, in more logical and correct way than with Controller module.
+  * Lots of minor fixes
+
+## [Swiper 4.3.5](https://github.com/nolimits4web/swiper/compare/v4.3.3...v4.3.5) - Released on July 31, 2018
+  * Core
+    * `iOSEdgeSwipeThreshold` parameter renamed to just `edgeSwipeThreshold`. Old `iOSEdgeSwipeThreshold` name is still supported
+    * Improved observer performance if there are many mutations at a time. Thanks to @rayvincent-bsd
+  * Controller
+    * Fixed issue with wrong auto height resizing
+  * Scrollbar
+    * Fixed issue when it was using active event listeners instead of passive. Thanks to @nyon
+  * Minor fixes
+
 ## [Swiper 4.3.3](https://github.com/nolimits4web/swiper/compare/v4.3.2...v4.3.3) - Released on June 5, 2018
   * Core
     * Fixed issue when slidePrev goes to wrong slide #2650
