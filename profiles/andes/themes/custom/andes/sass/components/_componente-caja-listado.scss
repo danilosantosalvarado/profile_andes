@@ -64,13 +64,15 @@
             left: 0px;
             width: 100%;
             height: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
             .caja-titulo {
               font-family: $latoblack;
               @include font-size(l);
               text-transform: uppercase;
               color: color('white');
               text-align: center;
-              margin: 20px 0;
+              margin: 20px 0 10px 0;
             }
             .caja-body {
               font-family: $crimson-textregular;

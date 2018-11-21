@@ -325,6 +325,7 @@
 			background-size: 28px 28px;
 			top: auto;
 			bottom: 55px;
+			display: block;
 			@include respond-to(xl) {
 				bottom: 70px;
 			}

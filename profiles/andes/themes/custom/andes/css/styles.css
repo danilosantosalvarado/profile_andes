@@ -4035,6 +4035,7 @@ h1.page-header {
   background-size: 28px 28px;
   top: auto;
   bottom: 55px;
+  display: block;
 }
 
 @media (min-width: 992px) {
@@ -7919,6 +7920,9 @@ h1.page-header {
   left: 0px;
   width: 100%;
   height: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .view-id-componente_layout_4 .view-content .views-column .views-field-views-conditional .caja-listado .container-title-desc .caja-titulo {
@@ -7927,7 +7931,7 @@ h1.page-header {
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 .view-id-componente_layout_4 .view-content .views-column .views-field-views-conditional .caja-listado .container-title-desc .caja-body {
