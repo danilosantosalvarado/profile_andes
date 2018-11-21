@@ -34,7 +34,9 @@
 				margin: 0 5px;
 				background: black;
 				// background-color: transparent;
-				opacity: 0.6;
+				opacity: 0.8;
+				overflow: hidden;
+				box-sizing: border-box;
 	
 				&-active{
 					opacity: 1;
@@ -42,6 +44,13 @@
 				}
 				&:focus{
 					outline: none;
+				}
+
+				img{
+					object-fit: cover;
+					min-width: 100%;
+					max-width: auto;
+					min-height: 100%;
 				}
 			}
 		}

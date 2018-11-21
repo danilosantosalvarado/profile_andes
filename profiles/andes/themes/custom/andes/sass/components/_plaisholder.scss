@@ -203,8 +203,15 @@ body.logged-in  > .main-container.container-fluid {
 
 /* ------| Titles nodos |----- */
 .pane-content {
-  > h1  {
+  > h1 {
+    font-family: $latoblack;
+    @include font-size(xl);
+    text-transform: uppercase;
+    color: #484851;
     text-align: center;
+    line-height: normal;
+    margin: 0px;
+    padding: 40px 0;
   }
 }
 
