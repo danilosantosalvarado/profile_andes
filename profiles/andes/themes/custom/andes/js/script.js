@@ -1,15 +1,15 @@
 "use strict";
 
-// TODO: REMEMOVE THIS SECTION
-/* ocultar el menu 
-$ = jQuery;
-(function($){
+// TODO: REMEMOVE THIS SECTION - ocultar el menu 
 
-	setTimeout(function(){
-		$('header').empty();
-	}, 400);
-})(jQuery);
-*/
+// $ = jQuery;
+// (function($){
+
+// 	setTimeout(function(){
+// 		$('header').empty();
+// 	}, 400);
+// })(jQuery);
+
 // -- END SECTION --
 
 (function($) {
