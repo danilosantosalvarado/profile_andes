@@ -13,4 +13,15 @@
     color: #484851;
     padding: 5px 0;
   }
+  .conten{
+    padding: 0 25px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    .title-slider-homes,
+    .body-slider-homes,
+    .link-slider-homes {
+      text-align: center;
+    }
+  }
 }

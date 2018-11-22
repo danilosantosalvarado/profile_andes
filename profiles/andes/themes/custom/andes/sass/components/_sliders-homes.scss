@@ -4,120 +4,89 @@
 //------------------------------------------------------------------------------
 */
 
-.container .view-slider-homes .views_slideshow_swiper-processed .iframe-conten {
-	padding-top: 29% !important;
+.container .view-slider-homes {
+	.views_slideshow_main .iframe-conten {
+		padding-top: 29% !important;
+	}
 }
 
 /* ------| Slider Home|----- */
 .view-slider-homes {
+
 	.views_slideshow_swiper-processed {
 
-		ul {
-			// padding: 0px;
-			// list-style: none;
-			margin: 0px;
-			li.swiper-slide {
-				// overflow: hidden;
-				// display: block;
-				// height: auto;
-				.views-slideshow-swiper-main-frame-row-item {
-					// display: grid;
-					width: 100%;
+		.views-field.views-field-views-conditional {
+			width: 100%;
+		}
+		
+		.field-content{
+			position: relative;
+			display: block;
+		}
+		.img-desktop{
+			display: none;
+			@include respond-to(xl) {
+				display: block;
+			}
+		}
+		.img-mobile {
+			display: block;
+			@include respond-to(xl) {
+				display: none;
+			}
+		}
+		.img-content {
+			.img-mobile {
+				img {
+				width: 100%;
+				height: 100%;
+				}
+			}
+		}
+		//imagen slider destock
+		.cl-slider-homes-layout-one,
+		.cl-slider-homes-layout-two,
+		.cl-slider-homes-layout-three,
+		.cl-slider-homes-layout-four,
+		.cl-slider-homes-layout-five,
+		.cl-slider-homes-layout-seven,
+		.cl-slider-homes-layout-eleven,
+		.cl-slider-homes-right,
+		.cl-slider-homes-center,
+		.cl-slider-homes-left,
+		.cl-slider-homes-right-deca,
+		.cl-slider-homes-center-deca,
+		.cl-slider-homes-left-deca,
+		.cl-slider-homes-bottom,
+		.cl-slider-homes-bottom-deca {
+			height: 100%;
+			.iframe-conten {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				padding-top: 94%;
+				height: 100%;
+				@include respond-to(xl) {
+					padding-top: 29%;
+				}
+				.img-responsive{
+					visibility: hidden;
+				}
+				.youtube-container--responsive {
+					padding-bottom: initial;
 					height: 100%;
-					.views-field.views-field-views-conditional {
-						width: 100%;
-					}
-					
-					.field-content{
-						position: relative;
-						display: block;
-					}
-					.img-desktop{
-						display: none;
-						@include respond-to(xl) {
-							display: block;
-						}
-					}
-					.img-mobile {
-						display: block;
-						@include respond-to(xl) {
-							display: none;
-						}
-					}
-					.img-content {
-						.img-mobile {
-							img {
-							width: 100%;
-							height: 100%;
-							}
-						}
-					}
-					//imagen slider destock
-					.cl-slider-homes-right,
-					.cl-slider-homes-center,
-					.cl-slider-homes-left,
-					.cl-slider-homes-right-deca,
-					.cl-slider-homes-center-deca,
-					.cl-slider-homes-left-deca {
-						height: 100%;
-						.iframe-conten {
-							position: relative;
-							display: block;
-							overflow: hidden;
-							padding-top: 94%;
-							height: 100%;
-							@include respond-to(xl) {
-								padding-top: 29%;
-							}
-							.img-responsive{
-								visibility: hidden;
-							}
-							.youtube-container--responsive {
-								padding-bottom: initial;
-								height: 100%;
-								position: absolute;
-								display: block;
-								top: 0;
-								bottom: 0;
-								right: 0;
-								left: 0;
-							}
-						}
-					}
-					.cl-slider-homes-bottom,
-					.cl-slider-homes-bottom-deca {
-						height: 100%;
-						.iframe-conten {
-							position: relative;
-							display: block;
-							overflow: hidden;
-							padding-top: 94%;
-							height: 100%;
-							@include respond-to(xl) {
-								padding-top: 29%;
-							}
-							.img-responsive{
-								visibility: hidden;
-							}
-							.youtube-container--responsive {
-								padding-bottom: initial;
-								height: 100%;
-								position: absolute;
-								display: block;
-								top: 0;
-								bottom: 0;
-								right: 0;
-								left: 0;
-							}
-						}
-					}
+					position: absolute;
+					display: block;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					left: 0;
 				}
 			}
 		}
 
 	}
 }
-
 
 /* ------| Ubicado Leth |----- */
 .view-slider-homes {
@@ -137,7 +106,6 @@
 		}
 	}
 }
-
 
 /* ------| Ubicado Rigth |----- */
 .view-slider-homes {
@@ -173,8 +141,10 @@
 	.slider-homes-center {
 		@extend %slider-homes-lef;
 		@include respond-to(m) {
-			left: inherit;
-			right: 30%;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
 		}
 			//titulo
 		.title-slider-homes {
@@ -197,17 +167,55 @@
 	}
 }
 
-/* ------| Flechas slider |----- */
+// Content swiper
 .view-slider-homes{
 	.conten{
 		position: relative;
 		&-box{
 			position: relative;
-			&:before{
+			&:after{
 				@extend %before-box-color;
 			}
 		}
 	}
+
+	// global layout styles text
+	.views_slideshow_main {
+		.title-slider-homes{
+			@extend %title-slider-home;
+		}
+		.body-slider-homes{
+			@extend %body-slider-home;
+		}
+		.link-slider-homes {
+			@extend %link-slider-home;
+		}
+	}
+
+	.slider-homes-left{
+		.link-slider-homes{
+			text-align: right;
+		}
+	}
+
+	.slider-homes-right{
+		.link-slider-homes{
+			text-align: left;
+		}
+	}
+
+	.slider-homes-bottom-container{
+		.title-slider-homes{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+
+/* ------| button arrow & pagination |----- */
+.view-slider-homes{
+	
 	// main swiper
 	.skin-default{
 		// container swiper
@@ -292,31 +300,6 @@
 			}
 		}
 	}
-	
-	// global layout styles text
-	.views_slideshow_main {
-		.title-slider-homes{
-			@extend %title-slider-home;
-		}
-		.body-slider-homes{
-			@extend %body-slider-home;
-		}
-		.link-slider-homes {
-			@extend %link-slider-home;
-		}
-	}
-
-	.slider-homes-left{
-		.link-slider-homes{
-			text-align: right;
-		}
-	}
-
-	.slider-homes-right{
-		.link-slider-homes{
-			text-align: left;
-		}
-	}
 
 	.slider-homes-bottom-container{
 		// controls
@@ -352,591 +335,109 @@
 	}
 }
 
-// this block can be removed
+/* ------| Ubicado Abajo |----- */
 .view-slider-homes {
-	.skin-default {
-		position: relative;
-		//Flechas paginator
-		.slider-homes-specials-control,
-		.slider-homes-right-control,
-		.slider-homes-center-control,
-		.slider-homes-left-control,
-		.slider-homes-right-deca-control,
-		.slider-homes-center-deca-control,
-		.slider-homes-left-deca-control {
-			.views-slideshow-controls-text {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				//Button Izquierda
-				a[rel='prev'] {
-					display: none;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					left: 2%;
-					top: 40%;
-					font-size: 0;
-					background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
-					background-size: 40px 40px;
-					z-index: 1;
-				}
-				//Button Deracha
-				a[rel='next'] {
-					display: none;
-					width: 40px;
-					height: 40px;
-					font-size: 0;
-					position: absolute;
-					top: 40%;
-					left: inherit;
-					right: 2%;
-					background: url('../img/Icon/arrow-slide-next.png') no-repeat center;
-					background-size: 40px 40px;
-					z-index: 1;
-				}
-			}
-		}
-	}
-	// //Hover flechas paguinador
-	&:hover {
-		.slider-homes-specials-control,
-		.slider-homes-right-control,
-		.slider-homes-center-control,
-		.slider-homes-left-control,
-		.slider-homes-right-deca-control,
-		.slider-homes-center-deca-control,
-		.slider-homes-left-deca-control {
-			.views-slideshow-controls-text {
-				a[rel='prev'] {
-					display: block;
-				}
-				a[rel='next'] {
-					display: block;
-				}
-			}
-		}
-	}
-}
-// end block
-
-/* ------| Bulles Slider right, left, center en linea |----- */
-.view-slider-homes {
-	.views-slideshow-controls-bottom, {
-		display: block;
-	}
-	.views-slideshow-controls-bottom,
-	.slider-homes-bottom-deca-control {
-		text-align: center;
+	//posicion contenido abajo
+	.slider-homes-bottom {
+		background-color: #f4f1f1;
+		border-bottom: 2px solid #ebba00;
+		box-sizing: border-box;
 		@include respond-to(m) {
-			text-align: right;
+			padding: 20px 30px;
 		}
-		.views-slideshow-pager-field-processed	{
-			width: 100%;
-			position: absolute;
-			bottom: 3%;
-			right: 0px;
-			z-index: 9;
-			box-sizing: border-box;
-			@include respond-to(xl) {
-				bottom: 10%;
+		.conten {
+			padding: 20px 15px 42px;
+			overflow: hidden;
+			margin: 0 auto;
+			@include respond-to(xs) {
+				display: flex;
+				align-items: center;
 			}
 			@include respond-to(m) {
-				padding-right: 9%;
+				padding: 0 15px 35px;
+				width: 750px;
 			}
-			.views-slideshow-pager-field-item {
-				display: inline-block;
-				@include respond-to(xl) {
-					padding: 0 5px;
+			@include respond-to(xl) {
+				width: 970px;
+			}
+			@include respond-to(xxxl) {
+				width: 1170px;
+			}
+
+			//titulo
+			.title-slider-homes {
+				width: 100%;
+				font-family: $latobold;
+				@include font-size(l);
+				// @include margin(.417 0);
+				text-transform: uppercase;
+				color: #585863;
+				line-height: 20.9px;
+				padding-bottom: 10px;
+				box-sizing: border-box;
+				@include respond-to(xs) {
+					min-height: 50px;	
+					float: left;
+					width: 41.66666667%;
+					text-align: right;
+					padding-right: 20px;
+					padding-left: 20px;
+					padding-bottom: 0;
+				}
+			}
+			//sub titulo
+			.body-slider-homes {
+				font-family: $crimson-textregular;
+				@include font-size(m);
+				text-align: left;
+				color: #585863;
+				line-height: 19.8px;
+				border-top: 1px solid #ebba00;
+				position: relative;
+				min-height: 50px;
+				padding: 15px 0 25px;
+				margin: 0;
+				@include respond-to(xs) {
+					float: left;
+					padding: 0 15px 0 25px;
+					width: 33.33333333%;
+					border: 0;
+					border-left: 1px solid #ebba00;
+				}
+			}
+			//button
+			.link-slider-homes {
+				// margin: 15px 0;
+				padding: 0px;
+				@include respond-to(xs) {
+					padding: 0px 10px;
+					margin: 0;
 				}
 				a {
-					width: 40px;
-					height: 18px;
-					font-size: 0;
+					max-width: 146px;
 					display: block;
 					text-decoration: none;
-					border-bottom: 3px solid color('grey-secundary');
-					padding: 0;
-					margin: 0 5px;
-					box-sizing: border-box;
-					@include respond-to(xl) {
-						width: 63px;
-						margin: 0px
-					}
-				}
-				&.active {
-					a {
-						border-bottom: 3px solid color('yellow-defaul');
-					}
-				}
-			}
-		}
-	}
-}
-
-
-/* ------| Ubicado Abajo |----- */
-.view-slider-homes {
-	//posicion contenido abajo
-	.field-content {
-		.slider-homes-bottom {
-			background-color: #f4f1f1;
-			border-bottom: 2px solid #ebba00;
-			box-sizing: border-box;
-			@include respond-to(m) {
-				padding: 20px 30px;
-			}
-			.conten {
-				padding: 20px 15px 42px;
-				overflow: hidden;
-				margin: 0 auto;
-				@include respond-to(xs) {
-					display: flex;
-					align-items: center;
-				}
-				@include respond-to(m) {
-					padding: 0 15px 35px;
-					width: 750px;
-				}
-				@include respond-to(xl) {
-					width: 970px;
-				}
-				@include respond-to(xxxl) {
-					width: 1170px;
-				}
-
-				//titulo
-				.title-slider-homes {
-					width: 100%;
-					font-family: $latobold;
-					@include font-size(l);
-					// @include margin(.417 0);
-					text-transform: uppercase;
-					color: #585863;
-					line-height: 20.9px;
-					padding-bottom: 10px;
-					box-sizing: border-box;
-					@include respond-to(xs) {
-						min-height: 50px;	
-						float: left;
-						width: 41.66666667%;
-						text-align: right;
-						padding-right: 20px;
-						padding-left: 20px;
-						padding-bottom: 0;
-					}
-				}
-				//sub titulo
-				.body-slider-homes {
-					font-family: $crimson-textregular;
+					text-align: center;
+					// @include margin(0 auto);
+					border: 1px solid #484851;
+					font-family: $latolight;
 					@include font-size(m);
-					text-align: left;
-					color: #585863;
-					line-height: 19.8px;
-					border-top: 1px solid #ebba00;
-					position: relative;
-					min-height: 50px;
-					padding: 15px 0 25px;
-					margin: 0;
+					color: #484851;
+					padding: 10px 35px;
+					box-sizing: border-box;
 					@include respond-to(xs) {
-						float: left;
-						padding: 0 15px 0 25px;
-						width: 33.33333333%;
-						border: 0;
-						border-left: 1px solid #ebba00;
+						// float: right;
+						// @include margin(.834 0 0 auto);
 					}
-				}
-				//button
-				.link-slider-homes {
-					// margin: 15px 0;
-					padding: 0px;
-					@include respond-to(xs) {
-						padding: 0px 10px;
-						margin: 0;
-					}
-					a {
-						max-width: 145px;
-						display: block;
-						text-decoration: none;
-						text-align: center;
-						// @include margin(0 auto);
-						border: 1px solid #484851;
-						font-family: $latolight;
-						@include font-size(m);
-						color: #484851;
-						padding: 10px 35px;
-						box-sizing: border-box;
-						@include respond-to(xs) {
-							// float: right;
-							// @include margin(.834 0 0 auto);
-						}
-						@include respond-to(m) {
-							// @include margin(.834 .834 0 auto);
-						}
-						&:hover {
-							background: color('grey-dark');
-							color: color('white');
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// /* ------| flechas paginador abajo  |----- */
-	.skin-default {
-		.slider-homes-bottom-control {
-			//Flechas paguinador
-			.views-slideshow-controls-text {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				//Button Izquierda
-				a[rel='prev'] {
-					display: block;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					left: 2%;
-					top: initial;
-					bottom: 70px;
-					font-size: 0;
-					background: url('../img/Icon/slide-prev.png') no-repeat center;
-					background-size: 28px 28px;
-					z-index: 1;
-					opacity: .5;
-				}
-				//Buttom Pause
-				.views-slideshow-controls-text-pause {
-					display: none;
-				}
-				//Button Deracha
-				a[rel='next'] {
-					display: block;
-					width: 40px;
-					height: 40px;
-					font-size: 0;
-					position: absolute;
-					top: initial;
-					bottom: 70px;
-					left: inherit;
-					right: 2%;
-					background: url('../img/Icon/slide-next.png') no-repeat center;
-					background-size: 28px 28px;
-					z-index: 1;
-					opacity: .5;
-				}
-			}
-		}
-	}
-	// /* ------| Bulles posicion botton  |----- */
-	.slider-homes-bottom-control{
-		.views-slideshow-pager-field-processed {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-			padding: 0;
-			z-index: 1;
-			@include bullet(transparent, grey-secundary, yellow-defaul, yellow-defaul);
-			padding: 15px 0;
-		}
-	}
-}
-
-/*
-//------------------------------------------------------------------------------
-// Slider home portal informativo
-//------------------------------------------------------------------------------
-*/
-
-/* ------| Ubicado Leth |----- */
-.view-slider-homes {
-	.slider-homes-left-deca {
-		@extend %slider-homes-lef;
-		max-width: 75%;
-		.conten{
-			//Titulo
-			.title-slider-homes {
-				@extend %title-slider-home;
-				position: relative;
-			}
-			//Sub titulo
-			.body-slider-homes {
-				@extend %body-slider-home;
-				padding: 1.875rem 0;
-				margin: 0px;
-				position: relative;
-			}
-			//Buttom
-			.link-slider-homes {
-				@extend %link-slider-home;
-				a {
-					background: transparent;
-					border: none;
-					color: white;
-					position: relative;
-					&:before {
-						content: "";
-						width: 100%;
-						height: 100%;
-						position: absolute;
-						top: 0px;
-						left: 0;
-						z-index: -1;
-						background-color: transparent;
-						opacity: .5;
+					@include respond-to(m) {
+						// @include margin(.834 .834 0 auto);
 					}
 					&:hover {
-						background-color: transparent;
-						border: 1px solid white;
+						background: color('grey-dark');
+						color: color('white');
 					}
 				}
 			}
-		}
-	}
-}
-
-
-/* ------| Ubicado Rigth |----- */
-.view-slider-homes {
-	.slider-homes-right-deca {
-		@extend %slider-homes-lef;
-		@include respond-to(m) {
-			left: inherit;
-			right: 10%;
-			max-width: 75%;
-		}
-		//Titulo
-		.title-slider-homes {
-			position: relative;
-			@extend %title-slider-home;
-			@include respond-to(m) {
-				text-align: right;
-			}
-		}
-		//Sub titulo
-		.body-slider-homes {
-			@extend %body-slider-home;
-			@include respond-to(m) {
-				text-align: right;
-			}
-			padding: 1.875rem 0;
-			margin: 0px;
-			position: relative;
-		}
-		//Buttom
-		.link-slider-homes {
-			@extend %link-slider-home;
-			a {
-				background: transparent;
-				border: none;
-				color: white;
-				position: relative;
-				@include respond-to(m) {
-					float: left;
-				}
-				&:before {
-					content: "";
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 0px;
-					left: 0;
-					z-index: -1;
-					background-color: transparent;
-					opacity: .5;
-				}
-				&:hover {
-					background-color: transparent;
-					border: 1px solid white;
-				}
-			}
-		}
-	}
-}
-
-/* ------| Ubicado Centro |----- */
-.view-slider-homes {
-	.slider-homes-center-deca {
-		@extend %slider-homes-lef;
-		@include respond-to(m) {
-			left: inherit;
-			right: 30%;
-			max-width: 75%;
-		}
-
-		//titulo
-		.title-slider-homes {
-			@extend %title-slider-home;
-			@include respond-to(m) {
-				text-align: center;
-			}
-			padding: 1.875rem 0;
-			margin: 0px;
-			position: relative;		
-		}
-			//sub titulo
-		.body-slider-homes {
-			@extend %body-slider-home;
-			@include respond-to(m) {
-				text-align: center;
-			}
-			padding: 1.875rem 0;
-			margin: 0px;
-			position: relative;
-		}
-		//Buttom
-		.link-slider-homes {
-			@extend %link-slider-home;
-			a {
-				background: transparent;
-				border: none;
-				color: white;
-				position: relative;
-				@include respond-to(m) {
-					float: initial;
-				}
-				&:before {
-					content: "";
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 0px;
-					left: 0;
-					z-index: -1;
-					background-color: transparent;
-					opacity: .5;
-				}
-				&:hover {
-					background-color: transparent;
-					border: 1px solid white;
-				}
-			}
-		}
-	}
-}
-
-/* ------| Ubicado Abajo |----- */
-.view-slider-homes {
-	//posicion contenido abajo
-	.field-content {
-		.slider-homes-bottom-deca {
-			background-color: #f4f1f1;
-			border-bottom: 1px solid #ebba00;
-			@include respond-to(m) {
-				padding: 20px 30px;
-			}
-			
-			.conten {
-				padding: 20px 15px 42px;
-				margin: 0 auto;
-				position: relative;
-				@include respond-to(m) {
-					padding: 0 15px 35px;
-					width: 750px;
-				}
-				@include respond-to(xl) {
-					width: 970px;
-				}
-				@include respond-to(xxxl) {
-					width: 1170px;
-				}
-				//titulo
-				.title-slider-homes {
-					width: 100%;
-					font-family: $latobold;
-					@include font-size(xxxl);
-					@include margin(.417 0);
-					text-transform: uppercase;
-					color: white;
-					line-height: 20.9px;
-					padding-bottom: 10px;
-					@include respond-to(m) {
-						position: absolute;
-						top: -136px;
-						left: 0px;
-						z-index: 9999999;
-					}
-				}
-				//sub titulo
-				.body-slider-homes {
-					font-family: $crimson-textregular;
-					@include font-size(m);
-					text-align: left;
-					color: #585863;
-					line-height: 19.8px;
-					// border-top: 1px solid #ebba00;
-					position: relative;
-					min-height: 50px;
-					padding: 15px 0 25px;
-					margin: 0;
-				}
-				//button
-				.link-slider-homes {
-					display: none;
-				}
-			}
-		}
-	}
-
-	// /* ------| flechas paginador abajo  |----- */
-	.skin-default {
-		.slider-homes-bottom-deca-control {
-			//Flechas paguinador
-			.views-slideshow-controls-text {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				//Button Izquierda
-				a[rel='prev'] {
-					display: block;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					left: 2%;
-					top: initial;
-					bottom: 70px;
-					font-size: 0;
-					background: url('../img/Icon/slide-prev.png') no-repeat center;
-					background-size: 28px 28px;
-					z-index: 1;
-					opacity: .5;
-				}
-				//Buttom Pause
-				.views-slideshow-controls-text-pause {
-					display: none;
-				}
-				//Button Deracha
-				a[rel='next'] {
-					display: block;
-					width: 40px;
-					height: 40px;
-					font-size: 0;
-					position: absolute;
-					top: initial;
-					bottom: 70px;
-					left: inherit;
-					right: 2%;
-					background: url('../img/Icon/slide-next.png') no-repeat center;
-					background-size: 28px 28px;
-					z-index: 1;
-					opacity: .5;
-				}
-			}
-		}
-	}
-	// /* ------| Bulles posicion botton  |----- */
-	.slider-homes-bottom-deca-control {
-		.views-slideshow-pager-field-processed {
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-			padding: 0;
-			z-index: 1;
-			@include bullet(transparent, grey-secundary, yellow-defaul, yellow-defaul);
 		}
 	}
 }

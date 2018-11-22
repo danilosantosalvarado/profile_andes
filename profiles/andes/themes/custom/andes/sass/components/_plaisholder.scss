@@ -66,15 +66,15 @@
 
 //titulo
 %title-slider-home {
-  font-family: $latoregular;
-  @include font-size(l);
+  font-family: $latobold;
+  @include font-size(sl);
   color: color('white');
   text-transform: uppercase;
   text-align: center;
   margin: 0;
   padding: 10px 0px;
   @include respond-to(m) {
-    @include font-size(xl);
+    @include font-size(xxl);
     text-align: left;
   }
   &:after {
@@ -91,11 +91,11 @@
 
 //sud titulo
 %body-slider-home {
-  font-family: $latoregular;
-  @include font-size(m);
+  font-family: $crimson-textregular;
+  @include font-size(o);
   color: color('white');
   text-align: center;
-  @include margin (1.25 0);
+  @include margin (1 0);
   text-overflow: ellipsis;
   // overflow: hidden;
   // max-height: 66px;
@@ -105,26 +105,29 @@
 }
 //Button
 %link-slider-home {
+  font-family: $crimson-textregular;
   display: block;
   position: relative;
   text-align: center;
   padding: 10px 0;
+  @include font-size(m);
   a {
     display: inline-block;
     max-width: none;
     text-align: center;
     text-decoration: none;
-    background: color('white');
-    color: color('grey');
-    border: 1px solid color('grey'); 
+    background: transparent;
+    color: color('white');
+    border: 1px solid color('white'); 
     @include padding (.42 1.25);
+    white-space: nowrap;
     @include respond-to(m) {
       // float: right;
       // margin: 1.215rem auto;
     }
     &:hover {
-      background: color('grey-dark');
-      color: color('white');
+      background: color('white');
+      color: color('grey');
     }
   }
 }
