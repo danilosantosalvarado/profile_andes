@@ -8,8 +8,12 @@
   display: flex;
   justify-content: center;
   margin: 10px 0;
-  border-top: 1px solid #ddd;
+  // border-bottom: 1px solid #ddd;
   padding: 20px 15px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
   list-style: none;
   li {
     cursor: pointer;
