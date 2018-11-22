@@ -15,27 +15,25 @@
   }
 }
 
-.view-slider-homes{
-  .slider-homes-layout-eleven{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .conten{
-      padding: 0 25px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      .title-slider-homes,
-      .body-slider-homes,
-      .link-slider-homes {
-        text-align: center;
-      }
+.slider-homes-layout-eleven{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .conten{
+    padding: 0 25px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    .title-slider-homes,
+    .body-slider-homes,
+    .link-slider-homes {
+      text-align: center;
     }
   }
 }

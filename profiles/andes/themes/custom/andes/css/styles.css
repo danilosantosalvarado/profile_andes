@@ -1639,7 +1639,7 @@ th {
 // Layouts 1
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-one {
+.slider-homes-layout-one {
   position: absolute;
   top: 0;
   left: 0;
@@ -1660,16 +1660,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-one .conten {
+.slider-homes-layout-one .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-one .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-one .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-one .conten .link-slider-homes {
+.slider-homes-layout-one .conten .title-slider-homes,
+.slider-homes-layout-one .conten .body-slider-homes,
+.slider-homes-layout-one .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -1728,7 +1728,7 @@ th {
 // Layouts 2
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-two {
+.slider-homes-layout-two {
   position: absolute;
   top: 0;
   left: 0;
@@ -1749,16 +1749,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-two .conten {
+.slider-homes-layout-two .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-two .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-two .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-two .conten .link-slider-homes {
+.slider-homes-layout-two .conten .title-slider-homes,
+.slider-homes-layout-two .conten .body-slider-homes,
+.slider-homes-layout-two .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -1969,7 +1969,7 @@ th {
 // Layouts 3
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-three {
+.slider-homes-layout-three {
   position: absolute;
   top: 0;
   left: 0;
@@ -1990,16 +1990,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-three .conten {
+.slider-homes-layout-three .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-three .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-three .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-three .conten .link-slider-homes {
+.slider-homes-layout-three .conten .title-slider-homes,
+.slider-homes-layout-three .conten .body-slider-homes,
+.slider-homes-layout-three .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -2060,7 +2060,7 @@ th {
 // Layouts 4
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-four {
+.slider-homes-layout-four {
   position: absolute;
   top: 0;
   left: 0;
@@ -2081,16 +2081,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-four .conten {
+.slider-homes-layout-four .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-four .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-four .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-four .conten .link-slider-homes {
+.slider-homes-layout-four .conten .title-slider-homes,
+.slider-homes-layout-four .conten .body-slider-homes,
+.slider-homes-layout-four .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -2143,7 +2143,7 @@ th {
   padding: 10px 0;
 }
 
-.view-slider-homes .slider-homes-layout-five {
+.slider-homes-layout-five {
   position: absolute;
   top: 0;
   left: 0;
@@ -2164,16 +2164,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-five .conten {
+.slider-homes-layout-five .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-five .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-five .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-five .conten .link-slider-homes {
+.slider-homes-layout-five .conten .title-slider-homes,
+.slider-homes-layout-five .conten .body-slider-homes,
+.slider-homes-layout-five .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -2182,7 +2182,7 @@ th {
 // Layouts 7
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-seven {
+.slider-homes-layout-seven {
   position: absolute;
   top: 0;
   left: 0;
@@ -2203,16 +2203,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-seven .conten {
+.slider-homes-layout-seven .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-seven .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-seven .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-seven .conten .link-slider-homes {
+.slider-homes-layout-seven .conten .title-slider-homes,
+.slider-homes-layout-seven .conten .body-slider-homes,
+.slider-homes-layout-seven .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -2264,7 +2264,7 @@ th {
 // Layouts 9
 //------------------------------------------------------------------------------
 */
-.view-slider-homes .slider-homes-layout-nine {
+.slider-homes-layout-nine {
   position: absolute;
   top: 0;
   left: 0;
@@ -2285,16 +2285,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-nine .conten {
+.slider-homes-layout-nine .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-nine .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-nine .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-nine .conten .link-slider-homes {
+.slider-homes-layout-nine .conten .title-slider-homes,
+.slider-homes-layout-nine .conten .body-slider-homes,
+.slider-homes-layout-nine .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -2369,7 +2369,7 @@ th {
   padding: 5px 0;
 }
 
-.view-slider-homes .slider-homes-layout-eleven {
+.slider-homes-layout-eleven {
   position: absolute;
   top: 0;
   left: 0;
@@ -2390,16 +2390,16 @@ th {
           align-items: center;
 }
 
-.view-slider-homes .slider-homes-layout-eleven .conten {
+.slider-homes-layout-eleven .conten {
   padding: 0 25px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.view-slider-homes .slider-homes-layout-eleven .conten .title-slider-homes,
-.view-slider-homes .slider-homes-layout-eleven .conten .body-slider-homes,
-.view-slider-homes .slider-homes-layout-eleven .conten .link-slider-homes {
+.slider-homes-layout-eleven .conten .title-slider-homes,
+.slider-homes-layout-eleven .conten .body-slider-homes,
+.slider-homes-layout-eleven .conten .link-slider-homes {
   text-align: center;
 }
 
@@ -4431,60 +4431,73 @@ h1.page-header {
 }
 
 /* ------| Slider Home|----- */
-.view-banner-nodes ul {
-  margin: 0;
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item {
-  width: 100%;
-  height: 100%;
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 {
+.view-banner-nodes .views_slideshow_swiper-processed .views-field.views-field-views-conditional {
   width: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .field-content {
+.view-banner-nodes .views_slideshow_swiper-processed .field-content {
   position: relative;
   display: block;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .img-desktop {
+.view-banner-nodes .views_slideshow_swiper-processed .img-desktop {
   display: none;
 }
 
 @media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .img-desktop {
+  .view-banner-nodes .views_slideshow_swiper-processed .img-desktop {
     display: block;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .img-mobile {
+.view-banner-nodes .views_slideshow_swiper-processed .img-mobile {
   display: block;
 }
 
 @media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .img-mobile {
+  .view-banner-nodes .views_slideshow_swiper-processed .img-mobile {
     display: none;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .img-content .img-mobile img {
+.view-banner-nodes .views_slideshow_swiper-processed .img-content .img-mobile img {
   width: 100%;
   height: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven {
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-one,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-two,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-three,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-four,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-five,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-seven,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-eleven,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right-deca,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center-deca,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca {
   height: 100%;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten {
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-one .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-two .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-three .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-four .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-five .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-seven .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-eleven .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right-deca .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center-deca .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom .iframe-conten,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca .iframe-conten {
   position: relative;
   display: block;
   overflow: hidden;
@@ -4493,63 +4506,58 @@ h1.page-header {
 }
 
 @media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten,
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten,
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten,
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten {
-    padding-top: 45%;
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-one .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-two .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-three .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-four .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-five .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-seven .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-eleven .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right-deca .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center-deca .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom .iframe-conten,
+  .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca .iframe-conten {
+    padding-top: 29%;
   }
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten .img-responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten .img-responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten .img-responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten .img-responsive {
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-one .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-two .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-three .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-four .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-five .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-seven .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-eleven .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right-deca .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center-deca .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom .iframe-conten .img-responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca .iframe-conten .img-responsive {
   visibility: hidden;
 }
 
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-right .iframe-conten .youtube-container--responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-center .iframe-conten .youtube-container--responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-left .iframe-conten .youtube-container--responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-specials .cl-slider-homes-layout-seven .iframe-conten .youtube-container--responsive {
-  padding-bottom: initial;
-  height: 100%;
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom-deca {
-  height: 100%;
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom .iframe-conten,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom-deca .iframe-conten {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding-top: 94%;
-  height: 100%;
-}
-
-@media (min-width: 992px) {
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom .iframe-conten,
-  .view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom-deca .iframe-conten {
-    padding-top: 45%;
-  }
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom .iframe-conten .img-responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom-deca .iframe-conten .img-responsive {
-  visibility: hidden;
-}
-
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom .iframe-conten .youtube-container--responsive,
-.view-banner-nodes ul li.swiper-slide .views-slideshow-swiper-main-frame-row-item .views-field-views-conditional-1 .cl-slider-homes-bottom-deca .iframe-conten .youtube-container--responsive {
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-one .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-two .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-three .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-four .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-five .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-seven .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-layout-eleven .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-right-deca .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-center-deca .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom .iframe-conten .youtube-container--responsive,
+.view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca .iframe-conten .youtube-container--responsive {
   padding-bottom: initial;
   height: 100%;
   position: absolute;
