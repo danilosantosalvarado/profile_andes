@@ -229,12 +229,13 @@ $ = jQuery;
 		*/
 
 		// Funcion breakpoint slider
-		checkSize();
-		$(window).resize(checkSize);
+		// checkSize();
+		// $(window).resize(checkSize);
 	});
 
 	// Funcion breakpoint slider
 	function checkSize() {
+		return true;
 		var docWidth = $(document).width();
 		var data = {
 			slidesPerView: ((docWidth >= 1200) ? 4 : ((docWidth > 992 && docWidth <= 1200) ? 3 : ((docWidth > 555 && docWidth <= 992) ? 2 : 1)) ),

@@ -88,6 +88,21 @@
 	}
 }
 
+// main position
+.views_slideshow_main{
+	.title-slider-homes {
+		@extend %title-slider-home;
+	}
+	//Sub titulo
+	.body-slider-homes {
+		@extend %body-slider-home;
+	}
+	//Buttom
+	.link-slider-homes {
+		@extend %link-slider-home;
+	}
+}
+
 /* ------| Ubicado Leth |----- */
 .view-slider-homes {
 	.slider-homes-left {
