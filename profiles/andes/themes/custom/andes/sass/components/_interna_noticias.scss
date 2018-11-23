@@ -13,6 +13,7 @@
 			position: relative;
 			left: 0;
 			right: 0;
+			padding-bottom: 32px; 
 			text-align: center;
 			overflow-y: hidden;
 			white-space: nowrap;
@@ -26,13 +27,14 @@
 			left: 0;
 			right: 0;
 			padding: 15px 0;
+			padding-top: 40px;
 			box-sizing: border-box;
 			z-index: 1;
 
 			.swiper-pagination-bullet{
 				width: 140px;
 				height: 78px;
-				border: 1px solid transparent;
+				border: none;
 				border-radius: 0;
 				padding: 0;
 				margin: 0 5px;

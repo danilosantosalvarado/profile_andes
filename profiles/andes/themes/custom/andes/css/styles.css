@@ -3624,7 +3624,6 @@ h1.page-header {
 /* ------| Campo tags intena de nodos |----- */
 .field-name-field-tags.field-type-taxonomy-term-reference {
   position: relative;
-  padding-top: 40px;
 }
 
 .field-name-field-tags.field-type-taxonomy-term-reference:before {
@@ -4385,6 +4384,7 @@ h1.page-header {
   position: relative;
   left: 0;
   right: 0;
+  padding-bottom: 32px;
   text-align: center;
   overflow-y: hidden;
   white-space: nowrap;
@@ -4399,6 +4399,7 @@ h1.page-header {
   left: 0;
   right: 0;
   padding: 15px 0;
+  padding-top: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 1;
@@ -4407,7 +4408,7 @@ h1.page-header {
 .view-banner-nodes .skin-default .swiper-pagination-banner-nodes .swiper-pagination-bullet {
   width: 140px;
   height: 78px;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 0;
   padding: 0;
   margin: 0 5px;
