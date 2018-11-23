@@ -2000,7 +2000,7 @@ th {
 .slider-homes-layout-three .conten .title-slider-homes,
 .slider-homes-layout-three .conten .body-slider-homes,
 .slider-homes-layout-three .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* ------| slider alineacion center |----- */
@@ -2091,7 +2091,7 @@ th {
 .slider-homes-layout-four .conten .title-slider-homes,
 .slider-homes-layout-four .conten .body-slider-homes,
 .slider-homes-layout-four .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* ------| slider alineacion center |----- */
@@ -2174,7 +2174,7 @@ th {
 .slider-homes-layout-five .conten .title-slider-homes,
 .slider-homes-layout-five .conten .body-slider-homes,
 .slider-homes-layout-five .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 /*
@@ -2213,7 +2213,7 @@ th {
 .slider-homes-layout-seven .conten .title-slider-homes,
 .slider-homes-layout-seven .conten .body-slider-homes,
 .slider-homes-layout-seven .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* ------| slider alineacion center |----- */
@@ -2295,7 +2295,7 @@ th {
 .slider-homes-layout-nine .conten .title-slider-homes,
 .slider-homes-layout-nine .conten .body-slider-homes,
 .slider-homes-layout-nine .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* ------| Panel Responsin |----- */
@@ -6848,8 +6848,7 @@ h1.page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 0;
-  padding: 20px 15px;
+  padding: 0 15px;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
