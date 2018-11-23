@@ -2025,7 +2025,7 @@ th {
           align-items: center;
 }
 
-.slider-homes-layout-three-title div:nth-child(1) {
+.slider-homes-layout-three-title .temp-title {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #fff;
@@ -2034,12 +2034,12 @@ th {
 }
 
 @media (min-width: 992px) {
-  .slider-homes-layout-three-title div:nth-child(1) {
+  .slider-homes-layout-three-title .temp-title {
     font-size: 2.6875rem;
   }
 }
 
-.slider-homes-layout-three-title div:nth-child(2) {
+.slider-homes-layout-three-title .temp-subtitle {
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   color: #fff;
@@ -2047,7 +2047,7 @@ th {
   padding: 10px 0;
 }
 
-.slider-homes-layout-three-title div:nth-child(3) {
+.slider-homes-layout-three-title .temp-descrip {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #fff;
@@ -4386,6 +4386,10 @@ h1.page-header {
   left: 0;
   right: 0;
   text-align: center;
+  overflow-y: hidden;
+  white-space: nowrap;
+  overflow-x: visible;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .view-banner-nodes .skin-default .swiper-pagination-banner-nodes {
@@ -4521,7 +4525,7 @@ h1.page-header {
   .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-left-deca .iframe-conten,
   .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom .iframe-conten,
   .view-banner-nodes .views_slideshow_swiper-processed .cl-slider-homes-bottom-deca .iframe-conten {
-    padding-top: 29%;
+    padding-top: 45%;
   }
 }
 
