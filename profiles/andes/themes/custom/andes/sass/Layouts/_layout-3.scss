@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   // background-color: rgba(0,0,0,.5);
-  div:nth-child(1) {
+  .temp-title {
     font-family: $latoblack;
     @include font-size(xl);
     color: color('white');
@@ -49,14 +49,14 @@
       @include font-size(xxxl);
     }
   }
-  div:nth-child(2) {
+  .temp-subtitle {
       font-family: $latolight;
       @include font-size(l);
       color: color('white');
       text-align: center;
       padding: 10px 0;
   }
-  div:nth-child(3) {
+  .temp-descrip {
     font-family: $crimson-textregular;
     @include font-size(m);
     color: color('white');

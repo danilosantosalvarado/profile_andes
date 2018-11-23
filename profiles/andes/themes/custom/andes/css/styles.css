@@ -1759,7 +1759,7 @@ th {
 .slider-homes-layout-two .conten .title-slider-homes,
 .slider-homes-layout-two .conten .body-slider-homes,
 .slider-homes-layout-two .conten .link-slider-homes {
-  text-align: center;
+  text-align: center !important;
 }
 
 .view-id-componente_layout_2 {
@@ -2116,7 +2116,7 @@ th {
           align-items: center;
 }
 
-.slider-homes-layout-four-title div:nth-child(1) {
+.slider-homes-layout-four-title .temp-title {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #fff;
@@ -2124,19 +2124,19 @@ th {
 }
 
 @media (min-width: 992px) {
-  .slider-homes-layout-four-title div:nth-child(1) {
+  .slider-homes-layout-four-title .temp-title {
     font-size: 2.6875rem;
   }
 }
 
-.slider-homes-layout-four-title div:nth-child(2) {
+.slider-homes-layout-four-title .temp-subtitle {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.1875rem;
   color: #fff;
   padding: 10px 0;
 }
 
-.slider-homes-layout-four-title div:nth-child(3) {
+.slider-homes-layout-four-title .temp-descrip {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #fff;
