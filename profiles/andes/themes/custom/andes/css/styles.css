@@ -6846,6 +6846,11 @@ h1.page-header {
   display: none;
 }
 
+.views_slideshow_main .social-network-list.align-social-horizontal {
+  border-bottom: none;
+  padding: 0 15px !important;
+}
+
 .social-network-list.align-social-horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6853,7 +6858,9 @@ h1.page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+  padding-top: 40px;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
