@@ -43,9 +43,12 @@ $ = jQuery;
 
 	function socialDesktop() {
 		if($('.align-social-vertical').hasClass('social-mobile')){$('.align-social-vertical').removeClass('social-mobile');	}
-		$('.social-network-list').addClass('content-desktop');
-		var margen =  jQuery("#date-noticia").offset();
+		$('.align-social-vertical').addClass('content-desktop');
+		var margen =  jQuery(".container-node").offset();
+		if (margen != null) {
 			margen = margen['left']-jQuery(".content-desktop").width();
+		}
+			
 			jQuery(".content-desktop").css("margin-left", margen);
 	}
 
@@ -54,7 +57,10 @@ $ = jQuery;
 		if (validation.length > 0){
 
 					var margen =  jQuery(".container-node").offset();
+					if (margen != null) {
 						margen = margen['left']-jQuery(".content-desktop").width();
+					}
+						
 
 					var panel = jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id');
 					var	panelId = '#'.concat(panel);
