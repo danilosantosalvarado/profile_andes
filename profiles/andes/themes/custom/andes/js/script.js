@@ -133,20 +133,32 @@ $ = jQuery;
 
 		if (validation.length > 0){
 			
-			var menu_admin = $('#admin-menu').outerHeight(true);
-			var menu_navigation = $('.region-navigation').outerHeight(true);
-			var scrollWindow = $(window).scrollTop();
-			var scrollVerticalMenu = $('.social-mobile').offset().top;
+			$(panelId).css("background-color","red");
 
-			if (scrollWindow >= (scrollVerticalMenu-(menu_admin+menu_navigation))) {
-				jQuery(".content-desktop").css("margin-left", "inherit");
-				$('.social-mobile').addClass('social-mobile-fixed');
-			}else {
+
+			var altoRerdes = $('.align-social-vertical').outerHeight(true);
+			var menu_admin = $('#admin-menu').outerHeight(true);
+			var menu_admin_height = $('#admin-menu').height();
+			var menu_navigation = $('.region-navigation').outerHeight(true);
+			var	panelId = '#'.concat(jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id'));
+			var heightContent = $(panelId).height()-(menu_navigation+menu_admin);
+			var scrollWindow = $(window).scrollTop();
+			var total =(menu_admin+menu_navigation+heightContent+$(panelId).offset().top)-(altoRerdes+20);
+
+			if (scrollWindow < ($(panelId).offset().top - menu_admin_height) || scrollWindow > total) {
 				if($('.social-mobile').hasClass('social-mobile-fixed')){
 					jQuery(".content-desktop").css("margin-left", "inherit");
 					$('.social-mobile').removeClass('social-mobile-fixed');
 				}
+			}else {
+				jQuery(".content-desktop").css("margin-left", "inherit");
+				$('.social-mobile').addClass('social-mobile-fixed');
+				$('.social-mobile-fixed').css({
+					top: menu_admin_height
+				});
+
 			}
+
 		}		
 	}
 	//fin funcion redes sociales vertical scroll interna de eventos.
