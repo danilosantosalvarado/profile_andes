@@ -6881,13 +6881,11 @@ h1.page-header {
   padding: 4px;
 }
 
-@media (min-width: 992px) {
-  .social-mobile-fixed {
-    position: fixed;
-    bottom: auto;
-    margin-top: 0px;
-    background: white !important;
-  }
+.social-mobile-fixed {
+  position: fixed;
+  bottom: auto;
+  margin-top: 0px;
+  background: white !important;
 }
 
 /*

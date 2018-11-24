@@ -43,10 +43,8 @@
 
 // scroll en mobil 
 .social-mobile-fixed {
-  @include respond-to(xl) {
-    position: fixed;
-    bottom: auto;
-    margin-top: 0px;
-    background: white !important;
-  }
+  position: fixed;
+  bottom: auto;
+  margin-top: 0px;
+  background: white !important;
 }
