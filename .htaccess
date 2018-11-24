@@ -153,3 +153,8 @@ DirectoryIndex index.php index.html index.htm
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
 </IfModule>
+
+
+#aumentar subida de archivos
+php_value upload_max_filesize 256M 
+php_value post_max_size 256M
