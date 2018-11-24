@@ -6882,10 +6882,12 @@ h1.page-header {
 }
 
 .social-mobile-fixed {
+  width: 100%;
   position: fixed;
   bottom: auto;
   margin-top: 0px;
-  background: white !important;
+  background-color: white !important;
+  z-index: 3;
 }
 
 /*
