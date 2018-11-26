@@ -14,7 +14,7 @@ header {
 @media (max-width: 991px) {
   //al desplegar el menu no se pueda hacer scroll
   body.active-menu {
-    overflow: hidden;
+    overflow-y: hidden;
   }
   header .container-fluid {
     border: none;
@@ -127,20 +127,17 @@ header {
     // */ ----| Reset De Menu  |---- */
     .tb-megamenu {
       >.nav-collapse {
-        border: 1px solid slateblue;
-        margin-top: 10px;
         //Cuando esta activo
         &.in {
-          // position: initial;
           position: static;
           height: auto !important;
+          margin: 0px;
         }
         &.collapsing {
           transition: none !important;
-          // height: 100% !important;
         }
         ul.level-0 {
-          margin: 0;
+          // margin: 0;
           float: none;
           li.level-1 {
             float: none;
@@ -154,15 +151,13 @@ header {
             }
             // reset de enlaces
             a {
-              font-family: $latoregular;
+              font-family: $latolight;
               font-size: 1.08rem;
               color: #696969 !important;
               background: transparent !important;
               border: none !important;
               text-align: center;
               padding: 9px 15px;
-              // @include respond-to(xl) {
-              //   color: #484851;
               // }
               &:hover,
               &:focus {
@@ -186,14 +181,14 @@ header {
       }
       //Bloque Menu Soy
       #block-tb-megamenu-menu-menu-top-soy {
+        order: 1;
         .tb-megamenu {
           >.nav-collapse {
             ul.level-0 {
               li.level-1 {
                 display: none;
                 //Mostar solo padre con hijos y detacados
-                &.dropdown,
-                &.menu-destacado {
+                &.dropdown {
                   display: block;
                 }
                 //Style Padre
@@ -215,26 +210,71 @@ header {
                     }
                   }
                 }
-                //Menu Destacados
-                &.menu-destacado {
-                  width: 47%;
-                  float: left;
-                  margin-bottom: 3%;
-                  background: #313131;
-                  -ms-overflow-style: scroll;
-                  &:nth-child(odd) {
-                    margin-left: 3%;
-                  }
-                  &:nth-child(even) {
-                    margin-right: 3%;
-                  }
-                  > a {
-                    font-size: .88rem;
-                    color: white !important;
-                  }
-                }
               }
             }
+          }
+        }
+      }
+      //Bloque de select
+      .container-select-language,
+      .container-select-top-soy {
+        padding-right: 15px;
+        padding-left: 15px;
+        position: relative;
+        margin-bottom: 16px;
+        .block-title {
+          display: none;
+        }
+        .title-language,
+        .title-top-soy {
+          position: absolute;
+          top: 50%;
+          left: 25px;;
+          transform: translate3d(0, -50%, 0);
+          z-index: -1;
+        }
+        select {
+          width: 100% !important;
+          height: 38px;
+          font-family: $latoregular;
+          color: #a8a8a8;
+          font-size: .88rem;
+          background: transparent url(../img/icon-flecha-abajo.png) no-repeat;
+          background-size: 13px;
+          background-position: 95% 50%;
+          // margin-bottom: 16px;
+          border: 1px solid #484848;
+          border-radius: 0px;
+          box-shadow: none;
+          padding: 7px 10px 7px 30%;
+          appearance: none;
+        }
+      }
+      //Bloque de Menu destacados
+      .container-destacados {
+        padding-right: 15px;
+        padding-left: 15px;
+        .menu-destacado {
+          width: 47%;
+          float: left;
+          margin-bottom: 3%;
+          background: #313131;
+          -ms-overflow-style: scroll;
+          &:nth-child(odd) {
+            margin-right: 3%;
+          }
+          &:nth-child(even) {
+            margin-left: 3%;
+          }
+          > a {
+            display: block;
+            font-family: $latoregular;
+            font-size: .88rem;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 0;
+
           }
         }
       }
@@ -246,8 +286,23 @@ header {
       .barra-buscar {
         display: none;
       }
+      .tb-megamenu-menu-mega-menu {
+        .nav-collapse.always-show.collapse.in {
+          &:after {
+            content: "";
+            width: 100%;
+            height: 11px;
+            display: block;
+            background: url(../img/lines-menu-mobile.png) no-repeat center;
+            background-size: 280px 11px;
+          }
+          .level-0 {
+            margin: 15px 0;
+          }
+        }
+      }
     }
-    // */ ----| Mega menu  |---- */
+    // */ ----| Menu Buscar  |---- */
     .wrapper-buscar-menu {
       order: 2;
       .block-title,
@@ -284,14 +339,12 @@ header {
           padding: 0px;
           border-radius: 0px;
           font-size: 0px;
-          z-index: 99;
           &:before {
             content: '';
             width: 21px;
             height: 21px;
             display: block;
             background: url(../img/Icon/lupa-buscar-mobile.png) no-repeat;
-            // background-position: 2px -30px;
             background-size: cover;
           }
           &:hover {
@@ -317,15 +370,14 @@ header {
       // Borde negro
       .box-black {
         width: 100%;
-        height: 60px;
+        // height: 60px;
         background: #1a1a1a;
         p {
           font-family: $latoregular;
           font-weight: 700;
           font-size: 1.05rem;
           color: #fff;
-          padding: 20px 0 0 20px;
-          white-space: nowrap;
+          padding: 20px 20px;
           &:after {
             content: '';
             width: 16px;
@@ -348,16 +400,30 @@ header {
           list-style: none;
           li {
             a {
-              display: block;
+              display: inline-flex;
+              flex-wrap: wrap;
               font-family: $latolight;
               font-size: 1.08rem;
               color: #1a1a1a;
               line-height: 1.42857143;
-              // white-space: nowrap;
               text-decoration: none;
               padding: 7px 20px 7px 0;
               .caret {
                 border: none;
+              }
+            }
+            &.dropdown-submenu {
+              a {
+                .caret{
+                  width: 20px;
+                  height: 14px;
+                  background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+                  background-size: 36px;
+                  transform: rotate(-90deg);
+                  border: none;
+                  margin: 0px;
+                  margin-top: 3px;
+                }
               }
             }
           }
@@ -566,13 +632,16 @@ header {
                       @include font-size(s);
                       color: #484851;
                       line-height: 16.2px;
-                      font-weight: 300;
                       font-weight: weight(normal);
                       text-align: left;
                       border: none;
                       cursor: pointer;
                       padding: 12px 0;
                       margin: 0;
+                      &:hover {
+                        text-decoration:underline;
+                        color: #000;
+                      }
                     }
                     .tb-megamenu-submenu {
                       display: none;
@@ -713,6 +782,18 @@ header {
                       border-left: 1px solid #c8c8ca;
                       -webkit-box-shadow: none;
                       box-shadow: none;
+                      a {
+                        font-family: $latolight;
+                        @include font-size(s);
+                        color: #484851;
+                        line-height: 16.2px;
+                        font-weight: weight(normal);
+                        padding: 9px 0;
+                        &:hover {
+                          text-decoration:underline;
+                          color: #000;
+                        }
+                      }
                     }
                   }
                 }
@@ -1025,7 +1106,7 @@ header {
           ul.level-0.nav {
             display: flex;
             li.level-1 {
-              width: 125px;
+              width: 115px;
               height: 74px;
               display: flex;
               align-items: center;
@@ -1050,20 +1131,18 @@ header {
                 }
               }
               > a {
-                color: color('gray-menu');
                 font-weight: weight(normal);
-                font-family: $latolight;
+                font-family: $latoregular;
+                @include font-size(xxs);
+                color: #484851;
                 background-color: transparent !important;
                 text-align: center;
                 border: none;
                 padding: 10px 0;
                 opacity: 1;
                 transition: .3s;
-                @include font-size(l);
                 @include respond-to(xl) {
-                  font-family: $latoregular;
-                  color: color('grey');
-                  @include font-size(15px);
+                  @include font-size(ms);
                 }
                 &.text-hover {
                   color: color('grey');
@@ -1164,4 +1243,10 @@ header {
       }
     }
   }
+
+  //position fixel
+  .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .level-1.open .tb-megamenu-submenu {
+    top: 37px;
+  }
+
 }
