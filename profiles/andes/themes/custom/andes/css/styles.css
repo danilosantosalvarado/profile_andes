@@ -11544,7 +11544,6 @@ header {
     width: 25%;
     float: left;
     margin-top: 10px;
-    border: 1px solid rebeccapurple;
   }
   .wrapper-mega-menu #block-views-logos-header-block .block-title {
     display: none;
@@ -11566,7 +11565,6 @@ header {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu {
     width: auto;
     float: right;
-    border: 1px solid red;
   }
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu {
     display: -webkit-box;
@@ -11748,8 +11746,23 @@ header {
             box-shadow: none;
     outline: none !important;
   }
-  .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .level-1.open .tb-megamenu-submenu  {
-    top: 37px;
+  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
+    top: 110px;
+  }
+  .logged-in header > .container-fluid {
+    top: 28px;
+  }
+  .logged-in .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
+    top: 65px;
+  }
+  .logged-in .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
+    top: 139px;
+  }
+  body.dark-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999999999;
   }
 }
 
