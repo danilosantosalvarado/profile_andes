@@ -394,9 +394,9 @@
       function animateLevelNext($level){
           $inner = $(".region-navigation .menu-container-data.active.level-"+$level);
           if ($inner.position().left == 0) {
-            $inner.animate({left: "-100%"}, 'slow' );
+            $inner.animate({left: "-100%"}, 'slide' );
           }else {
-            $inner.animate({left:0},'slow');
+            $inner.animate({left:0},'slide');
           }
           $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
           function(e) {
@@ -405,7 +405,7 @@
       }
       function animateLevelPrevious($level, $levelNow){
         $inner = $(".region-navigation .menu-container-data.active.level-"+$levelNow);
-        $inner.animate({left: "100%"}, "slow" );
+        $inner.animate({left: "100%"}, "slide" );
         $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
         function(e) {
           $(".menu-container-data.level-"+$levelNow).removeClass('active');
