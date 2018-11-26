@@ -392,12 +392,11 @@
       }
       resizeGoToInstitucional();
       function animateLevelNext($level){
-        console.log("(.region-navigation .menu-container-data.active.level-"+$level+").position()");
           $inner = $(".region-navigation .menu-container-data.active.level-"+$level);
           if ($inner.position().left == 0) {
-            $inner.animate({left: "-100%"}, 6e3 );
+            $inner.animate({left: "-100%"}, 'slow' );
           }else {
-            $inner.animate({left:0},6e3);
+            $inner.animate({left:0},'slow');
           }
           $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
           function(e) {
