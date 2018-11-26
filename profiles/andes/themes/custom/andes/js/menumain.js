@@ -378,6 +378,16 @@
             window.location.replace(Drupal.t(this.value));
           });
         }
+        $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
+        $.each( $selectDestacadosItems, function( k, v ) {
+          console.log(k);
+          console.log($(this));
+          if(k == 0){
+          $('.wrapper-menu-soy').append('<div class="container-destacados">'+$(this).html()+'</div>');
+          }else{
+          $('.container-destacados').append($(this).html());
+          }
+        });
       }
       resizeGoToInstitucional();
       function animateLevelNext($level){
