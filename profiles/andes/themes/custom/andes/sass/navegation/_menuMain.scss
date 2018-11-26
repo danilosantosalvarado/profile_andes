@@ -982,14 +982,11 @@ header {
   .wrapper-mega-menu {
     // /* ----| Logos |---- */
     #block-views-logos-header-block {
-      // ocultar logo en mobil
-      display: none;
-      @include respond-to(xl) {
-        display: block;
-        width: 25%;
-        float: left;
-        margin-top: 10px;
-      }
+      display: block;
+      width: 25%;
+      float: left;
+      margin-top: 10px;
+      border: 1px solid rebeccapurple;
       //title
       .block-title {
         display: none;
@@ -1014,120 +1011,95 @@ header {
     #block-tb-megamenu-menu-mega-menu {
       width: auto;
       float: right;
-    //   .tb-megamenu-menu-mega-menu {
-    //     //ocultar boton de despliege en movil
-    //     .tb-megamenu-button {
-    //       @include respond-to(xl)  {
-    //        display: none;
-    //       }
-    //     }
-    //     .always-show {
-    //       // /* ----| Nivel 0 item del menu |---- */
-    //       ul.level-0.nav {
-    //           display: flex;
-    //         li.level-1 {
-    //           display: flex;
-    //           justify-content: center;
-    //           align-items: center;
-    //           height: 39px;
-    //           margin: 10px 0;
-    //           @include respond-to(xl) {
-    //             width: 127px;
-    //             height: 74px;
-    //             padding: 0 5px;
-    //             margin: 0;
-    //           }
-    //           >.tb-megamenu-submenu  {
-    //             @include respond-to(xl) {
-    //               position: fixed;
-    //               top: 110px;
-    //               left: 0px;
-    //             }
-    //           }
-    //           // &.open {
-    //           //   background-color: #1a1a1a;
-    //           //   border: none;
-    //           //   box-shadow: none;
-    //           //   @include respond-to(xl) {
-    //           //     background-color: #FFFFFF;
-    //           //   }
-    //           //   > a.dropdown-toggle {
-    //           //     @include respond-to(xl) {
-    //           //       opacity: .6;
-    //           //       transition: .3s;
-    //           //     }
-    //           //   }
-    //           // }
-    //           > a {
-    //             color: color('gray-menu');
-    //             font-weight: weight(normal);
-    //             font-family: $latolight;
-    //             background-color: transparent !important;
-    //             text-align: center;
-    //             border: none;
-    //             padding: 10px 0;
-    //             opacity: 1;
-    //             transition: .3s;
-    //             @include font-size(l);
-    //             @include respond-to(xl) {
-    //               font-family: $latoregular;
-    //               color: color('grey');
-    //               @include font-size(15px);
-    //             }
-    //             &.text-hover {
-    //               color: color('grey');
-    //               opacity: 1 !important;
-    //               transition: .3s;
-    //             }
-    //             &.dropdown-toggle{
-    //               &::after{
-    //                 display: none;
-    //               }
-    //               &:hover{
-    //                 background: transparent;
-    //               }
-    //             }
-    //             .caret {
-    //               border: none;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
+      border: 1px solid red;
+      .tb-megamenu-menu-mega-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         //ocultar boton de despliege en movil
+        .tb-megamenu-button {
+          display: none;
+        }
+        .always-show {
+        // /* ----| Nivel 0 item del menu |---- */
+          ul.level-0.nav {
+            display: flex;
+            li.level-1 {
+              width: 125px;
+              height: 74px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 5px;
+              margin: 0;
+             @include respond-to(xxxl) {
+                width: 136px;
+             }
+              &.open {
+                background-color: #1a1a1a;
+                border: none;
+                box-shadow: none;
+                @include respond-to(xl) {
+                  background-color: #FFFFFF;
+                }
+                > a.dropdown-toggle {
+                  @include respond-to(xl) {
+                    opacity: .6;
+                    transition: .3s;
+                  }
+                }
+              }
+              > a {
+                color: color('gray-menu');
+                font-weight: weight(normal);
+                font-family: $latolight;
+                background-color: transparent !important;
+                text-align: center;
+                border: none;
+                padding: 10px 0;
+                opacity: 1;
+                transition: .3s;
+                @include font-size(l);
+                @include respond-to(xl) {
+                  font-family: $latoregular;
+                  color: color('grey');
+                  @include font-size(15px);
+                }
+                &.text-hover {
+                  color: color('grey');
+                  opacity: 1 !important;
+                  transition: .3s;
+                }
+                &.dropdown-toggle{
+                  &::after{
+                    display: none;
+                  }
+                  &:hover{
+                    background: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     // /* ----| Bloque buscar |---- */
     .barra-buscar{
-      display: none;
-      @include respond-to(xl){
+      span {
         width: 18px;
-        height: 18px;
+        height: 23px;
         display: block;
-        float: right;
-        top: 29px;
-        position: absolute;
-        right: 20px;
-        &:before{
-          content: '...';
-          background: url(../img/Icon/icon-lupa.png) no-repeat center;
-          top: 0px;
-          position: absolute;
-          font-size: 0;
-          background-size: 18px;
-          z-index: 9;
-          width: 18px;
-          height: 18px;
-          right: 0;
-          background-position: 1px -17px;
-          cursor: pointer;
-        }
-        &.icon-close{
-          &:before{
-            background: url(../img/Icon/icon-cerrar.png) no-repeat center;
-          }
-        }
-        span{
-          display: none
+        font-size: 0;
+        background: url(../img/Icon/icon-lupa.png) no-repeat center;
+        background-size: 18px;
+        background-position: 1px -17px;
+        z-index: 9;
+        cursor: pointer;
+      }
+      &.icon-close{
+        &span{
+          background: url(../img/Icon/icon-cerrar.png) no-repeat center;
         }
       }
     }
@@ -1170,6 +1142,7 @@ header {
       transform: translate3d(0, -50%, 0);
       background: none;
       border:none;
+      box-shadow: none;
       padding: 0px;
       border-radius: 0px;
       font-size: 0px;
@@ -1179,11 +1152,15 @@ header {
         height: 30px;
         display: block;
         background: url(../img/Icon/icon-lupa-search.png) no-repeat;
-        // background-position: 2px -30px;
         background-size: cover;
       }
-      &:hover {
-        background-color: transparent;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent !important;
+        border: none;
+        box-shadow: none;
+        outline: none !important;
       }
     }
   }
