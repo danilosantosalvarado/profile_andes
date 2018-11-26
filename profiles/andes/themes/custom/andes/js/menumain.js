@@ -381,6 +381,7 @@
         }
         $('.container-select-language select').on('change', function(){
           $(this).parents('form').submit();
+
         });
         $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
         $.each( $selectDestacadosItems, function( k, v ) {
