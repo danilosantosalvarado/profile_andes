@@ -100,11 +100,17 @@
         /*  add buscador */
         if (!$('.mega-menu-2').hasClass('barra-buscar')) {
           $('.wrapper-mega-menu .nav-collapse').parent().append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
+          $('.wrapper-buscar-menu').hide();
           $(".barra-buscar").click(function () {
             $(this).toggleClass('icon-close');
             $('.wrapper-buscar-menu').toggleClass('active');
             $('#google-cse-results-searchbox-form input').attr('placeholder', 'Buscar');
             $('#block-google-cse-google-cse').toggleClass("buscador-open");
+            if(jQuery('.buscador-open').length > 0){
+              $('.wrapper-buscar-menu').slideDown('slow');
+            }else{
+              $('.wrapper-buscar-menu').slideUp('slow');
+            }
           });
         }
         clone_select();
@@ -126,6 +132,7 @@
         );
         $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img').siblings('.tb-megamenu-column').addClass('content-nivel-1');
         childrenEvent(".tb-megamenu-column .dropdown-toggle");
+
         function childrenEvent( $class){
           $($class).on("click", function (e) {
             e.preventDefault();
@@ -135,6 +142,7 @@
             if($('.menu-container-data').length == 0){
               var $nextMenu = $("li[data-id='"+$dataId+"']").find("li[data-id='"+$dataIdLocal+"'] .tb-megamenu-column-inner").html();
               $(this).parents('.tb-megamenu-column').addClass('active-nivel-1').before("<div class='menu-container-data'><div class='data-menu' style='display: none;'></div><div class='box-black' box-id='"+$dataIdLocal+"' box-level='"+$level+"'><p>" + $(this).text() + "</p></div><div class= 'container-items'>"+$nextMenu+"</div></div>");
+              $('.container-menu-image').toggleClass('active');
               $(' .box-black').on('click', function(e){
                 e.preventDefault();
                 var $levelBox = $(this).attr('box-level');
@@ -355,11 +363,12 @@
       }
       resizeGoToInstitucional();
       function animateLevelNext($level){
+        console.log("(.region-navigation .menu-container-data.active.level-"+$level+").position()");
           $inner = $(".region-navigation .menu-container-data.active.level-"+$level);
           if ($inner.position().left == 0) {
-            $inner.animate({left: "-100%"}, "slow" );
+            $inner.animate({left: "-100%"}, 6e3 );
           }else {
-            $inner.animate({left: "0px"}, "slow" );
+            $inner.animate({left:0},6e3);
           }
           $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
           function(e) {
@@ -368,11 +377,11 @@
       }
       function animateLevelPrevious($level, $levelNow){
         $inner = $(".region-navigation .menu-container-data.active.level-"+$levelNow);
-          $inner.animate({left: "100%"}, "slow" );
-          $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
-          function(e) {
-            $(".menu-container-data.level-"+$levelNow).removeClass('active');
-          });
+        $inner.animate({left: "100%"}, "slow" );
+        $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+        function(e) {
+          $(".menu-container-data.level-"+$levelNow).removeClass('active');
+        });
     }
     $height_menu = $('.navbar-header').outerHeight();
     $('#navbar-collapse').css({'top': $height_menu});
