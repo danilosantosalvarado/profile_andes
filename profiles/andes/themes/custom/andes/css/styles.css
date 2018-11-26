@@ -11481,6 +11481,10 @@ header {
   .wrapper-mega-menu #block-views-logos-header-block .views-row p svg .cls-1 {
     fill: black;
   }
+  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu {
+    width: auto;
+    float: right;
+  }
   .wrapper-mega-menu .barra-buscar {
     display: none;
   }

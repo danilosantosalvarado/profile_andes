@@ -1011,9 +1011,9 @@ header {
       }
     }
     // /* ----| Lista Menu |---- */
-    // #block-tb-megamenu-menu-mega-menu {
-    //   width: auto;
-    //   float: right;
+    #block-tb-megamenu-menu-mega-menu {
+      width: auto;
+      float: right;
     //   .tb-megamenu-menu-mega-menu {
     //     //ocultar boton de despliege en movil
     //     .tb-megamenu-button {
@@ -1095,7 +1095,7 @@ header {
     //       }
     //     }
     //   }
-    // }
+    }
     // /* ----| Bloque buscar |---- */
     .barra-buscar{
       display: none;
