@@ -385,7 +385,7 @@
           if(k == 0){
           $('.wrapper-menu-soy').append('<div class="container-destacados"><div class="menu-destacado">'+$(this).html()+'</div></div>');
           }else{
-          $('.container-destacados').append($(this).html());
+          $('.container-destacados').append('<div class="menu-destacado">'+$(this).html()+"</div>");
           }
         });
       }
