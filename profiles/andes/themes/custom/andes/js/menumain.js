@@ -413,8 +413,7 @@
         });
     }
     $height_menu = $('.navbar-header').outerHeight();
-    $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight() + $('body > #admin-menu').outerHeight();
-    console.log($login_in);
+    $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
     $('#navbar-collapse').css({'top': $height_menu});
     $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
       $('.navbar-toggle').on('click',function(){
