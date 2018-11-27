@@ -10445,7 +10445,8 @@ header {
 */
 @media (max-width: 991px) {
   body.active-menu .navbar-collapse.collapse.in {
-    position: initial !important;
+    position: relative !important;
+    top: 0;
   }
   body.active-menu > .main-container.container-fluid,
   body.active-menu .footer.container-fluid {

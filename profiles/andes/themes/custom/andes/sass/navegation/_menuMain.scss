@@ -15,7 +15,8 @@ header {
   //al desplegar el menu no se pueda hacer scroll
   body.active-menu {
     .navbar-collapse.collapse.in {
-      position: initial !important;
+      position: relative !important;
+      top: 0;
     }
     >.main-container.container-fluid,
     .footer.container-fluid {
