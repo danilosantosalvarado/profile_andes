@@ -1320,10 +1320,6 @@ th {
   display: none;
 }
 
-.slider-homes-specials .title-slider-homes {
-  display: none;
-}
-
 .slider-homes-specials .body-slider-homes {
   margin-top: 0;
 }
@@ -3361,16 +3357,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   }
 }
 
-.views_slideshow_main .title-slider-homes:after, .view-slider-homes .slider-homes-left .title-slider-homes:after, .view-slider-homes .slider-homes-right .title-slider-homes:after, .view-slider-homes .slider-homes-center .title-slider-homes:after, .view-slider-homes .views_slideshow_main .title-slider-homes:after, .view-banner-nodes .slider-homes-left .title-slider-homes:after, .view-banner-nodes .slider-homes-right .title-slider-homes:after, .view-banner-nodes .slider-homes-center .title-slider-homes:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid #fff;
-  position: relative;
-  top: 10px;
-}
-
 .views_slideshow_main .body-slider-homes, .view-slider-homes .slider-homes-left .body-slider-homes, .view-slider-homes .slider-homes-right .body-slider-homes, .view-slider-homes .slider-homes-center .body-slider-homes, .view-slider-homes .views_slideshow_main .body-slider-homes, .view-banner-nodes .slider-homes-left .body-slider-homes, .view-banner-nodes .slider-homes-right .body-slider-homes, .view-banner-nodes .slider-homes-center .body-slider-homes {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.125rem;
@@ -4384,12 +4370,12 @@ h1.page-header {
   position: relative;
   left: 0;
   right: 0;
-  padding-bottom: 32px;
   text-align: center;
   overflow-y: hidden;
   white-space: nowrap;
   overflow-x: visible;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Buttons */
 }
 
 .view-banner-nodes .skin-default .swiper-pagination-banner-nodes {
@@ -10531,6 +10517,12 @@ header {
     display: none !important;
     padding: 0px;
     height: 0px !important;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
   }
   header .container-fluid > .navbar-collapse.in {
     width: 100%;
@@ -10547,7 +10539,6 @@ header {
     -webkit-box-shadow: none;
             box-shadow: none;
     padding: 0px;
-    z-index: 999;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
@@ -10562,6 +10553,11 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  header .container-fluid > .navbar-collapse.collapsing {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
   header .container-fluid .tb-megamenu > .nav-collapse.in {
     position: static;
