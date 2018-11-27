@@ -10458,7 +10458,6 @@ header {
   }
   header .container-fluid .navbar-header {
     width: 100%;
-    background-color: red;
     position: fixed;
     top: 0px;
     left: 0px;

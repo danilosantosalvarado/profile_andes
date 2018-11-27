@@ -364,6 +364,7 @@
         $selectTopSoyItems =$('.wrapper-menu-soy li.level-1').not('.dropdown').not('.menu-destacado');
         $secondSelect = $('#block-lang-dropdown-language');
         $('.wrapper-menu-soy').append('<div class="container-select-language"><span class="title-language">'+Drupal.t($secondSelect.find('.block-title').text())+'</span>'+$secondSelect.find('form').parent().html()+'</div>');
+        $('.navbar-header').addClass(Drupal.settings.udla_blocks_alter.background_color_change);
 
         $.each( $selectTopSoyItems, function( k, v ) {
           console.log(k);
