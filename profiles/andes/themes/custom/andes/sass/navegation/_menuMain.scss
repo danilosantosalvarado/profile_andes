@@ -14,7 +14,13 @@ header {
 @media (max-width: 991px) {
   //al desplegar el menu no se pueda hacer scroll
   body.active-menu {
-    overflow-y: hidden;
+    .navbar-collapse.collapse.in {
+      position: initial !important;
+    }
+    >.main-container.container-fluid,
+    .footer.container-fluid {
+      display: none;
+    }
   }
   header .container-fluid {
     border: none;

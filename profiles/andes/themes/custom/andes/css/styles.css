@@ -10444,8 +10444,12 @@ header {
 //------------------------------------------------------------------------------
 */
 @media (max-width: 991px) {
-  body.active-menu {
-    overflow-y: hidden;
+  body.active-menu .navbar-collapse.collapse.in {
+    position: initial !important;
+  }
+  body.active-menu > .main-container.container-fluid,
+  body.active-menu .footer.container-fluid {
+    display: none;
   }
   header .container-fluid {
     border: none;

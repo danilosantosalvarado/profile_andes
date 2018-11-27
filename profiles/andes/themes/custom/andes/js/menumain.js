@@ -417,8 +417,14 @@
     }
     $height_menu = $('.navbar-header').outerHeight();
     $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
-    $('#navbar-collapse').css({'top': $height_menu});
-    $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+    //$('#navbar-collapse').css({'margin-top': $height_menu });
+    $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
+
+    if($('.navbar-header .wrapper-header-up').length >0){
+      $('body > .container-fluid.main-container').css({'margin-top': $height_menu});
+    }else{
+      $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+    }
     $('.navbar-toggle').on('click',function(){
         $('body').toggleClass('active-menu');
         if($(this).attr('aria-expanded') == undefined || $(this).attr('aria-expanded') == false){
