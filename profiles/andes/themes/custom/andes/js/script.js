@@ -74,18 +74,29 @@
 		if($('.align-social-vertical').hasClass('social-botton')){$('.align-social-vertical').removeClass('social-botton'); }
 		if($('.align-social-vertical').hasClass('social-fixed')){$('.align-social-vertical').removeClass('social-fixed'); }
 		if($('.align-social-vertical').hasClass('social-initial')){$('.align-social-vertical').removeClass('social-initial'); }
+		jQuery(".content-desktop").css("margin-left", "inherit");
+
 		$('.align-social-vertical').addClass('social-mobile');
 	}
 
 	function socialDesktop() {
-		if($('.align-social-vertical').hasClass('social-mobile')){
-			$('.align-social-vertical').removeClass('social-mobile');
+		if($('.align-social-vertical').hasClass('social-mobile')){$('.align-social-vertical').removeClass('social-mobile');	}
+		$('.align-social-vertical').addClass('content-desktop');
+		var margen =  jQuery(".container-node").offset();
+		if (margen != null) {
+			margen = margen['left']-jQuery(".content-desktop").width();
 		}
+			
+			jQuery(".content-desktop").css("margin-left", margen);
 	}
 
 	function socialScrollDesktop(){
 		var validation = $('body').find('.align-social-vertical');
 		if (validation.length > 0){
+					var margen =  jQuery(".container-node").offset();
+					if (margen != null) {
+						margen = margen['left']-jQuery(".content-desktop").width();
+					}
 
 					var panel = jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id');
 					var	panelId = '#'.concat(panel);
@@ -113,6 +124,8 @@
 							$('.align-social-vertical').removeAttr("style");
 							$('.align-social-vertical').addClass('social-initial');
 
+							jQuery(".content-desktop").css("margin-left", margen);
+
 						}
 						else if (scrollVentana >= contenedorTop) {
 							// exist social-initial class
@@ -128,10 +141,12 @@
 							$(".social-fixed").css({top: ($menu_admin+$menu_navigation)});
 							// $('.align-social-vertical').addClass('social-fixed');
 
+							jQuery(".content-desktop").css("margin-left", margen);
+
 
 						}
 						if(scrollVentana > (contenerdorHeight-altoRerdes)) {
-						  // exist social-fixed class
+							// exist social-fixed class
 							if($('.align-social-vertical').hasClass('social-fixed')){
 								$('.align-social-vertical').removeClass('social-fixed');
 							}
@@ -142,27 +157,45 @@
 							$('.align-social-vertical').removeAttr("style");
 							//social-botton
 							$('.align-social-vertical').addClass('social-botton');
+
+							jQuery(".content-desktop").css("margin-left", margen);
 						}
 					}
-		}
+		}			
 	}
 
 	function socialScrollMobile(){
 		var validation = $('body').find('.social-mobile');
-		if (validation.length > 0){
-			var menu_admin = $('#admin-menu').outerHeight(true);
-			var menu_navigation = $('.region-navigation').outerHeight(true);
-			var scrollWindow = $(window).scrollTop();
-			var scrollVerticalMenu = $('.social-mobile').offset().top;
 
-			if (scrollWindow >= (scrollVerticalMenu-(menu_admin+menu_navigation))) {
-				$('.social-mobile').addClass('social-mobile-fixed');
-			}else {
+		if (validation.length > 0){
+			
+			$(panelId).css("background-color","red");
+
+
+			var altoRerdes = $('.align-social-vertical').outerHeight(true);
+			var menu_admin = $('#admin-menu').outerHeight(true);
+			var menu_admin_height = $('#admin-menu').height();
+			var menu_navigation = $('.region-navigation').outerHeight(true);
+			var	panelId = '#'.concat(jQuery('.align-social-vertical').parents('.panels-bootstrap-region').attr('id'));
+			var heightContent = $(panelId).height()-(menu_navigation+menu_admin);
+			var scrollWindow = $(window).scrollTop();
+			var total =(menu_admin+menu_navigation+heightContent+$(panelId).offset().top)-(altoRerdes+20);
+
+			if (scrollWindow < ($(panelId).offset().top - menu_admin_height) || scrollWindow > total) {
 				if($('.social-mobile').hasClass('social-mobile-fixed')){
+					jQuery(".content-desktop").css("margin-left", "inherit");
 					$('.social-mobile').removeClass('social-mobile-fixed');
 				}
+			}else {
+				jQuery(".content-desktop").css("margin-left", "inherit");
+				$('.social-mobile').addClass('social-mobile-fixed');
+				$('.social-mobile-fixed').css({
+					top: menu_admin_height
+				});
+
 			}
-		}
+
+		}		
 	}
 	// //fin funcion redes sociales vertical scroll interna de eventos.
 
