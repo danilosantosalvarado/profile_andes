@@ -4,13 +4,44 @@
 //------------------------------------------------------------------------------
 */
 
-.view-equipo-de-trabajo {
+.lista-tags-equipo{
+  margin-bottom: 30px;
+  @media screen and (max-width: 888px) {
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    margin-top: 15px;
+    ul {
+      width: 100%;
+      padding: 0;
+      background-color: #f0eeee;
+      height: 90vh;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  &.collapse{
+    @include respond-to(xl) {
+      display: block;
+    }
+  }
+}
+
+.view-componente-equipo-trabajo {
   // tabs de equipos
   ul {
+    overflow-x: auto;
     display: flex;
-    overflow-x: scroll;
     padding: 20px 0;
     list-style: none;
+    @media screen and (max-width: 888px){
+      overflow-x: hidden;
+      display: block;
+      padding: 0;
+    }
     // width
     &::-webkit-scrollbar {
       width: 2px;
@@ -21,29 +52,43 @@
     }
     li {
       flex: 1 1 0;
-      padding: 0 20px;
+      padding: 0;
       text-align: center;
+      margin-right: 3px;
+      flex: auto;
+      @media screen and (max-width: 888px){
+        display: inline;
+        float: left;
+      }
       .views-field {
-        display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
       }
       a {
-        font-family: $latoregular;
-        padding: 5px 4px;
+        font-family: $latobold;
+        padding: 15px 2px;
         text-decoration: none;
-        @include font-size(o);
+        @include font-size(ms);
+        border-bottom: 3px solid #fff;
+        @media screen and (max-width: 888px){
+          width: 100%;
+          padding: 15px 20px;
+          float: left;
+          border-bottom: none;
+        }
         &:hover{
           text-decoration: none;
+          border-bottom: 3px solid #359ED0;
         }
       }
       &.active{
         a {
           color: #888;
-          border-bottom: 3px solid color('blue-light');
+          border-bottom: 3px solid #359ED0;
           &:hover{
             text-decoration: none;
+            background-color: #46b9c0;
           }
         }
       }
@@ -201,5 +246,48 @@
   }
 }
 
-
-
+/* -----titulo mobile------ */
+.pane-componente-equipo-trabajo{
+  @media screen and (max-width: 888px){
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: #a7a8aa;
+    padding: 15px;
+    h2{
+      margin: 0;
+      text-align: left;
+      float: left;
+      color: #fff;
+      @include font-size(ms);
+      font-family: $latolight;
+    }
+    .pane-content{
+      float: right;
+      button{
+        width: 20px;
+        height: 22px;
+        background-image: url(../img/Icon/menu-quipo-mobil.png);
+        background-size: 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+}
+.pane-contenido-equipo-de-trabajo{
+  @media screen and (max-width: 888px){
+    padding-top: 50px;
+  }
+}
+  .panels-ipe-portlet-content{
+    .pane-content{
+      button{
+        @include respond-to(l){
+          display: none;
+        }
+      }
+    }
+  }

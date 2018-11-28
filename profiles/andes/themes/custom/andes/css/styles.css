@@ -8221,35 +8221,80 @@ h1.page-header {
 // Equipos
 //------------------------------------------------------------------------------
 */
-.view-equipo-de-trabajo ul {
+.lista-tags-equipo {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 888px) {
+  .lista-tags-equipo {
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    margin-top: 15px;
+  }
+  .lista-tags-equipo ul {
+    width: 100%;
+    padding: 0;
+    background-color: #f0eeee;
+    height: 90vh;
+  }
+  .lista-tags-equipo ul li {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .lista-tags-equipo.collapse {
+    display: block;
+  }
+}
+
+.view-componente-equipo-trabajo ul {
+  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: scroll;
   padding: 20px 0;
   list-style: none;
 }
 
-.view-equipo-de-trabajo ul::-webkit-scrollbar {
+@media screen and (max-width: 888px) {
+  .view-componente-equipo-trabajo ul {
+    overflow-x: hidden;
+    display: block;
+    padding: 0;
+  }
+}
+
+.view-componente-equipo-trabajo ul::-webkit-scrollbar {
   width: 2px;
 }
 
-.view-equipo-de-trabajo ul::-webkit-scrollbar-thumb {
+.view-componente-equipo-trabajo ul::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-.view-equipo-de-trabajo ul li {
+.view-componente-equipo-trabajo ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
-  padding: 0 20px;
+  padding: 0;
   text-align: center;
+  margin-right: 3px;
+  -ms-flex: auto;
+      flex: auto;
 }
 
-.view-equipo-de-trabajo ul li .views-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 888px) {
+  .view-componente-equipo-trabajo ul li {
+    display: inline;
+    float: left;
+  }
+}
+
+.view-componente-equipo-trabajo ul li .views-field {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -8259,24 +8304,36 @@ h1.page-header {
   height: 100%;
 }
 
-.view-equipo-de-trabajo ul li a {
-  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  padding: 5px 4px;
+.view-componente-equipo-trabajo ul li a {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  padding: 15px 2px;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
+  border-bottom: 3px solid #fff;
 }
 
-.view-equipo-de-trabajo ul li a:hover {
-  text-decoration: none;
+@media screen and (max-width: 888px) {
+  .view-componente-equipo-trabajo ul li a {
+    width: 100%;
+    padding: 15px 20px;
+    float: left;
+    border-bottom: none;
+  }
 }
 
-.view-equipo-de-trabajo ul li.active a {
+.view-componente-equipo-trabajo ul li a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #359ED0;
+}
+
+.view-componente-equipo-trabajo ul li.active a {
   color: #888;
-  border-bottom: 3px solid #46b9c0;
+  border-bottom: 3px solid #359ED0;
 }
 
-.view-equipo-de-trabajo ul li.active a:hover {
+.view-componente-equipo-trabajo ul li.active a:hover {
   text-decoration: none;
+  background-color: #46b9c0;
 }
 
 /* ------| Equipos  |----- */
@@ -8460,6 +8517,50 @@ h1.page-header {
 
 .text-center ul.pagination li.next, .text-center ul.pagination li.prev, .text-center ul.pagination li.pager-last, .text-center ul.pagination li.pager-first {
   display: none;
+}
+
+/* -----titulo mobile------ */
+@media screen and (max-width: 888px) {
+  .pane-componente-equipo-trabajo {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: #a7a8aa;
+    padding: 15px;
+  }
+  .pane-componente-equipo-trabajo h2 {
+    margin: 0;
+    text-align: left;
+    float: left;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  }
+  .pane-componente-equipo-trabajo .pane-content {
+    float: right;
+  }
+  .pane-componente-equipo-trabajo .pane-content button {
+    width: 20px;
+    height: 22px;
+    background-image: url(../img/Icon/menu-quipo-mobil.png);
+    background-size: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .pane-contenido-equipo-de-trabajo {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 888px) {
+  .panels-ipe-portlet-content .pane-content button {
+    display: none;
+  }
 }
 
 /*
