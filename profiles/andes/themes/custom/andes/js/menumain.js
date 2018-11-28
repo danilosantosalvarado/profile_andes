@@ -189,6 +189,12 @@
             $('.menu-container-data').addClass('active');
           });
         }
+        $('.tb-megamenu-nav.level-0 .level-1.dropdown').mouseover(function(e){
+          $('body').addClass('dark-layer');
+        });
+        $('.tb-megamenu-nav.level-0 .level-1.dropdown').mouseout(function(e){
+          $('body').removeClass('dark-layer');
+        });
       }else{
         $('.navbar-toggle').attr('data-target', '#navbar-collapse, .nav-collapse');
         $('.menuIstance-processed').css('display','none');

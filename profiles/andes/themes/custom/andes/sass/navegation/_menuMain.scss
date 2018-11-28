@@ -14,6 +14,7 @@ header {
 @media (max-width: 991px) {
   //al desplegar el menu no se pueda hacer scroll
   body.active-menu {
+    background-color:black;
     .navbar-collapse.collapse.in {
       position: relative !important;
       top: 0;
@@ -68,7 +69,6 @@ header {
               height: auto;
               max-height: 48px;
               display: block;
-              // vertical-align: middle;
             }
           }
         }
@@ -1078,7 +1078,7 @@ header {
       display: block;
       width: 25%;
       float: left;
-      margin-top: 10px;
+      padding: 10px 20px;
       //title
       .block-title {
         display: none;
@@ -1086,12 +1086,20 @@ header {
       .views-row {
         width: 50%;
         float: left;
+        &:nth-child(odd) {
+          padding-right: 10px;
+        }
+        &:nth-child(even) {
+          padding-left: 10px;
+          border-left: 1px solid black;
+          p {
+            padding-top: 5px;
+          }
+        }
         p {
-          width: 124px;
-          height: 48px;
-          margin: 0px;
-          overflow: hidden;
-
+          svg {
+            vertical-align: middle;
+          }
           svg text,
           svg .cls-1 {
             fill: black;
