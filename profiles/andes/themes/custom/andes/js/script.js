@@ -10,6 +10,10 @@
 
 	//funcion redes sociales vertical scroll interna de eventos.
 	$(window).ready(function() {
+
+
+		activeEquipo();
+
 		var a = $(window).width();
 		if (a > 992) {socialDesktop(); }else {socialMobile(); }
 		var color = $('.sabor').attr('data-color');
@@ -55,8 +59,6 @@
 		$('img').each(function() {
 			$(this).wrap('<figure></figure>');
 		});
-
-
 	});
 
 	$(window).resize(function(event) {
@@ -68,6 +70,12 @@
 		var a = $(window).width();
 		if (a > 991) {socialScrollDesktop(); }else {socialScrollMobile(); }
 	});
+
+	// Agregar clase active equipo
+	function activeEquipo(){
+		var u = String( decodeURI(window.location.href));
+		$('.view-componente-equipo-trabajo').find('a[href="'+u+'"]').addClass('team-active');
+	}
 
 	function socialMobile(){
 

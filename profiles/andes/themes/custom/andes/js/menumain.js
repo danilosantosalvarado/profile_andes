@@ -71,10 +71,10 @@
       /* wrapper para area segura  */
       $(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
       $(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
-      $(".menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
+      $("#block-google-cse-google-cse.menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
       $(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
       $(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
-      $(".wrapper-buscar-menu .menu-buscar").wrapAll("<div class='container' />");
+      $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
 
       /* Scroll menu cambio de color */
       $(window).scroll(function (event) {
@@ -438,10 +438,10 @@
     //$('#navbar-collapse').css({'margin-top': $height_menu });
     $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
 
-    if($('.navbar-header .wrapper-header-up').length >0){
-      $('body > .container-fluid.main-container').css({'margin-top': $height_menu});
+    if($('.navbar-header .wrapper-header-color').length >0){
+      $('body > div.container-fluid.main-container').css({'margin-top': $height_menu - 1 });
     }else{
-      $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+      $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop });
     }
     $('.navbar-toggle').on('click',function(){
         $('body').toggleClass('active-menu');
