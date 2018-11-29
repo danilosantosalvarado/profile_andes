@@ -30,8 +30,9 @@
 					padding: 25px;
 					border-top: 3px solid color('blue-light');
 					background: #f4f1f1;
+					min-height: 290px;
 					@include respond-to(xs) {
-						min-height: 326px;
+						min-height: 280px;
 					}
 					//Titulo
 					.views-field-title {
@@ -95,7 +96,7 @@
 							width: 180px;
 							font-family: $latoregular;
 							@include font-size(m);
-							color: color('grey-dark');
+							color: color('blue-light');
 							text-decoration: none;
 							text-align: center;
 							border: 1px solid color('blue-light');
@@ -106,7 +107,7 @@
 							@include respond-to(xs) {
 								// right: 25px;
 								// left: inherit;
-								max-width: 150px;
+								max-width: 130px;
 							}
 							&:hover {
 								background-color: color('blue-light');
@@ -187,6 +188,14 @@
 		}
 	}
 
+}
+
+.swiper-events-hightlight-next,
+.swiper-events-hightlight-prev{
+	display: none;
+	@include respond-to(l) {
+		display: block;
+	}
 }
 
 .view-id-componente_eventos {
