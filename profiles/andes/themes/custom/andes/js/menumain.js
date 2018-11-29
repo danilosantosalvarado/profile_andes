@@ -434,9 +434,9 @@
     $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
 
     if($('.navbar-header .wrapper-header-color').length >0){
-      $('body > .container-fluid.main-container').css({'margin-top': $height_menu});
+      $('body > div.container-fluid.main-container').css({'margin-top': $height_menu - 1 });
     }else{
-      $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+      $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop });
     }
     $('.navbar-toggle').on('click',function(){
         $('body').toggleClass('active-menu');

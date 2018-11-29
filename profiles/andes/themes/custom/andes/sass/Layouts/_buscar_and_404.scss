@@ -4,8 +4,8 @@
 // Buscar
 //------------------------------------------------------------------------------
 */
-.page-search-google {
 
+.page-search-google {
   > .main-container.container-fluid{
     .col-sm-12 {
       margin: 0 auto;
@@ -191,22 +191,24 @@
 // bg-404
 //------------------------------------------------------------------------------
 */
-#node-163 {
-  background: url(../img/bg-404.png) center no-repeat;
-  background-size: cover;
-  div.rtecenter {
-    text-align: center;
-    margin: 50px 0 10px;
-    padding: 0px 15px;
-    @include respond-to(m) {
-      margin: 100px 0 20px;
+body.panel-404 {
+  #panel-bootstrap-row-main {
+    background: url(../img/bg-404.png) center no-repeat;
+    background-size: cover;
+    //404 imagen
+    div.rtecenter {
+      text-align: center;
+      margin: 50px 0 10px;
+      padding: 0px 15px;
+      @include respond-to(m) {
+        margin: 100px 0 20px;
+      }
+      img {
+        width: 100%;
+        max-width: 589px;
+        height: auto;
+      }
     }
-    img {
-      width: 100%;
-      max-width: 589px;
-      height: auto;
-    }
-  }
     p.rtecenter {
       font-family: $latoregular;
       @include font-size(55px);
@@ -219,5 +221,58 @@
         line-height: 1.1rem;
       }
     }
+    //Bloque de busqueda
+    #google-cse-results-searchbox-form {
+      // display: table;
+      margin: 50px auto 30px;
+      > div {
+        display: flex;
+        justify-content: center;
+        .form-item  {
+          label {
+            display: none;
+          }
+          input {
+            max-width: 160px;
+            height: 36px;
+            font-family: $latolight;
+            @include font-size(s);
+            color: #484851;
+            background: transparent url(../img/Icon/icon-lupa-search.png) no-repeat 90% !important;
+            background-size: 21px !important;
+            border-color: #484851 !important;
+            border-radius: 0;
+            border-top: 0;
+            border-left: 0;
 
+            box-shadow: none;
+            padding-right: 35px;
+            appearance: none;
+          }
+        }
+        button {
+          font-family: $latolight;
+          font-size: .8889rem;
+          color: #484851;
+          background: 0 0;
+          margin: 0;
+          border: 1px solid #484851;
+          border-left: 0;
+          border-radius: 0;
+          padding: 6px 25px;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: transparent !important;
+            border: none;
+            box-shadow: none;
+            outline: none !important;
+          }
+        }
+      }
+    }
+    #google-cse-results {
+      display: none;
+    }
+  }
 }

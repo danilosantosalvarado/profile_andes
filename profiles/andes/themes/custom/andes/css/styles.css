@@ -503,30 +503,30 @@ th {
 // bg-404
 //------------------------------------------------------------------------------
 */
-#node-163 {
+body.panel-404 #panel-bootstrap-row-main {
   background: url(../img/bg-404.png) center no-repeat;
   background-size: cover;
 }
 
-#node-163 div.rtecenter {
+body.panel-404 #panel-bootstrap-row-main div.rtecenter {
   text-align: center;
   margin: 50px 0 10px;
   padding: 0px 15px;
 }
 
 @media (min-width: 768px) {
-  #node-163 div.rtecenter {
+  body.panel-404 #panel-bootstrap-row-main div.rtecenter {
     margin: 100px 0 20px;
   }
 }
 
-#node-163 div.rtecenter img {
+body.panel-404 #panel-bootstrap-row-main div.rtecenter img {
   width: 100%;
   max-width: 589px;
   height: auto;
 }
 
-#node-163 p.rtecenter {
+body.panel-404 #panel-bootstrap-row-main p.rtecenter {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 3.4375rem;
   line-height: 1;
@@ -534,10 +534,71 @@ th {
   text-transform: uppercase;
 }
 
-#node-163 p.rtecenter + p.rtecenter {
+body.panel-404 #panel-bootstrap-row-main p.rtecenter + p.rtecenter {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.1rem;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form {
+  margin: 50px auto 30px;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div .form-item label {
+  display: none;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div .form-item input {
+  max-width: 160px;
+  height: 36px;
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #484851;
+  background: transparent url(../img/Icon/icon-lupa-search.png) no-repeat 90% !important;
+  background-size: 21px !important;
+  border-color: #484851 !important;
+  border-radius: 0;
+  border-top: 0;
+  border-left: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-right: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div button {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+  font-size: .8889rem;
+  color: #484851;
+  background: 0 0;
+  margin: 0;
+  border: 1px solid #484851;
+  border-left: 0;
+  border-radius: 0;
+  padding: 6px 25px;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div button:hover, body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div button:focus, body.panel-404 #panel-bootstrap-row-main #google-cse-results-searchbox-form > div button:active {
+  background-color: transparent !important;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+}
+
+body.panel-404 #panel-bootstrap-row-main #google-cse-results {
+  display: none;
 }
 
 /*
@@ -12093,6 +12154,15 @@ header {
   .logged-in header > .container-fluid {
     top: 28px;
   }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  .logged-in header .container-fluid .navbar-header {
+    top: 88px;
+  }
+}
+
+@media (min-width: 992px) {
   .logged-in .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
     top: 65px;
   }

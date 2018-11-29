@@ -1270,6 +1270,11 @@ header {
     header > .container-fluid {
       top: 28px;
     }
+    header .container-fluid .navbar-header {
+      @include respond-to(xl) {
+        top: 88px;
+      }
+    }
     .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
       top: 65px;
     }
