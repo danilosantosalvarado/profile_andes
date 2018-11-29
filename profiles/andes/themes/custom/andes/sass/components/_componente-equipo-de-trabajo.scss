@@ -8,7 +8,7 @@
   margin-bottom: 30px;
   @media screen and (max-width: 888px) {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     position: fixed;
     z-index: 2;
     right: 0;
@@ -80,16 +80,11 @@
         &:hover{
           text-decoration: none;
           border-bottom: 3px solid #359ED0;
+          opacity: 0.8;
         }
-      }
-      &.active{
-        a {
-          color: #888;
+        &.team-active{
+          text-decoration: none;
           border-bottom: 3px solid #359ED0;
-          &:hover{
-            text-decoration: none;
-            background-color: #46b9c0;
-          }
         }
       }
     }
@@ -281,7 +276,6 @@
   @media screen and (max-width: 888px){
     padding-top: 50px;
   }
-}
   .panels-ipe-portlet-content{
     .pane-content{
       button{
@@ -291,3 +285,5 @@
       }
     }
   }
+}
+  
