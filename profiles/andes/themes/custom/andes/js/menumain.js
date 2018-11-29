@@ -66,10 +66,10 @@
       /* wrapper para area segura  */
       $(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
       $(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
-      $(".menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
+      $("#block-google-cse-google-cse.menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
       $(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
       $(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
-      $(".wrapper-buscar-menu .menu-buscar").wrapAll("<div class='container' />");
+      $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
 
       /* Scroll menu cambio de color */
       $(window).scroll(function (event) {
