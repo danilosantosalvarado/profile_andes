@@ -31,6 +31,11 @@
           window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
         }
       });
+      $('#google-cse-results-searchbox-form #edit-sa').on('click',function(e) {
+        e.preventDefault();
+        $('#google-cse-results-searchbox-form #edit-query').val();
+        window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
+      });
       function clone_select(){
         $select = $('.lang_dropdown_form select');
         $select.parent('.form-item').append('<div class="container-language"></div><ul class="select-options"></ul>');
