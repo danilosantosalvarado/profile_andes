@@ -4,6 +4,25 @@
 //------------------------------------------------------------------------------
 */
 
+.layout-1{
+  .pane-content{
+    h1{
+      font-family: $crimson-textbold;
+      @include font-size(l);
+      color: color('grey-dark');
+      text-align: left;
+      padding: 10px;
+      font-weight: 600;
+      &:after{
+        content: "";
+        display: block;
+        height: 2px;
+        width: 80px;
+        border-bottom: 1px solid #484851;
+      }
+    }
+  }
+}
 .slider-homes-layout-one{
   position: absolute;
   top: 0;
