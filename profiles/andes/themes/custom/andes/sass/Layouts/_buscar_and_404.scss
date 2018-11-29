@@ -1,0 +1,223 @@
+
+/*
+//------------------------------------------------------------------------------
+// Buscar
+//------------------------------------------------------------------------------
+*/
+.page-search-google {
+
+  > .main-container.container-fluid{
+    .col-sm-12 {
+      margin: 0 auto;
+      float: none;
+      @include respond-to(m) {
+          width: 750px;
+      }
+      @include respond-to(xl) {
+          width: 970px;
+      }
+      @include respond-to(xxxl) {
+          width: 1170px;
+      }
+      >.tabs--primary {
+        display: none;
+      }
+      #block-system-main {
+        //imput de buscar
+        #search-form {
+          margin-bottom: 10px;
+          padding: 45px 4px 10px 6px;
+          .input-group {
+            input {
+              font-family: $latobold;
+              color: #484851;
+              border: 1px solid #BBB;
+              padding: 4px 6px 0;
+              border-radius: 0px;
+              background: #fff;
+              box-shadow: none;
+              height: 27px;
+            }
+            button {
+              margin-left: 2px;
+              width: 71px;
+              height: 27px;
+              padding: 0px;
+              border: 1px solid #000;
+              border-radius: 2px;
+              background-color: #333333;
+              background-image: -webkit-linear-gradient(top,#333333,#333333);
+            }
+          }
+        }
+        // resultado de la busqueda
+        #google-cse-results {
+          .gsc-control-cse {
+            padding: 0px;
+          }
+          //button web y img
+          .gsc-tabsArea {
+            margin: 0px;
+            border: none;
+            .gsc-tabHeader {
+              width: 250px;
+              height: 27px;
+              font-family: $latoregular;
+              @include font-size(m);
+              color: #484851;
+              font-weight: 500;
+              cursor: pointer;
+              border: 1px solid  #9e9ca1;
+              background: #f5f1f2;
+              &:hover {
+                opacity: .7;
+              }
+              &.gsc-tabhActive {
+                background: #ebba00;
+                border: 1px solid #ebba00;
+              }
+
+            }
+          }
+          //aproximadamente
+          .gsc-above-wrapper-area {
+            margin-bottom: 70px;
+            .gsc-above-wrapper-area-container {
+              margin: 0px;
+            }
+          }
+          // wraper resultados
+          .gsc-wrapper {
+            .gsc-resultsHeader {
+              margin: 0px;
+            }
+            .gsc-webResult.gsc-result {
+              padding: .5em 0;
+              border-bottom: 1px solid #ebebeb;
+              margin-bottom: 3em!important;
+              // /* ----| Web |---- */
+              //titulo
+              .gsc-thumbnail-inside {
+                div.gs-title {
+                  overflow: inherit;
+                  margin-bottom: 5px;
+                  height: auto;
+                  a.gs-title {
+                    font-family: $latoregular;
+                    @include font-size(sl);
+                    color: #337ab7;
+                    height: auto;
+                    overflow: inherit;
+                    margin-bottom: 5px;
+                    text-decoration: none;
+                    > b {
+                      @include font-size(sl);
+                      color: #337ab7;
+                      text-decoration: underline;
+                      font-weight: 400;
+                    }
+                  }
+                }
+              }
+              //url
+              .gsc-url-top {
+                .gs-bidi-start-align {
+                  font-family: $latoregular;
+                  @include font-size(m);
+                  overflow: inherit;
+                }
+              }
+              // imagen pequeña
+              .gsc-table-result {
+                margin: 0px;
+                .gsc-table-cell-snippet-close {
+                  padding: 10px 0 0 8px;
+                  font-family: $latoregular;
+                  @include font-size(m);
+                }
+              }
+            }
+            //paginadores
+            .gsc-cursor-box {
+              text-align: center;
+              .gsc-cursor {
+                display: block;
+                overflow: hidden;
+                .gsc-cursor-page {
+                  @include font-size(o);
+                  padding: 5px 10px;
+                  margin: 0;
+                  &:hover {
+                    opacity: .5;
+                  }
+                  &.gsc-cursor-current-page {
+                    display: inline;
+                    text-decoration: underline;
+                    background: #333;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            //text busqueda personalizada
+            .gcsc-branding {
+              width: 100%;
+            }
+            // /* ----| Imagen |---- */
+            //modal pequeña
+            .gs-image-popup-box {
+              .gs-text-box {
+                //url
+                .gs-visibleUrl,
+                .gs-snippet {
+                  @include font-size(m);
+                  font-family: $latoregular;
+                }
+                //titulo
+                .gs-snippet {
+                  padding: 10px 0!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+//------------------------------------------------------------------------------
+// bg-404
+//------------------------------------------------------------------------------
+*/
+#node-163 {
+  background: url(../img/bg-404.png) center no-repeat;
+  background-size: cover;
+  div.rtecenter {
+    text-align: center;
+    margin: 50px 0 10px;
+    padding: 0px 15px;
+    @include respond-to(m) {
+      margin: 100px 0 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 589px;
+      height: auto;
+    }
+  }
+    p.rtecenter {
+      font-family: $latoregular;
+      @include font-size(55px);
+      line-height: 1;
+      margin: 0;
+      text-transform: uppercase;
+      + p.rtecenter {
+        font-family: $latoregular;
+        font-size: 1rem;
+        line-height: 1.1rem;
+      }
+    }
+
+}

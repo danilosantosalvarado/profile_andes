@@ -433,7 +433,7 @@
     //$('#navbar-collapse').css({'margin-top': $height_menu });
     $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
 
-    if($('.navbar-header .wrapper-header-up').length >0){
+    if($('.navbar-header .wrapper-header-color').length >0){
       $('body > .container-fluid.main-container').css({'margin-top': $height_menu});
     }else{
       $('body > .container-fluid.main-container').css({'margin-top': $height_menu_desktop });
