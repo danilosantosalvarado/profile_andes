@@ -1925,6 +1925,23 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Layouts 1
 //------------------------------------------------------------------------------
 */
+.layout-1 .pane-content h1 {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #484851;
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.layout-1 .pane-content h1:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 80px;
+  border-bottom: 1px solid #484851;
+}
+
 .slider-homes-layout-one {
   position: absolute;
   top: 0;
@@ -3472,7 +3489,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 
 @media (min-width: 1111px) {
   .view-componente-ranking-home {
-    padding-top: 0;
     width: 1170px;
   }
 }
@@ -3488,15 +3504,23 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 .view-componente-ranking-home .view-content .views-field-field-image-banner {
-  display: none;
-  background-color: white;
+  background-color: transparent;
   float: left;
+  width: 100%;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
   .view-componente-ranking-home .view-content .views-field-field-image-banner {
     display: block;
     width: 100%;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 888px) {
+  .view-componente-ranking-home .view-content .views-field-field-image-banner {
+    background-color: white;
   }
 }
 
@@ -3505,6 +3529,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
     display: block;
     width: 50%;
     padding: 25px 0;
+    background-color: transparent;
   }
 }
 
@@ -3540,36 +3565,59 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 .view-componente-ranking-home .view-content .views-field-field-image {
+  display: none;
   float: left;
   width: 100%;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
   .view-componente-ranking-home .view-content .views-field-field-image {
     background-color: white;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 30px 0;
+    display: block;
   }
 }
 
 @media (min-width: 992px) {
   .view-componente-ranking-home .view-content .views-field-field-image {
-    background-color: transparent;
+    background-color: white;
     width: 50%;
     padding: 25px 0;
-    margin-top: 0;
+    display: block;
   }
 }
 
+.view-componente-ranking-home .view-content .views-field-field-image .rtecenter span {
+  font-family: "Crimson Text", serif !important;
+}
+
 .view-componente-ranking-home .view-content .wrapper .block-1 {
-  padding: 0 10px;
+  padding: 20px;
+}
+
+.view-componente-ranking-home .view-content .wrapper .block-1:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 96%;
+  left: 2%;
+  margin-top: 15px;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .view-componente-ranking-home .view-content .wrapper .block-1:after {
+    display: none;
+  }
 }
 
 .view-componente-ranking-home .view-content .wrapper .block-1,
 .view-componente-ranking-home .view-content .wrapper .block-2 {
   width: 100%;
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 0 20px;
 }
 
@@ -3585,6 +3633,11 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   .view-componente-ranking-home .view-content .wrapper .block-2 {
     margin-bottom: 0;
   }
+}
+
+.view-componente-ranking-home .view-content .wrapper .block-1 .img-responsive,
+.view-componente-ranking-home .view-content .wrapper .block-2 .img-responsive {
+  padding: 2% 9%;
 }
 
 .view-componente-ranking-home .view-content .wrapper img {
@@ -8545,7 +8598,7 @@ h1.page-header {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .lista-tags-equipo {
     width: 100%;
     max-width: 200px;
@@ -8580,7 +8633,7 @@ h1.page-header {
   list-style: none;
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .view-componente-equipo-trabajo ul {
     overflow-x: hidden;
     display: block;
@@ -8607,7 +8660,7 @@ h1.page-header {
       flex: auto;
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .view-componente-equipo-trabajo ul li {
     display: inline;
     float: left;
@@ -8632,7 +8685,7 @@ h1.page-header {
   border-bottom: 3px solid #fff;
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .view-componente-equipo-trabajo ul li a {
     width: 100%;
     padding: 15px 20px;
@@ -8836,7 +8889,7 @@ h1.page-header {
 }
 
 /* -----titulo mobile------ */
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .pane-componente-equipo-trabajo {
     position: fixed;
     z-index: 2;
@@ -8867,14 +8920,14 @@ h1.page-header {
   }
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 990px) {
   .pane-contenido-equipo-de-trabajo {
     padding-top: 50px;
   }
 }
 
-@media (min-width: 888px) {
-  .pane-contenido-equipo-de-trabajo .panels-ipe-portlet-content .pane-content button {
+@media (min-width: 992px) {
+  .panels-ipe-portlet-content .pane-content button {
     display: none;
   }
 }
