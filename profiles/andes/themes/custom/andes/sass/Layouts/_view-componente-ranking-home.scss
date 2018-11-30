@@ -1,7 +1,6 @@
 .view-componente-ranking-home {
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
   @include respond-to(m) {
     width: 750px;
   }
@@ -78,6 +77,12 @@
         width: 50%;
         padding: 25px 0;
         display: block;
+        margin-bottom: 40px;
+      }
+      .block-2{
+        .img-responsive{
+          padding: 2% 9%;
+        }
       }
       .rtecenter{
         span{
@@ -114,9 +119,6 @@
         }
         @include respond-to(xl) {
           margin-bottom: 0;
-        }
-        .img-responsive{
-          padding: 2% 9%;
         }
       }
       img {
