@@ -4204,6 +4204,7 @@ h1.page-header {
 
 .slider-3d-mobil {
   position: relative;
+  padding: 0px 32px;
 }
 
 .slider-3d-mobil img {
