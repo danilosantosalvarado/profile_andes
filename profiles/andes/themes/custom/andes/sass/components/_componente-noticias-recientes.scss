@@ -219,3 +219,36 @@
 		}
 	}
 }
+
+.view-componente-noticias{	
+	.skin-default{
+		.pagination-wrap{
+			
+			.swiper-pagination{
+				position: relative;
+				.swiper-pagination-bullet{
+					-webkit-appearance: none;
+					background: transparent;
+					border: 1px solid #e34d1f;
+					border-radius: 100%;
+					padding: 4px;
+					width: 10px;
+					height: 10px;
+					margin: 0 3px;
+				}
+				.swiper-pagination-bullet-active{
+					background: #e34d1f;
+				}
+			}
+			bottom: 17px;
+			@include respond-to(l){
+				bottom: 0;
+				display: none;
+			}
+		}
+	}
+	.view-componente-noticias-item{
+		max-width: 400px;
+    	margin: 0 auto;
+	}
+}
