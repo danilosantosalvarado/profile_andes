@@ -30,7 +30,7 @@ options.theme = {
 // Set the URL used to access the Drupal website under development. This will
 // allow Browser Sync to serve the website and update CSS changes on the fly.
 //options.drupalURL = 'http://andes.dev.local/';
- options.drupalURL = 'http://andes.dev.local/';
+ options.drupalURL = 'http://localhost/tbwa/dsit/plantilla_base/';
 
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {

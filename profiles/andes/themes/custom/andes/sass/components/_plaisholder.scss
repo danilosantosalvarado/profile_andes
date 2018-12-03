@@ -522,3 +522,77 @@ h1.page-header {
     }
   }
 }
+
+/* ------| Slider 3D Mobil |----- */
+@media (max-width:992px) {
+  .view-id-componente_eventos_destacados_carrusel_3d_.view-display-id-block {
+    display: none;
+  }
+}
+@include respond-to(xxl) {
+  .view-componente-eventos-destacados-carrusel-3d-.view-display-id-block_1 {
+    display: none;
+  }
+}
+.slider-3d-mobil {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .carousel_caption {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate3d(0, -50%,0);
+    > .views-field {
+      span {
+        font-family: $latoblack;
+        font-size: 38px;
+        text-align: left;
+        line-height: 39.77px;
+        letter-spacing: 5.7px;
+        color: color('Yellow-secundary');
+        width: 66%;
+        float: left;
+      }
+    }
+    a {
+      width: 66%;
+      font-family: $latoblack;
+      @include font-size(xxs);
+      color: color('Yellow-secundary');
+      text-align: left;
+      text-decoration: none;
+      padding: .5rem 1rem;
+      border: 1px solid color('Yellow-secundary');
+      line-height: 39.77px;
+      margin-left: 3rem;
+    }
+  }
+}
+.swiper-pagination-3d-mobile {
+  position: initial;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  box-sizing: border-box;
+  z-index: 1;
+  .swiper-pagination-bullet {
+    width: 17px !important;
+    height: 17px;
+    border: 1px solid color('Yellow-secundary');
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 5px;
+    background-color: transparent;
+    opacity: 1;
+    &-active {
+      border-color: color('Yellow-secundary');
+      background-color: color('Yellow-secundary');
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
