@@ -542,34 +542,35 @@ h1.page-header {
   .carousel_caption {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 10%;
     transform: translate3d(0, -50%,0);
+    width: 60%;
     > .views-field {
       span {
         font-family: $latoblack;
-        font-size: 38px;
+        @include font-size(sl);
         text-align: left;
-        line-height: 39.77px;
-        letter-spacing: 5.7px;
+        line-height: normal;
+        letter-spacing: 0.1rem;
         color: color('Yellow-secundary');
-        width: 66%;
-        float: left;
       }
     }
     a {
-      width: 66%;
+      display: inline-block;
       font-family: $latoblack;
       @include font-size(xxs);
       color: color('Yellow-secundary');
       text-align: left;
       text-decoration: none;
-      padding: .5rem 1rem;
+      padding: .05rem 1rem;
       border: 1px solid color('Yellow-secundary');
       line-height: 39.77px;
       margin-left: 3rem;
+      margin-top: 10px;
     }
   }
 }
+// Bulet de componente
 .swiper-pagination-3d-mobile {
   position: initial;
   width: 100%;
