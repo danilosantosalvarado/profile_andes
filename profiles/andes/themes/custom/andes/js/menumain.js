@@ -83,6 +83,11 @@
         if ( Drupal.settings.udla_blocks_alter !== undefined) {
           Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color !== undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
           Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change !== undefined )? Drupal.settings.udla_blocks_alter.background_color_change : "";
+          Drupal.settings.udla_blocks_alter.text_color = (Drupal.settings.udla_blocks_alter.text_color !== undefined )? Drupal.settings.udla_blocks_alter.text_color : "";
+          if(Drupal.settings.udla_blocks_alter.text_color != ""){
+            $('.view-logos-header p svg path').css('fill', Drupal.settings.udla_blocks_alter.color_svg);
+            $('.view-logos-header .views-row-last').css('border-left-color', Drupal.settings.udla_blocks_alter.color_svg);
+          }
           if($(window).width() < 992){
 
           }

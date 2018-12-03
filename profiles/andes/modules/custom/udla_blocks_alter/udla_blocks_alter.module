@@ -120,7 +120,7 @@ function udla_blocks_alter_form_submit($form, $form_state)
     // Only save if value has changed.
     global $base_url;
     if (isset($form_state['values']['background_image']) && $form['settings']['background_image']['#default_value'] != $form_state['values']['background_image'] && user_access('administer blocks')) {
-       
+
       _update_block_data_image($form_state, 'background_image');
     }
 
@@ -153,7 +153,7 @@ function udla_blocks_alter_form_submit($form, $form_state)
 
   // background color decanatura taxonomy
 
-  if ($form_state['values']['form_id'] == 'taxonomy_form_term' && $form['#term']['vocabulary_machine_name'] =='decanatura_categorias') { 
+  if ($form_state['values']['form_id'] == 'taxonomy_form_term' && $form['#term']['vocabulary_machine_name'] =='decanatura_categorias') {
     if (isset($form_state['values']['field_color_linea']['und'][false]['rgb']) && user_access('administer blocks')) {
       _update_taxonomy_data_css($form_state, 'field_color_linea');
     }
@@ -207,7 +207,7 @@ function _color_set_for_data($value)
     fwrite($fh, '.border-top-' . drupal_clean_css_identifier($value, array()) . ' {border-top: 4px solid ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.pager-' . drupal_clean_css_identifier($value, array()) . ' a {border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh,'/* '.'end'.' */'. PHP_EOL);
- 
+
   } else {
     $fh = fopen($realpath, 'w+');
     chmod($realpath, 0777);
@@ -275,7 +275,6 @@ function udla_blocks_alter_preprocess_block(&$vars){
 
       }
     }
-
   }
   else if ( isset($block->background_color_change) && !empty($block->background_color_change)) {
     $result_b = _block_data_css($block->background_color_change, 'background');
@@ -283,6 +282,7 @@ function udla_blocks_alter_preprocess_block(&$vars){
   }
   if (!empty($block->text_color)) {
     $result = _block_data_css($block->text_color, 'text');
+    drupal_add_js(array('udla_blocks_alter' => array('text_color' => reset($result),'color_svg' => $block->text_color)), array('type' => 'setting'));
     if (!empty($result)) {
       $vars['classes_array'][] = implode(' ', $result);
     }
@@ -388,7 +388,7 @@ function _update_block_data_css($form_state, $name_field)
 
 
 }
-function _update_block_data_image($form_state, $name_field){  
+function _update_block_data_image($form_state, $name_field){
 
   db_update('block')
     ->fields(array($name_field => $form_state['values'][$name_field]))
@@ -418,7 +418,7 @@ function _block_data_css($value_field, $name_field)
 function _change_imagen_class($block){
       if ( isset($block)) {
         $name=file_load($block->background_image);
-        $file_uri = file_create_url(file_build_uri($block->background_image->uri));          
+        $file_uri = file_create_url(file_build_uri($block->background_image->uri));
         drupal_add_js(array('udla_blocks_alter' => array('name_img' => $name)), 'setting');
         drupal_add_js(array('udla_blocks_alter' => array('url_img' => $file_uri)), 'setting');
         drupal_add_js(array('udla_blocks_alter' => array('datos' => $block)), 'setting');
