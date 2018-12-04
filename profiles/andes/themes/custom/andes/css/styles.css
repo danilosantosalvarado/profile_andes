@@ -3519,7 +3519,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 
 @media (min-width: 888px) {
   .view-componente-ranking-home .view-content .views-field-field-image-banner {
-    background-color: white;
+    background-color: transparent;
   }
 }
 
@@ -3564,7 +3564,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 .view-componente-ranking-home .view-content .views-field-field-image {
-  display: none;
   float: left;
   width: 100%;
   margin-top: 40px;
@@ -3597,8 +3596,20 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   font-family: "Crimson Text", serif !important;
 }
 
+.view-componente-ranking-home .view-content .img-left .wrapper .block-1 {
+  display: block;
+}
+
 .view-componente-ranking-home .view-content .wrapper .block-1 {
   padding: 20px;
+  display: none;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .view-componente-ranking-home .view-content .wrapper .block-1 {
+    display: block;
+  }
 }
 
 .view-componente-ranking-home .view-content .wrapper .block-1:after {
@@ -3607,7 +3618,8 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   height: 2px;
   width: 96%;
   left: 2%;
-  margin-top: 15px;
+  top: 0;
+  margin-top: -40px;
   background-color: white;
 }
 
@@ -3637,6 +3649,11 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   .view-componente-ranking-home .view-content .wrapper .block-2 {
     margin-bottom: 0;
   }
+}
+
+.view-componente-ranking-home .view-content .wrapper .block-2 img {
+  width: 80%;
+  max-width: 400px;
 }
 
 .view-componente-ranking-home .view-content .wrapper img {

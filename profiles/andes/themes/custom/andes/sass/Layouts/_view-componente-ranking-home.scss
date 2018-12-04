@@ -1,5 +1,4 @@
-.view-componente-ranking-home {
-  display: block;
+.view-componente-ranking-home { display: block;
   margin: 0 auto;
   @include respond-to(m) {
     width: 750px;
@@ -27,7 +26,7 @@
         background-color: transparent;
       }
       @include respond-to(l) {
-        background-color: white;
+        background-color: transparent;
       }
       @include respond-to(xl) {
         display: block;
@@ -62,7 +61,6 @@
     }
     .views-field-field-image {
       //margin-top: 20px;
-      display: none;
       float: left;
       width: 100%;
       margin-top:40px;
@@ -90,17 +88,32 @@
         }
       }
     }
+
+    .img-left{
+      .wrapper{
+        .block-1{
+          display: block;
+        }
+      }
+    }
+    
     /* grill */
     .wrapper {
       .block-1 {
         padding: 20px;
+        display: none;
+        position: relative;
+        @include respond-to(m){
+          display: block;
+        }
         &:after{
           position: absolute;
           content: "";
           height: 2px;
           width: 96%;
           left: 2%;
-          margin-top: 15px;
+          top: 0;
+          margin-top: -40px;
           background-color: white;
           @include respond-to(m){
             display: none;
@@ -119,6 +132,12 @@
         }
         @include respond-to(xl) {
           margin-bottom: 0;
+        }
+      }
+      .block-2{
+        img{
+          width: 80%;
+          max-width: 400px;
         }
       }
       img {
