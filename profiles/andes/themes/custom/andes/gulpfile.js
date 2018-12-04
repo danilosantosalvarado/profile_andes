@@ -84,7 +84,7 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss'),
+  // kss         = require('kss'),
   plumber     = require('gulp-plumber'),
   notify      = require('gulp-notify'),
   eslint      = require('gulp-eslint');
