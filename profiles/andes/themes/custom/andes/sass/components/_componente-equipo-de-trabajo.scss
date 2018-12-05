@@ -12,7 +12,7 @@
     position: fixed;
     z-index: 2;
     right: 0;
-    margin-top: 15px;
+    margin-top: 39px;
     ul {
       width: 100%;
       padding: 0;
@@ -39,8 +39,10 @@
     list-style: none;
     @media screen and (max-width: 990px){
       overflow-x: hidden;
+      overflow-y: auto;
       display: block;
       padding: 0;
+      height: 61vh;
     }
     // width
     &::-webkit-scrollbar {
@@ -88,6 +90,9 @@
         }
       }
     }
+    .views-row-last{
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -128,13 +133,13 @@
     // text
     .caption {
       width: 100%;
-      height: 100%;
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 10px;
       z-index: -2;
+      height: 22vw;
       @include respond-to(xl) {
         position: absolute;
         top: 0;
@@ -142,6 +147,7 @@
         padding: 10px 25px;
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.6);
+        height: 100%;
       }
       .views-field {
         @include respond-to(xl) {
@@ -174,75 +180,85 @@
 }
 
 /* ------| Paguinadores |----- */
-.text-center {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  @include respond-to(m) {
-      width: 750px;
-  }
-  @include respond-to(xl) {
-      width: 970px;
-  }
-  @include respond-to(xxxl) {
-      width: 1170px;
-  }
-  ul.pagination {
-    background: color('white');
-    border-radius: 0;
-    padding: 10px;
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      width: 100%;
-      height: 1px;
-      border-top: 1px solid color('orange');
-      z-index: -1;
+.view-contenido-equipo-de-trabajo{
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    @include respond-to(m) {
+        width: 750px;
     }
-    li {
-      color: #484851;
-      border: 1px solid color('white');
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    ul.pagination {
+      background: color('white');
       border-radius: 0;
-      background-color: color('white');
-      display: block;
-      float: left;
-      margin: 0 5px;
-      a {
+      padding: 10px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid color('orange');
+        z-index: -1;
+      }
+      li {
         color: #484851;
         border: 1px solid color('white');
-        font-family: Lato,sans-serif;
         border-radius: 0;
         background-color: color('white');
-        .ajax-progress {
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid color('white');
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: color('white');
+          .ajax-progress {
+            display: none;
+          }
+        }
+        &.active {
+          border-color: color('orange');
+          span {
+            background-color: transparent;
+            border-radius: initial;
+            color: color('black');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
           display: none;
         }
-      }
-      &.active {
-        border-color: color('orange');
-        span {
-          background-color: transparent;
-          border-radius: initial;
-          color: color('black');
-          border: initial;
-        }
-      }
-      &.next,
-      &.prev,
-      &.pager-last,
-      &.pager-first {
-        display: none;
       }
     }
   }
 }
 
 /* -----titulo mobile------ */
-.pane-componente-equipo-trabajo{
+.view-contenido-equipo-de-trabajo{
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  @include respond-to(xl){
+    width: 1170px;
+  }
+}
+.pane-componente-equipo-trabajo, .view-contenido-equipo-de-trabajo>.view-header{
   @media screen and (max-width: 990px){
     position: fixed;
     z-index: 2;
@@ -257,7 +273,7 @@
       @include font-size(ms);
       font-family: $latolight;
     }
-    .pane-content{
+    .pane-content, .view-header{
       float: right;
       button{
         width: 20px;
@@ -274,11 +290,11 @@
 }
 .pane-contenido-equipo-de-trabajo{
   @media screen and (max-width: 990px){
-    padding-top: 50px;
+    padding-top: 60px;
   }
 }
-.panels-ipe-portlet-content{
-  .pane-content{
+.panels-ipe-portlet-content, .view-contenido-equipo-de-trabajo{
+  .pane-content, .view-componente-equipo-trabajo{
     button{
       @include respond-to(xl){
         display: none;
