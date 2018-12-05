@@ -158,7 +158,7 @@
 	.view-content{
 		.views_slideshow_swiper_main{
 			position: initial;
-			margin-bottom: 25px;
+			margin-bottom: 40px;
 			ul{
 				margin-bottom: 29px;
 				.swiper-slide{
@@ -192,8 +192,8 @@
 				position: absolute;
 				top: 50%;
 				top: inherit;
-				left: -1%;
-				bottom: -57px;
+				left: 2%;
+				bottom: -41px;
 				transform: rotate(-90deg);
 				background: url('../img/Icon/arrow_prev-orange.svg') no-repeat center;
 				border: 1px solid color('orange-primary');
@@ -205,9 +205,9 @@
 				width: 40px;
 				height: 40px;
 				position: absolute;
-				left: 12%;
+				left: 14%;
 				top: inherit;
-				bottom: -57px;
+				bottom: -41px;
 				transform: rotate(-90deg);
 				background: url('../img/Icon/arrow_next-orange.svg') no-repeat center;
 				background-color: white;
@@ -245,7 +245,7 @@
 				}
 			}
 			bottom: 17px;
-			@include respond-to(l){
+			@include respond-to(xl){
 				bottom: 0;
 				display: none;
 			}

@@ -32,15 +32,6 @@
 	margin: 0 auto;
 	padding: 15px;
 	position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    border: 1px solid color('orange-primary');
-    width: 94%;
-    height: 100%;
-  }
 	ul {
 		-webkit-padding-start: 0px;
 		height: 380px;
