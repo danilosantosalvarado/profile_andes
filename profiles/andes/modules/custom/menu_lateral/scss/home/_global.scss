@@ -1,6 +1,7 @@
 /* ------| Menu scroll |------ */
 
 ul#render-menu-lateral {
+	width: 50px;
 	position: fixed;
   bottom: 40px;
   right: 50px;
@@ -14,8 +15,8 @@ ul#render-menu-lateral {
     height: 100%;
     position: absolute;
     top: 0px;
-    right: 38%;
-		transform: translate3d(-50%,0,0);
+    right: 40%;
+		transform: translate3d(-40%,0,0);
 		background: url(../img/menu-linea.png) no-repeat center;
     background-size: 40%;
 	}
@@ -45,7 +46,7 @@ ul#render-menu-lateral {
 					text-transform: uppercase;
 					white-space: nowrap;
 					background: #3C3F45;
-					margin-right: 30px;
+					margin-right: 3.6em;
 					border-radius: 20px;
 					padding: 3px 16px;
 				}
