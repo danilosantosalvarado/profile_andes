@@ -11079,10 +11079,13 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   display: block;
   float: left;
   padding: 5px 5px 5px 0;
-  width: 30px;
-  height: 30px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  width: 35px;
+  height: 35px;
+}
+
+.view-id-footer_redes_sociales .views-row .img-responsive {
+  width: 29px;
+  height: 29px;
 }
 
 /* ------| copyright |----- */
