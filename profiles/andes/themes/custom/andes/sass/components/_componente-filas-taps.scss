@@ -8,7 +8,11 @@
   .quicktabs-tabs.quicktabs-style-nostyle {
     display: flex;
     overflow-x: scroll;
-    padding: 30px 0;
+    padding: 30px 40px 0 40px;
+    border-bottom: 1px solid #dee2e6;
+    @include respond-to(xl){
+      overflow: hidden;
+    }
     /* width */
     &::-webkit-scrollbar {
       width: 3px;
@@ -23,6 +27,15 @@
       // border-radius: 10px;
       background: #888;
     }
+    .active{
+      a{
+        color: #555;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-top: 2px solid orange;
+        border-bottom: 1px solid transparent;
+      }
+    }
     a {
       // display: block;
       color: #bbb;
@@ -31,10 +44,14 @@
       border-radius: 0;
       border: 1px solid transparent;
       border-top: 2px solid transparent;
+      white-space: normal;
       cursor: pointer;
       padding: 0;
       padding: 15px;
       margin: 0;
+      display: block;
+      font-size: 1.1em;
+      line-height: 1.3em;
       &:hover {
         color: #555;
         background: #fff;
@@ -43,6 +60,9 @@
         border-bottom: 1px solid transparent;
       }
     }
+    li{
+
+    }
   }
   //body
   .quicktabs_main.quicktabs-style-nostyle {
@@ -50,6 +70,31 @@
     p {
       font-family: $crimson_textregular;
       @include font-size(m);
+    }
+  }
+  .quicktabs-style-nostyle{
+    position: relative;
+    .prev-pagination{
+      position: absolute;
+      background: url(../img/Icon/arrow_prev.svg) no-repeat center;
+      background-color: #ffffff;
+      width: 35px;
+      height: 70px;
+      color: transparent;
+      top: 32px;
+      left: -4px;
+      z-index: 3;
+    }
+    .next-pagination{
+      position: absolute;
+      background: url(../img/Icon/arrow_next.svg) no-repeat center;
+      background-color: #ffffff;
+      width: 35px;
+      height: 70px;
+      color: transparent;
+      top: 32px;
+      right: -4px;
+      z-index: 3;
     }
   }
 }

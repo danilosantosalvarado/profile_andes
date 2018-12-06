@@ -4,15 +4,26 @@
 //------------------------------------------------------------------------------
 */
 
+.pane-componente-carrusel-multimedia{
+	width: 100%;
+	padding: 0;
+	.pane-title{
+		padding: 0 15px;
+	}
+}
 
 .view-componente-carrusel-multimedia {
 	.viewsSlideshowCycle-processed {
 		overflow: hidden;
-		margin: 10px 0;
+		margin: 10px 0 20px;
 		.views-slideshow-cycle-main-frame {
-			width: 80% !important;
 			height: 465px !important;
 			margin: 0 auto;
+			width: 100%;
+			@include respond-to(xl){
+				width: 80% !important;
+				max-width: 1000px;
+			}
 			> div {
 				height: 100% !important;
 				width: 100% !important;
@@ -59,6 +70,11 @@
 	}
 
 	.views-slideshow-controls-bottom {
+		width: 90%;
+		margin: 0 auto;
+		@include respond-to(xl){
+			max-width: 1140px;
+		}
 		.views-slideshow-pager-fields  {
 			padding: 24px 10px;
 			display: flex;
@@ -82,7 +98,7 @@
 				border: 0px solid transparent;
 			}
 			.views-slideshow-pager-field-item {
-				flex: 1 0 25%;
+				flex: 1 0 43%;
 				height: 80px;
 				position: relative;
 				overflow: hidden;
@@ -114,12 +130,17 @@
 					}
 				}
 				@include respond-to(xxs) {
-					margin: 0 8px;
-					height: 100px;
+					margin: 0 15px;
+					height: 20vw;
 				}
 				@include respond-to(m) {
-					margin: 0 12px;
+					margin: 0 18px;
+					height: 19vw;
+				}
+				@include respond-to(l) {
+					margin: 0 18px;
 					height: 150px;
+					flex: 1 0 25%;
 				}
 				div[data-toggle="tooltip"] {
 					display: block;
@@ -149,7 +170,8 @@
 
 
 .tooltip.carrusel-multimedia{
-	margin: 3px 15px;
+	margin: -20px 15px 3px;
+	opacity: 1;
 	.tooltip-arrow{
 		margin-left: -25px;
 		border-left: 25px solid transparent;
@@ -157,17 +179,23 @@
 		border-bottom: 25px solid color('grey-light');
 	}
 	.tooltip-inner{
-		max-width: 458px;
-		margin-top: 20px;
-		padding: 3px 8px;
+		max-width: 400px;
+		margin: 20px auto;
+		width: 70%;
+		padding: 15px 10px 10px;
 		text-align: justify;
 		background-color: color('grey-light');
-		border-radius: 5px;
 		font-family: $crimson-textroman;
 		font-size: 18px;
+		border-radius: 0;
+		min-width: 100px;
 		color: #000000;
 		p {
 			color: #FDBD2C;
+		}
+		@include respond-to(xl){
+			margin: 20px auto;
+			width: inherit;
 		}
 	}
 }
