@@ -1,0 +1,586 @@
+//Mixin la agregacion de color de los bullet de slider
+@mixin bullet($color-borde, $color-back, $color-active-borde, $color-active-back ) {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: center;
+  .views-slideshow-pager-field-item {
+    padding: 0 5px;
+    display: inline-block;
+    a {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      display: block;
+      text-decoration: none;
+      border: 1px solid color('#{$color-borde}');
+      border-radius: 10px;
+      background-color: color('#{$color-back}');
+      padding: 0;
+    }
+    &.active {
+      a {
+        background-color: color('#{$color-active-borde}');
+        border: 1px solid color('#{$color-active-back}');
+      }
+    }
+  }
+}
+// /* ------| Slider home  |----- */
+//position left
+%slider-homes-lef {
+  position: absolute;
+  // top: 25%;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include respond-to(m) {
+    left: 10%;
+    right: inherit;
+    width: auto;
+    max-width: 520px;
+    text-align: left;
+    @include margin(0);
+  }
+}
+
+// box background color themes
+%before-box-color{
+  content: " ";
+  clear: both;
+  display: block;
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  left: -15px;
+  right: -15px;
+  z-index: -1;
+  background-color: transparent;
+  opacity: .5;
+}
+
+//titulo
+%title-slider-home {
+  font-family: $latobold;
+  @include font-size(xl);
+  color: color('white');
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0px;
+  line-height: 2rem;
+  @include respond-to(xl) {
+    @include font-size(xxl);
+  }
+
+}
+
+//sud titulo
+%body-slider-home {
+  font-family: $crimson-textregular;
+  @include font-size(o);
+  color: color('white');
+  text-align: center;
+  @include margin (1 0);
+  text-overflow: ellipsis;
+  @include respond-to(m) {
+    text-align: left;
+  }
+}
+
+//Button
+%link-slider-home {
+  font-family: $crimson-textregular;
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+  @include font-size(m);
+  a {
+    display: inline-block;
+    max-width: none;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    color: color('white');
+    border: 1px solid color('white');
+    @include padding (.42 1.25);
+    white-space: nowrap;
+    &:hover {
+      background: color('white');
+      color: color('grey');
+    }
+  }
+}
+
+//flechas slider home
+%a-slidw-prev {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  font-size: 0;
+  background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+//Puntos para slider left, right, center.
+%a-sli-puntos {
+  width: 63px;
+  height: 18px;
+  font-size: 0;
+  display: block;
+  text-decoration: none;
+  border-bottom: 3px solid color('grey');
+  padding: 0;
+}
+
+/* ------| Container globales |----- */
+.container-fluid {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  // overflow: hidden;
+  position: relative;
+}
+
+body > .main-container.container-fluid {
+  margin-top: 0px;
+  @include respond-to(xl) {
+    margin-top: 110px;
+  }
+}
+
+body.logged-in  > .main-container.container-fluid {
+  margin-top: 0px;
+  @include respond-to(xl) {
+    margin-top: 139px;
+  }
+}
+
+.inside {
+  margin: 0 !important;
+	ul {
+		padding: 0px;
+    list-style: none;
+	}
+}
+
+/* ------| Titles panel |----- */
+.pane-title {
+  font-family: $latoblack;
+  @include font-size(ll);
+	color: color('grey');
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  // @include margin-bottom(1.7);
+  @include respond-to(m) {
+		@include font-size(xxxl);
+  }
+}
+
+/* ------| Titles nodos |----- */
+.pane-content {
+  > h1 {
+    font-family: $latoblack;
+    @include font-size(xl);
+    text-transform: uppercase;
+    color: #484851;
+    text-align: center;
+    line-height: normal;
+    margin: 0px;
+    padding: 40px 0;
+  }
+}
+
+/* ------| Titles cursos  |----- */
+h1.page-header {
+  display: none;
+}
+
+/* ------| Button ver todos |----- */
+.view-more-footer{
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid color('orange');
+    z-index: 1;
+  }
+  a {
+    display: inline-block;
+    position: relative;
+    font-family: $latoregular;
+    @include font-size(m);
+    color: #484851;
+    text-decoration: none;
+    border: 1px solid color('orange');
+    padding: 10px 20px;
+    background: #fff;
+    z-index: 1;
+    &:hover {
+      color: color('white');
+      background-color: color('orange')
+    }
+  }
+}
+
+/* ------| redes sociales scroll |----- */
+.social-network-list.align-social-vertical {
+  padding: 10px 0;
+  margin: 0px;
+  @include respond-to(xl) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0;
+  }
+  &.social-initial {
+    position: absolute;
+    top: 0;
+    left: initial;
+  }
+  &.social-fixed {
+    position: fixed;
+    bottom: auto;
+  }
+  &.social-botton {
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: 0px;
+  }
+  li {
+    &:first-child {
+      margin-left: 15px;
+      @include respond-to(xl) {
+        margin-left: 0px;
+      }
+    }
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+    @include respond-to(xl) {
+      margin: 0px 0px 5px;
+    }
+    &:last-child {
+      margin: 0px;
+    }
+    &:hover {
+      position: initial;
+    }
+    svg {
+      padding: 4px;
+    }
+  }
+}
+
+/* ------| container las internas de los nodos |----- */
+.container-node {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include respond-to(xl) {
+  width: 550px;
+  margin: 0 auto;
+  }
+}
+
+/* ------| Campo tags intena de nodos |----- */
+.field-name-field-tags.field-type-taxonomy-term-reference {
+  position: relative;
+  // padding-top: 40px;
+  &:before {
+    content: "";
+    width: 67px;
+    height: 3px;
+    margin-left: 5px;
+    border-top: 1px solid black;
+    position: absolute;
+  }
+  .field-items {
+    padding: 20px 0px 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    .field-item{
+      margin-right: 12px;
+      margin-bottom: 5px;
+      border: 1px solid #F4F1F1;
+      padding: 5px 8px;
+      background-color: #F4F1F1;
+      a {
+        text-decoration: none;
+        @include font-size(xxs);
+      }
+    }
+  }
+}
+
+/* ------| Campo Fechas intena de nodos |----- */
+.field-name-field-fecha-eventos {
+  display: block;
+  padding: 15px 0 0;
+  margin: 0;
+  color: #e55d12;
+}
+
+/* ------| Campo body internas de nodos |----- */
+.field-name-body {
+  .field-item {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin: 25px 0;
+  }
+}
+
+#body-contain {
+  p {
+    font-family: $crimson-textregular;
+    @include font-size(m);
+    margin: 25px 0;
+  }
+}
+
+/* ------| banner deportes /cursos |----- */
+.view-id-banner_taxonomy {
+  position: relative;
+  ul {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    li.swiper-slide {
+      overflow: hidden;
+      display: block;
+      height: auto;
+      .views-slideshow-swiper-main-frame-row-item {
+        .cl-slider-homes-left-deca {
+          .img-content {
+            .img-desktop{
+              display: none;
+              @include respond-to(xl) {
+                display: block;
+              }
+            }
+            .img-mobile {
+              display: block;
+              @include respond-to(xl) {
+                display: none;
+              }
+            }
+          }
+        }
+        .slider-homes-left-deca {
+          position: absolute;
+          bottom: 19%;
+          left: 10%;
+          a {
+            text-decoration: none;
+            font-family: $latoblack;
+            font-size: 60px;
+            color: white;
+            padding: 10px 54px;
+            position: relative;
+            z-index: 1;
+            &:before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background: #359ED0;
+              opacity: .5;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ------| componente catalogo portal infomativo (wien_Catalogo) |----- */
+.componente_catalogo .cursos  {
+  position: relative;
+  margin-bottom: 31px;
+  .img-depor {
+    position: absolute;
+    top: 0;
+    background: rgba(88, 89, 91, 0.82);
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      display: none;
+    }
+    p {
+      width: 40px;
+      height: auto;
+      @include respond-to(xl) {
+        width: 93px;
+      }
+    }
+  }
+  &:hover .hover-curso {
+    z-index: 1;
+  }
+  &:hover .img-depor {
+    z-index: -1;
+  }
+  .hover-curso {
+    position: absolute;
+    top: 0;
+    background: rgba(53, 158, 208, 0.78);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .hover-curso-tex {
+      color: white;
+      width: 80%;
+      height: 83%;
+      margin: 0 auto;
+      margin-top: 5%;
+      border: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-family: $latoblack;
+        @include font-size(m);
+        padding: 0 15px;
+        text-align: center;
+      }
+      p {
+        font-family: $crimson-textregular;
+        @include font-size(m);
+        padding: 0 15px;
+        text-align: center;
+      }
+      .button {
+          width: 100%;
+          display: block;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          bottom: 6%;
+        a {
+          font-family: $latoregular;
+          @include font-size(s);
+          color: color('white');
+          text-decoration: none;
+          border: 2px solid white;
+          padding: 0.6em 1.5em;
+          background: rgb(53, 158, 208);
+        }
+      }
+    }
+  }
+}
+
+/* ------| Slider 3D Mobil |----- */
+@media (max-width:992px) {
+  .view-id-componente_eventos_destacados_carrusel_3d_.view-display-id-block {
+    display: none;
+  }
+}
+@include respond-to(xxl) {
+  .view-componente-eventos-destacados-carrusel-3d-.view-display-id-block_1 {
+    display: none;
+  }
+}
+.slider-3d-mobil {
+  position: relative;
+  padding: 0px 15px;
+  img {
+    width: 100%;
+  }
+  .carousel_caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate3d(0, -50%,0);
+    width: 60%;
+    > .views-field {
+      span {
+        font-family: $latoblack;
+        @include font-size(sl);
+        text-align: left;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+        color: color('Yellow-secundary');
+      }
+    }
+    a {
+      display: inline-block;
+      font-family: $latoblack;
+      @include font-size(xxs);
+      color: color('Yellow-secundary');
+      text-align: left;
+      text-decoration: none;
+      padding: .05rem 1rem;
+      border: 1px solid color('Yellow-secundary');
+      line-height: 39.77px;
+      margin-left: 3rem;
+      margin-top: 10px;
+    }
+  }
+}
+// Bulet de componente
+.swiper-pagination-3d-mobile {
+  position: initial;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  box-sizing: border-box;
+  z-index: 1;
+  .swiper-pagination-bullet {
+    width: 17px !important;
+    height: 17px;
+    border: 1px solid color('Yellow-secundary');
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 5px;
+    background-color: transparent;
+    opacity: 1;
+    &-active {
+      border-color: color('Yellow-secundary');
+      background-color: color('Yellow-secundary');
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
