@@ -136,7 +136,7 @@ dependencies[] = udla_blocks_alter
 dependencies[] = udla_tb_megamenu_alter
 dependencies[] = menu_lateral
 dependencies[] = udla_simplified_social_share
-dependencies[] = udla_block_taxonomy
+;dependencies[] = udla_block_taxonomy
 ; Chat
 dependencies[] = activehelper_livehelp
 ; Information added by Drupal.org packaging script on 2018-04-25
