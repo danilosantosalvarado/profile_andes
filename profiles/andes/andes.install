@@ -179,7 +179,7 @@ function andes_install() {
     'description' => $description,
     'machine_name' => 'tags',
   );
-  taxonomy_vocabulary_save($vocabulary);
+  taxonomy_vocabulary_save($vocabulary); 
 
   $field = array(
     'field_name' => 'field_' . $vocabulary->machine_name,
@@ -513,13 +513,13 @@ function andes_install_tasks($install_state) {
     'function' => '_install_style_image',
   );
 
-  $tasks['install_mod'] = array(
-    'display_name' => st('Importacion de contenido'),
-    'display' => TRUE,
-    'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_mods',
-  );
+  // $tasks['install_mod'] = array(
+  //   'display_name' => st('Importacion de contenido'),
+  //   'display' => TRUE,
+  //   'type' => 'batch',
+  //   'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+  //   'function' => '_install_mods',
+  // );
 
   $tasks['install_views'] = array(
     'display_name' => st('Importacion de vistas'),
@@ -563,14 +563,7 @@ function _install_mods() {
 
   foreach ($eventos[false] as $key => $value) {
     $batch['operations'][] = array('_import_eventos_bath', array($value));
-  }
-
-  // $file_path_ = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventos.xlsx';
-  // $eventos = phpexcel_import($file_path_eventos);
-
-  // foreach ($eventos[false] as $key => $value) {
-  //   $batch['operations'][] = array('_import_eventos_bath', array($value));
-  // }
+  } 
   return $batch;
 }
 
@@ -595,17 +588,20 @@ function _install_views_batch(){
 
 
 function _install_taxonomy() {
-  // Create taxonomy machine_name.
-  taxonomy_vocabulary_save((object) array('name' => 'Noticias','machine_name' => 'categorias_noticia'));
+  
   taxonomy_vocabulary_save((object) array('name' => 'Área tematica','machine_name' => 'area_tematica'));
+  taxonomy_vocabulary_save((object) array('name' => 'Categoría equipos de trabajo', 'machine_name' => 'categoria_equipos_trabajo')); 
+  taxonomy_vocabulary_save((object) array('name' => 'Decanatura - Enlaces Rapidos', 'machine_name' => 'decanatura_enlaces_rapidos')); 
   taxonomy_vocabulary_save((object) array('name' => 'Editorial','machine_name' => 'editorial'));
+ // taxonomy_vocabulary_save((object) array('name' => 'Etiquetas','machine_name' => 'tags'));
   taxonomy_vocabulary_save((object) array('name' => 'Eventos','machine_name' => 'eventos'));
   taxonomy_vocabulary_save((object) array('name' => 'Footer Top','machine_name' => 'footer_top'));
   taxonomy_vocabulary_save((object) array('name' => 'Formato','machine_name' => 'formato'));
   taxonomy_vocabulary_save((object) array('name' => 'Lateral Items','machine_name' => 'lateral_items'));
+  taxonomy_vocabulary_save((object) array('name' => 'Noticias','machine_name' => 'categorias_noticia'));
   taxonomy_vocabulary_save((object) array('name' => 'Redes Sociales','machine_name' => 'redes_sociales'));
   taxonomy_vocabulary_save((object) array('name' => 'Tipo de layout','machine_name' => 'tipo_layout'));
-  taxonomy_vocabulary_save((object) array('name' => 'Categoría equipos de trabajo', 'machine_name' => 'categoria_equipos_trabajo'));
+ 
 
   $install_state['mods'] = array('Taxonomy' => 1);
 

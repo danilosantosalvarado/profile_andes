@@ -8,44 +8,7 @@ require_once(drupal_get_path('module', 'taxonomy_csv') . '/taxonomy_csv.api.inc'
 module_load_include('inc', 'taxonomy_csv', 'import/taxonomy_csv.import.api');
 
 function andes_import_taxonomy() {
-  $noticias = array (
-    'import_format' => 'polyhierarchy',
-    'translate_by' => 'name',
-    'translate_languages' => array (),
-    'keep_order' => 1,
-    'source_choice' => 'url',
-    'filter_format' => 'plain_text',
-    'filter_format_custom' => 'none',
-    'check_line' => 1,
-    'check_utf8' => 1,
-    'locale_custom' => '',
-    'vocabulary_target' => 'existing',
-    'vocabulary_id' => 2,
-    'i18n_mode' => 0,
-    'language' => 'und',
-    'delete_terms' => 0,
-    'check_hierarchy' => 1,
-    'set_hierarchy' => '2',
-    'update_or_ignore' => 'update',
-    'result_stats' => 'result_stats',
-    'result_terms' => 'result_terms',
-    'result_level' => 'categorias_noticia',
-    'result_type' => 'by_message',
-    'delimiter' => ',',
-    'enclosure' => '"',
-    'vocabulary_language' => 'und',
-    'file' => (object)(array(
-       'filename' => 'noticias.csv',
-       'filepath' => getcwd().'/profiles/andes/taxonomys/noticias.csv',
-       'filesize' => 214,
-    )),
-    'url' => getcwd().'/profiles/andes/taxonomys/noticias.csv',
-    'check_options' => false,
-    'result_display' => true,
-  );
 
-  taxonomy_csv_vocabulary_import($noticias);
-  
   $area_tematica = array (
     'import_format' => 'polyhierarchy',
     'translate_by' => 'name',
@@ -83,6 +46,81 @@ function andes_import_taxonomy() {
   );
   taxonomy_csv_vocabulary_import($area_tematica);
 
+
+  $categoria_equipos_trabajo = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 11,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'categoria_equipos_trabajo',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'categoria_equipos_trabajo.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+  taxonomy_csv_vocabulary_import($categoria_equipos_trabajo);
+
+
+  $decanatura_enlaces_rapidos = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 11,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'decanatura_enlaces_rapidos',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'decanatura_enlaces_rapidos.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/decanatura_enlaces_rapidos.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/decanatura_enlaces_rapidos.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+  taxonomy_csv_vocabulary_import($categoria_equipos_trabajo);
   
   $editorial = array (
     'import_format' => 'polyhierarchy',
@@ -120,6 +158,44 @@ function andes_import_taxonomy() {
     'result_display' => true,
   );
   taxonomy_csv_vocabulary_import($editorial);
+
+  $etiquetas = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 4,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'tags',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'etiquetas.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/etiquetas.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/etiquetas.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+  taxonomy_csv_vocabulary_import($etiquetas);
+
 
   $eventos = array (
     'import_format' => 'polyhierarchy',
@@ -273,6 +349,82 @@ function andes_import_taxonomy() {
   taxonomy_csv_vocabulary_import($lateral_items);
 
 
+  $categorias_noticia = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 2,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'categorias_noticia',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'categorias_noticia.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/categorias_noticia.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/categorias_noticia.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+
+  taxonomy_csv_vocabulary_import($noticias);
+
+  $decanatura_categorias = array (
+    'import_format' => 'polyhierarchy',
+    'translate_by' => 'name',
+    'translate_languages' => array (),
+    'keep_order' => 1,
+    'source_choice' => 'url',
+    'filter_format' => 'plain_text',
+    'filter_format_custom' => 'none',
+    'check_line' => 1,
+    'check_utf8' => 1,
+    'locale_custom' => '',
+    'vocabulary_target' => 'existing',
+    'vocabulary_id' => 2,
+    'i18n_mode' => 0,
+    'language' => 'und',
+    'delete_terms' => 0,
+    'check_hierarchy' => 1,
+    'set_hierarchy' => '2',
+    'update_or_ignore' => 'update',
+    'result_stats' => 'result_stats',
+    'result_terms' => 'result_terms',
+    'result_level' => 'decanatura_categorias',
+    'result_type' => 'by_message',
+    'delimiter' => ',',
+    'enclosure' => '"',
+    'vocabulary_language' => 'und',
+    'file' => (object)(array(
+       'filename' => 'decanatura_categorias.csv',
+       'filepath' => getcwd().'/profiles/andes/taxonomys/decanatura_categorias.csv',
+       'filesize' => 214,
+    )),
+    'url' => getcwd().'/profiles/andes/taxonomys/decanatura_categorias.csv',
+    'check_options' => false,
+    'result_display' => true,
+  );
+
+  taxonomy_csv_vocabulary_import($decanatura_categorias);
+
   $redes_sociales = array (
     'import_format' => 'polyhierarchy',
     'translate_by' => 'name',
@@ -346,41 +498,4 @@ function andes_import_taxonomy() {
     'result_display' => true,
   );
   taxonomy_csv_vocabulary_import($tipo_layout);
-
-  $categoria_equipos_trabajo = array (
-    'import_format' => 'polyhierarchy',
-    'translate_by' => 'name',
-    'translate_languages' => array (),
-    'keep_order' => 1,
-    'source_choice' => 'url',
-    'filter_format' => 'plain_text',
-    'filter_format_custom' => 'none',
-    'check_line' => 1,
-    'check_utf8' => 1,
-    'locale_custom' => '',
-    'vocabulary_target' => 'existing',
-    'vocabulary_id' => 11,
-    'i18n_mode' => 0,
-    'language' => 'und',
-    'delete_terms' => 0,
-    'check_hierarchy' => 1,
-    'set_hierarchy' => '2',
-    'update_or_ignore' => 'update',
-    'result_stats' => 'result_stats',
-    'result_terms' => 'result_terms',
-    'result_level' => 'categoria_equipos_trabajo',
-    'result_type' => 'by_message',
-    'delimiter' => ',',
-    'enclosure' => '"',
-    'vocabulary_language' => 'und',
-    'file' => (object)(array(
-       'filename' => 'categoria_equipos_trabajo.csv',
-       'filepath' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
-       'filesize' => 214,
-    )),
-    'url' => getcwd().'/profiles/andes/taxonomys/categoria_equipos_trabajo.csv',
-    'check_options' => false,
-    'result_display' => true,
-  );
-  taxonomy_csv_vocabulary_import($categoria_equipos_trabajo);
 }

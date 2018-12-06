@@ -38,13 +38,13 @@ dependencies[] = colorfield
 dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = jquery_update
-dependencies[] = node_class
 dependencies[] = exclude_node_title
 dependencies[] = lang_dropdown
 dependencies[] = tb_megamenu
 dependencies[] = youtube
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
 dependencies[] = features
 dependencies[] = smtp
 dependencies[] = module_filter
@@ -74,6 +74,8 @@ dependencies[] = path_breadcrumbs
 dependencies[] = path_breadcrumbs_ui
 dependencies[] = path_breadcrumbs_i18n
 dependencies[] = location_entity
+dependencies[] = svg_embed
+dependencies[] = menu_attributes
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
@@ -96,6 +98,8 @@ dependencies[] = panels_ipe
 dependencies[] = panels_mini
 dependencies[] = fape
 dependencies[] = panopoly_magic
+dependencies[] = panels_node
+dependencies[] = panels_bootstrap_layout_builder
 ; Export 
 dependencies[] = menu_import
 dependencies[] = phpexcel
@@ -114,14 +118,25 @@ dependencies[] = views_slideshow_xtra
 dependencies[] = views_slideshow_jcarousel
 dependencies[] = views_conditional
 dependencies[] = views_content
+dependencies[] = views_field
+dependencies[] = views_fieldsets
+dependencies[] = views_responsive_grid
+dependencies[] = views_block_area
+dependencies[] = views_slidershow_features_slider
 ;I18n
 dependencies[] = i18n
 dependencies[] = i18n_field
 dependencies[] = entity_translation
 dependencies[] = title
+;Mansory 
+dependencies[] = masonry
+dependencies[] = masonry_views
 ; Custom
 dependencies[] = udla_blocks_alter
 dependencies[] = udla_tb_megamenu_alter
+dependencies[] = menu_lateral
+dependencies[] = udla_simplified_social_share
+dependencies[] = udla_block_taxonomy
 ; Chat
 dependencies[] = activehelper_livehelp
 ; Information added by Drupal.org packaging script on 2018-04-25
