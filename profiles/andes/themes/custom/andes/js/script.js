@@ -557,7 +557,6 @@
 
 	// menu expandible de equipo que desactiva el scroll del body
 	$(document).ready(function(){
-
 		$('#btn-list-equipo').click(function(){
 			$('body').toggleClass('scroll-off');
 		});
@@ -570,28 +569,24 @@
 		var $containerEl = $element.width();
 		var $items = $element.find('li').length;
 		var $itemsWidth = $element.find('li').outerWidth(true);
-		var $numberOnclick = $items - parseInt($containerEl/$itemsWidth);
+		var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
 		var $counterData = 0;
 		$containerQuick.find('.next-pagination').on('click',function(e){
 			e.preventDefault();
 			if($counterData >= 0 && $counterData < $numberOnclick){
 				$counterData++;
-				$element.animate({scrollLeft: $counterData*$items}, 800);
-				console.log("next");
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
 			if($counterData >= $numberOnclick){
 			$counterData--;
 			}
-			console.log($counterData);
 		});
 		$containerQuick.find('.prev-pagination').on('click',function(e){
-		e.preventDefault();
+			e.preventDefault();
 			if($counterData > 0 && $counterData < $numberOnclick){
 				$counterData--;
-				$element.animate({scrollLeft: $counterData*$itemsWidth}, 800);
-				console.log("prev");
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
-			console.log($counterData);
 		});
 	}
 
