@@ -1,7 +1,5 @@
-.view-componente-ranking-home {
-  display: block;
+.view-componente-ranking-home { display: block;
   margin: 0 auto;
-  padding-top: 30px;
   @include respond-to(m) {
     width: 750px;
   }
@@ -9,7 +7,6 @@
     width: 100%;
   }
   @include respond-to(xxl) {
-    padding-top: 0;
     width: 1170px;
   }
   .view-content {
@@ -19,17 +16,23 @@
       margin: 0;
     }
     .views-field-field-image-banner {
-      display: none;
-      background-color: white;
+      background-color:transparent;
       float: left;
+      width: 100%;
+      margin-top:40px;
       @include respond-to(m) {
         display: block;
         width: 100%;
+        background-color: transparent;
+      }
+      @include respond-to(l) {
+        background-color: transparent;
       }
       @include respond-to(xl) {
         display: block;
         width: 50%;
         padding: 25px 0;
+        background-color: transparent;
       }
       h1{
         @include font-size(20px);
@@ -60,34 +63,81 @@
       //margin-top: 20px;
       float: left;
       width: 100%;
+      margin-top:40px;
       @include respond-to(m) {
         background-color: white;
-        margin-top: 30px;
+        margin-top: 40px;
         padding: 30px 0;
+        display: block;
       }
       @include respond-to(xl) {
-        background-color: transparent;
+        background-color: white;
         width: 50%;
         padding: 25px 0;
-        margin-top: 0;
+        display: block;
+        margin-bottom: 40px;
+      }
+      .block-2{
+        .img-responsive{
+          padding: 2% 9%;
+        }
+      }
+      .rtecenter{
+        span{
+          font-family: "Crimson Text", serif !important;
+        }
       }
     }
+
+    .img-left{
+      .wrapper{
+        .block-1{
+          display: block;
+        }
+      }
+    }
+    
     /* grill */
     .wrapper {
       .block-1 {
-        padding: 0 10px;
+        padding: 20px;
+        display: none;
+        position: relative;
+        @include respond-to(m){
+          display: block;
+        }
+        &:after{
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 96%;
+          left: 2%;
+          top: 0;
+          margin-top: -40px;
+          background-color: white;
+          @include respond-to(m){
+            display: none;
+          }
+        }
+        
       }
       .block-1,
       .block-2{
         width: 100%;
         float: left;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         padding: 0 20px;
         @include respond-to(m) {
           width: 50%;
         }
         @include respond-to(xl) {
           margin-bottom: 0;
+        }
+      }
+      .block-2{
+        img{
+          width: 80%;
+          max-width: 400px;
         }
       }
       img {

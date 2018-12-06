@@ -3,13 +3,50 @@
 // Equipos
 //------------------------------------------------------------------------------
 */
+.scroll-off{
+  overflow: hidden;
+}
 
-.view-id-equipo_de_trabajo{
+.lista-tags-equipo{
+  margin-bottom: 30px;
+  @media screen and (max-width: 990px) {
+    width: 100%;
+    max-width: 200px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    margin-top: 39px;
+    ul {
+      width: 100%;
+      padding: 0;
+      background-color: #f0eeee;
+      height: 90vh;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  &.collapse{
+    @include respond-to(xl) {
+      display: block;
+    }
+  }
+}
+
+.view-componente-equipo-trabajo {
   // tabs de equipos
-  ul.quicktabs-tabs {
+  ul {
+    overflow-x: auto;
     display: flex;
-    overflow-x: scroll;
-    padding: 30px 0;
+    padding: 20px 0;
+    list-style: none;
+    @media screen and (max-width: 990px){
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: block;
+      padding: 0;
+      height: calc(100vh - 170px);
+    }
     // width
     &::-webkit-scrollbar {
       width: 2px;
@@ -20,118 +57,125 @@
     }
     li {
       flex: 1 1 0;
-      padding: 0 20px;
+      padding: 0;
       text-align: center;
+      margin-right: 3px;
+      flex: auto;
+      @media screen and (max-width: 990px){
+        display: inline;
+        float: left;
+      }
+      .views-field {
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
       a {
-        font-family: $latoregular;
-        padding: 5px 4px;
+        font-family: $latobold;
+        padding: 15px 2px;
         text-decoration: none;
-        @include font-size(o);
+        @include font-size(ms);
+        border-bottom: 3px solid #fff;
+        @media screen and (max-width: 990px){
+          width: 100%;
+          padding: 15px 20px;
+          float: left;
+          border-bottom: none;
+        }
         &:hover{
           text-decoration: none;
+          border-bottom: 3px solid #359ED0;
+          opacity: 0.8;
+        }
+        &.team-active{
+          text-decoration: none;
+          border-bottom: 3px solid #359ED0;
         }
       }
-      &.active{
-        a {
-          color: #888;
-          border-bottom: 3px solid color('blue-light');
-          &:hover{
-            text-decoration: none;
-          }
-        }
+    }
+    .views-row-last{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* ------| Equipos  |----- */
+.view-contenido-equipo-de-trabajo {
+  > .view-content {
+    margin: 0px 0px 25px;
+    overflow: hidden;
+    .views-column {
+      @media screen and (min-width: 555px) and (max-width: 767px) {
+        width: 50%;
+        float: left;
       }
     }
   }
 }
-/* ------| Equipos  |----- */
-.view-contenido-equipo-de-trabajo {
-  padding: 20px 0 0 0;
-  .view-content {
+
+.equipos-de-trabajo {
+  margin-bottom: 15px;
+  overflow: hidden;
+  .content-equipo {
+    position: relative;
+    min-height: 1px;
+    margin: 0 auto;
+    float: left;
+    width: 100%;
     @include respond-to(xl) {
-      margin-top: 30px;
+      &:hover .caption {
+        z-index: 2;
+      }
     }
-    .views-row {
-      display: block;
-      .field-content {
-        .content-equipo {
-          position: relative;
-          min-height: 1px;
-          margin: 0 auto;
-          padding-right: 15px;
-          padding-left: 15px;
-          float: left;
-          width: 100%;
-          @include respond-to(xs) {
-            width: 50%;
-          }
-          @include respond-to(xl) {
-            width: 33.33333333%;
-          }
+    // imagen
+    .imagen {
+      img {
+        border-radius: 50%;
+      }
+    }
+    // text
+    .caption {
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      z-index: -2;
+      height: 22vw;
+      @include respond-to(xl) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 25px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        height: 100%;
+      }
+      .views-field {
+        @include respond-to(xl) {
+          color:  color('white');
         }
-        //contenedor
-        .thumbnail {
-          position: relative;
-          display: inline-block;
-          background-color: transparent;
-          border: none;
-          padding: 0;
-          @include respond-to(xl) {
-            width: 279px;
-            height: 279px;
-            &:hover .caption {
-              z-index: 2;
-            }
-          }
-          // imagen
-          .imagen {
-            img {
-              border-radius: 50%;
-            }
-          }
-          // text
-          .caption {
-            width: 100%;
-            height: 100%;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            z-index: -2;
-            @include respond-to(xl) {
-              position: absolute;
-              top: 0;
-              left: 0;
-              border-radius: 50%;
-              background: rgba(0, 0, 0, 0.6);
-            }
-            p {
-              @include respond-to(xl) {
-                color:  color('white');
-              }
-              color:  color('black');
-              text-align: center;
-              margin: 0;
-              &:nth-child(1) {
-                font-family: $latobold;
-                @include font-size(m);
-                line-height: 1;
-                letter-spacing: 1px;
-              }
-              &:nth-child(2) {
-                font-family: $latolight;
-                @include font-size(m);
-              }
-              &:nth-child(3) {
-                font-family: $latolight;;
-                @include font-size(m);
-              }
-              &:nth-child(4) {
-                font-family: $latolight;
-                @include font-size(m);
-              }
-            }
-          }
+        color:  color('black');
+        text-align: center;
+        margin: 0;
+        &:nth-child(1) {
+          font-family: $latobold;
+          @include font-size(m);
+          line-height: 1;
+          letter-spacing: 1px;
+        }
+        &:nth-child(2) {
+          font-family: $latolight;
+          @include font-size(m);
+        }
+        &:nth-child(3) {
+          font-family: $latolight;;
+          @include font-size(m);
+        }
+        &:nth-child(4) {
+          font-family: $latolight;
+          @include font-size(m);
         }
       }
     }
@@ -139,59 +183,128 @@
 }
 
 /* ------| Paguinadores |----- */
-.text-center {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  ul.pagination {
-    background: color('white');
-    border-radius: 0;
-    padding: 10px;
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      width: 100%;
-      height: 1px;
-      border-top: 1px solid color('orange');
-      z-index: -1;
+.view-contenido-equipo-de-trabajo{
+  .text-center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    @include respond-to(m) {
+        width: 750px;
     }
-    li {
-      color: #484851;
-      border: 1px solid color('white');
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    ul.pagination {
+      background: color('white');
       border-radius: 0;
-      background-color: color('white');
-      display: block;
-      float: left;
-      margin: 0 5px;
-      a {
+      padding: 10px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid color('orange');
+        z-index: -1;
+      }
+      li {
         color: #484851;
         border: 1px solid color('white');
-        font-family: Lato,sans-serif;
         border-radius: 0;
         background-color: color('white');
-        .ajax-progress {
+        display: block;
+        float: left;
+        margin: 0 5px;
+        a {
+          color: #484851;
+          border: 1px solid color('white');
+          font-family: Lato,sans-serif;
+          border-radius: 0;
+          background-color: color('white');
+          .ajax-progress {
+            display: none;
+          }
+        }
+        &.active {
+          border-color: color('orange');
+          span {
+            background-color: transparent;
+            border-radius: initial;
+            color: color('black');
+            border: initial;
+          }
+        }
+        &.next,
+        &.prev,
+        &.pager-last,
+        &.pager-first {
           display: none;
         }
       }
-      &.active {
-        border-color: color('orange');
-        span {
-          background-color: transparent;
-          border-radius: initial;
-          color: color('black');
-          border: initial;
-        }
+    }
+  }
+}
+
+/* -----titulo mobile------ */
+.view-contenido-equipo-de-trabajo{
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  @include respond-to(xl){
+    width: 1170px;
+  }
+}
+.pane-componente-equipo-trabajo, .view-contenido-equipo-de-trabajo>.view-header{
+  @media screen and (max-width: 990px){
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: #a7a8aa;
+    padding: 15px;
+    h2{
+      margin: 0;
+      text-align: left;
+      float: left;
+      color: #fff;
+      @include font-size(ms);
+      font-family: $latolight;
+    }
+    .pane-content, .view-header{
+      float: right;
+      button{
+        width: 20px;
+        height: 22px;
+        background-image: url(../img/Icon/menu-quipo-mobil.png);
+        background-size: 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        border-color: transparent;
       }
-      &.next,
-      &.prev,
-      &.pager-last,
-      &.pager-first {
+    }
+  }
+}
+.view-contenido-equipo-de-trabajo{
+  .views-responsive-grid-horizontal{
+    @media screen and (max-width: 990px){
+      padding-top: 60px;
+    }
+  }
+}
+.panels-ipe-portlet-content, .view-contenido-equipo-de-trabajo{
+  .pane-content, .view-componente-equipo-trabajo{
+    button{
+      @include respond-to(xl){
         display: none;
       }
     }
   }
 }
+  

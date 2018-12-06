@@ -10,15 +10,20 @@
   overflow: hidden;
   .view-content {
     .views-row {
-      //Img
       .views-column {
         padding-bottom: 15px;
-        .views-field {
-          img{
-            width: 100%;
+        //Img
+        .views-field-view {
+          @include respond-to(xs) {
+            max-height: 150px;
           }
-          .youtube-container--responsive {
-            padding-bottom: 61.25%;
+          .views-field {
+            img{
+              width: 100%;
+            }
+            .youtube-container--responsive {
+              padding-bottom: 62%;
+            }
           }
         }
         .box-content {
@@ -40,7 +45,7 @@
           .views-field-title {
             font-family: $crimson-semibold;
             @include type-layout(sl, .90);
-            color: #484851;
+            // color: #484851;
             margin: 15px 0 20px;
             @include respond-to(m) {
               @include font-size(ll);

@@ -51,7 +51,12 @@ INSTALLATION
    main or download link:
 
    http://idangero.us/swiper
-   https://github.com/nolimits4web/Swiper/archive/v3.0.6.tar.gz
+   https://github.com/nolimits4web/Swiper/archive/v4.4.2.tar.gz
+
+   Extract the Swiper library and rename it to Swiper (capital S) , it is case sensitive.
+   Place it in your sites/all/libraries or sites/default/libraries folder.
+   When in doubt, check the drupal status report page to confirm if the library is properly installed.
+   Otherwise, check the javascript console for a TypeError message, if you have this, something is wrong, debug it.
 
 CONFIGURATION
 -------------

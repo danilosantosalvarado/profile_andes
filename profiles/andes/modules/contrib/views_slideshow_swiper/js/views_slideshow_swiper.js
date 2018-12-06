@@ -3,65 +3,47 @@
   Drupal.settings.viewsSlideshowSwiperValues = {
     'prefixId': 'views_slideshow_swiper_main_',
     'callbacks': {
-      'paginationBulletRender': ['index', 'class'],
-      'onInit': ['swiper'],
-      'onSlideChangeStart': ['swiper'],
-      'onSlideChangeEnd': ['swiper'],
-      'onTransitionStart': ['swiper'],
-      'onTransitionEnd': ['swiper'],
-      'onTouchStart': ['swiper', 'event'],
-      'onTouchMove': ['swiper', 'event'],
-      'onTouchMoveOpposite': ['swiper', 'event'],
-      'onSliderMove': ['swiper', 'event'],
-      'onTouchEnd': ['swiper', 'event'],
-      'onClick': ['swiper', 'event'],
-      'onTap': ['swiper', 'event'],
-      'onDoubleTap': ['swiper', 'event'],
-      'onImagesReady': ['swiper'],
-      'onProgress': ['swiper', 'progress'],
-      'onReachBeginning': ['swiper'],
-      'onReachEnd': ['swiper'],
-      'onDestroy': ['swiper'],
-      'onSetTranslate': ['swiper', 'translate'],
-      'onSetTransition': ['swiper', 'transition'],
-      'onAutoplayStart': ['swiper'],
-      'onAutoplayStop': ['swiper'],
-      'onLazyImageLoad': ['swiper', 'slide', 'image'],
-      'onLazyImageReady': ['swiper', 'slide', 'image'],
+      'init': [],
+      'beforeDestroy': [],
+      'slideChange': [],
+      'slideChangeTransitionStart': [],
+      'slideChangeTransitionEnd': [],
+      'slideNextTransitionStart': [],
+      'slideNextTransitionEnd': [],
+      'slidePrevTransitionStart': [],
+      'slidePrevTransitionEnd': [],
+      'transitionStart': [],
+      'transitionEnd': [],
+      'touchStart': ['event'],
+      'touchMove(event)': ['event'],
+      'touchMoveOpposite': ['event'],
+      'sliderMove': ['event'],
+      'touchEnd': ['event'],
+      'click': ['event'],
+      'tap': ['event'],
+      'doubleTap': ['event'],
+      'imagesReady': [],
+      'progress': ['progress'],
+      'reachBeginning': [],
+      'reachEnd': [],
+      'fromEdge': [],
+      'setTranslate': ['translate'],
+      'setTransition': ['transition'],
+      'resize': [],
+      'paginationRender': ['swiper', 'paginationEl'],
+      'paginationUpdate': ['swiper', 'paginationEl'],
+      'autoplayStart': [],
+      'autoplayStop': [],
+      'autoplay': [],
+      'lazyImageLoad': ['slideEl', 'imageEl'],
+      'lazyImageReady': []
     },
     'callbackAdditions': {
-      'onInit': function(swiper) {
+      'init': function(swiper) {
         // Register callback to save references to Swiper instances. Allows
         // Views Slideshow controls to affect the Swiper.
         Drupal.viewsSlideshowSwiper.active = Drupal.viewsSlideshowSwiper.active || {};
         Drupal.viewsSlideshowSwiper.active[Drupal.settings.viewsSlideshowSwiper] = swiper;
-      },
-      // Trigger Slideshow's transition events when Swiper's transition events occur.
-      'onTransitionStart': function(swiper) {
-        Drupal.viewsSlideshow.action({
-          'action': 'transitionBegin',
-          'slideshowID': Drupal.settings.viewsSlideshowSwiper['#' + swiper.container.attr('id')].vss_id,
-          'slideNum': swiper.activeIndex - 1 // Minus one as the active slide is not yet in focus.
-        });
-      },
-      'onTransitionEnd': function(swiper) {
-        Drupal.viewsSlideshow.action({
-          'action': 'transitionEnd',
-          'slideshowID': Drupal.settings.viewsSlideshowSwiper['#' + swiper.container.attr('id')].vss_id,
-          'slideNum': swiper.activeIndex
-        });
-      },
-      'onAutoplayStart': function(swiper) {
-        Drupal.viewsSlideshow.action({
-          'action': 'play',
-          'slideshowID': Drupal.settings.viewsSlideshowSwiper['#' + swiper.container.attr('id')].vss_id
-        });
-      },
-      'onAutoplayStop': function(swiper) {
-        Drupal.viewsSlideshow.action({
-          'action': 'pause',
-          'slideshowID': Drupal.settings.viewsSlideshowSwiper['#' + swiper.container.attr('id')].vss_id
-        });
       },
     }
   };
@@ -79,6 +61,9 @@
         if ('autoplay' in settings.options && (settings.options['autoplay'] === 0 || settings.options['autoplay'] === '')) {
           delete settings.options.autoplay;
         }
+        if (typeof settings.options['on'] === 'undefined') {
+          settings.options['on'] = [];
+        }
 
         // Define function to create callback function objects from user-inputted function body strings.
         var createFunction = (function(args, body) {
@@ -95,27 +80,26 @@
         // For each callback function, add to its function body a call to an additional function if it exists for that callback.
         Object.keys(Drupal.settings.viewsSlideshowSwiperValues.callbackAdditions).forEach(function(parameter) {
           // If the function body is empty, instantiate it as an empty string to be added to.
-          if (!(parameter in settings.options)) {
-            settings.options[parameter] = '';
+          if (!(parameter in settings.options['on'])) {
+            settings.options['on'][parameter] = '';
           }
           // Derive the function call string parts.
           var functionName = "Drupal.settings.viewsSlideshowSwiperValues.callbackAdditions." + parameter;
-          var parameterList = Drupal.settings.viewsSlideshowSwiperValues.callbacks[parameter].join(", ");
           // Add the function call to the callback function body.
-          settings.options[parameter] += functionName + '(' + parameterList+ ');';
+          settings.options['on'][parameter] += functionName + '(this);';
         });
-        Object.keys(settings.options).filter(function(value) {
+        Object.keys(settings.options['on']).filter(function(value) {
           return value in Drupal.settings.viewsSlideshowSwiperValues.callbacks;
         }).forEach(function(parameter) {
           // Get user-defined code that comprises the callback function body.
-          var functionCode = settings.options[parameter];
+          var functionCode = settings.options['on'][parameter];
 
           // Instantiate and add a callback function if there is a non-empty function body for that callback function parameter
           if (functionCode) {
-            settings.options[parameter] = createFunction(Drupal.settings.viewsSlideshowSwiperValues.callbacks[parameter], functionCode);
+            settings.options['on'][parameter] = createFunction(Drupal.settings.viewsSlideshowSwiperValues.callbacks[parameter], functionCode);
           }
           else {
-            delete settings.options[parameter];
+            delete settings.options['on'][parameter];
           }
         });
 

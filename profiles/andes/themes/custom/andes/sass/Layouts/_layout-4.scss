@@ -4,8 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-/* ------| slider alineacion center |----- */
-.slider-homes-layout-four-title{
+.slider-homes-layout-four{
   position: absolute;
   top: 0;
   left: 0;
@@ -15,8 +14,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,.5);
-  .titulo-layout-4 {
+  .conten{
+    padding: 0 25px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    .title-slider-homes,
+    .body-slider-homes,
+    .link-slider-homes {
+      text-align: center !important;
+    }
+  }
+}
+
+/* ------| slider alineacion center |----- */
+.slider-homes-layout-four-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: rgba(0,0,0,.5);
+ .temp-title {
     font-family: $latoblack;
     @include font-size(xl);
     color: color('white');
@@ -25,13 +48,13 @@
       @include font-size(xxxl);
     }
   }
-  .subtitulo-layout-4 {
+  .temp-subtitle {
       font-family: $latoregular;
       @include font-size(l);
       color: color('white');
       padding: 10px 0;
   }
-  .text-layout-4 {
+  .temp-descrip {
       font-family: $crimson-textregular;
       @include font-size(m);
       color: color('white');

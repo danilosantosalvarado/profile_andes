@@ -3,12 +3,50 @@
 // Componente Redes Sociales layout 1
 //------------------------------------------------------------------------------
 */
-.share-container {
-  text-align: center;
-  padding: 40px 0;
-  border-top: 1px solid #ddd;
-  .more,
-  .os-share-more {
+
+.pane-udla-simplified-social-share{
+  h2{
     display: none;
   }
+}
+
+.views_slideshow_main{
+  .social-network-list.align-social-horizontal {
+    border-bottom: none;
+    padding: 0 15px !important;
+    // margin: 0
+  }
+}
+
+.social-network-list.align-social-horizontal {
+  display: flex;
+  justify-content: center;
+  // margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  list-style: none;
+  li {
+    cursor: pointer;
+    &:hover {
+      position: initial;
+    }
+    svg {
+      padding: 4px;
+    }
+  }
+}
+
+// scroll en mobil 
+.social-mobile-fixed {
+  width: 100%;
+  position: fixed;
+  bottom: auto;
+  margin-top: 0px;
+  background-color: white !important;
+  z-index: 3;
 }

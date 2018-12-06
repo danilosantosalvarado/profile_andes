@@ -1,6 +1,5 @@
 import { window, document } from 'ssr-window';
 import $ from '../../../utils/dom';
-import Device from '../../../utils/device';
 import Utils from '../../../utils/utils';
 
 export default function (event) {
@@ -14,6 +13,7 @@ export default function (event) {
   if (e.originalEvent) e = e.originalEvent;
   data.isTouchEvent = e.type === 'touchstart';
   if (!data.isTouchEvent && 'which' in e && e.which === 3) return;
+  if (!data.isTouchEvent && 'button' in e && e.button > 0) return;
   if (data.isTouched && data.isMoved) return;
   if (params.noSwiping && $(e.target).closest(params.noSwipingSelector ? params.noSwipingSelector : `.${params.noSwipingClass}`)[0]) {
     swiper.allowClick = true;
@@ -65,7 +65,9 @@ export default function (event) {
     ) {
       document.activeElement.blur();
     }
-    if (preventDefault && swiper.allowTouchMove) {
+
+    const shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
+    if (params.touchStartForcePreventDefault || shouldPreventDefault) {
       e.preventDefault();
     }
   }

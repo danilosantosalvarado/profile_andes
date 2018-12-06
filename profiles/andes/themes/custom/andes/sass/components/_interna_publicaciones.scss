@@ -36,7 +36,7 @@
 .publicaciones-interna {
   #block-system-main {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px 25px;
     @include respond-to(m) {
       width: 750px;
     }
@@ -67,6 +67,7 @@
     margin: 0;
   }
 }
+
 /* ------| Contenedor |----- */
 .publicaciones-interna {
   //panel left
@@ -105,6 +106,7 @@
   .field-name-field-boton-compra {
     text-align: center;
     .field-item {
+      margin: 14px 0px;
       a {
         display: block;
         font-size: .85rem;
@@ -137,6 +139,7 @@
       font-family: $crimson-textregular;
       @include font-size(m);
       color: color('black');
+      margin-top: -2px;
     }
   }
   //Area tematica
@@ -183,5 +186,10 @@
   .field-name-body {
     padding: 20px 0;
     text-align: justify;
+    .field-item  {
+      font-family: $crimson-textregular;
+      @include font-size(m);
+
+    }
   }
 }

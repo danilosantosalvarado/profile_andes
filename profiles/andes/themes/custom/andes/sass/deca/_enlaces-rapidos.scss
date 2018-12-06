@@ -15,6 +15,7 @@
       display: block;
     }
     h1 {
+      margin: 0px;
       p {
         font-family: $latoregular;
         font-size: 32px;
@@ -33,6 +34,16 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    @include respond-to(m) {
+      width: 750px;
+    }
+    @include respond-to(xl) {
+      width: 970px;
+    }
+    @include respond-to(xxxl) {
+      width: 1170px;
+    }
     .views-row  {
         justify-content: center;
         flex: 1 1 0px;
@@ -64,8 +75,10 @@
             width: 50px;
             height: 50px;
             .cls-1, .cls-2 {
-              stroke: black;
-              stroke-width: 15px;
+              // stroke: black;
+              // stroke-width: 15px;
+              stroke: initial !important;
+              fill: #fff !important;
             }
             path {
               stroke: black;
@@ -110,19 +123,19 @@
         }
       }
     }
-    .views-row-1 {
-      a {
-        @include respond-to(xl) {
-          justify-content: flex-end;
-        }
-      }
-    }
-    .views-row-2 {
-      a {
-        @include respond-to(xl) {
-          justify-content: end;
-        }
-      }
-    }
+    // .views-row-1 {
+    //   a {
+    //     @include respond-to(xl) {
+    //       justify-content: flex-end;
+    //     }
+    //   }
+    // }
+    // .views-row-2 {
+    //   a {
+    //     @include respond-to(xl) {
+    //       justify-content: end;
+    //     }
+    //   }
+    // }
   }
 }

@@ -12,10 +12,6 @@
   </IfModule>
 </FilesMatch>
 
-php_value memory_limit 300M
-php_value post_max_size 100M
-php_value upload_max_filesize 300M
-
 # Don't show directory listings for URLs which map to a directory.
 Options -Indexes
 
@@ -41,6 +37,11 @@ DirectoryIndex index.php index.html index.htm
   php_value mbstring.http_input             pass
   php_value mbstring.http_output            pass
   php_flag mbstring.encoding_translation    off
+  php_value max_input_vars 100000
+  php_value max_execution_time 3000
+  php_value post_max_size 1024M
+  php_value memory_limit 1024M
+
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -156,3 +157,8 @@ DirectoryIndex index.php index.html index.htm
   # Disable content sniffing, since it's an attack vector.
   Header always set X-Content-Type-Options nosniff
 </IfModule>
+
+
+#aumentar subida de archivos
+php_value upload_max_filesize 256M 
+php_value post_max_size 256M

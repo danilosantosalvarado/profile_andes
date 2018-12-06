@@ -58,7 +58,7 @@
         .views-slideshow-controls-text-next {
           position: relative;
           float: left;
-          width: 40px;
+          width: 20px;
           height: 40px;
         }
         .views_slideshow_controls_text_previous  a[rel="prev"],
@@ -85,7 +85,9 @@
       bottom: 10px;
       float: right;
       width: 50%;
-      margin-top: -103px;
+      margin-top: -6.5%;
+      display: inline-block;
+      vertical-align: bottom;
     }
     .title-multimedia-destacado {
       text-transform: uppercase;

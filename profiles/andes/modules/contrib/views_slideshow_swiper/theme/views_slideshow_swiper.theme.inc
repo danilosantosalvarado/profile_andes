@@ -18,39 +18,85 @@ function _views_slideshow_swiper_preprocess_views_slideshow_swiper_main_frame(&$
   // more conveniently named variables.
   $settings = $vars['settings'];
   $rows = $vars['rows'];
-      $view = $vars['view'];
+  $view = $vars['view'];
   $vss_id = $vars['vss_id'];
+  $prevEl = 'prevEl';
+  $nextEl = 'nextEl';
+  $paginationEl = 'paginationEl';
+  if (isset($vars['settings']['pagination']['el'])) {
+    $paginationEl = $vars['settings']['pagination']['el'];
+    $paginationEl = str_replace(".", " ", $paginationEl);
+  }
+  if (isset($vars['settings']['navigation']['prevEl'])) {
+    $prevEl = $vars['settings']['navigation']['prevEl'];
+    $prevEl = str_replace(".", " ", $prevEl);
+  }
+  if (isset($vars['settings']['navigation']['nextEl'])) {
+    $nextEl = $vars['settings']['navigation']['nextEl'];
+    $nextEl = str_replace(".", " ", $nextEl);
+  }
+  // Clean the settings from default values
+  _views_slideshow_swiper_remove_default_values($settings);
 
-  // Cast the strings into int or bool as necessary
-  $new_settings = array();
-  foreach ($settings as $key => $value) {
-    if (is_string($value)) {
+  // Reorganise settings array to be supported by library
+  foreach ($settings as $group => $values) {
+    switch ($group) {
 
-      $value = str_ireplace("\n", ' ', $value);
-      $value = trim($value);
+      case 'parameters':
+        foreach ($values as $key => $value) {
+          if ($key == 'breakpoints') {
+            if (!$values[$key]['enabled']) {
+              // If breakpoints is disabled, set it to NULL.
+              $value = NULL;
+            }
+          }
+          $settings[$key] = $value;
+        }
+        unset($settings[$group]);
+        break;
 
-      if (is_numeric($value)) {
-        $value = (int)$value;
-      }
-      elseif (drupal_strtolower($value) == 'true') {
-        $value = TRUE;
-      }
-      elseif (drupal_strtolower($value) == 'false') {
-        $value = FALSE;
-      }
+      case 'navigation':
+        if (!isset($settings[$group]['enabled']) || !$settings[$group]['enabled']) {
+          unset($settings[$group]);;
+          $prevEl = '';
+          $nextEl = '';
+        } else {
+          $vars['prevEl'] = $prevEl;
+          $vars['nextEl'] = $nextEl;
+        }
+        break;
+      case 'pagination':
+        if (!isset($settings[$group]['enabled']) || !$settings[$group]['enabled']) {
+          unset($settings[$group]);
+          $paginationEl = '';
+        } else {
+          $vars['paginationEl'] = $paginationEl;
+        }
+        break;
+      case 'scrollbar':
+        if (isset($values['enabled'])) {
+          unset($settings[$group]['enabled']);
+        }
+        else {
+          unset($settings[$group]);
+        }
+        break;
+
+      case 'autoplay':
+      case 'parallax':
+      case 'lazy':
+      case 'zoom':
+      case 'keyboard':
+      case 'mousewheel':
+      case 'hashNavigation':
+      case 'history':
+      case 'a11y':
+        if (isset($values['enabled']) && count($values) == 1) {
+          $settings[$group] = TRUE;
+        }
+        break;
     }
-
-    $new_settings[$key] = $value;
   }
-
-  _views_slideshow_swiper_remove_default_values($new_settings);
-  if (isset($new_settings['slidesPerView']) && ($new_settings['slidesPerView'] === 0)) {
-    $new_settings['slidesPerView'] = 'auto';
-  }
-  if (isset($new_settings['autoplay']) && ($new_settings['autoplay'] === 0)) {
-    unset($new_settings['autoplay']);
-  }
-  
 
   // Merge the existing settings with the generated ones
   $settings = array(
@@ -59,7 +105,7 @@ function _views_slideshow_swiper_preprocess_views_slideshow_swiper_main_frame(&$
     //'div_prefix' => '#'
     // @todo figure out what the div prefix is used for
     'vss_id' => $vss_id,
-    'options' => $new_settings,
+    'options' => $settings,
   );
 
   // We need to go through the current js setting values to make sure the one we
@@ -105,7 +151,12 @@ function _views_slideshow_swiper_preprocess_views_slideshow_swiper_main_frame(&$
   foreach ($rows as $count => $row) {
     $items[] = $row;
     // @todo see if we can group multiple items per slide
-    $rendered_rows .= theme('views_slideshow_swiper_main_frame_row', array('vss_id' => $vss_id, 'items' => $items, 'count' => $count, 'view' => $view));
+    $rendered_rows .= theme('views_slideshow_swiper_main_frame_row', array(
+      'vss_id' => $vss_id,
+      'items' => $items,
+      'count' => $count,
+      'view' => $view)
+    );
 
     // Clear the items array
     $items = array();

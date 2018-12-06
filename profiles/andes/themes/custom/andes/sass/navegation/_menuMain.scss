@@ -1,0 +1,1296 @@
+header {
+  margin: 0px !important;
+  border: none !important;
+  background: none !important;
+  min-height: auto !important;
+  margin: 0px !important;
+}
+
+/*
+//------------------------------------------------------------------------------
+// Mobil
+//------------------------------------------------------------------------------
+*/
+@media (max-width: 991px) {
+  //al desplegar el menu no se pueda hacer scroll
+  body.active-menu {
+    background-color:black;
+    .navbar-collapse.collapse.in {
+      position: relative !important;
+      top: 0;
+    }
+    >.main-container.container-fluid,
+    .footer.container-fluid {
+      display: none;
+    }
+  }
+  header .container-fluid {
+    border: none;
+    overflow: initial;
+    // */ ----| button de menu |---- */
+    .navbar-header {
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 999;
+      float: left;
+      margin: 0 !important;
+      // imagen facultad
+      .wrapper-header-up {
+        // height: 60px;
+        background-color: black;
+        padding: 15px 0 0;
+        a {
+          padding-right: 15px;
+          padding-left: 15px;
+          display: block;
+          p {
+            margin: 0px;
+            svg {
+              width: 120px;
+              height: auto;
+              max-height: 48px;
+              display: block;
+            }
+          }
+        }
+      }
+      // Logo institucional
+      .wrapper-header-color {
+        height: 60px;
+        a {
+          float: left;
+          margin: 0.9% 20px;
+          p {
+            margin: 0px;
+            svg {
+              width: 120px;
+              height: auto;
+              max-height: 48px;
+              display: block;
+            }
+          }
+        }
+      }
+      // button de menu
+      .navbar-toggle {
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin-right: 20px;
+        margin-top: 18px;
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        background: url(../img/Icon/icon-menu-mobile.png) no-repeat;
+        background-size: cover;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: hidden;
+        transition: .3s;
+        &[aria-expanded="true"] {
+          background-position-y: -20px;
+        }
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+    // */ ----| contenedor de todo el menu |---- */
+    > .navbar-collapse {
+      display: none !important;
+      padding: 0px;
+      height: 0px !important;
+      border: none;
+      box-shadow: none;
+      transition: .3s;
+      &.in {
+        width: 100%;
+        height: 100% !important;
+        background-color:black;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        display: block !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        margin: 0 !important;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        transition: .3s;
+        nav,
+        .region-navigation {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &.collapsing {
+        transition: none !important;
+      }
+    }
+    // */ ----| Reset De Menu  |---- */
+    .tb-megamenu {
+      >.nav-collapse {
+        //Cuando esta activo
+        &.in {
+          position: static;
+          height: auto !important;
+          margin: 0px;
+        }
+        &.collapsing {
+          transition: none !important;
+        }
+        ul.level-0 {
+          // margin: 0;
+          float: none;
+          li.level-1 {
+            float: none;
+            //padres con hijos
+            &.dropdown {
+              //Ocultar Imagen y megamenu-subnav
+              .content-img,
+              .tb-megamenu-submenu {
+                display: none !important;
+              }
+            }
+            // reset de enlaces
+            a {
+              font-family: $latolight;
+              font-size: 1.08rem;
+              color: #696969 !important;
+              background: transparent !important;
+              border: none !important;
+              text-align: center;
+              padding: 9px 15px;
+              // }
+              &:hover,
+              &:focus {
+                background-color: transparent;
+              }
+              .caret {
+                border: none
+              }
+            }
+          }
+        }
+      }
+    }
+    // */ ----| Menu Soy  |---- */
+    .wrapper-menu-soy {
+      order: 3;
+      //ocultar lenguaje y volver a institucional
+      #block-lang-dropdown-language,
+      #block-views-logos-header-block-2 {
+        display: none;
+      }
+      //Bloque Menu Soy
+      #block-tb-megamenu-menu-menu-top-soy {
+        order: 1;
+        .tb-megamenu {
+          >.nav-collapse {
+            ul.level-0 {
+              li.level-1 {
+                display: none;
+                //Mostar solo padre con hijos y detacados
+                &.dropdown {
+                  display: block;
+                }
+                //Style Padre
+                &.dropdown {
+                  margin: 10px 0 30px;
+                  > a {
+                    color: #fff !important;
+                    .caret {
+                      width: 16px;
+                      height: 14px;
+                      float: right;
+                      display: block !important;
+                      background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+                      background-size: 36px;
+                      transform: rotate(-90deg);
+                      border: none;
+                      margin: 0px;
+                      margin-top: 3px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      //Bloque de select
+      .container-select-language,
+      .container-select-top-soy {
+        padding-right: 15px;
+        padding-left: 15px;
+        position: relative;
+        margin-bottom: 16px;
+        .block-title {
+          display: none;
+        }
+        .title-language,
+        .title-top-soy {
+          position: absolute;
+          top: 50%;
+          left: 25px;;
+          transform: translate3d(0, -50%, 0);
+          z-index: -1;
+        }
+        select {
+          width: 100% !important;
+          height: 38px;
+          font-family: $latoregular;
+          color: #a8a8a8;
+          font-size: .88rem;
+          background: transparent url(../img/icon-flecha-abajo.png) no-repeat;
+          background-size: 13px;
+          background-position: 95% 50%;
+          // margin-bottom: 16px;
+          border: 1px solid #484848;
+          border-radius: 0px;
+          box-shadow: none;
+          padding: 7px 10px 7px 30%;
+          appearance: none;
+        }
+      }
+      //Bloque de Menu destacados
+      .container-destacados {
+        padding-right: 15px;
+        padding-left: 15px;
+        .menu-destacado {
+          width: 47%;
+          float: left;
+          margin-bottom: 3%;
+          background: #313131;
+          -ms-overflow-style: scroll;
+          &:nth-child(odd) {
+            margin-right: 3%;
+          }
+          &:nth-child(even) {
+            margin-left: 3%;
+          }
+          > a {
+            display: block;
+            font-family: $latoregular;
+            font-size: .88rem;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 0;
+
+          }
+        }
+      }
+    }
+    // */ ----| Mega menu  |---- */
+    .wrapper-mega-menu {
+      order: 1;
+      #block-views-logos-header-block,
+      .barra-buscar {
+        display: none;
+      }
+      .tb-megamenu-menu-mega-menu {
+        .nav-collapse.always-show.collapse.in {
+          &:after {
+            content: "";
+            width: 100%;
+            height: 11px;
+            display: block;
+            background: url(../img/lines-menu-mobile.png) no-repeat center;
+            background-size: 280px 11px;
+          }
+          .level-0 {
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+    // */ ----| Menu Buscar  |---- */
+    .wrapper-buscar-menu {
+      order: 2;
+      .block-title,
+      #google-cse-results,
+      label {
+        display: none;
+      }
+      #google-cse-results-searchbox-form {
+        position: relative;
+        margin: 20px 0;
+        .form-item input  {
+          width: 100%;
+          height: 40px;
+          font-family: Lato, sans-serif;
+          font-size: .88rem;
+          color: #fff;
+          background-color: #484848 !important;
+          background-image: none !important;
+          border: none;
+          border-radius: 0;
+          padding: 0 40px 0 20px;
+          &:focus {
+            border: none;
+            box-shadow: none;
+          }
+        }
+        button {
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          transform: translate3d(0, -50%, 0);
+          background: none ;
+          border:none;
+          padding: 0px;
+          border-radius: 0px;
+          font-size: 0px;
+          &:before {
+            content: '';
+            width: 21px;
+            height: 21px;
+            display: block;
+            background: url(../img/Icon/lupa-buscar-mobile.png) no-repeat;
+            background-size: cover;
+          }
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    // */ ----| Despliege Hijos Menu nivel 2|---- */
+    .menu-container-data {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      top: 0px;
+      right: -100%;
+      z-index: 99;
+      background: white;
+      transition: .3s;
+      &.active {
+        display: block;
+      }
+      // Borde negro
+      .box-black {
+        width: 100%;
+        // height: 60px;
+        background: #1a1a1a;
+        p {
+          font-family: $latoregular;
+          font-weight: 700;
+          font-size: 1.05rem;
+          color: #fff;
+          padding: 20px 20px;
+          &:after {
+            content: '';
+            width: 16px;
+            height: 14px;
+            position: absolute;
+            right: 20px;
+            background: url(../img/flechas-menu-soy.png) no-repeat -21px 1px;
+            background-size: 36px 10px;
+            transform: rotate(-90deg);
+            margin: 0px;
+            margin-top: 3px;
+          }
+        }
+      }
+      .container-items {
+        ul {
+          margin: 40px 6%;
+          border-left: solid 1px #c8c8ca;
+          padding: 0 20px;
+          list-style: none;
+          li {
+            a {
+              display: inline-flex;
+              flex-wrap: wrap;
+              font-family: $latolight;
+              font-size: 1.08rem;
+              color: #1a1a1a;
+              line-height: 1.42857143;
+              text-decoration: none;
+              padding: 7px 20px 7px 0;
+              .caret {
+                border: none;
+              }
+            }
+            &.dropdown-submenu {
+              a {
+                .caret{
+                  width: 20px;
+                  height: 14px;
+                  background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+                  background-size: 36px;
+                  transform: rotate(-90deg);
+                  border: none;
+                  margin: 0px;
+                  margin-top: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+//------------------------------------------------------------------------------
+// Desktop
+//------------------------------------------------------------------------------
+*/
+
+@include respond-to(xl) {
+  header {
+    >.container,
+    >.container-fluid {
+      width: 100%;
+      height: 100% !important;
+      display: block;
+      position: fixed;
+      top: 0px;
+      border: none;
+      z-index: 99;
+      margin: 0 !important;
+      padding: 0px !important;
+      overflow: initial;
+    }
+    .navbar-header {
+      display: none;
+    }
+    .navbar-collapse,
+    .navbar-form {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      &.in {
+        display: block !important;
+        float: left;
+        width: 100%;
+        .tb-megamenu {
+          .nav-collapse.collapse {
+            display: block;
+            margin: 0;
+            &.in {
+              height: 100% !important;
+            }
+
+          }
+        }
+      }
+      &.in{
+        display: block !important;
+        float: left;
+        width: 100%;
+      }
+    }
+    // reset region
+    .region-navigation {
+      width: 100%;
+      z-index: 999;
+      @include respond-to(xl){
+        position: fixed;
+      }
+      .container {
+        padding: 0px;
+        position: initial;
+      }
+    }
+  }
+  // /* ----| Reset menu |----*/
+  .tb-megamenu {
+    background-color: transparent;
+     > .nav-collapse {
+        background-color: transparent;
+      .collapsing {
+        transition: none !important;
+        height: 100% !important;
+      }
+    }
+    ul.level-0 {
+      li.level-1 {
+        &.dropdown,
+        &.dropdown.active {
+          > .dropdown-toggle {
+            color: #696969;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            @include respond-to(xl) {
+              color: #484851;
+            }
+            &:hover,
+            &:focus {
+              background-color: transparent;
+            }
+            .caret {
+              border: none
+            }
+          }
+        }
+        &.dropdown.open > .dropdown-toggle {
+          background-color: transparent;
+          color: #696969;
+        }
+
+        // global anidacion de lista sud menu  leven 2, 3 ,4 5
+        .tb-megamenu-submenu {
+          // /* ul sudmenu  */
+          .tb-megamenu-subnav {
+            > li {
+              //flecla de sub menu
+              &.dropdown-submenu {
+                > a {
+                  .caret {
+                    width: 16px;
+                    height: 14px;
+                    display: inline-block;
+                    background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+                    background-size: 36px;
+                    transform: rotate(-90deg);
+                    border: none;
+                    margin: 0px;
+                    margin-top: 3px;
+                  }
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+              // color azul por default
+              > a {
+                color: #696969;
+                background: transparent;
+                border: none;
+                @include respond-to(xl) {
+                color: black;
+                }
+              }
+            }
+          }
+        }
+        // /* ----| Pocicion Ul nivel 1 primer interno, enlaces derecha,  imagen derecha |----*/
+        >.tb-megamenu-submenu {
+          @include respond-to(xl) {
+            width: 100% !important;
+            height: 340px;
+            position: fixed;
+            top: 37px;
+            left: 0;
+            background-color: #ffffff;
+            border: none;
+            padding-left: 0;
+            margin-left: 0 !important;
+            box-shadow: none;
+            overflow: hidden;
+            z-index: 99;
+          }
+          > .mega-dropdown-inner {
+            margin: 0 auto;
+            overflow: hidden;
+            height: 100%;
+            @include respond-to(m) {
+              width: 750px;
+            }
+            @include respond-to(xl) {
+                width: 970px;
+            }
+            @include respond-to(xxxl) {
+                width: 1170px;
+            }
+            > .tb-megamenu-row {
+              @include respond-to(xl) {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+              }
+              //  lista de items
+              > .content-nivel-1 {
+                width: 35%;
+                margin: 0px;
+                .mega-inner {
+                  padding: 0px;
+                }
+                ul.level-1 {
+                  @include respond-to(xl) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    margin: 15px 0 0 0;
+                    height: 310px;
+                    padding: 0;
+                    }
+                  li.level-2 {
+                    @include respond-to(xl) {
+                      padding-left: 15px;
+                      padding-bottom: 12px;
+                      width: 50%;
+                      border-left: 1px solid #c8c8ca;
+                    }
+                    a {
+                      display: initial;
+                      font-family: $latolight;
+                      @include font-size(s);
+                      color: #484851;
+                      line-height: 16.2px;
+                      font-weight: weight(normal);
+                      text-align: left;
+                      border: none;
+                      cursor: pointer;
+                      padding: 12px 0;
+                      margin: 0;
+                      &:hover {
+                        text-decoration:underline;
+                        color: #000;
+                      }
+                    }
+                    .tb-megamenu-submenu {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              // imagen de menu
+              > .content-img {
+                @include respond-to(xl) {
+                  width: 65%;
+                  margin: 0;
+                  margin-top: 15px;
+                  border: none;
+                  display: block;
+                  float: right;
+                  transition: .3s;
+                  &.active {
+                    transition: .3s;
+                  }
+                  a {
+                    margin: 0;
+                  }
+                }
+                .mega-inner {
+                  padding: 0px;
+                }
+                ul {
+                  padding: 0;
+                  margin: 0;
+                  border-left: none !important;
+                  li {
+                    padding: 0;
+                    margin: 0;
+                    a {
+                      @include respond-to(xl) {
+                      height: 300px;
+                      display: block;
+                        .container-menu-image,
+                        .image-menu,
+                        .img-responsive {
+                          height: 300px;
+                          object-fit: cover;
+                        }
+                      }
+                      .container-menu-image {
+                        position: relative;
+                        .menu-title {
+                          width: 98%;
+                          height: 96%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          position: absolute;
+                          top: 2%;
+                          left: 0;
+                          right: 0;
+                          font-family: $crimson-textregular;
+                          font-size: 23.94px;
+                          color: color(white);
+                          padding: 9PX 10PX;
+                          margin-left: auto;
+                          margin-right: auto;
+                          border: 1px solid white;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              // /* ----| cambio de tamaño de la imagen a desplegar la caja negra |----*/
+              >.content-img.active {
+                width: 47%;
+                @include respond-to(xxxl) {
+                  width: 55%;
+                }
+                // ul li a .img-responsive {
+                //   object-fit: cover;
+                // }
+              }
+              // /* ----| Segundo nivel caja de color negro |----*/
+              .menu-container-data {
+                display: none;
+                &.active {
+                  display: flex;
+                  width: 53%;
+                  @include respond-to(xxxl) {
+                    width: 45%;
+                  }
+                  .box-black {
+                    flex-basis: 40%;
+                    float: left;
+                    background-color: #1e1e1e;
+                    height: 340px;
+                    // Caja negra por fuera del containe
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      top: 0px;
+                      left: 0px;
+                      display: block;
+                      width: 28%;
+                      height: 100%;
+                      background:#1e1e1e;
+                      z-index: -1;
+                    }
+                    p {
+                      padding-top: 20px;
+                      color: #fff;
+                      font-family: Lato, sans-serif;
+                      font-size: .78rem;
+                      cursor: pointer;
+                      &:hover {
+                        opacity: .6;
+                      }
+                      &:before {
+                        content: '';
+                        width: 16px;
+                        height: 14px;
+                        display: inline-block;
+                        background: url(../img/flechas-menu-soy.png) no-repeat -21px 1px;
+                        background-size: 36px;
+                        transform: rotate(-90deg);
+                        border: none;
+                        margin: 0px;
+                        margin-top: 3px;
+                      }
+                    }
+                  }
+                  .container-items {
+                    flex-basis: 60%;
+                    float: left;
+                    margin: 0px !important;
+                    background: white;
+                    .mega-nav {
+                      margin: 20px 0 0 7%;
+                      padding: 0 0 0 20px;
+                      border-left: 1px solid #c8c8ca;
+                      -webkit-box-shadow: none;
+                      box-shadow: none;
+                      a {
+                        font-family: $latolight;
+                        @include font-size(s);
+                        color: #484851;
+                        line-height: 16.2px;
+                        font-weight: weight(normal);
+                        padding: 9px 0;
+                        &:hover {
+                          text-decoration:underline;
+                          color: #000;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        // /* ----| Posicion de imagen a la izquierda |----*/
+        .float-right.tb-megamenu-submenu {
+          .menu-container-data.active ~ div {
+            width: 55% !important;
+          }
+          .menu-container-data {
+            flex-direction: row-reverse;
+            .box-black  {
+              &:before {
+                left: inherit !important;
+                right: 0px;
+              }
+              p {
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // */ ----| ocultar los hijos |---- /*
+  .tb-megamenu-subnav {
+    .tb-megamenu-submenu  {
+      display: none !important;
+    }
+  }
+  .active-nivel-1,
+  .data-menu {
+    display: none !important;
+  }
+  // /* ----|  Menu Top Soy |----*/
+  .wrapper-menu-soy {
+      display: block;
+      background-color: #1a1a1a;
+      height: 37px;
+    .container {
+      // /* ----| volver institucional |---- */
+      #block-views-logos-header-block-2 {
+        display: none;
+        float: left;
+        list-style: none;
+        background:#353535;
+        @include respond-to(xl) {
+          display: block;
+        }
+        h2.block-title {
+          display: none;
+        }
+        a {
+          height: 37px;
+          color: color('white');
+          float: left;
+          transition: 0.3s;
+          padding: 8px 25px;
+          @include font-size(xs);
+          font-family: $latolight;
+          border-left: solid 1px #979797;
+          white-space: nowrap;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+      // /* ----| Menu soy enlaces |----  */
+      .block-tb-megamenu {
+        float: right;
+        .tb-megamenu-menu-menu-top-soy {
+          background-color: transparent;
+          .nav-collapse {
+            &.always-show {
+              // /* ---| Nivel 0 |--- */
+              ul.level-0 {
+                li.level-1:nth-child(1) {
+                  a {
+                    color:  #a9a9a9;
+                    cursor: inherit;
+                    &:hover{
+                      color:  #a9a9a9;
+                      transition: .3s;
+                    }
+                  }
+                }
+                li.level-1 {
+                  height: 37px;
+                  padding: 0 8px;
+                  > a {
+                    @include respond-to(xl){
+                      font-family: $latoregular;
+                      font-weight: 400;
+                      @include font-size(xs);
+                      color: #a9a9a9;
+                      padding: 0px;
+                      background: transparent;
+                      border-right: none;
+                      white-space: nowrap;
+                      transition: .3s;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      height: 100%;
+                      &:hover{
+                        color: color(white);
+                        transition: .3s;
+                      }
+                    }
+                  }
+                  // /* ---| Destacados |--- */
+                  &.menu-destacado {
+                    background: #353535;
+                    padding: 0px;
+                    + .menu-destacado {
+                      border-left: solid 1px #979797;
+                    }
+                    a {
+                      color: color('white');
+                      font-weight: weight(normal);
+                      font-family: $latoregular;
+                      @include font-size(ms);
+                      padding: 0px 13px;
+                    }
+                  }
+                  // /* ---| Nivel 1 |--- */
+                  &.dropdown {
+                    padding: 0px;
+                    > a {
+                      background-color: transparent;
+                      padding-left: 8px;
+                      padding-right: 8px;
+                      font-weight: weight(normal);
+                      font-family: $latoregular;
+                      color: color('gray-menu-soy');
+                      @include font-size(xs);
+                      border-left: solid 1px #979797;
+                      .caret {
+                        content: '';
+                        width: 22px;
+                        height: 8px;
+                        display: block;
+                        background: url(../img/flechas-menu-soy.png) no-repeat 7px;
+                        background-size: cover;
+                        margin: 0px;
+                        border: none;
+                        z-index: 9;
+                      }
+                      &.buttom-guia {
+                        cursor: pointer;
+                        &:hover {
+                          color: color('white');
+                        }
+                        &.active {
+                          background-color: color('white');
+                          color: color('black');
+                          &:hover {
+                            color: color('black');
+                          }
+                          .caret  {
+                            background: url(../img/flechas-menu-soy.png) no-repeat -14px;
+                            background-size: cover;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // /* ----| Cambio de idioma  |----  */
+      #block-lang-dropdown-language {
+        position: relative;
+        padding-right: 10px;
+        @include respond-to(xl){
+          display: block;
+          padding: 0px;
+          float: right;
+        }
+        .block-title {
+          display: none;
+        }
+        .form-type-select {
+          width: 80px;
+          display: inline-block;
+          position: relative;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+          margin: 0px;
+          select {
+            visibility: hidden;
+            padding-right: 10px;
+          }
+          .container-language {
+            font-family: $latoregular;
+            @include font-size(xs);
+            color: #a9a9a9;
+            text-transform: capitalize;
+            vertical-align: middle;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 8px 15px;
+            transition: all 0.2s ease-in;
+            &:after {
+              content: "";
+              width: 16px;
+              height: 14px;
+              background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+              background-size: 36px;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+            }
+          }
+          .select-options {
+            display: none;
+            position: absolute;
+            top: 45px;
+            right: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 15px 20px;
+            list-style: none;
+            background-color: black;
+            &.active {
+              display: block;
+            }
+            &:before {
+              content: '';
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 10px solid #000;
+              position: absolute;
+              top: -10px;
+              right: 10px;
+            }
+            li {
+              margin-bottom: 2px;
+              padding: 0 5px;
+              a {
+                font-family: $latoregular;
+                @include font-size(ms);
+                color: color('white');
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // /* ----|  Mega Menu Destock |----*/
+  .wrapper-mega-menu {
+    // /* ----| Logos |---- */
+    #block-views-logos-header-block {
+      display: block;
+      width: 25%;
+      float: left;
+      padding: 10px 20px;
+      //title
+      .block-title {
+        display: none;
+      }
+      .views-row {
+        width: 50%;
+        float: left;
+        &:nth-child(odd) {
+          padding-right: 10px;
+        }
+        &:nth-child(even) {
+          padding-left: 10px;
+          border-left: 1px solid black;
+          p {
+            padding-top: 5px;
+          }
+        }
+        p {
+          svg {
+            vertical-align: middle;
+            max-height: 50px;
+          }
+          svg text,
+          svg .cls-1 {
+            fill: black;
+          }
+        }
+      }
+    }
+    // /* ----| Lista Menu |---- */
+    #block-tb-megamenu-menu-mega-menu {
+      width: auto;
+      float: right;
+      .tb-megamenu-menu-mega-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         //ocultar boton de despliege en movil
+        .tb-megamenu-button {
+          display: none;
+        }
+        .always-show {
+        // /* ----| Nivel 0 item del menu |---- */
+          ul.level-0.nav {
+            display: flex;
+            li.level-1 {
+              width: 115px;
+              height: 74px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 5px;
+              margin: 0;
+             @include respond-to(xxxl) {
+                width: 136px;
+             }
+              &.open {
+                background-color: #1a1a1a;
+                border: none;
+                box-shadow: none;
+                @include respond-to(xl) {
+                  background-color: #FFFFFF;
+                }
+                > a.dropdown-toggle {
+                  @include respond-to(xl) {
+                    opacity: .6;
+                    transition: .3s;
+                  }
+                }
+              }
+              > a {
+                font-weight: weight(normal);
+                font-family: $latoregular;
+                @include font-size(xxs);
+                color: #484851;
+                background-color: transparent !important;
+                text-align: center;
+                border: none;
+                padding: 10px 0;
+                opacity: 1;
+                transition: .3s;
+                @include respond-to(xl) {
+                  @include font-size(ms);
+                }
+                &.text-hover {
+                  color: color('grey');
+                  opacity: 1 !important;
+                  transition: .3s;
+                }
+                &.dropdown-toggle{
+                  &::after{
+                    display: none;
+                  }
+                  &:hover{
+                    background: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // /* ----| Bloque buscar |---- */
+    .barra-buscar{
+      span {
+        width: 18px;
+        height: 23px;
+        display: block;
+        font-size: 0;
+        background: url(../img/Icon/icon-lupa.png) no-repeat center;
+        background-size: 18px;
+        background-position: 1px -17px;
+        z-index: 9;
+        cursor: pointer;
+      }
+      &.icon-close{
+        &span{
+          background: url(../img/Icon/icon-cerrar.png) no-repeat center;
+        }
+      }
+    }
+  }
+  // /* ----|  BuscarDestock |----*/
+  .wrapper-buscar-menu {
+    background: #fffefe;
+    height: 80px;
+    transition: .3s;
+    .block-title,
+    #google-cse-results,
+    label {
+      display: none;
+    }
+    #google-cse-results-searchbox-form {
+      position: relative;
+    }
+    .form-item input {
+      width: 100%;
+      height: 50px;
+      font-family: $latolight;
+      @include font-size(xxl);
+      color: #484851;
+      background: none !important;
+      background-image: none !important;
+      border: none !important;
+      border-radius: 0px;
+      padding: 5px 0 !important
+    ¿;
+      box-shadow: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate3d(0, -50%, 0);
+      background: none;
+      border:none;
+      box-shadow: none;
+      padding: 0px;
+      border-radius: 0px;
+      font-size: 0px;
+      &:before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        background: url(../img/Icon/icon-lupa-search.png) no-repeat;
+        background-size: cover;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent !important;
+        border: none;
+        box-shadow: none;
+        outline: none !important;
+      }
+    }
+  }
+
+  //position fixel
+  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu{
+    top: 110px;
+  }
+  .logged-in {
+    header > .container-fluid {
+      top: 28px;
+    }
+    header .container-fluid .navbar-header {
+      @include respond-to(xl) {
+        top: 88px;
+      }
+    }
+    .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
+      top: 65px;
+    }
+    .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
+      top: 139px;
+    }
+  }
+  body.dark-layer::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, .4);
+    z-index: 99;
+  }
+}

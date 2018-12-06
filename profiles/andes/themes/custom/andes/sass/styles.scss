@@ -34,6 +34,7 @@
 // and are not documented.
 //
 // Style guide: layouts
+@import 'Layouts/buscar_and_404';
 @import 'Layouts/eventos';
 @import	'Layouts/noticias';
 @import	'Layouts/publicaciones';
@@ -59,6 +60,7 @@
 //
 // Style guide: components
 @import 'Components/plaisholder';
+@import 'Components/breadcrumb';
 @import 'Components/sliders-homes';
 @import 'Components/interna_noticias';
 @import 'Components/componente-three-collumnas';
@@ -75,9 +77,8 @@
 @import 'Components/componente-flecha-hora-eventos';
 @import 'Components/componente-redes-sociales';
 @import 'Components/componente-catalogo';
-@import 'Components/menuMain';
 @import 'Components/componente-galeria';
-@import 'Components/componente-para-cajas-negras';
+@import 'Components/componente-caja-listado';
 @import 'Components/view-componente-enlaces-item';
 @import 'Components/view-calendario';
 @import 'Components/componente-anuncios';
@@ -98,6 +99,7 @@
 // Style guide: components
 
 @import 'deca/enlaces-rapidos';
+@import 'deca/eventos/home-eventos';
 
 // Navigation
 //
@@ -109,6 +111,7 @@
 // Style guide: navigation
 @import 'Navegation/enlaces_de_interes';
 @import 'Navegation/footer';
+@import 'Navegation/menuMain';
 
 // Forms
 //

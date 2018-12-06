@@ -30,7 +30,7 @@ options.theme = {
 // Set the URL used to access the Drupal website under development. This will
 // allow Browser Sync to serve the website and update CSS changes on the fly.
 //options.drupalURL = 'http://andes.dev.local/';
- options.drupalURL = 'andes.dev.local';
+ options.drupalURL = 'http://andes.dev.local/';
 
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {
@@ -84,7 +84,7 @@ var gulp      = require('gulp'),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass        = require('gulp-sass'),
-  kss         = require('kss'),
+  // kss         = require('kss'),
   plumber     = require('gulp-plumber'),
   notify      = require('gulp-notify'),
   eslint      = require('gulp-eslint');

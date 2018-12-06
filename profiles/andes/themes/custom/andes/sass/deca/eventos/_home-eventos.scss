@@ -1,0 +1,359 @@
+/*
+//------------------------------------------------------------------------------
+// Home eventos portal informativo
+//------------------------------------------------------------------------------
+*/
+
+
+.view-eventos-con-filtros-expuestos {
+  //title
+  .view-header {
+    background-color: #E6E7E8;
+    padding-top: 38px;
+    @include respond-to(m) {
+      padding-top: 50px;
+    }
+    .title {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin: 0 auto;
+
+      @include respond-to(m) {
+          width: 750px;
+      }
+      @include respond-to(xl) {
+          width: 970px;
+      }
+      @include respond-to(xxxl) {
+          width: 1170px;
+      }
+      h4 {
+        text-align: center;
+        font-family: $latobold;
+        @include font-size(xl);
+        color: #58595B;
+        margin: 0px;
+        padding: 0 15px 20px;
+        @include respond-to(m) {
+          text-align: left;
+        }
+      }
+    }
+  }
+  //filtro
+  .view-filters {
+    background-color: #E6E7E8;
+    padding-bottom: 38px;
+    @include respond-to(m) {
+      padding-bottom: 50px;
+    }
+    .views-exposed-widgets {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin: 0 auto;
+      @include respond-to(m) {
+          width: 750px;
+      }
+      @include respond-to(xl) {
+          width: 970px;
+      }
+      @include respond-to(xxxl) {
+          width: 1170px;
+      }
+      //selec de filtro
+      #edit-field-categoria-eventos-tid-wrapper {
+        padding: 5px 15px;
+        width: 100%;
+        @include respond-to(m) {
+          width: 45%;
+        }
+        select {
+          width: 100%;
+          height: 34px;
+          border: 1px solid #808184;
+          border-radius: 0;
+          box-shadow: none;
+          appearance: none;
+          padding: 0 12px;
+        }
+      }
+      //fecha filtro
+      #edit-field-fecha-eventos-value-wrapper {
+        padding: 29px 15px 0;
+        width: 100%;
+        @include respond-to(m) {
+          padding: 5px 15px;
+          width: 45%;
+        }
+        .form-item {
+          width: 100%;
+          .date-padding {
+            width: 100%;
+            input {
+              width: 100%;
+              height: 34px;
+              border: 1px solid #808184;
+              border-radius: 0;
+              box-shadow: none;
+              appearance: none;
+              background: url(../img/Icon/calendar.svg)no-repeat;
+              background-size: 22px;
+              background-color: white;
+              background-position: 98% 5px;
+            }
+          }
+        }
+      }
+      //button
+      .views-submit-button {
+        padding-top: 19px;
+        width: 100%;
+        text-align: center;
+        @include respond-to(m) {
+          padding: 0;
+          width: auto;
+          text-align: left;
+        }
+        .btn-info {
+          width: 39px;
+          height: 39px;
+          display: inline-block;
+          font-size: 0px;
+          // margin: 12px 10px!important;
+          padding: 0px;
+          background: url(../img/Icon/buscar.svg)no-repeat;
+          background-size: 22px;
+          background-position: 7px 7px;
+
+          border-radius: 50%;
+          background-color: #000;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+  // /* ------| cards actividades |----- */
+  > .view-content {
+    overflow: hidden;
+    margin: 0 auto;
+    @include respond-to(m) {
+        width: 750px;
+    }
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+    .views-row {
+      //Img
+      .views-column {
+        margin-bottom: 15px;
+        //imagen
+        .views-field-view {
+          img {
+            width: 100%;
+          }
+          .youtube-container--responsive {
+            width: 100%;
+            padding-bottom: 62.25%;
+          }
+        }
+        //texto
+        .box-content  {
+          position: relative;
+          // background: #f4f1f1;
+          @include respond-to(xs) {
+            min-height: 326px;
+          }
+          //img-icons
+          .views-field-php {
+            width: 61px;
+            height: 61px;
+            position: absolute;
+            top: -39px;
+            left: 7px;
+            p {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              svg {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+          //title
+          .views-field-title {
+            font-family: $latoblack;
+            @include font-size(xl);
+            color: #58595B;
+            padding-top: 25px;
+            margin-left: 30%;
+            margin-right: 10px;
+            padding-bottom: 16px;
+            line-height: 1;
+          }
+          .content-date {
+            margin-left: 30%;
+            .views-field  {
+              display: flex;
+              > span {
+                font-family: $latoregular;
+                @include font-size(s);
+                color: #333;
+                padding-right: 5px;
+              }
+              .field-content {
+                font-family: $latoregular;
+                @include font-size(s);
+              }
+            }
+          }
+          //buttons
+          .views-field-view-node {
+            padding: 14px 0px;
+            @include respond-to(xs) {
+              padding: 0px;
+            }
+            a {
+              display: block;
+              max-width: 180px;
+              font-family: $latoregular;
+              @include font-size(m);
+              color: #484851;
+              text-decoration: none;
+              text-align: center;
+              border: 1px solid #404041;
+              padding: 5px 40px;
+              margin: 0 auto;
+              @include respond-to(xs) {
+                position: absolute;
+                bottom: 25px;
+                right: 0;
+                left: 0;
+              }
+              &:hover {
+                background-color: #404041;
+                color: #ffffff;
+              }
+              @include respond-to(m) {
+                right: 25px;
+                left: inherit;
+                max-width: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 555px) and (max-width: 767px) {
+    .views-column {
+      width: 50%;
+      float: left;
+    }
+  }
+  .pager-load-more {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    @include respond-to(m) {
+        width: 750px;
+    }
+    @include respond-to(xl) {
+        width: 970px;
+    }
+    @include respond-to(xxxl) {
+        width: 1170px;
+    }
+
+    .pager-next {
+      a {
+        display: inline-block;
+        font-family: $latoregular;
+        @include font-size(m);
+        color: #484851;
+        text-decoration: none;
+        border: 1px solid color('orange');
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 0px;
+        z-index: 1;
+        &:hover {
+          color: color('white');
+          background-color: color('orange')
+        }
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          width: 100%;
+          height: 1px;
+          border-top: 1px solid color('orange');
+          z-index: -1;
+        }
+        .ajax-progress{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* ------| Mini calendar |----- */
+div#ui-datepicker-div {
+  border: 1px solid #666;
+  background: white;
+  border-radius: 0px;
+  .ui-datepicker-header {
+    border: 1px solid transparent;
+    background: white;
+    .ui-icon-circle-triangle-w {
+      background: url(../img/Icon/arrow_prev.svg) no-repeat;
+      background-size: contain;
+    }
+    .ui-icon-circle-triangle-e {
+      background: url(../img/Icon/arrow_next.svg) no-repeat;
+      background-size: contain;
+    }
+    .ui-datepicker-month,
+    .ui-datepicker-year {
+      -moz-appearance: inherit;
+      -webkit-appearance: inherit;
+      appearance: inherit;
+      border: 1px solid transparent;
+      background: white;
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  table{
+    th {
+      font-weight: normal;
+      font-size: 13px;
+    }
+    td {
+      a {
+        border: 1px solid transparent;
+        background: white;
+        color: #000;
+        text-align: center;
+        &.ui-state-highlight  {
+          border: 1px solid #4C48A8;
+          background: #4C48A8;
+          color: white;
+        }
+      }
+    }
+  }
+}
+

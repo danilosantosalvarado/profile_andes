@@ -22,17 +22,35 @@ function views_slideshow_swiper_help($path, $arg) {
 function views_slideshow_swiper_theme($existing, $type, $theme, $path) {
   return array(
     'views_slideshow_swiper' => array(
-      'variables' => array('view' => NULL, 'settings' => array(), 'rows' => array(), 'title' => ''),
+      'variables' => array(
+        'view' => NULL,
+        'settings' => array(),
+        'rows' => array(),
+        'title' => ''
+      ),
       'template' => 'theme/views-slideshow-swiper',
       'file' => 'theme/views_slideshow_swiper.theme.inc',
       'pattern' => 'views_slideshow_swiper__',
     ),
     'views_slideshow_swiper_main_frame' => array(
-      'variables' => array('vss_id' => NULL, 'view' => NULL, 'settings' => NULL, 'rows' => NULL),
+      'variables' => array(
+        'vss_id' => NULL,
+        'view' => NULL,
+        'prevEl' => NULL,
+        'nextEl' => NULL,
+        'paginationEl' => NULL,
+        'settings' => NULL,
+        'rows' => NULL
+       ),
       'template' => 'theme/views-slideshow-swiper-main-frame',
     ),
     'views_slideshow_swiper_main_frame_row' => array(
-      'variables' => array('vss_id' => NULL, 'items' => NULL, 'count' => NULL, 'view' => NULL),
+      'variables' => array(
+        'vss_id' => NULL,
+        'items' => NULL,
+        'count' => NULL,
+        'view' => NULL
+      ),
       'template' => 'theme/views-slideshow-swiper-main-frame-row',
     ),
     'views_slideshow_swiper_main_frame_row_item' => array(
