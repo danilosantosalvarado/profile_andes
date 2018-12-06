@@ -5771,10 +5771,17 @@ h1.page-header {
   display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
-  padding: 30px 0;
+  padding: 30px 40px 0 40px;
+  border-bottom: 1px solid #dee2e6;
   /* width */
   /* Cuadro */
   /* scroll */
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_acordeon .quicktabs-tabs.quicktabs-style-nostyle {
+    overflow: hidden;
+  }
 }
 
 .view-id-componente_acordeon .quicktabs-tabs.quicktabs-style-nostyle::-webkit-scrollbar {
@@ -5790,6 +5797,14 @@ h1.page-header {
   background: #888;
 }
 
+.view-id-componente_acordeon .quicktabs-tabs.quicktabs-style-nostyle .active a {
+  color: #555;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid transparent;
+}
+
 .view-id-componente_acordeon .quicktabs-tabs.quicktabs-style-nostyle a {
   color: #bbb;
   text-align: center;
@@ -5797,10 +5812,14 @@ h1.page-header {
   border-radius: 0;
   border: 1px solid transparent;
   border-top: 2px solid transparent;
+  white-space: normal;
   cursor: pointer;
   padding: 0;
   padding: 15px;
   margin: 0;
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.3em;
 }
 
 .view-id-componente_acordeon .quicktabs-tabs.quicktabs-style-nostyle a:hover {
@@ -5818,6 +5837,34 @@ h1.page-header {
 .view-id-componente_acordeon .quicktabs_main.quicktabs-style-nostyle p {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
+}
+
+.view-id-componente_acordeon .quicktabs-style-nostyle {
+  position: relative;
+}
+
+.view-id-componente_acordeon .quicktabs-style-nostyle .prev-pagination {
+  position: absolute;
+  background: url(../img/Icon/arrow_prev.svg) no-repeat center;
+  background-color: #ffffff;
+  width: 35px;
+  height: 70px;
+  color: transparent;
+  top: 32px;
+  left: -4px;
+  z-index: 3;
+}
+
+.view-id-componente_acordeon .quicktabs-style-nostyle .next-pagination {
+  position: absolute;
+  background: url(../img/Icon/arrow_next.svg) no-repeat center;
+  background-color: #ffffff;
+  width: 35px;
+  height: 70px;
+  color: transparent;
+  top: 32px;
+  right: -4px;
+  z-index: 3;
 }
 
 /*
