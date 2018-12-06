@@ -4805,10 +4805,8 @@ h1.page-header {
   left: 0;
   right: 0;
   text-align: center;
-  overflow-y: hidden;
   white-space: nowrap;
-  overflow-x: visible;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow: hidden;
   /* Buttons */
 }
 

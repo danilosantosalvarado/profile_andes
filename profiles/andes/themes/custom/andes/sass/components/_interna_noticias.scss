@@ -15,10 +15,11 @@
 			right: 0;
 			// padding-bottom: 32px;
 			text-align: center;
-			overflow-y: hidden;
+			// overflow-y: hidden;
 			white-space: nowrap;
-			overflow-x: visible;
-			-ms-overflow-style: -ms-autohiding-scrollbar;
+			// overflow-x: visible;
+			overflow: hidden;
+			// -ms-overflow-style: -ms-autohiding-scrollbar;
 			// scrollbar-face-color: #000000;
 			// scrollbar-shadow-color: #2D2C4D;
 			// scrollbar-highlight-color:#7D7E94;

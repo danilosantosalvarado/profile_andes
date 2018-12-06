@@ -94,7 +94,7 @@
 		if (margen != null) {
 			margen = margen['left']-jQuery(".content-desktop").width();
 		}
-			
+
 			jQuery(".content-desktop").css("margin-left", margen);
 	}
 
@@ -169,14 +169,14 @@
 							jQuery(".content-desktop").css("margin-left", margen);
 						}
 					}
-		}			
+		}
 	}
 
 	function socialScrollMobile(){
 		var validation = $('body').find('.social-mobile');
 
 		if (validation.length > 0){
-			
+
 			$(panelId).css("background-color","red");
 
 
@@ -203,7 +203,7 @@
 
 			}
 
-		}		
+		}
 	}
 	// //fin funcion redes sociales vertical scroll interna de eventos.
 
@@ -216,7 +216,7 @@
 
 	// $(window).ready(function() {
 	// 	//funcion cambio de colores anuncios.
-		
+
 
 	// 	// funcion que acomoda div .slider-homes-bottom
 
@@ -365,7 +365,7 @@
 			});
 		}
 
-		
+
 	/**
 	 * [listEvents description]
 	 * @type {[type]}
@@ -554,14 +554,45 @@
 			$(el).css({'background-image': 'url(' + srcImg + ')'});
 		});
 	}
-	
+
 	// menu expandible de equipo que desactiva el scroll del body
 	$(document).ready(function(){
-	
+
 		$('#btn-list-equipo').click(function(){
 			$('body').toggleClass('scroll-off');
 		});
 	});
-
+	setTimeout(function(){if($('.quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
+	function quickTabsSlide(){
+		var $parent = $('.quicktabs-wrapper').parents('.view');
+		var $containerQuick = $parent.find('.quicktabs-wrapper').prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
+		var $element = $containerQuick.find('ul');
+		var $containerEl = $element.width();
+		var $items = $element.find('li').length;
+		var $itemsWidth = $element.find('li').outerWidth(true);
+		var $numberOnclick = $items - parseInt($containerEl/$itemsWidth);
+		var $counterData = 0;
+		$containerQuick.find('.next-pagination').on('click',function(e){
+			e.preventDefault();
+			if($counterData >= 0 && $counterData < $numberOnclick){
+				$counterData++;
+				$element.animate({scrollLeft: $counterData*$items}, 800);
+				console.log("next");
+			}
+			if($counterData >= $numberOnclick){
+			$counterData--;
+			}
+			console.log($counterData);
+		});
+		$containerQuick.find('.prev-pagination').on('click',function(e){
+		e.preventDefault();
+			if($counterData > 0 && $counterData < $numberOnclick){
+				$counterData--;
+				$element.animate({scrollLeft: $counterData*$itemsWidth}, 800);
+				console.log("prev");
+			}
+			console.log($counterData);
+		});
+	}
 
 }(jQuery));
