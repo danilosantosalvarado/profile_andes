@@ -3,6 +3,9 @@
 // Equipos
 //------------------------------------------------------------------------------
 */
+.scroll-off{
+  overflow: hidden;
+}
 
 .lista-tags-equipo{
   margin-bottom: 30px;
@@ -42,7 +45,7 @@
       overflow-y: auto;
       display: block;
       padding: 0;
-      height: 61vh;
+      height: calc(100vh - 170px);
     }
     // width
     &::-webkit-scrollbar {
@@ -288,9 +291,11 @@
     }
   }
 }
-.pane-contenido-equipo-de-trabajo{
-  @media screen and (max-width: 990px){
-    padding-top: 60px;
+.view-contenido-equipo-de-trabajo{
+  .views-responsive-grid-horizontal{
+    @media screen and (max-width: 990px){
+      padding-top: 60px;
+    }
   }
 }
 .panels-ipe-portlet-content, .view-contenido-equipo-de-trabajo{

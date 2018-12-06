@@ -8790,6 +8790,10 @@ h1.page-header {
 // Equipos
 //------------------------------------------------------------------------------
 */
+.scroll-off {
+  overflow: hidden;
+}
+
 .lista-tags-equipo {
   margin-bottom: 30px;
 }
@@ -8801,7 +8805,7 @@ h1.page-header {
     position: fixed;
     z-index: 2;
     right: 0;
-    margin-top: 15px;
+    margin-top: 39px;
   }
   .lista-tags-equipo ul {
     width: 100%;
@@ -8832,8 +8836,10 @@ h1.page-header {
 @media screen and (max-width: 990px) {
   .view-componente-equipo-trabajo ul {
     overflow-x: hidden;
+    overflow-y: auto;
     display: block;
     padding: 0;
+    height: calc(100vh - 170px);
   }
 }
 
@@ -8901,6 +8907,10 @@ h1.page-header {
   border-bottom: 3px solid #359ED0;
 }
 
+.view-componente-equipo-trabajo ul .views-row-last {
+  margin-bottom: 30px;
+}
+
 /* ------| Equipos  |----- */
 .view-contenido-equipo-de-trabajo > .view-content {
   margin: 0px 0px 25px;
@@ -8939,7 +8949,6 @@ h1.page-header {
 
 .equipos-de-trabajo .content-equipo .caption {
   width: 100%;
-  height: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -8955,6 +8964,7 @@ h1.page-header {
           align-items: center;
   padding: 10px;
   z-index: -2;
+  height: 22vw;
 }
 
 @media (min-width: 992px) {
@@ -8965,6 +8975,7 @@ h1.page-header {
     padding: 10px 25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.6);
+    height: 100%;
   }
 }
 
@@ -9003,7 +9014,7 @@ h1.page-header {
 }
 
 /* ------| Paguinadores |----- */
-.text-center {
+.view-contenido-equipo-de-trabajo .text-center {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -9011,30 +9022,30 @@ h1.page-header {
 }
 
 @media (min-width: 768px) {
-  .text-center {
+  .view-contenido-equipo-de-trabajo .text-center {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .text-center {
+  .view-contenido-equipo-de-trabajo .text-center {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .text-center {
+  .view-contenido-equipo-de-trabajo .text-center {
     width: 1170px;
   }
 }
 
-.text-center ul.pagination {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination {
   background: #fff;
   border-radius: 0;
   padding: 10px;
 }
 
-.text-center ul.pagination::before {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination::before {
   content: '';
   display: block;
   position: absolute;
@@ -9047,7 +9058,7 @@ h1.page-header {
   z-index: -1;
 }
 
-.text-center ul.pagination li {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li {
   color: #484851;
   border: 1px solid #fff;
   border-radius: 0;
@@ -9057,7 +9068,7 @@ h1.page-header {
   margin: 0 5px;
 }
 
-.text-center ul.pagination li a {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li a {
   color: #484851;
   border: 1px solid #fff;
   font-family: Lato,sans-serif;
@@ -9065,35 +9076,47 @@ h1.page-header {
   background-color: #fff;
 }
 
-.text-center ul.pagination li a .ajax-progress {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li a .ajax-progress {
   display: none;
 }
 
-.text-center ul.pagination li.active {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li.active {
   border-color: #ff8827;
 }
 
-.text-center ul.pagination li.active span {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li.active span {
   background-color: transparent;
   border-radius: initial;
   color: #000;
   border: initial;
 }
 
-.text-center ul.pagination li.next, .text-center ul.pagination li.prev, .text-center ul.pagination li.pager-last, .text-center ul.pagination li.pager-first {
+.view-contenido-equipo-de-trabajo .text-center ul.pagination li.next, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.prev, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-last, .view-contenido-equipo-de-trabajo .text-center ul.pagination li.pager-first {
   display: none;
 }
 
 /* -----titulo mobile------ */
+.view-contenido-equipo-de-trabajo {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .view-contenido-equipo-de-trabajo {
+    width: 1170px;
+  }
+}
+
 @media screen and (max-width: 990px) {
-  .pane-componente-equipo-trabajo {
+  .pane-componente-equipo-trabajo, .view-contenido-equipo-de-trabajo > .view-header {
     position: fixed;
     z-index: 2;
     width: 100%;
     background-color: #a7a8aa;
     padding: 15px;
   }
-  .pane-componente-equipo-trabajo h2 {
+  .pane-componente-equipo-trabajo h2, .view-contenido-equipo-de-trabajo > .view-header h2 {
     margin: 0;
     text-align: left;
     float: left;
@@ -9101,10 +9124,10 @@ h1.page-header {
     font-size: 0.9375rem;
     font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   }
-  .pane-componente-equipo-trabajo .pane-content {
+  .pane-componente-equipo-trabajo .pane-content, .pane-componente-equipo-trabajo .view-header, .view-contenido-equipo-de-trabajo > .view-header .pane-content, .view-contenido-equipo-de-trabajo > .view-header .view-header {
     float: right;
   }
-  .pane-componente-equipo-trabajo .pane-content button {
+  .pane-componente-equipo-trabajo .pane-content button, .pane-componente-equipo-trabajo .view-header button, .view-contenido-equipo-de-trabajo > .view-header .pane-content button, .view-contenido-equipo-de-trabajo > .view-header .view-header button {
     width: 20px;
     height: 22px;
     background-image: url(../img/Icon/menu-quipo-mobil.png);
@@ -9117,13 +9140,13 @@ h1.page-header {
 }
 
 @media screen and (max-width: 990px) {
-  .pane-contenido-equipo-de-trabajo {
-    padding-top: 50px;
+  .view-contenido-equipo-de-trabajo .views-responsive-grid-horizontal {
+    padding-top: 60px;
   }
 }
 
 @media (min-width: 992px) {
-  .panels-ipe-portlet-content .pane-content button {
+  .panels-ipe-portlet-content .pane-content button, .panels-ipe-portlet-content .view-componente-equipo-trabajo button, .view-contenido-equipo-de-trabajo .pane-content button, .view-contenido-equipo-de-trabajo .view-componente-equipo-trabajo button {
     display: none;
   }
 }
@@ -12252,6 +12275,7 @@ header {
   }
   .wrapper-mega-menu #block-views-logos-header-block .views-row p svg {
     vertical-align: middle;
+    max-height: 50px;
   }
   .wrapper-mega-menu #block-views-logos-header-block .views-row p svg text,
   .wrapper-mega-menu #block-views-logos-header-block .views-row p svg .cls-1 {

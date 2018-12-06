@@ -554,7 +554,14 @@
 			$(el).css({'background-image': 'url(' + srcImg + ')'});
 		});
 	}
+	
+	// menu expandible de equipo que desactiva el scroll del body
+	$(document).ready(function(){
+	
+		$('#btn-list-equipo').click(function(){
+			$('body').toggleClass('scroll-off');
+		});
+	});
+
 
 }(jQuery));
-
-
