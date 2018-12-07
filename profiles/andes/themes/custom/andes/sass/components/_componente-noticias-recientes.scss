@@ -186,6 +186,9 @@
 					.views-field{
 						.view-content{
 							max-width: 416px;
+							max-height: 86px;
+							min-height: inherit;
+							height: 6vw;
 							margin: 0 auto;
 						}
 					}
@@ -250,7 +253,8 @@
 					background: #e34d1f;
 				}
 			}
-			bottom: 17px;
+			bottom: -13px;
+			margin-bottom: 25px;
 			@include respond-to(xl){
 				bottom: 0;
 				display: none;
@@ -264,9 +268,17 @@
 			max-width: inherit;
 		}
 		.view-content{
-			max-height: 248px;
 			height: 47vw;
 			background-color: color('black');
+			@include respond-to(xxs){
+				height: 45vw;
+			}
+			@include respond-to(xs){
+				height: 38vw;
+			}
+			@include respond-to(s){
+				height: 33vw;
+			}
 			@include respond-to(m){
 				min-height: 195px;
 				height: auto;

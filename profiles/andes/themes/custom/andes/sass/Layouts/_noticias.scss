@@ -30,7 +30,7 @@
 		display: block;
 	}
 	margin: 0 auto;
-	padding: 15px;
+	padding: 0;
 	position: relative;
 	ul {
 		-webkit-padding-start: 0px;
@@ -239,8 +239,8 @@
 	.views-field-title {
 		margin: 20px 0 10px;
 		span {
-			font-family: $crimson-textbold;
-			@include type-layout(ll, 1.16);
+			font-family: $crimson-semibold;
+			@include type-layout(xl, 1.16);
 			margin-bottom: 14px;
 			font-weight: 400;
 		}

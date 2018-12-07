@@ -112,7 +112,7 @@
         $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
 
         /*  add buscador */
-        if (!$('.mega-menu-2').hasClass('barra-buscar')) {
+        if (!$('.block-tb-megamenu.mega-menu-2').hasClass('barra-buscar')) {
           $('.wrapper-mega-menu .nav-collapse').parent().append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
           $('.wrapper-buscar-menu').hide();
           $(".barra-buscar").click(function () {
