@@ -477,13 +477,13 @@ function andes_install_tasks($install_state) {
   $flag = TRUE;
   $tasks = array();
 
-  $tasks['install_beans'] = array(
+ /* $tasks['install_beans'] = array(
     'display_name' => st('Importacion de Bloques'),
     'display' => TRUE,
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_beans',
-  );
+  ); */
 
   $tasks['install_tax'] = array(
     'display_name' => st('Importacion de Taxonomias'),
@@ -509,13 +509,13 @@ function andes_install_tasks($install_state) {
   //   'function' => '_install_mods',
   // );
 
-  $tasks['install_views'] = array(
+/*  $tasks['install_views'] = array(
     'display_name' => st('Importacion de vistas'),
     'display' => TRUE,
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_views',
-  );
+  ); */
 
   return $tasks;
 }
@@ -623,7 +623,7 @@ function _install_style_image(){
 }
 
 function _install_style_image_batch(){
-  module_enable(array('estilos'), TRUE);
+  module_enable(array('estilos_de_imagen'), TRUE);
 }
 
 
