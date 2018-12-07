@@ -26,6 +26,7 @@
 						}
 						.youtube-container--responsive {
 							padding-bottom: 62.25%;
+							background-color: color('black');
 						}
 					}
 					.box-content {
@@ -229,6 +230,10 @@
 			top: 50%;
 			border: 1px solid #777;
 			background-size: 40px 40px;
+			display: none;
+			@include respond-to(xl){
+				display: block;
+			}
 			&:focus{
 				outline: none;
 			}

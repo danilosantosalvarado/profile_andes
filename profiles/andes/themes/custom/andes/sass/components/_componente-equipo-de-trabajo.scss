@@ -298,7 +298,8 @@
     }
   }
 }
-.panels-ipe-portlet-content, .view-contenido-equipo-de-trabajo{
+
+.view-contenido-equipo-de-trabajo{
   .pane-content, .view-componente-equipo-trabajo{
     button{
       @include respond-to(xl){

@@ -7,6 +7,7 @@
 .pane-componente-carrusel-multimedia{
 	width: 100%;
 	padding: 0;
+	margin-bottom: 100px;
 	.pane-title{
 		padding: 0 15px;
 	}
@@ -173,25 +174,31 @@
 	margin: -20px 15px 3px;
 	opacity: 1;
 	.tooltip-arrow{
-		margin-left: -25px;
-		border-left: 25px solid transparent;
-		border-right: 25px solid transparent;
-		border-bottom: 25px solid color('grey-light');
+		margin-left: -20px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid color('grey-light');
+		top: 6px;
 	}
 	.tooltip-inner{
-		max-width: 400px;
+		max-width: 300px;
 		margin: 20px auto;
 		width: 70%;
 		padding: 15px 10px 10px;
-		text-align: justify;
+		text-align: left;
 		background-color: color('grey-light');
 		font-family: $crimson-textroman;
-		font-size: 18px;
-		border-radius: 0;
+		font-size: 16px;
+		border-radius: 2px;;
 		min-width: 100px;
 		color: #000000;
-		p {
+		&:first-line {
 			color: #FDBD2C;
+			font-family: $latobold;
+			font-size: 18px;
+		}
+		&:first-letter{
+			text-transform: uppercase;
 		}
 		@include respond-to(xl){
 			margin: 20px auto;

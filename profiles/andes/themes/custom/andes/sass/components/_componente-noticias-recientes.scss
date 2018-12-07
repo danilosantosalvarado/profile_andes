@@ -163,14 +163,20 @@
 				margin-bottom: 29px;
 				.swiper-slide{
 					
-					.views-field-title{
+					.views-field-title,
+					.multimedia-titulo{
 						width: 60%;
 						margin-left: 40%;
+						spam, a{
+							color: color('grey-dark');
+							font-family: $crimson-semibold;
+						}
 						.field-content{
 							display: grid;
 						}
 					}
-					.views-field-body{
+					.views-field-body,
+					.multimedia-body{
 						width: 60%;
 						margin-left: 40%;
 						.field-content{
@@ -256,6 +262,27 @@
     	margin: 0 auto;
 		@include respond-to(xl){
 			max-width: inherit;
+		}
+		.view-content{
+			max-height: 248px;
+			height: 47vw;
+			background-color: color('black');
+			@include respond-to(m){
+				min-height: 195px;
+				height: auto;
+			}
+			@include respond-to(xl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxxl){
+				min-height: 147px;
+				height: auto;
+			}
 		}
 	}
 }
