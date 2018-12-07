@@ -191,6 +191,7 @@
 // bg-404
 //------------------------------------------------------------------------------
 */
+
 body.panel-404 {
   #panel-bootstrap-row-main {
     background: url(../img/bg-404.png) center no-repeat;
@@ -274,5 +275,22 @@ body.panel-404 {
     #google-cse-results {
       display: none;
     }
+  }
+}
+
+/*
+//------------------------------------------------------------------------------
+// Login
+//------------------------------------------------------------------------------
+*/
+// .not-logged-in {
+//   ul.tabs--primary.nav.nav-tabs {
+//     display: none;
+//   }
+// }
+#user-login {
+  padding: 4%;
+  @include respond-to(m) {
+    max-width: 50%;
   }
 }
