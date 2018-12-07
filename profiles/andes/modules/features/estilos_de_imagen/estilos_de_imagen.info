@@ -1,0 +1,17 @@
+name = Estilos de imagen
+description = Estilos de imagen usados por el perfil Andes
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = page_manager
+features[features_api][] = api:2
+features[image][] = anuncios__639_x_182_
+features[image][] = componentes__430x255_
+features[image][] = componer_noticias_
+features[image][] = detacado_hori_noticia
+features[image][] = equipo_de_trabajo__195x195_
+features[image][] = layout_2__542x310_
+features[image][] = publicaciones_des__343x500_
+features[image][] = ranking-home__275x275_
