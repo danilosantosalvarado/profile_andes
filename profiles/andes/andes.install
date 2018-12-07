@@ -320,7 +320,7 @@ function andes_install() {
   // Update the menu router information.
   menu_rebuild();
 
-    // // Create Menu (Mega-Menu)
+    // Create Menu (Mega-Menu)
   $menu_mega = array(
     'menu_name' => 'menu-mega-menu',
     'title' => 'Mega Menu',
@@ -336,29 +336,13 @@ function andes_install() {
 
   menu_save($menu_top_soy);
 
-  // Create Menu (Menu Principal)
-  $menu_main = array(
-    'menu_name' => 'menu-enlaces-de-interes',
+  // Create Menu (Enlaces de interes)
+  $menu_enlace = array(
+    'menu_name' => 'enlaces-de-interes',
     'title' => 'Enlaces de interes',
-    'description' => 'Enlaces de interes');
+    'description' => 'Menu enlaces de interes');
 
-  menu_save($menu_main);
-
-    // Create Menu (Menu management)
-  $menu_main = array(
-    'menu_name' => 'menu-management',
-    'title' => 'Management',
-    'description' => 'Menu management');
-
-  menu_save($menu_main);
-
-      // Create Menu (Menu navigation)
-  $menu_main = array(
-    'menu_name' => 'menu-navigation',
-    'title' => 'Navigation',
-    'description' => 'Menu navigation');
-
-  menu_save($menu_main);
+  menu_save($menu_enlace);
 
 
   // Enable the admin theme.
@@ -401,20 +385,12 @@ function andes_install() {
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("menu-top-soy").
+   // // Import Menu ("menu-top-soy").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-menu-top-soy-export.txt', 'menu-top-soy',$options);
     menu_import_save_menu($menu, $options);
 
-   // Import Menu ("menu-navigation").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-navigation-export.txt', 'menu-navigation',$options);
-    menu_import_save_menu($menu, $options);
-
    // Import Menu ("menu-enlaces-de-interes").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'menu-enlaces-de-interes',$options);
-    menu_import_save_menu($menu, $options);
-
-   // Import Menu ("menu-management").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-management-export.txt', 'menu-management',$options);
+    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'enlaces-de-interes',$options);
     menu_import_save_menu($menu, $options);
 
 
