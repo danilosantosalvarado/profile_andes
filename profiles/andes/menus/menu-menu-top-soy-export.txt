@@ -1,30 +1,59 @@
-Aspirante {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"weight":"-49"}
-Estudiante {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"weight":"-48"}
-Egresado {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"weight":"-47"}
-Profesor {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"weight":"-46"}
-Empleado {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"weight":"-45"}
-Guía de servicios {"url":"<front>","options":{"attributes":{"title":""}},"weight":"-44"}
--Visión {"url":"<front>","weight":"-49"}
---Misión {"url":"<front>","weight":"-43"}
---Equipo {"url":"<front>","weight":"-48"}
---Brochure DECA Pregrado {"url":"<front>","weight":"-47"}
---Brochure DECA Posgrados {"url":"<front>","weight":"-46"}
---Labores Ocasionales {"url":"<front>","weight":"-45"}
---Monitorias {"url":"<front>","weight":"-44"}
---Información personalizada {"url":"<front>","weight":"-50"}
---Reglamento del programa {"url":"<front>","weight":"-49"}
--Estudiantes {"url":"<front>","weight":"-40"}
---wru {"url":"http:\/\/www.example.com\/","description":"Description of wru.","weight":"0"}
---uukogeu {"url":"<front>","description":"Description of uukogeu.","weight":"1"}
---dacru {"url":"http:\/\/www.example.com\/","description":"Description of dacru.","weight":"2"}
--Materias introductorias {"url":"<front>","weight":"-48"}
---Objetivos por áreas {"url":"<front>","weight":"-47"}
---Terminos y condiciones {"url":"<front>","description":"Description of brecluuocr.","weight":"-48"}
---CEU {"url":"<front>","weight":"-46"}
---Más información {"url":"<front>","weight":"-49"}
---Envíanos tus datos {"url":"<front>","weight":"-50"}
--Programas académicos {"url":"<front>","weight":"-50"}
-Soy : {"url":"<front>","weight":"-50"}
-MiBanner {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
-Correo {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
-Educación Continuada {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
+Aspirante {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"es","options":{"attributes":{"class":["clone-select"]},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+Estudiante {"url":"http:\/\/uniandes.edu.co\/es\/soy\/estudiante","expanded":true,"lang":"es","options":{"attributes":{"class":["clone-select"]},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+Egresado {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"es","options":{"attributes":{"class":["clone-select"]},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+Profesor {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"es","options":{"attributes":{"class":["clone-select"]},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+Empleado {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"es","options":{"attributes":{"class":["clone-select"]},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+Guía de servicios {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+-Visión {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Misión {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+--Equipo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Brochure DECA Pregrado {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Brochure DECA Posgrados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Labores Ocasionales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--Monitorias {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Información personalizada {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+--Reglamento del programa {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+-Estudiantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--wru {"url":"http:\/\/www.example.com\/","description":"Description of wru.","lang":"und","weight":"-49"}
+--uukogeu {"url":"<front>","description":"Description of uukogeu.","lang":"und","weight":"-48"}
+--dacru {"url":"http:\/\/www.example.com\/","description":"Description of dacru.","lang":"und","weight":"-47"}
+-Materias introductorias {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Objetivos por áreas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Terminos y condiciones {"url":"<front>","description":"Description of brecluuocr.","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--CEU {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Más información {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Envíanos tus datos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+-Programas académicos {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+-image rigth {"url":"<front>","description":"image","lang":"es","options":{"content":{"image":313},"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+Soy : {"url":"<nolink>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+MiBanner {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-33"}
+Correo {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-35"}
+Educación Continuada {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-34"}
+I am: {"url":"<nolink>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-43"}
+Aspirant {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-42"}
+Student {"url":"http:\/\/uniandes.edu.co\/es\/soy\/estudiante","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-41"}
+Graduated {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-40"}
+Teacher {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-39"}
+Employee {"url":"http:\/\/uniandes.edu.co\/es\/soy\/aspirante","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-38"}
+Service Guide {"url":"<nolink>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-37"}
+-Academic Programs {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+-Vision {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+--Customized Information {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+--Programme Regulation {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+--Team {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+--Undergraduate DECA Brochure {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Postgraduate DECA Brochure {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Casual Works {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--Monitorings {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Mission {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+-Image right {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""},"content":{"image":1046}},"weight":"-50"}
+-Introductory Classes {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Send us your data {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--More Information {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Terms and Conditions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Objectives by areas {"url":"<front>","hidden":true,"expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--CEU {"url":"<front>","hidden":true,"expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-46"}
+-Students {"url":"<front>","hidden":true,"expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+Mail {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-31"}
+Continuing Education {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-32"}
+MyBanner {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-30"}

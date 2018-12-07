@@ -1,9 +1,0 @@
-Soy : {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
-Aspirante {"url":"<front>","options":{"attributes":{"title":""}},"weight":"1"}
-Estudiante {"url":"<front>","options":{"attributes":{"title":""}},"weight":"2"}
-Egresado {"url":"<front>","options":{"attributes":{"title":""}},"weight":"3"}
-Profesor {"url":"<front>","options":{"attributes":{"title":""}},"weight":"4"}
-Empleado {"url":"<front>","options":{"attributes":{"title":""}},"weight":"5"}
-Visitante {"url":"<front>","options":{"attributes":{"title":""}},"weight":"6"}
-Guía de servicios  {"url":"<front>","options":{"attributes":{"title":""}},"weight":"7"}
-MiBanner {"url":"http:\/\/sass-lang.com\/documentation\/file.SASS_REFERENCE.html#expanded","options":{"attributes":{"title":""}},"weight":"8"}

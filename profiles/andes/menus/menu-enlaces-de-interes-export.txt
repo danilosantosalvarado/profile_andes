@@ -1,20 +1,39 @@
-Normatividad Institucional {"url":"<front>","expanded":true,"weight":"1"}
--Actos internos e incremento {"url":"<front>","weight":"0"}
--Bienestar {"url":"<front>","weight":"1"}
--Derechos pecunarios {"url":"<front>","weight":"2"}
--Estatuto Docente {"url":"<front>","weight":"3"}
--Estatuto general {"url":"<front>","weight":"4"}
--Ley de transparencia {"url":"<front>","weight":"5"}
--Porcentaje de incremento {"url":"<front>","weight":"6"}
--Reglamentos de estudiantes {"url":"<front>","weight":"7"}
--Uso de datos Personales {"url":"<front>","weight":"8"}
-Enlaces Rápidos {"url":"<front>","expanded":true,"weight":"2"}
--Centro de español {"url":"<front>","weight":"0"}
--Conecta-TE {"url":"<front>","weight":"1"}
--Convivencia y transparencia {"url":"<front>","weight":"2"}
--Emergencias: Extensión 0000 {"url":"<front>","weight":"3"}
--Eventos destacados {"url":"<front>","weight":"4"}
--Mapa del Sitio {"url":"<front>","weight":"5"}
--Multimedia {"url":"<front>","weight":"6"}
--Noticias {"url":"<front>","weight":"7"}
--Preguntas frecuentes {"url":"<front>","weight":"8"}
+Normatividad Institucional {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+-Actos internos e incremento {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Bienestar {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+-Derechos pecunarios {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-Estatuto Docente {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+-Estatuto general {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-Ley de transparencia {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+-Porcentaje de incremento {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+-Reglamentos de estudiantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+-Uso de datos Personales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+Enlaces Rápidos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Centro de español {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Conecta-TE {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+-Convivencia y transparencia {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-Emergencias: Extensión 0000 {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+-Eventos destacados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-Mapa del Sitio {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+-Multimedia {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+-Noticias {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+-Preguntas frecuentes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+Institutional Regulations {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Internal acts and increase {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Wellness {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Pecuniary rights {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-General Statute {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Transparence law {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Increase percentage {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Student regulations {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Use of Personal Data {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+Quick Links {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Spanish center {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+-Conecta-TE {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+-Coexistence and transparency {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+-Emergencies: Extension 0000 {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Featured events {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+-Site Map {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+-Multimedia {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-news {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+-Frequent questions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}

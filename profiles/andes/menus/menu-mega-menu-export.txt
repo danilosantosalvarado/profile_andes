@@ -1,177 +1,374 @@
-DIVERSIDAD {"url":"<front>","expanded":true,"options":{"attributes":{"title":""},"content":[]},"weight":"-50"}
--CENTRO DE APOYO A LA DIVERSIDAD Y LA EQUIDAD (CADE) {"url":"<front>","expanded":true,"weight":"0"}
---Curso Herramientas para la vida universitaria {"url":"<front>","expanded":true,"weight":"-50"}
---Seguimiento a estudiantes {"url":"<front>","expanded":true,"weight":"-49"}
---Gestión y participación estudiantil {"url":"<front>","expanded":true,"weight":"-48"}
----Formación Práctica Social {"url":"<front>","expanded":true,"weight":"-50"}
----Curso de gestión {"url":"<front>","expanded":true,"weight":"-49"}
----Círculos de participación {"url":"<front>","expanded":true,"weight":"-48"}
----ANDAR {"url":"<front>","expanded":true,"weight":"-47"}
----Sociedad Ser Pilo Paga {"url":"<front>","expanded":true,"weight":"-46"}
-DEPORTES {"url":"<front>","expanded":true,"weight":"-49"}
--CURSOS {"url":"<front>","expanded":true,"weight":"-50"}
---Profesores {"url":"<front>","weight":"0"}
---Reglamento {"url":"<front>","weight":"0"}
--CLASES ABIERTAS {"url":"<front>","weight":"-49"}
---Profesores {"url":"<front>","weight":"-49"}
---Reglamento {"url":"<front>","weight":"-48"}
--SELECCIONES {"url":"<front>","weight":"-48"}
---Profesores {"url":"<front>","weight":"-50"}
---Selección Natación {"url":"<front>","weight":"-49"}
---Selección Baloncesto Femenino {"url":"<front>","weight":"-48"}
---Selección Baloncesto Masculino {"url":"<front>","weight":"-47"}
---Selección Fútbol Femenino {"url":"<front>","weight":"-46"}
---Selección Rugby Femenino {"url":"<front>","weight":"-45"}
---Selección Voleibol Femenino {"url":"<front>","weight":"-44"}
---Selección Voleibol Masculino {"url":"<front>","weight":"-43"}
---Selección de Squash {"url":"<front>","weight":"-41"}
---Selección Tenis de Campo {"url":"<front>","weight":"-40"}
---Selección Tenis de Mesa {"url":"<front>","weight":"-39"}
---Selección de Karate {"url":"<front>","weight":"-38"}
---Selección Frisbee Ultimate {"url":"<front>","weight":"-37"}
---Selección Rugby Masculino {"url":"<front>","weight":"-42"}
---Selección Ajedrez {"url":"<front>","weight":"-36"}
---Selección Taekwondo WTF {"url":"<front>","weight":"-35"}
---Selección Voleibol Arena Masculino {"url":"<front>","weight":"-34"}
---Selección Voleibol Arena Femenino {"url":"<front>","weight":"-33"}
---Selección Atletismo {"url":"<front>","weight":"0"}
--TORNEOS INTERNOS {"url":"<front>","weight":"-47"}
---Ranking Ajedrez {"url":"<front>","weight":"-50"}
---Ranking Tenis de Campo {"url":"<front>","weight":"-49"}
---Ranking Billar {"url":"<front>","weight":"-48"}
---Ranking Tenis de Mesa {"url":"<front>","weight":"-47"}
---Ranking Squash {"url":"<front>","weight":"-46"}
---Reglamento {"url":"<front>","weight":"-45"}
--RECREACIÓN {"url":"<front>","weight":"-46"}
---Catálogo {"url":"<front>","weight":"-50"}
---Ranking Ajedrez {"url":"<front>","weight":"-49"}
---Ranking Tenis de Campo {"url":"<front>","weight":"-48"}
---Ranking Billar {"url":"<front>","weight":"-47"}
---Ranking Tenis de Mesa {"url":"<front>","weight":"-46"}
---Ranking Squash {"url":"<front>","weight":"-45"}
---Ranking Golf {"url":"<front>","weight":"-44"}
---Reglamento {"url":"<front>","weight":"-43"}
-EMPLEABILIDAD - CTP {"url":"<front>","expanded":true,"weight":"-48"}
--ESTUDIANTES {"url":"<front>","weight":"-50"}
---Práctica Académica {"url":"<front>","weight":"-50"}
----Estudiantes aspirantes a práctica {"url":"<front>","weight":"0"}
-----¿Qué es la práctica académica? {"url":"<front>","weight":"-50"}
-----Requisitos para realizar una práctica {"url":"<front>","weight":"-49"}
-----¿Cómo hacer una práctica? {"url":"<front>","weight":"-48"}
-----Ofertas de Práctica académica {"url":"<front>","weight":"-47"}
-----Materias de práctica {"url":"<front>","weight":"-46"}
-----Formas de vinculación {"url":"<front>","weight":"-45"}
-----Artículos y testimonios {"url":"<front>","weight":"-44"}
-----Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-43"}
-----Enlaces externos {"url":"<front>","weight":"-42"}
----Practicantes {"url":"<front>","weight":"0"}
-----Esquema de seguimiento a practicantes {"url":"<front>","weight":"-50"}
-----Documentos exclusivos para practicantes {"url":"<front>","weight":"-49"}
---Gerencia de carrera {"url":"<front>","weight":"-48"}
----Talleres y charlas {"url":"<front>","weight":"-50"}
----Solución de preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
----Espacios Personalizados {"url":"<front>","weight":"-47"}
----Artículos de actualidad {"url":"<front>","weight":"-46"}
----Guías y formatos {"url":"<front>","weight":"-49"}
---Oportunidades laborales {"url":"<front>","weight":"-47"}
----Ofertas laborales {"url":"<front>","weight":"-48"}
----Estudie trabajando {"url":"<front>","weight":"-49"}
---Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-46"}
----Recomendaciones para participar {"url":"<front>","weight":"-50"}
----Cronograma {"url":"<front>","weight":"-49"}
----Artículos relacionados {"url":"<front>","weight":"-48"}
----Preguntas frecuentes {"url":"<front>","weight":"-47"}
--EGRESADOS {"url":"<front>","weight":"-49"}
---Gerencia de carrera {"url":"<front>","weight":"-50"}
----Talleres y Charlas {"url":"<front>","weight":"-50"}
----Guías y formatos {"url":"<front>","weight":"-49"}
----Solución de preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
----Espacios personalizados {"url":"<front>","weight":"-47"}
----Artículos de actualidad {"url":"<front>","weight":"-46"}
---Oportunidades laborales {"url":"<front>","weight":"-49"}
----Ofertas Laborales {"url":"<front>","weight":"0"}
-----Recomendaciones ofertas transnacionales {"url":"<front>","weight":"0"}
---Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-48"}
----Recomendaciones para participar {"url":"<front>","weight":"-50"}
----Cronograma {"url":"<front>","weight":"-49"}
----Artículos relacionados {"url":"<front>","weight":"-48"}
----Preguntas frecuentes {"url":"<front>","weight":"-47"}
--EMPRESAS {"url":"<front>","weight":"0"}
---Practica académica {"url":"<front>","weight":"-49"}
----Qué es la práctica académica {"url":"<front>","weight":"-50"}
----Cómo publicar una oferta de práctica {"url":"<front>","weight":"-49"}
----Formas de vinculación {"url":"<front>","weight":"-48"}
----Seguimiento practicantes {"url":"<front>","weight":"-47"}
----Artículos y testimonios {"url":"<front>","weight":"-46"}
----Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-45"}
---Oportunidades laborales {"url":"<front>","weight":"-48"}
----Ofertas laborales {"url":"<front>","weight":"-50"}
-----Recomendación ofertas transnacionales {"url":"<front>","weight":"0"}
----Estudie trabajando {"url":"<front>","weight":"-49"}
---Ferias laborales y presentaciones corporativas {"url":"<front>","weight":"-47"}
----Requisitos para participar en el evento {"url":"<front>","weight":"-50"}
----Artículos relacionados {"url":"<front>","weight":"-49"}
----Preguntas frecuentes (FAQ) {"url":"<front>","weight":"-48"}
-CULTURA {"url":"<front>","expanded":true,"weight":"-47"}
--EVENTOS {"url":"<front>","weight":"-50"}
---Conciertos {"url":"<front>","weight":"-50"}
----Colombia Suena {"url":"<front>","weight":"-50"}
----Serie de pianistas {"url":"<front>","weight":"-49"}
----Grupos Institucionales {"url":"<front>","weight":"-48"}
----Orquestas de la Ciudad {"url":"<front>","weight":"-47"}
----Encuentro de Estudiantes de Música {"url":"<front>","weight":"-46"}
----Música Clásica y Antigua {"url":"<front>","weight":"-45"}
----Música experimental: Sonósferas {"url":"<front>","weight":"-44"}
----Martes en vivo {"url":"<front>","weight":"-43"}
----Conciertos Sala de Música Ernesto Martin {"url":"<front>","weight":"-42"}
---Festivales {"url":"<front>","weight":"-49"}
----Festival de Músicas del Mundo {"url":"<front>","weight":"-50"}
----Festival de Jazz {"url":"<front>","weight":"-49"}
----Festival de Bandas {"url":"<front>","weight":"-47"}
----Festival Universitario de Danza Contemporánea {"url":"<front>","weight":"-46"}
---Exposiciones {"url":"<front>","weight":"-48"}
---Arte y Cultura Audiovisual {"url":"<front>","weight":"-47"}
---Artes Escénicas {"url":"<front>","weight":"-46"}
----Teatro {"url":"<front>","weight":"-50"}
----Lecturas dramáticas {"url":"<front>","weight":"-48"}
---Cine {"url":"<front>","weight":"-45"}
----Cine Colombiano {"url":"<front>","weight":"-49"}
----Cine Independiente {"url":"<front>","weight":"-48"}
----Bogoshorts bajo la luna {"url":"<front>","weight":"-47"}
---Cultura Digital {"url":"<front>","weight":"-44"}
---Revista Skene {"url":"<front>","weight":"-43"}
--image {"url":"<front>","options":{"attributes":{"title":""},"content":{"image":181}},"weight":"-49"}
-APOYO {"url":"<front>","expanded":true,"weight":"-46"}
--DECALAB {"url":"<front>","weight":"-50"}
---Guías y formatos {"url":"<front>","weight":"-50"}
---Seminario {"url":"<front>","weight":"-49"}
---Investigación {"url":"<front>","weight":"-48"}
---Biblioteca {"url":"<front>","weight":"-47"}
--APOYOS INDIVIDUALES {"url":"<front>","weight":"-49"}
---Apoyo Académico {"url":"<front>","weight":"-50"}
----Orión (estudiantes en prueba académica) {"url":"<front>","weight":"0"}
---Apoyo Psicológico {"url":"<front>","weight":"-47"}
---Apoyo en casos disciplinarios {"url":"<front>","weight":"-46"}
---Apoyo Orientación Vocacional {"url":"<front>","weight":"-49"}
--TALLERES {"url":"<front>","weight":"-48"}
--TALLERES OBLIGATORIOS {"url":"<front>","weight":"-47"}
---Talleres obligatorios de reingreso académico {"url":"<front>","weight":"-50"}
---Talleres obligatorios de reingreso Disciplinario {"url":"<front>","weight":"-49"}
--Tomando el control {"url":"<front>","weight":"-42"}
--Materias introductorias {"url":"<front>","weight":"-50"}
--Programas académicos {"url":"<front>","weight":"-49"}
--Información personalizada {"url":"<front>","weight":"-48"}
--Preguntas frecuentes {"url":"<front>","weight":"-47"}
--Reglamento del programa {"url":"<front>","weight":"-46"}
--Más información {"url":"<front>","weight":"-45"}
--Envíanos tus datos {"url":"<front>","weight":"-44"}
--Inscripciones aquí {"url":"<front>","weight":"-43"}
-Layouts {"url":"<front>","options":{"attributes":{"title":""}},"weight":"0"}
--layout 1 {"url":"layout-uno\/layout-1","options":{"attributes":{"title":""}},"node_uuid":"f9d377d7-a029-4cfa-9671-f06c2aae41b5","weight":"-50"}
--layout 2 {"url":"content\/layout-2","options":{"attributes":{"title":""}},"node_uuid":"b32361dc-89af-4c2c-9576-1ec07d5e85e4","weight":"-49"}
--layout 3 {"url":"layout-tres\/layout-3","options":{"attributes":{"title":""}},"node_uuid":"ba9c84b6-d90d-430e-9a07-d7923ccdfe17","weight":"-48"}
--layout 4 {"url":"content\/layout-4","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"ad41cf54-9b5f-429d-a077-a5a445609343","weight":"-47"}
--layout 5 {"url":"layout-cinco\/layout-5","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"7966d685-dc1f-43b9-9497-683d5208cf9c","weight":"-46"}
--layout 7 {"url":"content\/layout-7","hidden":true,"options":{"attributes":{"title":""}},"node_uuid":"849d8dd1-346b-4415-9307-1ab9e295cbaa","weight":"-45"}
--layout 9 {"url":"layout-nueve\/layout-9","options":{"attributes":{"title":""}},"node_uuid":"6357c4cf-4981-4b4a-b6c0-f1a8b709b324","weight":"-44"}
--layout 11 {"url":"layout-once\/layout-11","options":{"attributes":{"title":""}},"node_uuid":"e686ad53-c72c-4c6a-8ac9-2dd05a695896","weight":"-43"}
+DIVERSIDAD {"url":"<nolink>","expanded":true,"lang":"es","options":{"content":[],"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-CENTRO DE APOYO A LA DIVERSIDAD Y LA EQUIDAD (CADE) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Curso Herramientas para la vida universitaria {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Seguimiento a estudiantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Gestión y participación estudiantil {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Formación Práctica Social {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Curso de gestión {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Círculos de participación {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+---ANDAR {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+---Sociedad Ser Pilo Paga {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-45"}
+-cambio de titulo {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":262},"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+DEPORTES {"url":"<nolink>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-46"}
+-CURSOS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Profesores {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Reglamento {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-CLASES ABIERTAS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Profesores {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Reglamento {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+-SELECCIONES {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+--Profesores {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+--Selección Natación {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Selección Baloncesto Femenino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Selección Baloncesto Masculino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Selección Fútbol Femenino {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-46"}
+--Selección Rugby Femenino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Selección Voleibol Femenino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--Selección Voleibol Masculino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Selección de Squash {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+--Selección Tenis de Campo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-40"}
+--Selección Tenis de Mesa {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-39"}
+--Selección de Karate {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-38"}
+--Selección Frisbee Ultimate {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-37"}
+--Selección Rugby Masculino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+--Selección Ajedrez {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-36"}
+--Selección Taekwondo WTF {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-35"}
+--Selección Voleibol Arena Masculino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-34"}
+--Selección Voleibol Arena Femenino {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-33"}
+--Selección Atletismo {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+-TORNEOS INTERNOS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Ranking Ajedrez {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Ranking Tenis de Campo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Ranking Billar {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Ranking Tenis de Mesa {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Ranking Squash {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Reglamento {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-RECREACIÓN {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Catálogo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Ranking Ajedrez {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Ranking Tenis de Campo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Ranking Billar {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Ranking Tenis de Mesa {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Ranking Squash {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--Ranking Golf {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Reglamento {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-42"}
+-imagen {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":263},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+EMPLEABILIDAD - CTP {"url":"<nolink>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-45"}
+-ESTUDIANTES {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+--Práctica Académica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Estudiantes aspirantes a práctica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----¿Qué es la práctica académica? {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+----Requisitos para realizar una práctica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+----¿Cómo hacer una práctica? {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+----Ofertas de Práctica académica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+----Materias de práctica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+----Formas de vinculación {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+----Artículos y testimonios {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+----Preguntas frecuentes (FAQ) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+----Enlaces externos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+---Practicantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Esquema de seguimiento a practicantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+----Documentos exclusivos para practicantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Gerencia de carrera {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Talleres y charlas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Solución de preguntas frecuentes (FAQ) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Espacios Personalizados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+---Artículos de actualidad {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+---Guías y formatos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Oportunidades laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Ofertas laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Estudie trabajando {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+---Recomendaciones para participar {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Cronograma {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Artículos relacionados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Preguntas frecuentes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+-EGRESADOS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Gerencia de carrera {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Talleres y Charlas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Guías y formatos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Solución de preguntas frecuentes (FAQ) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Espacios personalizados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Artículos de actualidad {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Oportunidades laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Ofertas Laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+----Recomendaciones ofertas transnacionales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Recomendaciones para participar {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Cronograma {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Artículos relacionados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Preguntas frecuentes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-EMPRESAS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Practica académica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Qué es la práctica académica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Cómo publicar una oferta de práctica {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Formas de vinculación {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Seguimiento practicantes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Artículos y testimonios {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+---Preguntas frecuentes (FAQ) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Oportunidades laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Ofertas laborales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+----Recomendación ofertas transnacionales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Estudie trabajando {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Ferias laborales y presentaciones corporativas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Requisitos para participar en el evento {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Artículos relacionados {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Preguntas frecuentes (FAQ) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-iamgen {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":264},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+CULTURA {"url":"<nolink>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-44"}
+-EVENTOS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Conciertos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Colombia Suena {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Serie de pianistas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Grupos Institucionales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Orquestas de la Ciudad {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+---Encuentro de Estudiantes de Música {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-45"}
+---Música Clásica y Antigua {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+---Música experimental: Sonósferas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+---Martes en vivo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+---Conciertos Sala de Música Ernesto Martin {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+--Festivales {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Festival de Músicas del Mundo {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Festival de Jazz {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+---Festival de Bandas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---Festival Universitario de Danza Contemporánea {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Exposiciones {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+--Arte y Cultura Audiovisual {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-46"}
+--Artes Escénicas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+---Teatro {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Lecturas dramáticas {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Cine {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-44"}
+---Cine Colombiano {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+---Cine Independiente {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Bogoshorts bajo la luna {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+--Cultura Digital {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Revista Skene {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+-image {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":406},"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+APOYO {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+-DECALAB {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+--Guías y formatos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Seminario {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Investigación {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Biblioteca {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-APOYOS INDIVIDUALES {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Apoyo Académico {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+---Orión (estudiantes en prueba académica) {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Apoyo Psicológico {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Apoyo en casos disciplinarios {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Apoyo Orientación Vocacional {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-TALLERES {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+-TALLERES OBLIGATORIOS {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+--Talleres obligatorios de reingreso académico {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Talleres obligatorios de reingreso Disciplinario {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Tomando el control {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-37"}
+-Materias introductorias Materias introductorias Materias introductorias Materias introductorias  {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Programas académicos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+-Información personalizada {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-Preguntas frecuentes {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+-Reglamento del programa {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+-Más información {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-40"}
+-Envíanos tus datos {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-39"}
+-Inscripciones aquí {"url":"<front>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-38"}
+-imagen {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":265},"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-36"}
+LAYOUTS {"url":"<front>","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-42"}
+-Layout 1 {"url":"layout-uno\/espa\u00f1ol","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"f9d377d7-a029-4cfa-9671-f06c2aae41b5","weight":"-50"}
+-Layout 2 {"url":"layout-dos\/layout-2","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"b32361dc-89af-4c2c-9576-1ec07d5e85e4","weight":"-49"}
+-Layout 3 {"url":"layout-tres\/layout-3","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"ba9c84b6-d90d-430e-9a07-d7923ccdfe17","weight":"-48"}
+-Layout 4 {"url":"layout-cuatro\/layout-4","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"ad41cf54-9b5f-429d-a077-a5a445609343","weight":"-47"}
+-Layout 5 {"url":"layout-cinco\/layout-5","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"7966d685-dc1f-43b9-9497-683d5208cf9c","weight":"-46"}
+-Layout 7 {"url":"layout-siete\/layout-7","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"849d8dd1-346b-4415-9307-1ab9e295cbaa","weight":"-45"}
+-Layout 9 {"url":"layout-nueve\/layout-9","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"6357c4cf-4981-4b4a-b6c0-f1a8b709b324","weight":"-43"}
+-Layout 11 {"url":"layout-once\/layout-11","expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"node_uuid":"e686ad53-c72c-4c6a-8ac9-2dd05a695896","weight":"-42"}
+-imagen {"url":"<front>","expanded":true,"lang":"es","options":{"content":{"image":266},"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-41"}
+Calendario {"url":"<nolink>","hidden":true,"expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+LISTADOS {"url":"<nolink>","hidden":true,"expanded":true,"lang":"es","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+-Noticias {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-Multimedia {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+-Eventos {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+-Especiales {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+-Publicaciones {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+-No link nivel 2 {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--No link nivel 3 {"url":"<nolink>","expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+Preguntas frecuentes {"url":"<nolink>","hidden":true,"expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+Redes sociales {"url":"<nolink>","hidden":true,"expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-40"}
+Decantura {"url":"<nolink>","hidden":true,"expanded":true,"lang":"es","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+DIVERSITY {"url":"<nolink>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-38"}
+-CENTER OF SUPPORT FOR DIVERSITY AND EQUITY (CADE) {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Course Tools for university life {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Tracking students {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-49"}
+--Student management and participation {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-48"}
+---Management course {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+---WALK {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+---Society Ser Pilo Paga {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+-change of title {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""},"content":{"image":1047}},"weight":"-49"}
+SPORTS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-37"}
+-COURSES {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Teachers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Regulation {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+-OPEN CLASSES {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Teachers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Regulation {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+-SELECTIONS {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-47"}
+--Teachers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-42"}
+--Swimming Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-44"}
+--Women's Basketball Team {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-41"}
+--Men's Basketball Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-48"}
+--Women's Soccer Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-39"}
+--Women's Rugby Team {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-40"}
+--Women's Volleyball Team {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-38"}
+--Men's Volleyball Team {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-47"}
+--Male Rugby Team {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-49"}
+--Squash selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-45"}
+--Field Tennis Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-50"}
+--Table tennis selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-43"}
+--Selection of Karate {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-46"}
+--Frisbee Ultimate Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-37"}
+--Chess selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Taekwondo Selection WTF {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Men's Volleyball Arena Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Women's Volleyball Arena Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Athletics Selection {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-INTERNAL TOURNAMENTS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Chess Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Field Tennis Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Billiards Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Table Tennis Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Squash Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Regulation {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-RECREATION {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Catalogue {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Chess Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Field Tennis Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Billiards Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Table Tennis Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Squash Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Golf Ranking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-image {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"content":{"image":1045},"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+LISTINGS {"url":"<nolink>","hidden":true,"expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"-39"}
+EMPLOYABILITY - CTP {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-36"}
+-STUDENTS {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Academic Practice {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Students aspiring to practice {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----What is academic practice? {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Requirements for a practice {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----How to do a practice? {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Academic Practice Offers {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Practice matters {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Ways of linking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Articles and testimonies {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Frequently asked questions (FAQ) {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----external links {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Practitioners {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Tracking scheme for practitioners {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Exclusive documents for practitioners {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Career Management {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Workshops and talks {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Guides and formats {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequently asked questions solution (FAQ) {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Custom Spaces {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Current articles {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Job opportunities {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Study working {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Job offers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Labor fairs and corporate presentations {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Recommendations to participate {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Schedule {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Related Posts {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequent questions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-GRADUATED {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Career Management {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Workshops and Talks {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Guides and formats {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequently asked questions solution (FAQ) {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Custom spaces {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Current articles {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Job opportunities {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Labor Offers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Recommendations transnational offers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Labor fairs and corporate presentations {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Recommendations to participate {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Schedule {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Related Posts {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequent questions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-BUSINESS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Academic practice {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---What is academic practice {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---How to post a practice offer {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Ways of linking {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Tracking practitioners {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Articles and testimonies {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequently asked questions (FAQ) {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Job opportunities {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Job offers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+----Recommendation transnational offers {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Study working {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Labor fairs and corporate presentations {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Requirements to participate in the event {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Related Posts {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Frequently asked questions (FAQ) {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-iamgen {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"content":{"image":1051},"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+CULTURE {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-35"}
+-EVENTS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Concerts {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Colombia Sounds {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Series of pianists {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Institutional Groups {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Orchestras of the City {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Meeting of Music Students {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Classical and Ancient Music {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Experimental music: Sonósferas {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Tuesday live {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Concerts Music Room Ernesto Martin {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Festivals {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---World Music Festival {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Jazz Festival {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Festival of Bands {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---University Festival of Contemporary Dance {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Exhibitions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Art and Audiovisual Culture {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Performing Arts {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Theater {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Dramatic readings {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Movie theater {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Colombian Cinema {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Indie movies {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Bogoshorts under the moon {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Digital Culture {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Skene Magazine {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-image {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"content":{"image":1050},"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+SUPPORT FOR {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-34"}
+-DECALAB {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Guides and formats {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Seminar {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Investigation {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--library {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Introductory matters {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-INDIVIDUAL SUPPORTS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Academic Support {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Orión (students in academic test) {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Vocational Guidance Support {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Psychological Support {"url":"<front>","lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Support in disciplinary cases {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Custom information {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Frequent questions {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--COMPULSORY WORKSHOPS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Mandatory academic re-entry workshops {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+---Required Disciplinary Reentry Workshops {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Program regulation {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--More information {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Send us your data {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Registration here {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+--Taking control {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-Academic programs {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-WORKSHOPS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"0"}
+-imagen {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"item_attributes":{"id":"","class":"","style":""},"content":{"image":1055}},"weight":"0"}
+LAYOUTS {"url":"<front>","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"weight":"-33"}
+-layout 1 {"url":"layout-uno\/espa\u00f1ol","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"f9d377d7-a029-4cfa-9671-f06c2aae41b5","weight":"-50"}
+-layout 2 {"url":"layout-dos\/layout-2","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"b32361dc-89af-4c2c-9576-1ec07d5e85e4","weight":"-49"}
+-layout 3 {"url":"layout-tres\/layout-3","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"ba9c84b6-d90d-430e-9a07-d7923ccdfe17","weight":"-48"}
+-layout 4 {"url":"layout-cuatro\/layout-4","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"ad41cf54-9b5f-429d-a077-a5a445609343","weight":"-47"}
+-layout 5 {"url":"layout-cinco\/layout-5","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"7966d685-dc1f-43b9-9497-683d5208cf9c","weight":"-46"}
+-layout 7 {"url":"layout-siete\/layout-7","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"849d8dd1-346b-4415-9307-1ab9e295cbaa","weight":"-45"}
+-layout 9 {"url":"layout-nueve\/layout-9","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"6357c4cf-4981-4b4a-b6c0-f1a8b709b324","weight":"-44"}
+-layout 11 {"url":"layout-once\/layout-11","expanded":true,"lang":"en","options":{"item_attributes":{"id":"","class":"","style":""},"alter":true},"node_uuid":"e686ad53-c72c-4c6a-8ac9-2dd05a695896","weight":"-43"}
+-image {"url":"<front>","expanded":true,"lang":"en","options":{"alter":true,"content":{"image":1053},"item_attributes":{"id":"","class":"","style":""}},"weight":"-42"}

@@ -1,0 +1,634 @@
+Administration {"url":"admin","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"9"}
+-Appearance {"url":"admin\/appearance","description":"Select and configure your themes.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-6"}
+--List {"url":"admin\/appearance\/list","description":"Select and configure your theme","hidden":true,"lang":"und","weight":"-1"}
+--Settings {"url":"admin\/appearance\/settings","description":"Configure default and theme specific settings.","hidden":true,"lang":"und","weight":"20"}
+---Adminimal {"url":"admin\/appearance\/settings\/adminimal","hidden":true,"lang":"und","weight":"0"}
+---Andes {"url":"admin\/appearance\/settings\/andes","hidden":true,"lang":"und","weight":"0"}
+---Bartik {"url":"admin\/appearance\/settings\/bartik","hidden":true,"lang":"und","weight":"0"}
+---Bootstrap {"url":"admin\/appearance\/settings\/bootstrap","hidden":true,"lang":"und","weight":"0"}
+---Garland {"url":"admin\/appearance\/settings\/garland","hidden":true,"lang":"und","weight":"0"}
+---Global settings {"url":"admin\/appearance\/settings\/global","hidden":true,"lang":"und","weight":"-1"}
+---Seven {"url":"admin\/appearance\/settings\/seven","hidden":true,"lang":"und","weight":"0"}
+---Stark {"url":"admin\/appearance\/settings\/stark","hidden":true,"lang":"und","weight":"0"}
+--Install new theme {"url":"admin\/appearance\/install","hidden":true,"lang":"und","weight":"25"}
+--Update {"url":"admin\/appearance\/update","hidden":true,"lang":"und","weight":"10"}
+-Configuration {"url":"admin\/config","description":"Administer settings.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Content authoring {"url":"admin\/config\/content","description":"Settings related to formatting and authoring content.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+---Text formats {"url":"admin\/config\/content\/formats","description":"Configure how content input by users is filtered, including allowed HTML tags. Also allows enabling of module-provided filters.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---- {"url":"admin\/config\/content\/formats\/%","lang":"und","weight":"0"}
+-----Disable text format {"url":"admin\/config\/content\/formats\/%\/disable","lang":"und","weight":"0"}
+----Add text format {"url":"admin\/config\/content\/formats\/add","hidden":true,"lang":"und","weight":"1"}
+----List {"url":"admin\/config\/content\/formats\/list","hidden":true,"lang":"und","weight":"0"}
+---Exclude Node Title {"url":"admin\/config\/content\/exclude_node_title","description":"Exclude Node Title from display","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---CKEditor {"url":"admin\/config\/content\/ckeditor","description":"Configure the rich text editor.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Email Contact Form Settings {"url":"admin\/config\/content\/email","description":"Administer flood control settings for email contact forms","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Title settings {"url":"admin\/config\/content\/title","description":"Settings for the Title module.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Node export {"url":"admin\/config\/content\/node_export","description":"Configure the settings for Node export.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Wysiwyg templates {"url":"admin\/config\/content\/wysiwyg-templates","description":"Create and modify Wysiwyg templates","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"10"}
+----Add Template {"url":"admin\/config\/content\/wysiwyg-templates\/add","hidden":true,"lang":"und","weight":"0"}
+----Import Template {"url":"admin\/config\/content\/wysiwyg-templates\/import","hidden":true,"lang":"und","weight":"0"}
+---Location {"url":"admin\/config\/content\/location","description":"Settings for Location module","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Geocoding options {"url":"admin\/config\/content\/location\/geocoding","hidden":true,"lang":"und","weight":"2"}
+----Location utilities {"url":"admin\/config\/content\/location\/util","hidden":true,"lang":"und","weight":"3"}
+----Main settings {"url":"admin\/config\/content\/location\/main","hidden":true,"lang":"und","weight":"0"}
+----Map links {"url":"admin\/config\/content\/location\/maplinking","hidden":true,"lang":"und","weight":"1"}
+---Hierarchical Select {"url":"admin\/config\/content\/hierarchical_select","description":"Configure site-wide settings for the Hierarchical Select form element.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Configurations {"url":"admin\/config\/content\/hierarchical_select\/configs","description":"All available Hierarchical Select configurations.","hidden":true,"lang":"und","weight":"0"}
+----Implementations {"url":"admin\/config\/content\/hierarchical_select\/implementations","description":"Features of each Hierarchical Select implementation.","hidden":true,"lang":"und","weight":"0"}
+----Site-wide settings {"url":"admin\/config\/content\/hierarchical_select\/settings","hidden":true,"lang":"und","weight":"-10"}
+----Export {"url":"admin\/config\/content\/hierarchical_select\/export\/%","hidden":true,"lang":"und","weight":"0"}
+----Import {"url":"admin\/config\/content\/hierarchical_select\/import\/%","hidden":true,"lang":"und","weight":"0"}
+--Development {"url":"admin\/config\/development","description":"Development tools.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---Logging and errors {"url":"admin\/config\/development\/logging","description":"Settings for logging and alerts modules. Various modules can route Drupal's system events to different destinations, such as syslog, database, email, etc.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+---Maintenance mode {"url":"admin\/config\/development\/maintenance","description":"Take the site offline for maintenance or bring it back online.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---Performance {"url":"admin\/config\/development\/performance","description":"Enable or disable page caching for anonymous users and set CSS and JS bandwidth optimization options.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-20"}
+---jQuery update {"url":"admin\/config\/development\/jquery_update","description":"Configure settings related to the jQuery upgrade, the library path and compression.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Devel settings {"url":"admin\/config\/development\/devel","description":"Helper functions, pages, and blocks to assist Drupal developers. The devel blocks can be managed via the <a href=\"\/admin\/structure\/block\">block administration<\/a> page.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Media {"url":"admin\/config\/media","description":"Media tools.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---File system {"url":"admin\/config\/media\/file-system","description":"Tell Drupal where to store uploaded files and how they are accessed.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---Image toolkit {"url":"admin\/config\/media\/image-toolkit","description":"Choose which image toolkit to use if you have installed optional toolkits.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"20"}
+---Image styles {"url":"admin\/config\/media\/image-styles","description":"Configure styles that can be used for resizing or adjusting images on display.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Add style {"url":"admin\/config\/media\/image-styles\/add","description":"Add a new image style.","hidden":true,"lang":"und","weight":"2"}
+----List {"url":"admin\/config\/media\/image-styles\/list","description":"List the current image styles on the site.","hidden":true,"lang":"und","weight":"1"}
+----Edit style {"url":"admin\/config\/media\/image-styles\/edit\/%","description":"Configure an image style.","lang":"und","weight":"0"}
+-----Add image effect {"url":"admin\/config\/media\/image-styles\/edit\/%\/add\/%","description":"Add a new effect to a style.","lang":"und","weight":"0"}
+-----Edit image effect {"url":"admin\/config\/media\/image-styles\/edit\/%\/effects\/%","description":"Edit an existing effect within a style.","lang":"und","weight":"0"}
+------Delete image effect {"url":"admin\/config\/media\/image-styles\/edit\/%\/effects\/%\/delete","description":"Delete an existing effect from a style.","lang":"und","weight":"0"}
+----Delete style {"url":"admin\/config\/media\/image-styles\/delete\/%","description":"Delete an image style.","lang":"und","weight":"0"}
+----Revert style {"url":"admin\/config\/media\/image-styles\/revert\/%","description":"Revert an image style.","lang":"und","weight":"0"}
+---YouTube settings {"url":"admin\/config\/media\/youtube","description":"Configure sitewide settings for embedded YouTube video fields.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---File settings {"url":"admin\/config\/media\/file-settings","description":"Configure allowed file extensions, default alt and title sources, and the file upload wizard.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Media browser settings {"url":"admin\/config\/media\/browser","description":"Configure the behavior and display of the media browser.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Video Embed Field {"url":"admin\/config\/media\/vef","description":"Video Embed Field configuration","lang":"und","weight":"0"}
+----Settings {"url":"admin\/config\/media\/vef\/settings","description":"Video Embed Field module settings","lang":"und","weight":"0"}
+----Video Embed Styles {"url":"admin\/config\/media\/vef\/vef_video_styles","description":"Administer Video Embed Field's video styles.","lang":"und","weight":"0"}
+-----Add {"url":"admin\/config\/media\/vef\/vef_video_styles\/add","hidden":true,"lang":"und","weight":"0"}
+-----Import {"url":"admin\/config\/media\/vef\/vef_video_styles\/import","hidden":true,"lang":"und","weight":"0"}
+-----List {"url":"admin\/config\/media\/vef\/vef_video_styles\/list","hidden":true,"lang":"und","weight":"-10"}
+------Export {"url":"admin\/config\/media\/vef\/vef_video_styles\/list\/%\/export","hidden":true,"lang":"und","weight":"0"}
+------Edit {"url":"admin\/config\/media\/vef\/vef_video_styles\/list\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+--People {"url":"admin\/config\/people","description":"Configure user accounts.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-20"}
+---Account settings {"url":"admin\/config\/people\/accounts","description":"Configure default behavior of users, including registration requirements, e-mails, fields, and user pictures.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+----Settings {"url":"admin\/config\/people\/accounts\/settings","hidden":true,"lang":"und","weight":"-10"}
+----Manage dependencies {"url":"admin\/config\/people\/accounts\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/config\/people\/accounts\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/config\/people\/accounts\/display\/token","hidden":true,"lang":"und","weight":"1"}
+-----Cuenta de usuario {"url":"admin\/config\/people\/accounts\/display\/full","hidden":true,"lang":"und","weight":"0"}
+-----Predeterminado {"url":"admin\/config\/people\/accounts\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+----Manage fields {"url":"admin\/config\/people\/accounts\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/config\/people\/accounts\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/config\/people\/accounts\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/config\/people\/accounts\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/config\/people\/accounts\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/config\/people\/accounts\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+---IP address blocking {"url":"admin\/config\/people\/ip-blocking","description":"Manage blocked IP addresses.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"10"}
+----Delete IP address {"url":"admin\/config\/people\/ip-blocking\/delete\/%","lang":"und","weight":"0"}
+---Simplified Open Social Share {"url":"admin\/config\/people\/social9\/share","description":"Configure setting for Simplified Open Social Share","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-4"}
+----Open Social Sharing {"url":"admin\/config\/people\/social9\/share\/settings","description":"simplified_open_social_share settings.","hidden":true,"lang":"und","weight":"2"}
+---Configuration Social Share {"url":"admin\/config\/people\/social-share","description":"Used for social network configuration Block","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Regional and language {"url":"admin\/config\/regional","description":"Regional settings, localization and translation.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-5"}
+---Date and time {"url":"admin\/config\/regional\/date-time","description":"Configure display formats for date and time.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+----Formats {"url":"admin\/config\/regional\/date-time\/formats","description":"Configure display format strings for date and time.","hidden":true,"lang":"und","weight":"-9"}
+-----Add format {"url":"admin\/config\/regional\/date-time\/formats\/add","description":"Allow users to add additional date formats.","hidden":true,"lang":"und","weight":"-10"}
+-----Delete date format {"url":"admin\/config\/regional\/date-time\/formats\/%\/delete","description":"Allow users to delete a configured date format.","lang":"und","weight":"0"}
+-----Edit date format {"url":"admin\/config\/regional\/date-time\/formats\/%\/edit","description":"Allow users to edit a configured date format.","lang":"und","weight":"0"}
+----Types {"url":"admin\/config\/regional\/date-time\/types","description":"Configure display formats for date and time.","hidden":true,"lang":"und","weight":"-10"}
+-----Add date type {"url":"admin\/config\/regional\/date-time\/types\/add","description":"Add new date type.","hidden":true,"lang":"und","weight":"-10"}
+-----Delete date type {"url":"admin\/config\/regional\/date-time\/types\/%\/delete","description":"Allow users to delete a configured date type.","lang":"und","weight":"0"}
+----Localize {"url":"admin\/config\/regional\/date-time\/locale","description":"Configure date formats for each locale","hidden":true,"lang":"und","weight":"-8"}
+-----Localize date formats {"url":"admin\/config\/regional\/date-time\/locale\/%\/edit","description":"Configure date formats for each locale","lang":"und","weight":"0"}
+-----Reset date formats {"url":"admin\/config\/regional\/date-time\/locale\/%\/reset","description":"Reset localized date formats to global defaults","lang":"und","weight":"0"}
+----Date views {"url":"admin\/config\/regional\/date-time\/date-views","description":"Configure settings for date views.","hidden":true,"lang":"und","weight":"0"}
+---Regional settings {"url":"admin\/config\/regional\/settings","description":"Settings for the site's default time zone and country.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-20"}
+---Languages {"url":"admin\/config\/regional\/language","description":"Configure languages for content and the user interface.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+----Add language {"url":"admin\/config\/regional\/language\/add","hidden":true,"lang":"und","weight":"5"}
+----Detection and selection {"url":"admin\/config\/regional\/language\/configure","hidden":true,"lang":"und","weight":"10"}
+-----Session language detection configuration {"url":"admin\/config\/regional\/language\/configure\/session","hidden":true,"lang":"und","weight":"0"}
+-----URL language detection configuration {"url":"admin\/config\/regional\/language\/configure\/url","hidden":true,"lang":"und","weight":"0"}
+----List {"url":"admin\/config\/regional\/language\/overview","hidden":true,"lang":"und","weight":"0"}
+----Confirm {"url":"admin\/config\/regional\/language\/delete\/%","lang":"und","weight":"0"}
+----Edit language {"url":"admin\/config\/regional\/language\/edit\/%","lang":"und","weight":"0"}
+---Translate interface {"url":"admin\/config\/regional\/translate","description":"Translate the built in interface and optionally other text.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-5"}
+----Export {"url":"admin\/config\/regional\/translate\/export","hidden":true,"lang":"und","weight":"30"}
+----Import {"url":"admin\/config\/regional\/translate\/import","hidden":true,"lang":"und","weight":"20"}
+----Overview {"url":"admin\/config\/regional\/translate\/overview","hidden":true,"lang":"und","weight":"0"}
+----Translate {"url":"admin\/config\/regional\/translate\/translate","hidden":true,"lang":"und","weight":"10"}
+----Delete string {"url":"admin\/config\/regional\/translate\/delete\/%","lang":"und","weight":"0"}
+----Edit string {"url":"admin\/config\/regional\/translate\/edit\/%","lang":"und","weight":"0"}
+----Embedded SVG {"url":"admin\/config\/regional\/translate\/svgextract","description":"Extracts strings from embedded SVG files into po files for translation and re-imports them into the proper text group.","hidden":true,"lang":"und","weight":"99"}
+----Strings {"url":"admin\/config\/regional\/translate\/i18n_string","description":"Refresh user defined strings.","hidden":true,"lang":"und","weight":"20"}
+---Entity translation {"url":"admin\/config\/regional\/entity_translation","description":"Configure which entities can be translated and enable or disable language fallback.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Confirm change in translatability. {"url":"admin\/config\/regional\/entity_translation\/translatable\/%","description":"Confirmation page for changing field translatability.","lang":"und","weight":"0"}
+---Multilingual settings {"url":"admin\/config\/regional\/i18n","description":"Configure extended options for multilingual content and translations.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"10"}
+----Multilingual system {"url":"admin\/config\/regional\/i18n\/configure","description":"Configure extended options for multilingual content and translations.","hidden":true,"lang":"und","weight":"0"}
+----Strings {"url":"admin\/config\/regional\/i18n\/strings","description":"Options for user defined strings.","hidden":true,"lang":"und","weight":"20"}
+---Translation sets {"url":"admin\/config\/regional\/i18n_translation","description":"Translation sets overview.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"10"}
+----Translation sets {"url":"admin\/config\/regional\/i18n_translation\/configure","description":"Overview of existing translation sets.","hidden":true,"lang":"und","weight":"0"}
+--Search and metadata {"url":"admin\/config\/search","description":"Local site search, metadata and SEO.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---Clean URLs {"url":"admin\/config\/search\/clean-urls","description":"Enable or disable clean URLs for your site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"5"}
+---Search settings {"url":"admin\/config\/search\/settings","description":"Configure relevance settings for search and other indexing options.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+----Clear index {"url":"admin\/config\/search\/settings\/reindex","hidden":true,"lang":"und","weight":"0"}
+---URL aliases {"url":"admin\/config\/search\/path","description":"Change your site's URL paths by aliasing them.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-5"}
+----Add alias {"url":"admin\/config\/search\/path\/add","hidden":true,"lang":"und","weight":"0"}
+----List {"url":"admin\/config\/search\/path\/list","hidden":true,"lang":"und","weight":"-10"}
+----Delete alias {"url":"admin\/config\/search\/path\/delete\/%","lang":"und","weight":"0"}
+----Edit alias {"url":"admin\/config\/search\/path\/edit\/%","lang":"und","weight":"0"}
+----Bulk generate {"url":"admin\/config\/search\/path\/update_bulk","hidden":true,"lang":"und","weight":"30"}
+----Delete aliases {"url":"admin\/config\/search\/path\/delete_bulk","hidden":true,"lang":"und","weight":"40"}
+----Patterns {"url":"admin\/config\/search\/path\/patterns","hidden":true,"lang":"und","weight":"10"}
+----Settings {"url":"admin\/config\/search\/path\/settings","hidden":true,"lang":"und","weight":"20"}
+---Metatag {"url":"admin\/config\/search\/metatags","description":"Configure Metatag defaults.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Bulk revert {"url":"admin\/config\/search\/metatags\/bulk-revert","hidden":true,"lang":"und","weight":"40"}
+----Defaults {"url":"admin\/config\/search\/metatags\/config","hidden":true,"lang":"und","weight":"-10"}
+----- {"url":"admin\/config\/search\/metatags\/config\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/config\/search\/metatags\/config\/%\/delete","lang":"und","weight":"0"}
+------Disable {"url":"admin\/config\/search\/metatags\/config\/%\/disable","lang":"und","weight":"0"}
+------Edit {"url":"admin\/config\/search\/metatags\/config\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+------Enable {"url":"admin\/config\/search\/metatags\/config\/%\/enable","lang":"und","weight":"0"}
+------Export {"url":"admin\/config\/search\/metatags\/config\/%\/export","hidden":true,"lang":"und","weight":"10"}
+------Revert {"url":"admin\/config\/search\/metatags\/config\/%\/revert","hidden":true,"lang":"und","weight":"0"}
+------Translate {"url":"admin\/config\/search\/metatags\/config\/%\/translate","hidden":true,"lang":"und","weight":"0"}
+-----Add default meta tags {"url":"admin\/config\/search\/metatags\/config\/add","hidden":true,"lang":"und","weight":"0"}
+-----Translate {"url":"admin\/config\/search\/metatags\/config\/%instance\/translate","hidden":true,"lang":"und","weight":"10"}
+----Settings {"url":"admin\/config\/search\/metatags\/settings","hidden":true,"lang":"und","weight":"30"}
+--System {"url":"admin\/config\/system","description":"General system related configuration.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-20"}
+---Actions {"url":"admin\/config\/system\/actions","description":"Manage the actions defined for your site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Configure an advanced action {"url":"admin\/config\/system\/actions\/configure","hidden":true,"lang":"und","weight":"0"}
+----Manage actions {"url":"admin\/config\/system\/actions\/manage","description":"Manage the actions defined for your site.","hidden":true,"lang":"und","weight":"-2"}
+----Delete action {"url":"admin\/config\/system\/actions\/delete\/%","description":"Delete an action.","lang":"und","weight":"0"}
+---Cron {"url":"admin\/config\/system\/cron","description":"Manage automatic site maintenance tasks.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"20"}
+---Site information {"url":"admin\/config\/system\/site-information","description":"Change site name, e-mail address, slogan, default front page, and number of posts per page, error pages.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-20"}
+---SMTP Authentication Support {"url":"admin\/config\/system\/smtp","description":"Allow for site emails to be sent through an SMTP server of your choice.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Universally unique identifiers {"url":"admin\/config\/system\/uuid","description":"Configure universally unique identifiers.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Statistics {"url":"admin\/config\/system\/statistics","description":"Control details about what and how your site logs access statistics.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+---Special Menu Items {"url":"admin\/config\/system\/special_menu_items","description":"Configure Special Menu Items.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Backup and Migrate {"url":"admin\/config\/system\/backup_migrate","description":"Backup\/restore your database and files or migrate data to or from another Drupal site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Backup {"url":"admin\/config\/system\/backup_migrate\/export","description":"Backup the database.","hidden":true,"lang":"und","weight":"0"}
+-----Advanced Backup {"url":"admin\/config\/system\/backup_migrate\/export\/advanced","description":"Backup the database.","hidden":true,"lang":"und","weight":"1"}
+-----Quick Backup {"url":"admin\/config\/system\/backup_migrate\/export\/quick","description":"Backup the database.","hidden":true,"lang":"und","weight":"0"}
+----Restore {"url":"admin\/config\/system\/backup_migrate\/restore","description":"Restore the database from a previous backup","hidden":true,"lang":"und","weight":"1"}
+----Saved Backups {"url":"admin\/config\/system\/backup_migrate\/backups","description":"Previously created backups","hidden":true,"lang":"und","weight":"2"}
+----Settings {"url":"admin\/config\/system\/backup_migrate\/settings","description":"Module settings.","hidden":true,"lang":"und","weight":"4"}
+-----Destinations {"url":"admin\/config\/system\/backup_migrate\/settings\/destination","hidden":true,"lang":"und","weight":"2"}
+------Add !type {"url":"admin\/config\/system\/backup_migrate\/settings\/destination\/add","hidden":true,"lang":"und","weight":"2"}
+------List !type {"url":"admin\/config\/system\/backup_migrate\/settings\/destination\/list","hidden":true,"lang":"und","weight":"1"}
+-------Delete File {"url":"admin\/config\/system\/backup_migrate\/settings\/destination\/list\/deletefile","description":"Delete a backup file","hidden":true,"lang":"und","weight":"0"}
+-------Restore from backup {"url":"admin\/config\/system\/backup_migrate\/settings\/destination\/list\/restorefile","description":"Restore database from a backup file on the server","hidden":true,"lang":"und","weight":"0"}
+-------Destination Files {"url":"admin\/config\/system\/backup_migrate\/settings\/destination\/list\/files","hidden":true,"lang":"und","weight":"0"}
+-----Import {"url":"admin\/config\/system\/backup_migrate\/settings\/import","description":"Import backup and migrate settings.","hidden":true,"lang":"und","weight":"10"}
+-----Settings Profiles {"url":"admin\/config\/system\/backup_migrate\/settings\/profile","hidden":true,"lang":"und","weight":"2"}
+------Add !type {"url":"admin\/config\/system\/backup_migrate\/settings\/profile\/add","hidden":true,"lang":"und","weight":"2"}
+------List !type {"url":"admin\/config\/system\/backup_migrate\/settings\/profile\/list","hidden":true,"lang":"und","weight":"1"}
+-----Sources {"url":"admin\/config\/system\/backup_migrate\/settings\/source","hidden":true,"lang":"und","weight":"2"}
+------Add !type {"url":"admin\/config\/system\/backup_migrate\/settings\/source\/add","hidden":true,"lang":"und","weight":"2"}
+------List !type {"url":"admin\/config\/system\/backup_migrate\/settings\/source\/list","hidden":true,"lang":"und","weight":"1"}
+----NodeSquirrel {"url":"admin\/config\/system\/backup_migrate\/nodesquirrel","hidden":true,"lang":"und","weight":"10"}
+----Schedules {"url":"admin\/config\/system\/backup_migrate\/schedule","hidden":true,"lang":"und","weight":"2"}
+-----Add !type {"url":"admin\/config\/system\/backup_migrate\/schedule\/add","hidden":true,"lang":"und","weight":"2"}
+-----List !type {"url":"admin\/config\/system\/backup_migrate\/schedule\/list","hidden":true,"lang":"und","weight":"1"}
+--User interface {"url":"admin\/config\/user-interface","description":"Tools that enhance the user interface.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+---Shortcuts {"url":"admin\/config\/user-interface\/shortcut","description":"Add and modify shortcut sets.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Add shortcut set {"url":"admin\/config\/user-interface\/shortcut\/add-set","hidden":true,"lang":"und","weight":"0"}
+----Edit shortcuts {"url":"admin\/config\/user-interface\/shortcut\/%","lang":"und","weight":"0"}
+-----Add shortcut {"url":"admin\/config\/user-interface\/shortcut\/%\/add-link","hidden":true,"lang":"und","weight":"0"}
+-----Delete shortcut set {"url":"admin\/config\/user-interface\/shortcut\/%\/delete","lang":"und","weight":"0"}
+-----List links {"url":"admin\/config\/user-interface\/shortcut\/%\/links","hidden":true,"lang":"und","weight":"0"}
+-----Edit set name {"url":"admin\/config\/user-interface\/shortcut\/%\/edit","hidden":true,"lang":"und","weight":"10"}
+----Edit shortcut {"url":"admin\/config\/user-interface\/shortcut\/link\/%","lang":"und","weight":"0"}
+-----Delete shortcut {"url":"admin\/config\/user-interface\/shortcut\/link\/%\/delete","lang":"und","weight":"0"}
+---Module filter {"url":"admin\/config\/user-interface\/modulefilter","description":"Configure how the modules page looks and acts.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Easy Breadcrumb {"url":"admin\/config\/user-interface\/easy-breadcrumb","description":"Controls settings for the module Easy Breadcrumb","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Web services {"url":"admin\/config\/services","description":"Tools related to web services.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---RSS publishing {"url":"admin\/config\/services\/rss-publishing","description":"Configure the site description, the number of items per feed and whether feeds should be titles\/teasers\/full-text.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---GMap {"url":"admin\/config\/services\/gmap","description":"Configure GMap settings","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Workflow {"url":"admin\/config\/workflow","description":"Content workflow, editorial workflow tools.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"5"}
+---Rules {"url":"admin\/config\/workflow\/rules","description":"Manage reaction rules and rule components.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+----Components {"url":"admin\/config\/workflow\/rules\/components","hidden":true,"lang":"und","weight":"0"}
+-----Add new component {"url":"admin\/config\/workflow\/rules\/components\/add","hidden":true,"lang":"und","weight":"0"}
+-----Import component {"url":"admin\/config\/workflow\/rules\/components\/import","hidden":true,"lang":"und","weight":"0"}
+----- {"url":"admin\/config\/workflow\/rules\/components\/manage\/%","hidden":true,"lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/clone","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/execute","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/export","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/%","lang":"und","weight":"0"}
+------Remove event {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/delete\/event","description":"Remove an event from a reaction rule.","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/add\/event","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/delete\/%","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/edit\/%","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/components\/manage\/%\/add\/%","lang":"und","weight":"0"}
+----Rules {"url":"admin\/config\/workflow\/rules\/reaction","hidden":true,"lang":"und","weight":"-1"}
+-----Add new rule {"url":"admin\/config\/workflow\/rules\/reaction\/add","hidden":true,"lang":"und","weight":"0"}
+-----Import rule {"url":"admin\/config\/workflow\/rules\/reaction\/import","hidden":true,"lang":"und","weight":"0"}
+----- {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%","hidden":true,"lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/clone","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/execute","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/export","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/%","lang":"und","weight":"0"}
+------Remove event {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/delete\/event","description":"Remove an event from a reaction rule.","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/add\/event","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/delete\/%","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/edit\/%","lang":"und","weight":"0"}
+------ {"url":"admin\/config\/workflow\/rules\/reaction\/manage\/%\/add\/%","lang":"und","weight":"0"}
+----Settings {"url":"admin\/config\/workflow\/rules\/settings","hidden":true,"lang":"und","weight":"1"}
+-----Advanced {"url":"admin\/config\/workflow\/rules\/settings\/advanced","hidden":true,"lang":"und","weight":"0"}
+-----Basic {"url":"admin\/config\/workflow\/rules\/settings\/basic","hidden":true,"lang":"und","weight":"-10"}
+--Administration {"url":"admin\/config\/administration","description":"Administration tools.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Administration menu {"url":"admin\/config\/administration\/admin_menu","description":"Adjust administration menu settings.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Date API {"url":"admin\/config\/date","description":"Settings for modules the use the Date API.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+---Calendar {"url":"admin\/config\/date\/calendar","description":"Calendar administration.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Date Popup {"url":"admin\/config\/date\/date_popup","description":"Configure the Date Popup settings.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+-Content {"url":"admin\/content","description":"Administer content and comments.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-10"}
+--Content {"url":"admin\/content\/node","hidden":true,"lang":"und","weight":"-10"}
+--Comments {"url":"admin\/content\/comment","description":"List and edit site comments and the comment approval queue.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Published comments {"url":"admin\/content\/comment\/new","hidden":true,"lang":"und","weight":"-10"}
+---Unapproved comments {"url":"admin\/content\/comment\/approval","hidden":true,"lang":"und","weight":"0"}
+--Blocks {"url":"admin\/content\/blocks","description":"Manage blocks used on your site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Files {"url":"admin\/content\/file","description":"Manage files used on your site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---List {"url":"admin\/content\/file\/list","hidden":true,"lang":"und","weight":"0"}
+---Thumbnails {"url":"admin\/content\/file\/thumbnails","description":"Manage files used on your site.","hidden":true,"lang":"und","weight":"10"}
+-Index {"url":"admin\/index","hidden":true,"lang":"und","weight":"-18"}
+-Live Help Server {"url":"admin\/activehelper-livehelp","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Agents {"url":"admin\/activehelper-livehelp\/agents","hidden":true,"lang":"und","weight":"3"}
+---Add agent {"url":"admin\/activehelper-livehelp\/agents\/add","hidden":true,"lang":"und","weight":"1"}
+---Edit {"url":"admin\/activehelper-livehelp\/agents\/%\/edit","lang":"und","weight":"2"}
+---Client info {"url":"admin\/activehelper-livehelp\/agents\/%\/client-info","lang":"und","weight":"3"}
+---Settings {"url":"admin\/activehelper-livehelp\/agents\/%\/settings\/%","lang":"und","weight":"3"}
+--Chats {"url":"admin\/activehelper-livehelp\/chats","hidden":true,"lang":"und","weight":"4"}
+---Monthly chats {"url":"admin\/activehelper-livehelp\/chats\/monthly-chats","hidden":true,"lang":"und","weight":"1"}
+---Failed chats {"url":"admin\/activehelper-livehelp\/chats\/failed-chats","hidden":true,"lang":"und","weight":"3"}
+---Unanswered chats {"url":"admin\/activehelper-livehelp\/chats\/unanswered-chats","hidden":true,"lang":"und","weight":"3"}
+---Chats by department {"url":"admin\/activehelper-livehelp\/chats\/chats-by-department","hidden":true,"lang":"und","weight":"4"}
+---Time by chat {"url":"admin\/activehelper-livehelp\/chats\/time-by-chat","hidden":true,"lang":"und","weight":"2"}
+----Email messages {"url":"admin\/activehelper-livehelp\/chats\/time-by-chat\/%\/email-messages","lang":"und","weight":"2"}
+----View messages {"url":"admin\/activehelper-livehelp\/chats\/time-by-chat\/%\/view-messages","lang":"und","weight":"2"}
+---Chats by country {"url":"admin\/activehelper-livehelp\/chats\/chats-by-country","hidden":true,"lang":"und","weight":"5"}
+---Chats by keyword {"url":"admin\/activehelper-livehelp\/chats\/chats-by-keyword","hidden":true,"lang":"und","weight":"6"}
+--Domains {"url":"admin\/activehelper-livehelp\/domains","hidden":true,"lang":"und","weight":"2"}
+---Add domain {"url":"admin\/activehelper-livehelp\/domains\/add","hidden":true,"lang":"und","weight":"1"}
+---Edit {"url":"admin\/activehelper-livehelp\/domains\/%\/edit","lang":"und","weight":"3"}
+---Tracking script {"url":"admin\/activehelper-livehelp\/domains\/%\/tracking-script","lang":"und","weight":"4"}
+---Download block {"url":"admin\/activehelper-livehelp\/domains\/%\/download-block","lang":"und","weight":"5"}
+---Settings {"url":"admin\/activehelper-livehelp\/domains\/%\/%\/settings","lang":"und","weight":"2"}
+--Dashboard {"url":"admin\/activehelper-livehelp\/dashboard","hidden":true,"lang":"und","weight":"1"}
+--About {"url":"admin\/activehelper-livehelp\/about","hidden":true,"lang":"und","weight":"9"}
+--Offline messages {"url":"admin\/activehelper-livehelp\/offline-messages","hidden":true,"lang":"und","weight":"5"}
+--Not allowed countries {"url":"admin\/activehelper-livehelp\/restricted-countries","hidden":true,"lang":"und","weight":"8"}
+---Add restriction {"url":"admin\/activehelper-livehelp\/restricted-countries\/add","hidden":true,"lang":"und","weight":"1"}
+--Server settings {"url":"admin\/activehelper-livehelp\/server-settings","hidden":true,"lang":"und","weight":"6"}
+-Modules {"url":"admin\/modules","description":"Extend site functionality.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-2"}
+--List {"url":"admin\/modules\/list","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/modules\/list\/confirm","hidden":true,"lang":"und","weight":"0"}
+--Uninstall {"url":"admin\/modules\/uninstall","hidden":true,"lang":"und","weight":"20"}
+---Uninstall {"url":"admin\/modules\/uninstall\/confirm","hidden":true,"lang":"und","weight":"0"}
+--Install new module {"url":"admin\/modules\/install","hidden":true,"lang":"und","weight":"25"}
+--Update {"url":"admin\/modules\/update","hidden":true,"lang":"und","weight":"10"}
+-People {"url":"admin\/people","description":"Manage user accounts, roles, and permissions.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-4"}
+--Add user {"url":"admin\/people\/create","hidden":true,"lang":"und","weight":"0"}
+--List {"url":"admin\/people\/people","description":"Find and manage people interacting with your site.","hidden":true,"lang":"und","weight":"-10"}
+--Permissions {"url":"admin\/people\/permissions","description":"Determine access to features by selecting permissions for roles.","hidden":true,"lang":"und","weight":"0"}
+---Permissions {"url":"admin\/people\/permissions\/list","description":"Determine access to features by selecting permissions for roles.","hidden":true,"lang":"und","weight":"-8"}
+---Roles {"url":"admin\/people\/permissions\/roles","description":"List, edit, or add user roles.","hidden":true,"lang":"und","weight":"-5"}
+----Delete role {"url":"admin\/people\/permissions\/roles\/delete\/%","lang":"und","weight":"0"}
+----Edit role {"url":"admin\/people\/permissions\/roles\/edit\/%","lang":"und","weight":"0"}
+-Reports {"url":"admin\/reports","description":"View reports, updates, and errors.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"5"}
+--Status report {"url":"admin\/reports\/status","description":"Get a status report about your site's operation and any detected problems.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+--Recent log messages {"url":"admin\/reports\/dblog","description":"View events that have recently been logged.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-1"}
+--Top 'access denied' errors {"url":"admin\/reports\/access-denied","description":"View 'access denied' errors (403s).","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Top 'page not found' errors {"url":"admin\/reports\/page-not-found","description":"View 'page not found' errors (404s).","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Top search phrases {"url":"admin\/reports\/search","description":"View most popular search phrases.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Details {"url":"admin\/reports\/event\/%","lang":"und","weight":"0"}
+--Field list {"url":"admin\/reports\/fields","description":"Overview of fields on all entity types.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---List {"url":"admin\/reports\/fields\/list","hidden":true,"lang":"und","weight":"-10"}
+---Used in views {"url":"admin\/reports\/fields\/views-fields","description":"Overview of fields used in all views.","hidden":true,"lang":"und","weight":"0"}
+--Libraries {"url":"admin\/reports\/libraries","description":"An overview of libraries installed on this site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Library status report {"url":"admin\/reports\/libraries\/%","description":"Status overview for a single library","lang":"und","weight":"0"}
+--Views plugins {"url":"admin\/reports\/views-plugins","description":"Overview of plugins used in all views.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Available updates {"url":"admin\/reports\/updates","description":"Get a status report about available updates for your installed modules and themes.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-50"}
+---List {"url":"admin\/reports\/updates\/list","hidden":true,"lang":"und","weight":"0"}
+---Install new module or theme {"url":"admin\/reports\/updates\/install","hidden":true,"lang":"und","weight":"25"}
+---Settings {"url":"admin\/reports\/updates\/settings","hidden":true,"lang":"und","weight":"50"}
+---Update {"url":"admin\/reports\/updates\/update","hidden":true,"lang":"und","weight":"10"}
+--Recent hits {"url":"admin\/reports\/hits","description":"View pages that have recently been visited.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Top pages {"url":"admin\/reports\/pages","description":"View pages that have been hit frequently.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"1"}
+--Top referrers {"url":"admin\/reports\/referrers","description":"View top referrers.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--Top visitors {"url":"admin\/reports\/visitors","description":"View visitors that hit many pages.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"2"}
+--Details {"url":"admin\/reports\/access\/%","description":"View access log.","lang":"und","weight":"0"}
+-Structure {"url":"admin\/structure","description":"Administer blocks, content types, menus, etc.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-8"}
+--Content types {"url":"admin\/structure\/types","description":"Manage content types, including default status, front page promotion, comment settings, etc.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add content type {"url":"admin\/structure\/types\/add","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/types\/list","hidden":true,"lang":"und","weight":"-10"}
+---Edit content type {"url":"admin\/structure\/types\/manage\/%","lang":"und","weight":"0"}
+----Delete {"url":"admin\/structure\/types\/manage\/%\/delete","lang":"und","weight":"0"}
+----Edit {"url":"admin\/structure\/types\/manage\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+----Comment display {"url":"admin\/structure\/types\/manage\/%\/comment\/display","hidden":true,"lang":"und","weight":"4"}
+-----Comentario completo {"url":"admin\/structure\/types\/manage\/%\/comment\/display\/full","hidden":true,"lang":"und","weight":"0"}
+-----Comodines {"url":"admin\/structure\/types\/manage\/%\/comment\/display\/token","hidden":true,"lang":"und","weight":"1"}
+-----Predeterminado {"url":"admin\/structure\/types\/manage\/%\/comment\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+----Comment fields {"url":"admin\/structure\/types\/manage\/%\/comment\/fields","hidden":true,"lang":"und","weight":"3"}
+-----Replace fields {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/replace\/%","lang":"und","weight":"0"}
+----- {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/types\/manage\/%\/comment\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+----Replace fields {"url":"admin\/structure\/types\/manage\/%\/fields\/replace\/%","lang":"und","weight":"0"}
+----Manage dependencies {"url":"admin\/structure\/types\/manage\/%\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/structure\/types\/manage\/%\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/structure\/types\/manage\/%\/display\/token","hidden":true,"lang":"und","weight":"5"}
+-----Contenido completo {"url":"admin\/structure\/types\/manage\/%\/display\/full","hidden":true,"lang":"und","weight":"0"}
+-----Destacar la entrada de los resultados de búsqueda {"url":"admin\/structure\/types\/manage\/%\/display\/search_result","hidden":true,"lang":"und","weight":"4"}
+-----Predeterminado {"url":"admin\/structure\/types\/manage\/%\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+-----RSS {"url":"admin\/structure\/types\/manage\/%\/display\/rss","hidden":true,"lang":"und","weight":"2"}
+-----Resumen {"url":"admin\/structure\/types\/manage\/%\/display\/teaser","hidden":true,"lang":"und","weight":"1"}
+-----Revision {"url":"admin\/structure\/types\/manage\/%\/display\/revision","hidden":true,"lang":"und","weight":"6"}
+-----Índice de búsqueda {"url":"admin\/structure\/types\/manage\/%\/display\/search_index","hidden":true,"lang":"und","weight":"3"}
+----Manage fields {"url":"admin\/structure\/types\/manage\/%\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/structure\/types\/manage\/%\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/types\/manage\/%\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/types\/manage\/%\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/types\/manage\/%\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/types\/manage\/%\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+----Comment dependencies {"url":"admin\/structure\/types\/manage\/%\/comment\/dependencies","hidden":true,"lang":"und","weight":"4"}
+--Blocks {"url":"admin\/structure\/block","description":"Configure what block content appears in your site's sidebars and other regions.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add block {"url":"admin\/structure\/block\/add","hidden":true,"lang":"und","weight":"0"}
+---Adminimal {"url":"admin\/structure\/block\/list\/adminimal","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/adminimal\/add","hidden":true,"lang":"und","weight":"0"}
+---Andes {"url":"admin\/structure\/block\/list\/andes","hidden":true,"lang":"und","weight":"-10"}
+---Bartik {"url":"admin\/structure\/block\/list\/bartik","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/bartik\/add","hidden":true,"lang":"und","weight":"0"}
+---Bootstrap {"url":"admin\/structure\/block\/list\/bootstrap","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/bootstrap\/add","hidden":true,"lang":"und","weight":"0"}
+---Garland {"url":"admin\/structure\/block\/list\/garland","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/garland\/add","hidden":true,"lang":"und","weight":"0"}
+---Seven {"url":"admin\/structure\/block\/list\/seven","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/seven\/add","hidden":true,"lang":"und","weight":"0"}
+---Stark {"url":"admin\/structure\/block\/list\/stark","hidden":true,"lang":"und","weight":"0"}
+----Add block {"url":"admin\/structure\/block\/list\/stark\/add","hidden":true,"lang":"und","weight":"0"}
+---Configure block {"url":"admin\/structure\/block\/manage\/%\/%","lang":"und","weight":"0"}
+----Configure block {"url":"admin\/structure\/block\/manage\/%\/%\/configure","hidden":true,"lang":"und","weight":"0"}
+----Delete block {"url":"admin\/structure\/block\/manage\/%\/%\/delete","hidden":true,"lang":"und","weight":"0"}
+--Menus {"url":"admin\/structure\/menu","description":"Add new menus to your site, edit existing menus, and rename and reorganize menu links.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add menu {"url":"admin\/structure\/menu\/add","hidden":true,"lang":"und","weight":"0"}
+---List menus {"url":"admin\/structure\/menu\/list","hidden":true,"lang":"und","weight":"-10"}
+---Settings {"url":"admin\/structure\/menu\/settings","hidden":true,"lang":"und","weight":"5"}
+---Customize menu {"url":"admin\/structure\/menu\/manage\/%","lang":"und","weight":"0"}
+----Add link {"url":"admin\/structure\/menu\/manage\/%\/add","hidden":true,"lang":"und","weight":"0"}
+----Delete menu {"url":"admin\/structure\/menu\/manage\/%\/delete","lang":"und","weight":"0"}
+----Edit menu {"url":"admin\/structure\/menu\/manage\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+----List links {"url":"admin\/structure\/menu\/manage\/%\/list","hidden":true,"lang":"und","weight":"-10"}
+----Translate {"url":"admin\/structure\/menu\/manage\/%\/translate","hidden":true,"lang":"und","weight":"10"}
+---Delete menu link {"url":"admin\/structure\/menu\/item\/%\/delete","lang":"und","weight":"0"}
+---Edit menu link {"url":"admin\/structure\/menu\/item\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+---Reset menu link {"url":"admin\/structure\/menu\/item\/%\/reset","lang":"und","weight":"0"}
+---Menú principal {"url":"admin\/structure\/menu\/manage\/main-menu","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Management {"url":"admin\/structure\/menu\/manage\/management","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Navegación {"url":"admin\/structure\/menu\/manage\/navigation","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---User menu {"url":"admin\/structure\/menu\/manage\/user-menu","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Export menu {"url":"admin\/structure\/menu\/export","hidden":true,"lang":"und","weight":"11"}
+---Import menu {"url":"admin\/structure\/menu\/import","hidden":true,"lang":"und","weight":"10"}
+---Menu Top Soy {"url":"admin\/structure\/menu\/manage\/menu-menu-top-soy","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Enlaces de interes {"url":"admin\/structure\/menu\/manage\/menu-enlaces-de-interes","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Prueba {"url":"admin\/structure\/menu\/manage\/menu-prueba","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Mega Menu {"url":"admin\/structure\/menu\/manage\/menu-mega-menu","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Translation sets {"url":"admin\/structure\/menu\/manage\/translation","hidden":true,"lang":"und","weight":"10"}
+----Add translation {"url":"admin\/structure\/menu\/manage\/translation\/add","hidden":true,"lang":"und","weight":"0"}
+---Translate {"url":"admin\/structure\/menu\/item\/%\/translate","hidden":true,"lang":"und","weight":"10"}
+--Taxonomy {"url":"admin\/structure\/taxonomy","description":"Manage tagging, categorization, and classification of your content.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+--- {"url":"admin\/structure\/taxonomy\/%","lang":"und","weight":"0"}
+----Add term {"url":"admin\/structure\/taxonomy\/%\/add","hidden":true,"lang":"und","weight":"0"}
+----Edit {"url":"admin\/structure\/taxonomy\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+----List {"url":"admin\/structure\/taxonomy\/%\/list","hidden":true,"lang":"und","weight":"-20"}
+----Replace fields {"url":"admin\/structure\/taxonomy\/%\/fields\/replace\/%","lang":"und","weight":"0"}
+----Manage dependencies {"url":"admin\/structure\/taxonomy\/%\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/structure\/taxonomy\/%\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/structure\/taxonomy\/%\/display\/token","hidden":true,"lang":"und","weight":"1"}
+-----Predeterminado {"url":"admin\/structure\/taxonomy\/%\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+-----Página de términos de taxonomía {"url":"admin\/structure\/taxonomy\/%\/display\/full","hidden":true,"lang":"und","weight":"0"}
+----Manage fields {"url":"admin\/structure\/taxonomy\/%\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/structure\/taxonomy\/%\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/taxonomy\/%\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/taxonomy\/%\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/taxonomy\/%\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/taxonomy\/%\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+---Add vocabulary {"url":"admin\/structure\/taxonomy\/add","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/taxonomy\/list","hidden":true,"lang":"und","weight":"-10"}
+---CSV export {"url":"admin\/structure\/taxonomy\/csv_export","description":"Export terms and properties to a CSV file.","hidden":true,"lang":"und","weight":"13"}
+---CSV import {"url":"admin\/structure\/taxonomy\/csv_import","description":"Import taxonomies, hierarchical structure or simple lists of terms and properties with CSV file or text.","hidden":true,"lang":"und","weight":"12"}
+--Block types {"url":"admin\/structure\/block-types","description":"Manage block types, including fields, settings, etc.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add block type {"url":"admin\/structure\/block-types\/add","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/block-types\/list","hidden":true,"lang":"und","weight":"-10"}
+---Edit block type {"url":"admin\/structure\/block-types\/manage\/%","lang":"und","weight":"0"}
+----Delete {"url":"admin\/structure\/block-types\/manage\/%\/delete","lang":"und","weight":"0"}
+----Delete {"url":"admin\/structure\/block-types\/manage\/%\/revert","lang":"und","weight":"0"}
+----Edit {"url":"admin\/structure\/block-types\/manage\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+----Replace fields {"url":"admin\/structure\/block-types\/manage\/%\/fields\/replace\/%","lang":"und","weight":"0"}
+----Manage dependencies {"url":"admin\/structure\/block-types\/manage\/%\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/structure\/block-types\/manage\/%\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/structure\/block-types\/manage\/%\/display\/token","hidden":true,"lang":"und","weight":"0"}
+-----Predeterminado {"url":"admin\/structure\/block-types\/manage\/%\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+----Manage fields {"url":"admin\/structure\/block-types\/manage\/%\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/structure\/block-types\/manage\/%\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/block-types\/manage\/%\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/block-types\/manage\/%\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/block-types\/manage\/%\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/block-types\/manage\/%\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+--Features {"url":"admin\/structure\/features","description":"Manage features.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Create feature {"url":"admin\/structure\/features\/create","description":"Create a new feature.","hidden":true,"lang":"und","weight":"10"}
+---Manage {"url":"admin\/structure\/features\/manage","description":"Enable and disable features.","hidden":true,"lang":"und","weight":"0"}
+---Settings {"url":"admin\/structure\/features\/settings","description":"Adjust settings for using features module.","hidden":true,"lang":"und","weight":"11"}
+---View {"url":"admin\/structure\/features\/%\/view","description":"Display components of a feature.","hidden":true,"lang":"und","weight":"-10"}
+---Recreate {"url":"admin\/structure\/features\/%\/recreate","description":"Recreate an existing feature.","hidden":true,"lang":"und","weight":"11"}
+--TB Mega Menu {"url":"admin\/structure\/tb-megamenu","description":"TB Mega Menu","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Request {"url":"admin\/structure\/tb-megamenu\/request","hidden":true,"expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Config TB Mega Menu {"url":"admin\/structure\/tb-megamenu\/%\/config","hidden":true,"lang":"und","weight":"-10"}
+--Display Suite {"url":"admin\/structure\/ds","description":"Manage layouts for entities and configure fields, view modes etc.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Change layout {"url":"admin\/structure\/ds\/change-layout","description":"Act on layout change to move fields elsewhere","hidden":true,"lang":"und","weight":"0"}
+---Disable layout {"url":"admin\/structure\/ds\/disable","description":"Disable layout and field settings","hidden":true,"lang":"und","weight":"0"}
+---Displays {"url":"admin\/structure\/ds\/list","hidden":true,"lang":"und","weight":"-10"}
+----Emergency {"url":"admin\/structure\/ds\/list\/emergency","description":"In case you have errors via Display Suite, visit this page.","hidden":true,"lang":"und","weight":"100"}
+----List {"url":"admin\/structure\/ds\/list\/list","hidden":true,"lang":"und","weight":"-10"}
+---Enable layout {"url":"admin\/structure\/ds\/enable","description":"Enable layout and field settings","hidden":true,"lang":"und","weight":"0"}
+---Revert layout {"url":"admin\/structure\/ds\/revert-layout","description":"Revert layout and field settings.","hidden":true,"lang":"und","weight":"0"}
+--Field collections {"url":"admin\/structure\/field-collections","description":"Manage fields on field collections.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Manage fields {"url":"admin\/structure\/field-collections\/%","lang":"und","weight":"1"}
+----Manage dependencies {"url":"admin\/structure\/field-collections\/%\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/structure\/field-collections\/%\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/structure\/field-collections\/%\/display\/token","hidden":true,"lang":"und","weight":"1"}
+-----Contenido completo {"url":"admin\/structure\/field-collections\/%\/display\/full","hidden":true,"lang":"und","weight":"0"}
+-----Predeterminado {"url":"admin\/structure\/field-collections\/%\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+----Manage fields {"url":"admin\/structure\/field-collections\/%\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/structure\/field-collections\/%\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/field-collections\/%\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/field-collections\/%\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/field-collections\/%\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/field-collections\/%\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+--Pages {"url":"admin\/structure\/pages","description":"Add, edit and remove overridden system pages and user defined pages from the system.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add custom page {"url":"admin\/structure\/pages\/add","hidden":true,"lang":"und","weight":"0"}
+---Import page {"url":"admin\/structure\/pages\/import","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/pages\/list","hidden":true,"lang":"und","weight":"-10"}
+---Wizards {"url":"admin\/structure\/pages\/wizard","hidden":true,"lang":"und","weight":"-5"}
+---Edit {"url":"admin\/structure\/pages\/edit\/%","lang":"und","weight":"0"}
+--- {"url":"admin\/structure\/pages\/%\/operation\/%","lang":"und","weight":"0"}
+--Panels {"url":"admin\/structure\/panels","description":"Get a bird's eye view of items related to Panels.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Dashboard {"url":"admin\/structure\/panels\/dashboard","hidden":true,"lang":"und","weight":"-10"}
+---Settings {"url":"admin\/structure\/panels\/settings","hidden":true,"lang":"und","weight":"0"}
+----General {"url":"admin\/structure\/panels\/settings\/general","hidden":true,"lang":"und","weight":"-10"}
+----Panel pages {"url":"admin\/structure\/panels\/settings\/panel-page","hidden":true,"lang":"und","weight":"-10"}
+----Mini panels {"url":"admin\/structure\/panels\/settings\/panels-mini","hidden":true,"lang":"und","weight":"0"}
+----Panel nodes {"url":"admin\/structure\/panels\/settings\/panel-node","description":"Configure which content is available to add to panel node displays.","hidden":true,"lang":"und","weight":"0"}
+----Bootstrap {"url":"admin\/structure\/panels\/settings\/bootstrap","description":"Panels Bootstrap Layout Builder settings","hidden":true,"lang":"und","weight":"0"}
+---Layouts {"url":"admin\/structure\/panels\/layouts","description":"Add, edit or delete custom content layouts.","hidden":true,"lang":"und","weight":"0"}
+----Add bootstrap layout {"url":"admin\/structure\/panels\/layouts\/add-bootstrap","hidden":true,"lang":"und","weight":"0"}
+----Add flexible layout {"url":"admin\/structure\/panels\/layouts\/add-flexible","hidden":true,"lang":"und","weight":"0"}
+----Import {"url":"admin\/structure\/panels\/layouts\/import","hidden":true,"lang":"und","weight":"0"}
+----List {"url":"admin\/structure\/panels\/layouts\/list","hidden":true,"lang":"und","weight":"-10"}
+-----Edit {"url":"admin\/structure\/panels\/layouts\/list\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+-----Export {"url":"admin\/structure\/panels\/layouts\/list\/%\/export","hidden":true,"lang":"und","weight":"0"}
+--Views {"url":"admin\/structure\/views","description":"Manage customized lists of content.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add new view {"url":"admin\/structure\/views\/add","hidden":true,"lang":"und","weight":"0"}
+---Add view from template {"url":"admin\/structure\/views\/add-template","hidden":true,"lang":"und","weight":"0"}
+---Import {"url":"admin\/structure\/views\/import","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/views\/list","hidden":true,"lang":"und","weight":"-10"}
+---Settings {"url":"admin\/structure\/views\/settings","hidden":true,"lang":"und","weight":"0"}
+----Advanced {"url":"admin\/structure\/views\/settings\/advanced","hidden":true,"lang":"und","weight":"1"}
+----Basic {"url":"admin\/structure\/views\/settings\/basic","hidden":true,"lang":"und","weight":"0"}
+--- {"url":"admin\/structure\/views\/view\/%","lang":"und","weight":"0"}
+----Break lock {"url":"admin\/structure\/views\/view\/%\/break-lock","hidden":true,"lang":"und","weight":"0"}
+----Edit view {"url":"admin\/structure\/views\/view\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+----Clone {"url":"admin\/structure\/views\/view\/%\/clone","hidden":true,"lang":"und","weight":"0"}
+----Delete {"url":"admin\/structure\/views\/view\/%\/delete","hidden":true,"lang":"und","weight":"0"}
+----Export {"url":"admin\/structure\/views\/view\/%\/export","hidden":true,"lang":"und","weight":"0"}
+----Revert {"url":"admin\/structure\/views\/view\/%\/revert","hidden":true,"lang":"und","weight":"0"}
+---- {"url":"admin\/structure\/views\/view\/%\/preview\/%","hidden":true,"lang":"und","weight":"0"}
+--- {"url":"admin\/structure\/views\/ajax\/preview\/%\/%","lang":"und","weight":"0"}
+--- {"url":"admin\/structure\/views\/nojs\/preview\/%\/%","lang":"und","weight":"0"}
+--File types {"url":"admin\/structure\/file-types","description":"Manage settings for the type of files used on your site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add file type {"url":"admin\/structure\/file-types\/add","hidden":true,"lang":"und","weight":"0"}
+---Edit file type {"url":"admin\/structure\/file-types\/manage\/%","lang":"und","weight":"0"}
+----Edit {"url":"admin\/structure\/file-types\/manage\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+----Manage file display {"url":"admin\/structure\/file-types\/manage\/%\/file-display","hidden":true,"lang":"und","weight":"3"}
+-----Contenido completo {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/full","hidden":true,"lang":"und","weight":"1"}
+-----Previsualizar {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/preview","hidden":true,"lang":"und","weight":"2"}
+-----Resumen {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/teaser","hidden":true,"lang":"und","weight":"0"}
+-----Search result {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/search_result","hidden":true,"lang":"und","weight":"5"}
+-----Comodines {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/token","hidden":true,"lang":"und","weight":"6"}
+-----Índice de búsqueda {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/search_index","hidden":true,"lang":"und","weight":"4"}
+-----Predeterminado {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/default","hidden":true,"lang":"und","weight":"-10"}
+-----RSS {"url":"admin\/structure\/file-types\/manage\/%\/file-display\/rss","hidden":true,"lang":"und","weight":"3"}
+----Replace fields {"url":"admin\/structure\/file-types\/manage\/%\/fields\/replace\/%","lang":"und","weight":"0"}
+----Manage dependencies {"url":"admin\/structure\/file-types\/manage\/%\/dependencies","hidden":true,"lang":"und","weight":"2"}
+----Manage display {"url":"admin\/structure\/file-types\/manage\/%\/display","hidden":true,"lang":"und","weight":"2"}
+-----Comodines {"url":"admin\/structure\/file-types\/manage\/%\/display\/token","hidden":true,"lang":"und","weight":"6"}
+-----Contenido completo {"url":"admin\/structure\/file-types\/manage\/%\/display\/full","hidden":true,"lang":"und","weight":"1"}
+-----Predeterminado {"url":"admin\/structure\/file-types\/manage\/%\/display\/default","hidden":true,"lang":"und","weight":"-10"}
+-----Previsualizar {"url":"admin\/structure\/file-types\/manage\/%\/display\/preview","hidden":true,"lang":"und","weight":"2"}
+-----RSS {"url":"admin\/structure\/file-types\/manage\/%\/display\/rss","hidden":true,"lang":"und","weight":"3"}
+-----Resumen {"url":"admin\/structure\/file-types\/manage\/%\/display\/teaser","hidden":true,"lang":"und","weight":"0"}
+-----Search result {"url":"admin\/structure\/file-types\/manage\/%\/display\/search_result","hidden":true,"lang":"und","weight":"5"}
+-----Índice de búsqueda {"url":"admin\/structure\/file-types\/manage\/%\/display\/search_index","hidden":true,"lang":"und","weight":"4"}
+----Manage fields {"url":"admin\/structure\/file-types\/manage\/%\/fields","hidden":true,"lang":"und","weight":"1"}
+----- {"url":"admin\/structure\/file-types\/manage\/%\/fields\/%","lang":"und","weight":"0"}
+------Delete {"url":"admin\/structure\/file-types\/manage\/%\/fields\/%\/delete","hidden":true,"lang":"und","weight":"10"}
+------Edit {"url":"admin\/structure\/file-types\/manage\/%\/fields\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+------Field settings {"url":"admin\/structure\/file-types\/manage\/%\/fields\/%\/field-settings","hidden":true,"lang":"und","weight":"0"}
+------Widget type {"url":"admin\/structure\/file-types\/manage\/%\/fields\/%\/widget-type","hidden":true,"lang":"und","weight":"0"}
+--Mini panels {"url":"admin\/structure\/mini-panels","description":"Add, edit or delete mini panels, which can be used as blocks or content panes in other panels.","lang":"und","weight":"0"}
+---Add {"url":"admin\/structure\/mini-panels\/add","hidden":true,"lang":"und","weight":"0"}
+---Import {"url":"admin\/structure\/mini-panels\/import","hidden":true,"lang":"und","weight":"0"}
+---List {"url":"admin\/structure\/mini-panels\/list","hidden":true,"lang":"und","weight":"-10"}
+----Edit {"url":"admin\/structure\/mini-panels\/list\/%\/edit","hidden":true,"lang":"und","weight":"-10"}
+----Export {"url":"admin\/structure\/mini-panels\/list\/%\/export","hidden":true,"lang":"und","weight":"0"}
+---Settings {"url":"admin\/structure\/mini-panels\/settings","hidden":true,"lang":"und","weight":"0"}
+--Quicktabs {"url":"admin\/structure\/quicktabs","description":"Create blocks of tabbed content.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Add Quicktabs Instance {"url":"admin\/structure\/quicktabs\/add","hidden":true,"lang":"und","weight":"0"}
+---List quicktabs {"url":"admin\/structure\/quicktabs\/list","hidden":true,"lang":"und","weight":"0"}
+---Edit quicktab {"url":"admin\/structure\/quicktabs\/manage\/%","lang":"und","weight":"0"}
+----Clone quicktab {"url":"admin\/structure\/quicktabs\/manage\/%\/clone","hidden":true,"lang":"und","weight":"0"}
+----Delete quicktab {"url":"admin\/structure\/quicktabs\/manage\/%\/delete","hidden":true,"lang":"und","weight":"0"}
+----Edit quicktab {"url":"admin\/structure\/quicktabs\/manage\/%\/edit","hidden":true,"lang":"und","weight":"0"}
+----Export {"url":"admin\/structure\/quicktabs\/manage\/%\/export","hidden":true,"lang":"und","weight":"0"}
+---Styles {"url":"admin\/structure\/quicktabs\/styles","hidden":true,"lang":"und","weight":"0"}
+--Field dependencies {"url":"admin\/structure\/dependencies","description":"Administer field dependencies for the site.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}
+---Archivo {"url":"admin\/structure\/dependencies\/file","hidden":true,"lang":"und","weight":"2"}
+---Bloque {"url":"admin\/structure\/dependencies\/bean","hidden":true,"lang":"und","weight":"2"}
+---Comentario {"url":"admin\/structure\/dependencies\/comment","hidden":true,"lang":"und","weight":"2"}
+---Field collection item {"url":"admin\/structure\/dependencies\/field_collection_item","hidden":true,"lang":"und","weight":"2"}
+---Nodo {"url":"admin\/structure\/dependencies\/node","hidden":true,"lang":"und","weight":"2"}
+---Overview {"url":"admin\/structure\/dependencies\/overview","hidden":true,"lang":"und","weight":"1"}
+---Rules configuration {"url":"admin\/structure\/dependencies\/rules_config","hidden":true,"lang":"und","weight":"2"}
+---Término de taxonomía {"url":"admin\/structure\/dependencies\/taxonomy_term","hidden":true,"lang":"und","weight":"2"}
+---Usuario {"url":"admin\/structure\/dependencies\/user","hidden":true,"lang":"und","weight":"2"}
+---Delete dependency {"url":"admin\/structure\/dependencies\/delete\/%","lang":"und","weight":"0"}
+---Edit dependency {"url":"admin\/structure\/dependencies\/edit\/%","lang":"und","weight":"0"}
+-Tasks {"url":"admin\/tasks","hidden":true,"lang":"und","weight":"-20"}
+-Dashboard {"url":"admin\/dashboard","description":"View and customize your dashboard.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"-15"}
+--Configure available dashboard blocks {"url":"admin\/dashboard\/configure","description":"Configure which blocks can be shown on the dashboard.","hidden":true,"lang":"und","weight":"0"}
+--Customize dashboard {"url":"admin\/dashboard\/customize","description":"Customize your dashboard.","hidden":true,"lang":"und","weight":"0"}
+-Help {"url":"admin\/help","description":"Reference for usage, configuration, and modules.","expanded":true,"lang":"und","options":{"item_attributes":{"id":"","class":"","style":""}},"weight":"9"}
+--admin_menu {"url":"admin\/help\/admin_menu","hidden":true,"lang":"und","weight":"0"}
+--block {"url":"admin\/help\/block","hidden":true,"lang":"und","weight":"0"}
+--color {"url":"admin\/help\/color","hidden":true,"lang":"und","weight":"0"}
+--comment {"url":"admin\/help\/comment","hidden":true,"lang":"und","weight":"0"}
+--contextual {"url":"admin\/help\/contextual","hidden":true,"lang":"und","weight":"0"}
+--dashboard {"url":"admin\/help\/dashboard","hidden":true,"lang":"und","weight":"0"}
+--field {"url":"admin\/help\/field","hidden":true,"lang":"und","weight":"0"}
+--field_sql_storage {"url":"admin\/help\/field_sql_storage","hidden":true,"lang":"und","weight":"0"}
+--file {"url":"admin\/help\/file","hidden":true,"lang":"und","weight":"0"}
+--filter {"url":"admin\/help\/filter","hidden":true,"lang":"und","weight":"0"}
+--help {"url":"admin\/help\/help","hidden":true,"lang":"und","weight":"0"}
+--image {"url":"admin\/help\/image","hidden":true,"lang":"und","weight":"0"}
+--list {"url":"admin\/help\/list","hidden":true,"lang":"und","weight":"0"}
+--menu {"url":"admin\/help\/menu","hidden":true,"lang":"und","weight":"0"}
+--node {"url":"admin\/help\/node","hidden":true,"lang":"und","weight":"0"}
+--options {"url":"admin\/help\/options","hidden":true,"lang":"und","weight":"0"}
+--system {"url":"admin\/help\/system","hidden":true,"lang":"und","weight":"0"}
+--text {"url":"admin\/help\/text","hidden":true,"lang":"und","weight":"0"}
+--user {"url":"admin\/help\/user","hidden":true,"lang":"und","weight":"0"}
+--dblog {"url":"admin\/help\/dblog","hidden":true,"lang":"und","weight":"0"}
+--number {"url":"admin\/help\/number","hidden":true,"lang":"und","weight":"0"}
+--path {"url":"admin\/help\/path","hidden":true,"lang":"und","weight":"0"}
+--search {"url":"admin\/help\/search","hidden":true,"lang":"und","weight":"0"}
+--shortcut {"url":"admin\/help\/shortcut","hidden":true,"lang":"und","weight":"0"}
+--taxonomy {"url":"admin\/help\/taxonomy","hidden":true,"lang":"und","weight":"0"}
+--features {"url":"admin\/help\/features","hidden":true,"lang":"und","weight":"0"}
+--field_ui {"url":"admin\/help\/field_ui","hidden":true,"lang":"und","weight":"0"}
+--jquery_update {"url":"admin\/help\/jquery_update","hidden":true,"lang":"und","weight":"0"}
+--lang_dropdown {"url":"admin\/help\/lang_dropdown","hidden":true,"lang":"und","weight":"0"}
+--libraries {"url":"admin\/help\/libraries","hidden":true,"lang":"und","weight":"0"}
+--ckeditor {"url":"admin\/help\/ckeditor","hidden":true,"lang":"und","weight":"0"}
+--link {"url":"admin\/help\/link","hidden":true,"lang":"und","weight":"0"}
+--locale {"url":"admin\/help\/locale","hidden":true,"lang":"und","weight":"0"}
+--pathauto {"url":"admin\/help\/pathauto","hidden":true,"lang":"und","weight":"0"}
+--rdf {"url":"admin\/help\/rdf","hidden":true,"lang":"und","weight":"0"}
+--smtp {"url":"admin\/help\/smtp","hidden":true,"lang":"und","weight":"0"}
+--token {"url":"admin\/help\/token","hidden":true,"lang":"und","weight":"0"}
+--calendar {"url":"admin\/help\/calendar","hidden":true,"lang":"und","weight":"0"}
+--date {"url":"admin\/help\/date","hidden":true,"lang":"und","weight":"0"}
+--field_collection {"url":"admin\/help\/field_collection","hidden":true,"lang":"und","weight":"0"}
+--rules {"url":"admin\/help\/rules","hidden":true,"lang":"und","weight":"0"}
+--views {"url":"admin\/help\/views","hidden":true,"lang":"und","weight":"0"}
+--views_accordion {"url":"admin\/help\/views_accordion","hidden":true,"lang":"und","weight":"0"}
+--views_slideshow {"url":"admin\/help\/views_slideshow","hidden":true,"lang":"und","weight":"0"}
+--views_slideshow_cycle {"url":"admin\/help\/views_slideshow_cycle","hidden":true,"lang":"und","weight":"0"}
+--views_ui {"url":"admin\/help\/views_ui","hidden":true,"lang":"und","weight":"0"}
+--update {"url":"admin\/help\/update","hidden":true,"lang":"und","weight":"0"}
+--devel {"url":"admin\/help\/devel","hidden":true,"lang":"und","weight":"0"}
+--views_slideshow_swiper {"url":"admin\/help\/views_slideshow_swiper","hidden":true,"lang":"und","weight":"0"}
+--menu_import {"url":"admin\/help\/menu_import","hidden":true,"lang":"und","weight":"0"}
+--title {"url":"admin\/help\/title","hidden":true,"lang":"und","weight":"0"}
+--file_entity {"url":"admin\/help\/file_entity","hidden":true,"lang":"und","weight":"0"}
+--media {"url":"admin\/help\/media","hidden":true,"lang":"und","weight":"0"}
+--location {"url":"admin\/help\/location","hidden":true,"lang":"und","weight":"0"}
+--quicktabs {"url":"admin\/help\/quicktabs","hidden":true,"lang":"und","weight":"0"}
+--statistics {"url":"admin\/help\/statistics","hidden":true,"lang":"und","weight":"0"}
+--hierarchical_select {"url":"admin\/help\/hierarchical_select","hidden":true,"lang":"und","weight":"0"}
+--google_cse {"url":"admin\/help\/google_cse","hidden":true,"lang":"und","weight":"0"}
+--metatag {"url":"admin\/help\/metatag","hidden":true,"lang":"und","weight":"0"}
+--taxonomy_csv {"url":"admin\/help\/taxonomy_csv","hidden":true,"lang":"und","weight":"0"}
+--i18n {"url":"admin\/help\/i18n","hidden":true,"lang":"und","weight":"0"}
+--views_slidershow_features_slider {"url":"admin\/help\/views_slidershow_features_slider","hidden":true,"lang":"und","weight":"0"}
+--easy_breadcrumb {"url":"admin\/help\/easy_breadcrumb","hidden":true,"lang":"und","weight":"0"}
+--backup_migrate {"url":"admin\/help\/backup_migrate","hidden":true,"lang":"und","weight":"0"}
+--i18n_menu {"url":"admin\/help\/i18n_menu","hidden":true,"lang":"und","weight":"0"}
+--i18n_string {"url":"admin\/help\/i18n_string","hidden":true,"lang":"und","weight":"0"}
+- {"url":"admin\/field\/edit\/%\/%\/%","lang":"und","weight":"0"}
