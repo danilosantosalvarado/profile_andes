@@ -11097,6 +11097,7 @@ header {
     height: auto;
     max-height: 48px;
     display: block;
+    fill: #fff;
   }
   header .container-fluid .navbar-header .wrapper-header-color {
     height: 60px;
