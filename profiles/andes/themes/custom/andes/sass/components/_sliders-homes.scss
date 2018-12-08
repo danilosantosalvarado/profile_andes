@@ -42,6 +42,9 @@
 			}
 		}
 	}
+	.slider-homes-empty {
+		display: none;
+	}
 	//imagen slider destock
 	.cl-slider-homes-layout-one,
 	.cl-slider-homes-layout-two,
@@ -418,16 +421,16 @@
 			position: relative;
 			@include respond-to(xl) {
 				&:hover {
-					.swiper-home-next,
-					.swiper-home-prev{
+					.swiper-button-next,
+					.swiper-button-prev {
 						display: block;
 					}
 				}
 			}
 		}
 		// Flechas de paginacion
-		.swiper-home-next,
-		.swiper-home-prev {
+		.swiper-button-next,
+		.swiper-button-prev {
 			width: 40px;
 			height: 40px;
 			display: none;
@@ -440,13 +443,13 @@
 				outline: none;
 			}
 		}
-		.swiper-home-prev {
+		.swiper-button-prev {
 			left: 2%;
 			right: auto;
 			margin-top: -20px;
 			background: url('../img/Icon/arrow-slide-prev.png') no-repeat center;
 		}
-		.swiper-home-next {
+		.swiper-button-next {
 			right: 2%;
 			left: auto;
 			margin-top: -20px;
@@ -664,6 +667,57 @@
 						background: color('grey-dark');
 						color: color('white');
 					}
+				}
+			}
+		}
+	}
+}
+/* ------| bullest nodos internos carga de imagenes |----- */
+.view-banner-nodes {
+	.skin-default{
+		.views_slideshow_main {
+			position: relative;
+		}
+		.pagination-wrap {
+			position: relative;
+			left: 0;
+			right: 0;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.swiper-pagination-banner-nodes {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			left: 0;
+			right: 0;
+			padding: 15px 0;
+			padding-top: 40px;
+			box-sizing: border-box;
+			z-index: 1;
+			.swiper-pagination-bullet {
+				width: 140px;
+				height: 78px;
+				border: none;
+				border-radius: 0;
+				padding: 0;
+				margin: 0 5px;
+				background: black;
+				opacity: 0.8;
+				overflow: hidden;
+				box-sizing: border-box;
+				&-active {
+					opacity: 1;
+				}
+				&:focus {
+					outline: none;
+				}
+				img {
+					object-fit: cover;
+					min-width: 100%;
+					max-width: auto;
+					min-height: 100%;
 				}
 			}
 		}
