@@ -684,7 +684,8 @@
 			right: 0;
 			text-align: center;
 			white-space: nowrap;
-			overflow: hidden;
+			// overflow: hidden;
+			overflow-x: overlay;
 		}
 		.swiper-pagination-banner-nodes {
 			position: relative;

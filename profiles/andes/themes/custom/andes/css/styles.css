@@ -4644,7 +4644,7 @@ h1.page-header {
   right: 0;
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: overlay;
 }
 
 .view-banner-nodes .skin-default .swiper-pagination-banner-nodes {
