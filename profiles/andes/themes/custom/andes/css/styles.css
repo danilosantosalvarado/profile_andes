@@ -7259,7 +7259,12 @@ h1.page-header {
 //------------------------------------------------------------------------------
 */
 .pane-udla-simplified-social-share h2 {
-  display: none;
+  font-size: .89rem;
+  margin: 10px auto 0;
+  border-top: 1px solid #ddd;
+  max-width: 1170px;
+  text-transform: capitalize;
+  padding-top: 15px;
 }
 
 .views_slideshow_main .social-network-list.align-social-horizontal {
@@ -7274,18 +7279,19 @@ h1.page-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 15px;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
+  padding-left: 0;
 }
 
 .social-network-list.align-social-horizontal li {
+  width: 30px;
   cursor: pointer;
 }
 
