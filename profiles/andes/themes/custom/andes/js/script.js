@@ -82,8 +82,8 @@
 			var container_arrows = jQuery('.container-arrows').find('.slider-pricipal-node');
 			console.log(container_arrows);
 		if(container_arrows.length > 0) {
-			$('.container-arrows .slider-pricipal-node .swiper-home-prev').appendTo('.container-arrows .skin-default');
-			$('.container-arrows .slider-pricipal-node .swiper-home-next').appendTo('.container-arrows .skin-default');
+			$('.container-arrows .slider-pricipal-node .swiper-button-prev').appendTo('.container-arrows .skin-default');
+			$('.container-arrows .slider-pricipal-node .swiper-button-next').appendTo('.container-arrows .skin-default');
 		}
 	}
 
