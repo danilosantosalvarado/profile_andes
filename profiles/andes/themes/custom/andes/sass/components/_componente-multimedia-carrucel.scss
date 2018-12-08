@@ -21,6 +21,7 @@
 			height: 465px !important;
 			margin: 0 auto;
 			width: 100%;
+			background-color: color('grey-secundary');
 			@include respond-to(xl){
 				width: 80% !important;
 				max-width: 1000px;
@@ -150,6 +151,7 @@
 					top: 0;
 					bottom: 0;
 					right: 0;
+					background-color: color('yellow-defaul');
 
 					img  {
 						position: absolute;
