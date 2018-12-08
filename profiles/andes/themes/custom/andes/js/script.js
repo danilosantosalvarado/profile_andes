@@ -11,7 +11,7 @@
 	//funcion redes sociales vertical scroll interna de eventos.
 	$(window).ready(function() {
 
-
+		bulletsContainerArrows();
 		activeEquipo();
 
 		var a = $(window).width();
@@ -75,6 +75,16 @@
 	function activeEquipo(){
 		var u = String( decodeURI(window.location.href));
 		$('.view-componente-equipo-trabajo').find('a[href="'+u+'"]').addClass('team-active');
+	}
+
+	// slider principal si tiene la clase container-arrows mueva las flechas fuera del wrapper
+	function bulletsContainerArrows() {
+			var container_arrows = jQuery('.container-arrows').find('.slider-pricipal-node');
+			console.log(container_arrows);
+		if(container_arrows.length > 0) {
+			$('.container-arrows .slider-pricipal-node .swiper-home-prev').appendTo('.container-arrows .skin-default');
+			$('.container-arrows .slider-pricipal-node .swiper-home-next').appendTo('.container-arrows .skin-default');
+		}
 	}
 
 	function socialMobile(){

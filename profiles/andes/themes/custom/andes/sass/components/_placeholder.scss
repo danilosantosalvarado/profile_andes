@@ -87,6 +87,7 @@
   color: color('white');
   text-align: center;
   @include margin (1 0);
+  line-height: normal;
   text-overflow: ellipsis;
   @include respond-to(m) {
     text-align: left;

@@ -12,13 +12,9 @@
 
 /* ------| Slider Home|----- */
 .slider-pricipal-node.views_slideshow_swiper-processed {
-	overflow: initial;
-	// .swiper-slide {
-	// 	display: none;
-	// }
-	// .swiper-slide-active {
-	// 	display: block;
-	// }
+	.swiper-wrapper {
+		margin: 0px;
+	}
 	.views-field.views-field-views-conditional {
 		width: 100%;
 	}
@@ -90,8 +86,6 @@
 		}
 	}
 }
-
-
 /* ------| Defail titulo, body buttom |----- */
 .slider-pricipal-node {
 	&.views_slideshow_main {
@@ -251,7 +245,7 @@
 					color: color('white');
 					text-align: center;
 					line-height: normal;
-					padding: 10px 0 0;
+					padding: 0px;
 					margin: 0px;
 				}
 			}
@@ -415,9 +409,8 @@
 		}
 	}
 }
-
 /* ------| Bullest & Flechas |----- */
-.slider-pricipal-node{
+.slider-pricipal-node {
 	// main swiper
 	// .skin-default {
 		// hover para visualzir las imagenes
@@ -543,19 +536,35 @@
 }
 /* ------| Flechas de cuando esta container |----- */
 .container-arrows {
+	.slider-pricipal-node {
+		width: 100%;
+		@include respond-to(xs) {
+		width: 90%;
+		}
+		margin: 0px auto;
+	}
 	// Flechas de paginacion
 	.swiper-home-next,
 	.swiper-home-prev {
-		display: block !important;
+		width: 45px;
+		height: 45px;
+		display: none;
+		@include respond-to(xl) {
+			display: block !important;
+		}
+		@include respond-to(xxxl) {
+			width: 50px;
+			height: 50px;
+		}
 	}
 	.swiper-home-prev {
-		left: -2%;
+		left: 1.3%;
 		right: auto;
 		margin-top: -20px;
 		background: url('../img/Icon/arrow_left.png') no-repeat center;
 	}
 	.swiper-home-next {
-		right: -2%;
+		right: 1.3%;
 		left: auto;
 		margin-top: -20px;
 		background: url('../img/Icon/arrow_right.png') no-repeat center;
