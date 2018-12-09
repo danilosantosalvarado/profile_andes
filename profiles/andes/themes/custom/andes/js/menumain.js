@@ -54,8 +54,10 @@
           if ($(window).width() > 992) {
             //initDesktopMenu();
             clearItemsfromMobile();
+            $('.wrapper-buscar-menu').hide();
           }
           else{
+            $('.wrapper-buscar-menu').show();
             initMobileMenu();
           }
           resizeGoToInstitucional();
