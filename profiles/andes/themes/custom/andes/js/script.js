@@ -571,7 +571,7 @@
 			$('body').toggleClass('scroll-off');
 		});
 	});
-	setTimeout(function(){if($('.view-componente-acordeon .quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
+	setTimeout(function(){if($('.view-componente-acordeon 	.quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
 	function quickTabsSlide(){
 		var $parent = $('.quicktabs-wrapper').parents('.view');
 		var $containerQuick = $parent.find('.quicktabs-wrapper').prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
@@ -599,5 +599,36 @@
 			}
 		});
 	}
-
+	//view-componente-enlaces-item
+	setTimeout(function(){if($('.view-componente-enlaces-item').length > 0){componentEnlacesSlide();} },1000);
+	function componentEnlacesSlide(){
+		var $parent = $('.view-componente-enlaces-item').find('.view');
+		var $containerItems = $('.view-componente-enlaces-item').find('.view-content').parent().prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
+		var $element = $('.view-componente-enlaces-item').find('.view-content'); 	
+		var $containerEl = $element.width();
+		var $items = $element.find('.views-row').length;
+		var $itemsWidth = $element.find('.views-row').outerWidth(true);
+		var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
+		var $counterData = 0;
+		$containerItems.find('.next-pagination').on('click',function(e){
+			e.preventDefault();
+			if($counterData >= 0 && $counterData < $numberOnclick){
+				$counterData++;
+				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+			}
+			if($counterData >= $numberOnclick){
+			$counterData--;
+			}
+		});
+		$containerItems.find('.prev-pagination').on('click',function(e){
+			e.preventDefault();
+			if($counterData > 0 && $counterData < $numberOnclick){
+				$counterData--;
+				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+			}
+		});
+		//$containerItems.find('.views-row');
+		console.log($containerEl);
+		console.log($itemsWidth);
+	}
 }(jQuery));
