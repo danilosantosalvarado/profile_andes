@@ -571,7 +571,7 @@
 			$('body').toggleClass('scroll-off');
 		});
 	});
-	setTimeout(function(){if($('.quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
+	setTimeout(function(){if($('.view-componente-acordeon .quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
 	function quickTabsSlide(){
 		var $parent = $('.quicktabs-wrapper').parents('.view');
 		var $containerQuick = $parent.find('.quicktabs-wrapper').prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
