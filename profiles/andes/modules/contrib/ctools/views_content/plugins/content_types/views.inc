@@ -203,6 +203,17 @@ function views_content_views_content_type_render($subtype, $conf, $panel_args, $
     return;
   }
 
+  // Add contextual links to the correct link locations
+  // for the view's plugin type.
+  $views_plugin = views_fetch_plugin_data('display', $view->display[$conf['display']]->display_plugin);
+  if (!empty($views_plugin['contextual links locations'])) {
+    $block = (array) $block;
+    foreach ($views_plugin['contextual links locations'] as $location) {
+      views_add_block_contextual_links($block, $view, $view->current_display, $location);
+    }
+    $block = (object) $block;
+  }
+
   if (!empty($conf['feed_icons'])) {
     $new_feeds = drupal_add_feed();
     if ($diff = array_diff(array_keys($new_feeds), array_keys($stored_feeds))) {
