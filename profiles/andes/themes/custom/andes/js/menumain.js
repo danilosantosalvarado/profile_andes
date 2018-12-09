@@ -32,6 +32,25 @@
             }
           });
         }
+
+        /*  used for items svgs */
+        var contentLength = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content div.views-row').length;
+        if(contentLength == 1){
+          $('.navbar-header button').wrapAll("<div class='wrapper-header-color' />");
+          var content = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .views-row .field-content').html();
+          $('.wrapper-header-color').prepend(content);
+        }else if(contentLength == 2){
+          $('.navbar-header button').wrapAll("<div class='wrapper-header-color' />");
+          var content = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .field-content').first().html();
+          $('.wrapper-header-color').prepend(content);
+          $('.navbar-header').prepend("<div class='wrapper-header-up' />");
+          var contentb = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .views-row .field-content').last().html();
+          $('.wrapper-header-up').prepend(contentb);
+        }
+        $selectTopSoyItems =$('.wrapper-menu-soy li.level-1').not('.dropdown').not('.menu-destacado');
+        $secondSelect = $('#block-lang-dropdown-language');
+        $('.wrapper-menu-soy').append('<div class="container-select-language"><span class="title-language">'+Drupal.t($secondSelect.find('.block-title').text())+'</span>'+$secondSelect.find('form').parent().html()+'</div>');
+        $('.navbar-header').addClass(Drupal.settings.udla_blocks_alter.background_color_change);
       });
       /* ----| Select clone of language change |----*/
       $(window).resize(function(event) {
@@ -373,23 +392,7 @@
             }
           });
         }
-        var contentLength = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content div.views-row').length;
-        if(contentLength == 1){
-          $('.navbar-header button').wrapAll("<div class='wrapper-header-color' />");
-          var content = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .views-row .field-content').html();
-          $('.wrapper-header-color').prepend(content);
-        }else if(contentLength == 2){
-          $('.navbar-header button').wrapAll("<div class='wrapper-header-color' />");
-          var content = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .field-content').first().html();
-          $('.wrapper-header-color').prepend(content);
-          $('.navbar-header').prepend("<div class='wrapper-header-up' />");
-          var contentb = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .views-row .field-content').last().html();
-          $('.wrapper-header-up').prepend(contentb);
-        }
-        $selectTopSoyItems =$('.wrapper-menu-soy li.level-1').not('.dropdown').not('.menu-destacado');
-        $secondSelect = $('#block-lang-dropdown-language');
-        $('.wrapper-menu-soy').append('<div class="container-select-language"><span class="title-language">'+Drupal.t($secondSelect.find('.block-title').text())+'</span>'+$secondSelect.find('form').parent().html()+'</div>');
-        $('.navbar-header').addClass(Drupal.settings.udla_blocks_alter.background_color_change);
+
 
         $.each( $selectTopSoyItems, function( k, v ) {
           console.log(k);
