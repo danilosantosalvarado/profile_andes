@@ -27,6 +27,7 @@
         initMobileMenu();
         getEventsClickMobile();
         clearItemsfromMobile();
+        resizeGoToInstitucional();
         $('.container-language').click(function(e) {
           e.stopPropagation();
           if($('.select-options').hasClass('active')){
