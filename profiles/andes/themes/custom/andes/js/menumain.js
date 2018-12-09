@@ -1,6 +1,38 @@
 (function ($) {
   Drupal.behaviors.menuMain = {
     attach: function (context, settings) {
+      var docWidth = $(document).width(),
+      $dataId = 0,
+      $levelNow = 0;
+      /* ----| End Select clone of language change |----*/
+      var $level1 = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0 > li.level-1 > a'),
+      $level1TopSoy = $('.tb-megamenu-menu-menu-top-soy .always-show ul.level-0 > li.level-1 > a'),
+      $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
+
+      $('.region-navigation', context).once('mainmenu-behavior', function () {
+        /* wrapper para area segura  */
+        $(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
+        $(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
+        $("#block-google-cse-google-cse.menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
+        $(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
+        $(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
+        $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
+        /*  add buscador */
+        if (!$('.mega-menu-2').hasClass('barra-buscar')) {
+          $('.wrapper-mega-menu .nav-collapse').parent().append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
+          $('.wrapper-buscar-menu').hide();
+          $(".barra-buscar").click(function ()    {
+            $(this).toggleClass('icon-close');
+            $('.wrapper-buscar-menu').toggleClass('active');
+            $('#block-google-cse-google-cse').toggleClass("buscador-open");
+            if(jQuery('.buscador-open').length > 0){
+              $('.wrapper-buscar-menu').slideDown('slow');
+            }else{
+              $('.wrapper-buscar-menu').slideUp('slow');
+            }
+          });
+        }
+      });
       /* ----| Select clone of language change |----*/
       $(window).resize(function(event) {
         //$('.level-1').addClass('open');
@@ -62,20 +94,6 @@
         });
       }
       /* ----| End Select clone of language change |----*/
-      var docWidth = $(document).width(),
-      $dataId = 0,
-      $levelNow = 0,
-      $level1 = $('.tb-megamenu-menu-mega-menu .always-show ul.level-0 > li.level-1 > a'),
-      $level1TopSoy = $('.tb-megamenu-menu-menu-top-soy .always-show ul.level-0 > li.level-1 > a'),
-      $itemsNivel2 = $('.tb-megamenu-item.level-2.dropdown-submenu a.dropdown-toggle');
-      /* wrapper para area segura  */
-      $(".menu-soy-1").wrapAll("<div class='wrapper-menu-soy' />");
-      $(".mega-menu-2").wrapAll("<div class='wrapper-mega-menu' />");
-      $("#block-google-cse-google-cse.menu-buscar").wrapAll("<div class='wrapper-buscar-menu' />");
-      $(".wrapper-menu-soy .menu-soy-1").wrapAll("<div class='container' />");
-      $(".wrapper-mega-menu .mega-menu-2").wrapAll("<div class='container' />");
-      $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
-
       /* Scroll menu cambio de color */
       $(window).scroll(function (event) {
         let scroll = $(window).scrollTop(),
@@ -111,21 +129,6 @@
         $height_menu = $menu_admin+$menuTopSoy+$menuMegaMenu;
         $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
 
-        /*  add buscador */
-        if (!$('.block-tb-megamenu.mega-menu-2').hasClass('barra-buscar')) {
-          $('.wrapper-mega-menu .nav-collapse').parent().append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
-          $('.wrapper-buscar-menu').hide();
-          $(".barra-buscar").click(function () {
-            $(this).toggleClass('icon-close');
-            $('.wrapper-buscar-menu').toggleClass('active');
-            $('#block-google-cse-google-cse').toggleClass("buscador-open");
-            if(jQuery('.buscador-open').length > 0){
-              $('.wrapper-buscar-menu').slideDown('slow');
-            }else{
-              $('.wrapper-buscar-menu').slideUp('slow');
-            }
-          });
-        }
         clone_select();
         $level1.hover(
           function () {
