@@ -65,16 +65,21 @@
     height: 1px;
     position: absolute;
     display: block;
-    top: 39%;
+    top: 49%;
     background: color('grey-dark');
   }
   .view-content {
     padding: 10px 0;
-    margin: 0 auto;
+    margin: 0 21px;
     text-align: center;
     overflow-x: scroll;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+      @include respond-to(xl) {
+        justify-content: center;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
     .views-row {
       display: inline-block;
       position: relative;

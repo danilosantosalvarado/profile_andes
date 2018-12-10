@@ -152,7 +152,7 @@
 .vertical-carrusel{
 	.view-content{
 		.views_slideshow_swiper_main{
-			position: initial;
+			position: static;
 			margin-bottom: 40px;
 			ul{
 				margin-bottom: 29px;
@@ -311,7 +311,7 @@
 	}
 }
 
-.view-home-noticias{
+.view-home-noticias, .view-home-multimedia{
 	.view-componente-noticias-item{
 		.view-content{
 			min-height: 50vw;

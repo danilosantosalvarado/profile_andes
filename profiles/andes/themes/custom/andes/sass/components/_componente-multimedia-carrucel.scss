@@ -174,8 +174,12 @@
 
 
 .tooltip.carrusel-multimedia{
-	margin: -20px 15px 3px;
-	opacity: 1;
+	margin: -20px 0px 3px;
+	@media screen and (max-width: 666px){
+		left: 0% !important;
+		margin: -20px 15px 3px;
+		width: 100%;
+	}
 	.tooltip-arrow{
 		margin-left: -20px;
 		border-left: 20px solid transparent;
@@ -202,6 +206,9 @@
 		}
 		&:first-letter{
 			text-transform: uppercase;
+		}
+		@media screen and (max-width: 666px){
+			max-width: 500px;
 		}
 		@include respond-to(xl){
 			margin: 20px auto;
