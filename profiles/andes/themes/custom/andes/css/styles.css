@@ -3458,24 +3458,8 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   position: relative;
 }
 
-body > .main-container.container-fluid {
-  margin-top: 0px;
-}
-
-@media (min-width: 992px) {
-  body > .main-container.container-fluid {
-    margin-top: 110px;
-  }
-}
-
-body.logged-in > .main-container.container-fluid {
-  margin-top: 0px;
-}
-
-@media (min-width: 992px) {
-  body.logged-in > .main-container.container-fluid {
-    margin-top: 139px;
-  }
+html body.admin-menu {
+  margin: 0px !important;
 }
 
 .inside {
