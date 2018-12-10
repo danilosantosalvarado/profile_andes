@@ -11404,6 +11404,15 @@ header {
     padding: 0px;
     position: initial;
   }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  header .region-navigation .menu-container-data {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
   .tb-megamenu {
     background-color: transparent;
   }

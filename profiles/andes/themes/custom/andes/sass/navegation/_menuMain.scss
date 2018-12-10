@@ -507,6 +507,11 @@ header {
         padding: 0px;
         position: initial;
       }
+      .menu-container-data{
+        @include respond-to(xl){
+          display: none;
+        }
+      }
     }
   }
   // /* ----| Reset menu |----*/
