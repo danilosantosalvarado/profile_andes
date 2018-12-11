@@ -57,7 +57,7 @@
           if ($(window).width() > 992) {
             //initDesktopMenu();
             clearItemsfromMobile();
-            $('.wrapper-buscar-menu').hide();
+            //$('.wrapper-buscar-menu').hide();
           }
           else{
             $('.wrapper-buscar-menu').show();
@@ -89,13 +89,14 @@
         function initDesktopMenu(){
           menu = $('.navbar-header');
           menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
-          //setTimeout(function(){
-            var $menu_admin = ($('#admin-menu-wrapper').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
-            var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
-            var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
-            $height_menu = $menuMegaMenu + $menu_admin-$searchData;
+          
+          var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
+          var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
+          setTimeout(function(){
+            var $menu_admin = ($('#admin-menu').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
+            $height_menu = $menuMegaMenu + $menu_admin;
             $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
-         // },900);
+          },900);
 
           $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
           cloneSelect();
