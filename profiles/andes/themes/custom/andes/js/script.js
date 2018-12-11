@@ -80,7 +80,6 @@
 	// slider principal si tiene la clase container-arrows mueva las flechas fuera del wrapper
 	function bulletsContainerArrows() {
 			var container_arrows = jQuery('.container-arrows').find('.slider-pricipal-node');
-			console.log(container_arrows);
 		if(container_arrows.length > 0) {
 			$('.container-arrows .slider-pricipal-node .swiper-button-prev').appendTo('.container-arrows .skin-default');
 			$('.container-arrows .slider-pricipal-node .swiper-button-next').appendTo('.container-arrows .skin-default');
@@ -627,8 +626,33 @@
 				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
 			}
 		});
-		//$containerItems.find('.views-row');
-		console.log($containerEl);
-		console.log($itemsWidth);
 	}
+	setTimeout(function(){if($('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').length > 0){componentPagersSwyper();} },1000);
+	function componentPagersSwyper(){
+		var $parent = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views-slideshow-controls-bottom');
+		var $containerQuick = $parent.prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
+		var $element = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views_slideshow_pager_field'); 
+		var $containerEl = $element.width();
+		var $items = $element.find('.views-slideshow-pager-field-item').length;
+		var $itemsWidth = $element.find('.views-slideshow-pager-field-item').outerWidth(true);
+		var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
+		var $counterData = 0;
+		$parent.find('.next-pagination').on('click',function(e){
+			e.preventDefault();
+			if($counterData >= 0 && $counterData < $numberOnclick){
+				$counterData++;
+				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+			}
+			if($counterData >0 && $counterData >= $numberOnclick){
+				$counterData--;
+			}
+		});
+		$parent.find('.prev-pagination').on('click',function(e){
+			e.preventDefault();
+			if($counterData > 0 && $counterData < $numberOnclick){
+				$counterData--;
+				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+			}
+		});
+	};
 }(jQuery));
