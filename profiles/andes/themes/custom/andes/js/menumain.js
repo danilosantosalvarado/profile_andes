@@ -92,7 +92,8 @@
           //setTimeout(function(){
             var $menu_admin = ($('#admin-menu-wrapper').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
             var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
-            $height_menu = $menuMegaMenu + $menu_admin;
+            var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
+            $height_menu = $menuMegaMenu + $menu_admin-$searchData;
             $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
          // },900);
 
@@ -262,15 +263,16 @@
                window.location.replace(Drupal.t(this.value));
             });
           }
+          if($(window).width() < 992){
+            $height_menu = $('.navbar-header').outerHeight();
+            $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
+            $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
 
-          $height_menu = $('.navbar-header').outerHeight();
-          $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
-          $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
-
-          if($('.navbar-header .wrapper-header-color').length >0){
-            $('body > div.container-fluid.main-container').css({'margin-top': $height_menu - 1 });
-          }else{
-            $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+            if($('.navbar-header .wrapper-header-color').length >0){
+              $('body > div.container-fluid.main-container').css({'margin-top': $height_menu - 1 });
+            }else{
+              $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop });
+            }
           }
 
 
