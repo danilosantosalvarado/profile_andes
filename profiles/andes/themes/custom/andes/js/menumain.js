@@ -26,7 +26,6 @@
         getEventsClickDesktop();
         initMobileMenu();
         getEventsClickMobile();
-        clearItemsfromMobile();
         resizeGoToInstitucional();
         $('.container-language').click(function(e) {
           e.stopPropagation();
@@ -59,6 +58,7 @@
           }
           else{
             $('.wrapper-buscar-menu').show();
+            clearItemsfromMobile();
             initMobileMenu();
           }
           resizeGoToInstitucional();
@@ -109,7 +109,7 @@
           if (!$('.mega-menu-2').hasClass('barra-buscar')) {
             $('.wrapper-mega-menu .nav-collapse').parent().append('<div class="barra-buscar mega-menu-2"><span>Cerrar</span></div>');
             $('.wrapper-buscar-menu').hide();
-            $(".barra-buscar").click(function ()    {
+            $(".barra-buscar").click(function () {
               $(this).toggleClass('icon-close');
               $('.wrapper-buscar-menu').toggleClass('active');
               $('#block-google-cse-google-cse').toggleClass("buscador-open");
@@ -157,27 +157,29 @@
         function colorChange(){
           /* Scroll menu cambio de color */
           $(window).scroll(function (event) {
-            let scroll = $(window).scrollTop(),
-                menu = $('.wrapper-mega-menu');
-            if ( Drupal.settings.udla_blocks_alter !== undefined) {
-              Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color !== undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
-              Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change !== undefined )? Drupal.settings.udla_blocks_alter.background_color_change : "";
-              Drupal.settings.udla_blocks_alter.text_color = (Drupal.settings.udla_blocks_alter.text_color !== undefined )? Drupal.settings.udla_blocks_alter.text_color : "";
-              if(Drupal.settings.udla_blocks_alter.text_color != ""){
-                $('.view-logos-header p svg path').css('fill', Drupal.settings.udla_blocks_alter.color_svg);
-                $('.view-logos-header .views-row-last').css('border-left-color', Drupal.settings.udla_blocks_alter.color_svg);
-              }
-              if($(window).width() < 992){
+            if($(window).width() > 992){
+              let scroll = $(window).scrollTop(),
+                  menu = $('.wrapper-mega-menu');
+              if ( Drupal.settings.udla_blocks_alter !== undefined) {
+                Drupal.settings.udla_blocks_alter.background_color = (Drupal.settings.udla_blocks_alter.background_color !== undefined) ? Drupal.settings.udla_blocks_alter.background_color : "";
+                Drupal.settings.udla_blocks_alter.background_color_change = (Drupal.settings.udla_blocks_alter.background_color_change !== undefined )? Drupal.settings.udla_blocks_alter.background_color_change : "";
+                Drupal.settings.udla_blocks_alter.text_color = (Drupal.settings.udla_blocks_alter.text_color !== undefined )? Drupal.settings.udla_blocks_alter.text_color : "";
+                if(Drupal.settings.udla_blocks_alter.text_color != ""){
+                  $('.view-logos-header p svg path').css('fill', Drupal.settings.udla_blocks_alter.color_svg);
+                  $('.view-logos-header .views-row-last').css('border-left-color', Drupal.settings.udla_blocks_alter.color_svg);
+                }
+                if($(window).width() < 992){
 
-              }
-              else if (scroll > 10) {
-                menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
-                menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
-                $(".barra-buscar").removeClass('cerrar');
-              }
-              else {
-                menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
-                menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
+                }
+                else if (scroll > 10) {
+                  menu.removeClass(Drupal.settings.udla_blocks_alter.background_color);
+                  menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
+                  $(".barra-buscar").removeClass('cerrar');
+                }
+                else {
+                  menu.removeClass(Drupal.settings.udla_blocks_alter.background_color_change);
+                  menu.addClass(Drupal.settings.udla_blocks_alter.background_color);
+                }
               }
             }
           });
@@ -298,18 +300,24 @@
         }
         function getEventsClickMobile(){
           $('.container-select-language select').on('change', function(){
-            $(this).parents('form').submit();
+            if($(window).width() < 992){
+              $(this).parents('form').submit();
+            }
           });
           $('.wrapper-header-color .navbar-toggle').on('click',function(){
-            $('body').toggleClass('active-menu');
-            if($(this).attr('aria-expanded') == undefined || $(this).attr('aria-expanded') == 'false'){
-              $(this).attr('aria-expanded',true);
-            }else{
-              $(this).attr('aria-expanded',false);
+            if($(window).width() < 992){
+              $('body').toggleClass('active-menu');
+              if($(this).attr('aria-expanded') == undefined || $(this).attr('aria-expanded') == 'false'){
+                $(this).attr('aria-expanded',true);
+              }else{
+                $(this).attr('aria-expanded',false);
+              }
             }
           });
           $('.select-top-soy').on('change',function(){
-             window.location.replace(Drupal.t(this.value));
+            if($(window).width() < 992){
+              window.location.replace(Drupal.t(this.value));
+            }
           });
           $level1.on('click',
             function (e) {
