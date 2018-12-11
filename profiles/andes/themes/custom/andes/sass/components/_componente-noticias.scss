@@ -26,6 +26,7 @@
 						}
 						.youtube-container--responsive {
 							padding-bottom: 62.25%;
+							background-color: color('black');
 						}
 					}
 					.box-content {
@@ -213,13 +214,9 @@
 	}
 }
 
+/* ------| componente noticias |----- */
 .view-componente-noticias{
 	.skin-default{
-		.views_slideshow_main{
-			position: relative;
-			width: 90%;
-			margin: 0 auto;
-		}
 		// controls
 		.swiper-news-hightlight-next,
 		.swiper-news-hightlight-prev{
@@ -229,6 +226,10 @@
 			top: 50%;
 			border: 1px solid #777;
 			background-size: 40px 40px;
+			display: none;
+			@include respond-to(xl){
+				display: block;
+			}
 			&:focus{
 				outline: none;
 			}
@@ -286,3 +287,4 @@
 		}
 	}
 }
+

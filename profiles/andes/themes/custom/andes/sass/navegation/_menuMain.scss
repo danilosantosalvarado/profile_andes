@@ -40,7 +40,7 @@ header {
       .wrapper-header-up {
         // height: 60px;
         background-color: black;
-        padding: 15px 0 0;
+        padding: 10px 0 5px;
         a {
           padding-right: 15px;
           padding-left: 15px;
@@ -52,6 +52,7 @@ header {
               height: auto;
               max-height: 48px;
               display: block;
+              fill: color('white');
             }
           }
         }
@@ -506,6 +507,11 @@ header {
         padding: 0px;
         position: initial;
       }
+      .menu-container-data{
+        @include respond-to(xl){
+          display: none;
+        }
+      }
     }
   }
   // /* ----| Reset menu |----*/
@@ -840,7 +846,7 @@ header {
       display: none !important;
     }
   }
-  .active-nivel-1,
+  
   .data-menu {
     display: none !important;
   }
@@ -1182,8 +1188,16 @@ header {
         }
       }
     }
-    // /* ----| Bloque buscar |---- */
-    .barra-buscar{
+  }
+
+  // /* ----| Bloque buscar |---- */
+  #block-tb-megamenu-menu-mega-menu{
+    float: right;
+    .block-title,
+    .contextual-links-wrapper{
+      display: none;
+    }  
+    .barra-buscar {
       span {
         width: 18px;
         height: 23px;
@@ -1202,6 +1216,7 @@ header {
       }
     }
   }
+
   // /* ----|  BuscarDestock |----*/
   .wrapper-buscar-menu {
     background: #fffefe;

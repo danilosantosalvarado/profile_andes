@@ -298,8 +298,19 @@
     }
   }
 }
-.panels-ipe-portlet-content, .view-contenido-equipo-de-trabajo{
-  .pane-content, .view-componente-equipo-trabajo{
+
+.view-contenido-equipo-de-trabajo{
+  .pane-content{
+    button{
+      @include respond-to(xl){
+        display: none;
+      }
+    }
+  }
+}
+
+.view-componente-equipo-trabajo{
+  .view-header{
     button{
       @include respond-to(xl){
         display: none;

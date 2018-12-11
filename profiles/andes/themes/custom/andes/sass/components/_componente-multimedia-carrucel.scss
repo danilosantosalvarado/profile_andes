@@ -7,6 +7,7 @@
 .pane-componente-carrusel-multimedia{
 	width: 100%;
 	padding: 0;
+	margin-bottom: 100px;
 	.pane-title{
 		padding: 0 15px;
 	}
@@ -17,12 +18,14 @@
 		overflow: hidden;
 		margin: 10px 0 20px;
 		.views-slideshow-cycle-main-frame {
-			height: 465px !important;
+			height: 50vw;
 			margin: 0 auto;
 			width: 100%;
+			background-color: color('grey-secundary');
 			@include respond-to(xl){
 				width: 80% !important;
 				max-width: 1000px;
+				height: 450px;
 			}
 			> div {
 				height: 100% !important;
@@ -149,6 +152,7 @@
 					top: 0;
 					bottom: 0;
 					right: 0;
+					background-color: color('yellow-defaul');
 
 					img  {
 						position: absolute;
@@ -170,28 +174,41 @@
 
 
 .tooltip.carrusel-multimedia{
-	margin: -20px 15px 3px;
-	opacity: 1;
+	margin: -20px 0px 3px;
+	@media screen and (max-width: 666px){
+		left: 0% !important;
+		margin: -20px 15px 3px;
+		width: 100%;
+	}
 	.tooltip-arrow{
-		margin-left: -25px;
-		border-left: 25px solid transparent;
-		border-right: 25px solid transparent;
-		border-bottom: 25px solid color('grey-light');
+		margin-left: -20px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid color('grey-light');
+		top: 6px;
 	}
 	.tooltip-inner{
-		max-width: 400px;
+		max-width: 300px;
 		margin: 20px auto;
 		width: 70%;
 		padding: 15px 10px 10px;
-		text-align: justify;
+		text-align: left;
 		background-color: color('grey-light');
 		font-family: $crimson-textroman;
-		font-size: 18px;
-		border-radius: 0;
+		font-size: 16px;
+		border-radius: 2px;;
 		min-width: 100px;
 		color: #000000;
-		p {
+		&:first-line {
 			color: #FDBD2C;
+			font-family: $latobold;
+			font-size: 18px;
+		}
+		&:first-letter{
+			text-transform: uppercase;
+		}
+		@media screen and (max-width: 666px){
+			max-width: 500px;
 		}
 		@include respond-to(xl){
 			margin: 20px auto;

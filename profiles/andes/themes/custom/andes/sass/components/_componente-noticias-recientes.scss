@@ -1,9 +1,4 @@
-/*
-//------------------------------------------------------------------------------
-// Componenete Noticias Recienetes
-//------------------------------------------------------------------------------
-*/
-
+/* ------| componente noticias recientes |----- */
 .view-display-id-noticias_recientes  {
 	padding-top: 40px;
 	padding-bottom: 60px;
@@ -157,20 +152,26 @@
 .vertical-carrusel{
 	.view-content{
 		.views_slideshow_swiper_main{
-			position: initial;
+			position: static;
 			margin-bottom: 40px;
 			ul{
 				margin-bottom: 29px;
 				.swiper-slide{
 					
-					.views-field-title{
+					.views-field-title,
+					.multimedia-titulo{
 						width: 60%;
 						margin-left: 40%;
+						spam, a{
+							color: color('grey-dark');
+							font-family: $crimson-semibold;
+						}
 						.field-content{
 							display: grid;
 						}
 					}
-					.views-field-body{
+					.views-field-body,
+					.multimedia-body{
 						width: 60%;
 						margin-left: 40%;
 						.field-content{
@@ -180,6 +181,9 @@
 					.views-field{
 						.view-content{
 							max-width: 416px;
+							max-height: 86px;
+							min-height: inherit;
+							height: 6vw;
 							margin: 0 auto;
 						}
 					}
@@ -224,7 +228,7 @@
 	}
 }
 
-.view-componente-noticias{	
+.view-componente-noticias, .swiper-container-vertical{	
 	.skin-default{
 		.pagination-wrap{
 			
@@ -244,7 +248,8 @@
 					background: #e34d1f;
 				}
 			}
-			bottom: 17px;
+			bottom: -13px;
+			margin-bottom: 25px;
 			@include respond-to(xl){
 				bottom: 0;
 				display: none;
@@ -257,9 +262,68 @@
 		@include respond-to(xl){
 			max-width: inherit;
 		}
+		.view-content{
+			height: 44vw;
+			background-color: color('grey-secundary');
+			@include respond-to(xxs){
+				height: 45vw;
+			}
+			@include respond-to(xs){
+				height: 38vw;
+			}
+			@include respond-to(s){
+				height: 33vw;
+			}
+			@include respond-to(m){
+				min-height: 195px;
+				height: auto;
+			}
+			@include respond-to(xl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxxl){
+				min-height: 147px;
+				height: auto;
+			}
+		}
 	}
 }
 
+.swiper-container-vertical{
+	.swiper-pagination-bullets{
+		display: none;
+	}
+}
+
+.view-display-id-multimedia_destacada_unica{
+	.view-componente-noticias-item{
+		.view-content{
+			@include respond-to(l){
+				min-height: 300px;
+				height: auto;
+			}
+		}
+	}
+}
+
+.view-home-noticias, .view-home-multimedia{
+	.view-componente-noticias-item{
+		.view-content{
+			min-height: 50vw;
+			background-color: color('black');
+			@include respond-to(xs){
+				min-height: 158px;
+				height: auto;
+			}
+		}
+	}
+}
 .pane-home-noticias-componente-noticia{
 	padding-bottom: 25px;
 }
+

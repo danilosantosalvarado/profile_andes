@@ -87,6 +87,7 @@
   color: color('white');
   text-align: center;
   @include margin (1 0);
+  line-height: normal;
   text-overflow: ellipsis;
   @include respond-to(m) {
     text-align: left;
@@ -148,26 +149,14 @@
   padding: 0;
   overflow-x: hidden;
 }
-
 .container {
   // overflow: hidden;
   position: relative;
 }
-
-body > .main-container.container-fluid {
-  margin-top: 0px;
-  @include respond-to(xl) {
-    margin-top: 110px;
-  }
+//cuando esta el administrador quita el espacio por default
+html body.admin-menu {
+  margin: 0px !important;
 }
-
-body.logged-in  > .main-container.container-fluid {
-  margin-top: 0px;
-  @include respond-to(xl) {
-    margin-top: 139px;
-  }
-}
-
 .inside {
   margin: 0 !important;
 	ul {

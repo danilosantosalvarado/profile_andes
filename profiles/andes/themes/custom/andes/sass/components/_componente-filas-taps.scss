@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-componente_acordeon {
+.view-id-componente_acordeon, .view-componente-enlaces-item {
   .quicktabs-tabs.quicktabs-style-nostyle {
     display: flex;
     overflow-x: scroll;
@@ -74,27 +74,34 @@
   }
   .quicktabs-style-nostyle{
     position: relative;
-    .prev-pagination{
-      position: absolute;
-      background: url(../img/Icon/arrow_prev.svg) no-repeat center;
-      background-color: #ffffff;
-      width: 35px;
-      height: 70px;
-      color: transparent;
-      top: 32px;
-      left: -4px;
-      z-index: 3;
-    }
-    .next-pagination{
-      position: absolute;
-      background: url(../img/Icon/arrow_next.svg) no-repeat center;
-      background-color: #ffffff;
-      width: 35px;
-      height: 70px;
-      color: transparent;
-      top: 32px;
-      right: -4px;
-      z-index: 3;
+  }
+  .prev-pagination{
+    position: absolute;
+    background: url(../img/Icon/arrow_prev.svg) no-repeat center;
+    background-color: #ffffff;
+    width: 35px;
+    height: 70px;
+    color: transparent;
+    top: 11%;
+    left: -4px;
+    z-index: 3;
+  }
+  .next-pagination{
+    position: absolute;
+    background: url(../img/Icon/arrow_next.svg) no-repeat center;
+    background-color: #ffffff;
+    width: 35px;
+    height: 70px;
+    color: transparent;
+    top: 11%;
+    right: -4px;
+    z-index: 3;
+  }
+}
+.view-componente-enlaces-item{
+  .prev-pagination, .next-pagination{
+    @include respond-to(xl){
+      display: none;
     }
   }
 }

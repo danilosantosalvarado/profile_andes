@@ -177,6 +177,35 @@ function udla_blocks_alter_form_submit($form, $form_state)
 
 }
 
+// function udla_blocks_alter_block_view_alter(&$data, $block){
+
+// }
+$data = 0;
+function udla_blocks_alter_contextual_links_view_alter(&$element, $items) {
+  //ini_set('memory_limit',0);
+  // Disable contextual links on views.
+  if (isset($element['#element']['#views_contextual_links_info'])) {
+    if(count($element['#links']) == 1){
+      $hashes = variable_get('views_block_hashes','');
+      $view_name = $element['#element']['#views_contextual_links_info']['views_ui']['view_name'];
+      $view_display = $element['#element']['#views_contextual_links_info']['views_ui']['view_display_id'];
+      if($view_display != 'default'){
+        $anidateSearch = $view_name."-".$view_display;
+        $key = array_search ($anidateSearch, $hashes);
+        if(!empty($key) && !isset($element['#element']['#block'])){
+          $element['#links']['block-configure'] = array(
+            'title'  => t('Configurar bloque'),
+            'href'   =>'admin/structure/block/manage/views/'.$key.'/configure',
+            'query'  => $element['#links']['views-ui-edit']['query']
+          );        
+        }
+      }
+      
+    }
+  }
+
+}
+
 function _color_set_for_data($value)
 {
   global  $base_url;
@@ -293,10 +322,17 @@ function udla_blocks_alter_preprocess_block(&$vars){
 
 function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts)
 {
+ 
+if($pane->type == 'views'){
+  //dpm($pane);
+};
   if ($pane->type == 'block') {
+    // if(empty($content->delta)){
+    //   dpm($pane);
+    // }
 
     $block = block_load($content->module, $content->delta);
-
+    
  if (!empty($block->background_image)){
     $fid = file_load($block->background_image);
     if (isset($fid)&&($fid !== '0')) {
@@ -425,8 +461,6 @@ function _change_imagen_class($block){
         drupal_add_js(drupal_get_path('module', 'udla_blocks_alter') . '/js/udla_blocks_alter.js');
       }
 }
-
-
 
 
 
