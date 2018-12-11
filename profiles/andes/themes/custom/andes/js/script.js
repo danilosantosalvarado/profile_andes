@@ -613,7 +613,7 @@
 			e.preventDefault();
 			if($counterData >= 0 && $counterData < $numberOnclick){
 				$counterData++;
-				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
 			if($counterData >= $numberOnclick){
 			$counterData--;
@@ -623,7 +623,7 @@
 			e.preventDefault();
 			if($counterData > 0 && $counterData < $numberOnclick){
 				$counterData--;
-				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
 		});
 	}
