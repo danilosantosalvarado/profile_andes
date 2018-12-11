@@ -27,6 +27,9 @@
         initMobileMenu();
         getEventsClickMobile();
         resizeGoToInstitucional();
+        if(docWidth > 992){
+          clearItemsfromMobile();
+        }
         $('.container-language').click(function(e) {
           e.stopPropagation();
           if($('.select-options').hasClass('active')){
@@ -58,7 +61,7 @@
           }
           else{
             $('.wrapper-buscar-menu').show();
-            clearItemsfromMobile();
+            //clearItemsfromMobile();
             initMobileMenu();
           }
           resizeGoToInstitucional();
@@ -86,16 +89,12 @@
         function initDesktopMenu(){
           menu = $('.navbar-header');
           menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
-          setTimeout(function(){
+          //setTimeout(function(){
             var $menu_admin = ($('#admin-menu-wrapper').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
             var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
             $height_menu = $menuMegaMenu + $menu_admin;
-            console.log("menu admin "+ $menu_admin);
-            // console.log("menu soy "+ $menuTopSoy);
-            console.log("menu menu "+ $menuMegaMenu);
-            console.log("suma "+ $height_menu);
             $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
-          },900);
+         // },900);
 
           $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
           cloneSelect();
