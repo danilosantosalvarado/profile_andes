@@ -643,7 +643,7 @@
 				$counterData++;
 				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
-			if($counterData >= $numberOnclick){
+			if($counterData > 0 && $counterData >= $numberOnclick){
 			$counterData--;
 			}
 		});
