@@ -639,7 +639,7 @@
 		var $counterData = 0;
 		$parent.find('.next-pagination').on('click',function(e){
 			e.preventDefault();
-			if($counterData >= 0 && $counterData < $numberOnclick){
+			if(($counterData >= 0 && $counterData < $numberOnclick) || ($counterData >= 0 && numberOnclick  == 1 && $counterData <= $numberOnclick)){
 				$counterData++;
 				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
