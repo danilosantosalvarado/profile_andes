@@ -641,17 +641,17 @@
 			e.preventDefault();
 			if($counterData >= 0 && $counterData < $numberOnclick){
 				$counterData++;
-				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
-			if($counterData >0 && $counterData >= $numberOnclick){
-				$counterData--;
+			if($counterData >= $numberOnclick){
+			$counterData--;
 			}
 		});
 		$parent.find('.prev-pagination').on('click',function(e){
 			e.preventDefault();
 			if($counterData > 0 && $counterData < $numberOnclick){
 				$counterData--;
-				$element.animate({scrollLeft: ($counterData*parseInt($itemsWidth))}, 800);
+				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
 		});
 	};
