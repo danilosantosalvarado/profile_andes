@@ -85,6 +85,7 @@
             $('.menu-container-data').remove();
 
             $('.navbar-collapse.collapse').removeAttr( 'style' );
+            $('.wrapper-buscar-menu').removeAttr( 'style' );
         }
         function initDesktopMenu(){
           menu = $('.navbar-header');
