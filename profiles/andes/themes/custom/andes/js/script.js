@@ -643,8 +643,8 @@
 				$counterData++;
 				$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 			}
-			if($counterData > 0 && $counterData >= $numberOnclick){
-			$counterData--;
+			if($counterData > 0 && $counterData >= $numberOnclick && $numberOnclick != 1){
+				$counterData--;
 			}
 		});
 		$parent.find('.prev-pagination').on('click',function(e){
