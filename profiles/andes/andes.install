@@ -9,9 +9,10 @@ include_once 'api/andes.beans.inc';
  * Implements hook_form_FORM_ID_alter().
  */
 function andes_form_install_configure_form_alter(&$form, $form_state) {
-  $path_beans = getcwd().'/profiles/andes/beans/';
+
   $form['server_settings']['site_default_country']['#default_value'] = 'CO';
   drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-date-default-timezone").val("America/Bogota"); });', 'inline');
+
 }
 /**
  * Implements hook_install().
@@ -381,8 +382,11 @@ function andes_install() {
 
     $options = array();
 
+
+    module_enable(array('menus_imports_fe'), TRUE);
+
      // Import Menu ("menu-mega-menu").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
+  /*  $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
     menu_import_save_menu($menu, $options);
 
    // // Import Menu ("menu-top-soy").
@@ -391,7 +395,7 @@ function andes_install() {
 
    // Import Menu ("menu-enlaces-de-interes").
     $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'enlaces-de-interes',$options);
-    menu_import_save_menu($menu, $options);
+    menu_import_save_menu($menu, $options); */
 
 
     // Set Enabled Preflix languages en
@@ -477,15 +481,25 @@ function andes_install_tasks($install_state) {
   $flag = TRUE;
   $tasks = array();
 
- /* $tasks['install_beans'] = array(
-    'display_name' => st('Importacion de Bloques'),
+
+  $tasks['install_beans'] = array(
+    'display_name' => st('Importacion de data'),
     'display' => TRUE,
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_beans',
-  ); */
+    'function' => '_install_data',
+  ); 
 
-  $tasks['install_tax'] = array(
+
+/* $tasks['install_config'] = array(
+    'display_name' => st('Importacion de Configuracion'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_install_config',
+  );  */
+
+/*  $tasks['install_tax'] = array(
     'display_name' => st('Importacion de Taxonomias'),
     'display' => TRUE,
     'type' => 'batch',
@@ -499,7 +513,7 @@ function andes_install_tasks($install_state) {
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_style_image',
-  );
+  ); */
 
   // $tasks['install_mod'] = array(
   //   'display_name' => st('Importacion de contenido'),
@@ -519,6 +533,68 @@ function andes_install_tasks($install_state) {
 
   return $tasks;
 }
+
+function _install_data() {
+  
+ variable_set('file_private_path', 'sites/default/files/private');
+ backup_migrate_include('crud', 'locations');
+   
+
+ $data = array(
+      'build_info' => array(
+        'args' => array(
+          0 => 'manual',
+          1 => 'npb-2018-12-08T11-17-26.mysql.gz',
+        ) ,
+        'form_id' => 'backup_migrate_ui_destination_restore_file_confirm',
+      ),
+    );
+
+
+
+ $install_state['mods'] = array('Importando Data' => 1);
+
+  $batch = array(
+    'title' => t('Importando Data'),
+  );
+  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
+  $files = system_rebuild_module_data();
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_data_batch', array($data));
+  }
+  return $batch;
+}
+
+
+
+function _install_data_batch($data){
+
+  variable_set('profile_andes_site_name', variable_get('site_name'));
+  variable_set('profile_andes_site_mail', variable_get('site_mail'));
+  variable_set('profile_andes_site_default_country', variable_get('site_default_country'));
+  variable_set('profile_andes_date_default_timezone', variable_get('date_default_timezone'));
+
+
+  backup_migrate_include('crud', 'locations');
+  backup_migrate_perform_restore('manual', 'npb-2018-12-08T11-17-26.mysql.gz', $data);
+  drupal_set_message(t('Import Success'), 'status', TRUE);
+  
+  variable_set('site_name', variable_get('profile_andes_site_name'));
+  variable_set('site_mail', variable_get('profile_andes_site_mail'));
+  variable_set('site_default_country', variable_get('profile_andes_site_default_country'));
+  variable_set('date_default_timezone', variable_get('profile_andes_date_default_timezone'));
+
+  require './includes/password.inc';
+  $user = user_load(1);
+  $user->name = 'david';
+  $user->mail = 'soporte@tbwacolombia.com';
+  $user->pass = user_hash_password('monica');
+  user_save($user);
+}
+
+
+
+
 
 function _install_mods() {
 
@@ -604,7 +680,7 @@ function _install_taxonomy() {
 }
 
 function _install_taxonomy_batch(){
-  andes_import_taxonomy();
+ // andes_import_taxonomy();
 }
 
 function _install_style_image(){

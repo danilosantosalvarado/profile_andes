@@ -76,6 +76,7 @@ dependencies[] = path_breadcrumbs_i18n
 dependencies[] = location_entity
 dependencies[] = svg_embed
 dependencies[] = menu_attributes
+dependencies[] = backup_migrate
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api

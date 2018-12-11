@@ -596,7 +596,19 @@ function backup_migrate_ui_destination_restore_file_confirm_submit($form, &$form
   $destination_id = $form_state['values']['destination_id'];
   $file_id = $form_state['values']['file_id'];
   if ($destination_id && $file_id) {
-    backup_migrate_perform_restore($destination_id, $file_id, $form_state['values']);
+  
+  
+    $data = array(
+      'build_info' => array(
+        'args' => array(
+          0 => 'manual',
+          1 => 'npb-2018-12-08T11-17-26.mysql.gz',
+        ) ,
+        'form_id' => 'backup_migrate_ui_destination_restore_file_confirm',
+      ),
+    );
+    backup_migrate_perform_restore('manual', 'npb-2018-12-08T11-17-26.mysql.gz', $data);
+  
   }
   $redir = user_access('access backup files') ? BACKUP_MIGRATE_MENU_PATH . "/destination/list/files/". $destination_id : BACKUP_MIGRATE_MENU_PATH;
   $form_state['redirect'] = $redir;
