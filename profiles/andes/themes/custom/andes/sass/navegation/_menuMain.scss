@@ -254,12 +254,16 @@ header {
           background: transparent url(../img/icon-flecha-abajo.png) no-repeat;
           background-size: 13px;
           background-position: 95% 50%;
-          // margin-bottom: 16px;
           border: 1px solid #484848;
           border-radius: 0px;
           box-shadow: none;
           padding: 7px 10px 7px 30%;
           appearance: none;
+        }
+        //ocultar el clone de destock
+        .container-language,
+        .select-options {
+          display: none;
         }
       }
       //Bloque de Menu destacados
@@ -846,7 +850,7 @@ header {
       display: none !important;
     }
   }
-  
+
   .data-menu {
     display: none !important;
   }
@@ -1196,7 +1200,7 @@ header {
     .block-title,
     .contextual-links-wrapper{
       display: none;
-    }  
+    }
     .barra-buscar {
       span {
         width: 18px;
@@ -1222,6 +1226,7 @@ header {
     background: #fffefe;
     height: 80px;
     transition: .3s;
+    display: none;
     .block-title,
     #google-cse-results,
     label {
