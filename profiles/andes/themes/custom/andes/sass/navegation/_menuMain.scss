@@ -850,7 +850,10 @@ header {
       display: none !important;
     }
   }
-
+  .active-nivel-1,
+  .data-menu {
+    display: none !important;
+  }
   .data-menu {
     display: none !important;
   }
@@ -1215,6 +1218,7 @@ header {
       }
       &.icon-close{
         &span{
+
           background: url(../img/Icon/icon-cerrar.png) no-repeat center;
         }
       }

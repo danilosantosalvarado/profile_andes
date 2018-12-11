@@ -1652,94 +1652,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Home Especiales
 //------------------------------------------------------------------------------
 */
-/* ------| slider alineacion center |----- */
-.slider-homes-specials {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-transform: translate3d(0, -50%, 0);
-          transform: translate3d(0, -50%, 0);
-  text-align: center;
-}
-
-.slider-homes-specials .Redes-sociales {
-  margin: 0 auto;
-  width: auto;
-  text-align: center;
-}
-
-.slider-homes-specials .Redes-sociales .share-container {
-  display: inline-block;
-  margin: 0 auto;
-  border-top: none;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.slider-homes-specials .Redes-sociales .block-udla-simplified-social-share h2 {
-  display: none;
-}
-
-.slider-homes-specials .body-slider-homes {
-  margin-top: 0;
-}
-
-.slider-homes-specials .text-center {
-  color: #fff;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.slider-homes-specials .text-center:nth-child(1) {
-  font-family: "Crimson_textroman", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.125rem;
-}
-
-@media (min-width: 992px) {
-  .slider-homes-specials .text-center:nth-child(1) {
-    font-size: 1.25rem;
-  }
-}
-
-.slider-homes-specials .text-center:nth-child(2) {
-  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px 0;
-  font-size: 1.25rem;
-}
-
-@media (min-width: 992px) {
-  .slider-homes-specials .text-center:nth-child(2) {
-    font-size: 1.5rem;
-  }
-}
-
-.slider-homes-specials .text-center:nth-child(3) {
-  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-  margin-bottom: 8px;
-  font-size: 1.125rem;
-}
-
-@media (min-width: 992px) {
-  .slider-homes-specials .text-center:nth-child(3) {
-    font-size: 1.1875rem;
-  }
-}
-
-.slider-homes-specials .text-center:nth-child(4) {
-  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1rem;
-}
-
 /* ------| quicktabs Tabs |----- */
 #quicktabs-quicktabs_especiales ul.quicktabs-tabs {
   width: 100%;
@@ -4022,7 +3934,7 @@ h1.page-header {
   padding-top: 29% !important;
 }
 
-/* ------| Slider Home|----- */
+/* ------| Slider Home iframe y imagen |----- */
 .slider-pricipal-node.views_slideshow_swiper-processed .swiper-wrapper {
   margin: 0px;
 }
@@ -4103,7 +4015,7 @@ h1.page-header {
   position: relative;
   display: block;
   overflow: hidden;
-  padding-top: 94%;
+  padding-top: 75%;
   height: 100%;
   background: black;
 }
@@ -4279,14 +4191,13 @@ h1.page-header {
   max-width: 500px;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
-  border: 1px solid red;
 }
 
 .slider-pricipal-node .slider-homes-layout-two .conten,
 .slider-pricipal-node .slider-homes-layout-three .conten,
 .slider-pricipal-node .slider-homes-layout-seven .conten {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 .slider-pricipal-node .slider-homes-layout-two .conten .title-slider-homes,
@@ -4441,6 +4352,100 @@ h1.page-header {
   padding: 5px 0;
   margin: 0px;
   color: black;
+}
+
+/* ------| Alineacion especiales|----- */
+.slider-homes-specials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+}
+
+.slider-homes-specials .conten {
+  padding: 0px;
+  max-width: auto;
+  margin: 0px;
+}
+
+.slider-homes-specials .conten .Redes-sociales {
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+}
+
+.slider-homes-specials .conten .Redes-sociales .share-container {
+  display: inline-block;
+  margin: 0 auto;
+  border-top: none;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-homes-specials .conten .Redes-sociales .block-udla-simplified-social-share h2 {
+  display: none;
+}
+
+.slider-homes-specials .conten .body-slider-homes {
+  margin-top: 0;
+}
+
+.slider-homes-specials .conten .body-slider-homes .text-center {
+  color: #fff;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-homes-specials .conten .body-slider-homes .text-center:nth-child(1) {
+  font-family: "Crimson_textroman", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials .conten .body-slider-homes .text-center:nth-child(1) {
+    font-size: 1.25rem;
+  }
+}
+
+.slider-homes-specials .conten .body-slider-homes .text-center:nth-child(2) {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials .conten .body-slider-homes .text-center:nth-child(2) {
+    font-size: 1.5rem;
+  }
+}
+
+.slider-homes-specials .conten .body-slider-homes .text-center:nth-child(3) {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  margin-bottom: 8px;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 992px) {
+  .slider-homes-specials .conten .body-slider-homes .text-center:nth-child(3) {
+    font-size: 1.1875rem;
+  }
+}
+
+.slider-homes-specials .conten .body-slider-homes .text-center:nth-child(4) {
+  font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 /* ------| Alineacion botones left rigtht |----- */
@@ -4633,7 +4638,7 @@ h1.page-header {
 @media (min-width: 992px) {
   .container-arrows .swiper-button-next,
   .container-arrows .swiper-button-prev {
-    display: block !important;
+    display: block;
   }
 }
 
@@ -4799,7 +4804,16 @@ h1.page-header {
   right: 0;
   text-align: center;
   white-space: nowrap;
-  overflow-x: overlay;
+  overflow: scroll;
+  white-space: nowrap;
+  outline-width: 0px;
+  resize: none;
+}
+
+@media (min-width: 992px) {
+  .view-banner-nodes .skin-default .pagination-wrap {
+    overflow: hidden;
+  }
 }
 
 .view-banner-nodes .skin-default .swiper-pagination-banner-nodes {
@@ -11814,6 +11828,10 @@ header {
     padding-left: 20px;
   }
   .tb-megamenu-subnav .tb-megamenu-submenu {
+    display: none !important;
+  }
+  .active-nivel-1,
+  .data-menu {
     display: none !important;
   }
   .data-menu {
