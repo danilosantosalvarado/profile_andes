@@ -324,3 +324,22 @@
 	}
 
 }
+
+.modal-content{
+	.modal-header{
+		padding: 0;
+		border-bottom: none;
+		.close{
+			position: absolute;
+			right: 0;
+			top: 2px;
+			background-color: #fff;
+			border-radius: 50%;
+			padding: 10px;
+			z-index: 30;
+			opacity: 1;
+			height: 34px;
+			line-height: 2px;
+		}
+	}
+}

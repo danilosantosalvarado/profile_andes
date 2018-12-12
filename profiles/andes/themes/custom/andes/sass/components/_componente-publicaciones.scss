@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
-.view-display-id-componente_publicaciones {
+.view-display-id-componente_publicaciones, .view-id-componente_carrusel_multimedia {
 	.swiper-container-horizontal {
 		width: 90%;
 		margin: 0 auto;
@@ -63,24 +63,25 @@
 			}
 		}
 	}
-	.swiper-button-next{
+	.swiper-button-next, .next-pagination{
 		right: 0px;
 		left: auto;
 		background: url(../img/Icon/arrow_next.svg) no-repeat center;
 	}
-	.swiper-button-prev{
+	.swiper-button-prev, .prev-pagination{
 		right: auto;
 		left: 0;
 		background: url(../img/Icon/arrow_prev.svg) no-repeat center;
 	}
-	.swiper-button-next, .swiper-button-prev{
+	.swiper-button-next, .swiper-button-prev, .next-pagination, .prev-pagination{
 		width: 40px;
 		height: 40px;
 		position: absolute;
-		top: 50%;
+		top: calc(50% - 20px);
 		border: 1px solid #777;
 		display: none;
-		@include respond-to(xl) {
+		font-size: 0;
+		@include respond-to(l) {
 			display: block;
 		}
 	}

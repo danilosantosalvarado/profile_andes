@@ -94,12 +94,12 @@
           @include respond-to(xs) {
             max-height: 150px;
           }
-          .views-field {
-            img{
+          .youtube-container--responsive {
+            padding-bottom: 62%;
+          }
+          .view-content{
+            .img-responsive{
               width: 100%;
-            }
-            .youtube-container--responsive {
-              padding-bottom: 62%;
             }
           }
         }

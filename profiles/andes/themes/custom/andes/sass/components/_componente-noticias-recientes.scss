@@ -228,7 +228,7 @@
 	}
 }
 
-.view-componente-noticias, .swiper-container-vertical{	
+.view-componente-noticias, .swiper-container-vertical, .view-home-noticias{	
 	.skin-default{
 		.pagination-wrap{
 			
@@ -259,20 +259,20 @@
 	.view-componente-noticias-item{
 		max-width: 400px;
     	margin: 0 auto;
-		@include respond-to(xl){
+		@include respond-to(xxs){
 			max-width: inherit;
 		}
 		.view-content{
-			height: 44vw;
-			background-color: color('grey-secundary');
+			height: 51vw;
+			background-color: color('black');
 			@include respond-to(xxs){
-				height: 45vw;
+				height: 54vw;
 			}
 			@include respond-to(xs){
-				height: 38vw;
+				height: 55vw;
 			}
 			@include respond-to(s){
-				height: 33vw;
+				height: 56vw;
 			}
 			@include respond-to(m){
 				min-height: 195px;

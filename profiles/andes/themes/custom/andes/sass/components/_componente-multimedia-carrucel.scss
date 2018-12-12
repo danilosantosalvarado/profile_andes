@@ -75,6 +75,7 @@
 	.views-slideshow-controls-bottom {
 		width: 90%;
 		margin: 0 auto;
+		position: relative;
 		@include respond-to(xl){
 			max-width: 1140px;
 		}
@@ -87,9 +88,14 @@
 			overflow-y: hidden;
 			-webkit-overflow-scrolling: touch;
 			background-color: color('Yellow-secundary');
-
+			width: 98%;
+    		margin: 0 auto;
 			@include respond-to(xxs) {
-				padding: 12px 10px;
+				padding: 5px 5px;
+			}
+			@include respond-to(l){
+				overflow-x: hidden;
+				width: calc(100% - 88px);
 			}
 			&:after{
 				content: " ";
@@ -142,8 +148,8 @@
 				}
 				@include respond-to(l) {
 					margin: 0 18px;
-					height: 150px;
-					flex: 1 0 25%;
+					height: 100px;
+					flex: 1 0 21%;
 				}
 				div[data-toggle="tooltip"] {
 					display: block;

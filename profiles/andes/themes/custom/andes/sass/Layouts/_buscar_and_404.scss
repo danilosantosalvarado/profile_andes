@@ -261,13 +261,16 @@ body.panel-404 {
           border-left: 0;
           border-radius: 0;
           padding: 6px 25px;
-          &:hover,
-          &:focus,
-          &:active {
+          &:hover {
             background-color: transparent !important;
-            border: none;
             box-shadow: none;
+            border: 1px solid #484851;
             outline: none !important;
+          }
+          &:active,
+          &:focus{
+            background-color: #17a2b8;
+            border: 1px solid #17a2b8;
           }
         }
       }
