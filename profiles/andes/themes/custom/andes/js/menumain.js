@@ -28,6 +28,11 @@
             window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
           }
         });
+        $('#google-cse-results-searchbox-form button:submit').on('click',function(e) {
+          e.preventDefault();
+          $('#google-cse-results-searchbox-form #edit-query').val();
+          window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
+        });
         /*End data language*/
         initDesktopMenu();
         getEventsClickDesktop();
