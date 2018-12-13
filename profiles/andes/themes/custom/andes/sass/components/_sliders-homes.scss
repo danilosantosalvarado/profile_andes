@@ -830,22 +830,22 @@
 /* ------| Container default  |----- */
 .container {
 	.cl-slider-homes-layout-two-container,
-	.slider-homes-layout-one-container,
-	.slider-homes-layout-two-container,
-	.slider-homes-layout-three-container,
-	.slider-homes-layout-four-container,
-	.slider-homes-layout-five-container,
-	.slider-homes-layout-seven-container,
-	.slider-homes-layout-eleven-container,
-	.slider-homes-right-container,
-	.slider-homes-center-container,
-	.slider-homes-left-container,
-	.slider-homes-right-deca-container,
-	.slider-homes-center-deca-container,
-	.slider-homes-left-deca-container,
-	.slider-homes-bottom-container,
-	.slider-homes-specials-container,
-	.slider-homes-bottom-deca {
+	.cl-slider-homes-layout-one-container,
+	.cl-slider-homes-layout-two-container,
+	.cl-slider-homes-layout-three-container,
+	.cl-slider-homes-layout-four-container,
+	.cl-slider-homes-layout-five-container,
+	.cl-slider-homes-layout-seven-container,
+	.cl-slider-homes-layout-eleven-container,
+	.cl-slider-homes-right-container,
+	.cl-slider-homes-center-container,
+	.cl-slider-homes-left-container,
+	.cl-slider-homes-right-deca-container,
+	.cl-slider-homes-center-deca-container,
+	.cl-slider-homes-left-deca-container,
+	.cl-slider-homes-bottom-container,
+	.cl-slider-homes-specials-container,
+	.cl-slider-homes-bottom-deca {
 		@include respond-to(xl){
 			.iframe-conten {
 				padding-top: 45%;
