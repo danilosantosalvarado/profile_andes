@@ -21,6 +21,13 @@
         var currentlang = jQuery('html').attr('lang');
         var $search = (currentlang == 'es')  ? 'Buscar': (currentlang == 'en') ? 'Search': "";
         $('#google-cse-results-searchbox-form input').attr('placeholder', Drupal.t($search));
+        $('#google-cse-results-searchbox-form').keypress(function(e) {
+          //e.preventDefault();
+          if(e.which == 13) {
+            $('#google-cse-results-searchbox-form #edit-query').val();
+            window.location = Drupal.settings.basePath+Drupal.settings.pathPrefix + "search/google/"+$('#google-cse-results-searchbox-form #edit-query').val();
+          }
+        });
         /*End data language*/
         initDesktopMenu();
         getEventsClickDesktop();
