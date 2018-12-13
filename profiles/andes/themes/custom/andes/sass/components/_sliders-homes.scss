@@ -11,7 +11,7 @@
 }
 
 /* ------| Slider Home iframe y imagen |----- */
-.slider-pricipal-node.views_slideshow_swiper-processed {
+.slider-pricipal-node {
 	.swiper-wrapper {
 		margin: 0px;
 	}
@@ -613,11 +613,11 @@
 /* ------| container arrows |----- */
 .container-arrows {
 	//tamaño del contenedor del iframe
-	@include respond-to(xl){
-		.iframe-conten {
-			padding-top: 45% !important;
-		}
-	}
+	// @include respond-to(xl){
+	// 	.iframe-conten {
+	// 		padding-top: 45% !important;
+	// 	}
+	// }
 	// Wraper y tamaño darle espacio para los botones
 	.slider-pricipal-node {
 		width: 100%;
@@ -823,6 +823,32 @@
 					max-width: auto;
 					min-height: 100%;
 				}
+			}
+		}
+	}
+}
+/* ------| Container default  |----- */
+.container {
+	.cl-slider-homes-layout-two-container,
+	.slider-homes-layout-one-container,
+	.slider-homes-layout-two-container,
+	.slider-homes-layout-three-container,
+	.slider-homes-layout-four-container,
+	.slider-homes-layout-five-container,
+	.slider-homes-layout-seven-container,
+	.slider-homes-layout-eleven-container,
+	.slider-homes-right-container,
+	.slider-homes-center-container,
+	.slider-homes-left-container,
+	.slider-homes-right-deca-container,
+	.slider-homes-center-deca-container,
+	.slider-homes-left-deca-container,
+	.slider-homes-bottom-container,
+	.slider-homes-specials-container,
+	.slider-homes-bottom-deca {
+		@include respond-to(xl){
+			.iframe-conten {
+				padding-top: 45%;
 			}
 		}
 	}
