@@ -4870,22 +4870,22 @@ h1.page-header {
 /* ------| Container default  |----- */
 @media (min-width: 992px) {
   .container .cl-slider-homes-layout-two-container .iframe-conten,
-  .container .slider-homes-layout-one-container .iframe-conten,
-  .container .slider-homes-layout-two-container .iframe-conten,
-  .container .slider-homes-layout-three-container .iframe-conten,
-  .container .slider-homes-layout-four-container .iframe-conten,
-  .container .slider-homes-layout-five-container .iframe-conten,
-  .container .slider-homes-layout-seven-container .iframe-conten,
-  .container .slider-homes-layout-eleven-container .iframe-conten,
-  .container .slider-homes-right-container .iframe-conten,
-  .container .slider-homes-center-container .iframe-conten,
-  .container .slider-homes-left-container .iframe-conten,
-  .container .slider-homes-right-deca-container .iframe-conten,
-  .container .slider-homes-center-deca-container .iframe-conten,
-  .container .slider-homes-left-deca-container .iframe-conten,
-  .container .slider-homes-bottom-container .iframe-conten,
-  .container .slider-homes-specials-container .iframe-conten,
-  .container .slider-homes-bottom-deca .iframe-conten {
+  .container .cl-slider-homes-layout-one-container .iframe-conten,
+  .container .cl-slider-homes-layout-two-container .iframe-conten,
+  .container .cl-slider-homes-layout-three-container .iframe-conten,
+  .container .cl-slider-homes-layout-four-container .iframe-conten,
+  .container .cl-slider-homes-layout-five-container .iframe-conten,
+  .container .cl-slider-homes-layout-seven-container .iframe-conten,
+  .container .cl-slider-homes-layout-eleven-container .iframe-conten,
+  .container .cl-slider-homes-right-container .iframe-conten,
+  .container .cl-slider-homes-center-container .iframe-conten,
+  .container .cl-slider-homes-left-container .iframe-conten,
+  .container .cl-slider-homes-right-deca-container .iframe-conten,
+  .container .cl-slider-homes-center-deca-container .iframe-conten,
+  .container .cl-slider-homes-left-deca-container .iframe-conten,
+  .container .cl-slider-homes-bottom-container .iframe-conten,
+  .container .cl-slider-homes-specials-container .iframe-conten,
+  .container .cl-slider-homes-bottom-deca .iframe-conten {
     padding-top: 45%;
   }
 }
