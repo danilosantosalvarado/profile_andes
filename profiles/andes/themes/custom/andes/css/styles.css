@@ -3530,7 +3530,7 @@ h1.page-header {
 
 .field-name-field-tags.field-type-taxonomy-term-reference:before {
   content: "";
-  width: 67px;
+  width: 90px;
   height: 3px;
   margin-left: 5px;
   border-top: 1px solid black;
@@ -3848,6 +3848,7 @@ h1.page-header {
   outline: none;
 }
 
+/*-----------Default destacados cards multimedia----*/
 .views-responsive-grid .views-column .views-field-view .view-content {
   min-height: 59vw;
 }
@@ -11687,7 +11688,7 @@ header {
     text-align: left;
     border: none;
     cursor: pointer;
-    padding: 12px 0;
+    padding: 3px 0;
     margin: 0;
   }
   .tb-megamenu ul.level-0 li.level-1 > .tb-megamenu-submenu > .mega-dropdown-inner > .tb-megamenu-row > .content-nivel-1 ul.level-1 li.level-2 a:hover {
