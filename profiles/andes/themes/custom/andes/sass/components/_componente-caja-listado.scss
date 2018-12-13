@@ -214,6 +214,7 @@
         >.view-content{
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           >.views-row{
             padding: 0;
             width: 44px;

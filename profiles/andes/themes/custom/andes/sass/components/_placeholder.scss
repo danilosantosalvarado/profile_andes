@@ -573,3 +573,32 @@ h1.page-header {
     }
   }
 }
+
+.views-responsive-grid{
+  .views-column{
+    .views-field-view{
+      .view-content{
+        min-height: 59vw;
+        @include respond-to(xs){
+          min-height: 28vw;
+        }
+        @include respond-to(m){
+          min-height: 213px;
+        }
+        @include respond-to(xl){
+          min-height: 182px;
+        }
+        @include respond-to(xxxl){
+          min-height: 163px;
+        }
+      }
+    }
+    .box-content{
+      .views-field-title{
+        span{
+          @include font-size(l);
+        }
+      }
+    }
+  }
+}
