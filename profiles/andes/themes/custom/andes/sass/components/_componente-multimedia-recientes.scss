@@ -82,7 +82,8 @@
               @include respond-to(m) {
                 right: 25px;
                 left: inherit;
-                max-width: 150px;
+                max-width: 200px;
+                min-width: 150px;
               }
             }
           }
