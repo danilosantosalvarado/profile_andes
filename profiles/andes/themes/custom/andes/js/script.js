@@ -35,25 +35,25 @@
 		}
 
 		//add breidpoint news component.
-		if($('.view-id-slider_homes').length > 0) {
-			ParentSlideClass = $('.view-id-slider_homes .field-content').children('div').eq(1).attr("class");
-			$('.view-id-slider_homes').addClass(ParentSlideClass+"-container");
-			$('.view-id-slider_homes .views-slideshow-simple-pager div').eq(0).addClass('active');
-			slideActive = $('.view-id-slider_homes').find('li.swiper-slide-active').attr('id');
-			slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
-			$('.view-id-slider_homes div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+		// if($('.view-id-slider_homes').length > 0) {
+		// 	ParentSlideClass = $('.view-id-slider_homes .field-content').children('div').eq(1).attr("class");
+		// 	$('.view-id-slider_homes').addClass(ParentSlideClass+"-container");
+		// 	$('.view-id-slider_homes .views-slideshow-simple-pager div').eq(0).addClass('active');
+		// 	slideActive = $('.view-id-slider_homes').find('li.swiper-slide-active').attr('id');
+		// 	slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
+		// 	$('.view-id-slider_homes div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
 
-			SlideClass = slideActivePosition+"-control";
-		}
-		if($('.view-banner-nodes').length > 0){
-			ParentSlideClass = $('.view-banner-nodes .field-content').children('div').eq(1).attr("class");
-			$('.view-banner-nodes').addClass(ParentSlideClass+"-container");
-			$('.view-banner-nodes .views-slideshow-simple-pager div').eq(0).addClass('active');
-			slideActive = $('.view-banner-nodes').find('li.swiper-slide-active').attr('id');
-			slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
-			$('.view-banner-nodes div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
-			SlideClass = slideActivePosition+"-control";
-		}
+		// 	SlideClass = slideActivePosition+"-control";
+		// }
+		// if($('.view-banner-nodes').length > 0){
+		// 	ParentSlideClass = $('.view-banner-nodes .field-content').children('div').eq(1).attr("class");
+		// 	$('.view-banner-nodes').addClass(ParentSlideClass+"-container");
+		// 	$('.view-banner-nodes .views-slideshow-simple-pager div').eq(0).addClass('active');
+		// 	slideActive = $('.view-banner-nodes').find('li.swiper-slide-active').attr('id');
+		// 	slideActivePosition = $('#'+slideActive+' span.field-content').children('div').eq(1).attr('class');
+		// 	$('.view-banner-nodes div.views-slideshow-controls-bottom').addClass(slideActivePosition+"-control");
+		// 	SlideClass = slideActivePosition+"-control";
+		// }
 
 		// function wrapper to image element
 		$('img').each(function() {
