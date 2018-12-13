@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the TC Equipos feature.
- */
-
-include_once 'tc_equipos.features.inc';

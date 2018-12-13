@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the tc noticias feature.
- */
-
-include_once 'tc_noticias.features.inc';

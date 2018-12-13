@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Footer Block Contacto feature.
- */
-
-include_once 'udla_footer_block_contact_bean.features.inc';

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Fe views slider principal feature.
- */
-
-include_once 'fe_views_slider_principal.features.inc';

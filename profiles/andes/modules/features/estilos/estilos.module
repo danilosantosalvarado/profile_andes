@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the estilos feature.
- */
-
-include_once 'estilos.features.inc';

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the tc_layouts feature.
- */
-
-include_once 'tc_layouts.features.inc';
