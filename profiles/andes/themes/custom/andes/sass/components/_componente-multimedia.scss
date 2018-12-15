@@ -168,6 +168,9 @@
 						min-height: inherit;
 						height: 6vw;
 						margin: 0 auto;
+						.img-responsive{
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -215,7 +218,7 @@
 	.swiper-button-prev,
 	.swiper-button-next{
 		display: none;
-	}		
+	}
 }
 
 /* ------| Flechas paginador |----- */
@@ -296,6 +299,13 @@
 	}
 
 }
+
+/* ------| imagen de la lista al 100% |----- */
+.pane-quicktabs{
+	.img-responsive{
+		width: 100%;
+	}
+}
 /* ------| Multimedia swiper horizontal movil |----- */
 .view-display-id-multimedia_destacada_mobile, .view-display-id-home_noticias_destacadas_mobile {
 	@include respond-to(xl) {
@@ -327,13 +337,17 @@
 				//title
 				.views-field-title, .multimedia-titulo {
 					text-align: center;
-					margin: 10px 0;
+					margin: 20px 0;
 					a {
-						font-family: $crimson-textroman;
-						@include type-layout(l, 1.16);
-						color: color('green-Primary');
+						font-family: $crimson-semibold;
+						@include type-layout(l, 1.25);
+						color: color('grey-dark');
 						margin-bottom: 14px;
+						text-transform: uppercase;
 					}
+				}
+				.multimedia-body{
+					text-align: center;
 				}
 			}
 		}

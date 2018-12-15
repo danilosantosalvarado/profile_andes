@@ -13,6 +13,7 @@
 
 		bulletsContainerArrows();
 		activeEquipo();
+		multimediaDestaco();
 
 		var a = $(window).width();
 		if (a > 992) {socialDesktop(); }else {socialMobile(); }
@@ -84,6 +85,14 @@
 			$('.container-arrows .slider-pricipal-node .swiper-button-prev').appendTo('.container-arrows .skin-default');
 			$('.container-arrows .slider-pricipal-node .swiper-button-next').appendTo('.container-arrows .skin-default');
 		}
+	}
+
+	// Home multimedia - componente multimedia destacado
+	function multimediaDestaco() {
+		$('.view-display-id-componente_multimedia_noticia_destacada .swiper-button-next')
+			.appendTo('.view-display-id-componente_multimedia_noticia_destacada .pagination-wrap')
+			.wrap( "<div class='wrap-arrows'></div>" );
+		$('.view-display-id-componente_multimedia_noticia_destacada .swiper-button-prev').appendTo('.wrap-arrows');
 	}
 
 	function socialMobile(){
@@ -603,7 +612,7 @@
 	function componentEnlacesSlide(){
 		var $parent = $('.view-componente-enlaces-item').find('.view');
 		var $containerItems = $('.view-componente-enlaces-item').find('.view-content').parent().prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
-		var $element = $('.view-componente-enlaces-item').find('.view-content'); 	
+		var $element = $('.view-componente-enlaces-item').find('.view-content');
 		var $containerEl = $element.width();
 		var $items = $element.find('.views-row').length;
 		var $itemsWidth = $element.find('.views-row').outerWidth(true);
@@ -631,7 +640,7 @@
 	function componentPagersSwyper(){
 		var $parent = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views-slideshow-controls-bottom');
 		var $containerQuick = $parent.prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
-		var $element = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views_slideshow_pager_field'); 
+		var $element = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views_slideshow_pager_field');
 		var $containerEl = $element.width();
 		var $items = $element.find('.views-slideshow-pager-field-item').length;
 		var $itemsWidth = $element.find('.views-slideshow-pager-field-item').outerWidth(true);

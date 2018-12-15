@@ -303,14 +303,6 @@ h1.page-header {
 .field-name-field-tags.field-type-taxonomy-term-reference {
   position: relative;
   // padding-top: 40px;
-  &:before {
-    content: "";
-    width: 90px;
-    height: 3px;
-    margin-left: 5px;
-    border-top: 1px solid black;
-    position: absolute;
-  }
   .field-items {
     padding: 20px 0px 0px;
     margin-bottom: 10px;
@@ -326,6 +318,18 @@ h1.page-header {
         text-decoration: none;
         @include font-size(xxs);
       }
+    }
+  }
+}
+.noticias{
+  .field-name-field-tags.field-type-taxonomy-term-reference{
+    &:before {
+      content: "";
+      width: 90px;
+      height: 3px;
+      margin-left: 5px;
+      border-top: 1px solid black;
+      position: absolute;
     }
   }
 }
@@ -581,7 +585,7 @@ h1.page-header {
   .views-column{
     .views-field-view{
       .view-content{
-        min-height: 59vw;
+        min-height: 55vw;
         @include respond-to(xs){
           min-height: 28vw;
         }
