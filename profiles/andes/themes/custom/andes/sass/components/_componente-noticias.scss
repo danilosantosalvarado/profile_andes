@@ -4,118 +4,118 @@
 //------------------------------------------------------------------------------
 */
 
-.view-display-id-noticias_destacadas {
-	padding-top: 40px;
-	padding-bottom: 60px;
-	.swiper-container-horizontal {
-		@include respond-to(xl) {
-			width: 90%;
-			margin: 0 auto;
-			padding: 0 10px;
-		}
-		ul {
-			list-style: none;
-			padding: 0px;
-			li {
-				// margin: 0 10px;
-				.views-row {
-					//Imagenes
-					.views-field-view {
-						img {
-							width: 100%;
-						}
-						.youtube-container--responsive {
-							padding-bottom: 62.25%;
-							background-color: color('black');
-						}
-					}
-					.box-content {
-						position: relative;
-						padding: 25px;
-						border-top: 3px solid #ff8827;
-						background: #f4f1f1;
-						min-height: 364px;
-						//Fecha
-						.content-date {
-							color: color('orange');
-							.views-field-created {
-								font-family: $latoregular;
-								@include type-layout(xs, 1.23);
-								padding: 5px 0px;
-							}
-						}
-						// //hora
-						// .views-field-field-fecha-eventos {
-						// 	margin: 15px 25px 0;
-						// 	display: flex;
-						// 	font-family: $latoregular;
-						// 	@include type-layout(xs, 1.23);
-						// 	color: color('orange-primary');
-						// }
-						// //lugar
-						// .views-field-additional {
-						// 	margin: 0 25px;
-						// 	font-family: $latoregular;
-						// 	@include type-layout(xs, 1.23);
-						// 	color: color('orange-primary');
-						// }
-						//Titulo
-						.views-field-title {
-							margin: 15px 0 20px;
-							span,
-							a {
-								font-family: $crimson-semibold;
-								@include type-layout(sl, .90);
-								text-decoration: none;
-								@include respond-to(m) {
-									@include font-size(ll);
-								}
-							}
-						}
-						//Body
-						.views-field-body {
-							font-family: $crimson-textregular;
-							@include font-size(m);
-							margin-bottom: 16px;
-							@include respond-to(xs) {
-								height: 7pc;
-							}
-						}
-						//Button
-						.views-field-view-node {
-							a {
-								display: block;
-								width: 180px;
-								font-family: $latoregular;
-								@include font-size(m);
-								color: color('grey-dark');
-								text-decoration: none;
-								text-align: center;
-								border: 1px solid color('orange-primary');
-								padding: 10px 20px;
-								margin: 0 auto;
-								outline: none;
-								position: absolute;
-								bottom: 25px;
-								right: 0;
-								left: 0;
-								@include respond-to(xs) {
-									right: 25px;
-									left: inherit;
-									max-width: 150px;
-								}
-								&:hover {
-									background-color: color('orange-primary');
-									color: color('white');
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+// .view-display-id-noticias_destacadas {
+// 	padding-top: 40px;
+// 	padding-bottom: 60px;
+	// .swiper-container-horizontal {
+	// 	@include respond-to(xl) {
+	// 		width: 90%;
+	// 		margin: 0 auto;
+	// 		// padding: 0 10px;
+	// 	}
+	// 	ul {
+	// 		list-style: none;
+	// 		padding: 0px;
+	// 		li {
+	// 			// margin: 0 10px;
+	// 			.views-row {
+	// 				//Imagenes
+	// 				.views-field-view {
+	// 					img {
+	// 						width: 100%;
+	// 					}
+	// 					.youtube-container--responsive {
+	// 						padding-bottom: 62.25%;
+	// 						background-color: color('black');
+	// 					}
+	// 				}
+	// 				.box-content {
+	// 					position: relative;
+	// 					padding: 25px;
+	// 					border-top: 3px solid #ff8827;
+	// 					background: #f4f1f1;
+	// 					min-height: 364px;
+	// 					//Fecha
+	// 					.content-date {
+	// 						color: color('orange');
+	// 						.views-field-created {
+	// 							font-family: $latoregular;
+	// 							@include type-layout(xs, 1.23);
+	// 							padding: 5px 0px;
+	// 						}
+	// 					}
+	// 					// //hora
+	// 					// .views-field-field-fecha-eventos {
+	// 					// 	margin: 15px 25px 0;
+	// 					// 	display: flex;
+	// 					// 	font-family: $latoregular;
+	// 					// 	@include type-layout(xs, 1.23);
+	// 					// 	color: color('orange-primary');
+	// 					// }
+	// 					// //lugar
+	// 					// .views-field-additional {
+	// 					// 	margin: 0 25px;
+	// 					// 	font-family: $latoregular;
+	// 					// 	@include type-layout(xs, 1.23);
+	// 					// 	color: color('orange-primary');
+	// 					// }
+	// 					//Titulo
+	// 					.views-field-title {
+	// 						margin: 15px 0 20px;
+	// 						span,
+	// 						a {
+	// 							font-family: $crimson-semibold;
+	// 							@include type-layout(sl, .90);
+	// 							text-decoration: none;
+	// 							@include respond-to(m) {
+	// 								@include font-size(ll);
+	// 							}
+	// 						}
+	// 					}
+	// 					//Body
+	// 					.views-field-body {
+	// 						font-family: $crimson-textregular;
+	// 						@include font-size(m);
+	// 						margin-bottom: 16px;
+	// 						@include respond-to(xs) {
+	// 							height: 7pc;
+	// 						}
+	// 					}
+	// 					//Button
+	// 					.views-field-view-node {
+	// 						a {
+	// 							display: block;
+	// 							width: 180px;
+	// 							font-family: $latoregular;
+	// 							@include font-size(m);
+	// 							color: color('grey-dark');
+	// 							text-decoration: none;
+	// 							text-align: center;
+	// 							border: 1px solid color('orange-primary');
+	// 							padding: 10px 20px;
+	// 							margin: 0 auto;
+	// 							outline: none;
+	// 							position: absolute;
+	// 							bottom: 25px;
+	// 							right: 0;
+	// 							left: 0;
+	// 							@include respond-to(xs) {
+	// 								right: 25px;
+	// 								left: inherit;
+	// 								max-width: 150px;
+	// 							}
+	// 							&:hover {
+	// 								background-color: color('orange-primary');
+	// 								color: color('white');
+	// 							}
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+// }
 /* ------| zzzzzzzzzzzzzz |----- */
 // .view-display-id-noticias_destacadas {
 // 	.swiper-container-horizontal {

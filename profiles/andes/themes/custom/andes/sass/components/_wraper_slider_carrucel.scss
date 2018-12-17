@@ -1,0 +1,165 @@
+/* ------| Default slider 4 columnas, imagenes y bulles  |----- */
+.wraper-slider-general {
+	padding-top: 40px;
+	padding-bottom: 10px;
+	@include respond-to(xl) {
+		width: 90%;
+		margin: 0 auto;
+		// padding: 0 10px;
+	}
+	.skin-default{
+		.pagination-wrap{
+			.swiper-pagination{
+				position: relative;
+				.swiper-pagination-bullet{
+					-webkit-appearance: none;
+					background: transparent;
+					border: 1px solid #e34d1f;
+					border-radius: 100%;
+					padding: 4px;
+					width: 15px;
+					height: 15px;
+					margin: 0 3px;
+				}
+				.swiper-pagination-bullet-active{
+					background: #e34d1f;
+				}
+			}
+			bottom: -13px;
+			margin-bottom: 25px;
+			@include respond-to(xl){
+				bottom: 0;
+				display: none;
+			}
+		}
+	}
+	.view-componente-noticias-item {
+		max-width: 400px;
+    	margin: 0 auto;
+		@include respond-to(xxs){
+			max-width: inherit;
+    }
+    //Breakpoints
+		.view-content{
+			height: 51vw;
+			background-color: color('black');
+			@include respond-to(xxs){
+				height: 54vw;
+			}
+			@media screen and (min-width: 481px){
+				height: 27vw;
+			}
+			@include respond-to(xs){
+				height: 27vw;
+			}
+			@include respond-to(s){
+				height: 28vw;
+			}
+			@include respond-to(m){
+				min-height: 195px;
+				height: auto;
+			}
+			@include respond-to(xl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxl){
+				min-height: 162px;
+				height: auto;
+			}
+			@include respond-to(xxxl){
+				min-height: 147px;
+				height: auto;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0px;
+		li {
+			// margin: 0 10px;
+			.views-row {
+				//Imagenes
+				.views-field-view {
+					img {
+						width: 100%;
+					}
+					.youtube-container--responsive {
+						padding-bottom: 62.25%;
+						background-color: color('black');
+					}
+				}
+				.box-content {
+					position: relative;
+					padding: 25px;
+					border-top: 3px solid #ff8827;
+					background: #f4f1f1;
+					min-height: 364px;
+					//Fecha
+					.content-date {
+						color: color('orange');
+						.views-field-created {
+							font-family: $latoregular;
+							@include type-layout(xs, 1.23);
+							padding: 5px 0px;
+						}
+					}
+					//Titulo
+					.views-field-title {
+						margin: 15px 0 20px;
+						span,
+						a {
+							font-family: $crimson-semibold;
+							@include type-layout(sl, .90);
+							text-decoration: none;
+							@include respond-to(m) {
+								@include font-size(ll);
+							}
+						}
+					}
+					//Body
+					.views-field-body {
+						font-family: $crimson-textregular;
+						@include font-size(m);
+						margin-bottom: 16px;
+						@include respond-to(xs) {
+							height: 7pc;
+						}
+					}
+					//Button
+					.views-field-view-node {
+						a {
+							display: block;
+							width: 180px;
+							font-family: $latoregular;
+							@include font-size(m);
+							color: color('grey-dark');
+							text-decoration: none;
+							text-align: center;
+							border: 1px solid color('orange-primary');
+							padding: 10px 20px;
+							margin: 0 auto;
+							outline: none;
+							position: absolute;
+							bottom: 25px;
+							right: 0;
+							left: 0;
+							@include respond-to(xs) {
+								right: 25px;
+								left: inherit;
+								max-width: 150px;
+							}
+							&:hover {
+								background-color: color('orange-primary');
+								color: color('white');
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
