@@ -359,6 +359,29 @@ h1.page-header {
   }
 }
 
+/* ------| Bules swper carruceles globales |----- */
+.pagination-wrap {
+	.swiper-pagination {
+		width: 100%;
+		text-align: center;
+		margin: 25px 0px;
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			margin: 0 5px;
+			border: 1px solid #e34d1f;
+			border-radius: 100%;
+			padding: 4px;
+			background: transparent;
+			opacity: initial;
+			&-active {
+				background: #e34d1f;
+			}
+		}
+	}
+}
+
 /* ------| banner deportes /cursos |----- */
 .view-id-banner_taxonomy {
   position: relative;
