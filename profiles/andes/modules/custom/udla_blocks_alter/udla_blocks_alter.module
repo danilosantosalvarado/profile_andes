@@ -322,14 +322,10 @@ function udla_blocks_alter_preprocess_block(&$vars){
 
 function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $contexts)
 {
- 
-if($pane->type == 'views'){
-  //dpm($pane);
-};
+  if(isset($content->title) && !empty($content->title) &&is_string($content->title)){
+    $content->title = t($content->title);
+  }
   if ($pane->type == 'block') {
-    // if(empty($content->delta)){
-    //   dpm($pane);
-    // }
 
     $block = block_load($content->module, $content->delta);
     
