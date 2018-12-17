@@ -363,39 +363,40 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
       }
     }
 
+    if(isset($block)){
+      if (!empty($block->background_color)) {
+        $result = _block_data_css($block->background_color, 'background');
+        if (!empty($result)) {
 
-        if (!empty($block->background_color)) {
-          $result = _block_data_css($block->background_color, 'background');
-          if (!empty($result)) {
-
-            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-          }
-        }
-        if (!empty($block->text_color)) {
-          $result = _block_data_css($block->text_color, 'text');
-          if (!empty($result)) {
-            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-          }
-        }
-        if (!empty($block->hover_link)) {
-          $result = _block_data_css($block->hover_link, 'hover-link');
-          if (!empty($result)) {
-            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-          }
-        }
-        if (!empty($block->hover_content)) {
-          $result = _block_data_css($block->hover_content, 'hover-content');
-          if (!empty($result)) {
-            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-          }
-        }
-        if (!empty($block->hover_content)) {
-          $result = _block_data_css($block->hover_content_text, 'hover-content-text');
-          if (!empty($result)) {
-            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-          }
+          $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
         }
       }
+      if (!empty($block->text_color)) {
+        $result = _block_data_css($block->text_color, 'text');
+        if (!empty($result)) {
+          $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+        }
+      }
+      if (!empty($block->hover_link)) {
+        $result = _block_data_css($block->hover_link, 'hover-link');
+        if (!empty($result)) {
+          $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+        }
+      }
+      if (!empty($block->hover_content)) {
+        $result = _block_data_css($block->hover_content, 'hover-content');
+        if (!empty($result)) {
+          $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+        }
+      }
+      if (!empty($block->hover_content)) {
+        $result = _block_data_css($block->hover_content_text, 'hover-content-text');
+        if (!empty($result)) {
+          $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+        }
+      }
+    }
+  }
 
     
 
