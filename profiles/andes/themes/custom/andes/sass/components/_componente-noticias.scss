@@ -215,68 +215,68 @@
 }
 
 /* ------| componente noticias |----- */
-.view-componente-noticias{
-	.skin-default{
-		// controls
-		.swiper-news-hightlight-next,
-		.swiper-news-hightlight-prev{
-			width: 40px;
-			height: 40px;
-			position: absolute;
-			top: 50%;
-			border: 1px solid #777;
-			background-size: 40px 40px;
-			display: none;
-			@include respond-to(xl){
-				display: block;
-			}
-			&:focus{
-				outline: none;
-			}
-		}
-		.swiper-news-hightlight-prev{
-			left: 0px;
-			right: auto;
-			background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-		}
-		.swiper-news-hightlight-next{
-			right: 0px;
-			left: auto;
-			background: url('../img/Icon/arrow_next.svg') no-repeat center;
-		}
+// .view-componente-noticias{
+// 	.skin-default{
+// 		// controls
+// 		.swiper-news-hightlight-next,
+// 		.swiper-news-hightlight-prev{
+// 			width: 40px;
+// 			height: 40px;
+// 			position: absolute;
+// 			top: 50%;
+// 			border: 1px solid #777;
+// 			background-size: 40px 40px;
+// 			display: none;
+// 			@include respond-to(xl){
+// 				display: block;
+// 			}
+// 			&:focus{
+// 				outline: none;
+// 			}
+// 		}
+// 		.swiper-news-hightlight-prev{
+// 			left: 0px;
+// 			right: auto;
+// 			background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+// 		}
+// 		.swiper-news-hightlight-next{
+// 			right: 0px;
+// 			left: auto;
+// 			background: url('../img/Icon/arrow_next.svg') no-repeat center;
+// 		}
 
-		// pagination
-		.pagination-wrap{
-			position: relative;
-			bottom: 0px;
-			width: 100%;
-			text-align: center;
-		}
-		.swiper-pagination-news-hightlight{
-			position: relative;
-			display: inline-block;
-			text-align: center;
-			padding: 15px 0;
-			width: 100px;
-			box-sizing: border-box;
-			z-index: 1;
-			.swiper-pagination-bullet{
-				width: 15px;
-				height: 15px;
-				margin: 0 5px;
-				border: 1px solid color(orange);
-				background-color: white;
-				opacity: 1;
-				&-active{
-					background-color: color(orange);
-				}
-				&:focus{
-					outline: none;
-				}
-			}
-		}
-	}
-}
+// 		// pagination
+// 		.pagination-wrap{
+// 			position: relative;
+// 			bottom: 0px;
+// 			width: 100%;
+// 			text-align: center;
+// 		}
+// 		.swiper-pagination-news-hightlight{
+// 			position: relative;
+// 			display: inline-block;
+// 			text-align: center;
+// 			padding: 15px 0;
+// 			width: 100px;
+// 			box-sizing: border-box;
+// 			z-index: 1;
+// 			.swiper-pagination-bullet{
+// 				width: 15px;
+// 				height: 15px;
+// 				margin: 0 5px;
+// 				border: 1px solid color(orange);
+// 				background-color: white;
+// 				opacity: 1;
+// 				&-active{
+// 					background-color: color(orange);
+// 				}
+// 				&:focus{
+// 					outline: none;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 /* ------| Puntos Slider |----- */
 .view-display-id-noticias_destacadas {

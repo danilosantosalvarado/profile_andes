@@ -98,61 +98,61 @@
 // }
 
 /* ------| Flechas paginador |----- */
-.view-display-id-noticias_relacionadas {
-	.skin-default {
-		position: relative;
-		.slideshow-controls-top,
-		.views-slideshow-controls-bottom {
-			display: block;
-			//Conten Flechas
-			.views-slideshow-controls-text {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				//Button Izquierda
-				a[rel='prev'] {
-					font-size: 0;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					top: 50%;
-					border: 1px solid #777;
-					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-					background-size: 40px 40px;
-				}
-				//Buttom Pause
-				.views-slideshow-controls-text-pause {
-					display: none;
-				}
-				//Button Deracha
-				a[rel='next'] {
-					font-size: 0;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					top: 50%;
-					left: inherit;
-					right: 0;
-					border: 1px solid #777;
-					background: url('../img/Icon/arrow_next.svg') no-repeat center;
-					background-size: 40px 40px;
-				}
-			}
-		}
-	}
-}
+// .view-display-id-noticias_relacionadas {
+// 	.skin-default {
+// 		position: relative;
+// 		.slideshow-controls-top,
+// 		.views-slideshow-controls-bottom {
+// 			display: block;
+// 			//Conten Flechas
+// 			.views-slideshow-controls-text {
+// 				display: none;
+// 				@include respond-to(xl) {
+// 					display: block;
+// 				}
+// 				//Button Izquierda
+// 				a[rel='prev'] {
+// 					font-size: 0;
+// 					width: 40px;
+// 					height: 40px;
+// 					position: absolute;
+// 					top: 50%;
+// 					border: 1px solid #777;
+// 					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
+// 					background-size: 40px 40px;
+// 				}
+// 				//Buttom Pause
+// 				.views-slideshow-controls-text-pause {
+// 					display: none;
+// 				}
+// 				//Button Deracha
+// 				a[rel='next'] {
+// 					font-size: 0;
+// 					width: 40px;
+// 					height: 40px;
+// 					position: absolute;
+// 					top: 50%;
+// 					left: inherit;
+// 					right: 0;
+// 					border: 1px solid #777;
+// 					background: url('../img/Icon/arrow_next.svg') no-repeat center;
+// 					background-size: 40px 40px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 /* ------| Puntos Slider |----- */
-.view-display-id-noticias_relacionadas {
-	.views-slideshow-pager-field-processed {
-		@include bullet(orange, white, orange, orange );
-		// @include respond-to(xl) {
-		// 	display: none;
-		// }
-	}
-}
+// .view-display-id-noticias_relacionadas {
+// 	.views-slideshow-pager-field-processed {
+// 		@include bullet(orange, white, orange, orange );
+// 		// @include respond-to(xl) {
+// 		// 	display: none;
+// 		// }
+// 	}
+// }
 
-.youtube-container--responsive{
-	background-color: color('black');
-}
+// .youtube-container--responsive{
+// 	background-color: color('black');
+// }
