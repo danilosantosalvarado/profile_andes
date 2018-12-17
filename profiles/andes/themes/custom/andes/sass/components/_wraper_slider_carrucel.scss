@@ -81,7 +81,22 @@
             .views-field-field-fecha-eventos{
               color: color('grey-dark');
             }
-					}
+          }
+          .content-description {
+            .views-field-field-fecha-eventos, .views-field-additional {
+              color: color('grey-dark');
+              display: flex;
+              margin-bottom: 15px;
+              .views-label{
+                font-family: $latobold;
+                @include font-size(xs);
+                padding-right: 5px;
+              }
+              .field-content{
+                @include font-size(xs);
+              }
+            }
+          }
 					//Titulo
 					.views-field-title {
             margin: 15px 0 20px;
@@ -92,8 +107,13 @@
 							text-decoration: none;
 							@include respond-to(m) {
 								@include font-size(ll);
-							}
-						}
+              }
+            }
+            a
+              &:hover{
+                color: color('grey-dark');
+                text-decoration: underline;
+              }
 					}
 					//Body
 					.views-field-body {
