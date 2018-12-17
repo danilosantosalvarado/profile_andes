@@ -325,67 +325,79 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
   if(isset($content->title) && !empty($content->title) &&is_string($content->title)){
     $content->title = t($content->title);
   }
-  if ($pane->type == 'block') {
+  if($pane->type == 'views'){
+    $hashes = variable_get('views_block_hashes','');
+    if($content->delta != 'default'){
+      $anidateSearch = $content->delta;
+      $key = array_search ($anidateSearch, $hashes);
+      if(!empty($key)){
+        $block = block_load($content->module, $key);
+      }
+    }
+   
+  }
+  else if ($pane->type == 'block') {
 
     $block = block_load($content->module, $content->delta);
     
- if (!empty($block->background_image)){
-    $fid = file_load($block->background_image);
-    if (isset($fid)&&($fid !== '0')) {
-      $file_uri = file_create_url(file_build_uri($block->background_image->uri));
-      $fid = $file_uri.$fid->filename;
-      $wrapper = $block->module.'-'.$block->delta;
-     $wrapper = str_replace("_", "-", $wrapper);
-    //array($block->bid )
-      drupal_add_js(array(
-        'udla_blocks_alter' => array(
-          'data_ids' => array(
-            $block->bid => array(
-              'info_block' => $wrapper,
-              'url_img' => $fid
+    if (!empty($block->background_image)){
+        $fid = file_load($block->background_image);
+        if (isset($fid)&&($fid !== '0')) {
+          $file_uri = file_create_url(file_build_uri($block->background_image->uri));
+          $fid = $file_uri.$fid->filename;
+          $wrapper = $block->module.'-'.$block->delta;
+          $wrapper = str_replace("_", "-", $wrapper);
+          //array($block->bid )
+          drupal_add_js(array(
+            'udla_blocks_alter' => array(
+              'data_ids' => array(
+                $block->bid => array(
+                  'info_block' => $wrapper,
+                  'url_img' => $fid
+                )
+              )
             )
-          )
-        )
-      ), 'setting');
-      drupal_add_js(drupal_get_path('module', 'udla_blocks_alter') . '/js/udla_blocks_alter.js');
+          ), 'setting');
+          drupal_add_js(drupal_get_path('module', 'udla_blocks_alter') . '/js/udla_blocks_alter.js');
+        }
+      }
     }
-  }
 
 
-    if (!empty($block->background_color)) {
-      $result = _block_data_css($block->background_color, 'background');
-      if (!empty($result)) {
+        if (!empty($block->background_color)) {
+          $result = _block_data_css($block->background_color, 'background');
+          if (!empty($result)) {
 
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+          }
+        }
+        if (!empty($block->text_color)) {
+          $result = _block_data_css($block->text_color, 'text');
+          if (!empty($result)) {
+            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+          }
+        }
+        if (!empty($block->hover_link)) {
+          $result = _block_data_css($block->hover_link, 'hover-link');
+          if (!empty($result)) {
+            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+          }
+        }
+        if (!empty($block->hover_content)) {
+          $result = _block_data_css($block->hover_content, 'hover-content');
+          if (!empty($result)) {
+            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+          }
+        }
+        if (!empty($block->hover_content)) {
+          $result = _block_data_css($block->hover_content_text, 'hover-content-text');
+          if (!empty($result)) {
+            $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
+          }
+        }
       }
-    }
-    if (!empty($block->text_color)) {
-      $result = _block_data_css($block->text_color, 'text');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-      }
-    }
-    if (!empty($block->hover_link)) {
-      $result = _block_data_css($block->hover_link, 'hover-link');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-      }
-    }
-    if (!empty($block->hover_content)) {
-      $result = _block_data_css($block->hover_content, 'hover-content');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-      }
-    }
-    if (!empty($block->hover_content)) {
-      $result = _block_data_css($block->hover_content_text, 'hover-content-text');
-      if (!empty($result)) {
-        $pane->css['css_class'] = (isset($pane->css['css_class'])) ? $pane->css['css_class'] . " " . implode(' ', $result) : implode(' ', $result);
-      }
-    }
-  }
 
-}
+    
 
 
 // background color decanatura taxonomy
