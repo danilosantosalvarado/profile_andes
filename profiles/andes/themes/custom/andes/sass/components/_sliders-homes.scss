@@ -27,6 +27,9 @@
 		@include respond-to(xl) {
 			display: block;
 		}
+		.img-responsive{
+			width: 100%;
+		}
 	}
 	.img-mobile {
 		display: block;

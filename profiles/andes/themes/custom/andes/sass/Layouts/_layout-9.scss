@@ -41,7 +41,7 @@
       width: 49.9%;
     }
   }
-  
+
 }
 
 /* ------| layaut first, last |----- */
@@ -82,5 +82,19 @@
   }
 }
 
-
+.layout-nine{
+  .row.container{
+    margin: 0 auto;
+    h1{
+      @include font-size(xxxl);
+      text-align: left;
+    }
+  }
+  .row-inside-last{
+    background-color: color('grey-light');
+    .views-row-even{
+      background-color: color('white');
+    }
+  }
+}
 

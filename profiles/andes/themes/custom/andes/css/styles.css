@@ -2039,6 +2039,23 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   margin-top: 40px;
 }
 
+.layout-nine .row.container {
+  margin: 0 auto;
+}
+
+.layout-nine .row.container h1 {
+  font-size: 2.6875rem;
+  text-align: left;
+}
+
+.layout-nine .row-inside-last {
+  background-color: #f4f1f1;
+}
+
+.layout-nine .row-inside-last .views-row-even {
+  background-color: #fff;
+}
+
 .view-eventos-decanatura {
   position: relative;
   width: 100%;
@@ -3984,6 +4001,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   }
 }
 
+.slider-pricipal-node .img-desktop .img-responsive {
+  width: 100%;
+}
+
 .slider-pricipal-node .img-mobile {
   display: block;
 }
@@ -5838,28 +5859,9 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   }
 }
 
-/* ------| Container|----- */
-.publicaciones-interna #block-system-main {
+/* ------| Panel |----- */
+.publicaciones-interna .row.container {
   margin: 0 auto;
-  padding: 0 15px 25px;
-}
-
-@media (min-width: 768px) {
-  .publicaciones-interna #block-system-main {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .publicaciones-interna #block-system-main {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .publicaciones-interna #block-system-main {
-    width: 1170px;
-  }
 }
 
 /* ------| Panel |----- */
