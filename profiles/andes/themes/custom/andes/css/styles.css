@@ -8036,7 +8036,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px;
-  opacity: initial;
+  opacity: 1;
 }
 
 .slider-vertical-destacados .swiper-button-next.swiper-button-disabled {
