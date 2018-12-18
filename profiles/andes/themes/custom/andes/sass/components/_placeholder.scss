@@ -194,6 +194,26 @@ html body.admin-menu {
   }
 }
 
+/* ------| Titulo subrallado |----- */
+.title-underline{
+  h1,
+  h2{
+    font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+    font-size: 1.1875rem;
+    color: #484851;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    &:after{
+      content: "";
+      display: block;
+      height: 2px;
+      width: 80px;
+      border-bottom: 1px solid #484851;
+    }
+  }
+}
+
 /* ------| Titles cursos  |----- */
 h1.page-header {
   display: none;

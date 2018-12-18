@@ -17,6 +17,7 @@
 				text-align: center;
 				margin: 0;
 				padding: 40px 0;
+				@include font-size(l);
 			}
 		}
 	}
@@ -28,6 +29,8 @@
 			border-color: #ddd;
 			padding: 15px 25px;
 			margin-top: 5px;
+			@include font-size(s);
+			font-family: $latoblack;
 			&.ui-state-hover {
 				a:hover {
 					color: #007bff;

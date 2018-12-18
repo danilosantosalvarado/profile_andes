@@ -1659,23 +1659,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Layouts 1
 //------------------------------------------------------------------------------
 */
-.layout-1 .pane-content h1 {
-  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
-  font-size: 1.1875rem;
-  color: #484851;
-  text-align: left;
-  padding: 10px;
-  font-weight: 600;
-}
-
-.layout-1 .pane-content h1:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 80px;
-  border-bottom: 1px solid #484851;
-}
-
 .slider-homes-layout-one {
   position: absolute;
   top: 0;
@@ -3159,6 +3142,26 @@ html body.admin-menu {
   line-height: normal;
   margin: 0px;
   padding: 40px 0;
+}
+
+/* ------| Titulo subrallado |----- */
+.title-underline h1,
+.title-underline h2 {
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.1875rem;
+  color: #484851;
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.title-underline h1:after,
+.title-underline h2:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 80px;
+  border-bottom: 1px solid #484851;
 }
 
 /* ------| Titles cursos  |----- */
@@ -4964,6 +4967,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   text-align: center;
   margin: 0;
   padding: 40px 0;
+  font-size: 1.1875rem;
 }
 
 .view-id-componente_acordeon .ui-accordion-header.ui-state-default {
@@ -4972,6 +4976,8 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   border-color: #ddd;
   padding: 15px 25px;
   margin-top: 5px;
+  font-size: 0.875rem;
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
 }
 
 .view-id-componente_acordeon .ui-accordion-header.ui-state-default.ui-state-hover a:hover {
