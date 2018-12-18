@@ -79,6 +79,33 @@
 		@include respond-to(xl){
 			max-width: 1140px;
 		}
+		.swiper-button-next, .next-pagination{
+			right: 0px;
+			left: auto;
+			background: url(../img/Icon/arrow_next.svg) no-repeat center;
+		}
+		.swiper-button-prev, .prev-pagination{
+			right: auto;
+			left: 0;
+			background: url(../img/Icon/arrow_prev.svg) no-repeat center;
+		}
+		.swiper-button-next, .swiper-button-prev, .next-pagination, .prev-pagination{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: calc(50% - 20px);
+			border: 1px solid #777;
+			display: none;
+			font-size: 0;
+			@include respond-to(l) {
+				display: block;
+			}
+		}
+		.swiper-button-disabled{
+			opacity: 0.35;
+			cursor: auto;
+			pointer-events: none;
+		}
 		.views-slideshow-pager-fields  {
 			padding: 24px 10px;
 			display: flex;

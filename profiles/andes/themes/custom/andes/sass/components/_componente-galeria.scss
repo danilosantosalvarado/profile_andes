@@ -5,8 +5,6 @@
 	margin: 0 auto;
 	padding: 25px 15px;
 	box-sizing: border-box;
-	
-
 	ul{
 		margin: 0;
 		padding: 0;
@@ -16,12 +14,10 @@
 		padding: 0;
 		margin: 0;
 	}
-
 	.field-content{
 		position: relative;
 		display: block;
 	}
-
 	.wrapper-galeria-home{
 		display: -ms-grid;
 		display: grid;
@@ -29,7 +25,6 @@
 		max-width: 600px;
 		margin: 20px auto;
 	}
-
 	.modal-gallery-home{
 		display: block;
 		max-width: 100%;
@@ -37,13 +32,11 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 	.gh-item{
 		position: relative;
 		overflow: hidden;
 		box-sizing: border-box;
 	}
-
 	.gh-item img{
 		position: absolute;
 		min-width: 100%;
@@ -64,7 +57,6 @@
 	.gh-item.object-fit img{
 		opacity: 0;
 	}
-
 	.wrapper-galeria-home.type-seven{
 		-ms-grid-columns: 1fr 1fr 1fr;
 		grid-template-columns: 1fr 1fr 1fr;
