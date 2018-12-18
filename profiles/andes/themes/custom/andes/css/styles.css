@@ -8097,15 +8097,11 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 }
 
 /* ------| Button Ver Todas las noticias |----- */
-.view-display-id-multimedia_destacada {
-  position: relative;
-}
-
-.view-display-id-multimedia_destacada .view-footer a {
+.view-more-footer-multi a {
   display: none;
   position: absolute;
   right: 16px;
-  bottom: -41px;
+  bottom: 0px;
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #484851;
@@ -8117,12 +8113,12 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 }
 
 @media (min-width: 992px) {
-  .view-display-id-multimedia_destacada .view-footer a {
+  .view-more-footer-multi a {
     display: inline-block;
   }
 }
 
-.view-display-id-multimedia_destacada .view-footer a:hover {
+.view-more-footer-multi a:hover {
   background: #e34d1f;
   color: #fff;
 }
