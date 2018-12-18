@@ -1,65 +1,91 @@
 /*
 //------------------------------------------------------------------------------
-// Noticias
+// Publicaciones
 //------------------------------------------------------------------------------
 */
-
-.view-display-id-componente_publicaciones, .view-id-componente_carrusel_multimedia {
-	.swiper-container-horizontal {
+.wrapper-slider-com-publicaciones {
+	@include respond-to(xl) {
 		width: 90%;
 		margin: 0 auto;
-		ul {
-    -webkit-padding-start: 0px;
-			li.swiper-slide {
-				display: block;
-				list-style: none;
-				//Imagenes
-				.publicaiones-img-desktop {
-					display: none;
-					@include respond-to(xl) {
-						display: block;
-					}
-					.content {
-						width: 60%;
-						margin: 0 auto;
-						img {
-							width: 100%;
-							max-height: 218px;
-						}
-					}
+	}
+	ul {
+    padding: 0px;
+		li.swiper-slide {
+			display: block;
+			//Imagenes
+			.publicaiones-img-desktop {
+				display: none;
+				@include respond-to(xl) {
+					display: block;
 				}
-				.publicaiones-img-mobil {
-					@include respond-to(xl) {
-						display: none;
-					}
+				.content {
+					width: 60%;
+					margin: 0 auto;
 					img {
 						width: 100%;
+						max-height: 218px;
 					}
 				}
-				//Titulo
-				.publicaiones-titulo {
-					@include margin(.834 0 .834);
-					a {
-						font-family: $crimson-textbold;
-						@include type-layout(l, .96);
-						color: #484851;
+			}
+			.publicaiones-img-mobil {
+				@include respond-to(xl) {
+					display: none;
+				}
+				img {
+					width: 100%;
+				}
+			}
+			// wapper
+			.box-content {
+				position: relative;
+				text-align: center;
+				@include respond-to(m) {
+					padding: 15px 0;
+				}
+				//titulo
+				.views-field-title {
+					margin: 20px 0 25px;
+					a,
+					span {
+						font-family: $crimson-semibold;
+						@include font-size(sl);
+						font-size: 1.25rem;
+						line-height: 1;
+						text-align: left;
 						text-decoration: none;
-						// @include margin(.834 0 .834);
-						@include respond-to(xl) {
-							@include font-size(ll);
-							@include margin(.9 0 1.042);
+
+						padding: 0;
+					}
+				}
+				//body
+				.views-field-body {
+					font-family: $crimson-textregular;
+					@include font-size(ms);
+					color: color('grey-dark');
+					line-height: normal;
+					text-align: left;
+				}
+				// button
+				.views-field-view-node {
+					a {
+						display: block;
+						font-family: $latoregular;
+						color: color('grey-dark');
+						text-decoration: none;
+						text-align: center;
+						background: transparent;
+						border: 1px solid #e34d1f;
+						padding: 10px 20px;
+						z-index: 1;
+						max-width: 190px;
+						margin: 20px auto 0;
+						&:hover {
+							background-color: #e55d12;
+							color: #ffffff;
 						}
 					}
 				}
-				//Body
-				.publicaiones-body {
-					font-family: $crimson-textregular;
-					@include type-layout(m, 1.06);
-					@include margin-bottom(.417);
-					@include respond-to(xl) {
-						@include font-size(o);
-					}
-				}
+
 			}
 		}
 	}
@@ -92,60 +118,6 @@
 	}
 }
 
-//Flechas paginador
-.view-display-id-componente_publicaciones {
-	.skin-default {
-		position: relative;
-		.views-slideshow-controls-bottom {
-			display: block;
-			//Conten Flechas
-			.views-slideshow-controls-text {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				//Button Izquierda
-				a[rel='prev'] {
-					font-size: 0;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					top: 50%;
-					border: 1px solid #777;
-					background: url('../img/Icon/arrow_prev.svg') no-repeat center;
-					background-size: 40px 40px;
-				}
-				//Buttom Pause
-				.views-slideshow-controls-text-pause {
-					display: none;
-				}
-				//Button Deracha
-				a[rel='next'] {
-					font-size: 0;
-					width: 40px;
-					height: 40px;
-					position: absolute;
-					top: 50%;
-					left: inherit;
-					right: 0;
-					border: 1px solid #777;
-					background: url('../img/Icon/arrow_next.svg') no-repeat center;
-					background-size: 40px 40px;
-				}
-			}
-		}
-	}
-}
 
-// Puntos Slider
-.view-display-id-componente_publicaciones {
-	margin: 15px 0 20px;
-	.views-slideshow-pager-field-processed {
-		padding: 25px 0;
-		@include bullet(orange, grey-secundary, orange, orange );
-		@include respond-to(xl) {
-			display: none;
-		}
-	}
-}
+
 
