@@ -3644,6 +3644,17 @@ h1.page-header {
   font-size: 1.1875rem;
 }
 
+/*----| Loadind |----*/
+.container-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(http://loadinggif.com/images/image-selection/3.gif) 50% 50% no-repeat #b6b5b5;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Miga de pan

@@ -625,3 +625,14 @@ h1.page-header {
     }
   }
 }
+
+/*----| Loadind |----*/
+.container-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(http://loadinggif.com/images/image-selection/3.gif) 50% 50% no-repeat rgb(182, 181, 181);
+}
