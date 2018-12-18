@@ -9904,7 +9904,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   position: static;
   display: block;
   background-color: transparent;
-  border: initial;
+  border: none;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
