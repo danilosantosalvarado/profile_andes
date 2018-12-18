@@ -6914,7 +6914,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 .caja-listado .container-title-desc .caja-body .view-redes-sociales-item > .view-content > .views-row {
   padding: 0;
   width: 44px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
 }
 
 .caja-listado .container-title-desc .caja-body .view-redes-sociales-item > .view-content > .views-row .view-footer-redes-sociales {
@@ -6984,7 +6984,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 @media (min-width: 992px) {
   .caja-listado:hover .caja-enlace {
     opacity: 1;
-    display: none;
+    display: block;
   }
   .caja-listado:hover .caja-enlace a {
     bottom: 10px;
@@ -9612,30 +9612,29 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 // footer
 //------------------------------------------------------------------------------
 */
-.footer {
+footer.footer {
   margin: 0px;
 }
 
-/* ------| Panel container |----- */
-#mini-panel-footer {
+footer.footer #mini-panel-footer {
   margin: 0 auto;
   padding: 40px 15px;
 }
 
 @media (min-width: 1111px) {
-  #mini-panel-footer {
+  footer.footer #mini-panel-footer {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  #mini-panel-footer {
+  footer.footer #mini-panel-footer {
     max-width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  #mini-panel-footer {
+  footer.footer #mini-panel-footer {
     max-width: 970px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9644,54 +9643,52 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 @media (min-width: 1200px) {
-  #mini-panel-footer {
+  footer.footer #mini-panel-footer {
     max-width: 1170px;
   }
 }
 
-/* ------| Panel responsive |----- */
-#mini-panel-footer .panel-panel.panel-col-first {
+footer.footer #mini-panel-footer .panel-panel.panel-col-first {
   float: initial;
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  #mini-panel-footer .panel-panel.panel-col-first {
+  footer.footer #mini-panel-footer .panel-panel.panel-col-first {
     float: left;
     width: 30%;
   }
 }
 
-#mini-panel-footer .panel-panel.panel-col-first .inside {
+footer.footer #mini-panel-footer .panel-panel.panel-col-first .inside {
   margin: 0;
 }
 
-#mini-panel-footer .panel-panel.panel-col {
+footer.footer #mini-panel-footer .panel-panel.panel-col {
   float: initial;
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  #mini-panel-footer .panel-panel.panel-col {
+  footer.footer #mini-panel-footer .panel-panel.panel-col {
     float: left;
     width: 40%;
   }
 }
 
-#mini-panel-footer .panel-panel.panel-col-last {
+footer.footer #mini-panel-footer .panel-panel.panel-col-last {
   float: initial;
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  #mini-panel-footer .panel-panel.panel-col-last {
+  footer.footer #mini-panel-footer .panel-panel.panel-col-last {
     float: left;
     width: 30%;
   }
 }
 
-/* ------| Contactos Footer |----- */
-.bean-bloque-footer-contacto .group-header {
+footer.footer .bean-bloque-footer-contacto .group-header {
   float: left;
   width: 100%;
   display: -webkit-box;
@@ -9699,8 +9696,8 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   display: flex;
 }
 
-.bean-bloque-footer-contacto .group-header .field-name-field-imagen,
-.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo {
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-imagen,
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo {
   width: 100%;
   max-width: 140px;
   padding-right: 15px;
@@ -9708,41 +9705,41 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   float: left;
 }
 
-.bean-bloque-footer-contacto .group-header .field-name-field-imagen .field-label,
-.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo .field-label {
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-imagen .field-label,
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo .field-label {
   display: none;
 }
 
-.bean-bloque-footer-contacto .group-header .field-name-field-imagen img,
-.bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo img {
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-imagen img,
+footer.footer .bean-bloque-footer-contacto .group-header .field-name-field-image-sublogo img {
   max-width: 140px;
   display: block;
   max-height: 50px;
 }
 
-.bean-bloque-footer-contacto .group-left {
+footer.footer .bean-bloque-footer-contacto .group-left {
   width: 100%;
   padding-top: 25px;
 }
 
 @media (min-width: 992px) {
-  .bean-bloque-footer-contacto .group-left {
+  footer.footer .bean-bloque-footer-contacto .group-left {
     width: 50%;
   }
 }
 
-.bean-bloque-footer-contacto .group-left .field-name-field-direccion,
-.bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais {
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-direccion,
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais {
   margin-bottom: 16px;
 }
 
-.bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-label,
-.bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-label {
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-label,
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-label {
   display: none;
 }
 
-.bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-item,
-.bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-item {
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-direccion .field-item,
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-ciudad-pais .field-item {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   color: #fff;
   font-size: 0.875rem;
@@ -9751,7 +9748,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   margin-bottom: 10px;
 }
 
-.bean-bloque-footer-contacto .group-left .field-name-field-zipcode {
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-zipcode {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9764,29 +9761,29 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   line-height: normal;
 }
 
-.bean-bloque-footer-contacto .group-left .field-name-field-zipcode .field-label {
+footer.footer .bean-bloque-footer-contacto .group-left .field-name-field-zipcode .field-label {
   white-space: nowrap;
   padding-right: 5px;
 }
 
-.bean-bloque-footer-contacto .group-right {
+footer.footer .bean-bloque-footer-contacto .group-right {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  .bean-bloque-footer-contacto .group-right {
+  footer.footer .bean-bloque-footer-contacto .group-right {
     width: 50%;
   }
 }
 
-.bean-bloque-footer-contacto .group-right .field-name-field-telefono {
+footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
   background: #232323;
   padding: 20px 40px;
   margin: 40px -15px 0;
 }
 
 @media (min-width: 992px) {
-  .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
+  footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono {
     margin: 0;
     padding: 0;
     background: transparent;
@@ -9794,7 +9791,7 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   }
 }
 
-.bean-bloque-footer-contacto .group-right .field-name-field-telefono:before {
+footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono:before {
   content: '';
   display: inline-block;
   background: url("../img/Icon/ico-contact.png") center no-repeat;
@@ -9805,21 +9802,21 @@ div#ui-datepicker-div table td a.ui-state-highlight {
 }
 
 @media (min-width: 992px) {
-  .bean-bloque-footer-contacto .group-right .field-name-field-telefono:before {
+  footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono:before {
     display: none;
   }
 }
 
-.bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-label {
+footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-label {
   display: none;
 }
 
-.bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-items {
+footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-items {
   display: inline-block;
   padding-left: 5%;
 }
 
-.bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-items .field-item {
+footer.footer .bean-bloque-footer-contacto .group-right .field-name-field-telefono .field-items .field-item {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   color: #fff;
   font-size: 0.875rem;
@@ -9829,48 +9826,47 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   white-space: nowrap;
 }
 
-/* ------| Enlaces  Footer |----- */
 @media (min-width: 992px) {
-  #block-panels-mini-footer {
+  footer.footer #block-panels-mini-footer {
     border-top: 1px solid #222;
   }
 }
 
 @media (min-width: 992px) {
-  .pane-menu-menu-enlaces-de-interes {
+  footer.footer .pane-menu-menu-enlaces-de-interes {
     border-left: 1px solid #222;
     border-right: 1px solid #222;
   }
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .open > a,
-.pane-menu-menu-enlaces-de-interes .menu.nav .nav .open > a:hover {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .open > a,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .nav .open > a:hover {
   background-color: transparent;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
   width: 100%;
   float: left;
 }
 
 @media (min-width: 992px) {
-  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
-  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
     padding: 0 15px;
   }
 }
 
 @media (min-width: 992px) {
-  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
-  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown,
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown {
     width: 50%;
   }
 }
 
 @media (min-width: 992px) {
-  .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown:before,
-  .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown:before {
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown:before,
+  footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown:before {
     content: '';
     width: 50%;
     height: 1px;
@@ -9881,8 +9877,8 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   }
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle {
   color: #fff;
   cursor: default;
   text-decoration: none;
@@ -9894,13 +9890,13 @@ div#ui-datepicker-div table td a.ui-state-highlight {
           box-shadow: none;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle .caret {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown a.dropdown-toggle .caret,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown a.dropdown-toggle .caret {
   display: none;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu {
   position: static;
   display: block;
   background-color: transparent;
@@ -9912,14 +9908,14 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   padding: 0;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li {
   list-style: none;
   padding: 5px 0px;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a {
   display: block;
   font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
@@ -9930,32 +9926,31 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   white-space: normal;
 }
 
-.pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a:hover,
-.pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a:hover {
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .first.dropdown .dropdown-menu li a:hover,
+footer.footer .pane-menu-menu-enlaces-de-interes .menu.nav .last.dropdown .dropdown-menu li a:hover {
   color: #fff;
   text-decoration: none;
   background-color: transparent;
 }
 
-/* ------| Redes Sociales |----- */
-.view-id-footer_redes_sociales {
+footer.footer .view-id-footer_redes_sociales {
   padding-top: 20px;
 }
 
 @media (min-width: 992px) {
-  .view-id-footer_redes_sociales {
+  footer.footer .view-id-footer_redes_sociales {
     padding-left: 15px;
   }
 }
 
-.view-id-footer_redes_sociales h3 {
+footer.footer .view-id-footer_redes_sociales h3 {
   color: #fff;
   font-size: 0.875rem;
   text-transform: uppercase;
   margin: 0 0 8px;
 }
 
-.view-id-footer_redes_sociales .views-row {
+footer.footer .view-id-footer_redes_sociales .views-row {
   display: block;
   float: left;
   padding: 5px 5px 5px 0;
@@ -9963,17 +9958,16 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   height: 35px;
 }
 
-.view-id-footer_redes_sociales .views-row .img-responsive {
+footer.footer .view-id-footer_redes_sociales .views-row .img-responsive {
   width: 29px;
   height: 29px;
 }
 
-/* ------| copyright |----- */
-.copyright {
+footer.footer .copyright {
   padding: 20px 0;
 }
 
-.copyright p {
+footer.footer .copyright p {
   font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
   color: #818181;
   margin: 0;
