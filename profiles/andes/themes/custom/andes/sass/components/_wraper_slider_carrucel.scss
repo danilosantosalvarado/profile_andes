@@ -192,3 +192,14 @@
     background: url('../img/Icon/arrow_next.svg') no-repeat center;
   }
 }
+
+//carrusel de eventos que es mas bajo
+.wraper-slider-eventos{
+  ul{
+    li{
+      .box-content{
+        min-height: 290px !important;
+      }
+    }
+  }
+}

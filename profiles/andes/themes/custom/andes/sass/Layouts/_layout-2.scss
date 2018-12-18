@@ -35,18 +35,18 @@
     padding: 25px 0;
     //Ubicacion left
     .item-content-ubication-left {
-      @include respond-to(m) {
+      @include respond-to(xs) {
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .views-field {
-        @include respond-to(m) {
+        @include respond-to(xs) {
           width: 50%;
         }
       }
       .container-title-desc {
-        @include respond-to(m) {
+        @include respond-to(xs) {
           width: 50%;
           float: left;
           display: table-cell;

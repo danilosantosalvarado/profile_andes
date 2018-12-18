@@ -73,19 +73,19 @@
 			@include respond-to(xl) {
 				padding-top: 29%;
 			}
-			.img-responsive {
-				visibility: hidden;
-			}
-			.youtube-container--responsive {
-				padding-bottom: inherit;
-				height: 100%;
-				position: absolute;
-				display: block;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				left: 0;
-			}
+		}
+		.img-responsive {
+			visibility: hidden;
+		}
+		.youtube-container--responsive {
+			padding-bottom: inherit;
+			height: 100%;
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
 		}
 	}
 }

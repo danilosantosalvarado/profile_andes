@@ -1775,7 +1775,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   padding: 25px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1789,13 +1789,13 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-left .views-field {
     width: 50%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 555px) {
   .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-left .container-title-desc {
     width: 50%;
     float: left;
@@ -3978,6 +3978,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   background: url("../img/Icon/arrow_next.svg") no-repeat center;
 }
 
+.wraper-slider-eventos ul li .box-content {
+  min-height: 290px !important;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Slider Homes
@@ -4094,41 +4098,41 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   }
 }
 
-.slider-pricipal-node .cl-slider-homes-layout-one .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-two .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-three .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-four .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-five .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-seven .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-layout-eleven .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-right .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-center .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-left .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-right-deca .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-center-deca .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-left-deca .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-bottom .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-specials .iframe-conten .img-responsive,
-.slider-pricipal-node .cl-slider-homes-bottom-deca .iframe-conten .img-responsive {
+.slider-pricipal-node .cl-slider-homes-layout-one .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-two .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-three .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-four .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-five .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-seven .img-responsive,
+.slider-pricipal-node .cl-slider-homes-layout-eleven .img-responsive,
+.slider-pricipal-node .cl-slider-homes-right .img-responsive,
+.slider-pricipal-node .cl-slider-homes-center .img-responsive,
+.slider-pricipal-node .cl-slider-homes-left .img-responsive,
+.slider-pricipal-node .cl-slider-homes-right-deca .img-responsive,
+.slider-pricipal-node .cl-slider-homes-center-deca .img-responsive,
+.slider-pricipal-node .cl-slider-homes-left-deca .img-responsive,
+.slider-pricipal-node .cl-slider-homes-bottom .img-responsive,
+.slider-pricipal-node .cl-slider-homes-specials .img-responsive,
+.slider-pricipal-node .cl-slider-homes-bottom-deca .img-responsive {
   visibility: hidden;
 }
 
-.slider-pricipal-node .cl-slider-homes-layout-one .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-two .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-three .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-four .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-five .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-seven .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-layout-eleven .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-right .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-center .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-left .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-right-deca .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-center-deca .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-left-deca .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-bottom .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-specials .iframe-conten .youtube-container--responsive,
-.slider-pricipal-node .cl-slider-homes-bottom-deca .iframe-conten .youtube-container--responsive {
+.slider-pricipal-node .cl-slider-homes-layout-one .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-two .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-three .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-four .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-five .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-seven .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-layout-eleven .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-right .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-center .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-left .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-right-deca .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-center-deca .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-left-deca .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-bottom .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-specials .youtube-container--responsive,
+.slider-pricipal-node .cl-slider-homes-bottom-deca .youtube-container--responsive {
   padding-bottom: inherit;
   height: 100%;
   position: absolute;
