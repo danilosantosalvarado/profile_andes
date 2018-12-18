@@ -1279,6 +1279,43 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   }
 }
 
+/* ------| Autor noticias |----- */
+.noticias .pane-autor-noticia {
+  position: relative;
+}
+
+.noticias .pane-autor-noticia .views-field-field-autor,
+.noticias .pane-autor-noticia .views-field-name-field,
+.noticias .pane-autor-noticia .views-field-field-email {
+  width: 54%;
+  margin-left: 46%;
+  font-size: 1rem;
+}
+
+.noticias .pane-autor-noticia .views-field-field-autor {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.noticias .pane-autor-noticia .views-field-name-field,
+.noticias .pane-autor-noticia .views-field-field-email {
+  font-family: "Lato light", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.noticias .pane-autor-noticia .views-field-field-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 57%;
+  top: 0;
+}
+
+.noticias .pane-autor-noticia .views-field-field-image img {
+  border-radius: 50%;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
 /*
 //------------------------------------------------------------------------------
 //  Home Publicaciones
