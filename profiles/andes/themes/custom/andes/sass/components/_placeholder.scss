@@ -203,7 +203,7 @@ h1.page-header {
 .view-more-footer{
   position: relative;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   &::before {
     content: '';
     display: block;
@@ -572,33 +572,6 @@ h1.page-header {
       line-height: 39.77px;
       margin-left: 3rem;
       margin-top: 10px;
-    }
-  }
-}
-// Bulet de componente
-.swiper-pagination-3d-mobile {
-  position: initial;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  padding: 15px 0;
-  box-sizing: border-box;
-  z-index: 1;
-  .swiper-pagination-bullet {
-    width: 17px !important;
-    height: 17px;
-    border: 1px solid color('Yellow-secundary');
-    border-radius: 100%;
-    padding: 0;
-    margin: 0 5px;
-    background-color: transparent;
-    opacity: 1;
-    &-active {
-      border-color: color('Yellow-secundary');
-      background-color: color('Yellow-secundary');
-    }
-    &:focus {
-      outline: none;
     }
   }
 }

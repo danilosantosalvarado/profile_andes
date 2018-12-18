@@ -3170,7 +3170,7 @@ h1.page-header {
 .view-more-footer {
   position: relative;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .view-more-footer::before {
@@ -3620,37 +3620,6 @@ h1.page-header {
   margin-top: 10px;
 }
 
-.swiper-pagination-3d-mobile {
-  position: initial;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  padding: 15px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  z-index: 1;
-}
-
-.swiper-pagination-3d-mobile .swiper-pagination-bullet {
-  width: 17px !important;
-  height: 17px;
-  border: 1px solid #FDBD2C;
-  border-radius: 100%;
-  padding: 0;
-  margin: 0 5px;
-  background-color: transparent;
-  opacity: 1;
-}
-
-.swiper-pagination-3d-mobile .swiper-pagination-bullet-active {
-  border-color: #FDBD2C;
-  background-color: #FDBD2C;
-}
-
-.swiper-pagination-3d-mobile .swiper-pagination-bullet:focus {
-  outline: none;
-}
-
 /*-----------Default destacados cards multimedia----*/
 .views-responsive-grid .views-column .views-field-view .view-content {
   min-height: 55vw;
@@ -3733,15 +3702,12 @@ h1.page-header {
 }
 
 /* ------| Default slider 4 columnas, imagenes y bulles  |----- */
-.wraper-slider-general {
-  padding-top: 40px;
-  padding-bottom: 10px;
-}
-
 @media (min-width: 992px) {
   .wraper-slider-general {
     width: 90%;
     margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
 }
 
@@ -4634,6 +4600,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 .slider-pricipal-node.slider-homes-bottom-container .pagination-wrap .swiper-pagination-home {
   text-align: center;
   margin: 0px;
+  bottom: -12px;
 }
 
 .slider-pricipal-node.slider-homes-bottom-container .pagination-wrap .swiper-pagination-bullet {
