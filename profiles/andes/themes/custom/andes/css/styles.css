@@ -1659,40 +1659,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Layouts 1
 //------------------------------------------------------------------------------
 */
-.slider-homes-layout-one {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.slider-homes-layout-one .conten {
-  padding: 0 25px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slider-homes-layout-one .conten .title-slider-homes,
-.slider-homes-layout-one .conten .body-slider-homes,
-.slider-homes-layout-one .conten .link-slider-homes {
-  text-align: center;
-}
-
 /* ------| Slider centarado |----- */
 .view-id-banner_nodes .slider-homes-layout-one-title {
   position: absolute;
@@ -1741,6 +1707,11 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #fff;
+}
+
+/* ------| Spaciado de miga de pan |----- */
+.layout-1 .pane-easy-breadcrumb {
+  margin-bottom: 40px;
 }
 
 /*
@@ -5859,9 +5830,28 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   }
 }
 
-/* ------| Panel |----- */
-.publicaciones-interna .row.container {
+/* ------| Container|----- */
+.publicaciones-interna #block-system-main {
   margin: 0 auto;
+  padding: 0 15px 25px;
+}
+
+@media (min-width: 768px) {
+  .publicaciones-interna #block-system-main {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .publicaciones-interna #block-system-main {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .publicaciones-interna #block-system-main {
+    width: 1170px;
+  }
 }
 
 /* ------| Panel |----- */
