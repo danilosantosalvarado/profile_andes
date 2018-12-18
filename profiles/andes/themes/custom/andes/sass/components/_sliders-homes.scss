@@ -191,6 +191,7 @@
 		@include respond-to(m) {
 			left: 0;
 			right: 0;
+			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -551,7 +552,7 @@
 				z-index: 1;
 				@include respond-to(m) {
 					text-align: right;
-					margin-right: 9%;
+					padding-right: 9%;
 				}
 				.swiper-pagination-bullet {
 					width: 40px;

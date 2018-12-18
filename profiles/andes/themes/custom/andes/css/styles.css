@@ -4252,6 +4252,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   .slider-pricipal-node .slider-homes-center {
     left: 0;
     right: 0;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -4645,7 +4646,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 @media (min-width: 768px) {
   .slider-pricipal-node .pagination-wrap .swiper-pagination-home {
     text-align: right;
-    margin-right: 9%;
+    padding-right: 9%;
   }
 }
 
