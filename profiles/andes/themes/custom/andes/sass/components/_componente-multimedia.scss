@@ -167,14 +167,6 @@
 	}
 }
 
-// /* ------| ocultar flechas en mobile |----- */
-// .view-display-id-home_noticias_destacadas_mobile {
-// 	.swiper-button-prev,
-// 	.swiper-button-next{
-// 		display: none;
-// 	}
-// }
-
 /* ------| Multimedia Màs Recientes |----- */
 .slider-vertical-destacados-mas-recientes {
 	display: none;
@@ -182,17 +174,18 @@
 	@include respond-to(xl) {
 		display: block;
 	}
+	//img
+	.views-field-view {
+		img {
+			width: 100%;
+			height: 100%,
+		}
+	}
 	.box-content {
 		float: left;
     width: 80%;
     padding-top: 15px;
-		//img
-		.views-field-view {
-			img {
-				width: 100%;
-				height: 100%,
-			}
-		}
+
 		//titulo
 		.views-field-title {
 			margin-bottom: 8px;
@@ -249,7 +242,6 @@
 }
 
 /* ------| Multimedia swiper horizontal mobil |----- */
-//contendor de swiper
 .slider-vertical-destacados-mobil {
 	@include respond-to(xl) {
 		display: none;
