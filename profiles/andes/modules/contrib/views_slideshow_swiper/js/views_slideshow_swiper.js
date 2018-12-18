@@ -129,7 +129,7 @@
   // Define central action dispatcher to handle all accepted actions.
   Drupal.viewsSlideshowSwiper.action = function(options) {
     var settings = Drupal.settings.viewsSlideshowSwiper['#' + Drupal.settings.viewsSlideshowSwiperValues.prefixId + options.slideshowID];
-    if (settings.loaded) {
+    if (settings) {
       switch (options.action) {
         case 'goToSlide':
           settings.swiper.slideTo(options.slideNum);
