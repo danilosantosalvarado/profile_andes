@@ -22,7 +22,8 @@
 		right: 0px;
 		border: 1px solid color('orange-primary');
 		width: 95%;
-		height: 100%;
+		height: 96%;
+		margin: 0 auto;
 		z-index: 0;
 	}
 	ul {
@@ -97,13 +98,12 @@
 	// Flechas paginador
 	.swiper-button-prev {
 		font-size: 0;
-		width: 40px;
+		width: 38px;
 		height: 40px;
 		position: absolute;
-		top: 50%;
 		top: inherit;
-		left: 2%;
-		bottom: -41px;
+		left: 0px;
+		bottom: -1px;
 		transform: rotate(-90deg);
 		background: url('../img/Icon/arrow_prev-orange.svg') no-repeat center;
 		border: 1px solid color('orange-primary');
@@ -112,12 +112,12 @@
 	}
 	.swiper-button-next {
 		font-size: 0;
-		width: 40px;
+		width: 38px;
 		height: 40px;
 		position: absolute;
-		left: 14%;
+		left: 45px;
 		top: inherit;
-		bottom: -41px;
+		bottom: -1px;
 		transform: rotate(-90deg);
 		background: url('../img/Icon/arrow_next-orange.svg') no-repeat center;
 		background-color: white;
