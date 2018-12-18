@@ -1930,7 +1930,35 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   font-size: 1.1875rem;
 }
 
-/* ------| slider alineacion center |----- */
+.box-master-two-contact {
+  background: #f4f1f1;
+  padding: 40px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .box-master-two-contact {
+    margin: 40px 0;
+  }
+}
+
+.box-master-two-contact h3 {
+  font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #484851;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 40px;
+  line-height: normal;
+}
+
+.box-master-two-contact p {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #212529;
+}
+
 .slider-homes-layout-five {
   position: absolute;
   top: 0;
