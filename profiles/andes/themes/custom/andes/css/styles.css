@@ -1878,6 +1878,21 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   text-align: justify;
 }
 
+.view-id-componente_layout_2 .container-gris {
+  background-color: #f4f1f1;
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+.view-id-componente_layout_2 .container-gris h3 {
+  font-size: 1.5rem;
+  font-family: "Crimson_textbold", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.view-id-componente_layout_2 .container-gris p {
+  font-size: 1.1875rem;
+}
+
 /* ------| slider alineacion center |----- */
 .slider-homes-layout-five {
   position: absolute;
@@ -4024,6 +4039,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 
 .wraper-slider-eventos ul li .box-content {
   min-height: 290px !important;
+}
+
+.view-componente-noticias {
+  padding: 0;
 }
 
 /*
@@ -8315,7 +8334,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 
 @media (min-width: 444px) {
   .slider-vertical-destacados-mobil ul li .views-field-view {
-    width: 80%;
+    width: 90%;
     display: block;
     margin: 0 auto;
   }

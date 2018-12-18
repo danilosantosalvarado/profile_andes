@@ -250,7 +250,7 @@
 			.views-field-view {
 				background: color('black');
 				@include respond-to(xxs) {
-					width: 80%;
+					width: 90%;
 					display: block;
 					margin: 0 auto;
 				}
