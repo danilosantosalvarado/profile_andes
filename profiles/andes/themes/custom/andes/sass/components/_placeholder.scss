@@ -323,18 +323,18 @@ h1.page-header {
     }
   }
 }
-.noticias{
-  .field-name-field-tags.field-type-taxonomy-term-reference{
-    &:before {
-      content: "";
-      width: 90px;
-      height: 3px;
-      margin-left: 5px;
-      border-top: 1px solid black;
-      position: absolute;
-    }
-  }
-}
+// .noticias{
+//   .field-name-field-tags.field-type-taxonomy-term-reference{
+//     &:before {
+//       content: "";
+//       width: 90px;
+//       height: 3px;
+//       margin-left: 5px;
+//       border-top: 1px solid black;
+//       position: absolute;
+//     }
+//   }
+// }
 
 /* ------| Campo Fechas intena de nodos |----- */
 .field-name-field-fecha-eventos {
