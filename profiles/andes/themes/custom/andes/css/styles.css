@@ -4261,6 +4261,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 @media (min-width: 768px) {
   .slider-pricipal-node .slider-homes-left .title-slider-homes {
     font-size: 1.9375rem;
+    text-align: left !important;
   }
 }
 
@@ -4273,11 +4274,23 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   top: 10px;
 }
 
+@media (min-width: 768px) {
+  .slider-pricipal-node .slider-homes-left .body-slider-homes {
+    text-align: left !important;
+  }
+}
+
 /* ------| Ubicado Rigth |----- */
 @media (min-width: 768px) {
   .slider-pricipal-node .slider-homes-right {
     left: inherit;
     right: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider-pricipal-node .slider-homes-right .title-slider-homes {
+    text-align: right !important;
   }
 }
 
@@ -4288,6 +4301,12 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   border-top: 1px solid #fff;
   position: relative;
   top: 10px;
+}
+
+@media (min-width: 768px) {
+  .slider-pricipal-node .slider-homes-right .body-slider-homes {
+    text-align: right !important;
+  }
 }
 
 /* ------| Ubicado Centro |----- */
@@ -4310,7 +4329,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   top: 10px;
 }
 
-/* ------| Ubicado Abajo |----- */
+/* ------| Ubicado Buttom |----- */
 .slider-pricipal-node .slider-homes-bottom {
   background-color: #f4f1f1;
   border-bottom: 2px solid #ebba00;
@@ -4470,8 +4489,8 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 }
 
 .slider-pricipal-node.slider-homes-bottom-container .pagination-wrap .swiper-pagination-home .swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
+  width: 12px !important;
+  height: 12px !important;
   border-radius: 100% !important;
   background-color: #c6c6c6 !important;
   border-color: transparent;

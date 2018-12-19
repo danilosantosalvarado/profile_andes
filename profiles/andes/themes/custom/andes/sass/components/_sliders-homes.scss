@@ -123,7 +123,7 @@
 			@extend %title-slider-home;
 			@include respond-to(m) {
 				@include font-size(xxl);
-				// text-align: left !important;
+				text-align: left !important;
 			}
 			&:after {
 				content: '';
@@ -137,9 +137,9 @@
 		//Sub titulo
 		.body-slider-homes {
 			@extend %body-slider-home;
-			// @include respond-to(m) {
-			// 	text-align: left !important;
-			// }
+			@include respond-to(m) {
+				text-align: left !important;
+			}
 		}
 		//Buttom
 		.link-slider-homes {
@@ -158,9 +158,9 @@
 		//Titulo
 		.title-slider-homes {
 			@extend %title-slider-home;
-			// @include respond-to(m) {
-			// 	text-align: right !important;
-			// }
+			@include respond-to(m) {
+				text-align: right !important;
+			}
 			&:after {
 				content: '';
 				display: block;
@@ -173,9 +173,9 @@
 		//Sub titulo
 		.body-slider-homes {
 			@extend %body-slider-home;
-			// @include respond-to(m) {
-			// 	text-align: right !important;
-			// }
+			@include respond-to(m) {
+				text-align: right !important;
+			}
 		}
 		//Buttom
 		.link-slider-homes {
@@ -216,7 +216,7 @@
 		}
 	}
 }
-/* ------| Ubicado Abajo |----- */
+/* ------| Ubicado Buttom |----- */
 .slider-pricipal-node {
 	//posicion contenido abajo
 	.slider-homes-bottom {
@@ -341,8 +341,8 @@
 				padding: 0px;
 				margin: 15px 0px;
 				.swiper-pagination-bullet {
-					width: 15px !important;
-					height: 15px !important;
+					width: 12px !important;
+					height: 12px !important;
 					border-radius: 100% !important;
 					background-color: color(grey-secundary) !important;
 					border-color: transparent;
