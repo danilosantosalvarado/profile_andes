@@ -322,7 +322,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    padding-bottom: 40px;
+    padding: 40px 0px;
     list-style: none;
     @include respond-to(xl) {
       margin: 0 10px;
