@@ -1,56 +1,48 @@
 //Mixin la agregacion de color de los bullet de slider
-@mixin bullet($color-borde, $color-back, $color-active-borde, $color-active-back ) {
-  padding: 25px 0px;
-  display: flex;
-  justify-content: center;
-  .views-slideshow-pager-field-item {
-    padding: 0 5px;
-    display: inline-block;
-    a {
-      width: 15px;
-      height: 15px;
-      font-size: 0;
-      display: block;
-      text-decoration: none;
-      border: 1px solid color('#{$color-borde}');
-      border-radius: 10px;
-      background-color: color('#{$color-back}');
-      padding: 0;
-    }
-    &.active {
-      a {
-        background-color: color('#{$color-active-borde}');
-        border: 1px solid color('#{$color-active-back}');
-      }
-    }
-  }
-}
+// @mixin bullet($color-borde, $color-back, $color-active-borde, $color-active-back ) {
+//   padding: 25px 0px;
+//   display: flex;
+//   justify-content: center;
+//   .views-slideshow-pager-field-item {
+//     padding: 0 5px;
+//     display: inline-block;
+//     a {
+//       width: 15px;
+//       height: 15px;
+//       font-size: 0;
+//       display: block;
+//       text-decoration: none;
+//       border: 1px solid color('#{$color-borde}');
+//       border-radius: 10px;
+//       background-color: color('#{$color-back}');
+//       padding: 0;
+//     }
+//     &.active {
+//       a {
+//         background-color: color('#{$color-active-borde}');
+//         border: 1px solid color('#{$color-active-back}');
+//       }
+//     }
+//   }
+// }
 // /* ------| Slider home  |----- */
-//position left
+//position de la caja por defaul
 %slider-homes-lef {
   position: absolute;
-  // top: 25%;
   top: 50%;
   transform: translate3d(0, -50%, 0);
   left: 0;
   right: 0;
   z-index: 1;
-  text-align: center;
-  width: 85%;
   margin: 0 auto;
-  padding: 0 15px;
   @include respond-to(m) {
     left: 10%;
     right: inherit;
-    width: auto;
-    max-width: 520px;
-    text-align: left;
-    @include margin(0);
+    margin: 0;
   }
 }
-
 // box background color themes
-%before-box-color{
+%before-box-color {
   content: " ";
   clear: both;
   display: block;
@@ -63,8 +55,7 @@
   background-color: transparent;
   opacity: .5;
 }
-
-//titulo
+// Titulo
 %title-slider-home {
   font-family: $latobold;
   @include font-size(xl);
@@ -77,23 +68,17 @@
   @include respond-to(xl) {
     @include font-size(xxl);
   }
-
 }
-
-//sud titulo
+// Body
 %body-slider-home {
   font-family: $crimson-textregular;
   @include font-size(o);
   color: color('white');
   text-align: center;
-  @include margin (1 0);
+  @include margin (.5 0);
   line-height: normal;
   text-overflow: ellipsis;
-  @include respond-to(m) {
-    text-align: left;
-  }
 }
-
 //Button
 %link-slider-home {
   font-family: $crimson-textregular;
@@ -118,7 +103,6 @@
     }
   }
 }
-
 //flechas slider home
 %a-slidw-prev {
   display: none;
@@ -132,7 +116,6 @@
   background-size: 40px 40px;
   z-index: 1;
 }
-
 //Puntos para slider left, right, center.
 %a-sli-puntos {
   width: 63px;
@@ -150,7 +133,6 @@
   overflow-x: hidden;
 }
 .container {
-  // overflow: hidden;
   position: relative;
 }
 //cuando esta el administrador quita el espacio por default
