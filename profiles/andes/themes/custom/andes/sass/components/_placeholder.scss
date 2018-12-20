@@ -26,6 +26,21 @@
 //   }
 // }
 // /* ------| Slider home  |----- */
+//position left, right, center
+%slider-homes-position {
+  position: absolute;
+  top: 30%;
+  transform: translate3d(0, -30%, 0);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  @include respond-to(m) {
+    left: 10%;
+    right: inherit;
+    margin: 0;
+  }
+}
 //position de la caja por defaul
 %slider-homes-lef {
   position: absolute;

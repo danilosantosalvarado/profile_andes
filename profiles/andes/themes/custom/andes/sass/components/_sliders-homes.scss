@@ -12,43 +12,47 @@
 
 /* ------| Defaul Iframe y Imagen |----- */
 .slider-pricipal-node {
+	// Imagen Slider
 	.swiper-wrapper {
 		margin: 0px;
+		.field-content {
+			position: relative;
+			display: block;
+			// Ocultar Imagen Desktop
+			.img-desktop {
+				display: none;
+				@include respond-to(xl) {
+					display: block;
+				}
+				.img-responsive {
+					width: 100%;
+				}
+			}
+			// Ocultar Imagen Mobil
+			.img-mobile {
+				display: block;
+				@include respond-to(xl) {
+					display: none;
+				}
+			}
+			// Tamaño de para mobile
+			.img-content {
+				.img-mobile {
+					img {
+					width: 100%;
+					height: 100%;
+					}
+				}
+			}
+		}
 	}
 	.views-field.views-field-views-conditional {
 		width: 100%;
 	}
-	.field-content {
-		position: relative;
-		display: block;
-	}
-	.img-desktop {
-		display: none;
-		@include respond-to(xl) {
-			display: block;
-		}
-		.img-responsive {
-			width: 100%;
-		}
-	}
-	.img-mobile {
-		display: block;
-		@include respond-to(xl) {
-			display: none;
-		}
-	}
-	.img-content {
-		.img-mobile {
-			img {
-			width: 100%;
-			height: 100%;
-			}
-		}
-	}
 	.slider-homes-empty {
 		display: none;
 	}
-	//imagen slider destock
+	// Iframe Slider
 	.cl-slider-homes-layout-one,
 	.cl-slider-homes-layout-two,
 	.cl-slider-homes-layout-three,
@@ -93,12 +97,10 @@
 .slider-pricipal-node {
 	&.views_slideshow_main {
 		.conten {
+			padding: 0 15px;
 			max-width: 500px;
 			margin-left: auto;
 			margin-right: auto;
-			@include respond-to(m){
-				max-width: 800px;
-			}
 			//titulo
 			.title-slider-homes {
 				@extend %title-slider-home;
@@ -117,7 +119,7 @@
 /* ------| Ubicado Leth |----- */
 .slider-pricipal-node {
 	.slider-homes-left {
-		@extend %slider-homes-lef;
+		@extend %slider-homes-position;
 		//Titulo
 		.title-slider-homes {
 			@extend %title-slider-home;
@@ -150,7 +152,7 @@
 /* ------| Ubicado Rigth |----- */
 .slider-pricipal-node {
 	.slider-homes-right {
-		@extend %slider-homes-lef;
+		@extend %slider-homes-position;
 		@include respond-to(m) {
 			left: inherit;
 			right: 10%;
@@ -186,7 +188,7 @@
 /* ------| Ubicado Centro |----- */
 .slider-pricipal-node {
 	.slider-homes-center {
-		@extend %slider-homes-lef;
+		@extend %slider-homes-position;
 		@include respond-to(m) {
 			left: 0;
 			right: 0;
@@ -314,7 +316,6 @@
 			}
 		}
 	}
-	// bules y flechas
 	&.slider-homes-bottom-container {
 		// controls flechas
 		.swiper-home-next,
