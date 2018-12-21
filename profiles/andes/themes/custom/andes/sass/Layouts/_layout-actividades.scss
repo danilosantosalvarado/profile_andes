@@ -162,14 +162,14 @@
           position: relative;
           // background: #f4f1f1;
           @include respond-to(xs) {
-            min-height: 326px;
+            min-height: 250px;
           }
           //img-icons
           .views-field-field-image {
             width: 61px;
             height: 61px;
             position: absolute;
-            top: -39px;
+            top: -20px;
             left: 7px;
           }
           //title
@@ -177,11 +177,22 @@
             font-family: $latoblack;
             @include font-size(xl);
             color: #58595B;
-            padding-top: 25px;
+            padding-top: 15px;
             margin-left: 30%;
-            margin-right: 10px;
+            margin-right: 0px;
             padding-bottom: 16px;
             line-height: 1;
+            span{
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 3;
+              line-clamp: 3;
+              -webkit-box-orient: vertical;
+              box-orient: vertical;
+              overflow: hidden;
+              display: -webkit-box;
+              padding-bottom: 1px;
+              line-height: 1.1em;
+            }
           }
           .content-date {
             margin-left: 30%;
