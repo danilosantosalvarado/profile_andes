@@ -20,9 +20,10 @@
     @include respond-to(xxxl) {
       width: 1170px;
     }
-    @include respond-to(xl) {
+    @include respond-to(xs) {
       .views-row {
         flex: 1 1 33.333333%;
+        max-width: 33.333333%;
       }
     }
     > div:nth-child(even) {
