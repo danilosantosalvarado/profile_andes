@@ -5640,7 +5640,12 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
 .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content {
   position: relative;
   text-align: center;
-  min-height: 392px;
+}
+
+@media (min-width: 555px) {
+  .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content {
+    min-height: 392px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5694,6 +5699,11 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
     left: 50%;
     -webkit-transform: translate3d(-50%, 0, 0);
             transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (min-width: 555px) {
+  .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-view-node a {
     max-width: 150px;
   }
 }

@@ -25,8 +25,9 @@
 			.box-content {
 				position: relative;
 				text-align: center;
-				min-height: 392px;
-				// border: 1px solid red;
+				@include respond-to(xs) {
+					min-height: 392px;
+				}
 				@include respond-to(m) {
 					padding: 15px 0;
 				}
@@ -67,17 +68,17 @@
 						z-index: 1;
 						max-width: 190px;
 						margin: 20px auto 0;
-						// position: absolute;
-						// bottom: 25px;
-						// right: 0;
-						// left: 0;
 						@include respond-to(xs) {
 							position: absolute;
 							bottom: 25px;
 							left:  50%;
 							transform: translate3d(-50%, 0, 0);
-							// right: 25px;
-							// left: inherit;
+						}
+						@include respond-to(xs) {
+							// position: absolute;
+							// bottom: 25px;
+							// left:  50%;
+							// transform: translate3d(-50%, 0, 0);
 							max-width: 150px;
 						}
 						&:hover {
