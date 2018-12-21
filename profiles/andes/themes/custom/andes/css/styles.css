@@ -2723,7 +2723,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 @media (min-width: 555px) {
   .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
-    min-height: 326px;
+    min-height: 250px;
   }
 }
 
@@ -2731,7 +2731,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   width: 61px;
   height: 61px;
   position: absolute;
-  top: -39px;
+  top: -20px;
   left: 7px;
 }
 
@@ -2739,11 +2739,24 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #58595B;
-  padding-top: 25px;
+  padding-top: 15px;
   margin-left: 30%;
-  margin-right: 10px;
+  margin-right: 0px;
   padding-bottom: 16px;
   line-height: 1;
+}
+
+.view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-title span {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  padding-bottom: 1px;
+  line-height: 1.1em;
 }
 
 .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .content-date {
