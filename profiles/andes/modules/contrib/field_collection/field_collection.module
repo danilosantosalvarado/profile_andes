@@ -1107,6 +1107,11 @@ function field_collection_field_widget_form(&$form, &$form_state, $field, $insta
         $field_collection_item = $field_state['entity'][$delta];
       }
       else {
+        // If we are editing an existing entity, then ensure that we get a
+        // brand new field_collection item from field_collection_field_get_entity()
+        if (empty($form_state['build_info']['args'][0]) || isset($form_state['build_info']['args'][0]->is_new)) {
+          unset($items[$delta]);
+        }
         if (isset($items[$delta])) {
           $field_collection_item = field_collection_field_get_entity($items[$delta], $field_name);
         }
