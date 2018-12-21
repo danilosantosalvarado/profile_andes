@@ -14,46 +14,33 @@
 			display: block;
 			//Imagenes
 			.publicaiones-img-desktop {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
 				.content {
-					width: 60%;
 					margin: 0 auto;
 					img {
 						width: 100%;
-						max-height: 218px;
 					}
-				}
-			}
-			.publicaiones-img-mobil {
-				@include respond-to(xl) {
-					display: none;
-				}
-				img {
-					width: 100%;
 				}
 			}
 			// wapper
 			.box-content {
 				position: relative;
 				text-align: center;
+				min-height: 392px;
+				// border: 1px solid red;
 				@include respond-to(m) {
 					padding: 15px 0;
 				}
 				//titulo
 				.views-field-title {
 					margin: 20px 0 25px;
+					text-align: left;
 					a,
 					span {
 						font-family: $crimson-semibold;
 						@include font-size(sl);
 						font-size: 1.25rem;
 						line-height: 1;
-						text-align: left;
 						text-decoration: none;
-
 						padding: 0;
 					}
 				}
@@ -68,6 +55,7 @@
 				// button
 				.views-field-view-node {
 					a {
+						width: 100%;
 						display: block;
 						font-family: $latoregular;
 						color: color('grey-dark');
@@ -79,6 +67,19 @@
 						z-index: 1;
 						max-width: 190px;
 						margin: 20px auto 0;
+						// position: absolute;
+						// bottom: 25px;
+						// right: 0;
+						// left: 0;
+						@include respond-to(xs) {
+							position: absolute;
+							bottom: 25px;
+							left:  50%;
+							transform: translate3d(-50%, 0, 0);
+							// right: 25px;
+							// left: inherit;
+							max-width: 150px;
+						}
 						&:hover {
 							background-color: #e55d12;
 							color: #ffffff;
