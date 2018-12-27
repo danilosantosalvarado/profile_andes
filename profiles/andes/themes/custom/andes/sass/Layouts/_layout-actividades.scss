@@ -305,3 +305,26 @@ div#ui-datepicker-div {
   }
 }
 
+/* ------| cambio de orden buscador y título |----- */
+.page-actividades{
+  h2.pane-title{
+    position: relative;
+    top: 285px;
+    margin: 0 auto;
+    width: 55%;
+    max-width: 800px;
+    border-bottom: 1px solid gray;
+    @include respond-to(s){
+      top: 200px;
+    }
+  }
+  .pane-componente-actividades-home{
+    .view-componente-actividades-home{
+      position: relative;
+      top: -111px;
+      .view-filters{
+        margin-bottom: 180px;
+      }
+    }
+  }
+}

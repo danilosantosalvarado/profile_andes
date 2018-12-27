@@ -2885,6 +2885,31 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   color: white;
 }
 
+/* ------| cambio de orden buscador y título |----- */
+.page-actividades h2.pane-title {
+  position: relative;
+  top: 285px;
+  margin: 0 auto;
+  width: 55%;
+  max-width: 800px;
+  border-bottom: 1px solid gray;
+}
+
+@media (min-width: 666px) {
+  .page-actividades h2.pane-title {
+    top: 200px;
+  }
+}
+
+.page-actividades .pane-componente-actividades-home .view-componente-actividades-home {
+  position: relative;
+  top: -111px;
+}
+
+.page-actividades .pane-componente-actividades-home .view-componente-actividades-home .view-filters {
+  margin-bottom: 180px;
+}
+
 .view-componente-ranking-home {
   display: block;
   margin: 0 auto;
@@ -11511,7 +11536,7 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
+    z-index: 99;
   }
 }
 
