@@ -8,6 +8,11 @@
 		jQuery(".modal-gallery-home").attr("src", imageSrc);
 	});
 
+	//funcion carga de loading.
+	$(window).load(function(){
+	 $('.container-loader').fadeOut(500);
+	});
+
 	//funcion redes sociales vertical scroll interna de eventos.
 	$(window).ready(function() {
 
