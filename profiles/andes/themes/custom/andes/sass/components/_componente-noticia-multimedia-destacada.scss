@@ -25,6 +25,8 @@
     display: flex;
     justify-content: space-between;
 		align-items: center;
+		float: left;
+		width: 100%;
 		@include respond-to(xl) {
 			width: 50%;
 		}
@@ -37,10 +39,10 @@
 			box-sizing: border-box;
 			z-index: 1;
 			flex-basis: 80%;
+			margin: 0;
 			@include respond-to(xl) {
 				overflow: hidden;
 				float: left;
-				// border: 1px solid red;
 			}
 			.swiper-pagination-bullet {
 				width: 140px;
@@ -111,7 +113,7 @@
 			position: relative;
 			float: right;
 			width: 50%;
-			margin-top: -11vh;
+			// margin-top: -11vh;
 			display: inline-block;
 			vertical-align: bottom;
 	  }

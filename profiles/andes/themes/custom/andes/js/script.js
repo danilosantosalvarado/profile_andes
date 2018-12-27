@@ -87,12 +87,13 @@
 		}
 	}
 
-	// Home multimedia - componente multimedia destacado
+	// Home multimedia - componente multimedia destacado - mover los paginadores a la parte interna del paginador
 	function multimediaDestaco() {
 		$('.view-display-id-componente_multimedia_noticia_destacada .swiper-button-next')
 			.appendTo('.view-display-id-componente_multimedia_noticia_destacada .pagination-wrap')
 			.wrap( "<div class='wrap-arrows'></div>" );
 		$('.view-display-id-componente_multimedia_noticia_destacada .swiper-button-prev').appendTo('.wrap-arrows');
+		$('.view-display-id-componente_multimedia_noticia_destacada .views-field-view-1').appendTo('.views_slideshow_main');
 	}
 
 	function socialMobile(){
