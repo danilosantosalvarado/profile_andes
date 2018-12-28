@@ -189,7 +189,7 @@ h1.page-header {
 }
 
 /* ------| Button ver todos |----- */
-.view-more-footer {
+.view-more-footer{
   position: relative;
   text-align: center;
   margin: 20px 0px;
@@ -216,9 +216,50 @@ h1.page-header {
     padding: 10px 20px;
     background: #fff;
     z-index: 1;
+    border-radius: 0;
+    min-width: 130px;
     &:hover {
       color: color('white');
       background-color: color('orange')
+    }
+  }
+}
+
+/* ------| Button ver mas en galeria |----- */
+.pager-load-more{
+  position: relative;
+  text-align: center;
+  margin: 20px 0px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid color('orange');
+    z-index: 1;
+  }
+  li{
+    a {
+      display: inline-block;
+      position: relative;
+      font-family: $latoregular;
+      @include font-size(m);
+      color: #484851;
+      text-decoration: none;
+      border: 1px solid color('orange');
+      padding: 10px 20px;
+      background: #fff;
+      z-index: 1;
+      border-radius: 0;
+      min-width: 130px;
+      &:hover {
+        color: color('white');
+        background-color: color('orange')
+      }
     }
   }
 }
@@ -572,15 +613,20 @@ h1.page-header {
         min-height: 55vw;
         @include respond-to(xs){
           min-height: 28vw;
+          height: 28vw;
         }
         @include respond-to(m){
           min-height: 213px;
+          height: 214px;
+          overflow: hidden;
         }
         @include respond-to(xl){
           min-height: 182px;
         }
         @include respond-to(xxxl){
           min-height: 163px;
+          height: 221px;
+          overflow: hidden;
         }
       }
     }
