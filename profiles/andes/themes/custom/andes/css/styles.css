@@ -2101,6 +2101,12 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   text-align: left;
 }
 
+@media (max-width: 555px) {
+  .layout-nine .row.container .panels-bootstrap-column {
+    width: 100%;
+  }
+}
+
 .layout-nine .row-inside-last {
   background-color: #f4f1f1;
 }

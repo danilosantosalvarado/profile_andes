@@ -89,6 +89,11 @@
       @include font-size(xxxl);
       text-align: left;
     }
+    .panels-bootstrap-column {
+      @media (max-width: 555px){
+        width: 100%;
+      }
+    }
   }
   .row-inside-last{
     background-color: color('grey-light');
