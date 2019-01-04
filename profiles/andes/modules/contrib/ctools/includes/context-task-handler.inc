@@ -84,10 +84,45 @@ function ctools_context_handler_get_render_handler($task, $subtask, $handlers, $
  * handlers should be implementing.
  */
 function ctools_context_handler_default_test($handler, $base_contexts, $args) {
+  global $language;
   ctools_include('context');
   // Add my contexts.
   $contexts = ctools_context_handler_get_handler_contexts($base_contexts, $handler);
-
+  /** INIT patch used for receive language and change used term reference **/
+  //get key base context
+  $key = key($base_contexts);
+  //load data actually node
+  $data_node = $base_contexts[$key]->data;
+  //walk to variables from term reference 
+  foreach ($handler->conf['access']['plugins'] as $key => $value) {
+    //explode data for get variable
+    $dataHandler = explode(":", $value['name']);
+    //count items explode
+    $size = count($dataHandler);
+    //if size is mayor to 3 enter for alter field and verified
+    if($size > 3 ){
+      //get name to field
+      $name_field = $dataHandler[$size-1];
+      //get language default
+      $language_default = language_default()->language;
+      //get key name field children type tid or value
+      $key_children = key($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0]);
+      //if isset value and is equal to value node 
+      $data_field = $data_node->$name_field;
+      if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children]) && $handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children] == $data_field[$language->language][0][$key_children]){
+        //adding value if is equal
+        $handler->conf['access']['plugins'][$key]['settings'][$name_field] = $data_field;
+        //verified isset value adding from language
+        if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language->language])){
+          //get value default
+          $name_value = $name_field."_".$key_children;
+          // adding value for language actually
+          $handler->conf['access']['plugins'][$key]['settings'][$name_value] = array($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language->language][0][$key_children]);       
+        }
+      }
+    }
+  }
+   /** END patch used for receive language and change used term reference **/
   // Test.
   return ctools_context_handler_select($handler, $contexts);
 }

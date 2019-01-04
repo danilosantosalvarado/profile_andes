@@ -1,5 +1,5 @@
 diff --git a/ctools/includes/context-task-handler.inc b/ctools/includes/context-task-handler.inc
-index ed4acad0..d2c82963 100755
+index ed4acad0..9c856500 100755
 --- a/ctools/includes/context-task-handler.inc
 +++ b/ctools/includes/context-task-handler.inc
 @@ -84,10 +84,45 @@ function ctools_context_handler_get_render_handler($task, $subtask, $handlers, $
@@ -32,9 +32,9 @@ index ed4acad0..d2c82963 100755
 +      $key_children = key($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0]);
 +      //if isset value and is equal to value node 
 +      $data_field = $data_node->$name_field;
-+      if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children]) && $handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children] == $data_node->$name_field[$language->language][0][$key_children]){
++      if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children]) && $handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children] == $data_field[$language->language][0][$key_children]){
 +        //adding value if is equal
-+        $handler->conf['access']['plugins'][$key]['settings'][$name_field] = $data_node->$name_field;
++        $handler->conf['access']['plugins'][$key]['settings'][$name_field] = $data_field;
 +        //verified isset value adding from language
 +        if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language->language])){
 +          //get value default
@@ -45,7 +45,7 @@ index ed4acad0..d2c82963 100755
 +      }
 +    }
 +  }
-+  /** END patch used for receive language and change used term reference **/
++   /** END patch used for receive language and change used term reference **/
    // Test.
    return ctools_context_handler_select($handler, $contexts);
  }
