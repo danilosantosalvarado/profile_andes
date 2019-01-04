@@ -1,27 +1,8 @@
 diff --git a/ctools/includes/context-task-handler.inc b/ctools/includes/context-task-handler.inc
-index ed4acad0..1ea39f0b 100755
+index ed4acad0..d2c82963 100755
 --- a/ctools/includes/context-task-handler.inc
 +++ b/ctools/includes/context-task-handler.inc
-@@ -39,8 +39,9 @@
- function ctools_context_handler_render($task, $subtask, $contexts, $args) {
-   // Load the landlers, choosing only enabled handlers.
-   $handlers = page_manager_load_sorted_handlers($task, $subtask ? $subtask['name'] : '', TRUE);
--
-+  
-   $id = ctools_context_handler_get_render_handler($task, $subtask, $handlers, $contexts, $args);
-+
-   if ($id) {
-     return ctools_context_handler_render_handler($task, $subtask, $handlers[$id], $contexts, $args);
-   }
-@@ -54,6 +55,7 @@ function ctools_context_handler_render($task, $subtask, $contexts, $args) {
- function ctools_context_handler_get_render_handler($task, $subtask, $handlers, $contexts, $args) {
-   // Try each handler.
-   foreach ($handlers as $id => $handler) {
-+
-     $plugin = page_manager_get_task_handler($handler->handler);
-     // First, see if the handler has a tester.
-     $function = ctools_plugin_get_function($plugin, 'test');
-@@ -84,10 +86,44 @@ function ctools_context_handler_get_render_handler($task, $subtask, $handlers, $
+@@ -84,10 +84,45 @@ function ctools_context_handler_get_render_handler($task, $subtask, $handlers, $
   * handlers should be implementing.
   */
  function ctools_context_handler_default_test($handler, $base_contexts, $args) {
@@ -50,6 +31,7 @@ index ed4acad0..1ea39f0b 100755
 +      //get key name field children type tid or value
 +      $key_children = key($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0]);
 +      //if isset value and is equal to value node 
++      $data_field = $data_node->$name_field;
 +      if(isset($handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children]) && $handler->conf['access']['plugins'][$key]['settings'][$name_field][$language_default][0][$key_children] == $data_node->$name_field[$language->language][0][$key_children]){
 +        //adding value if is equal
 +        $handler->conf['access']['plugins'][$key]['settings'][$name_field] = $data_node->$name_field;
@@ -63,7 +45,7 @@ index ed4acad0..1ea39f0b 100755
 +      }
 +    }
 +  }
-+   /** END patch used for receive language and change used term reference **/
++  /** END patch used for receive language and change used term reference **/
    // Test.
    return ctools_context_handler_select($handler, $contexts);
  }
