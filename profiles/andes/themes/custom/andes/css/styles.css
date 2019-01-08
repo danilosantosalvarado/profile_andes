@@ -8643,6 +8643,11 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover 
   bottom: 0;
 }
 
+.view-componente-carrusel-multimedia .viewsSlideshowCycle-processed .view-footer {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .view-componente-carrusel-multimedia .views-slideshow-controls-bottom {
   width: 90%;
   margin: 0 auto;
