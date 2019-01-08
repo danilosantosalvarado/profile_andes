@@ -18,7 +18,7 @@
 			grid-gap: 10px;
 			margin: 0 auto;
 			width: 100%;
-			max-width: 620px;
+			max-width: 1170px;
 			height: auto !important;
 			@include respond-to(m) {
 				// grid-template-rows: 160px 160px 160px 300px;
@@ -106,7 +106,7 @@
 			grid-row: span 1;
 			height: 160px;
 			@include respond-to(m) {
-				height: 160px;
+				height: 220px;
 			}
 		}
 	// }
@@ -119,19 +119,20 @@
 			-ms-grid-column-span: 3;
 			grid-column: span 2;
 			grid-row: auto;
-			height: 300px;
+			height: 400px;
 			@include respond-to(m) {
-				height: 300px;
+				height: 400px;
 			}
 		}
 	// }
 
 	.box-date{
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: 15px;
+		left: 15px;
 		z-index: 20;
 		font-weight: 700;
+		text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
 	}
 
 	.box-date .date-number{
@@ -199,19 +200,16 @@
 		text-decoration: none;
 		outline: 0;
 		color: white;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 1.2;
 		font-weight: 700;
 		padding-bottom: 4px;
 		border-bottom: 1px solid #F69331;
 		@include respond-to(xxs) {
-			font-size: 30px;
+			font-size: 20px;
 		}
 		@include respond-to(m) {
 			font-size: 21px;
-		}
-		@include respond-to(xxs) {
-			font-size: 16px;
 		}
 	}
 
@@ -262,20 +260,22 @@
 		position: relative;
 		padding-right: 10px;
 		text-align: center;
-		left: 0;
-		top: 0;
+		left: 5px;
+		top: 5px;
 		line-height: 1;
 	}
 
 	.head-bar .box-data{
 		display: table-cell;
 		vertical-align: middle;
+		position: relative;
 		color: white;
 		padding-left: 10px;
 		font-size: 12px;
 		line-height: 1;
 		border-left: 2px solid #F69331;
 		font-size: 12px;
+		top: 5px;
 	}
 
 	@include respond-to(m) {
@@ -320,11 +320,14 @@
 		color: white;
 		font-weight: 400;
 		font-size: 12px;
-		background-color: #F69331;
+		border: 1px solid #fff;
+		background-color: transparent;
 	}
 	.head-btn:hover{
 		color: white;
 		text-decoration: none;
+		background-color: #F69331;
+		border: 1px solid #F69331;
 	}
 
 	.view-content-load{
@@ -342,6 +345,7 @@
 		background-image: url(../img/Icon/events-arrow-down.png);
 		background-repeat: no-repeat;
 		background-size: contain;
+		background-position: center;
 		margin-top: 45px;
 		margin-bottom: 29px;
 		width: 37px;
@@ -349,8 +353,8 @@
 		border-radius: 0;
 		border: 0;
 		&:hover{
-			background-color: transparent;
-			opacity: .5;
+			background-color: #fff;
+			opacity: .7;
 		}
 		.ajax-progress{
 			display: none;
