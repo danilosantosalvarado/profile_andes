@@ -457,8 +457,8 @@ function _video_embed_field_get_vimeo_data($url) {
   // Set oembed endpoint
   $oembed_endpoint = 'http://vimeo.com/api/oembed';
   // Fetch vimeo data
-  $response = drupal_http_request($oembed_endpoint . '.json?url=' . rawurlencode($url));
-
+  $options = array('headers' => array('Referer' => $_SERVER['HTTP_REFERER']));
+  $response = drupal_http_request($oembed_endpoint . '.json?url=' . rawurlencode($url), $options);
   try {
     return json_decode($response->data, TRUE);
   } catch (Exception $e) {
