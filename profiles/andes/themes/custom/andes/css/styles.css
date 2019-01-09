@@ -4072,8 +4072,10 @@ h1.page-header {
 
 .wraper-slider-general ul li .views-row .box-content .views-field-title span,
 .wraper-slider-general ul li .views-row .box-content .views-field-title a,
+.wraper-slider-general ul li .views-row .box-content .views-field-title div,
 .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et span,
-.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a {
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a,
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et div {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   line-height: 0.9;
@@ -4083,8 +4085,10 @@ h1.page-header {
 @media (min-width: 768px) {
   .wraper-slider-general ul li .views-row .box-content .views-field-title span,
   .wraper-slider-general ul li .views-row .box-content .views-field-title a,
+  .wraper-slider-general ul li .views-row .box-content .views-field-title div,
   .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et span,
-  .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a {
+  .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a,
+  .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et div {
     font-size: 1.4375rem;
   }
 }
