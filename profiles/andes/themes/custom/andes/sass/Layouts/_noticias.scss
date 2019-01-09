@@ -162,7 +162,8 @@
             padding: 5px 0px;
           }
           //Titulo
-          .views-field-title {
+          .views-field-title,
+          .views-field-title-field-et {
             font-family: $crimson-semibold;
             @include type-layout(sl, .90);
             // color: #484851;
@@ -172,7 +173,8 @@
             }
           }
           //Body
-          .views-field-body {
+          .views-field-body,
+          .views-field-body-et {
             font-family: $crimson-textregular;
             @include font-size(m);
             margin-bottom: 16px;

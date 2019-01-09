@@ -1120,7 +1120,9 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 }
 
 .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-title,
-.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title {
+.view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-title-field-et,
+.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title,
+.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title-field-et {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   line-height: 0.9;
@@ -1129,13 +1131,17 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 @media (min-width: 768px) {
   .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-title,
-  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title {
+  .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-title-field-et,
+  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title,
+  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-title-field-et {
     font-size: 1.4375rem;
   }
 }
 
 .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-body,
-.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body {
+.view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-body-et,
+.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body,
+.view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body-et {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   margin-bottom: 16px;
@@ -1143,7 +1149,9 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 @media (min-width: 555px) {
   .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-body,
-  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body {
+  .view-display-id-home_noticias_recientes .view-content .views-row .views-column .box-content .views-field-body-et,
+  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body,
+  .view-display-id-home_noticias_vistas .view-content .views-row .views-column .box-content .views-field-body-et {
     height: 7pc;
   }
 }
@@ -8112,12 +8120,14 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 }
 
 .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title,
-.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo {
+.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo,
+.slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title-field-et {
   margin-bottom: 5px;
 }
 
 .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title a,
-.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a {
+.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a,
+.slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title-field-et a {
   font-family: "Crimson_textroman", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.875rem;
   line-height: 1.16;
@@ -8126,19 +8136,22 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 
 @media (min-width: 1200px) {
   .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title a,
-  .slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a {
+  .slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a,
+  .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title-field-et a {
     font-size: 1.1875rem;
   }
 }
 
 .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title a:hover,
-.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a:hover {
+.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-titulo a:hover,
+.slider-vertical-destacados ul li.swiper-slide .views-row .views-field-title-field-et a:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 
 .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body,
-.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body {
+.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body,
+.slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body-et {
   font-size: 11.6px;
   width: 60%;
   margin-left: 40%;
@@ -8146,13 +8159,15 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 
 @media (min-width: 1200px) {
   .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body,
-  .slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body {
+  .slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body,
+  .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body-et {
     font-size: 0.875rem;
   }
 }
 
 .slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body .field-content,
-.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body .field-content {
+.slider-vertical-destacados ul li.swiper-slide .views-row .multimedia-body .field-content,
+.slider-vertical-destacados ul li.swiper-slide .views-row .views-field-body-et .field-content {
   display: -ms-grid;
   display: grid;
 }
@@ -8275,7 +8290,8 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 }
 
 .slider-vertical-destacados-mas-recientes .box-content .views-field-title span,
-.slider-vertical-destacados-mas-recientes .box-content .views-field-title a {
+.slider-vertical-destacados-mas-recientes .box-content .views-field-title a,
+.slider-vertical-destacados-mas-recientes .box-content .views-field-title div {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.4375rem;
   line-height: 1.16;
