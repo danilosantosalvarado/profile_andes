@@ -4065,12 +4065,15 @@ h1.page-header {
   font-size: 0.8125rem;
 }
 
-.wraper-slider-general ul li .views-row .box-content .views-field-title {
+.wraper-slider-general ul li .views-row .box-content .views-field-title,
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et {
   margin: 15px 0 20px;
 }
 
 .wraper-slider-general ul li .views-row .box-content .views-field-title span,
-.wraper-slider-general ul li .views-row .box-content .views-field-title a {
+.wraper-slider-general ul li .views-row .box-content .views-field-title a,
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et span,
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   line-height: 0.9;
@@ -4079,24 +4082,29 @@ h1.page-header {
 
 @media (min-width: 768px) {
   .wraper-slider-general ul li .views-row .box-content .views-field-title span,
-  .wraper-slider-general ul li .views-row .box-content .views-field-title a {
+  .wraper-slider-general ul li .views-row .box-content .views-field-title a,
+  .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et span,
+  .wraper-slider-general ul li .views-row .box-content .views-field-title-field-et a {
     font-size: 1.4375rem;
   }
 }
 
-a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover {
+a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover, a
+.wraper-slider-general ul li .views-row .box-content .views-field-title-field-et:hover {
   color: #484851;
   text-decoration: underline;
 }
 
-.wraper-slider-general ul li .views-row .box-content .views-field-body {
+.wraper-slider-general ul li .views-row .box-content .views-field-body,
+.wraper-slider-general ul li .views-row .box-content .views-field-body-et {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   margin-bottom: 16px;
 }
 
 @media (min-width: 555px) {
-  .wraper-slider-general ul li .views-row .box-content .views-field-body {
+  .wraper-slider-general ul li .views-row .box-content .views-field-body,
+  .wraper-slider-general ul li .views-row .box-content .views-field-body-et {
     height: 7pc;
   }
 }
