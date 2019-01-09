@@ -5759,13 +5759,16 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   }
 }
 
-.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title {
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et {
   margin: 20px 0 25px;
   text-align: left;
 }
 
 .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title a,
-.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title span {
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title span,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et a,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et span {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   font-size: 1.25rem;
@@ -5774,7 +5777,8 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   padding: 0;
 }
 
-.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-body {
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-body,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-body-et {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.9375rem;
   color: #484851;
@@ -7787,6 +7791,16 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 
 .view-componente-equipo-trabajo ul .views-row-last {
   margin-bottom: 30px;
+}
+
+.view-componente-equipo-trabajo .view-more-footer {
+  max-width: 1170px;
+  margin: 30px auto 0;
+}
+
+.view-componente-carrusel-multimedia .view-more-footer {
+  max-width: 1170px;
+  margin: 30px auto 0;
 }
 
 /* ------| Equipos  |----- */

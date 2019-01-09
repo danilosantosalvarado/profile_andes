@@ -32,7 +32,8 @@
 					padding: 15px 0;
 				}
 				//titulo
-				.views-field-title {
+				.views-field-title, 
+				.views-field-title-field-et {
 					margin: 20px 0 25px;
 					text-align: left;
 					a,
@@ -46,7 +47,8 @@
 					}
 				}
 				//body
-				.views-field-body {
+				.views-field-body,
+				.views-field-body-et {
 					font-family: $crimson-textregular;
 					@include font-size(ms);
 					color: color('grey-dark');
