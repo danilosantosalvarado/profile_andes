@@ -98,7 +98,8 @@
             }
           }
 					//Titulo
-					.views-field-title {
+					.views-field-title,
+					.views-field-title-et {
             margin: 15px 0 20px;
 						span,
 						a {
@@ -116,7 +117,8 @@
               }
 					}
 					//Body
-					.views-field-body {
+					.views-field-body,
+					.views-field-body-et {
             font-family: $crimson-textregular;
 						@include font-size(m);
 						margin-bottom: 16px;
