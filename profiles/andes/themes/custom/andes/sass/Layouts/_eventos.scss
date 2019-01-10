@@ -112,7 +112,8 @@
             min-height: 290px;
           }
           //Titulo
-          .views-field-title-1 {
+          .views-field-title-1,
+          .views-field-title-field-et {
             font-family: $crimson-semibold;
             @include type-layout(sl, .90);
             // color: #484851;

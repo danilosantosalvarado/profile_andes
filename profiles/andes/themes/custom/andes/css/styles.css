@@ -749,7 +749,8 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   }
 }
 
-.view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1 {
+.view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1,
+.view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-field-et {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   line-height: 0.9;
@@ -757,7 +758,8 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 }
 
 @media (min-width: 768px) {
-  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1 {
+  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-1,
+  .view-id-eventos .view-content .views-row .views-column .box-content .views-field-title-field-et {
     font-size: 1.4375rem;
   }
 }
