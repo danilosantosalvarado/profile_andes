@@ -5136,6 +5136,45 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   }
 }
 
+/* ------| texto con background con opacidad |----- */
+.text-content {
+  position: relative;
+  padding: 10px 4% 0;
+}
+
+.text-content:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background-color: red;
+  z-index: -1;
+  opacity: 0.5;
+  left: 0;
+}
+
+.link-content {
+  position: absolute;
+  padding: 10px 4% 0;
+  margin-top: 10px;
+}
+
+.link-content:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 10px);
+  background-color: red;
+  z-index: -1;
+  opacity: 0.5;
+  left: 0;
+}
+
+.link-content .link-slider-homes {
+  color: #fff;
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Layouts 9
