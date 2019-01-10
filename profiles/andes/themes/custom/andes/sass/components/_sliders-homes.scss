@@ -97,10 +97,12 @@
 .slider-pricipal-node {
 	&.views_slideshow_main {
 		.conten {
-			padding: 0 15px;
 			max-width: 500px;
 			margin-left: auto;
 			margin-right: auto;
+			@include respond-to(s) {
+				padding: 0 15px;
+			}
 			//titulo
 			.title-slider-homes {
 				@extend %title-slider-home;
@@ -144,6 +146,9 @@
 			}
 		}
 		//Buttom
+		.link-content{
+			left: 0;
+		}
 		.link-slider-homes {
 			@extend %link-slider-home;
 		}
@@ -180,6 +185,9 @@
 			}
 		}
 		//Buttom
+		.link-content{
+			right: 0;
+		}
 		.link-slider-homes {
 			@extend %link-slider-home;
 		}
@@ -189,6 +197,7 @@
 .slider-pricipal-node {
 	.slider-homes-center {
 		@extend %slider-homes-position;
+		text-align: center;
 		@include respond-to(m) {
 			left: 0;
 			right: 0;
@@ -213,6 +222,10 @@
 			@extend %body-slider-home;
 		}
 		//Buttom
+		.link-content{
+			position: relative;
+			display: inline-block;
+		}
 		.link-slider-homes {
 			@extend %link-slider-home;
 		}
@@ -829,12 +842,12 @@
 /* ------| texto con background con opacidad |----- */
 .text-content{
 	position: relative;
-	padding: 10px 4% 0;
+	padding: 10px 20px 0;
 	&:before{
 		content: "";
 		position: absolute;
 		width: 100%;
-		height: 10%;
+		height: 100%;
 		background-color: red;
 		z-index: -1;
 		opacity: 0.5;
@@ -844,7 +857,7 @@
 
 .link-content{
 	position: absolute;
-	padding: 10px 4% 0;
+	padding: 10px 30px 0;
 	margin-top: 10px;
 	&:before{
 		content: "";
@@ -858,6 +871,6 @@
 	}
 	.link-slider-homes{
 		color: #fff;
-		font-family: $latobold;
+		font-family: $latobold !important;
 	}
 }
