@@ -197,10 +197,10 @@ function udla_blocks_alter_contextual_links_view_alter(&$element, $items) {
             'title'  => t('Configurar bloque'),
             'href'   =>'admin/structure/block/manage/views/'.$key.'/configure',
             'query'  => $element['#links']['views-ui-edit']['query']
-          );        
+          );
         }
       }
-      
+
     }
   }
 
@@ -334,12 +334,12 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
         $block = block_load($content->module, $key);
       }
     }
-   
+
   }
   else if ($pane->type == 'block') {
 
     $block = block_load($content->module, $content->delta);
-    
+
     if (!empty($block->background_image)){
         $fid = file_load($block->background_image);
         if (isset($fid)&&($fid !== '0')) {
@@ -398,8 +398,24 @@ function udla_blocks_alter_panels_pane_content_alter($content, $pane, $args, $co
     }
   }
 
-    
 
+/**
+ * Implements hook_form_alter().
+ */
+function udla_blocks_alter_form_alter(&$form, &$form_state, $form_id) {
+
+  // That's the form ID of the translation interface.
+  if ($form_id == 'i18n_string_locale_translate_edit_form') {
+
+    // Let's check at least for a user's role first.
+    global $user;
+    if (in_array('administrator', $user->roles)) {
+
+      // Simply unset the validation. Done.
+      unset($form['#validate']);
+    }
+  }
+}
 
 // background color decanatura taxonomy
 function _update_taxonomy_data_css($form_state, $name_field)
