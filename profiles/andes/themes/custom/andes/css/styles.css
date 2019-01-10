@@ -7732,6 +7732,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   outline: none;
 }
 
+.swipper-anuncios .swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background-color: transparent !important;
+}
+
 .swipper-anuncios .views-slideshow-controls-bottom {
   text-align: center;
   padding: 0;

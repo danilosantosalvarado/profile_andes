@@ -274,6 +274,9 @@
 			&:focus{
 				outline: none;
 			}
+			&:not(.swiper-pagination-bullet-active){
+				background-color: transparent !important;
+			}
 		}
 	}
 	//flechas
