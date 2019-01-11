@@ -214,17 +214,10 @@
 			if (color !== null) {
 				//adding border top
 				$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+color);
+				$('.swiper-pagination').addClass('pagination-'+color);
 				$('#widget_pager_bottom_componente_anuncios-block_1 , #widget_pager_bottom_componente_eventos-block_3_1').addClass('pager-'+color);
 				$('.anuncios-enlace').addClass('pager-'+color);
 
-				$('.views-slideshow-pager-field-item').each(function(index, el) {
-					$(this).click(function(event) {
-						$('.views-slideshow-pager-field-item').find('a').removeClass('background-'+color);
-						if ($(this).hasClass('active')) {
-							$(this).find('a').addClass('background-'+color);
-						}
-					});
-				});
 			}
 			/**
 			 * [listEvents description]

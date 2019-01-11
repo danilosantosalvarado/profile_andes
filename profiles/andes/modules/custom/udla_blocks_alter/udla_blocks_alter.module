@@ -246,6 +246,8 @@ function _color_set_for_data($value)
     fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . ' a::before{background: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.border-top-' . drupal_clean_css_identifier($value, array()) . ' {border-top: 4px solid ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.pager-' . drupal_clean_css_identifier($value, array()) . ' a {border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pagination-' . drupal_clean_css_identifier($value, array()) . ' .swiper-pagination-bullet {  border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pagination-' . drupal_clean_css_identifier($value, array()) . ' .swiper-pagination-bullet-active {background-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh,'/* '.'end'.' */'. PHP_EOL);
 
   } else {
@@ -273,6 +275,8 @@ function _color_set_for_data($value)
     fwrite($fh, '.opacity-content-' . drupal_clean_css_identifier($value, array()) . ' a::before{background: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.border-top-' . drupal_clean_css_identifier($value, array()) . ' {border-top: 4px solid ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh, '.pager-' . drupal_clean_css_identifier($value, array()) . ' a {border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pagination-' . drupal_clean_css_identifier($value, array()) . ' .swiper-pagination-bullet {  border: 1px solid ' . $value . ' !important;}' . PHP_EOL);
+    fwrite($fh, '.pagination-' . drupal_clean_css_identifier($value, array()) . ' .swiper-pagination-bullet-active {background-color: ' . $value . ' !important;}' . PHP_EOL);
     fwrite($fh,'/* '.'end'.' */'. PHP_EOL);
 
   }
