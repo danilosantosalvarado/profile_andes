@@ -240,7 +240,6 @@
 		//enlaces
 		.anuncios-enlace {
 			a {
-				font-family: $crimson-textregular;
 				@include font-size(m);
 				color: color('grey-dark');
 				text-align: center;

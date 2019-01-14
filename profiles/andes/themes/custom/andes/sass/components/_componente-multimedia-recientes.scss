@@ -37,7 +37,8 @@
             padding: 5px 0px;
           }
           //Titulo
-          .views-field-title {
+          .views-field-title,
+          .views-field-title-field-et {
             font-family: $crimson-semibold;
             @include type-layout(sl, .90);
             // color: #484851;

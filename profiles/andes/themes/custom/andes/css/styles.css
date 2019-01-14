@@ -5226,6 +5226,35 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   border: 1px solid #fff;
 }
 
+.opacity-content-15c3c6 .link-slider-homes a {
+  color: #fff;
+}
+
+.opacity-content-15c3c6 .link-slider-homes a:hover {
+  border: 1px solid #fff;
+}
+
+.hover-link-f5f114 .box-content {
+  border-top-color: #f5f114 !important;
+}
+
+.hover-link-f5f114 .box-content .content-date {
+  color: #f5f114 !important;
+}
+
+.hover-link-f5f114 .box-content a {
+  border-color: #f5f114 !important;
+}
+
+.hover-link-f5f114 .box-content:hover .content-date, .hover-link-f5f114 .box-content:hover .views-field-title, .hover-link-f5f114 .box-content:hover .views-field-body {
+  color: #fff !important;
+}
+
+.hover-link-f5f114 .box-content:hover a {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Layouts 9
