@@ -480,8 +480,8 @@
 				var $itemsWidth = $element.find('.views-slideshow-pager-field-item').outerWidth(true);
 				var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
 				var $counterData = 0;
-				// setTimeout(function(){
-				// 	var $element = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views_slideshow_pager_field');
+				setTimeout(function(){
+					var $element = $('.view-componente-carrusel-multimedia.view-id-componente_carrusel_multimedia').find('.views_slideshow_pager_field');
 					var $containerEl = $element.width();
 					var $items = $element.find('.views-slideshow-pager-field-item').length;
 					var $itemsWidth = $element.find('.views-slideshow-pager-field-item').outerWidth(true);
@@ -490,7 +490,7 @@
 					if($widthTotal < $containerEl){
 						$parent.find('.next-pagination, .prev-pagination').css('display', 'none');
 					}
-			//	},1000)
+				},1000)
 
 
 				$parent.find('.next-pagination').on('click',function(e){
