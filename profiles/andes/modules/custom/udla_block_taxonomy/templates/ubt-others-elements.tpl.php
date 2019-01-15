@@ -16,7 +16,7 @@
     <ul>
     <?php foreach ($items as $tid => $name_tax) { ?>
       <li class="level-li<?php echo (in_array($tid,$parents_list)) ?  "-active": "";?> <?php echo (in_array($tid,$children_list)) ? ' children-active': ""; ?>">
-        <button type="button" itemid="<?php echo $tid;?>" class="item-level level-<?php echo $level;?>"><?php echo t($name_tax);?></button>
+        <button type="button" itemid="<?php echo $tid;?>" class="item-level level-<?php echo $level;?>"><?php echo (module_exists('entity_translation')) ?  $name_tax :t($name_tax);?></button>
       </li>
     <?php }?>
     </ul>

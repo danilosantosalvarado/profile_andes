@@ -1,6 +1,7 @@
 <?php
 function _get_taxonomy_render($vid) {
   $taxonomy_childrens = taxonomy_get_tree($vid);
+
   $taxonomy_by_levels = _reorder_taxonomies_by_levels($taxonomy_childrens);
   
   $load_first_level = _first_level_load($taxonomy_by_levels[0]);
@@ -10,15 +11,17 @@ function _get_taxonomy_render($vid) {
 function _reorder_taxonomies_by_levels($taxonomies){
   $taxonomies_group = array();
   $parents = array();
+  global $language;
+
   foreach ($taxonomies as $taxonomy) {
+    $term = taxonomy_term_load($taxonomy->tid);
     $parent = array_shift($taxonomy->parents);
     if($parent != 0){
-      $taxonomies_group[$taxonomy->depth][$parent][$taxonomy->tid] = $taxonomy->name;
+      $taxonomies_group[$taxonomy->depth][$parent][$taxonomy->tid] = (module_exists('entity_translation') && isset($term->name_field[$language->language][0]['value'])) ? $term->name_field[$language->language][0]['value'] : $taxonomy->name;
     }else{
-      $taxonomies_group[$taxonomy->depth][$taxonomy->tid] = $taxonomy->name;
+      $taxonomies_group[$taxonomy->depth][$taxonomy->tid] = (module_exists('entity_translation') && isset($term->name_field[$language->language][0]['value'])) ? $term->name_field[$language->language][0]['value'] : $taxonomy->name;
     }
   }
-
   drupal_add_js(drupal_get_path('module', 'udla_block_taxonomy') . '/js/udla_block_taxonomy_actions.js');
   drupal_add_css(drupal_get_path('module', 'udla_block_taxonomy') . '/css/udla_block_taxonomy.css');
   return $taxonomies_group;
