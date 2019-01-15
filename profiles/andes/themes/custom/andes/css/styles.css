@@ -5281,14 +5281,12 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 // Layouts 9
 //------------------------------------------------------------------------------
 */
-.view-id-layout_9.view-display-id-block_1,
-.view-id-layout_9.view-display-id-block {
+.view-id-layout_9.view-display-id-block_1 {
   display: block;
   overflow: hidden;
 }
 
-.view-id-layout_9.view-display-id-block_1 .view-content,
-.view-id-layout_9.view-display-id-block .view-content {
+.view-id-layout_9.view-display-id-block_1 .view-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5298,29 +5296,25 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 }
 
 @media (min-width: 768px) {
-  .view-id-layout_9.view-display-id-block_1 .view-content,
-  .view-id-layout_9.view-display-id-block .view-content {
+  .view-id-layout_9.view-display-id-block_1 .view-content {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .view-id-layout_9.view-display-id-block_1 .view-content,
-  .view-id-layout_9.view-display-id-block .view-content {
+  .view-id-layout_9.view-display-id-block_1 .view-content {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .view-id-layout_9.view-display-id-block_1 .view-content,
-  .view-id-layout_9.view-display-id-block .view-content {
+  .view-id-layout_9.view-display-id-block_1 .view-content {
     width: 1170px;
   }
 }
 
 @media (min-width: 555px) {
-  .view-id-layout_9.view-display-id-block_1 .view-content .views-row,
-  .view-id-layout_9.view-display-id-block .view-content .views-row {
+  .view-id-layout_9.view-display-id-block_1 .view-content .views-row {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 33.333333%;
             flex: 1 1 33.333333%;
@@ -5328,13 +5322,11 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   }
 }
 
-.view-id-layout_9.view-display-id-block_1 .view-content > div:nth-child(even),
-.view-id-layout_9.view-display-id-block .view-content > div:nth-child(even) {
+.view-id-layout_9.view-display-id-block_1 .view-content > div:nth-child(even) {
   background-color: #fff;
 }
 
-.view-id-layout_9.view-display-id-block_1 .view-content .field-content,
-.view-id-layout_9.view-display-id-block .view-content .field-content {
+.view-id-layout_9.view-display-id-block_1 .view-content .field-content {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   padding: 40px;
