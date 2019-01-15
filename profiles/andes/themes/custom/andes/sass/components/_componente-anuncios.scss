@@ -167,8 +167,8 @@
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-	padding-right: 0;
-	padding-left: 0;
+	padding-right: 0px;
+	padding-left: 0px;
 	margin-right: auto;
 	margin-left: auto;
 	@include respond-to(m) {
@@ -182,10 +182,10 @@
 	}
 	.swiper-wrapper {
 		list-style: none;
-		padding-left: 0;
+		padding-left: 0px;
 		.field-content{
 			figure{
-				margin: 0;
+				margin: 0px;
 			}
 		}
 	}
@@ -216,7 +216,7 @@
 		@include respond-to(xl) {
 			float: left;
 			width: 50%;
-			margin: 20px 0 0;
+			margin: 20px 0 0px;
 		}
 		//titulo
 		.anuncios-titulo {
@@ -256,7 +256,7 @@
 		position: relative;
 		display: inline-block;
 		text-align: center;
-		padding: 15px 0;
+		padding: 15px 0px;
 		width: 100px;
 		box-sizing: border-box;
 		z-index: 1;
@@ -281,7 +281,7 @@
 	//flechas
 	.views-slideshow-controls-bottom {
 		text-align: center;
-		padding: 0;
+		padding: 0px;
 		text-align: center;
 		display: block;
 		.views_slideshow_pager_field{
@@ -294,7 +294,7 @@
 					border: 1px solid color('fucsia');
 					border-radius: 10px;
 					font-size: 0;
-					padding: 0;
+					padding: 0px;
 					width: 13px;
 					height: 13px;
 					display: block;
