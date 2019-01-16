@@ -2817,7 +2817,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   text-decoration: none;
   text-align: center;
   border: 1px solid #404041;
-  padding: 5px 40px;
+  padding: 10px 40px;
   margin: 0 auto;
 }
 
@@ -2839,7 +2839,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content .views-field-view-node a {
     right: 25px;
     left: inherit;
-    max-width: 150px;
   }
 }
 

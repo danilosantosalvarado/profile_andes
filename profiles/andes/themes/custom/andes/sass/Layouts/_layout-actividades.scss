@@ -225,7 +225,7 @@
               text-decoration: none;
               text-align: center;
               border: 1px solid #404041;
-              padding: 5px 40px;
+              padding: 10px 40px;
               margin: 0 auto;
               @include respond-to(xs) {
                 position: absolute;
@@ -240,7 +240,6 @@
               @include respond-to(m) {
                 right: 25px;
                 left: inherit;
-                max-width: 150px;
               }
             }
           }
