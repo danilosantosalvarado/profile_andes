@@ -2,6 +2,11 @@
 (function($, Drupal) {
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
+			// function galeria home
+			jQuery(document).on("click", ".galeria-home", function() {
+				var imageSrc = $(this).find("img").attr("src");
+				jQuery(".modal-gallery-home").attr("src", imageSrc);
+			});
 			//called the function for bullet container arrows
 			bulletsContainerArrows();
 
@@ -404,6 +409,7 @@
 				$('.wrapper-galeria-home .gh-item').addClass('object-fit');
 				$('.wrapper-galeria-home .gh-item').each(function(idx, el){
 					var srcImg = $(el).find('img').prop('src');
+					console.log( $(el).find('img'));
 					$(el).css({'background-image': 'url(' + srcImg + ')'});
 				});
 			}
