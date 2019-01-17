@@ -2685,7 +2685,8 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   }
 }
 
-.view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button .btn-info {
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button .btn-info,
+.view-id-componente_actividades_home .view-filters .views-exposed-widgets .views-submit-button .form-submit {
   width: 39px;
   height: 39px;
   display: inline-block;
