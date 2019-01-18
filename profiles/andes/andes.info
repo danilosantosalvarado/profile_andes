@@ -2,7 +2,7 @@ name = Uniandes-Profile
 description = Install profile tbwa
 version = VERSION
 core = 7.x
-exclusive = "1"
+;exclusive = "1"
 ; Core modules
 dependencies[] = block
 dependencies[] = color
@@ -23,7 +23,7 @@ dependencies[] = shortcut
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
-;Portal 
+;Portal
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = entity_token
@@ -77,6 +77,7 @@ dependencies[] = location_entity
 dependencies[] = svg_embed
 dependencies[] = menu_attributes
 dependencies[] = backup_migrate
+dependencies[] = devel
 ; Portal Agenda.
 dependencies[] = field_collection
 dependencies[] = date_api
@@ -101,7 +102,7 @@ dependencies[] = fape
 dependencies[] = panopoly_magic
 dependencies[] = panels_node
 dependencies[] = panels_bootstrap_layout_builder
-; Export 
+; Export
 dependencies[] = menu_import
 dependencies[] = phpexcel
 dependencies[] = taxonomy_csv
@@ -129,7 +130,8 @@ dependencies[] = i18n
 dependencies[] = i18n_field
 dependencies[] = entity_translation
 dependencies[] = title
-;Mansory 
+dependencies[] = i18nviews
+;Mansory
 dependencies[] = masonry
 dependencies[] = masonry_views
 ; Custom

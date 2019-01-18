@@ -12,8 +12,63 @@ function andes_form_install_configure_form_alter(&$form, $form_state) {
 
   $form['server_settings']['site_default_country']['#default_value'] = 'CO';
   drupal_add_js('jQuery(document).ready(function () { jQuery("#edit-date-default-timezone").val("America/Bogota"); });', 'inline');
-
 }
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function andes_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'install_configure_form') {
+      $form['#submit'][] = 'andes_install_configure_form_submit';
+  }
+}
+
+ /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function andes_install_configure_form_submit(&$form, $form_state) {
+
+  global $user;
+
+  variable_set('site_name', $form_state['values']['site_name']);
+  variable_set('site_mail', $form_state['values']['site_mail']);
+  variable_set('date_default_timezone', $form_state['values']['date_default_timezone']);
+  variable_set('site_default_country', $form_state['values']['site_default_country']);
+  variable_set('site_default_user_name', $form_state['input']['account']['name']);
+  variable_set('site_default_user_mail', $form_state['input']['account']['mail']);
+  variable_set('site_default_user_pass', $form_state['input']['account']['pass']['pass1']);
+
+  // Enable update.module if this option was selected.
+  if ($form_state['values']['update_status_module'][1]) {
+    module_enable(array('update'), FALSE);
+
+    // Add the site maintenance account's email address to the list of
+    // addresses to be notified when updates are available, if selected.
+    if ($form_state['values']['update_status_module'][2]) {
+      variable_set('update_notify_emails', array($form_state['values']['account']['mail']));
+    }
+  }
+
+  // We precreated user 1 with placeholder values. Let's save the real values.
+  $account = user_load(1);
+  $merge_data = array('init' => $form_state['values']['account']['mail'], 'roles' => !empty($account->roles) ? $account->roles : array(), 'status' => 1, 'timezone' => $form_state['values']['date_default_timezone']);
+  user_save($account, array_merge($form_state['values']['account'], $merge_data));
+  // Load global $user and perform final login tasks.
+  $user = user_load(1);
+  user_login_finalize();
+
+  if (isset($form_state['values']['clean_url'])) {
+    variable_set('clean_url', $form_state['values']['clean_url']);
+  }
+
+  // Record when this install ran.
+  variable_set('install_time', $_SERVER['REQUEST_TIME']);
+}
+
+
+
+
 /**
  * Implements hook_install().
  */
@@ -385,19 +440,6 @@ function andes_install() {
 
     module_enable(array('menus_imports_fe'), TRUE);
 
-     // Import Menu ("menu-mega-menu").
-  /*  $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-mega-menu-export.txt', 'menu-mega-menu',$options);
-    menu_import_save_menu($menu, $options);
-
-   // // Import Menu ("menu-top-soy").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-menu-top-soy-export.txt', 'menu-top-soy',$options);
-    menu_import_save_menu($menu, $options);
-
-   // Import Menu ("menu-enlaces-de-interes").
-    $menu = menu_import_parse_menu_from_file(getcwd().'/profiles/andes/menus/menu-enlaces-de-interes-export.txt', 'enlaces-de-interes',$options);
-    menu_import_save_menu($menu, $options); */
-
-
     // Set Enabled Preflix languages en
     db_update('languages')
       ->fields(array(
@@ -481,58 +523,161 @@ function andes_install_tasks($install_state) {
   $flag = TRUE;
   $tasks = array();
 
+  $tasks['permission'] = array(
+    'display_name' => st('Validando permisos'),
+    'display' => TRUE,
+    'type' => 'form',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => 'permission_form',
+  ); 
+
+  $tasks['import_data_files'] = array(
+    'display_name' => st('Generando contenido'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_import_data_files',
+  ); 
 
   $tasks['install_beans'] = array(
-    'display_name' => st('Importacion de data'),
+    'display_name' => st('Guardando configuraciones'),
     'display' => TRUE,
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_data',
   ); 
 
-
-/* $tasks['install_config'] = array(
-    'display_name' => st('Importacion de Configuracion'),
-    'display' => TRUE,
-    'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_config',
-  );  */
-
-/*  $tasks['install_tax'] = array(
-    'display_name' => st('Importacion de Taxonomias'),
-    'display' => TRUE,
-    'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_taxonomy',
-  );
-
-  $tasks['install_style_image'] = array(
-    'display_name' => st('Importacion de Estilos de Imagen'),
-    'display' => TRUE,
-    'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_style_image',
-  ); */
-
-  // $tasks['install_mod'] = array(
-  //   'display_name' => st('Importacion de contenido'),
-  //   'display' => TRUE,
-  //   'type' => 'batch',
-  //   'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-  //   'function' => '_install_mods',
-  // );
-
-/*  $tasks['install_views'] = array(
-    'display_name' => st('Importacion de vistas'),
-    'display' => TRUE,
-    'type' => 'batch',
-    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
-    'function' => '_install_views',
-  ); */
+  $tasks['install_finished']['function'] = 'andes_install_finished';
 
   return $tasks;
 }
+
+function permission_form($form, &$form_state){
+    $permisos = substr(sprintf('%o', fileperms('sites/default')), -4);
+
+    if ($permisos != '0777') {
+      $markup = '<li class="active">'.t('Please check permission 777 into ["sites/default"]').'</li>';
+    }else{
+      $markup = '<li class="done">'.t('Please check permission 777 into ["sites/default"]').'</li>';
+    }
+
+    $form['default'] = array(
+      '#type' => 'markup', 
+      '#markup' => $markup,
+      '#tree' => true,
+      '#prefix' => '<ol class="task-list">',
+      '#suffix' => '</ol>',
+    );
+
+    $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css')), -4);
+
+    if ($permisos != '0775') {
+      $markup = '<li class="active">'.t('Please check permission 775 into ["profiles/andes/modules/custom/udla_blocks_alter/css"]').'</li>';
+    }else{
+      $markup = '<li class="done">'.t('Please check permission 775 into ["profiles/andes/modules/custom/udla_blocks_alter/css"]').'</li>';
+    }
+    
+     $form['estilo'] = array(
+      '#type' => 'markup',
+      '#markup' => $markup,
+      '#tree' => true,
+      '#prefix' => '<ol class="task-list">',
+      '#suffix' => '</ol>',
+    );
+    $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css')), -4);
+
+    if ($permisos != '0775') {
+      $markup = '<li class="active">'.t('Please check permission 775 into ["profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css"]').'</li>';
+    }else{
+      $markup = '<li class="done">'.t('Please check permission 775 into ["profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css"]').'</li>';
+    }
+
+    $form['css'] = array(
+      '#type' => 'markup', 
+      '#markup' => $markup,
+      '#tree' => true,
+      '#prefix' => '<ol class="task-list">',
+      '#suffix' => '</ol>',
+    );
+   
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Next'),
+  );
+
+  return $form;
+}
+
+
+
+
+function permission_form_validate($form, &$form_state){
+
+    $permisos = substr(sprintf('%o', fileperms('sites/default')), -4);
+
+    if ($permisos != '0777') {
+      form_set_error('default', t('The folder ["sites/default"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
+    }
+
+   
+
+    $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css')), -4);
+
+    if ($permisos != '0777') {
+      form_set_error('css', t('The folder ["profiles/andes/modules/custom/udla_blocks_alter/css"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
+    }
+
+    $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css')), -4);
+
+    if ($permisos != '0777') {
+      form_set_error('estilo', t('The file ["profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
+    }
+   return $form;
+}
+
+
+function _import_data_files() {
+  $batch = array(
+    'title' => t('Generando contenido'),
+  );
+
+  rrmdir('sites/default/files');
+
+  $zip = new ZipArchive;
+  $res = $zip->open('profiles/andes/storage/files.zip');
+  if ($res === TRUE) {
+     $zip->extractTo('sites/default/');
+     for ($i=0; $i <=$zip->numFiles; $i++) {
+          $batch['operations'][] = array('_install__files', array($i));
+     }  
+     $zip->close();
+  }
+  return $batch;
+}
+
+
+function _install__files($contador){
+  return $contador;  
+} 
+
+
+
+ function rrmdir($dir) {
+   if (is_dir($dir)) { 
+     $objects = scandir($dir); 
+     foreach ($objects as $object) { 
+       if ($object != "." && $object != "..") { 
+         if (is_dir($dir."/".$object))
+           rrmdir($dir."/".$object);
+         else
+           unlink($dir."/".$object); 
+       } 
+     }
+     rmdir($dir); 
+   } 
+ }
+
 
 function _install_data() {
   
@@ -544,9 +689,9 @@ function _install_data() {
       'build_info' => array(
         'args' => array(
           0 => 'manual',
-          1 => 'npb-2018-12-08T11-17-26.mysql.gz',
+          1 => 'configurations.mysql.gz',
         ) ,
-        'form_id' => 'backup_migrate_ui_destination_restore_file_confirm',
+        'form_id' => 'configurations.mysql.gz',
       ),
     );
 
@@ -573,11 +718,14 @@ function _install_data_batch($data){
   variable_set('profile_andes_site_mail', variable_get('site_mail'));
   variable_set('profile_andes_site_default_country', variable_get('site_default_country'));
   variable_set('profile_andes_date_default_timezone', variable_get('date_default_timezone'));
+  variable_set('profile_andes_site_default_user_name', variable_get('site_default_user_name'));
 
+  variable_set('profile_andes_site_default_user_mail', variable_get('site_default_user_mail'));
+  variable_set('profile_andes_site_default_user_pass', variable_get('site_default_user_pass'));
 
   backup_migrate_include('crud', 'locations');
-  backup_migrate_perform_restore('manual', 'npb-2018-12-08T11-17-26.mysql.gz', $data);
-  drupal_set_message(t('Import Success'), 'status', TRUE);
+  backup_migrate_perform_restore('manual', 'configurations.mysql.gz', $data);
+  drupal_set_message(t('Congratulations your site is already'), 'status', TRUE);
   
   variable_set('site_name', variable_get('profile_andes_site_name'));
   variable_set('site_mail', variable_get('profile_andes_site_mail'));
@@ -586,176 +734,35 @@ function _install_data_batch($data){
 
   require './includes/password.inc';
   $user = user_load(1);
-  $user->name = 'david';
-  $user->mail = 'soporte@tbwacolombia.com';
-  $user->pass = user_hash_password('monica');
+  $user->name = variable_get('profile_andes_site_default_user_name');
+  $user->mail = variable_get('profile_andes_site_default_user_mail');
+  $user->pass = user_hash_password(variable_get('profile_andes_site_default_user_pass'));
+  $user->created = time(); 
   user_save($user);
-}
-
-
-
-
-
-function _install_mods() {
-
-  module_load_include('inc', 'phpexcel');
-
-  $batch = array(
-    'title' => t('Importando contenido'),
-  );
-
-  // Create contents types.
-  module_enable(array('tc_noticias'), TRUE);
-  module_enable(array('tc_equipos'), TRUE);
-  module_enable(array('ct_eventos'), TRUE);
-  module_enable(array('tc_layouts'), TRUE);
-  module_enable(array('tc_publicaciones'), TRUE);
-  module_enable(array('field_condicion_list'), TRUE);
-
-  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
-  $files = system_rebuild_module_data();
-
-  $file_path_noticias = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/noticias.xls';
-  $noticias = phpexcel_import($file_path_noticias);
-
-  foreach ($noticias[false] as $key => $value) {
-    $batch['operations'][] = array('_import_noticias_batch', array($value));
-  }
-
-  $file_path_eventos = getcwd() . '/profiles/andes/modules/custom/udla_load_events/format/eventos.xlsx';
-  $eventos = phpexcel_import($file_path_eventos);
-
-  foreach ($eventos[false] as $key => $value) {
-    $batch['operations'][] = array('_import_eventos_bath', array($value));
-  } 
-  return $batch;
-}
-
-
-function _install_views() {
-  $install_state['mods'] = array('views' => 1);
-
-  $batch = array(
-    'title' => t('Importando vistas'),
-  );
-  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
-  $files = system_rebuild_module_data();
-  foreach ($install_state['mods'] as $key => $module) {
-    $batch['operations'][] = array('_install_views_batch', array($module));
-  }
-  return $batch;
-}
-
-function _install_views_batch(){
-  module_enable(array('udla_load_views'), TRUE);
-}
-
-
-function _install_taxonomy() {
   
-  taxonomy_vocabulary_save((object) array('name' => 'Área tematica','machine_name' => 'area_tematica'));
-  taxonomy_vocabulary_save((object) array('name' => 'Categoría equipos de trabajo', 'machine_name' => 'categoria_equipos_trabajo')); 
-  taxonomy_vocabulary_save((object) array('name' => 'Decanatura - Enlaces Rapidos', 'machine_name' => 'decanatura_enlaces_rapidos')); 
-  taxonomy_vocabulary_save((object) array('name' => 'Editorial','machine_name' => 'editorial'));
-  taxonomy_vocabulary_save((object) array('name' => 'Eventos','machine_name' => 'eventos'));
-  taxonomy_vocabulary_save((object) array('name' => 'Footer Top','machine_name' => 'footer_top'));
-  taxonomy_vocabulary_save((object) array('name' => 'Formato','machine_name' => 'formato'));
-  taxonomy_vocabulary_save((object) array('name' => 'Lateral Items','machine_name' => 'lateral_items'));
-  taxonomy_vocabulary_save((object) array('name' => 'Noticias','machine_name' => 'categorias_noticia'));
-  taxonomy_vocabulary_save((object) array('name' => 'Redes Sociales','machine_name' => 'redes_sociales'));
-  taxonomy_vocabulary_save((object) array('name' => 'Tipo layout','machine_name' => 'tipo_layout'));
- 
-
-  $install_state['mods'] = array('Taxonomy' => 1);
-
-  $batch = array(
-    'title' => t('Importando Taxonomias'),
-  );
-  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
-  $files = system_rebuild_module_data();
-  foreach ($install_state['mods'] as $key => $module) {
-    $batch['operations'][] = array('_install_taxonomy_batch', array($module));
-  }
-  return $batch;
-}
-
-function _install_taxonomy_batch(){
- // andes_import_taxonomy();
-}
-
-function _install_style_image(){
-
-  $install_state['mods'] = array('Style Image' => 1);
-
-  $batch = array(
-    'title' => t('Importando Estilos de Imagen'),
-  );
-  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
-  $files = system_rebuild_module_data();
-  foreach ($install_state['mods'] as $key => $module) {
-    $batch['operations'][] = array('_install_style_image_batch', array($module));
-  }
-  return $batch;
-}
-
-function _install_style_image_batch(){
-  module_enable(array('estilos_de_imagen'), TRUE);
+   // Reset auto increment.
+  db_query("ALTER TABLE users AUTO_INCREMENT = 1"); 
+  // Users table doesn't use AI, reset uid sequence.
+  db_query("UPDATE sequences SET value = 1");
+  db_query("ALTER TABLE sequences AUTO_INCREMENT = 1");
 }
 
 
-function _install_beans(){
-  //load module PHPEXCEL for prepare import data
-  module_load_include('inc', 'phpexcel');
-  //Name to Batch
-  $batch = array(
-    'title' => t('Importando Bloques Beans'),
-  );
+function andes_install_finished(&$install_state) {
+  drupal_set_title(st('@drupal installation complete', array('@drupal' => drupal_install_profile_distribution_name())), PASS_THROUGH);
+  $messages = drupal_set_message();
 
-   // Load beans types.
-   module_enable(array('beans_types'), TRUE);
-  //copying implementation from install.core.inc since module_enable does not seem to play well with Batch API
-  $files = system_rebuild_module_data();
-  $beans = array(
-    'sliders_homes',
-  );
-  // $batch['operations'] = _get_beans_import($beans);
-  $path_beans = getcwd().'/profiles/andes/beans/';
-  $operations = array();
-  foreach ($beans as $bean_name) {
-    $bean_data = phpexcel_import($path_beans.$bean_name.".xlsx");
-    foreach (reset($bean_data) as $bean_value) {
-      $batch['operations'][] = array('_import_beans_batch', array($bean_value,$bean_name));
-    }
-  }
-  return $batch;
+  // Remember the profile which was used.
+  variable_set('install_profile', drupal_get_profile());
+  variable_set('install_task', 'done');
+
+  // Flush all caches to ensure that any full bootstraps during the installer
+  // do not leave stale cached data, and that any content types or other items
+  // registered by the install profile are registered correctly.
+  drupal_flush_all_caches();
+  drupal_goto('<front>');
 }
 
-function _save_data_field_collection( $field, $langugage = "", $data = array(), $entity = array(), $entity_type = ""){
-  foreach (json_decode($data[$field.$language],true) as $key => $item) {
-    $colletions = entity_create('field_collection_item', array('field_name' => 'field_slider_principal_items'));
-    if (empty($langugage)) {
-      $colletions->setHostEntity($entity_type, $entity, 'es');
-    }
-    if (!empty($language)) {
-      $colletions->setHostEntity($entity_type, $entity,str_replace("_","",$language));
-    }
-    $wrapper_collections = entity_metadata_wrapper('field_collection_item',$colletions);
-    $wrapper_collections->field_slider_ubicacion->set($item['field_slider_ubicacion']);
-    $wrapper_collections->field_titulo->set($item['field_titulo']);
-    $wrapper_collections->field_titulo_especiales->set(array('value' => $item['field_titulo_especiales']));
-    $wrapper_collections->field_body->set(array('value' => $item['field_body']));
 
-    $file = file_save_data(file_get_contents($item['field_image_banner']), 'public://'.basename($item['field_image_banner']));
-    $wrapper_collections->field_image_banner->file->set($file);
 
-    // $file = file_save_data(file_get_contents($item['field_image_banner_mobile']), 'public://'.basename($item['field_image_banner_mobile']));
-    // $wrapper_collections->field_image_banner_mobile->file->set($file);
 
-    $wrapper_collections->field_video_banner->set(array('input' => $item['field_video_banner']));
-
-    $wrapper_collections->field_enlace_ver_mas->set(
-        array('title' => $item['field_enlace_ver_mas']['title'], 'url' => $item['field_enlace_ver_mas']['url'])
-    );
-    $wrapper_collections->save();
-  }
-}
