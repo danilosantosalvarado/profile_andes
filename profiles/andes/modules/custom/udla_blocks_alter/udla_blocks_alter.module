@@ -164,7 +164,8 @@ function udla_blocks_alter_form_submit($form, $form_state)
 
   // background color decanatura taxonomy
 
-  if ($form_state['values']['form_id'] == 'taxonomy_form_term' && $form['#term']['vocabulary_machine_name'] =='decanatura_categorias') {
+  if ($form_state['values']['form_id'] == 'taxonomy_form_term' && $form['vocabulary_machine_name']['#value'] =='decanatura_categorias') {
+
     if (isset($form_state['values']['field_color_linea']['und'][false]['rgb']) && user_access('administer blocks')) {
       _update_taxonomy_data_css($form_state, 'field_color_linea');
     }
