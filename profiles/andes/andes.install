@@ -624,14 +624,14 @@ function permission_form_validate($form, &$form_state){
 
     $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css')), -4);
 
-    if ($permisos != '0777') {
-      form_set_error('css', t('The folder ["profiles/andes/modules/custom/udla_blocks_alter/css"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
+    if ($permisos != '0775') {
+      form_set_error('css', t('The folder ["profiles/andes/modules/custom/udla_blocks_alter/css"] has permissions '.$permisos.', must have 775 permissions to continue the installation.'));
     }
 
     $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css')), -4);
 
-    if ($permisos != '0777') {
-      form_set_error('estilo', t('The file ["profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
+    if ($permisos != '0775') {
+      form_set_error('estilo', t('The file ["profiles/andes/modules/custom/udla_blocks_alter/css/styles_background.css"] has permissions '.$permisos.', must have 775 permissions to continue the installation.'));
     }
    return $form;
 }
