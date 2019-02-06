@@ -103,9 +103,9 @@ dependencies[] = panopoly_magic
 dependencies[] = panels_node
 dependencies[] = panels_bootstrap_layout_builder
 ; Export
-dependencies[] = menu_import
-dependencies[] = phpexcel
-dependencies[] = taxonomy_csv
+;dependencies[] = menu_import
+;dependencies[] = phpexcel
+;dependencies[] = taxonomy_csv
 ; Views
 dependencies[] = views
 dependencies[] = views_ui
@@ -135,10 +135,10 @@ dependencies[] = i18nviews
 dependencies[] = masonry
 dependencies[] = masonry_views
 ; Custom
-dependencies[] = udla_blocks_alter
-dependencies[] = udla_tb_megamenu_alter
-dependencies[] = menu_lateral
-dependencies[] = udla_simplified_social_share
+;dependencies[] = udla_blocks_alter
+;dependencies[] = udla_tb_megamenu_alter
+;dependencies[] = menu_lateral
+;dependencies[] = udla_simplified_social_share
 ;dependencies[] = udla_block_taxonomy
 ; Chat
 dependencies[] = activehelper_livehelp
