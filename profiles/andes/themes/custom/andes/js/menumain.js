@@ -102,7 +102,7 @@
         function initDesktopMenu(){
           menu = $('.navbar-header');
           menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
-          
+
           var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
           var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
           setTimeout(function(){
@@ -384,9 +384,8 @@
               }
             }
           );
-          $level1TopSoy.on('click',function(e){
-            e.preventDefault();
-            if($(window).width() < 992){
+          $level1TopSoy.on('click',function(e) {
+            if($(window).width() < 992) {
               $dataId = $(this).parent().attr('data-id');
               $('body').addClass('dark-layer');
               $('.dropdown-toggle').removeClass('text-hover');
