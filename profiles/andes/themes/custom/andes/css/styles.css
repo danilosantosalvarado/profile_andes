@@ -1811,6 +1811,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: black;
   border: 0;
 }
 
@@ -1867,6 +1868,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   top: 0;
   left: 0;
   border: 0;
+  background-color: black;
 }
 
 @media (min-width: 768px) {
@@ -1900,6 +1902,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: black;
   border: 0;
 }
 
@@ -1950,6 +1953,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   top: 0;
   left: 0;
   border: 0;
+  background-color: black;
 }
 
 @media (min-width: 768px) {
