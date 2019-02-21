@@ -15,32 +15,54 @@
 	// Imagen Slider
 	.swiper-wrapper {
 		margin: 0px;
-		.field-content {
-			position: relative;
-			display: block;
-			// Ocultar Imagen Desktop
-			.img-desktop {
-				display: none;
-				@include respond-to(xl) {
-					display: block;
-				}
-				.img-responsive {
-					width: 100%;
-				}
-			}
-			// Ocultar Imagen Mobil
-			.img-mobile {
-				display: block;
-				@include respond-to(xl) {
-					display: none;
-				}
-			}
-			// Tamaño de para mobile
-			.img-content {
-				.img-mobile {
-					img {
-					width: 100%;
+		.swiper-slide{
+			height: 100%;
+			.views-slideshow-swiper-main-frame-row-item{
+				height: 100%;
+				.views-field{
 					height: 100%;
+					.field-content {
+						position: relative;
+						display: block;
+						height: 100%;
+						// Ocultar Imagen Desktop
+					}
+					.cl-events-specials-slider{
+						height: 100%;
+					}
+					.img-content{
+						height: 100%;
+						.img-desktop {
+							display: none;
+							@include respond-to(xl) {
+								height: 100%;
+								display: block;
+							}
+							figure{
+								height: 100%;
+								.img-responsive {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								}
+							}
+						}
+						// Ocultar Imagen Mobil
+						.img-mobile {
+							display: block;
+							@include respond-to(xl) {
+								display: none;
+							}
+						}
+						// Tamaño de para mobile
+						.img-content {
+							.img-mobile {
+								img {
+								width: 100%;
+								height: 100%;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -243,6 +265,9 @@
 		box-sizing: border-box;
 		@include respond-to(m) {
 			padding: 20px 30px;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
 		}
 		.conten {
 			padding: 20px 15px 42px;
@@ -632,6 +657,7 @@
 	// hover para visualzir las imagenes
 	&.views_slideshow_main {
 		position: relative;
+		height: 36.25vw;
 		@include respond-to(xl) {
 			&:hover {
 				.swiper-button-next,
