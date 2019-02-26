@@ -487,5 +487,19 @@ function _change_imagen_class($block){
       }
 }
 
-
-
+function udla_blocks_alter_custom_theme() {
+  if('system/ajax' === current_path()){
+    if(isset($_POST['ajax_page_state']['theme'])){
+       $themes = list_themes();
+       if(isset($themes[$_POST['ajax_page_state']['theme']]) && !empty($themes[$_POST['ajax_page_state']['theme']]->status)){
+           return $_POST['ajax_page_state']['theme'];
+       }
+    }
+  }
+  $args = arg();
+  if(in_array('admin',$args) || in_array('block', $args) || in_array('edit', $args) || in_array('add', $args)){
+    return variable_get('admin_theme', 'bartik');
+  }else{
+    return variable_get('theme_default', 'bartik');
+  }
+}

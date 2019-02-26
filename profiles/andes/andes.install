@@ -235,7 +235,7 @@ function andes_install() {
     'description' => $description,
     'machine_name' => 'tags',
   );
-  taxonomy_vocabulary_save($vocabulary); 
+  taxonomy_vocabulary_save($vocabulary);
 
   $field = array(
     'field_name' => 'field_' . $vocabulary->machine_name,
@@ -251,7 +251,7 @@ function andes_install() {
       ),
     ),
   );
-  field_create_field($field); 
+  field_create_field($field);
 
  $help = st('Enter a comma-separated list of words to describe your content.');
   $instance = array(
@@ -275,7 +275,7 @@ function andes_install() {
       ),
     ),
   );
-  field_create_instance($instance); 
+  field_create_instance($instance);
 
 
   // Create an image field named "Image", enabled for the 'article' content type.
@@ -529,7 +529,7 @@ function andes_install_tasks($install_state) {
     'type' => 'form',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => 'permission_form',
-  ); 
+  );
 
   $tasks['import_data_files'] = array(
     'display_name' => st('Generando contenido'),
@@ -537,7 +537,7 @@ function andes_install_tasks($install_state) {
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_import_data_files',
-  ); 
+  );
 
   $tasks['install_beans'] = array(
     'display_name' => st('Guardando configuraciones'),
@@ -545,7 +545,15 @@ function andes_install_tasks($install_state) {
     'type' => 'batch',
     'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
     'function' => '_install_data',
-  ); 
+  );
+
+  $tasks['review_configurations'] = array(
+    'display_name' => st('Verificando configuraciones'),
+    'display' => TRUE,
+    'type' => 'batch',
+    'run' => $flag ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'function' => '_install_data_review',
+  );
 
   $tasks['install_finished']['function'] = 'andes_install_finished';
 
@@ -562,7 +570,7 @@ function permission_form($form, &$form_state){
     }
 
     $form['default'] = array(
-      '#type' => 'markup', 
+      '#type' => 'markup',
       '#markup' => $markup,
       '#tree' => true,
       '#prefix' => '<ol class="task-list">',
@@ -576,7 +584,7 @@ function permission_form($form, &$form_state){
     }else{
       $markup = '<li class="done">'.t('Please check permission 775 into ["profiles/andes/modules/custom/udla_blocks_alter/css"]').'</li>';
     }
-    
+
      $form['estilo'] = array(
       '#type' => 'markup',
       '#markup' => $markup,
@@ -593,13 +601,13 @@ function permission_form($form, &$form_state){
     }
 
     $form['css'] = array(
-      '#type' => 'markup', 
+      '#type' => 'markup',
       '#markup' => $markup,
       '#tree' => true,
       '#prefix' => '<ol class="task-list">',
       '#suffix' => '</ol>',
     );
-   
+
 
   $form['submit'] = array(
     '#type' => 'submit',
@@ -620,7 +628,7 @@ function permission_form_validate($form, &$form_state){
       form_set_error('default', t('The folder ["sites/default"] has permissions '.$permisos.', must have 777 permissions to continue the installation.'));
     }
 
-   
+
 
     $permisos = substr(sprintf('%o', fileperms('profiles/andes/modules/custom/udla_blocks_alter/css')), -4);
 
@@ -650,7 +658,7 @@ function _import_data_files() {
      $zip->extractTo('sites/default/');
      for ($i=0; $i <=$zip->numFiles; $i++) {
           $batch['operations'][] = array('_install__files', array($i));
-     }  
+     }
      $zip->close();
   }
   return $batch;
@@ -658,46 +666,60 @@ function _import_data_files() {
 
 
 function _install__files($contador){
-  return $contador;  
-} 
+  return $contador;
+}
 
 
 
  function rrmdir($dir) {
-   if (is_dir($dir)) { 
-     $objects = scandir($dir); 
-     foreach ($objects as $object) { 
-       if ($object != "." && $object != "..") { 
+   if (is_dir($dir)) {
+     $objects = scandir($dir);
+     foreach ($objects as $object) {
+       if ($object != "." && $object != "..") {
          if (is_dir($dir."/".$object))
            rrmdir($dir."/".$object);
          else
-           unlink($dir."/".$object); 
-       } 
+           unlink($dir."/".$object);
+       }
      }
-     rmdir($dir); 
-   } 
+     rmdir($dir);
+   }
  }
 
 
 function _install_data() {
-  
+
  variable_set('file_private_path', 'sites/default/files/private');
  backup_migrate_include('crud', 'locations');
-   
+
 
  $data = array(
-      'build_info' => array(
-        'args' => array(
-          0 => 'manual',
-          1 => 'configurations.mysql.gz',
-        ) ,
-        'form_id' => 'configurations.mysql.gz',
-      ),
-    );
+    'build_info' => array(
+      'args' => array(
+        0 => 'manual',
+        1 => 'configurations.mysql.gz',
+      ) ,
+      'form_id' => 'configurations.mysql.gz',
+    ),
+  );
+////
 
 
-
- $install_state['mods'] = array('Importando Data' => 1);
+  $db_prefix = $GLOBALS['databases']['default']['default']['prefix'];
+  //print_r($db_prefix);
+  //die();
+  if(!empty($db_prefix)){
+    $position_file = variable_get('file_private_path')."/backup_migrate/".implode("/",$data['build_info']['args']);
+    $position_file_set = variable_get('file_private_path')."/backup_migrate/".$data['build_info']['args'][0];
+    $data_file = file_get_contents(realpath ($position_file ));
+    $data_file = str_replace("IF EXISTS `","IF EXISTS `".$db_prefix, $data_file);
+    $data_file = str_replace("CREATE TABLE `","CREATE TABLE `".$db_prefix, $data_file);
+    $data_file = str_replace("INSERT INTO `","INSERT INTO `".$db_prefix, $data_file);
+    file_put_contents($position_file_set."/configurationsprefix.mysql.gz", $data_file);
+    $data['build_info']['args'][1] = "configurationsprefix.mysql.gz";
+  }
+////
+  $install_state['mods'] = array('Importando Data' => 1);
 
   $batch = array(
     'title' => t('Importando Data'),
@@ -707,6 +729,7 @@ function _install_data() {
   foreach ($install_state['mods'] as $key => $module) {
     $batch['operations'][] = array('_install_data_batch', array($data));
   }
+
   return $batch;
 }
 
@@ -724,9 +747,12 @@ function _install_data_batch($data){
   variable_set('profile_andes_site_default_user_pass', variable_get('site_default_user_pass'));
 
   backup_migrate_include('crud', 'locations');
-  backup_migrate_perform_restore('manual', 'configurations.mysql.gz', $data);
+  $db_prefix = $GLOBALS['databases']['default']['default']['prefix'];
+  $file_name = (empty($db_prefix)) ? 'configurations.mysql.gz' : 'configurationsprefix.mysql.gz';
+
+  backup_migrate_perform_restore('manual', $file_name, $data);
   drupal_set_message(t('Congratulations your site is already'), 'status', TRUE);
-  
+
   variable_set('site_name', variable_get('profile_andes_site_name'));
   variable_set('site_mail', variable_get('profile_andes_site_mail'));
   variable_set('site_default_country', variable_get('profile_andes_site_default_country'));
@@ -737,16 +763,42 @@ function _install_data_batch($data){
   $user->name = variable_get('profile_andes_site_default_user_name');
   $user->mail = variable_get('profile_andes_site_default_user_mail');
   $user->pass = user_hash_password(variable_get('profile_andes_site_default_user_pass'));
-  $user->created = time(); 
+  $user->created = time();
   user_save($user);
-  
+
    // Reset auto increment.
-  db_query("ALTER TABLE users AUTO_INCREMENT = 1"); 
+  db_query("ALTER TABLE ".$db_prefix."users AUTO_INCREMENT = 1");
   // Users table doesn't use AI, reset uid sequence.
-  db_query("UPDATE sequences SET value = 1");
-  db_query("ALTER TABLE sequences AUTO_INCREMENT = 1");
+  db_query("UPDATE ".$db_prefix."sequences SET value = 1");
+  db_query("ALTER TABLE ".$db_prefix."sequences AUTO_INCREMENT = 1");
 }
 
+function _install_data_review() {
+  $install_state['mods'] = array('Importando Data' => 1);
+  $data = array(
+    'build_info' => array(
+      'args' => array(
+        0 => 'manual',
+        1 => 'configurations.mysql.gz',
+      ) ,
+      'form_id' => 'configurations.mysql.gz',
+    ),
+  );
+  foreach ($install_state['mods'] as $key => $module) {
+    $batch['operations'][] = array('_install_data_review_batch', array($data));
+  }
+
+  return $batch;
+}
+function _install_data_review_batch($data){
+  $db_prefix = $GLOBALS['databases']['default']['default']['prefix'];
+
+  $position_file_set = variable_get('file_private_path')."/backup_migrate/".$data['build_info']['args'][0];
+  if(!empty($db_prefix)){
+    exec ("find ".$position_file_set." f -exec chmod 0777 {} +");
+    unlink(realpath($position_file_set."/configurationsprefix.mysql.gz"));
+  }
+}
 
 function andes_install_finished(&$install_state) {
   drupal_set_title(st('@drupal installation complete', array('@drupal' => drupal_install_profile_distribution_name())), PASS_THROUGH);
