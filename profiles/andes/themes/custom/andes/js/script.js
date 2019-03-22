@@ -4,7 +4,7 @@
 	setTimeout(function(){
 		$("body").first().prepend('<div class="one" style="width: 100%;height: 100%;position: fixed;background: red;z-index: 100;"></div>');
 		$('html').show();
-	},5);
+	},200);
 	$(window).load(function(){
 		$('.one').remove();
 	});
