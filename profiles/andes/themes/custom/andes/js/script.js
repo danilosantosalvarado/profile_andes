@@ -1,7 +1,18 @@
 "use strict";
 (function($, Drupal) {
+	$('html').hide();
+	setTimeout(function(){
+		$("body").first().prepend('<div class="one" style="width: 100%;height: 100%;position: fixed;background: red;z-index: 100;"></div>');
+		$('html').show();
+	},5);
+	$(window).load(function(){
+		$('.one').remove();
+	});
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
+			if($('.wrapper-mega-menu').length == 0 || $('.wrapper-mega-menu').length == undefined){
+				$('html').show();
+			}
 			// function galeria home
 			jQuery(document).on("click", ".galeria-home", function() {
 				var imageSrc = $(this).find("img").attr("src");
@@ -214,10 +225,14 @@
 				}
 			}
 			//verified if exist data color attrib
-			var color = $('.sabor').attr('data-color');
+			var color = $('.field-name-field-color-linea .field-item ').text();
+			console.log("tests");
+			console.log(color);
 			//if color exist
 			if (color !== null) {
 				//adding border top
+				color = color.replace('#','');
+				console.log(color);
 				$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+color);
 				$('.swiper-pagination').addClass('pagination-'+color);
 				$('#widget_pager_bottom_componente_anuncios-block_1 , #widget_pager_bottom_componente_eventos-block_3_1').addClass('pager-'+color);
