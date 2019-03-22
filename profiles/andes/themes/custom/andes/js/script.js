@@ -2,11 +2,11 @@
 (function($, Drupal) {
 	$('html').hide();
 	setTimeout(function(){
-		$("body").first().prepend('<div class="one" style="width: 100%;height: 100%;position: fixed;background: red;z-index: 100;"></div>');
+		$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
 		$('html').show();
 	},200);
 	$(window).load(function(){
-		$('.one').remove();
+		$('.container-loader').remove();
 	});
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {

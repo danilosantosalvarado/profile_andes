@@ -663,15 +663,15 @@ $colors-list: $yellow $blue $red $orange $green;
     div {
       display: inline-block;
       margin-top: 10px;
-      height: 28px;
-      width: 28px;
+      height: 18px;
+      width: 18px;
       border-radius: 50%;
-      // &:not(:first-child) { margin-left: 10px; }
+      margin-right: 5px;
     }
     p {
       font-family: $latoregular;
-      @include font-size(ll);
-      letter-spacing: 1.73px;
+      font-size:14px;
+      letter-spacing: 3.23px;
       color : #58595B;
       text-align: center;
     }
