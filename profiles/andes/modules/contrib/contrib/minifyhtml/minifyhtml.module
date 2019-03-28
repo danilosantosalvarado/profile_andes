@@ -1,0 +1,392 @@
+<?php
+
+/**
+ * @file
+ * Hook and helper functions for the Minify HTML module.
+ */
+
+define('MINIFYHTML_PLACEHOLDER', 'MINIFYHTML_' . md5(REQUEST_TIME));
+
+/**
+ * Implements hook_permission().
+ */
+function minifyhtml_permission() {
+  return array(
+    'administer minifyhtml' => array(
+      'title'       => t('Administer Minify HTML Module'),
+      'description' => t('Perform administration tasks for Minify HTML module.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function minifyhtml_menu() {
+  $items['admin/config/development/performance/default'] = array(
+    'title'            => 'Performance',
+    'type'             => MENU_DEFAULT_LOCAL_TASK,
+    'weight'           => 1,
+  );
+
+  $items['admin/config/development/performance/minifyhtml'] = array(
+    'access arguments' => array('administer minifyhtml'),
+    'file'             => 'minifyhtml.admin.inc',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('minifyhtml_settings_form'),
+    'title'            => 'Minify Source HTML settings',
+    'description'      => 'Settings that control how the HTML is minified',
+    'type'             => MENU_LOCAL_TASK,
+    'weight'           => 2,
+
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function minifyhtml_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#minifyhtml':
+
+      $filepath = dirname(__FILE__) . '/README.md';
+      if (file_exists($filepath)) {
+        $readme = file_get_contents($filepath);
+      }
+      else {
+        $filepath = dirname(__FILE__) . '/README.txt';
+        if (file_exists($filepath)) {
+          $readme = file_get_contents($filepath);
+        }
+      }
+      if (!isset($readme)) {
+        return NULL;
+      }
+      if (module_exists('markdown')) {
+        $filters = module_invoke('markdown', 'filter_info');
+        $info = $filters['filter_markdown'];
+        if (function_exists($info['process callback'])) {
+          $output = $info['process callback']($readme, NULL);
+        }
+        else {
+          $output = '<pre>' . $readme . '</pre>';
+        }
+      }
+      else {
+        $output = '<pre>' . $readme . '</pre>';
+      }
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_FORM_ID_alter().
+ */
+function minifyhtml_form_system_performance_settings_alter(&$form, &$form_state, $form_id) {
+  if (user_access('administer minifyhtml')) {
+    $form['bandwidth_optimization']['minifyhtml_minify'] = array(
+      '#type'          => 'checkbox',
+      '#title'         => t('Minified Source HTML.'),
+      '#description'   => t('Toggle minified HTML on or off.'),
+      '#default_value' => variable_get('minifyhtml_minify', 0),
+    );
+  }
+}
+
+/**
+ * Implements hook_exit().
+ */
+function minifyhtml_exit() {
+  if (variable_get('minifyhtml_minify', 0)) {
+
+    // Get current path value.
+    $current_path = function_exists('current_path') ? current_path() : $_GET['q'];
+
+    // The content type of the page must be text/html to proceed. All other
+    // content types must be ignored - the name of the module is minifyhtml
+    // after all.
+    // Make sure to exclude image style images (is this even required
+    // anymore??).
+    // Make sure the buffer has a length.
+    if (stripos(drupal_get_http_header('content-type'), 'text/html') !== FALSE && !is_file($current_path) && ob_get_length()) {
+
+      // Catch the output buffer. Converted from ob_get_clean().
+      $page = ob_get_contents();
+
+      // If the content should be encoded, try to decode it.
+      $decoded = FALSE;
+      if (variable_get('page_compression', TRUE) && extension_loaded('zlib')) {
+        $decoded = @gzinflate(substr(substr($page, 10), 0, -8));
+        if ($decoded) {
+          $page = $decoded;
+        }
+      }
+
+      // Minify the HTML.
+      minifyhtml_minify($page);
+
+      // If the content was decoded before being minified, it needs to be
+      // re-encoded.
+      if (variable_get('page_compression', TRUE) && extension_loaded('zlib') && $decoded) {
+        $page = gzencode($page, 9, FORCE_GZIP);
+      }
+
+      // Re-populate the output buffer.
+      ob_clean();
+      print $page;
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function minifyhtml_module_implements_alter(&$implementations, $hook) {
+
+  // Move this module's hook_exit() to the end of the call order.
+  if ($hook == 'exit' && isset($implementations['minifyhtml'])) {
+    $group = $implementations['minifyhtml'];
+    unset($implementations['minifyhtml']);
+    $implementations['minifyhtml'] = $group;
+  }
+}
+
+/**
+ * Helper function to minify HTML.
+ *
+ * @param string $page
+ *   The entire html source of the page.
+ */
+function minifyhtml_minify(&$page) {
+  $callbacks = array(
+    'minifyhtml_placeholder_callback_textarea' => '/\\s*<textarea(\\b[^>]*?>[\\s\\S]*?<\\/textarea>)\\s*/i',
+    'minifyhtml_placeholder_callback_pre'      => '/\\s*<pre(\\b[^>]*?>[\\s\\S]*?<\\/pre>)\\s*/i',
+    'minifyhtml_placeholder_callback_iframe'   => '/\\s*<iframe(\\b[^>]*?>[\\s\\S]*?<\\/iframe>)\\s*/i',
+    'minifyhtml_placeholder_callback_script'   => '/\\s*<script(\\b[^>]*?>[\\s\\S]*?<\\/script>)\\s*/i',
+    'minifyhtml_placeholder_callback_style'    => '/\\s*<style(\\b[^>]*?>[\\s\\S]*?<\\/style>)\\s*/i',
+  );
+
+  // Only strip HTML comments if required.
+  if (variable_get('minifyhtml_strip_comments', TRUE)) {
+    $callbacks['minifyhtml_remove_html_comment'] = '/<!--([\\s\\S]*?)-->/';
+  }
+
+  foreach ($callbacks as $callback => $pattern) {
+    $content = minifyhtml_minify_callback($pattern, $callback, $page);
+    if (!is_null($content)) {
+      $page = $content;
+    }
+  }
+
+  // Minify the page.
+  minifyhtml_minify_html($page);
+
+  // Restore all values that are currently represented by a placeholder.
+  global $_minifyhtml_placeholders;
+  if (!empty($_minifyhtml_placeholders)) {
+    $page = str_replace(array_keys($_minifyhtml_placeholders), array_values($_minifyhtml_placeholders), $page);
+  }
+}
+
+/**
+ * Helper function to catch any errors with preg_replace().
+ *
+ * @param string $pattern
+ *   The pattern for the search.
+ * @param string $callback
+ *   The callback function to use.
+ * @param string $content
+ *   The subject of the search.
+ *
+ * @return string
+ *   The content with placeholders.
+ */
+function minifyhtml_minify_callback($pattern, $callback, $content) {
+  $content = preg_replace_callback($pattern, $callback, $content);
+  $error   = preg_last_error();
+
+  if ($error > PREG_NO_ERROR) {
+    watchdog('minifyhtml', 'Preg error. The error code is %error. You can view what this error code is by viewing http://php.net/manual/en/function.preg-last-error.php', array('%error' => $error));
+  }
+
+  return $content;
+}
+
+/**
+ * Helper function to add place holder for <textarea> tag.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_callback_textarea(array $matches) {
+  return minifyhtml_placeholder_replace(trim($matches[0]));
+}
+
+/**
+ * Helper function to add place holder for <pre> tag.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_callback_pre(array $matches) {
+  return minifyhtml_placeholder_replace(trim($matches[0]));
+}
+
+/**
+ * Helper function to add place holder for <iframe> tag.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_callback_iframe(array $matches) {
+  $iframe = preg_replace('/^\\s+|\\s+$/m', '', $matches[0]);
+
+  return minifyhtml_placeholder_replace(trim($iframe));
+}
+
+/**
+ * Helper function to add place holder for <script> tag.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_callback_script(array $matches) {
+  $search = array();
+  $replace = array();
+
+  // Only strip multi-line comments in <script> if required.
+  if (variable_get('minifyhtml_strip_comments', TRUE)) {
+    $search[] = '!/\*.*?\*/!s';
+    $replace[] = '';
+  }
+
+  // Trim each line.
+  $search[] = '/^\\s+|\\s+$/m';
+  $replace[] = "\n";
+
+  // Remove multiple empty line.
+  $search[] = '/\n(\s*\n)+/';
+  $replace[] = "\n";
+
+  $script = preg_replace($search, $replace, $matches[0]);
+
+  return minifyhtml_placeholder_replace(trim($script));
+}
+
+/**
+ * Helper function to add place holder for <style> tag.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_callback_style(array $matches) {
+  $search = array();
+  $replace = array();
+
+  // Only strip multi-line comments in <style> if required.
+  if (variable_get('minifyhtml_strip_comments', TRUE)) {
+    $search[] = '!/\*.*?\*/!s';
+    $replace[] = '';
+  }
+
+  // Trim each line.
+  $search[] = '/^\\s+|\\s+$/m';
+  $replace[] = '';
+
+  $style = preg_replace($search, $replace, $matches[0]);
+
+  return minifyhtml_placeholder_replace(trim($style));
+}
+
+/**
+ * Helper function to add tag key and value for further replacement.
+ *
+ * @param string $content
+ *   String before the placeholder replacement.
+ *
+ * @return string
+ *   The placeholder string.
+ */
+function minifyhtml_placeholder_replace($content) {
+  global $_minifyhtml_placeholders;
+
+  // PHP 7.2 fix, if the variable is not set count() will emit a warning.
+  if (!isset($_minifyhtml_placeholders)) {
+    $_minifyhtml_placeholders = array();
+  }
+
+  $placeholder = '%' . MINIFYHTML_PLACEHOLDER . count($_minifyhtml_placeholders) . '%';
+  $_minifyhtml_placeholders[$placeholder] = $content;
+
+  return $placeholder;
+}
+
+/**
+ * Helper function to remove HTML comments.
+ *
+ * Comments containing IE conditionals will be ignored.
+ *
+ * @param array $matches
+ *   Matches from initial preg_replace().
+ *
+ * @return string
+ *   String with removed HTML comments.
+ */
+function minifyhtml_remove_html_comment(array $matches) {
+  return (0 === strpos($matches[1], '[') || FALSE !== strpos($matches[1], '<![')) ? $matches[0] : '';
+}
+
+/**
+ * Helper function to minify the HTML.
+ *
+ * @param string $page
+ *   The HTML source of the page.
+ */
+function minifyhtml_minify_html(&$page) {
+  $search = array();
+  $replace = array();
+
+  // Remove whitespaces after tags, except space.
+  $search[] = '/\>[^\S ]+/s';
+  $replace[] = '>';
+
+  // Remove whitespaces before tags, except space.
+  $search[] = '/[^\S ]+\</s';
+  $replace[] = '<';
+
+  // Shorten multiple whitespace sequences.
+  $search[] = '/(\s)+/s';
+  $replace[] = '\\1';
+
+  // Remove whitespaces around block/undisplayed elements.
+  $search[] = '/\\s+(<\\/?(?:area|base(?:font)?|blockquote|body'
+    . '|caption|center|col(?:group)?|dd|dir|div|dl|dt|fieldset|form'
+    . '|frame(?:set)?|h[1-6]|head|hr|html|legend|li|link|map|menu|meta'
+    . '|ol|opt(?:group|ion)|p|param|t(?:able|body|head|d|h||r|foot|itle)'
+    . '|ul)\\b[^>]*>)/i';
+  $replace[] = '$1';
+
+  // Trim each line.
+  $search[] = '/^\\s+|\\s+$/m';
+  $replace[] = '';
+
+  $page = preg_replace($search, $replace, $page);
+}
