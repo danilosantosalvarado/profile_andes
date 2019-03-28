@@ -2,7 +2,7 @@
 (function($, Drupal) {
 	$('html').hide();
 	// setTimeout(function(){
-	// 	$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
+	 	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
 	// 	$('html').show();
 	// },200);
 	// $(window).load(function(){
@@ -10,11 +10,11 @@
 	// });
 	setTimeout(function(){
 		//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
-		setTimeout(function(){
+		//setTimeout(function(){
 			$('html').show();
 			//$('.container-loader').remove();
-		},1000);
-	},200);
+		//},200);
+	},100);
 
 
 	Drupal.behaviors.Script = {
@@ -28,7 +28,7 @@
 				jQuery(".modal-gallery-home").attr("src", imageSrc);
 			});
 			//called the function for bullet container arrows
-			bulletsContainerArrows();
+			setTimeout(bulletsContainerArrows(),1000);
 
 			//move the arrows to outside to wrapper
 			/*
