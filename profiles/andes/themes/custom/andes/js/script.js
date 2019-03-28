@@ -1,13 +1,22 @@
 "use strict";
 (function($, Drupal) {
 	$('html').hide();
+	// setTimeout(function(){
+	// 	$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
+	// 	$('html').show();
+	// },200);
+	// $(window).load(function(){
+	// 	$('.container-loader').remove();
+	// });
 	setTimeout(function(){
-		$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
-		$('html').show();
+		//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
+		setTimeout(function(){
+			$('html').show();
+			//$('.container-loader').remove();
+		},1000);
 	},200);
-	$(window).load(function(){
-		$('.container-loader').remove();
-	});
+
+
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
 			if($('.wrapper-mega-menu').length == 0 || $('.wrapper-mega-menu').length == undefined){

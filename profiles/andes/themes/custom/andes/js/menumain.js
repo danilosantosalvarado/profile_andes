@@ -100,14 +100,14 @@
             $('.wrapper-buscar-menu').removeAttr( 'style' );
         }
         function initDesktopMenu(){
-          menu = $('.navbar-header');
+          var menu = $('.navbar-header');
           menu.addClass(Drupal.settings.udla_blocks_alter.background_color_change);
 
           var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
           var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
           setTimeout(function(){
             var $menu_admin = ($('#admin-menu').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
-            $height_menu = $menuMegaMenu + $menu_admin;
+            var $height_menu = $menuMegaMenu + $menu_admin;
             $('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
           },900);
 
@@ -154,7 +154,7 @@
         }
         function cloneSelect(){
           if($('.container-language').length == 0){
-            $select = $('.lang_dropdown_form select');
+            var $select = $('.lang_dropdown_form select');
             $select.parent('.form-item').append('<div class="container-language"></div><ul class="select-options"></ul>');
             $select.children().each(function(index, value){
               if($(this).attr('selected') != undefined){
@@ -241,7 +241,7 @@
           }
 
           if($('.container-select-language').length == 0){
-            $secondSelect = $('#block-lang-dropdown-language');
+            var $secondSelect = $('#block-lang-dropdown-language');
             $('.wrapper-menu-soy').append('<div class="container-select-language"><span class="title-language">'+Drupal.t($secondSelect.find('.block-title').text())+'</span>'+$secondSelect.find('form').parent().html()+'</div>');
           }
           if($('.container-select-language').html() == ''){
@@ -253,10 +253,10 @@
           }
 
 
-          $selectTopSoyItems =$('.wrapper-menu-soy li.level-1').not('.dropdown').not('.menu-destacado');
+          var $selectTopSoyItems =$('.wrapper-menu-soy li.level-1').not('.dropdown').not('.menu-destacado');
           if($('.container-select-top-soy').length == 0){
             $.each( $selectTopSoyItems, function( k, v ) {
-              $element = $(this).find('a');
+              var $element = $(this).find('a');
               if(k == 0){
                 $('.wrapper-menu-soy').append('<div class="container-select-top-soy"><span class="title-top-soy">'+Drupal.t($element.text())+'</span><select class="select-top-soy"><option value="">'+Drupal.t('Elegir')+'</option></select></div>');
               }else{
@@ -266,7 +266,7 @@
           }
           if($('.container-select-top-soy').html() == ''){
             $.each( $selectTopSoyItems, function( k, v ) {
-              $element = $(this).find('a');
+              var  $element = $(this).find('a');
               if(k == 0){
                 $('.container-select-top-soy').append('<span class="title-top-soy">'+Drupal.t($element.text())+'</span><select class="select-top-soy"><option value="">'+Drupal.t('Elegir')+'</option></select>');
               }else{
@@ -278,8 +278,8 @@
             });
           }
           if($(window).width() < 992){
-            $height_menu = $('.navbar-header').outerHeight();
-            $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
+            var  $height_menu = $('.navbar-header').outerHeight();
+            var  $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight() + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight();
             $('#navbar-collapse').css("cssText", "margin-top: "+$height_menu+"px !important;");
 
             if($('.navbar-header .wrapper-header-color').length >0){
@@ -291,7 +291,7 @@
 
 
           if($('.container-destacados').length == 0){
-            $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
+            var $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
             $.each( $selectDestacadosItems, function( k, v ) {
               if(k == 0){
                 $('.wrapper-menu-soy').append('<div class="container-destacados"><div class="menu-destacado">'+$(this).html()+'</div></div>');
@@ -301,7 +301,7 @@
             });
           }
           if($('.container-destacados').html() == ''){
-            $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
+            var  $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
             $.each( $selectDestacadosItems, function( k, v ) {
               if(k == 0){
                 $('.container-destacados').append('<div class="menu-destacado">'+$(this).html()+'</div>');
@@ -338,15 +338,15 @@
             function (e) {
               e.preventDefault();
               if($(window).width() < 992){
-                $dataId = $(this).parent().attr('data-id');
+                var  $dataId = $(this).parent().attr('data-id');
                 $('body').addClass('dark-layer');
                 $('.dropdown-toggle').removeClass('text-hover');
                 $('.menu-container-data active').remove();
                 $('.menu-container-data').remove();
                 $("li.active-nivel-1").removeClass('active-nivel-1');
-                $level = $(this).parent().attr('data-level');
-                $levelNow = $level;
-                $dataIdLocal = $(this).parent().attr('data-id');
+                var  $level = $(this).parent().attr('data-level');
+                var  $levelNow = $level;
+                var  $dataIdLocal = $(this).parent().attr('data-id');
                 if($('.menu-container-data').length == 0){
                   $(this).parent().addClass('active-nivel-1');
                   var $nextMenu = $(".active-nivel-1").find(".tb-megamenu-column-inner").html();
@@ -386,15 +386,15 @@
           );
           $level1TopSoy.on('click',function(e) {
             if($(window).width() < 992) {
-              $dataId = $(this).parent().attr('data-id');
+              var  $dataId = $(this).parent().attr('data-id');
               $('body').addClass('dark-layer');
               $('.dropdown-toggle').removeClass('text-hover');
               $('.menu-container-data active').remove();
               $('.menu-container-data').remove();
               $("li.active-nivel-1").removeClass('active-nivel-1');
-              $level = $(this).parent().attr('data-level');
-              $levelNow = $level;
-              $dataIdLocal = $(this).parent().attr('data-id');
+              var $level = $(this).parent().attr('data-level');
+              var $levelNow = $level;
+              var $dataIdLocal = $(this).parent().attr('data-id');
               if($('.menu-container-data').length == 0){
                 $(this).parent().addClass('active-nivel-1');
                 var $nextMenu = $(".active-nivel-1").find('.content-nivel-1 .tb-megamenu-column-inner').html()
@@ -432,7 +432,7 @@
           });
         }
         function animateLevelNext($level){
-            $inner = $(".region-navigation .menu-container-data.active.level-"+$level);
+          var $inner = $(".region-navigation .menu-container-data.active.level-"+$level);
             if ($inner.position().left == 0) {
               $inner.animate({left: "-100%"}, 'slide' );
             }else {
@@ -444,7 +444,7 @@
             });
         }
         function animateLevelPrevious($level, $levelNow){
-          $inner = $(".region-navigation .menu-container-data.active.level-"+$levelNow);
+          var $inner = $(".region-navigation .menu-container-data.active.level-"+$levelNow);
           $inner.animate({left: "100%"}, "slide" );
           $inner.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
           function(e) {
@@ -458,9 +458,9 @@
             case 'desktop':
               $($class).on("click", function (e) {
                 e.preventDefault();
-                $level = $(this).parent().attr('data-level');
-                $levelNow = $level;
-                $dataIdLocal = $(this).parent().attr('data-id');
+                var  $level = $(this).parent().attr('data-level');
+                var  $levelNow = $level;
+                var $dataIdLocal = $(this).parent().attr('data-id');
                 if($('.menu-container-data').length == 0){
                   var $nextMenu = $("li[data-id='"+$dataId+"']").find("li[data-id='"+$dataIdLocal+"'] .tb-megamenu-column-inner").html();
                   $(this).parents('.tb-megamenu-column').addClass('active-nivel-1').before("<div class='menu-container-data'><div class='data-menu' style='display: none;'></div><div class='box-black' box-id='"+$dataIdLocal+"' box-level='"+$level+"'><p>" + $(this).text() + "</p></div><div class= 'container-items'>"+$nextMenu+"</div></div>");
@@ -521,10 +521,10 @@
               case 'mobile':
                 $($class).on("click", function (e) {
                   e.preventDefault();
-                  $level = $(this).parent().attr('data-level');
-                  $levelParent = $level-1;
-                  $levelNow = $level;
-                  $dataIdLocal = $(this).parent().attr('data-id');
+                  var $level = $(this).parent().attr('data-level');
+                  var $levelParent = $level-1;
+                  var $levelNow = $level;
+                  var $dataIdLocal = $(this).parent().attr('data-id');
                   $(this).parents('.tb-megamenu-column').addClass('active-nivel-1');
                   var $nextMenu = $(".active-nivel-1").find("li[data-id='"+$dataIdLocal+"'] .tb-megamenu-column-inner").html();
                   if ($level > 0 &&$(".menu-container-data.level-"+$level).length == 0 || $(".menu-container-data.level-"+$level) == undefined){
