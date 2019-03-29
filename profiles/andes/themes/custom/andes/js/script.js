@@ -1,21 +1,30 @@
 "use strict";
 (function($, Drupal) {
-	$('html').hide();
+	console.log($(window).width());
+	$("html").css("margin-left",$(window).width());
+	// $('html').hide();
+	// // setTimeout(function(){
+	//  	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
+	// // 	$('html').show();
+	// // },200);
+	// // $(window).load(function(){
+	// // 	$('.container-loader').remove();
+	// // });
 	// setTimeout(function(){
-	 	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
 	// 	$('html').show();
-	// },200);
-	// $(window).load(function(){
-	// 	$('.container-loader').remove();
-	// });
-	setTimeout(function(){
-		//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
-		//setTimeout(function(){
-			$('html').show();
-			//$('.container-loader').remove();
-		//},200);
-	},100);
+	// 	$(window).width($(window).width()-1);
+	// 	$(window).width($(window).width()+1);
+	// 	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
+		setTimeout(function(){
+			$("html").css("margin-left","");
+		},2000);
+	// },1000);
+	// $(".view-id-slider_homes").load(function(){
+	// 	jquer
+	// 	$('html').show();
+	// }
 
+	// );
 
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
