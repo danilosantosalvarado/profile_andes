@@ -1,30 +1,10 @@
 "use strict";
 (function($, Drupal) {
-	console.log($(window).width());
+	//login move the page to the right
 	$("html").css("margin-left",$(window).width());
-	// $('html').hide();
-	// // setTimeout(function(){
-	//  	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
-	// // 	$('html').show();
-	// // },200);
-	// // $(window).load(function(){
-	// // 	$('.container-loader').remove();
-	// // });
-	// setTimeout(function(){
-	// 	$('html').show();
-	// 	$(window).width($(window).width()-1);
-	// 	$(window).width($(window).width()+1);
-	// 	//$("body").first().prepend('<div class="container-loader"><div class="loader-loader"><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><div class="loader--dot"></div><p>CARGANDO</p></div></div>');
-		setTimeout(function(){
-			$("html").css("margin-left","");
-		},2000);
-	// },1000);
-	// $(".view-id-slider_homes").load(function(){
-	// 	jquer
-	// 	$('html').show();
-	// }
-
-	// );
+	setTimeout(function(){
+		$("html").css("margin-left","");
+	},2000);
 
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
@@ -224,8 +204,6 @@
 					var	panelId = '#'.concat($('.align-social-vertical').parents('.panels-bootstrap-region').attr('id'));
 					var heightContent = $(panelId).height()-(menu_navigation+menu_admin);
 					var scrollWindow = $(window).scrollTop();
-					console.log(menu_admin);
-					console.log(menu_navigation);
 					var total =(menu_admin+menu_navigation+heightContent+$(panelId).offset().top)-(altoRerdes+20);
 
 					if (scrollWindow < ($(panelId).offset().top - menu_admin_height) || scrollWindow > total) {
@@ -244,13 +222,10 @@
 			}
 			//verified if exist data color attrib
 			var color = $('.field-name-field-color-linea .field-item ').text();
-			console.log("tests");
-			console.log(color);
 			//if color exist
 			if (color !== null) {
 				//adding border top
 				color = color.replace('#','');
-				console.log(color);
 				$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+color);
 				$('.swiper-pagination').addClass('pagination-'+color);
 				$('#widget_pager_bottom_componente_anuncios-block_1 , #widget_pager_bottom_componente_eventos-block_3_1').addClass('pager-'+color);
@@ -442,7 +417,6 @@
 				$('.wrapper-galeria-home .gh-item').addClass('object-fit');
 				$('.wrapper-galeria-home .gh-item').each(function(idx, el){
 					var srcImg = $(el).find('img').prop('src');
-					console.log( $(el).find('img'));
 					$(el).css({'background-image': 'url(' + srcImg + ')'});
 				});
 			}
