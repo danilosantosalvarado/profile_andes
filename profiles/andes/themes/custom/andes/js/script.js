@@ -17,7 +17,7 @@
 				jQuery(".modal-gallery-home").attr("src", imageSrc);
 			});
 			//called the function for bullet container arrows
-			setTimeout(bulletsContainerArrows(),1000);
+			bulletsContainerArrows()
 
 			//move the arrows to outside to wrapper
 			/*

@@ -5071,7 +5071,6 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 /* ------| Bullest & Flechas defaul |----- */
 .slider-pricipal-node.views_slideshow_main {
   position: relative;
-  height: 36.25vw;
 }
 
 @media (min-width: 992px) {
@@ -5306,12 +5305,14 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 }
 
 /* ------| texto con background con opacidad |----- */
-.text-content {
+.slider-pricipal-node .text-content,
+.view-banner-nodes .text-content {
   position: relative;
   padding: 10px 20px 0;
 }
 
-.text-content:before {
+.slider-pricipal-node .text-content:before,
+.view-banner-nodes .text-content:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -5322,22 +5323,26 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   left: 0;
 }
 
-.link-content {
+.slider-pricipal-node .link-content,
+.view-banner-nodes .link-content {
   position: absolute;
   padding: 0;
   margin-top: 10px;
 }
 
-.link-content .link-slider-homes {
+.slider-pricipal-node .link-content .link-slider-homes,
+.view-banner-nodes .link-content .link-slider-homes {
   color: #fff;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif !important;
 }
 
-.link-content .link-slider-homes a {
+.slider-pricipal-node .link-content .link-slider-homes a,
+.view-banner-nodes .link-content .link-slider-homes a {
   border: 1px solid transparent;
 }
 
-.link-content .link-slider-homes a:before {
+.slider-pricipal-node .link-content .link-slider-homes a:before,
+.view-banner-nodes .link-content .link-slider-homes a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -5349,7 +5354,8 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   top: 0;
 }
 
-.link-content .link-slider-homes a:hover {
+.slider-pricipal-node .link-content .link-slider-homes a:hover,
+.view-banner-nodes .link-content .link-slider-homes a:hover {
   border: 1px solid #fff;
 }
 
@@ -6324,17 +6330,47 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   color: #fff;
 }
 
-.publicaciones-interna .field-name-field-autor, .publicaciones-interna .field-name-field-area-tematica, .publicaciones-interna .field-name-field-isbn, .publicaciones-interna .field-name-field-editorial, .publicaciones-interna .field-name-field-edicion, .publicaciones-interna .field-name-field-fecha-publicacion, .publicaciones-interna .field-name-field-caratula, .publicaciones-interna .field-name-field-formato, .publicaciones-interna .field-name-field-paginas, .publicaciones-interna .field-name-field-idioma, .publicaciones-interna .field-name-field-disponibilidad {
+.publicaciones-interna .field-name-field-autor,
+.publicaciones-interna .field-name-field-area-tematica,
+.publicaciones-interna .field-name-field-isbn,
+.publicaciones-interna .field-name-field-editorial,
+.publicaciones-interna .field-name-field-edicion,
+.publicaciones-interna .field-name-field-fecha-publicacion,
+.publicaciones-interna .field-name-field-caratula,
+.publicaciones-interna .field-name-field-formato,
+.publicaciones-interna .field-name-field-paginas,
+.publicaciones-interna .field-name-field-idioma,
+.publicaciones-interna .field-name-field-disponibilidad {
   padding: 5px 0;
 }
 
-.publicaciones-interna .field-name-field-autor .field-label, .publicaciones-interna .field-name-field-area-tematica .field-label, .publicaciones-interna .field-name-field-isbn .field-label, .publicaciones-interna .field-name-field-editorial .field-label, .publicaciones-interna .field-name-field-edicion .field-label, .publicaciones-interna .field-name-field-fecha-publicacion .field-label, .publicaciones-interna .field-name-field-caratula .field-label, .publicaciones-interna .field-name-field-formato .field-label, .publicaciones-interna .field-name-field-paginas .field-label, .publicaciones-interna .field-name-field-idioma .field-label, .publicaciones-interna .field-name-field-disponibilidad .field-label {
+.publicaciones-interna .field-name-field-autor .field-label,
+.publicaciones-interna .field-name-field-area-tematica .field-label,
+.publicaciones-interna .field-name-field-isbn .field-label,
+.publicaciones-interna .field-name-field-editorial .field-label,
+.publicaciones-interna .field-name-field-edicion .field-label,
+.publicaciones-interna .field-name-field-fecha-publicacion .field-label,
+.publicaciones-interna .field-name-field-caratula .field-label,
+.publicaciones-interna .field-name-field-formato .field-label,
+.publicaciones-interna .field-name-field-paginas .field-label,
+.publicaciones-interna .field-name-field-idioma .field-label,
+.publicaciones-interna .field-name-field-disponibilidad .field-label {
   font-family: "Lato black", "Arial Narrow", Helvetica, sans-serif;
   font-size: 0.8125rem;
   color: #000;
 }
 
-.publicaciones-interna .field-name-field-autor .field-item, .publicaciones-interna .field-name-field-area-tematica .field-item, .publicaciones-interna .field-name-field-isbn .field-item, .publicaciones-interna .field-name-field-editorial .field-item, .publicaciones-interna .field-name-field-edicion .field-item, .publicaciones-interna .field-name-field-fecha-publicacion .field-item, .publicaciones-interna .field-name-field-caratula .field-item, .publicaciones-interna .field-name-field-formato .field-item, .publicaciones-interna .field-name-field-paginas .field-item, .publicaciones-interna .field-name-field-idioma .field-item, .publicaciones-interna .field-name-field-disponibilidad .field-item {
+.publicaciones-interna .field-name-field-autor .field-item,
+.publicaciones-interna .field-name-field-area-tematica .field-item,
+.publicaciones-interna .field-name-field-isbn .field-item,
+.publicaciones-interna .field-name-field-editorial .field-item,
+.publicaciones-interna .field-name-field-edicion .field-item,
+.publicaciones-interna .field-name-field-fecha-publicacion .field-item,
+.publicaciones-interna .field-name-field-caratula .field-item,
+.publicaciones-interna .field-name-field-formato .field-item,
+.publicaciones-interna .field-name-field-paginas .field-item,
+.publicaciones-interna .field-name-field-idioma .field-item,
+.publicaciones-interna .field-name-field-disponibilidad .field-item {
   font-family: "Crimson_textregular", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1rem;
   color: #000;
