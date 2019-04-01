@@ -35,7 +35,7 @@
     .item-content-ubication-left {
       .container-title-desc {
         @include respond-to(m) {
-          padding-left: 30px;
+          padding: 0px 0px 0px 30px;
         }
       }
     }
@@ -46,7 +46,7 @@
       }
       .container-title-desc {
         @include respond-to(m) {
-          padding-right: 30px;
+          padding: 0px 30px 0px 0px;
         }
       }
     }
