@@ -10,6 +10,7 @@
     display: block;
     overflow: hidden;
     padding: 25px 0;
+    border: 1px solid red;
     //Ubicacion left and rigth
     .item-content-ubication-left,
     .item-content-ubication-rigth {
@@ -17,7 +18,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid red;
       }
       .views-field,
       .embedded-video {
