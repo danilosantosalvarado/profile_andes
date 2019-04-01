@@ -1768,6 +1768,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Layouts 2
 //------------------------------------------------------------------------------
 */
+/* ------| Componente layout 2 row de imagen y videos a la derecha o izquierda  |----- */
 .view-id-componente_layout_2 {
   width: 100%;
 }
@@ -1930,6 +1931,16 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   font-size: 1.1875rem;
 }
 
+/* ------| Clase para centar el texto en las posicion de top y bottom |----- */
+@media (min-width: 992px) {
+  .text-content-center .item-content-ubication-top .container-title-desc,
+  .text-content-center .item-content-ubication-bottom .container-title-desc {
+    max-width: 572px;
+    margin: 0 auto;
+  }
+}
+
+/* ------| Wrapper of contact |----- */
 .box-master-two-contact {
   background: #f4f1f1;
   padding: 40px 0;

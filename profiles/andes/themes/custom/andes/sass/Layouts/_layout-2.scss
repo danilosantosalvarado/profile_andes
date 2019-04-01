@@ -4,6 +4,7 @@
 //------------------------------------------------------------------------------
 */
 
+/* ------| Componente layout 2 row de imagen y videos a la derecha o izquierda  |----- */
 .view-id-componente_layout_2 {
   width: 100%;
   .views-field-views-conditional {
@@ -138,7 +139,20 @@
   }
 }
 
+/* ------| Clase para centar el texto en las posicion de top y bottom |----- */
+.text-content-center {
+  .item-content-ubication-top,
+  .item-content-ubication-bottom {
+    @include respond-to(xl) {
+      .container-title-desc  {
+        max-width: 572px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 
+/* ------| Wrapper of contact |----- */
 .box-master-two-contact {
   background: #f4f1f1;
   padding: 40px 0;
