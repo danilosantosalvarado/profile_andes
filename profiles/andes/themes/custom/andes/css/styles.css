@@ -1823,26 +1823,22 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   }
 }
 
-.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .views-field {
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .views-field img,
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .views-field img {
+  width: auto;
+  max-height: 310px;
+  margin: 0 auto;
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .embedded-video,
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .embedded-video {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .container-title-desc,
+.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .container-title-desc {
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .views-field {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .container-title-desc {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-top .container-title-desc {
-    width: 80%;
-    margin: 0 auto;
-  }
 }
 
 .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom {
@@ -1855,24 +1851,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-}
-
-@media (min-width: 768px) {
-  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .views-field {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-.view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .container-title-desc {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-bottom .container-title-desc {
-    width: 80%;
-    margin: 0 auto;
-  }
 }
 
 .view-id-componente_layout_2 .views-field-views-conditional .views-field img {

@@ -34,25 +34,26 @@
     //Ubicacion rigth
     .item-content-ubication-rigth {
       @include respond-to(m) {
-
         flex-direction: row-reverse;
       }
     }
     //Ubicacion top
-    .item-content-ubication-top {
+    .item-content-ubication-top,
+    .item-content-ubication-bottom {
       .views-field {
-        width: 100%;
-        @include respond-to(m) {
-          width: 80%;
+        // width: 100%;
+        img {
+          width: auto;
+          max-height: 310px;
           margin: 0 auto;
         }
       }
+      .embedded-video {
+        max-width: 540px;
+        margin: 0 auto;
+      }
       .container-title-desc {
         width: 100%;
-        @include respond-to(m) {
-          width: 80%;
-          margin: 0 auto;
-        }
       }
     }
     //Ubicacion bottom
@@ -60,19 +61,6 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column-reverse;
-      .views-field {
-        @include respond-to(m) {
-          width: 80%;
-          margin: 0 auto;
-        }
-      }
-      .container-title-desc {
-        width: 100%;
-        @include respond-to(m) {
-          width: 80%;
-          margin: 0 auto;
-        }
-      }
     }
     //imagen
     .views-field {
@@ -123,15 +111,15 @@
       }
     }
   }
-  .container-gris{
+  .container-gris {
     background-color: color('grey-light');
     text-align: center;
     padding: 10px 0 20px;
-    h3{
+    h3 {
       @include font-size(xl);
       font-family: $crimson-textbold;
     }
-    p{
+    p {
       @include font-size(l);
     }
   }
