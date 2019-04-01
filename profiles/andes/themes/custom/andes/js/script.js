@@ -15,7 +15,7 @@
 					var $height_menu = $menuMegaMenu + $menu_admin;
 					$('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
 				},10);
-			}	,1000);
+			}	,2000);
 			jQuery(document).on("click", ".galeria-home", function() {
 				var imageSrc = $(this).find("img").attr("src");
 				jQuery(".modal-gallery-home").attr("src", imageSrc);
