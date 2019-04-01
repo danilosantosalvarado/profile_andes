@@ -1815,7 +1815,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 }
 
 @media (min-width: 768px) {
-  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-rigth .container-title-desc {
+  .view-id-componente_layout_2 .views-field-views-conditional .item-content-ubication-left .container-title-desc {
     padding-left: 30px;
   }
 }
