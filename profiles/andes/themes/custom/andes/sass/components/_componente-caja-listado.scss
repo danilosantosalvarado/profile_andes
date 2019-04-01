@@ -25,21 +25,6 @@
     top: 0;
     z-index: 0;
   }
-  @media (max-width: 768px ) {
-    &::after {
-      content: '';
-      border: 1px solid #fff;
-      width: 90%;
-      height: 85%;
-      position: absolute;
-      top: 7px;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      z-index: 1;
-      pointer-events: none;
-    }
-  }
   //imagen
   .container-img,
   .container-video {
@@ -110,6 +95,7 @@
     }
     .caja-enlace {
       padding: 5px 0;
+      display: none;
       @include respond-to(xl) {
         opacity: 0;
       }
@@ -131,7 +117,7 @@
           background: #fff;
           color: color('grey-dark');
         }
-        @include respond-to(xl) {
+        @include respond-to(m) {
           background-color: color('black');
         }
         @include respond-to(xl) {
@@ -143,14 +129,7 @@
         }
       }
     }
-    //ocultar Button cuando tiene redes sociales
-    &.redes {
-      .caja-enlace {
-        display: none;
-      }
-    }
   }
-  //Hover Button de ver mas
   @include respond-to(xl) {
     &:hover {
       .caja-enlace {
@@ -176,11 +155,10 @@
       }
     }
   }
-
 }
 
-@media screen and (min-width: 555px) and (max-width: 768px) {
-  .view-componente-layout-4 .views-responsive-grid > .views-row > div {
+@media screen and (min-width: 555px) and (max-width: 767px) {
+  .views-column {
     width: 50%;
     float: left;
   }

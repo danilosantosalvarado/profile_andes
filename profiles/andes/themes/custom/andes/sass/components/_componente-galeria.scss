@@ -40,25 +40,12 @@
 		.gh-link{
 			cursor: -webkit-zoom-in;
 			&:hover{
-				&:before{
-					content: "";
-					position: absolute;
-					width: 30px;
-					height: 30px;
-					background-image: url(../img/svg/zoom-plus.svg);
-					background-repeat: no-repeat;
-					left: 20px;
-					bottom: 20px;
-					z-index: 20;
-					cursor: pointer;
-				}
 				&:after{
 					content: "";
 					position: absolute;
 					width: 100%;
 					height: 100%;
-					background-color: rgba($color: #ffffff, $alpha: 0.3);
-					cursor: default;
+					background-color: rgba($color: #ffffff, $alpha: 0.3)
 				}
 			}
 		}

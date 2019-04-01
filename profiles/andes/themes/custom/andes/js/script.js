@@ -1,23 +1,27 @@
 "use strict";
 (function($, Drupal) {
-	//login move the page to the right
-	$("html").css("margin-left",$(window).width());
-	setTimeout(function(){
-		$("html").css("margin-left","");
-	},2000);
+	var size = $(window).height();
+	$("html").css("margin-top", size*3);
+	setTimeout(function(){$(".region-navigation").css("margin-top", size*3);},10)
 
 	Drupal.behaviors.Script = {
 		attach: function (context, settings) {
-			if($('.wrapper-mega-menu').length == 0 || $('.wrapper-mega-menu').length == undefined){
-				$('html').show();
-			}
 			// function galeria home
+			setTimeout(function(){
+				$("html, .region-navigation").css("margin-top", 0);
+				var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
+				setTimeout(function(){
+					var $menu_admin = ($('#admin-menu').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
+					var $height_menu = $menuMegaMenu + $menu_admin;
+					$('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
+				},10);
+			}	,1000);
 			jQuery(document).on("click", ".galeria-home", function() {
 				var imageSrc = $(this).find("img").attr("src");
 				jQuery(".modal-gallery-home").attr("src", imageSrc);
 			});
 			//called the function for bullet container arrows
-			bulletsContainerArrows()
+			bulletsContainerArrows();
 
 			//move the arrows to outside to wrapper
 			/*
@@ -204,6 +208,8 @@
 					var	panelId = '#'.concat($('.align-social-vertical').parents('.panels-bootstrap-region').attr('id'));
 					var heightContent = $(panelId).height()-(menu_navigation+menu_admin);
 					var scrollWindow = $(window).scrollTop();
+					console.log(menu_admin);
+					console.log(menu_navigation);
 					var total =(menu_admin+menu_navigation+heightContent+$(panelId).offset().top)-(altoRerdes+20);
 
 					if (scrollWindow < ($(panelId).offset().top - menu_admin_height) || scrollWindow > total) {
@@ -221,11 +227,10 @@
 				}
 			}
 			//verified if exist data color attrib
-			var color = $('.field-name-field-color-linea .field-item ').text();
+			var color = $('.sabor').attr('data-color');
 			//if color exist
 			if (color !== null) {
 				//adding border top
-				color = color.replace('#','');
 				$('#views_slideshow_swiper_componente_anuncios-block_1').find('.anuncios-conten').addClass('border-top-'+color);
 				$('.swiper-pagination').addClass('pagination-'+color);
 				$('#widget_pager_bottom_componente_anuncios-block_1 , #widget_pager_bottom_componente_eventos-block_3_1').addClass('pager-'+color);
@@ -417,6 +422,7 @@
 				$('.wrapper-galeria-home .gh-item').addClass('object-fit');
 				$('.wrapper-galeria-home .gh-item').each(function(idx, el){
 					var srcImg = $(el).find('img').prop('src');
+					console.log( $(el).find('img'));
 					$(el).css({'background-image': 'url(' + srcImg + ')'});
 				});
 			}

@@ -394,7 +394,7 @@ h1.page-header {
 		width: 100%;
 		text-align: center;
     margin: 25px 0px;
-    position: relative;
+    position: initial;
 		.swiper-pagination-bullet {
 			width: 10px;
 			height: 10px;
@@ -663,15 +663,15 @@ $colors-list: $yellow $blue $red $orange $green;
     div {
       display: inline-block;
       margin-top: 10px;
-      height: 18px;
-      width: 18px;
+      height: 28px;
+      width: 28px;
       border-radius: 50%;
-      margin-right: 5px;
+      // &:not(:first-child) { margin-left: 10px; }
     }
     p {
       font-family: $latoregular;
-      font-size:14px;
-      letter-spacing: 3.23px;
+      @include font-size(ll);
+      letter-spacing: 1.73px;
       color : #58595B;
       text-align: center;
     }
