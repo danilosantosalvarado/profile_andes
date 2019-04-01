@@ -1776,7 +1776,6 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   display: block;
   overflow: hidden;
   padding: 25px 0;
-  border: 1px solid red;
 }
 
 @media (min-width: 555px) {
