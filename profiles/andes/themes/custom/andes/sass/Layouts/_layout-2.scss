@@ -10,44 +10,32 @@
     display: block;
     overflow: hidden;
     padding: 25px 0;
-    //Ubicacion left
-    .item-content-ubication-left {
+    //Ubicacion left and rigth
+    .item-content-ubication-left,
+    .item-content-ubication-rigth {
       @include respond-to(xs) {
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid red;
       }
-      .views-field {
+      .views-field,
+      .embedded-video {
         @include respond-to(xs) {
-          width: 50%;
+          flex: 1 1 50%;
         }
       }
       .container-title-desc {
         @include respond-to(xs) {
-          width: 50%;
-          float: left;
-          display: table-cell;
-          vertical-align: middle;
+          flex: 1 1 50%;
         }
       }
     }
     //Ubicacion rigth
     .item-content-ubication-rigth {
       @include respond-to(m) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
         flex-direction: row-reverse;
-      }
-      .views-field {
-        @include respond-to(m) {
-          width: 50%;
-        }
-      }
-      .container-title-desc {
-        @include respond-to(m) {
-          width: 50%;
-        }
       }
     }
     //Ubicacion top
@@ -95,10 +83,26 @@
         width: 100%;
       }
     }
+    //iframe
+    .embedded-video {
+      position: relative;
+      min-height: 310px;
+      iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
     //conten text
     .container-title-desc {
       padding: 25px 15px;
-      @include respond-to(m) {
+      @include respond-to(xs) {
         padding: 30px;
       }
       //title
