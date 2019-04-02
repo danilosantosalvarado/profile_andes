@@ -51,3 +51,31 @@
     margin-bottom: 40px;
   }
 }
+.layout-1 {
+  // title de layout 1 text left lineal bottom
+  .pane-node-title.layout_title_left {
+    h1 {
+      font-family: $crimson-semibold;
+      color: #484851;
+      @include font-size(xl);
+      line-height: 1;
+      text-align: left;
+      text-transform: initial;
+      margin: 0;
+      padding: 10px;
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 80px;
+        border-bottom: 1px solid #484851;
+        padding-top: 10px;
+      }
+    }
+  }
+  .field-name-body {
+    .field-item {
+      margin: 0px;
+    }
+  }
+}

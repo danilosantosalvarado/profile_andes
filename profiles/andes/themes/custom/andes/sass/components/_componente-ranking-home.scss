@@ -6,7 +6,7 @@
   @include respond-to(xl) {
     width: 100%;
   }
-  @include respond-to(xxl) {
+  @include respond-to(xxxl) {
     width: 1170px;
   }
   .view-content {
@@ -106,7 +106,7 @@
         }
       }
     }
-    
+
     /* grill */
     .wrapper {
       .block-1 {
@@ -129,7 +129,7 @@
             display: none;
           }
         }
-        
+
       }
       .block-1,
       .block-2{
