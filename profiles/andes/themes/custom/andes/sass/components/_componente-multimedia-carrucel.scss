@@ -228,12 +228,12 @@
 		border-radius: 2px;;
 		min-width: 100px;
 		color: #000000;
-		&:first-line {
+		p {
 			color: #FDBD2C;
 			font-family: $latobold;
 			font-size: 18px;
 		}
-		&:first-letter{
+		Span {
 			text-transform: uppercase;
 		}
 		@media screen and (max-width: 666px){

@@ -9088,13 +9088,13 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   color: #000000;
 }
 
-.tooltip.carrusel-multimedia .tooltip-inner:first-line {
+.tooltip.carrusel-multimedia .tooltip-inner p {
   color: #FDBD2C;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 18px;
 }
 
-.tooltip.carrusel-multimedia .tooltip-inner:first-letter {
+.tooltip.carrusel-multimedia .tooltip-inner Span {
   text-transform: uppercase;
 }
 

@@ -1,0 +1,70 @@
+/* ------| componente mapa en eventos |----- */
+#mini-panel-componente_mapa {
+  .panels-bootstrap-row-2_column_6_6-main {
+    position: relative;
+    .panels-bootstrap-column:nth-child(1) {
+      width: 50%;
+      float: left;
+      .views-column{
+        width: 100%;
+      }
+    }
+    .panels-bootstrap-column:nth-child(2) {
+      position: absolute;
+      left: 50%;
+      .inside{
+        height: 100%;
+        min-height: 350px;
+        .contextual-links-region {
+          position: inherit;
+        }
+      }
+    }
+  }
+}
+
+// /* ------| Ubicacion del Eventos mapa, lugar, direcion |----- */
+.date-content-map {
+  position: absolute;
+  bottom: 0;
+  .lugar-eventos {
+    color: color('black');
+    span:nth-child(1) {
+      font-family: $latobold;
+    }
+    span:nth-child(2) {
+      font-family: $latoregular;
+    }
+  }
+  .views-field-address {
+    display: flex;
+    color: color('black');
+    > span {
+      font-family: $latobold;
+      padding-right: 5px;
+    }
+    .field-content {
+      span {
+        font-family: $latoregular;
+      }
+    }
+    &-1 {
+      color: red;
+      .location.map-link {
+        font-size: 0px;
+        a {
+          text-decoration: none;
+          color: #6D6E70;
+          &:hover {
+            opacity: .4;
+          }
+          &:after {
+            content: "¿como llego aqui?";
+            @include font-size(s);
+          }
+        }
+      }
+    }
+  }
+}
+
