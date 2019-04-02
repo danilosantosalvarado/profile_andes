@@ -7802,34 +7802,6 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 // Componente Anuncios
 //------------------------------------------------------------------------------
 */
-.swipper-anuncios {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .swipper-anuncios {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .swipper-anuncios {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .swipper-anuncios {
-    width: 1140px;
-  }
-}
-
 .swipper-anuncios .swiper-wrapper {
   list-style: none;
   padding-left: 0px;
