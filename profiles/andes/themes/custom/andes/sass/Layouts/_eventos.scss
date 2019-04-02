@@ -34,6 +34,16 @@
         margin-top: 15px;
         margin-bottom: 15px;
         margin: 0 5px;
+        &.active {
+          a {
+            background: #f4f1f1;
+            border-color: #9e9ca1;
+            &:hover,
+            &:focus {
+              color: #484851;
+            }
+          }
+        }
         a {
           width: 100%;
           display: block;
@@ -51,6 +61,10 @@
           border-right-width: 0px;
           border-bottom-width: 0px;
           border-left-width: 0px;
+          &:hover,
+          &:focus {
+            color: #484851;
+          }
           &::before {
             content: '';
             display: block;

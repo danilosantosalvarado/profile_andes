@@ -667,6 +667,15 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   margin: 0 5px;
 }
 
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li.active a {
+  background: #f4f1f1;
+  border-color: #9e9ca1;
+}
+
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li.active a:hover, .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li.active a:focus {
+  color: #484851;
+}
+
 .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a {
   width: 100%;
   display: block;
@@ -684,6 +693,10 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   border-right-width: 0px;
   border-bottom-width: 0px;
   border-left-width: 0px;
+}
+
+.view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a:hover, .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a:focus {
+  color: #484851;
 }
 
 .view-id-home_eventos .quicktabs-wrapper ul.quicktabs-tabs li a::before {
