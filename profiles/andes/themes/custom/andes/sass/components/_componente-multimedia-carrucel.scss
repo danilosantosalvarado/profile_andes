@@ -229,12 +229,12 @@
 		min-width: 100px;
 		color: #000000;
 		p {
-			color: #FDBD2C;
 			font-family: $latobold;
 			font-size: 18px;
+			color: #FDBD2C;
 		}
-		Span {
-			text-transform: uppercase;
+		span {
+			font-family: $crimson-textroman;
 		}
 		@media screen and (max-width: 666px){
 			max-width: 500px;
