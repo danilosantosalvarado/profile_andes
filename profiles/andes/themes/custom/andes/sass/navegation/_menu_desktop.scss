@@ -66,7 +66,7 @@
       }
     }
   }
-  // /* ----| Reset menu |----*/
+  // /* ----| Estructura que aplica para los dos menus Mega menu, y menu soy  reset del menu  |----*/
   .tb-megamenu {
     background-color: transparent;
      > .nav-collapse {
@@ -433,9 +433,11 @@
           font-family: $latolight;
           border-left: solid 1px #979797;
           white-space: nowrap;
-          &:hover,
-          &:focus {
+          &:hover {
             text-decoration: none;
+          }
+          &:focus {
+            outline: -webkit-focus-ring-color auto 5px;
           }
         }
       }
@@ -479,6 +481,9 @@
                       &:hover{
                         color: color(white);
                         transition: .3s;
+                      }
+                      &:focus {
+                        outline: -webkit-focus-ring-color auto 5px;
                       }
                     }
                   }
@@ -568,6 +573,7 @@
           select {
             visibility: hidden;
             padding-right: 10px;
+
           }
           .container-language {
             font-family: $latoregular;
@@ -713,7 +719,7 @@
               > a {
                 font-weight: weight(normal);
                 font-family: $latoregular;
-                @include font-size(xxs);
+                font-size: 14.94px;
                 color: #484851;
                 background-color: transparent !important;
                 text-align: center;
@@ -721,13 +727,13 @@
                 padding: 10px 0;
                 opacity: 1;
                 transition: .3s;
-                @include respond-to(xl) {
-                  @include font-size(ms);
-                }
                 &.text-hover {
                   color: color('grey');
                   opacity: 1 !important;
                   transition: .3s;
+                }
+                &:focus {
+                  outline: -webkit-focus-ring-color auto 5px;
                 }
                 &.dropdown-toggle{
                   &::after{
@@ -744,12 +750,10 @@
       }
     }
   }
-
   // /* ----| Bloque buscar |---- */
   #block-tb-megamenu-menu-mega-menu{
     float: right;
-    .block-title,
-    .contextual-links-wrapper{
+    .block-title {
       display: none;
     }
     .barra-buscar {
@@ -772,7 +776,6 @@
       }
     }
   }
-
   // /* ----|  BuscarDestock |----*/
   .wrapper-buscar-menu {
     background: #fffefe;
@@ -834,8 +837,7 @@
       }
     }
   }
-
-  //position fixel
+  //position fixel par el menu y el primer despliege del menu
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu{
     top: 110px;
   }
@@ -848,6 +850,7 @@
         top: 88px;
       }
     }
+    // primer desplige del menu
     .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
       top: 65px;
     }

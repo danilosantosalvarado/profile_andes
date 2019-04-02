@@ -11450,8 +11450,11 @@ header {
     border-left: solid 1px #979797;
     white-space: nowrap;
   }
-  .wrapper-menu-soy .container #block-views-logos-header-block-2 a:hover, .wrapper-menu-soy .container #block-views-logos-header-block-2 a:focus {
+  .wrapper-menu-soy .container #block-views-logos-header-block-2 a:hover {
     text-decoration: none;
+  }
+  .wrapper-menu-soy .container #block-views-logos-header-block-2 a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
   }
   .wrapper-menu-soy .container .block-tb-megamenu {
     float: right;
@@ -11504,6 +11507,9 @@ header {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+  }
+  .wrapper-menu-soy .container .block-tb-megamenu .tb-megamenu-menu-menu-top-soy .nav-collapse.always-show ul.level-0 li.level-1 > a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
   }
 }
 
@@ -11760,7 +11766,7 @@ header {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show ul.level-0.nav li.level-1 > a {
     font-weight: normal;
     font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
-    font-size: 0.75rem;
+    font-size: 14.94px;
     color: #484851;
     background-color: transparent !important;
     text-align: center;
@@ -11771,21 +11777,15 @@ header {
     -o-transition: .3s;
     transition: .3s;
   }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show ul.level-0.nav li.level-1 > a {
-    font-size: 0.9375rem;
-  }
-}
-
-@media (min-width: 992px) {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show ul.level-0.nav li.level-1 > a.text-hover {
     color: #484851;
     opacity: 1 !important;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+  }
+  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show ul.level-0.nav li.level-1 > a:focus {
+    outline: -webkit-focus-ring-color auto 5px;
   }
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .always-show ul.level-0.nav li.level-1 > a.dropdown-toggle::after {
     display: none;
@@ -11796,8 +11796,7 @@ header {
   #block-tb-megamenu-menu-mega-menu {
     float: right;
   }
-  #block-tb-megamenu-menu-mega-menu .block-title,
-  #block-tb-megamenu-menu-mega-menu .contextual-links-wrapper {
+  #block-tb-megamenu-menu-mega-menu .block-title {
     display: none;
   }
   #block-tb-megamenu-menu-mega-menu .barra-buscar span {
