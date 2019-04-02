@@ -5639,6 +5639,11 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   overflow: hidden;
 }
 
+.view-id-componente_layout_11 .view-content ul {
+  padding: 0px;
+  list-style: none;
+}
+
 .view-id-componente_layout_11 .view-content .views-row .views-column {
   margin-bottom: 15px;
 }

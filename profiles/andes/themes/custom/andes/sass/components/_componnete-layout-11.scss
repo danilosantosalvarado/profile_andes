@@ -8,6 +8,10 @@
   display: block;
   overflow: hidden;
   .view-content {
+    ul {
+      padding: 0px;
+      list-style: none;
+    }
     .views-row {
       .views-column {
         margin-bottom: 15px;
