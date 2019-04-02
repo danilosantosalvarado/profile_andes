@@ -3,9 +3,6 @@
 // Componente Anuncios
 //------------------------------------------------------------------------------
 */
-.view-componente-anuncios {
-	margin: 0px 15px;
-}
 
 .swipper-anuncios {
 	position: relative;
@@ -29,13 +26,15 @@
 			}
 		}
 	}
-	.pagination-wrap{
+	.pagination-wrap {
 		position: relative;
 		bottom: 0px;
 		width: 100%;
 		text-align: center;
 	}
-
+	li {
+		padding: 0px 15px;
+	}
 	//imagen
 	.views-field-field-image {
 		img {

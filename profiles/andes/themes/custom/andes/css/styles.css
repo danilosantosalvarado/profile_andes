@@ -7802,10 +7802,6 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 // Componente Anuncios
 //------------------------------------------------------------------------------
 */
-.view-componente-anuncios {
-  margin: 0px 15px;
-}
-
 .swipper-anuncios {
   position: relative;
   margin: 0 auto;
@@ -7844,6 +7840,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   bottom: 0px;
   width: 100%;
   text-align: center;
+}
+
+.swipper-anuncios li {
+  padding: 0px 15px;
 }
 
 .swipper-anuncios .views-field-field-image {
