@@ -57,12 +57,9 @@
 				.multimedia-titulo,
 				.views-field-title-field-et {
 					a {
-						font-family: $crimson-textroman;
-						@include type-layout(s, 1.16);
+						font-family: $crimson-semibold;
+						@include type-layout(o, 1.16);
 						color: color('grey-dark');
-						@include respond-to(xxxl) {
-							@include font-size(l);
-						}
 						&:hover {
 							text-decoration-line: underline;
 						}
@@ -166,7 +163,7 @@
 	}
 }
 
-/* ------| Multimedia Màs Recientes |----- */
+/* ------| Multimedia Màs Recientes / derecha |----- */
 .slider-vertical-destacados-mas-recientes {
 	display: none;
 	padding-left: 20px;
@@ -186,7 +183,7 @@
     padding-top: 15px;
 
 		//titulo
-		.views-field-title {
+		div[class*="views-field-title"] {
 			margin-bottom: 8px;
 			span,
 			a,
@@ -194,15 +191,15 @@
 				font-family: $crimson-semibold;
 				@include type-layout(ll, 1.16);
 				color: color('grey-dark');
-
 				font-weight: 400;
 			}
 		}
 		//body
-		.views-field-body {
+		div[class*="views-field-body"] {
 			div p {
 				font-family: $crimson-textregular;
 				@include type-layout(ms, 1.1);
+				text-decoration: none;
 			}
 		}
 	}
@@ -283,7 +280,7 @@
 					}
 				}
 				//title
-				.views-field-title {
+				div[class*="views-field-title"] {
 					text-align: left;
 					margin: 20px 0;
 					a {
@@ -295,7 +292,7 @@
 					}
 				}
 				// body
-				.views-field-body {
+				div[class*="views-field-body"] {
 					font-family: $crimson-textregular;
 					@include font-size(ms);
 					text-align: center;
