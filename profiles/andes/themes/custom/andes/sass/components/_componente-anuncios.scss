@@ -3,20 +3,23 @@
 // Componente Anuncios
 //------------------------------------------------------------------------------
 */
+.view-componente-anuncios {
+	margin: 0px 15px;
+}
 
 .swipper-anuncios {
-	// position: relative;
-	// margin: 0 auto;
-	// overflow: hidden;
-	// @include respond-to(m) {
-	// 		width: 750px;
-	// }
-	// @include respond-to(xl) {
-	// 		width: 970px;
-	// }
-	// @include respond-to(xxxl) {
-	// 		width: 1140px;
-	// }
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	@include respond-to(m) {
+		width: 750px;
+	}
+	@include respond-to(xl) {
+		width: 970px;
+	}
+	@include respond-to(xxxl) {
+		width: 1140px;
+	}
 	.swiper-wrapper {
 		list-style: none;
 		padding-left: 0px;
