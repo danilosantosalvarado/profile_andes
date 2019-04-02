@@ -6030,8 +6030,10 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 
 .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title a,
 .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title span,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title div,
 .wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et a,
-.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et span {
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et span,
+.wrapper-slider-com-publicaciones ul li.swiper-slide .box-content .views-field-title-field-et div {
   font-family: "Crimson_semibold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 1.25rem;
   font-size: 1.25rem;

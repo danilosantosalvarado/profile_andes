@@ -32,12 +32,13 @@
 					padding: 15px 0;
 				}
 				//titulo
-				.views-field-title, 
+				.views-field-title,
 				.views-field-title-field-et {
 					margin: 20px 0 25px;
 					text-align: left;
 					a,
-					span {
+					span,
+					div {
 						font-family: $crimson-semibold;
 						@include font-size(sl);
 						font-size: 1.25rem;
