@@ -9185,13 +9185,13 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 }
 
 .tooltip.carrusel-multimedia .tooltip-inner p {
-  color: #FDBD2C;
   font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
   font-size: 18px;
+  color: #FDBD2C;
 }
 
 .tooltip.carrusel-multimedia .tooltip-inner span {
-  text-transform: uppercase;
+  font-family: "Crimson_textroman", "Arial Narrow", Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 666px) {
