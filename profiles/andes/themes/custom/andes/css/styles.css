@@ -7117,27 +7117,27 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   grid-row: 2;
 }
 
-.modal-lg {
+#modalGalleryHome .modal-lg {
   width: 90%;
   margin: 0 auto;
 }
 
-.modal-lg .modal-dialog {
+#modalGalleryHome .modal-lg .modal-dialog {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.modal-lg .modal-dialog .modal-gallery-home {
+#modalGalleryHome .modal-lg .modal-dialog .modal-gallery-home {
   max-height: 86vh;
 }
 
-.modal-content .modal-header {
+#modalGalleryHome .modal-content .modal-header {
   padding: 0;
   border-bottom: none;
 }
 
-.modal-content .modal-header .close {
+#modalGalleryHome .modal-content .modal-header .close {
   position: absolute;
   right: 0;
   top: 2px;
