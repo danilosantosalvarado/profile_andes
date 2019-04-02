@@ -3962,6 +3962,89 @@ h1.page-header {
   padding: 0 2px;
 }
 
+/* ------| componente mapa en eventos |----- */
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main {
+  position: relative;
+}
+
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main .panels-bootstrap-column:nth-child(1) {
+  width: 50%;
+  float: left;
+}
+
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main .panels-bootstrap-column:nth-child(1) .views-column {
+  width: 100%;
+}
+
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main .panels-bootstrap-column:nth-child(2) {
+  position: absolute;
+  left: 50%;
+}
+
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main .panels-bootstrap-column:nth-child(2) .inside {
+  height: 100%;
+  min-height: 350px;
+}
+
+#mini-panel-componente_mapa .panels-bootstrap-row-2_column_6_6-main .panels-bootstrap-column:nth-child(2) .inside .contextual-links-region {
+  position: inherit;
+}
+
+.date-content-map {
+  position: absolute;
+  bottom: 0;
+}
+
+.date-content-map .lugar-eventos {
+  color: #000;
+}
+
+.date-content-map .lugar-eventos span:nth-child(1) {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.date-content-map .lugar-eventos span:nth-child(2) {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.date-content-map .views-field-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+}
+
+.date-content-map .views-field-address > span {
+  font-family: "Lato bold", "Arial Narrow", Helvetica, sans-serif;
+  padding-right: 5px;
+}
+
+.date-content-map .views-field-address .field-content span {
+  font-family: "Lato regular", "Arial Narrow", Helvetica, sans-serif;
+}
+
+.date-content-map .views-field-address-1 {
+  color: red;
+}
+
+.date-content-map .views-field-address-1 .location.map-link {
+  font-size: 0px;
+}
+
+.date-content-map .views-field-address-1 .location.map-link a {
+  text-decoration: none;
+  color: #6D6E70;
+}
+
+.date-content-map .views-field-address-1 .location.map-link a:hover {
+  opacity: .4;
+}
+
+.date-content-map .views-field-address-1 .location.map-link a:after {
+  content: "¿como llego aqui?";
+  font-size: 0.875rem;
+}
+
 /* ------| Default slider 4 columnas, imagenes y bulles  |----- */
 @media (min-width: 992px) {
   .wraper-slider-general {
