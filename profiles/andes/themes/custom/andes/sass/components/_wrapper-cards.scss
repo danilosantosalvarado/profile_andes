@@ -1,0 +1,87 @@
+/*
+//------------------------------------------------------------------------------
+// Card especiales, multimedia, eventos, noticias
+//------------------------------------------------------------------------------
+*/
+.wrapper-cards-ftd {
+	margin-bottom: 15px;
+	.views-field-view {
+		.view-content {
+			height: auto;
+			min-height: auto;
+		}
+		img {
+			width: 100%;
+		}
+		.youtube-container--responsive {
+			padding-bottom: 61.95%;
+			background-color: color('black');
+		}
+	}
+	.box-content {
+		position: relative;
+		padding: 20px 15px;
+		border-top: 3px solid #ff8827;
+		background: #f4f1f1;
+		@include respond-to(xs) {
+			min-height: 360px;
+		}
+		//Fecha
+		.views-field-created {
+			font-family: $latoregular;
+			@include type-layout(xs, 1.23);
+			color: color('orange');
+			padding: 5px 0px;
+		}
+		//Titulo
+		div[class*="views-field-title"] {
+			font-family: $crimson-semibold;
+			@include type-layout(sl, .90);
+			// color: #484851;
+			margin: 15px 0 20px;
+			@include respond-to(m) {
+				@include font-size(ll);
+			}
+		}
+		//Body
+		div[class*="views-field-body"] {
+			font-family: $crimson-textregular;
+			@include font-size(m);
+			margin-bottom: 16px;
+			@include respond-to(xs) {
+				height: 7pc;
+			}
+		}
+		//Button
+		.views-field-view-node {
+			a {
+				display: block;
+				max-width: 180px;
+				font-family: $latoregular;
+				@include font-size(m);
+				color: #484851;
+				text-decoration: none;
+				text-align: center;
+				border: 1px solid color('orange');
+				padding: 10px 20px;
+				max-width: 180px;
+				margin: 0 auto;
+				@include respond-to(xs) {
+					position: absolute;
+					bottom: 25px;
+					right: 0;
+					left: 0;
+				}
+				&:hover {
+					background-color: color('orange');
+					color: #ffffff;
+				}
+				@include respond-to(m) {
+					right: 25px;
+					left: inherit;
+					max-width: 150px;
+				}
+			}
+		}
+	}
+}
