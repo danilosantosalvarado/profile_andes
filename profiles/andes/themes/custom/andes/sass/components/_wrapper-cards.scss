@@ -10,7 +10,7 @@
 			height: auto;
 			min-height: auto;
       @include respond-to(xxxl) {
-        min-height: 163px;
+        max-height: 162px;
       }
 		}
 		img {

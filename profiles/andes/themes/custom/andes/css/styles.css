@@ -4207,7 +4207,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 
 @media (min-width: 1200px) {
   .wrapper-cards-ftd .views-field-view .view-content {
-    min-height: 163px;
+    max-height: 162px;
   }
 }
 
