@@ -4205,13 +4205,25 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   min-height: auto;
 }
 
+@media (min-width: 1200px) {
+  .wrapper-cards-ftd .views-field-view .view-content {
+    min-height: 163px;
+  }
+}
+
 .wrapper-cards-ftd .views-field-view img {
   width: 100%;
 }
 
 .wrapper-cards-ftd .views-field-view .youtube-container--responsive {
   background-color: #000;
-  padding-bottom: 62.95%;
+  padding-bottom: 62.01%;
+}
+
+@media (min-width: 992px) {
+  .wrapper-cards-ftd .views-field-view .youtube-container--responsive {
+    min-height: 182px;
+  }
 }
 
 .wrapper-cards-ftd .box-content {

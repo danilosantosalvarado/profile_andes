@@ -9,13 +9,19 @@
 		.view-content {
 			height: auto;
 			min-height: auto;
+      @include respond-to(xxxl) {
+        min-height: 163px;
+      }
 		}
 		img {
       width: 100%;
 		}
 		.youtube-container--responsive {
       background-color: color('black');
-      padding-bottom: 62.95%;
+      padding-bottom: 62.01%;
+      @include respond-to(xl) {
+        min-height: 182px;
+      }
 		}
 	}
 	.box-content {
