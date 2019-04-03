@@ -10,7 +10,7 @@
 			height: auto;
 			min-height: auto;
       @include respond-to(xl) {
-        max-height: 182px;
+        max-height: 181px;
       }
       @include respond-to(xxxl) {
         max-height: 162px;
