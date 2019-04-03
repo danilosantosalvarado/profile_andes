@@ -9,6 +9,9 @@
 		.view-content {
 			height: auto;
 			min-height: auto;
+      @include respond-to(xl) {
+        max-height: 182px;
+      }
       @include respond-to(xxxl) {
         max-height: 162px;
       }

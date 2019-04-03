@@ -4205,6 +4205,12 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   min-height: auto;
 }
 
+@media (min-width: 992px) {
+  .wrapper-cards-ftd .views-field-view .view-content {
+    max-height: 182px;
+  }
+}
+
 @media (min-width: 1200px) {
   .wrapper-cards-ftd .views-field-view .view-content {
     max-height: 162px;
