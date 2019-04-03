@@ -4205,6 +4205,18 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
   min-height: auto;
 }
 
+@media (min-width: 555px) {
+  .wrapper-cards-ftd .views-field-view .view-content {
+    max-height: 152px;
+  }
+}
+
+@media (min-width: 666px) {
+  .wrapper-cards-ftd .views-field-view .view-content {
+    max-height: 186px;
+  }
+}
+
 @media (min-width: 992px) {
   .wrapper-cards-ftd .views-field-view .view-content {
     max-height: 181px;
