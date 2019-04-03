@@ -2673,6 +2673,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   width: 61px;
   height: 61px;
   position: absolute;
+  background-color: #f38c22;
   top: -20px;
   left: 7px;
 }
