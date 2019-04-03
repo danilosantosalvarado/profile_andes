@@ -743,6 +743,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 .view-id-eventos .view-content .views-row .views-column .views-field-view .youtube-container--responsive {
   padding-bottom: 62%;
+  background-color: #000;
 }
 
 .view-id-eventos .view-content .views-row .views-column .views-field-view .view-content .img-responsive {
@@ -3467,6 +3468,21 @@ h1.page-header {
 
 .slider-3d-mobil img {
   width: 100%;
+  max-height: 248px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 555px) {
+  .slider-3d-mobil img {
+    max-height: 373px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider-3d-mobil img {
+    max-height: 520px;
+  }
 }
 
 .slider-3d-mobil .carousel_caption {
@@ -3501,7 +3517,6 @@ h1.page-header {
   margin-top: 10px;
 }
 
-/*-----------Default destacados cards multimedia----*/
 /*----| Loadind |----*/
 .container-loader {
   position: fixed;

@@ -350,18 +350,6 @@ h1.page-header {
     }
   }
 }
-// .noticias{
-//   .field-name-field-tags.field-type-taxonomy-term-reference{
-//     &:before {
-//       content: "";
-//       width: 90px;
-//       height: 3px;
-//       margin-left: 5px;
-//       border-top: 1px solid black;
-//       position: absolute;
-//     }
-//   }
-// }
 
 /* ------| Campo Fechas intena de nodos |----- */
 .field-name-field-fecha-eventos {
@@ -572,6 +560,14 @@ h1.page-header {
   padding: 0px 15px;
   img {
     width: 100%;
+    max-height: 248px;
+    object-fit: cover;
+    @include respond-to(xs) {
+      max-height: 373px;
+    }
+    @include respond-to(m) {
+      max-height: 520px;
+    }
   }
   .carousel_caption {
     position: absolute;
@@ -604,41 +600,6 @@ h1.page-header {
     }
   }
 }
-
-/*-----------Default destacados cards multimedia----*/
-// .views-responsive-grid{
-//   .views-column{
-//     .views-field-view{
-//       .view-content{
-//         min-height: 55vw;
-//         @include respond-to(xs){
-//           min-height: 28vw;
-//           height: 28vw;
-//         }
-//         @include respond-to(m){
-//           min-height: 213px;
-//           height: 214px;
-//           overflow: hidden;
-//         }
-//         @include respond-to(xl){
-//           min-height: 182px;
-//         }
-//         @include respond-to(xxxl){
-//           min-height: 163px;
-//           height: 221px;
-//           overflow: hidden;
-//         }
-//       }
-//     }
-//     .box-content{
-//       .views-field-title{
-//         span{
-//           @include font-size(l);
-//         }
-//       }
-//     }
-//   }
-// }
 
 /*----| Loadind |----*/
 $yellow: rgba(244, 205, 96, 0.3);
