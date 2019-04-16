@@ -41,7 +41,7 @@
     }
     //Ubicacion rigth
     .item-content-ubication-rigth {
-      @include respond-to(m) {
+      @include respond-to(xs) {
         flex-direction: row-reverse;
       }
       .container-title-desc {
@@ -104,9 +104,6 @@
     //conten text
     .container-title-desc {
       padding: 25px 15px;
-      // @include respond-to(xs) {
-      //   padding: 30px;
-      // }
       //title
       .dos-titulo {
         font-family: $crimson-textbold;
