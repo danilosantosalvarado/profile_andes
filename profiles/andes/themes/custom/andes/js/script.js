@@ -9,12 +9,12 @@
 			// function galeria home
 			setTimeout(function(){
 				$("html, .region-navigation").css("margin-top", 0);
-				var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
-				setTimeout(function(){
-					var $menu_admin = ($('#admin-menu').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
-					var $height_menu = $menuMegaMenu + $menu_admin;
-					$('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
-				},10);
+				// var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
+				// setTimeout(function(){
+				// 	var $menu_admin = ($('#admin-menu').length > 0) ? $('#admin-menu').outerHeight(true) : 0 ;
+				// 	var $height_menu = $menuMegaMenu + $menu_admin;
+				// 	$('body > .container-fluid.main-container').css({'margin-top': ($height_menu)});
+				// },10);
 			}	,2000);
 			jQuery(document).on("click", ".galeria-home", function() {
 				var imageSrc = $(this).find("img").attr("src");

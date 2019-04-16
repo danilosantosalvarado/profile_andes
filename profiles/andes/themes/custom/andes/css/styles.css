@@ -11905,22 +11905,22 @@ header {
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
     top: 110px;
   }
-  .logged-in header > .container-fluid {
+  .front.logged-in header > .container-fluid {
     top: 28px;
   }
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
-  .logged-in header .container-fluid .navbar-header {
+  .front.logged-in header .container-fluid .navbar-header {
     top: 88px;
   }
 }
 
 @media (min-width: 992px) {
-  .logged-in .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
+  .front.logged-in .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
     top: 65px;
   }
-  .logged-in .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
+  .front.logged-in .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
     top: 139px;
   }
   body.dark-layer::before {
