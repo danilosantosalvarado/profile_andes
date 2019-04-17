@@ -10587,6 +10587,12 @@ footer.footer .view-id-footer_redes_sociales {
   }
 }
 
+@media (min-width: 992px) {
+  footer.footer .view-id-footer_redes_sociales {
+    padding: 65px 15px 0;
+  }
+}
+
 footer.footer .view-id-footer_redes_sociales::before {
   content: '';
   position: relative;

@@ -303,6 +303,9 @@ footer.footer {
 		@include respond-to(m) {
 			padding: 75px 15px 0;
 		}
+		@include respond-to(xl) {
+			padding: 65px 15px 0;
+		}
 		&::before {
 			content: '';
 			position: relative;
