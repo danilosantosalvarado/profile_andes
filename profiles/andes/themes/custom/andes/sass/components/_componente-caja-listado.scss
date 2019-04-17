@@ -95,7 +95,6 @@
     }
     .caja-enlace {
       padding: 5px 0;
-      display: none;
       @include respond-to(xl) {
         opacity: 0;
       }
