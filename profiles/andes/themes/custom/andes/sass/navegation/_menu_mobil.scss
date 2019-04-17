@@ -270,15 +270,13 @@ header {
       .container-destacados {
         padding-right: 15px;
         padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
         .menu-destacado {
-          width: 47%;
-          float: left;
-          margin-bottom: 3%;
+          flex: 1 1 48%;
+          margin-bottom: 10px;
           background: #313131;
           -ms-overflow-style: scroll;
-          &:nth-child(odd) {
-            margin-right: 3%;
-          }
           &:nth-child(even) {
             margin-left: 3%;
           }

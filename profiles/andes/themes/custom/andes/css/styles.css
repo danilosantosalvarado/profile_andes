@@ -10927,16 +10927,19 @@ header {
   header .container-fluid .wrapper-menu-soy .container-destacados {
     padding-right: 15px;
     padding-left: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   header .container-fluid .wrapper-menu-soy .container-destacados .menu-destacado {
-    width: 47%;
-    float: left;
-    margin-bottom: 3%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 48%;
+            flex: 1 1 48%;
+    margin-bottom: 10px;
     background: #313131;
     -ms-overflow-style: scroll;
-  }
-  header .container-fluid .wrapper-menu-soy .container-destacados .menu-destacado:nth-child(odd) {
-    margin-right: 3%;
   }
   header .container-fluid .wrapper-menu-soy .container-destacados .menu-destacado:nth-child(even) {
     margin-left: 3%;
