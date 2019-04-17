@@ -841,7 +841,8 @@
   .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu{
     top: 110px;
   }
-  .front.logged-in {
+  .front.logged-in,
+  .not-front.logged-in.admin-menu {
     header > .container-fluid {
       top: 28px;
     }

@@ -4,7 +4,8 @@
 //------------------------------------------------------------------------------
 */
 
-.view-id-componente_acordeon, .view-componente-enlaces-item {
+.view-id-componente_acordeon,
+.view-componente-enlaces-item {
   .quicktabs-tabs.quicktabs-style-nostyle {
     display: flex;
     overflow-x: scroll;
@@ -82,8 +83,9 @@
     width: 35px;
     height: 70px;
     color: transparent;
-    top: 11%;
+    top: 50%;
     left: -4px;
+    transform: translate3d(0px, -50%, 0px);
     z-index: 3;
   }
   .next-pagination{
@@ -93,8 +95,9 @@
     width: 35px;
     height: 70px;
     color: transparent;
-    top: 11%;
+    top: 50%;
     right: -4px;
+    transform: translate3d(0px, -50%, 0px);
     z-index: 3;
   }
 }
