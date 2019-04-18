@@ -109,12 +109,11 @@
           if($(window).width() > 992){
             setTimeout(function(){
               $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight(true) + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight(true);
-              console.log("menu principal: " + $height_menu_desktop);
               var $menu_admin = $('#admin-menu').length > 0;
               var $heigth_menu_admin = $('#admin-menu').outerHeight(true);
-              console.log("menu: "+ $height_menu_desktop + " admin: "+ $heigth_menu_admin );
               if($menu_admin === true) {
-                $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop + $heigth_menu_admin - 31});
+                var $suma = $height_menu_desktop + $heigth_menu_admin;
+                $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop + $heigth_menu_admin - 2});
               }else {
                 $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop - 1});
               }
