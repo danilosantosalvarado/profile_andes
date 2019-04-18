@@ -111,13 +111,16 @@
               $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight(true) + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight(true);
               var $menu_admin = $('#admin-menu').length > 0;
               var $heigth_menu_admin = $('#admin-menu').outerHeight(true);
+              console.log("menu: "+ $height_menu_desktop + " admin: "+ $heigth_menu_admin );
               if($menu_admin === true) {
                 var $suma = $height_menu_desktop + $heigth_menu_admin;
+                console.log("si hay mmenu admin:" + $suma);
+                console.log("menu: "+ $height_menu_desktop + " admin: "+ $heigth_menu_admin );
                 $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop + $heigth_menu_admin - 2});
               }else {
                 $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop - 1});
               }
-            },1050);
+            },1090);
           }
 
           $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
