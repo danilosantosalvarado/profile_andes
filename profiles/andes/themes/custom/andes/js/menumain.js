@@ -106,6 +106,7 @@
           var $menuMegaMenu = ($('.region-navigation.mainmenu-behavior-processed').length > 0  ) ? $('.mainmenu-behavior-processed').outerHeight(true) : 0 ;
           var $searchData = ($('.wrapper-buscar-menu').length > 0) ? $('.wrapper-buscar-menu').outerHeight(true) : 0;
 
+          console.log("si carga la funcion" );
           if($(window).width() > 992){
             setTimeout(function(){
               $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight(true) + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight(true);
