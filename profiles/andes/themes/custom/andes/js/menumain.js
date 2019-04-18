@@ -120,7 +120,7 @@
               }else {
                 $('body > div.container-fluid.main-container').css({'margin-top': $height_menu_desktop - 1});
               }
-            },1090);
+            },1290);
           }
 
           $(".wrapper-buscar-menu #block-google-cse-google-cse.menu-buscar").wrapAll("<div class='container' />");
