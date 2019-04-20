@@ -108,7 +108,7 @@
           if($(window).width() > 992){
             console.log("si carga la funcion" );
             setTimeout(function(){
-              $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight(true) + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight(true);
+              var $height_menu_desktop = $('.navbar-collapse .region-navigation .wrapper-menu-soy').outerHeight(true) + $('.navbar-collapse .region-navigation .wrapper-mega-menu').outerHeight(true);
               var $menu_admin = $('#admin-menu').length > 0;
               var $heigth_menu_admin = $('#admin-menu').outerHeight(true);
               console.log("menu: "+ $height_menu_desktop + " admin: "+ $heigth_menu_admin );
