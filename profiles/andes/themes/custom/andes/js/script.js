@@ -56,7 +56,16 @@
 			}
 			//get a function homeFeaturedMultimedia() used for arrows ubication
 			homeFeaturedMultimedia();
-
+			/*
+			* pausar videos
+			*debe existir la clase videoRender en el panel.
+			*/
+			jQuery('.views-slideshow-pager-field-item, .swiper-pagination-bullet, .swiper-button-next, .swiper-button-prev').click(function(event) {
+				$(this).parents('.videoRender').find('iframe').each(function(index, el) {
+					var rutaVideo = $(this).attr('src');
+					$(this).attr('src', rutaVideo);
+				});
+			});
 			/*
 			* get function homeFeaturedMultimedia();
 			* this function is the responsible to move the arrows
