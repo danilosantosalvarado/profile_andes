@@ -321,6 +321,7 @@
           }
           // getEventsClickMobile();
         }
+        //Funcionalidad mobil de opcion de idioma y soy
         function getEventsClickMobile(){
           //cambio de idioma en la url.
           $('.container-select-language select').on('change', function(){
