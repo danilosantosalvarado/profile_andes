@@ -150,6 +150,12 @@
         margin-bottom: 15px;
         //imagen
         .views-field-view {
+          @include respond-to(xs) {
+            max-height: 150px;
+          }
+          @include respond-to(m) {
+            max-height: 200px;
+          }
           img {
             width: 100%;
           }
@@ -161,9 +167,13 @@
         //texto
         .box-content  {
           position: relative;
-          // background: #f4f1f1;
+          background-color: white;
           @include respond-to(xs) {
-            min-height: 250px;
+            height: 250px;
+            min-height: 230px;
+          }
+          @include respond-to(xl) {
+            min-height: 270px;
           }
           //img-icons
           .views-field-field-image {

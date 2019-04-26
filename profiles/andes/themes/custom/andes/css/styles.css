@@ -2650,6 +2650,18 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   margin-bottom: 15px;
 }
 
+@media (min-width: 555px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .views-field-view {
+    max-height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .views-field-view {
+    max-height: 200px;
+  }
+}
+
 .view-id-componente_actividades_home > .view-content .views-row .views-column .views-field-view img {
   width: 100%;
 }
@@ -2661,11 +2673,19 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
   position: relative;
+  background-color: white;
 }
 
 @media (min-width: 555px) {
   .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
-    min-height: 250px;
+    height: 250px;
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view-id-componente_actividades_home > .view-content .views-row .views-column .box-content {
+    min-height: 270px;
   }
 }
 
