@@ -3,20 +3,44 @@
 // Layotu actividades
 //------------------------------------------------------------------------------
 */
+/* ------| cambio de orden buscador y título |----- */
+.page-actividades{
+  h2.pane-title {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 285px;
+    @include respond-to(m){
+      top: 167px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid gray;
+      width: 55%;
+      height: 2px;
+      margin: 0px auto;
+    }
+  }
+  .pane-componente-actividades-home {
+    position: relative;
+    .view-componente-actividades-home {
+      .view-filters{
+        margin-bottom: 180px;
+      }
+    }
+  }
+}
 
+/* ------| Actividades |----- */
 .view-id-componente_actividades_home {
   //title
   .view-header {
     background-color: #E6E7E8;
-    padding-top: 38px;
-    @include respond-to(m) {
-      padding-top: 50px;
-    }
     .title {
       padding-right: 15px;
       padding-left: 15px;
       margin: 0 auto;
-
       @include respond-to(m) {
           width: 750px;
       }
@@ -32,7 +56,7 @@
         @include font-size(xl);
         color: #58595B;
         margin: 0px;
-        padding: 0 15px 20px;
+        padding: 15px 20px;
         @include respond-to(m) {
           text-align: left;
         }
@@ -42,10 +66,12 @@
   //filtro
   .view-filters {
     background-color: #E6E7E8;
-    padding-bottom: 38px;
-    @include respond-to(m) {
-      padding-bottom: 50px;
-    }
+    padding-bottom: 20px;
+    margin-bottom: 180px;
+    // padding-bottom: 38px;
+    // @include respond-to(m) {
+    //   padding-bottom: 50px;
+    // }
     .views-exposed-widgets {
       padding-right: 15px;
       padding-left: 15px;
@@ -311,30 +337,6 @@ div#ui-datepicker-div {
           background: #4C48A8;
           color: white;
         }
-      }
-    }
-  }
-}
-
-/* ------| cambio de orden buscador y título |----- */
-.page-actividades{
-  h2.pane-title{
-    position: relative;
-    top: 285px;
-    margin: 0 auto;
-    width: 55%;
-    max-width: 800px;
-    border-bottom: 1px solid gray;
-    @include respond-to(s){
-      top: 200px;
-    }
-  }
-  .pane-componente-actividades-home{
-    .view-componente-actividades-home{
-      position: relative;
-      top: -111px;
-      .view-filters{
-        margin-bottom: 180px;
       }
     }
   }

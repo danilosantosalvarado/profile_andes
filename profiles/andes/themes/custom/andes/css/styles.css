@@ -2450,15 +2450,40 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 // Layotu actividades
 //------------------------------------------------------------------------------
 */
-.view-id-componente_actividades_home .view-header {
-  background-color: #E6E7E8;
-  padding-top: 38px;
+/* ------| cambio de orden buscador y título |----- */
+.page-actividades h2.pane-title {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 285px;
 }
 
 @media (min-width: 768px) {
-  .view-id-componente_actividades_home .view-header {
-    padding-top: 50px;
+  .page-actividades h2.pane-title {
+    top: 167px;
   }
+}
+
+.page-actividades h2.pane-title::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid gray;
+  width: 55%;
+  height: 2px;
+  margin: 0px auto;
+}
+
+.page-actividades .pane-componente-actividades-home {
+  position: relative;
+}
+
+.page-actividades .pane-componente-actividades-home .view-componente-actividades-home .view-filters {
+  margin-bottom: 180px;
+}
+
+/* ------| Actividades |----- */
+.view-id-componente_actividades_home .view-header {
+  background-color: #E6E7E8;
 }
 
 .view-id-componente_actividades_home .view-header .title {
@@ -2491,7 +2516,7 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   font-size: 1.5rem;
   color: #58595B;
   margin: 0px;
-  padding: 0 15px 20px;
+  padding: 15px 20px;
 }
 
 @media (min-width: 768px) {
@@ -2502,13 +2527,8 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
 
 .view-id-componente_actividades_home .view-filters {
   background-color: #E6E7E8;
-  padding-bottom: 38px;
-}
-
-@media (min-width: 768px) {
-  .view-id-componente_actividades_home .view-filters {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 20px;
+  margin-bottom: 180px;
 }
 
 .view-id-componente_actividades_home .view-filters .views-exposed-widgets {
@@ -2845,31 +2865,6 @@ div#ui-datepicker-div table td a.ui-state-highlight {
   border: 1px solid #4C48A8;
   background: #4C48A8;
   color: white;
-}
-
-/* ------| cambio de orden buscador y título |----- */
-.page-actividades h2.pane-title {
-  position: relative;
-  top: 285px;
-  margin: 0 auto;
-  width: 55%;
-  max-width: 800px;
-  border-bottom: 1px solid gray;
-}
-
-@media (min-width: 666px) {
-  .page-actividades h2.pane-title {
-    top: 200px;
-  }
-}
-
-.page-actividades .pane-componente-actividades-home .view-componente-actividades-home {
-  position: relative;
-  top: -111px;
-}
-
-.page-actividades .pane-componente-actividades-home .view-componente-actividades-home .view-filters {
-  margin-bottom: 180px;
 }
 
 .slider-pricipal-node .slider-homes-left, .slider-pricipal-node .slider-homes-right, .slider-pricipal-node .slider-homes-center {
