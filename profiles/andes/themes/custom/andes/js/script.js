@@ -441,7 +441,11 @@
 				$('body').toggleClass('scroll-off');
 			});
 
-			setTimeout(function(){if($('.view-componente-acordeon 	.quicktabs-wrapper').length > 0){quickTabsSlide();} },1000);
+			setTimeout(function(){
+				if($('.view-componente-acordeon	.quicktabs-wrapper').length > 0){
+					quickTabsSlide();
+				}
+			},1000);
 			function quickTabsSlide(){
 				var $parent = $('.quicktabs-wrapper').parents('.view');
 				var $containerQuick = $parent.find('.quicktabs-wrapper').prepend('<a href="#" class="next-pagination">></a><a href="#" class="prev-pagination"><</a>');
@@ -451,6 +455,18 @@
 				var $itemsWidth = $element.find('li').outerWidth(true);
 				var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
 				var $counterData = 0;
+				setTimeout(function(){
+					var $element = $('.quicktabs-wrapper').find('.quicktabs-tabs');
+					var $containerEl = $element.width();
+					console.log($containerEl);
+					var $items = $element.find('.quicktabs-tabpage').length;
+					var $itemsWidth = $element.find('.quicktabs-tabpage').outerWidth(true);
+					var $numberOnclick = $items/parseInt($containerEl/$itemsWidth);
+					var $widthTotal = $items*$itemsWidth;
+					if($widthTotal < $containerEl){
+						$parent.find('.next-pagination, .prev-pagination').css('display', 'none');
+					}
+				},1000);
 				$containerQuick.find('.next-pagination').on('click',function(e){
 					e.preventDefault();
 					if($counterData >= 0 && $counterData < $numberOnclick){
@@ -458,8 +474,9 @@
 						$element.animate({scrollLeft: ($counterData*parseInt($containerEl/$itemsWidth))*($itemsWidth)}, 800);
 					}
 					if($counterData >= $numberOnclick){
-					$counterData--;
+						$counterData--;
 					}
+					console.log($counterData);
 				});
 				$containerQuick.find('.prev-pagination').on('click',function(e){
 					e.preventDefault();
@@ -519,8 +536,6 @@
 						$parent.find('.next-pagination, .prev-pagination').css('display', 'none');
 					}
 				},1000)
-
-
 				$parent.find('.next-pagination').on('click',function(e){
 					e.preventDefault();
 					if(($counterData >= 0 && $counterData < $numberOnclick) || ($counterData >= 0 && numberOnclick  == 1 && $counterData <= $numberOnclick)){
