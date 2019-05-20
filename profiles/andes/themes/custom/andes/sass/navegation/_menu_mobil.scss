@@ -281,14 +281,16 @@ header {
             margin-left: 3%;
           }
           > a {
-            display: block;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: $latoregular;
             font-size: .88rem;
             color: #fff;
             text-align: center;
             text-decoration: none;
             padding: 10px 0;
-
           }
         }
       }

@@ -295,18 +295,19 @@
           }
           //Copiar los enlaces que estan destacados en el menu.
           if($('.container-destacados').length == 0){
+            // Enalace volver a intucional clone mobil, validacion si existe en el menu
+            if($('#block-views-logos-header-block-2 .view-id-logos_header .field-content').length > 0){
+              $('.wrapper-menu-soy').append('<div class="container-destacados"><div class="menu-destacado">'+jQuery('#block-views-logos-header-block-2 .view-id-logos_header .field-content').html()+"</div></div>");
+            }
+            //Clone los elementos destacados en el menu top soy
             var $selectDestacadosItems =$('.wrapper-menu-soy li.level-1.menu-destacado');
             $.each( $selectDestacadosItems, function( k, v ) {
               if(k == 0){
-                $('.wrapper-menu-soy').append('<div class="container-destacados"><div class="menu-destacado">'+$(this).html()+'</div></div>');
+                $('.wrapper-menu-soy .container-destacados').append('<div class="menu-destacado">'+$(this).html()+'</div></div>');
               }else{
                 $('.container-destacados').append('<div class="menu-destacado">'+$(this).html()+"</div>");
               }
             });
-            // Enalace volver a intucional clone mobil, validacion si existe en el menu
-            if($('#block-views-logos-header-block-2 .view-id-logos_header .field-content').length > 0){
-              jQuery('.container-destacados').append('<div class="menu-destacado">'+jQuery('#block-views-logos-header-block-2 .view-id-logos_header .field-content').html()+"</div>");
-            }
           }
           //Al no detectar la clase, no permita que la funcion se ejecute una segunda vez
           if($('.container-destacados').html() == ''){
