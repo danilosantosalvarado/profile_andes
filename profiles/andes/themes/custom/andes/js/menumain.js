@@ -214,6 +214,7 @@
           $('.menuIstance-processed').css('display','none');
           $('.container-menu-image').parents('.tb-megamenu-column').addClass('content-img').siblings('.tb-megamenu-column').addClass('content-nivel-1');
           var contentLength = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content div.views-row').length;
+          // console.log(contentLength);
           // Wrappers de los button de desplige de menu.
           if(contentLength == 1){
             if($('.wrapper-header-color').length == 0)
@@ -238,7 +239,7 @@
             if($('.wrapper-header-up').html() == ""){
               // console.log("seeeee");
               var contentb = $('.region-navigation .wrapper-mega-menu .view-id-logos_header .view-content .views-row .field-content').last().html();
-              // console.log('contentb');
+              // console.log(contentb);
               $('.wrapper-header-up').prepend(contentb);
 
             }
@@ -348,9 +349,9 @@
             }
           });
           //Despliege del primer nivel de wrapper-mega-menu.
-          $level1.on('click',function(e) {
-            e.preventDefault();
-            if($(window).width() < 992){
+          if($(window).width() < 992){
+            $level1.on('click',function(e) {
+              e.preventDefault();
               var  $dataId = $(this).parent().attr('data-id');
               $('body').addClass('dark-layer');
               $('.dropdown-toggle').removeClass('text-hover');
@@ -392,8 +393,8 @@
                 });
                 childrenEvent(".container-items .dropdown-toggle", 'mobile');
               }
-            }
-          });
+            });
+          }
           //Despliege del Guia de Servicios nivel de wrapper-menu-soy.
           $level1TopSoy.on('click',function(e) {
             if($(window).width() < 992) {
