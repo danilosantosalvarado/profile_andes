@@ -210,7 +210,7 @@ multipliers[screen-lg-min][] = 1.5x
 multipliers[screen-lg-min][] = 2x
 
 ; Information added by Drupal.org packaging script on 2019-05-10
-version = "7.x-3.25"
+version = "7.x-3.24"
 core = "7.x"
 project = "bootstrap"
-datestamp = "1557525787"
+datestamp = "1557525186"
