@@ -653,6 +653,7 @@
       .views-row {
         width: 50%;
         float: left;
+        max-height: 48px;
         &:nth-child(odd) {
           padding-right: 10px;
         }

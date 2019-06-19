@@ -1459,6 +1459,141 @@ body.panel-404 #panel-bootstrap-row-main #google-cse-results {
   color: #ffffff;
 }
 
+/* ------| Paguinadores |----- */
+.view-publicaciones .text-center {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-publicaciones .text-center ul.pagination {
+  background: #fff;
+  border-radius: 0;
+  padding: 10px;
+}
+
+.view-publicaciones .text-center ul.pagination::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #ff8827;
+  z-index: -1;
+}
+
+.view-publicaciones .text-center ul.pagination li {
+  color: #484851;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: #fff;
+  display: block;
+  float: left;
+  margin: 0 5px;
+}
+
+.view-publicaciones .text-center ul.pagination li a {
+  color: #484851;
+  border: 1px solid #fff;
+  font-family: Lato,sans-serif;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.view-publicaciones .text-center ul.pagination li a .ajax-progress {
+  display: none;
+}
+
+.view-publicaciones .text-center ul.pagination li.active {
+  border-color: #ff8827;
+}
+
+.view-publicaciones .text-center ul.pagination li.active span {
+  background-color: transparent;
+  border-radius: initial;
+  color: #000;
+  border: initial;
+}
+
+.view-publicaciones .text-center ul.pagination li.next, .view-publicaciones .text-center ul.pagination li.prev, .view-publicaciones .text-center ul.pagination li.pager-last, .view-publicaciones .text-center ul.pagination li.pager-first {
+  display: none;
+}
+
+/* ------| Tags categorias  |----- */
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle {
+  padding: 0px;
+  position: relative;
+}
+
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(0px, -50%, 0px);
+          transform: translate3d(0px, -50%, 0px);
+  border-top: 1px solid #9e9ca1;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle li {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  list-style: none;
+  background: #fff;
+  margin: 15px 0;
+}
+
+@media (min-width: 555px) {
+  .view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle li {
+    display: inline-block;
+    width: auto;
+    margin: 15px 30px 15px 0;
+  }
+}
+
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle li a {
+  position: relative;
+  color: #484851;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.89rem;
+  background-color: white;
+  text-align: center;
+}
+
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 36px;
+  border-left: 1px solid #9e9ca1;
+  border-top: 1px solid #9e9ca1;
+  position: absolute;
+}
+
+.view-publicaciones-home .quicktabs-tabs.quicktabs-style-nostyle li a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 36px;
+  border-right: 1px solid #9e9ca1;
+  border-bottom: 1px solid #9e9ca1;
+  position: absolute;
+}
+
 /*
 //------------------------------------------------------------------------------
 // Home Especiales
@@ -5508,7 +5643,7 @@ a .wraper-slider-general ul li .views-row .box-content .views-field-title:hover,
 .view-id-componente_acordeon .ui-accordion-header.ui-state-default .ui-accordion-header-icon.ui-icon {
   width: 40px;
   height: 40px;
-  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1OCA1Ni41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1OCA1Ni41OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cjwvc3R5bGU+Cjxwb2x5bGluZSBjbGFzcz0ic3QwIiBwb2ludHM9IjIyLjEsMTYuMSAzNS44LDI5LjkgMjIuMSw0My43ICIvPgo8L3N2Zz4K") no-repeat;
+  background: url("../img/Icon/arrow_next.svg") no-repeat;
   background-size: contain;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -11846,6 +11981,7 @@ header {
   .wrapper-mega-menu #block-views-logos-header-block .views-row {
     width: 50%;
     float: left;
+    max-height: 48px;
   }
   .wrapper-mega-menu #block-views-logos-header-block .views-row:nth-child(odd) {
     padding-right: 10px;
